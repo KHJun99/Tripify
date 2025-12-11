@@ -13,6 +13,9 @@ const formData = ref({
 
 const error = ref('')
 
+const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY || ''
+const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI || 'http://localhost:5173/auth/kakao/callback'
+
 const handleLogin = async () => {
   try {
     error.value = ''
@@ -21,6 +24,11 @@ const handleLogin = async () => {
   } catch (err) {
     error.value = err.response?.data?.error || '로그인에 실패했습니다.'
   }
+}
+
+const handleKakaoLogin = () => {
+  const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`
+  window.location.href = kakaoAuthUrl
 }
 </script>
 
@@ -44,6 +52,15 @@ const handleLogin = async () => {
 
         <button type="submit" class="btn-primary">로그인</button>
       </form>
+
+      <div class="divider">
+        <span>또는</span>
+      </div>
+
+      <button type="button" class="btn-kakao" @click="handleKakaoLogin">
+        <span class="kakao-icon">💬</span>
+        카카오로 시작하기
+      </button>
 
       <p class="signup-link">
         계정이 없으신가요? <router-link to="/signup">회원가입</router-link>
@@ -126,5 +143,50 @@ h1 {
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+  padding: 0 1rem;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.btn-kakao {
+  width: 100%;
+  padding: 1rem;
+  background-color: #fee500;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-kakao:hover {
+  background-color: #fdd835;
+}
+
+.kakao-icon {
+  font-size: 1.2rem;
 }
 </style>

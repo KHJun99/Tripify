@@ -10,6 +10,13 @@ class User(AbstractUser):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    # 소셜 로그인 관련 필드
+    kakao_id = models.CharField(max_length=100, unique=True, null=True, blank=True, help_text="카카오 고유 ID")
+    login_type = models.CharField(max_length=20, default='normal', choices=[
+        ('normal', 'Normal'),
+        ('kakao', 'Kakao'),
+    ], help_text="로그인 타입")
+
     class Meta:
         db_table = 'users'
         ordering = ['-created_at']

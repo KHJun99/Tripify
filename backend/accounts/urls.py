@@ -8,4 +8,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('profile/', views.UserDetailView.as_view(), name='profile'),
+    path('kakao/callback/', views.kakao_login, name='kakao_login'),
 ]

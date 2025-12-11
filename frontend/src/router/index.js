@@ -5,6 +5,7 @@ import SignupView from '@/views/SignupView.vue'
 import TripPlanView from '@/views/TripPlanView.vue'
 import MyTripsView from '@/views/MyTripsView.vue'
 import ItineraryView from '@/views/ItineraryView.vue'
+import KakaoCallbackView from '@/views/KakaoCallbackView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/signup',
       name: 'signup',
       component: SignupView,
+    },
+    {
+      path: '/auth/kakao/callback',
+      name: 'kakao-callback',
+      component: KakaoCallbackView,
     },
     {
       path: '/trip/new',

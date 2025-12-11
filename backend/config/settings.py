@@ -154,3 +154,8 @@ CORS_ALLOW_CREDENTIALS = True
 
 # Custom User Model
 AUTH_USER_MODEL = 'accounts.User'
+
+# Kakao OAuth Settings
+KAKAO_REST_API_KEY = os.getenv('KAKAO_REST_API_KEY', '')
+KAKAO_REDIRECT_URI = os.getenv('KAKAO_REDIRECT_URI', 'http://localhost:5173/auth/kakao/callback')
+KAKAO_CLIENT_SECRET = os.getenv('KAKAO_CLIENT_SECRET', '')
