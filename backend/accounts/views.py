@@ -4,7 +4,9 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, get_user_model
+from django.db import IntegrityError
 from .serializers import SignupSerializer, LoginSerializer, UserSerializer
+from .kakao_service import KakaoOAuthService
 
 User = get_user_model()
 
@@ -69,3 +71,74 @@ class UserDetailView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def kakao_login(request):
+    """카카오 로그인 콜백 처리 API"""
+    code = request.data.get('code')
+
+    if not code:
+        return Response({
+            'error': '인가 코드가 필요합니다.'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        # 1. 카카오 액세스 토큰 받기
+        access_token = KakaoOAuthService.get_access_token(code)
+
+        # 2. 카카오 사용자 정보 가져오기
+        kakao_user_info = KakaoOAuthService.get_user_info(access_token)
+
+        kakao_id = kakao_user_info['kakao_id']
+        email = kakao_user_info['email']
+        nickname = kakao_user_info['nickname']
+
+        # 3. 카카오 ID로 기존 사용자 찾기
+        try:
+            user = User.objects.get(kakao_id=kakao_id)
+        except User.DoesNotExist:
+            # 4. 신규 사용자 생성 (회원가입)
+            # 이메일이 없는 경우 기본값 설정
+            if not email:
+                email = f"kakao_{kakao_id}@kakao.user"
+
+            # username 중복 방지를 위해 kakao_id 사용
+            username = f"kakao_{kakao_id}"
+
+            # 이메일 중복 체크
+            if User.objects.filter(email=email).exists():
+                email = f"kakao_{kakao_id}@kakao.user"
+
+            try:
+                user = User.objects.create_user(
+                    username=username,
+                    email=email,
+                    kakao_id=kakao_id,
+                    login_type='kakao',
+                )
+                # 카카오 로그인은 비밀번호가 필요 없으므로 사용 불가능하게 설정
+                user.set_unusable_password()
+                user.save()
+
+            except IntegrityError:
+                return Response({
+                    'error': '이미 존재하는 사용자입니다.'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+        # 5. 토큰 생성 및 반환
+        token, created = Token.objects.get_or_create(user=user)
+
+        return Response({
+            'token': token.key,
+            'username': user.username,
+            'user_id': user.id,
+            'email': user.email,
+            'login_type': user.login_type,
+        }, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return Response({
+            'error': f'카카오 로그인 처리 중 오류가 발생했습니다: {str(e)}'
+        }, status=status.HTTP_400_BAD_REQUEST)

@@ -20,4 +20,8 @@ export const authAPI = {
   updateProfile(data) {
     return axios.patch('/auth/profile/', data)
   },
+
+  kakaoLogin(code) {
+    return axios.post('/auth/kakao/callback/', { code })
+  },
 }
