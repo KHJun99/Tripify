@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'places',
     'ai',
     'external_api',
+    'festivals',
 ]
 
 MIDDLEWARE = [
