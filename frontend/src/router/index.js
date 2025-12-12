@@ -13,6 +13,7 @@ import FindUsernameView from '@/views/FindUsernameView.vue'
 import ResetPasswordRequestView from '@/views/ResetPasswordRequestView.vue'
 import ResetPasswordConfirmView from '@/views/ResetPasswordConfirmView.vue'
 import AccountSettingsView from '@/views/AccountSettingsView.vue'
+import FestivalsView from '@/views/FestivalsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -90,6 +91,11 @@ const router = createRouter({
       name: 'account-settings',
       component: AccountSettingsView,
       meta: { requiresAuth: true },
+    },
+    {
+      path: '/festivals',
+      name: 'festivals',
+      component: FestivalsView,
     },
   ],
 })
