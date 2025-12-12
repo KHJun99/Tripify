@@ -60,3 +60,15 @@ class PasswordResetConfirmSerializer(serializers.Serializer):
 class UsernameRecoverySerializer(serializers.Serializer):
     """아이디 찾기 Serializer"""
     email = serializers.EmailField(required=True)
+
+
+class AccountDeletionSerializer(serializers.Serializer):
+    """회원탈퇴 Serializer"""
+    password = serializers.CharField(required=False, write_only=True)
+
+    def validate_password(self, value):
+        user = self.context['request'].user
+        # 일반 로그인 사용자는 비밀번호 확인 필요
+        if user.login_type == 'normal' and not user.check_password(value):
+            raise serializers.ValidationError("비밀번호가 올바르지 않습니다.")
+        return value

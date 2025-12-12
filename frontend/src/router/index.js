@@ -12,6 +12,7 @@ import ResendVerificationView from '@/views/ResendVerificationView.vue'
 import FindUsernameView from '@/views/FindUsernameView.vue'
 import ResetPasswordRequestView from '@/views/ResetPasswordRequestView.vue'
 import ResetPasswordConfirmView from '@/views/ResetPasswordConfirmView.vue'
+import AccountSettingsView from '@/views/AccountSettingsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -82,6 +83,12 @@ const router = createRouter({
       path: '/trip/:id',
       name: 'itinerary',
       component: ItineraryView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/settings',
+      name: 'account-settings',
+      component: AccountSettingsView,
       meta: { requiresAuth: true },
     },
   ],

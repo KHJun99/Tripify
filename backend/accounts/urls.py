@@ -21,4 +21,7 @@ urlpatterns = [
 
     # 아이디 찾기
     path('recover-username/', views.recover_username, name='recover_username'),
+
+    # 회원탈퇴
+    path('delete/', views.delete_account, name='delete_account'),
 ]
