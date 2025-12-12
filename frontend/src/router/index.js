@@ -7,6 +7,10 @@ import MyTripsView from '@/views/MyTripsView.vue'
 import ItineraryView from '@/views/ItineraryView.vue'
 import KakaoCallbackView from '@/views/KakaoCallbackView.vue'
 import GoogleCallbackView from '@/views/GoogleCallbackView.vue'
+import VerifyEmailView from '@/views/VerifyEmailView.vue'
+import FindUsernameView from '@/views/FindUsernameView.vue'
+import ResetPasswordRequestView from '@/views/ResetPasswordRequestView.vue'
+import ResetPasswordConfirmView from '@/views/ResetPasswordConfirmView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +39,26 @@ const router = createRouter({
       path: '/auth/google/callback',
       name: 'google-callback',
       component: GoogleCallbackView,
+    },
+    {
+      path: '/auth/verify-email',
+      name: 'verify-email',
+      component: VerifyEmailView,
+    },
+    {
+      path: '/auth/find-username',
+      name: 'find-username',
+      component: FindUsernameView,
+    },
+    {
+      path: '/auth/reset-password',
+      name: 'reset-password-request',
+      component: ResetPasswordRequestView,
+    },
+    {
+      path: '/auth/reset-password/confirm',
+      name: 'reset-password-confirm',
+      component: ResetPasswordConfirmView,
     },
     {
       path: '/trip/new',

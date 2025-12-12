@@ -38,3 +38,25 @@ class LoginSerializer(serializers.Serializer):
     """로그인 Serializer"""
     username = serializers.CharField(required=True)
     password = serializers.CharField(required=True, write_only=True)
+
+
+class PasswordResetRequestSerializer(serializers.Serializer):
+    """비밀번호 재설정 요청 Serializer"""
+    email = serializers.EmailField(required=True)
+
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    """비밀번호 재설정 확인 Serializer"""
+    token = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True, validators=[validate_password])
+    new_password_confirm = serializers.CharField(required=True)
+
+    def validate(self, attrs):
+        if attrs['new_password'] != attrs['new_password_confirm']:
+            raise serializers.ValidationError({"new_password": "비밀번호가 일치하지 않습니다."})
+        return attrs
+
+
+class UsernameRecoverySerializer(serializers.Serializer):
+    """아이디 찾기 Serializer"""
+    email = serializers.EmailField(required=True)

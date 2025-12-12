@@ -168,3 +168,19 @@ KAKAO_CLIENT_SECRET = os.getenv('KAKAO_CLIENT_SECRET', '')
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID', '')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET', '')
 GOOGLE_REDIRECT_URI = os.getenv('GOOGLE_REDIRECT_URI', 'http://localhost:5173/auth/google/callback')
+
+# Email settings for Gmail SMTP
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')  # Gmail 주소
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')  # Gmail 앱 비밀번호
+DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER', 'noreply@tripify.com')
+
+# Email verification settings
+EMAIL_VERIFICATION_EXPIRE_HOURS = 24  # 이메일 인증 링크 유효 시간 (24시간)
+PASSWORD_RESET_TIMEOUT = 3600  # 비밀번호 재설정 토큰 유효 시간 (1시간)
+
+# Frontend URL for email links
+FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')

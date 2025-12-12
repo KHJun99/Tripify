@@ -5,9 +5,11 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, get_user_model
 from django.db import IntegrityError
-from .serializers import SignupSerializer, LoginSerializer, UserSerializer
+from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer
 from .kakao_service import KakaoOAuthService
 from .google_service import GoogleOAuthService
+from .models import EmailVerificationToken, PasswordResetToken
+from .email_utils import send_verification_email, send_password_reset_email, send_username_recovery_email
 
 User = get_user_model()
 
@@ -15,14 +17,30 @@ User = get_user_model()
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def signup(request):
-    """회원가입 API"""
+    """회원가입 API - 이메일 인증 필요"""
     serializer = SignupSerializer(data=request.data)
     if serializer.is_valid():
         user = serializer.save()
-        return Response({
-            'username': user.username,
-            'email': user.email,
-        }, status=status.HTTP_201_CREATED)
+
+        # 이메일 인증 토큰 생성 및 메일 발송
+        try:
+            verification_token = EmailVerificationToken.create_token(user)
+            send_verification_email(user, verification_token)
+
+            return Response({
+                'username': user.username,
+                'email': user.email,
+                'message': '회원가입이 완료되었습니다. 이메일을 확인하여 인증을 완료해주세요.',
+            }, status=status.HTTP_201_CREATED)
+        except Exception as e:
+            # 이메일 전송 실패 시에도 회원가입은 완료
+            return Response({
+                'username': user.username,
+                'email': user.email,
+                'message': '회원가입이 완료되었습니다. 이메일 전송에 실패했습니다.',
+                'error': str(e)
+            }, status=status.HTTP_201_CREATED)
+
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -37,11 +55,19 @@ def login(request):
         user = authenticate(username=username, password=password)
 
         if user is not None:
+            # 일반 로그인 사용자의 경우 이메일 인증 확인
+            if user.login_type == 'normal' and not user.is_email_verified:
+                return Response({
+                    'error': '이메일 인증이 필요합니다. 가입 시 받은 이메일을 확인해주세요.',
+                    'email_verified': False
+                }, status=status.HTTP_403_FORBIDDEN)
+
             token, created = Token.objects.get_or_create(user=user)
             return Response({
                 'token': token.key,
                 'username': user.username,
                 'user_id': user.id,
+                'email_verified': user.is_email_verified,
             }, status=status.HTTP_200_OK)
         else:
             return Response({
@@ -118,6 +144,7 @@ def kakao_login(request):
                     email=email,
                     kakao_id=kakao_id,
                     login_type='kakao',
+                    is_email_verified=True,  # 소셜 로그인은 자동 인증
                 )
                 # 카카오 로그인은 비밀번호가 필요 없으므로 사용 불가능하게 설정
                 user.set_unusable_password()
@@ -189,6 +216,7 @@ def google_login(request):
                     email=email,
                     google_id=google_id,
                     login_type='google',
+                    is_email_verified=True,  # 소셜 로그인은 자동 인증
                 )
                 # 구글 로그인은 비밀번호가 필요 없으므로 사용 불가능하게 설정
                 user.set_unusable_password()
@@ -214,3 +242,181 @@ def google_login(request):
         return Response({
             'error': f'구글 로그인 처리 중 오류가 발생했습니다: {str(e)}'
         }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def verify_email(request):
+    """이메일 인증 처리 API"""
+    token = request.query_params.get('token')
+
+    if not token:
+        return Response({
+            'error': '토큰이 필요합니다.'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        verification_token = EmailVerificationToken.objects.get(token=token)
+
+        if not verification_token.is_valid():
+            return Response({
+                'error': '토큰이 만료되었거나 이미 사용되었습니다.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        # 이메일 인증 완료
+        user = verification_token.user
+        user.is_email_verified = True
+        user.save()
+
+        verification_token.is_used = True
+        verification_token.save()
+
+        return Response({
+            'message': '이메일 인증이 완료되었습니다. 로그인해주세요.',
+            'username': user.username
+        }, status=status.HTTP_200_OK)
+
+    except EmailVerificationToken.DoesNotExist:
+        return Response({
+            'error': '유효하지 않은 토큰입니다.'
+        }, status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def resend_verification_email(request):
+    """이메일 인증 메일 재발송 API"""
+    email = request.data.get('email')
+
+    if not email:
+        return Response({
+            'error': '이메일이 필요합니다.'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        user = User.objects.get(email=email)
+
+        if user.is_email_verified:
+            return Response({
+                'error': '이미 인증된 이메일입니다.'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        # 새 인증 토큰 생성 및 메일 발송
+        verification_token = EmailVerificationToken.create_token(user)
+        send_verification_email(user, verification_token)
+
+        return Response({
+            'message': '인증 메일이 재발송되었습니다.'
+        }, status=status.HTTP_200_OK)
+
+    except User.DoesNotExist:
+        return Response({
+            'error': '해당 이메일로 가입된 사용자가 없습니다.'
+        }, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({
+            'error': f'메일 발송 중 오류가 발생했습니다: {str(e)}'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def request_password_reset(request):
+    """비밀번호 재설정 요청 API"""
+    serializer = PasswordResetRequestSerializer(data=request.data)
+
+    if serializer.is_valid():
+        email = serializer.validated_data['email']
+
+        try:
+            user = User.objects.get(email=email, login_type='normal')
+
+            # 비밀번호 재설정 토큰 생성 및 메일 발송
+            reset_token = PasswordResetToken.create_token(user)
+            send_password_reset_email(user, reset_token)
+
+            return Response({
+                'message': '비밀번호 재설정 링크가 이메일로 전송되었습니다.'
+            }, status=status.HTTP_200_OK)
+
+        except User.DoesNotExist:
+            # 보안을 위해 사용자가 없어도 동일한 메시지 반환
+            return Response({
+                'message': '비밀번호 재설정 링크가 이메일로 전송되었습니다.'
+            }, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({
+                'error': f'메일 발송 중 오류가 발생했습니다: {str(e)}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def reset_password_confirm(request):
+    """비밀번호 재설정 확인 API"""
+    serializer = PasswordResetConfirmSerializer(data=request.data)
+
+    if serializer.is_valid():
+        token = serializer.validated_data['token']
+        new_password = serializer.validated_data['new_password']
+
+        try:
+            reset_token = PasswordResetToken.objects.get(token=token)
+
+            if not reset_token.is_valid():
+                return Response({
+                    'error': '토큰이 만료되었거나 이미 사용되었습니다.'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            # 비밀번호 재설정
+            user = reset_token.user
+            user.set_password(new_password)
+            user.save()
+
+            reset_token.is_used = True
+            reset_token.save()
+
+            return Response({
+                'message': '비밀번호가 성공적으로 재설정되었습니다.'
+            }, status=status.HTTP_200_OK)
+
+        except PasswordResetToken.DoesNotExist:
+            return Response({
+                'error': '유효하지 않은 토큰입니다.'
+            }, status=status.HTTP_404_NOT_FOUND)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def recover_username(request):
+    """아이디 찾기 API"""
+    serializer = UsernameRecoverySerializer(data=request.data)
+
+    if serializer.is_valid():
+        email = serializer.validated_data['email']
+
+        try:
+            user = User.objects.get(email=email, login_type='normal')
+
+            # 아이디 찾기 메일 발송
+            send_username_recovery_email(user)
+
+            return Response({
+                'message': '등록된 이메일로 아이디 정보가 전송되었습니다.'
+            }, status=status.HTTP_200_OK)
+
+        except User.DoesNotExist:
+            # 보안을 위해 사용자가 없어도 동일한 메시지 반환
+            return Response({
+                'message': '등록된 이메일로 아이디 정보가 전송되었습니다.'
+            }, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({
+                'error': f'메일 발송 중 오류가 발생했습니다: {str(e)}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
