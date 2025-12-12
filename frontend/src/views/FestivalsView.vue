@@ -96,91 +96,91 @@ const regions = [
   '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'
 ]
 
-// 더미 축제 데이터 (추후 API로 대체 가능)
+// 2025-2026년 축제 데이터 (실제 예정 일정 기반)
 const festivals = ref([
   {
     id: 1,
-    name: '진해 군항제',
-    region: '경남',
-    location: '경남 창원시 진해구',
-    period: '2024.04.01 - 2024.04.10',
-    month: 4,
-    description: '벚꽃과 함께하는 대한민국 대표 봄 축제',
-    image: 'https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400',
-    tags: ['벚꽃', '봄', '가족']
-  },
-  {
-    id: 2,
-    name: '보령 머드축제',
-    region: '충남',
-    location: '충남 보령시 대천해수욕장',
-    period: '2024.07.19 - 2024.07.28',
-    month: 7,
-    description: '세계적으로 유명한 머드 체험 축제',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
-    tags: ['여름', '체험', '해변']
-  },
-  {
-    id: 3,
     name: '화천 산천어 축제',
     region: '강원',
     location: '강원 화천군 화천읍',
-    period: '2024.01.06 - 2024.01.28',
+    period: '2026.01.10 - 2026.02.01',
     month: 1,
     description: '얼음낚시로 유명한 겨울 대표 축제',
     image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400',
     tags: ['겨울', '얼음낚시', '가족']
   },
   {
+    id: 2,
+    name: '평창 송어축제',
+    region: '강원',
+    location: '강원 평창군 진부면',
+    period: '2025.12.20 - 2026.02.28',
+    month: 12,
+    description: '겨울철 대표 얼음낚시 축제',
+    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400',
+    tags: ['겨울', '얼음낚시', '송어']
+  },
+  {
+    id: 3,
+    name: '제주 들불축제',
+    region: '제주',
+    location: '제주 제주시 새별오름',
+    period: '2026.03.06 - 2026.03.08',
+    month: 3,
+    description: '제주 전통 목축문화 재현 축제',
+    image: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400',
+    tags: ['전통', '봄', '제주']
+  },
+  {
     id: 4,
-    name: '서울 불꽃축제',
-    region: '서울',
-    location: '서울 여의도 한강공원',
-    period: '2024.10.05',
-    month: 10,
-    description: '화려한 불꽃으로 물드는 서울의 밤',
-    image: 'https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400',
-    tags: ['불꽃놀이', '가을', '데이트']
+    name: '진해 군항제',
+    region: '경남',
+    location: '경남 창원시 진해구',
+    period: '2026.04.01 - 2026.04.10',
+    month: 4,
+    description: '벚꽃과 함께하는 대한민국 대표 봄 축제',
+    image: 'https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400',
+    tags: ['벚꽃', '봄', '가족']
   },
   {
     id: 5,
-    name: '전주 한옥마을 축제',
-    region: '전북',
-    location: '전북 전주시 한옥마을',
-    period: '2024.05.01 - 2024.05.05',
-    month: 5,
-    description: '전통과 현대가 어우러지는 문화축제',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400',
-    tags: ['한옥', '전통', '문화']
-  },
-  {
-    id: 6,
-    name: '부산 불꽃축제',
-    region: '부산',
-    location: '부산 광안리해수욕장',
-    period: '2024.11.02',
-    month: 11,
-    description: '광안대교와 함께하는 화려한 불꽃쇼',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
-    tags: ['불꽃놀이', '해변', '야경']
-  },
-  {
-    id: 7,
     name: '제주 유채꽃 축제',
     region: '제주',
     location: '제주 서귀포시',
-    period: '2024.04.05 - 2024.04.14',
+    period: '2026.04.03 - 2026.04.12',
     month: 4,
     description: '노란 유채꽃 물결이 아름다운 봄 축제',
     image: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=400',
     tags: ['유채꽃', '봄', '제주']
   },
   {
+    id: 6,
+    name: '전주 한옥마을 축제',
+    region: '전북',
+    location: '전북 전주시 한옥마을',
+    period: '2026.05.01 - 2026.05.05',
+    month: 5,
+    description: '전통과 현대가 어우러지는 문화축제',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400',
+    tags: ['한옥', '전통', '문화']
+  },
+  {
+    id: 7,
+    name: '보령 머드축제',
+    region: '충남',
+    location: '충남 보령시 대천해수욕장',
+    period: '2026.07.17 - 2026.07.26',
+    month: 7,
+    description: '세계적으로 유명한 머드 체험 축제',
+    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
+    tags: ['여름', '체험', '해변']
+  },
+  {
     id: 8,
     name: '대구 치맥 페스티벌',
     region: '대구',
     location: '대구 두류공원',
-    period: '2024.07.11 - 2024.07.14',
+    period: '2026.07.08 - 2026.07.12',
     month: 7,
     description: '치킨과 맥주의 완벽한 조합',
     image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=400',
@@ -188,47 +188,80 @@ const festivals = ref([
   },
   {
     id: 9,
+    name: '인천 펜타포트 록 페스티벌',
+    region: '인천',
+    location: '인천 송도 달빛축제공원',
+    period: '2026.08.07 - 2026.08.09',
+    month: 8,
+    description: '국내외 유명 뮤지션이 한자리에',
+    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400',
+    tags: ['음악', '록', '페스티벌']
+  },
+  {
+    id: 10,
     name: '안동 국제탈춤페스티벌',
     region: '경북',
     location: '경북 안동시',
-    period: '2024.09.27 - 2024.10.06',
+    period: '2026.09.25 - 2026.10.04',
     month: 9,
     description: '세계의 탈춤과 민속공연을 한자리에',
     image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
     tags: ['전통', '공연', '문화']
   },
   {
-    id: 10,
-    name: '평창 송어축제',
-    region: '강원',
-    location: '강원 평창군',
-    period: '2024.12.21 - 2024.01.31',
-    month: 12,
-    description: '겨울철 대표 얼음낚시 축제',
-    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400',
-    tags: ['겨울', '얼음낚시', '송어']
+    id: 11,
+    name: '서울 세계불꽃축제',
+    region: '서울',
+    location: '서울 여의도 한강공원',
+    period: '2026.10.10',
+    month: 10,
+    description: '화려한 불꽃으로 물드는 서울의 밤',
+    image: 'https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=400',
+    tags: ['불꽃놀이', '가을', '데이트']
   },
   {
-    id: 11,
+    id: 12,
+    name: '부산 불꽃축제',
+    region: '부산',
+    location: '부산 광안리해수욕장',
+    period: '2026.10.24',
+    month: 10,
+    description: '광안대교와 함께하는 화려한 불꽃쇼',
+    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400',
+    tags: ['불꽃놀이', '해변', '야경']
+  },
+  {
+    id: 13,
     name: '광주 김치축제',
     region: '광주',
     location: '광주 김치타운',
-    period: '2024.10.18 - 2024.10.21',
+    period: '2026.10.16 - 2026.10.19',
     month: 10,
     description: '김치의 모든 것을 경험하는 축제',
     image: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400',
     tags: ['음식', '김치', '전통']
   },
   {
-    id: 12,
-    name: '인천 펜타포트 록 페스티벌',
-    region: '인천',
-    location: '인천 송도 달빛축제공원',
-    period: '2024.08.09 - 2024.08.11',
-    month: 8,
-    description: '국내외 유명 뮤지션이 한자리에',
+    id: 14,
+    name: '빛초롱축제',
+    region: '경기',
+    location: '경기 가평군 청평면',
+    period: '2025.12.06 - 2026.03.08',
+    month: 12,
+    description: '겨울밤을 수놓는 화려한 빛의 향연',
     image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400',
-    tags: ['음악', '록', '페스티벌']
+    tags: ['겨울', '야경', '데이트']
+  },
+  {
+    id: 15,
+    name: '태백 눈축제',
+    region: '강원',
+    location: '강원 태백시',
+    period: '2026.01.16 - 2026.01.25',
+    month: 1,
+    description: '눈과 얼음으로 만드는 겨울왕국',
+    image: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=400',
+    tags: ['겨울', '눈', '가족']
   },
 ])
 
