@@ -23,6 +23,9 @@ onMounted(async () => {
   }
 
   try {
+    console.log('Verifying email with token:', token)
+    console.log('API URL:', `${API_URL}/accounts/verify-email/`)
+
     const response = await axios.get(`${API_URL}/accounts/verify-email/`, {
       params: { token },
     })
@@ -35,7 +38,19 @@ onMounted(async () => {
       router.push('/login')
     }, 3000)
   } catch (err) {
-    error.value = err.response?.data?.error || '이메일 인증에 실패했습니다.'
+    console.error('Email verification error:', err)
+    console.error('Error response:', err.response)
+
+    if (err.response) {
+      // 서버가 응답을 반환한 경우
+      error.value = err.response.data?.error || JSON.stringify(err.response.data)
+    } else if (err.request) {
+      // 요청은 보냈지만 응답을 받지 못한 경우
+      error.value = '서버에 연결할 수 없습니다. 백엔드 서버가 실행 중인지 확인해주세요.'
+    } else {
+      // 요청 설정 중에 오류가 발생한 경우
+      error.value = '요청 처리 중 오류가 발생했습니다: ' + err.message
+    }
   } finally {
     loading.value = false
   }
