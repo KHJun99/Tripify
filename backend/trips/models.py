@@ -37,6 +37,15 @@ class Itinerary(models.Model):
     day_number = models.IntegerField(help_text="여행 일차")
     date = models.DateField(help_text="일정 날짜")
     description = models.TextField(blank=True, help_text="일정 설명")
+
+    # 상세 일정 정보
+    attractions = models.JSONField(default=list, blank=True, help_text="관광지 목록 (이름, 시간, 설명)")
+    transportation_info = models.JSONField(default=dict, blank=True, help_text="교통수단 정보")
+    accommodation_info = models.JSONField(default=dict, blank=True, help_text="숙소 정보")
+    meals_info = models.JSONField(default=dict, blank=True, help_text="식사 정보 (아침, 점심, 저녁)")
+    events_info = models.JSONField(default=list, blank=True, help_text="축제/행사 정보")
+    estimated_cost = models.IntegerField(null=True, blank=True, help_text="일차별 예상 비용")
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
