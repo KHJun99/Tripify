@@ -9,4 +9,5 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('profile/', views.UserDetailView.as_view(), name='profile'),
     path('kakao/callback/', views.kakao_login, name='kakao_login'),
+    path('google/callback/', views.google_login, name='google_login'),
 ]

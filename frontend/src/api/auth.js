@@ -24,4 +24,8 @@ export const authAPI = {
   kakaoLogin(code) {
     return axios.post('/auth/kakao/callback/', { code })
   },
+
+  googleLogin(code) {
+    return axios.post('/auth/google/callback/', { code })
+  },
 }
