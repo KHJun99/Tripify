@@ -8,9 +8,9 @@ class UserSerializer(serializers.ModelSerializer):
     """사용자 정보 Serializer"""
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'profile_image', 'preferred_region', 
-                  'travel_style', 'created_at']
-        read_only_fields = ['id', 'created_at']
+        fields = ['id', 'username', 'email', 'profile_image', 'preferred_region',
+                  'travel_style', 'login_type', 'created_at']
+        read_only_fields = ['id', 'login_type', 'created_at']
 
 
 class SignupSerializer(serializers.ModelSerializer):
