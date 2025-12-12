@@ -18,7 +18,7 @@ const handleSubmit = async () => {
     error.value = ''
     success.value = ''
 
-    const response = await axios.post(`${API_URL}/accounts/recover-username/`, formData.value)
+    const response = await axios.post(`${API_URL}/auth/recover-username/`, formData.value)
 
     success.value = response.data.message
     formData.value.email = ''
