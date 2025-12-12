@@ -23,7 +23,14 @@ const handleSubmit = async () => {
     success.value = response.data.message
     formData.value.email = ''
   } catch (err) {
-    error.value = err.response?.data?.error || '인증 메일 재발송에 실패했습니다.'
+    const errorMsg = err.response?.data?.error || '인증 메일 재발송에 실패했습니다.'
+
+    // 이미 인증된 이메일인 경우 특별한 처리
+    if (errorMsg.includes('이미 인증')) {
+      error.value = '✓ 이미 이메일 인증이 완료된 계정입니다. 바로 로그인하실 수 있습니다.'
+    } else {
+      error.value = errorMsg
+    }
   } finally {
     loading.value = false
   }
@@ -39,7 +46,13 @@ const handleSubmit = async () => {
         가입하신 이메일 주소를 입력하시면 새로운 인증 링크를 보내드립니다.
       </p>
 
-      <div v-if="error" class="error-message">{{ error }}</div>
+      <div v-if="error && error.includes('이미 인증')" class="info-message">
+        {{ error }}
+        <div style="margin-top: 1rem;">
+          <router-link to="/login" class="btn-login">로그인하러 가기</router-link>
+        </div>
+      </div>
+      <div v-else-if="error" class="error-message">{{ error }}</div>
       <div v-if="success" class="success-message">{{ success }}</div>
 
       <form @submit.prevent="handleSubmit">
@@ -98,6 +111,30 @@ h1 {
   color: #c00;
   border-radius: 8px;
   margin-bottom: 1rem;
+}
+
+.info-message {
+  padding: 1rem;
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #218838;
 }
 
 .success-message {
