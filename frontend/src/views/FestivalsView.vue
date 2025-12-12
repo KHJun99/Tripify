@@ -34,7 +34,7 @@
 
     <!-- 축제 목록 -->
     <div v-if="filteredFestivals.length > 0" class="festivals-grid">
-      <div v-for="festival in filteredFestivals" :key="festival.id" class="festival-card">
+      <div v-for="festival in filteredFestivals" :key="festival.id" class="festival-card" @click="goToDetail(festival.id)">
         <div class="festival-image">
           <img :src="festival.image" :alt="festival.name" />
           <div class="festival-badge">{{ festival.region }}</div>
@@ -72,6 +72,9 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const selectedMonth = ref('')
 const selectedRegion = ref('')
@@ -282,6 +285,10 @@ const resetFilters = () => {
   selectedRegion.value = ''
 }
 
+const goToDetail = (festivalId) => {
+  router.push({ name: 'festival-detail', params: { id: festivalId } })
+}
+
 onMounted(() => {
   // 추후 API에서 축제 데이터를 가져올 수 있음
   // fetchFestivals()
@@ -379,6 +386,7 @@ onMounted(() => {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .festival-card:hover {
