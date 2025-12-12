@@ -40,7 +40,7 @@ const handleSubmit = async () => {
       return
     }
 
-    const response = await axios.post(`${API_URL}/accounts/password-reset/confirm/`, formData.value)
+    const response = await axios.post(`${API_URL}/auth/password-reset/confirm/`, formData.value)
 
     success.value = response.data.message
 
