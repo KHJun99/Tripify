@@ -78,7 +78,8 @@ onMounted(async () => {
         <h1>인증 실패</h1>
         <p class="error-message">{{ error }}</p>
         <div class="links">
-          <router-link to="/login" class="btn-primary">로그인 페이지로</router-link>
+          <router-link to="/auth/resend-verification" class="btn-primary">인증 메일 재발송</router-link>
+          <router-link to="/login" class="btn-secondary">로그인 페이지로</router-link>
         </div>
       </div>
     </div>
@@ -205,5 +206,20 @@ h1 {
 
 .btn-primary:hover {
   background-color: #2980b9;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #95a5a6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
 }
 </style>

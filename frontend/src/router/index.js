@@ -8,6 +8,7 @@ import ItineraryView from '@/views/ItineraryView.vue'
 import KakaoCallbackView from '@/views/KakaoCallbackView.vue'
 import GoogleCallbackView from '@/views/GoogleCallbackView.vue'
 import VerifyEmailView from '@/views/VerifyEmailView.vue'
+import ResendVerificationView from '@/views/ResendVerificationView.vue'
 import FindUsernameView from '@/views/FindUsernameView.vue'
 import ResetPasswordRequestView from '@/views/ResetPasswordRequestView.vue'
 import ResetPasswordConfirmView from '@/views/ResetPasswordConfirmView.vue'
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/auth/verify-email',
       name: 'verify-email',
       component: VerifyEmailView,
+    },
+    {
+      path: '/auth/resend-verification',
+      name: 'resend-verification',
+      component: ResendVerificationView,
     },
     {
       path: '/auth/find-username',
