@@ -6,6 +6,7 @@ import TripPlanView from '@/views/TripPlanView.vue'
 import MyTripsView from '@/views/MyTripsView.vue'
 import ItineraryView from '@/views/ItineraryView.vue'
 import KakaoCallbackView from '@/views/KakaoCallbackView.vue'
+import GoogleCallbackView from '@/views/GoogleCallbackView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,6 +30,11 @@ const router = createRouter({
       path: '/auth/kakao/callback',
       name: 'kakao-callback',
       component: KakaoCallbackView,
+    },
+    {
+      path: '/auth/google/callback',
+      name: 'google-callback',
+      component: GoogleCallbackView,
     },
     {
       path: '/trip/new',

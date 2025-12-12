@@ -15,6 +15,8 @@ const error = ref('')
 
 const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY || ''
 const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI || 'http://localhost:5173/auth/kakao/callback'
+const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
+const GOOGLE_REDIRECT_URI = import.meta.env.VITE_GOOGLE_REDIRECT_URI || 'http://localhost:5173/auth/google/callback'
 
 const handleLogin = async () => {
   try {
@@ -29,6 +31,11 @@ const handleLogin = async () => {
 const handleKakaoLogin = () => {
   const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`
   window.location.href = kakaoAuthUrl
+}
+
+const handleGoogleLogin = () => {
+  const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${GOOGLE_REDIRECT_URI}&response_type=code&scope=openid email profile`
+  window.location.href = googleAuthUrl
 }
 </script>
 
@@ -60,6 +67,11 @@ const handleKakaoLogin = () => {
       <button type="button" class="btn-kakao" @click="handleKakaoLogin">
         <span class="kakao-icon">💬</span>
         카카오로 시작하기
+      </button>
+
+      <button type="button" class="btn-google" @click="handleGoogleLogin">
+        <span class="google-icon">G</span>
+        구글로 시작하기
       </button>
 
       <p class="signup-link">
@@ -188,5 +200,34 @@ h1 {
 
 .kakao-icon {
   font-size: 1.2rem;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.btn-google:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.google-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4285f4;
 }
 </style>

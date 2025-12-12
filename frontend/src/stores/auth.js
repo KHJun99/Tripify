@@ -83,6 +83,24 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  const googleLogin = async (code) => {
+    try {
+      const response = await authAPI.googleLogin(code)
+      token.value = response.data.token
+      user.value = {
+        username: response.data.username,
+        id: response.data.user_id,
+        email: response.data.email,
+        loginType: response.data.login_type,
+      }
+      localStorage.setItem('token', response.data.token)
+      isAuthenticated.value = true
+      return response.data
+    } catch (error) {
+      throw error
+    }
+  }
+
   return {
     user,
     token,
@@ -93,5 +111,6 @@ export const useAuthStore = defineStore('auth', () => {
     getProfile,
     updateProfile,
     kakaoLogin,
+    googleLogin,
   }
 })
