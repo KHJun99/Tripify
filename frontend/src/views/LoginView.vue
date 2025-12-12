@@ -57,6 +57,12 @@ const handleGoogleLogin = () => {
           <input v-model="formData.password" type="password" required />
         </div>
 
+        <div class="account-recovery">
+          <router-link to="/auth/find-username" class="recovery-link">아이디 찾기</router-link>
+          <span class="divider-text">|</span>
+          <router-link to="/auth/reset-password" class="recovery-link">비밀번호 찾기</router-link>
+        </div>
+
         <button type="submit" class="btn-primary">로그인</button>
       </form>
 
@@ -229,5 +235,27 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   color: #4285f4;
+}
+
+.account-recovery {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.recovery-link {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.recovery-link:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.divider-text {
+  margin: 0 0.5rem;
+  color: #ccc;
 }
 </style>

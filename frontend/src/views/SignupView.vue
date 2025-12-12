@@ -14,12 +14,27 @@ const formData = ref({
 })
 
 const error = ref('')
+const success = ref('')
+const showSuccessDialog = ref(false)
 
 const handleSignup = async () => {
   try {
     error.value = ''
-    await authStore.signup(formData.value)
-    router.push('/login')
+    success.value = ''
+    const response = await authStore.signup(formData.value)
+
+    // 회원가입 성공 시 이메일 인증 안내
+    if (response?.message) {
+      success.value = response.message
+      showSuccessDialog.value = true
+
+      // 5초 후 로그인 페이지로 이동
+      setTimeout(() => {
+        router.push('/login')
+      }, 5000)
+    } else {
+      router.push('/login')
+    }
   } catch (err) {
     error.value = err.response?.data?.error || '회원가입에 실패했습니다.'
   }
@@ -31,9 +46,18 @@ const handleSignup = async () => {
     <div class="signup-card">
       <h1>회원가입</h1>
 
+      <div v-if="showSuccessDialog" class="success-dialog">
+        <div class="icon-success">✓</div>
+        <h2>회원가입 완료!</h2>
+        <p class="success-message">{{ success }}</p>
+        <p class="email-notice">📧 가입하신 이메일로 인증 링크를 보내드렸습니다.</p>
+        <p class="redirect-notice">이메일 인증 후 로그인해주세요.</p>
+        <small>잠시 후 로그인 페이지로 이동합니다...</small>
+      </div>
+
       <div v-if="error" class="error-message">{{ error }}</div>
 
-      <form @submit.prevent="handleSignup">
+      <form v-if="!showSuccessDialog" @submit.prevent="handleSignup">
         <div class="form-group">
           <label>아이디</label>
           <input v-model="formData.username" type="text" required />
@@ -138,5 +162,54 @@ h1 {
   color: #3498db;
   text-decoration: none;
   font-weight: bold;
+}
+
+.success-dialog {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.icon-success {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #d4edda;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+}
+
+.success-dialog h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.success-message {
+  color: #28a745;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.email-notice {
+  background-color: #e7f3ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  color: #004085;
+}
+
+.redirect-notice {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.success-dialog small {
+  color: #999;
+  display: block;
+  margin-top: 1rem;
 }
 </style>

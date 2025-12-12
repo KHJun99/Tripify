@@ -10,4 +10,15 @@ urlpatterns = [
     path('profile/', views.UserDetailView.as_view(), name='profile'),
     path('kakao/callback/', views.kakao_login, name='kakao_login'),
     path('google/callback/', views.google_login, name='google_login'),
+
+    # 이메일 인증
+    path('verify-email/', views.verify_email, name='verify_email'),
+    path('resend-verification/', views.resend_verification_email, name='resend_verification'),
+
+    # 비밀번호 재설정
+    path('password-reset/request/', views.request_password_reset, name='request_password_reset'),
+    path('password-reset/confirm/', views.reset_password_confirm, name='reset_password_confirm'),
+
+    # 아이디 찾기
+    path('recover-username/', views.recover_username, name='recover_username'),
 ]
