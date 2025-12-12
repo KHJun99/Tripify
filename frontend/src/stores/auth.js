@@ -118,6 +118,26 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  const changePassword = async (currentPassword, newPassword, newPasswordConfirm) => {
+    try {
+      const response = await authAPI.changePassword({
+        current_password: currentPassword,
+        new_password: newPassword,
+        new_password_confirm: newPasswordConfirm,
+      })
+
+      // 비밀번호 변경 성공 시 새 토큰으로 업데이트
+      if (response.data.token) {
+        token.value = response.data.token
+        localStorage.setItem('token', response.data.token)
+      }
+
+      return response.data
+    } catch (error) {
+      throw error
+    }
+  }
+
   return {
     user,
     token,
@@ -130,5 +150,6 @@ export const useAuthStore = defineStore('auth', () => {
     kakaoLogin,
     googleLogin,
     deleteAccount,
+    changePassword,
   }
 })

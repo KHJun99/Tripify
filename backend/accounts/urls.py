@@ -19,6 +19,9 @@ urlpatterns = [
     path('password-reset/request/', views.request_password_reset, name='request_password_reset'),
     path('password-reset/confirm/', views.reset_password_confirm, name='reset_password_confirm'),
 
+    # 비밀번호 변경
+    path('password-change/', views.change_password, name='change_password'),
+
     # 아이디 찾기
     path('recover-username/', views.recover_username, name='recover_username'),
 
