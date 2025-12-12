@@ -10,6 +10,10 @@ const handleSearch = () => {
     router.push({ name: 'trip-plan', query: { search: searchQuery.value } })
   }
 }
+
+const goToFestivals = () => {
+  router.push({ name: 'festivals' })
+}
 </script>
 
 <template>
@@ -36,9 +40,10 @@ const handleSearch = () => {
           <h3>🤖 AI 추천</h3>
           <p>예산과 스타일에 맞는 여행 코스를 AI가 자동 생성</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card clickable" @click="goToFestivals">
           <h3>📅 축제 정보</h3>
           <p>월별, 지역별 축제와 행사 정보 제공</p>
+          <div class="card-arrow">→</div>
         </div>
         <div class="feature-card">
           <h3>⭐ 북마크</h3>
@@ -116,15 +121,40 @@ const handleSearch = () => {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
 }
 
+.feature-card.clickable {
+  cursor: pointer;
+}
+
+.feature-card.clickable:hover {
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+  border: 2px solid #3498db;
+}
+
 .feature-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #3498db;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.feature-card.clickable:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(5px);
 }
 </style>
