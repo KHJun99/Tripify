@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, get_user_model
 from django.db import IntegrityError
-from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer, AccountDeletionSerializer
+from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer, AccountDeletionSerializer, PasswordChangeSerializer
 from .kakao_service import KakaoOAuthService
 from .google_service import GoogleOAuthService
 from .models import EmailVerificationToken, PasswordResetToken
@@ -418,6 +418,42 @@ def recover_username(request):
             return Response({
                 'error': f'메일 발송 중 오류가 발생했습니다: {str(e)}'
             }, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def change_password(request):
+    """비밀번호 변경 API"""
+    user = request.user
+
+    # 소셜 로그인 사용자는 비밀번호 변경 불가
+    if user.login_type != 'normal':
+        return Response({
+            'error': '소셜 로그인 사용자는 비밀번호를 변경할 수 없습니다.'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    serializer = PasswordChangeSerializer(data=request.data, context={'request': request})
+
+    if serializer.is_valid():
+        new_password = serializer.validated_data['new_password']
+
+        # 비밀번호 변경
+        user.set_password(new_password)
+        user.save()
+
+        # 기존 토큰 삭제 (보안을 위해)
+        if hasattr(user, 'auth_token'):
+            user.auth_token.delete()
+
+        # 새 토큰 생성
+        token = Token.objects.create(user=user)
+
+        return Response({
+            'message': '비밀번호가 성공적으로 변경되었습니다.',
+            'token': token.key
+        }, status=status.HTTP_200_OK)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

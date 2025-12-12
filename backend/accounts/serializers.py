@@ -72,3 +72,23 @@ class AccountDeletionSerializer(serializers.Serializer):
         if user.login_type == 'normal' and not user.check_password(value):
             raise serializers.ValidationError("비밀번호가 올바르지 않습니다.")
         return value
+
+
+class PasswordChangeSerializer(serializers.Serializer):
+    """비밀번호 변경 Serializer"""
+    current_password = serializers.CharField(required=True, write_only=True)
+    new_password = serializers.CharField(required=True, write_only=True, validators=[validate_password])
+    new_password_confirm = serializers.CharField(required=True, write_only=True)
+
+    def validate_current_password(self, value):
+        user = self.context['request'].user
+        if not user.check_password(value):
+            raise serializers.ValidationError("현재 비밀번호가 올바르지 않습니다.")
+        return value
+
+    def validate(self, attrs):
+        if attrs['new_password'] != attrs['new_password_confirm']:
+            raise serializers.ValidationError({"new_password": "새 비밀번호가 일치하지 않습니다."})
+        if attrs['current_password'] == attrs['new_password']:
+            raise serializers.ValidationError({"new_password": "새 비밀번호는 현재 비밀번호와 달라야 합니다."})
+        return attrs

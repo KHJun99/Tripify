@@ -32,4 +32,8 @@ export const authAPI = {
   deleteAccount(data) {
     return axios.delete('/auth/delete/', { data })
   },
+
+  changePassword(data) {
+    return axios.post('/auth/password-change/', data)
+  },
 }
