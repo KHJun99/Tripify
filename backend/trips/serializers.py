@@ -19,7 +19,11 @@ class ItinerarySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Itinerary
-        fields = ['id', 'day_number', 'date', 'description', 'places']
+        fields = [
+            'id', 'day_number', 'date', 'description', 'places',
+            'attractions', 'transportation_info', 'accommodation_info',
+            'meals_info', 'events_info', 'estimated_cost'
+        ]
         read_only_fields = ['id']
 
 

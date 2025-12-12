@@ -57,7 +57,13 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                         travel_plan=travel_plan,
                         day_number=day_data['day_number'],
                         date=data['start_date'] + timedelta(days=day_data['day_number'] - 1),
-                        description=day_data.get('description', '')
+                        description=day_data.get('description', ''),
+                        attractions=day_data.get('attractions', []),
+                        transportation_info=day_data.get('transportation_info', {}),
+                        accommodation_info=day_data.get('accommodation_info', {}),
+                        meals_info=day_data.get('meals_info', {}),
+                        events_info=day_data.get('events_info', []),
+                        estimated_cost=day_data.get('estimated_cost', None)
                     )
 
             response_serializer = TravelPlanSerializer(travel_plan)
