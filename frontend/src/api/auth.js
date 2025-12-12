@@ -28,4 +28,8 @@ export const authAPI = {
   googleLogin(code) {
     return axios.post('/auth/google/callback/', { code })
   },
+
+  deleteAccount(data) {
+    return axios.delete('/auth/delete/', { data })
+  },
 }

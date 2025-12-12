@@ -101,6 +101,23 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  const deleteAccount = async (password = null) => {
+    try {
+      const data = password ? { password } : {}
+      const response = await authAPI.deleteAccount(data)
+
+      // 계정 삭제 성공 시 로그아웃 처리
+      token.value = null
+      user.value = null
+      isAuthenticated.value = false
+      localStorage.removeItem('token')
+
+      return response.data
+    } catch (error) {
+      throw error
+    }
+  }
+
   return {
     user,
     token,
@@ -112,5 +129,6 @@ export const useAuthStore = defineStore('auth', () => {
     updateProfile,
     kakaoLogin,
     googleLogin,
+    deleteAccount,
   }
 })
