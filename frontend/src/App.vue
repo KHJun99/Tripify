@@ -22,6 +22,7 @@ const handleLogout = async () => {
         <template v-if="isAuthenticated">
           <RouterLink to="/trips">내 여행</RouterLink>
           <RouterLink to="/trip/new">여행 계획</RouterLink>
+          <RouterLink to="/settings">마이페이지</RouterLink>
           <button @click="handleLogout" class="btn-link">로그아웃</button>
         </template>
         <template v-else>

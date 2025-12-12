@@ -1,6 +1,51 @@
 <template>
   <div class="mypage-container">
-    <div class="mypage-card">
+    <!-- 비밀번호 확인 모달 (일반 로그인 사용자만) -->
+    <div v-if="showPasswordVerification" class="modal-overlay">
+      <div class="modal-content verification-modal">
+        <h3 class="modal-title">마이페이지 접근 인증</h3>
+        <p class="modal-info">
+          보안을 위해 비밀번호를 입력해주세요.
+        </p>
+
+        <div class="password-input-section">
+          <label for="verify-password">비밀번호</label>
+          <input
+            type="password"
+            id="verify-password"
+            v-model="verifyPassword"
+            placeholder="비밀번호를 입력하세요"
+            class="password-input"
+            @keyup.enter="handlePasswordVerification"
+            autofocus
+          />
+        </div>
+
+        <div v-if="verifyError" class="error-message">
+          {{ verifyError }}
+        </div>
+
+        <div class="modal-buttons">
+          <button
+            @click="handlePasswordVerification"
+            class="verify-button"
+            :disabled="isVerifying || !verifyPassword"
+          >
+            {{ isVerifying ? '확인 중...' : '확인' }}
+          </button>
+          <button
+            @click="handleCancelVerification"
+            class="cancel-button"
+            :disabled="isVerifying"
+          >
+            취소
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 마이페이지 컨텐츠 -->
+    <div v-if="isVerified" class="mypage-card">
       <h2 class="page-title">마이페이지</h2>
 
       <!-- 회원 정보 섹션 -->
@@ -167,6 +212,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
+import { authAPI } from '@/api/auth'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -176,6 +222,13 @@ const showDeleteConfirmation = ref(false)
 const deletePassword = ref('')
 const isDeleting = ref(false)
 const deleteError = ref('')
+
+// 비밀번호 확인 관련
+const showPasswordVerification = ref(false)
+const verifyPassword = ref('')
+const isVerifying = ref(false)
+const verifyError = ref('')
+const isVerified = ref(false)
 
 // 비밀번호 변경 관련
 const passwordForm = ref({
@@ -204,11 +257,47 @@ const isPasswordFormValid = computed(() => {
 onMounted(async () => {
   try {
     user.value = await authStore.getProfile()
+
+    // 일반 로그인 사용자는 비밀번호 확인 필요
+    if (isNormalLogin.value) {
+      showPasswordVerification.value = true
+    } else {
+      // 소셜 로그인 사용자는 바로 접근
+      isVerified.value = true
+    }
   } catch (error) {
     console.error('프로필 로드 실패:', error)
     router.push('/login')
   }
 })
+
+const handlePasswordVerification = async () => {
+  if (isVerifying.value || !verifyPassword.value) return
+
+  try {
+    isVerifying.value = true
+    verifyError.value = ''
+
+    await authAPI.verifyPassword(verifyPassword.value)
+
+    // 비밀번호 확인 성공
+    showPasswordVerification.value = false
+    isVerified.value = true
+  } catch (error) {
+    console.error('비밀번호 확인 실패:', error)
+    if (error.response?.data?.password) {
+      verifyError.value = error.response.data.password[0]
+    } else {
+      verifyError.value = '비밀번호가 올바르지 않습니다.'
+    }
+  } finally {
+    isVerifying.value = false
+  }
+}
+
+const handleCancelVerification = () => {
+  router.push('/')
+}
 
 const getLoginTypeLabel = (type) => {
   const labels = {
@@ -534,11 +623,21 @@ const handleDeleteAccount = async () => {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+.verification-modal {
+  max-width: 450px;
+}
+
 .modal-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
   font-weight: 700;
+}
+
+.modal-info {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .modal-warning {
@@ -578,6 +677,7 @@ const handleDeleteAccount = async () => {
   justify-content: flex-end;
 }
 
+.verify-button,
 .confirm-button,
 .cancel-button {
   padding: 0.875rem 1.75rem;
@@ -587,6 +687,20 @@ const handleDeleteAccount = async () => {
   cursor: pointer;
   border: none;
   transition: all 0.2s;
+}
+
+.verify-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.verify-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.verify-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .confirm-button {
@@ -634,6 +748,7 @@ const handleDeleteAccount = async () => {
     flex-direction: column-reverse;
   }
 
+  .verify-button,
   .confirm-button,
   .cancel-button {
     width: 100%;

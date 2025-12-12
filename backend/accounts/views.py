@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate, get_user_model
 from django.db import IntegrityError
-from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer, AccountDeletionSerializer, PasswordChangeSerializer
+from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer, AccountDeletionSerializer, PasswordChangeSerializer, PasswordVerifySerializer
 from .kakao_service import KakaoOAuthService
 from .google_service import GoogleOAuthService
 from .models import EmailVerificationToken, PasswordResetToken
@@ -418,6 +418,30 @@ def recover_username(request):
             return Response({
                 'error': f'메일 발송 중 오류가 발생했습니다: {str(e)}'
             }, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def verify_password(request):
+    """비밀번호 확인 API (마이페이지 접근용)"""
+    user = request.user
+
+    # 소셜 로그인 사용자는 비밀번호 확인 불필요
+    if user.login_type != 'normal':
+        return Response({
+            'message': '소셜 로그인 사용자는 비밀번호 확인이 필요하지 않습니다.',
+            'verified': True
+        }, status=status.HTTP_200_OK)
+
+    serializer = PasswordVerifySerializer(data=request.data, context={'request': request})
+
+    if serializer.is_valid():
+        return Response({
+            'message': '비밀번호가 확인되었습니다.',
+            'verified': True
+        }, status=status.HTTP_200_OK)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

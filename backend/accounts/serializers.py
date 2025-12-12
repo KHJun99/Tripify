@@ -92,3 +92,14 @@ class PasswordChangeSerializer(serializers.Serializer):
         if attrs['current_password'] == attrs['new_password']:
             raise serializers.ValidationError({"new_password": "새 비밀번호는 현재 비밀번호와 달라야 합니다."})
         return attrs
+
+
+class PasswordVerifySerializer(serializers.Serializer):
+    """비밀번호 확인 Serializer"""
+    password = serializers.CharField(required=True, write_only=True)
+
+    def validate_password(self, value):
+        user = self.context['request'].user
+        if not user.check_password(value):
+            raise serializers.ValidationError("비밀번호가 올바르지 않습니다.")
+        return value

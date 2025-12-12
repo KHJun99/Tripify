@@ -36,4 +36,8 @@ export const authAPI = {
   changePassword(data) {
     return axios.post('/auth/password-change/', data)
   },
+
+  verifyPassword(password) {
+    return axios.post('/auth/password-verify/', { password })
+  },
 }
