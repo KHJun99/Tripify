@@ -15,7 +15,8 @@ class FestivalAPI:
 
     def search_festivals(self, month=None, region=None, year=None):
         """축제/행사 검색"""
-        endpoint = f'{self.base_url}/searchFestival1'
+        # areaBasedList1 엔드포인트 사용 (더 안정적)
+        endpoint = f'{self.base_url}/areaBasedList1'
 
         # 연도 설정 (기본값: 현재 연도)
         if year is None:
@@ -23,23 +24,15 @@ class FestivalAPI:
 
         params = {
             'serviceKey': self.api_key,
-            'numOfRows': 100,  # 더 많은 데이터 가져오기
+            'numOfRows': 100,
             'pageNo': 1,
             'MobileOS': 'ETC',
             'MobileApp': 'Tripify',
             '_type': 'json',
             'listYN': 'Y',
-            'arrange': 'A'
+            'arrange': 'O',  # 제목순 정렬
+            'contentTypeId': 15  # 15 = 축제/공연/행사
         }
-
-        if month:
-            # 해당 월의 시작일과 종료일 설정
-            params['eventStartDate'] = f'{year}{month:02d}01'
-            # 월의 마지막 날 계산
-            if month == 12:
-                params['eventEndDate'] = f'{year+1}0101'
-            else:
-                params['eventEndDate'] = f'{year}{month+1:02d}01'
 
         if region:
             params['areaCode'] = self._get_area_code(region)
@@ -54,7 +47,24 @@ class FestivalAPI:
 
             # JSON 응답 파싱
             try:
-                return response.json()
+                data = response.json()
+
+                # 응답 구조 확인
+                if 'response' not in data:
+                    print(f'예상치 못한 응답 구조: {str(data)[:200]}')
+                    return None
+
+                # 에러 코드 확인
+                header = data.get('response', {}).get('header', {})
+                result_code = header.get('resultCode', '')
+                result_msg = header.get('resultMsg', '')
+
+                if result_code != '0000':
+                    print(f'API 에러 코드: {result_code}, 메시지: {result_msg}')
+                    return None
+
+                return data
+
             except ValueError as e:
                 print(f'JSON 파싱 오류: {e}')
                 print(f'응답 내용: {response.text[:500]}')

@@ -50,20 +50,25 @@ class Command(BaseCommand):
         year = options.get('year') or datetime.now().year
         self.stdout.write(f'대상 연도: {year}년')
 
-        # 월별로 데이터 가져오기
-        months = [options['month']] if options['month'] else range(1, 13)
+        # 지역별로 데이터 가져오기 (areaBasedList1 API 사용)
+        regions = {
+            '서울': 1, '인천': 2, '대전': 3, '대구': 4, '광주': 5, '부산': 6,
+            '울산': 7, '세종': 8, '경기': 31, '강원': 32, '충북': 33, '충남': 34,
+            '경북': 35, '경남': 36, '전북': 37, '전남': 38, '제주': 39
+        }
+
         total_created = 0
         total_updated = 0
         total_errors = 0
 
-        for month in months:
-            self.stdout.write(f'\n{month}월 축제 데이터 가져오는 중...')
+        for region_name, area_code in regions.items():
+            self.stdout.write(f'\n{region_name} 지역 축제 데이터 가져오는 중...')
 
-            # API 호출
-            response = festival_api.search_festivals(month=month, year=year)
+            # API 호출 (지역별)
+            response = festival_api.search_festivals(region=region_name, year=year)
 
             if not response:
-                self.stdout.write(self.style.ERROR(f'{month}월 데이터를 가져오는데 실패했습니다.'))
+                self.stdout.write(self.style.ERROR(f'{region_name} 데이터를 가져오는데 실패했습니다.'))
                 total_errors += 1
                 continue
 
@@ -71,25 +76,40 @@ class Command(BaseCommand):
             try:
                 items = response.get('response', {}).get('body', {}).get('items', {}).get('item', [])
 
+                if not items:
+                    self.stdout.write(f'{region_name}: 데이터 없음')
+                    continue
+
                 # items가 딕셔너리인 경우 리스트로 변환
                 if isinstance(items, dict):
                     items = [items]
 
+                region_created = 0
+                region_updated = 0
+
                 for item in items:
-                    created, updated = self._save_festival(item, current_year)
+                    created, updated = self._save_festival(item, year)
                     if created:
                         total_created += 1
+                        region_created += 1
                     if updated:
                         total_updated += 1
+                        region_updated += 1
 
-                self.stdout.write(self.style.SUCCESS(f'{month}월: {len(items)}개 항목 처리 완료'))
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f'{region_name}: {len(items)}개 항목 처리 완료 '
+                        f'(신규: {region_created}, 업데이트: {region_updated})'
+                    )
+                )
 
             except Exception as e:
-                self.stdout.write(self.style.ERROR(f'{month}월 데이터 파싱 오류: {e}'))
+                self.stdout.write(self.style.ERROR(f'{region_name} 데이터 파싱 오류: {e}'))
+                total_errors += 1
                 continue
 
             # API 호출 제한 방지를 위한 대기
-            time.sleep(0.5)
+            time.sleep(0.3)
 
         # 결과 요약
         self.stdout.write('\n' + '='*50)
