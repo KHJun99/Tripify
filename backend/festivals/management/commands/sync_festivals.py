@@ -19,33 +19,52 @@ class Command(BaseCommand):
             type=int,
             help='특정 월의 축제만 가져옵니다 (1-12)',
         )
+        parser.add_argument(
+            '--year',
+            type=int,
+            help='특정 연도의 축제만 가져옵니다 (기본: 현재 연도)',
+        )
 
     def handle(self, *args, **options):
         self.stdout.write('한국관광공사 API에서 축제 데이터를 가져오는 중...')
 
         festival_api = FestivalAPI()
 
+        # API 키 확인
+        if not festival_api.api_key or festival_api.api_key == 'your_tour_api_key_here':
+            self.stdout.write(
+                self.style.ERROR(
+                    '\n❌ TOUR_API_KEY가 설정되지 않았습니다!\n'
+                    '   .env 파일에 한국관광공사 API 키를 설정해주세요.\n'
+                    '   자세한 내용은 TOUR_API_SETUP.md를 참고하세요.\n'
+                )
+            )
+            return
+
         # 기존 데이터 삭제 옵션
         if options['clear']:
             Festival.objects.all().delete()
             self.stdout.write(self.style.WARNING('기존 축제 데이터를 모두 삭제했습니다.'))
 
-        # 현재 연도 가져오기
-        current_year = datetime.now().year
+        # 연도 설정
+        year = options.get('year') or datetime.now().year
+        self.stdout.write(f'대상 연도: {year}년')
 
         # 월별로 데이터 가져오기
         months = [options['month']] if options['month'] else range(1, 13)
         total_created = 0
         total_updated = 0
+        total_errors = 0
 
         for month in months:
             self.stdout.write(f'\n{month}월 축제 데이터 가져오는 중...')
 
             # API 호출
-            response = festival_api.search_festivals(month=month)
+            response = festival_api.search_festivals(month=month, year=year)
 
             if not response:
                 self.stdout.write(self.style.ERROR(f'{month}월 데이터를 가져오는데 실패했습니다.'))
+                total_errors += 1
                 continue
 
             # 응답 파싱
@@ -72,11 +91,29 @@ class Command(BaseCommand):
             # API 호출 제한 방지를 위한 대기
             time.sleep(0.5)
 
-        self.stdout.write(
-            self.style.SUCCESS(
-                f'\n완료! 생성: {total_created}개, 업데이트: {total_updated}개'
+        # 결과 요약
+        self.stdout.write('\n' + '='*50)
+        if total_errors > 0:
+            self.stdout.write(
+                self.style.WARNING(
+                    f'\n⚠️  완료 (일부 오류 발생)\n'
+                    f'   생성: {total_created}개\n'
+                    f'   업데이트: {total_updated}개\n'
+                    f'   오류: {total_errors}개월\n\n'
+                    f'💡 API 오류가 발생했습니다. 다음을 확인하세요:\n'
+                    f'   1. .env 파일의 TOUR_API_KEY가 올바른지 확인\n'
+                    f'   2. 공공데이터포털에서 API가 활성화되었는지 확인\n'
+                    f'   3. API 일일 호출 제한을 초과하지 않았는지 확인\n'
+                )
             )
-        )
+        else:
+            self.stdout.write(
+                self.style.SUCCESS(
+                    f'\n✅ 완료!\n'
+                    f'   생성: {total_created}개\n'
+                    f'   업데이트: {total_updated}개\n'
+                )
+            )
 
     def _save_festival(self, item, current_year):
         """API 응답 아이템을 Festival 모델로 저장"""
