@@ -1,0 +1,24 @@
+[
+  {
+    "id": "130961",
+    "title": "이한열기념관",
+    "address": "서울특별시 마포구 신촌로12나길 26",
+    "phone": "",
+    "latitude": "37.5550242286",
+    "longitude": "126.9338531935",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3505706_image2_1.jpg",
+    "category": "기념관",
+    "original_category": "박물관"
+  },
+  {
+    "id": "2999376",
+    "title": "조아라기념관",
+    "address": "광주광역시 남구 제중로46번길 3-6",
+    "phone": "",
+    "latitude": "35.1390923621",
+    "longitude": "126.9142331301",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/2999266_image2_1.jpg",
+    "category": "기념관",
+    "original_category": "박물관"
+  }
+]

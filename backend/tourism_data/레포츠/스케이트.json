@@ -1,0 +1,342 @@
+[
+  {
+    "id": "2553644",
+    "title": "강릉아이스링크",
+    "address": "강원특별자치도 강릉시 종합운동장길 32",
+    "phone": "",
+    "latitude": "37.7737771598",
+    "longitude": "128.8925858597",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3494735_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3018586",
+    "title": "고양어울림누리 얼음마루",
+    "address": "경기도 고양시 덕양구 어울림로 33 (성사동)",
+    "phone": "",
+    "latitude": "37.6484671422",
+    "longitude": "126.8346318290",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3085057_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "131607",
+    "title": "광운대학교 아이스링크",
+    "address": "서울특별시 노원구 광운로 20 (월계동)",
+    "phone": "",
+    "latitude": "37.6194328627",
+    "longitude": "127.0581344826",
+    "image": "",
+    "category": "스케이트"
+  },
+  {
+    "id": "131516",
+    "title": "광주실내빙상장",
+    "address": "광주광역시 서구 금화로 278 (풍암동)",
+    "phone": "",
+    "latitude": "35.1365809258",
+    "longitude": "126.8781697142",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3496356_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "2718884",
+    "title": "국제 롤러스케이트장",
+    "address": "인천광역시 서구 청라에메랄드로 99",
+    "phone": "032-623-4567",
+    "latitude": "37.5336606539",
+    "longitude": "126.6557430530",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3563038_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131519",
+    "title": "그랜드하얏트 서울 아이스링크",
+    "address": "서울특별시 용산구 소월로 322 (한남동)",
+    "phone": "",
+    "latitude": "37.5404826034",
+    "longitude": "126.9968784173",
+    "image": "",
+    "category": "스케이트"
+  },
+  {
+    "id": "250478",
+    "title": "금오랜드 아이스링크장",
+    "address": "경상북도 구미시 금오산로 339 (남통동)",
+    "phone": "",
+    "latitude": "36.1133483448",
+    "longitude": "128.3156083922",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3572929_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3079868",
+    "title": "남선공원 스케이트장",
+    "address": "대전광역시 서구 남선로 66 (탄방동)",
+    "phone": "",
+    "latitude": "36.3484244318",
+    "longitude": "127.3988001827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3079863_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3013742",
+    "title": "남양주별내빙상장",
+    "address": "경기도 남양주시 덕송3로 76 (별내동)",
+    "phone": "",
+    "latitude": "37.6737275330",
+    "longitude": "127.1126029667",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3013327_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3058070",
+    "title": "대구아이스파크",
+    "address": "대구광역시 동구 입석로1길 69-4 (입석동)",
+    "phone": "",
+    "latitude": "35.8933072082",
+    "longitude": "128.6481296055",
+    "image": "",
+    "category": "스케이트"
+  },
+  {
+    "id": "3008960",
+    "title": "대전엑스포시민광장스케이트장",
+    "address": "대전광역시 서구 둔산대로 169 한밭수목원",
+    "phone": "",
+    "latitude": "36.3659250159",
+    "longitude": "127.3879840082",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3513193_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3061018",
+    "title": "동래아이스링크",
+    "address": "부산광역시 동래구 충렬대로 420 (안락동)",
+    "phone": "",
+    "latitude": "35.1962858084",
+    "longitude": "129.1039423369",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3061004_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3018677",
+    "title": "로라비트 일산점",
+    "address": "경기도 고양시 일산서구 한류월드로 300 (대화동)",
+    "phone": "",
+    "latitude": "37.6646082788",
+    "longitude": "126.7545414686",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3018669_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3036804",
+    "title": "롤킹롤러스케이트장",
+    "address": "충청남도 천안시 서북구 한들3로 8 (백석동)",
+    "phone": "",
+    "latitude": "36.8242260560",
+    "longitude": "127.1240701938",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3036792_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131297",
+    "title": "롯데월드 아이스링크",
+    "address": "서울특별시 송파구 올림픽로 240 (잠실동)",
+    "phone": "",
+    "latitude": "37.5123821225",
+    "longitude": "127.0976311526",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3584594_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3024306",
+    "title": "만촌인라인롤러스케이트장",
+    "address": "대구광역시 수성구 팔현길 241 (만촌동)",
+    "phone": "",
+    "latitude": "35.8744678370",
+    "longitude": "128.6569349112",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3024269_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "130978",
+    "title": "목동아이스링크(실내)",
+    "address": "서울특별시 양천구 안양천로 939 (목동)",
+    "phone": "",
+    "latitude": "37.5292790440",
+    "longitude": "126.8804587869",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3486306_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3080317",
+    "title": "부산광역시 부산실내빙상장",
+    "address": "부산광역시 북구 금곡대로46번길 50 (덕천동)",
+    "phone": "",
+    "latitude": "35.2134792901",
+    "longitude": "129.0057781894",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3080312_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3060292",
+    "title": "부산광역시남구시설관리공단 남구빙상장",
+    "address": "부산광역시 남구 백운포로 106 (용호동)",
+    "phone": "",
+    "latitude": "35.1041962328",
+    "longitude": "129.1101054355",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3060288_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3000553",
+    "title": "부영국제빙상장",
+    "address": "전라남도 광양시 순광로 482-8 ㈜부영스포츠타운",
+    "phone": "",
+    "latitude": "34.9622151688",
+    "longitude": "127.5702298172",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3000539_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131323",
+    "title": "분당올림픽스포츠센터 아이스링크",
+    "address": "경기도 성남시 분당구 중앙공원로 35 (서현동)",
+    "phone": "",
+    "latitude": "37.3809229319",
+    "longitude": "127.1286792742",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3062538_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "2765498",
+    "title": "블랙아이스링크장",
+    "address": "경기도 남양주시 강변북로651번길 24-1 (수석동)",
+    "phone": "",
+    "latitude": "37.5867608789",
+    "longitude": "127.1686864559",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/2766315_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "663785",
+    "title": "서울광장 스케이트장",
+    "address": "서울특별시 중구 을지로 12 시청광장지하쇼핑센터",
+    "phone": "",
+    "latitude": "37.5655015943",
+    "longitude": "126.9787960237",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3043800_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "1019616",
+    "title": "센텀시티 아이스링크",
+    "address": "부산광역시 해운대구 센텀남대로 35",
+    "phone": "",
+    "latitude": "35.1688560217",
+    "longitude": "129.1295519730",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3544863_image2_1.JPEG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3060196",
+    "title": "스카이롤러파크",
+    "address": "부산광역시 기장군 정관읍 정관중앙로 45",
+    "phone": "",
+    "latitude": "35.3212315161",
+    "longitude": "129.1783074147",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3060175_image2_1.JPG",
+    "category": "스케이트"
+  },
+  {
+    "id": "3008742",
+    "title": "아르떼수성랜드 아이스링크",
+    "address": "대구광역시 수성구 용학로 35-5 (상동)",
+    "phone": "",
+    "latitude": "35.8267252129",
+    "longitude": "128.6133456348",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3008695_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131978",
+    "title": "안양도시공사 빙상장",
+    "address": "경기도 안양시 동안구 평촌대로 389 (비산동)",
+    "phone": "",
+    "latitude": "37.4056501862",
+    "longitude": "126.9494587553",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3577764_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "2795195",
+    "title": "유앤아이센터",
+    "address": "경기도 화성시 태안로 145 (병점동)",
+    "phone": "",
+    "latitude": "37.2039528346",
+    "longitude": "127.0335817567",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/2795394_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "2629036",
+    "title": "의성컬링센터",
+    "address": "경상북도 의성군 의성읍 충효로 88",
+    "phone": "",
+    "latitude": "36.3551113547",
+    "longitude": "128.7028506025",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/2631319_image2_1.bmp",
+    "category": "스케이트"
+  },
+  {
+    "id": "452707",
+    "title": "의정부실내빙상장",
+    "address": "경기도 의정부시 체육로 136 (녹양동)",
+    "phone": "",
+    "latitude": "37.7599214419",
+    "longitude": "127.0232447646",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3500263_image2_1.jpeg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131838",
+    "title": "이월드 83타워 아이스링크",
+    "address": "대구광역시 달서구 두류공원로 200",
+    "phone": "",
+    "latitude": "35.8548989086",
+    "longitude": "128.5648463453",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3512534_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3035091",
+    "title": "청주실내빙상장",
+    "address": "충청북도 청주시 청원구 밀레니엄1로 45 (사천동)",
+    "phone": "",
+    "latitude": "36.6801239385",
+    "longitude": "127.4776812462",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3035082_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "3007677",
+    "title": "춘천송암레포츠타운빙상장",
+    "address": "강원특별자치도 춘천시 스포츠타운길 113 춘천의암빙상장",
+    "phone": "",
+    "latitude": "37.8538143491",
+    "longitude": "127.6870814996",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3007657_image2_1.jpg",
+    "category": "스케이트"
+  },
+  {
+    "id": "131322",
+    "title": "태릉국제스케이트장",
+    "address": "서울특별시 노원구 화랑로 727 (공릉동)",
+    "phone": "",
+    "latitude": "37.6338070057",
+    "longitude": "127.1032521828",
+    "image": "",
+    "category": "스케이트"
+  }
+]

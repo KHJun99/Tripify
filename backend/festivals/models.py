@@ -3,24 +3,25 @@ from django.db import models
 
 class Festival(models.Model):
     """축제 모델"""
-    name = models.CharField(max_length=200, verbose_name='축제명')
-    region = models.CharField(max_length=50, verbose_name='지역')
-    location = models.CharField(max_length=300, verbose_name='장소')
-    period = models.CharField(max_length=100, verbose_name='개최 기간')
-    month = models.IntegerField(verbose_name='시작 월', help_text='1-12')
-    description = models.TextField(verbose_name='간단 설명')
-    detailed_description = models.TextField(verbose_name='상세 설명', blank=True)
-    image = models.URLField(max_length=500, verbose_name='이미지 URL')
+    title = models.CharField(max_length=255, verbose_name='축제명')
+    category = models.CharField(max_length=100, blank=True, verbose_name='카테고리')
+    address = models.CharField(max_length=500, verbose_name='주소')
+    phone = models.CharField(max_length=100, blank=True, verbose_name='연락처')
+    latitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)
+    image_url = models.URLField(max_length=500, blank=True, verbose_name='이미지 URL')
 
-    # 추가 정보
-    fee = models.CharField(max_length=100, verbose_name='입장료', default='무료')
-    contact = models.CharField(max_length=100, verbose_name='연락처', blank=True)
-    website = models.URLField(max_length=500, verbose_name='웹사이트', blank=True)
+    # 축제 날짜 정보
+    event_start_date = models.CharField(max_length=20, blank=True, verbose_name='행사 시작일')  # YYYYMMDD
+    event_end_date = models.CharField(max_length=20, blank=True, verbose_name='행사 종료일')    # YYYYMMDD
+    start_month = models.IntegerField(null=True, blank=True, verbose_name='시작 월', help_text='1-12')
+    end_month = models.IntegerField(null=True, blank=True, verbose_name='종료 월', help_text='1-12')
 
-    # JSON 필드
-    tags = models.JSONField(default=list, verbose_name='태그')
-    programs = models.JSONField(default=list, verbose_name='프로그램', blank=True)
-    transportation = models.JSONField(default=dict, verbose_name='교통 정보', blank=True)
+    # 지역 정보
+    region = models.CharField(max_length=100, verbose_name='지역')
+
+    # 외부 API ID
+    content_id = models.CharField(max_length=50, unique=True, help_text="외부 API Content ID")
 
     # 메타 정보
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='생성일')
@@ -31,7 +32,7 @@ class Festival(models.Model):
         db_table = 'festivals'
         verbose_name = '축제'
         verbose_name_plural = '축제 목록'
-        ordering = ['month', 'name']
+        ordering = ['start_month', 'title']
 
     def __str__(self):
-        return f"{self.name} ({self.region})"
+        return f"{self.title} ({self.region})"

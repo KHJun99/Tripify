@@ -1,0 +1,330 @@
+[
+  {
+    "id": "2658237",
+    "title": "뜬봉샘생태공원",
+    "address": "전북특별자치도 장수군 장수읍 물뿌랭이길 10-18",
+    "phone": "",
+    "latitude": "35.5921873324",
+    "longitude": "127.5013445805",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3361772_image2_1.JPG",
+    "category": "약수터",
+    "original_category": "자연생태관광지"
+  },
+  {
+    "id": "2748834",
+    "title": "데미샘자연휴양림",
+    "address": "전북특별자치도 진안군 백운면 데미샘1길 172",
+    "phone": "",
+    "latitude": "35.6570931590",
+    "longitude": "127.4610603316",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3505838_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "자연휴양림"
+  },
+  {
+    "id": "127535",
+    "title": "갈천약수터",
+    "address": "강원특별자치도 양양군 서면 구룡령로 1103-66",
+    "phone": "033-670-2721",
+    "latitude": "37.9058931889",
+    "longitude": "128.5029086488",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3374861_image2_1.JPG",
+    "category": "약수터"
+  },
+  {
+    "id": "750834",
+    "title": "곱돌광산약수터",
+    "address": "경기도 하남시 창우동",
+    "phone": "",
+    "latitude": "37.5215753492",
+    "longitude": "127.2429982248",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/739018_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "1621059",
+    "title": "구시물",
+    "address": "제주특별자치도 제주시 애월읍 상귀리",
+    "phone": "",
+    "latitude": "33.4565305490",
+    "longitude": "126.4097117919",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3403406_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "127155",
+    "title": "다덕약수탕",
+    "address": "경상북도 봉화군 봉성면 진의실길 6",
+    "phone": "",
+    "latitude": "36.9126722189",
+    "longitude": "128.8252568356",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3038148_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "126111",
+    "title": "달기약수탕 (청송 국가지질공원)",
+    "address": "경상북도 청송군 청송읍 약수길 16",
+    "phone": "",
+    "latitude": "36.4383590741",
+    "longitude": "129.0836033947",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/1230806_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "126767",
+    "title": "당몰샘",
+    "address": "전라남도 구례군 마산면 장수길 6-1",
+    "phone": "",
+    "latitude": "35.2153215467",
+    "longitude": "127.4985935150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3547854_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "2699685",
+    "title": "데미샘",
+    "address": "전북특별자치도 진안군 백운면 데미샘1길 172",
+    "phone": "",
+    "latitude": "35.6570348322",
+    "longitude": "127.4610575560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3520712_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "126116",
+    "title": "도동약수공원",
+    "address": "경상북도 울릉군 울릉읍 도동리",
+    "phone": "",
+    "latitude": "37.4824151202",
+    "longitude": "130.9004271646",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/169649_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "126768",
+    "title": "무주 신풍령약수터",
+    "address": "전북특별자치도 무주군 무풍면 구천동로",
+    "phone": "",
+    "latitude": "35.8707862030",
+    "longitude": "127.8105208960",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/711846_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "125723",
+    "title": "방동약수",
+    "address": "강원특별자치도 인제군 기린면 방동약수로 89-59",
+    "phone": "",
+    "latitude": "37.9438728399",
+    "longitude": "128.3962310388",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3502521_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "125729",
+    "title": "방아다리약수터",
+    "address": "강원특별자치도 평창군 진부면 방아다리로 1011-26",
+    "phone": "033-332-6417",
+    "latitude": "37.6931706345",
+    "longitude": "128.5036234087",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3033960_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "2772889",
+    "title": "부연약수",
+    "address": "강원특별자치도 강릉시 연곡면 부연동길 964",
+    "phone": "",
+    "latitude": "37.8780657396",
+    "longitude": "128.6404970577",
+    "image": "",
+    "category": "약수터"
+  },
+  {
+    "id": "1830997",
+    "title": "불바라기약수터",
+    "address": "강원특별자치도 양양군 서면 미천리",
+    "phone": "",
+    "latitude": "37.9227559600",
+    "longitude": "128.5464264142",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3544492_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "1837460",
+    "title": "삼봉약수",
+    "address": "강원특별자치도 홍천군 내면 삼봉휴양길 276",
+    "phone": "",
+    "latitude": "37.8568953339",
+    "longitude": "128.4632915132",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/1732286_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "2782249",
+    "title": "삼신할미약수터",
+    "address": "인천광역시 옹진군 자월면 이작리 산209",
+    "phone": "",
+    "latitude": "37.1753036871",
+    "longitude": "126.2592418107",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3380902_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "129005",
+    "title": "신약수(가리골약수)",
+    "address": "강원특별자치도 평창군 용평면 속사2리",
+    "phone": "",
+    "latitude": "37.6782472758",
+    "longitude": "128.4991270450",
+    "image": "",
+    "category": "약수터"
+  },
+  {
+    "id": "127473",
+    "title": "오색약수터",
+    "address": "강원특별자치도 양양군 서면 오색리",
+    "phone": "",
+    "latitude": "38.0772221805",
+    "longitude": "128.4455502436",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3387248_image2_1.JPG",
+    "category": "약수터"
+  },
+  {
+    "id": "1908591",
+    "title": "오읍약수터",
+    "address": "인천광역시 강화군 북문길 110 오읍약수터",
+    "phone": "",
+    "latitude": "37.7552512601",
+    "longitude": "126.4844330940",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3389334_image2_1.JPG",
+    "category": "약수터"
+  },
+  {
+    "id": "126110",
+    "title": "오전약수탕",
+    "address": "경상북도 봉화군 물야면 문수로 1601",
+    "phone": "",
+    "latitude": "37.0133092505",
+    "longitude": "128.7501744425",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3408396_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "125726",
+    "title": "인제 미산리 개인약수",
+    "address": "강원특별자치도 인제군 상남면 개인약수길 546",
+    "phone": "",
+    "latitude": "37.8686699628",
+    "longitude": "128.3703329030",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3475077_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "125860",
+    "title": "초정약수",
+    "address": "충청북도 청주시 청원구 내수읍 초정리",
+    "phone": "",
+    "latitude": "36.7214825196",
+    "longitude": "127.6008218248",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3057291_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "125725",
+    "title": "추곡약수터",
+    "address": "강원특별자치도 춘천시 북산면 추곡약수길 89-1",
+    "phone": "",
+    "latitude": "38.0373384358",
+    "longitude": "127.8890520721",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/2745769_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "128660",
+    "title": "화암약수 (강원고생대 국가지질공원)",
+    "address": "강원특별자치도 정선군 화암면 약수길 1330",
+    "phone": "",
+    "latitude": "37.3292930616",
+    "longitude": "128.7858534723",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/1948759_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "127898",
+    "title": "후곡약수터",
+    "address": "강원특별자치도 양구군 동면 후곡리",
+    "phone": "",
+    "latitude": "38.1681569250",
+    "longitude": "128.0569216955",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3514881_image2_1.jpg",
+    "category": "약수터"
+  },
+  {
+    "id": "3032585",
+    "title": "쪽샘지구",
+    "address": "경상북도 경주시 태종로 788 (황오동)",
+    "phone": "",
+    "latitude": "35.8399960374",
+    "longitude": "129.2143369149",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3032570_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "유적지사적지"
+  },
+  {
+    "id": "3575632",
+    "title": "통영 명정(정당샘)",
+    "address": "경상남도 통영시 충렬로 49 (명정동)",
+    "phone": "",
+    "latitude": "34.8458625471",
+    "longitude": "128.4173004231",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3575602_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "유적지사적지"
+  },
+  {
+    "id": "125881",
+    "title": "고란약수",
+    "address": "충청남도 부여군 부여읍 부소로 31-5",
+    "phone": "",
+    "latitude": "36.2927361764",
+    "longitude": "126.9138867671",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3540271_image2_1.JPG",
+    "category": "약수터",
+    "original_category": "사찰"
+  },
+  {
+    "id": "126918",
+    "title": "약수사(서울)",
+    "address": "서울특별시 관악구 약수암1길 28 약수사",
+    "phone": "",
+    "latitude": "37.4595603285",
+    "longitude": "126.9344613837",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2363167_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "사찰"
+  },
+  {
+    "id": "337435",
+    "title": "약수암(부산)",
+    "address": "부산광역시 사상구 백양대로804번길 42-57 약수암",
+    "phone": "",
+    "latitude": "35.1782275148",
+    "longitude": "128.9965271813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3342880_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "사찰"
+  },
+  {
+    "id": "337432",
+    "title": "약수암(전주)",
+    "address": "전북특별자치도 전주시 덕진구 도당산로 46-10 (우아동3가)",
+    "phone": "",
+    "latitude": "35.8451331854",
+    "longitude": "127.1583961644",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3585685_image2_1.jpg",
+    "category": "약수터",
+    "original_category": "사찰"
+  }
+]

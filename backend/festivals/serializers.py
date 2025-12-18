@@ -7,8 +7,9 @@ class FestivalListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Festival
         fields = [
-            'id', 'name', 'region', 'location', 'period', 'month',
-            'description', 'image', 'tags'
+            'id', 'title', 'category', 'address', 'region',
+            'event_start_date', 'event_end_date', 'start_month', 'end_month',
+            'image_url', 'phone'
         ]
 
 
@@ -17,8 +18,8 @@ class FestivalDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Festival
         fields = [
-            'id', 'name', 'region', 'location', 'period', 'month',
-            'description', 'detailed_description', 'image', 'fee',
-            'contact', 'website', 'tags', 'programs', 'transportation',
-            'created_at', 'updated_at'
+            'id', 'title', 'category', 'address', 'region', 'phone',
+            'latitude', 'longitude', 'image_url',
+            'event_start_date', 'event_end_date', 'start_month', 'end_month',
+            'content_id', 'is_active', 'created_at', 'updated_at'
         ]

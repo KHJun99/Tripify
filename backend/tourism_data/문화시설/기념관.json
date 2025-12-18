@@ -1,0 +1,1494 @@
+[
+  {
+    "id": "130961",
+    "title": "이한열기념관",
+    "address": "서울특별시 마포구 신촌로12나길 26",
+    "phone": "",
+    "latitude": "37.5550242286",
+    "longitude": "126.9338531935",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3505706_image2_1.jpg",
+    "category": "기념관",
+    "original_category": "박물관"
+  },
+  {
+    "id": "2999376",
+    "title": "조아라기념관",
+    "address": "광주광역시 남구 제중로46번길 3-6",
+    "phone": "",
+    "latitude": "35.1390923621",
+    "longitude": "126.9142331301",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/2999266_image2_1.jpg",
+    "category": "기념관",
+    "original_category": "박물관"
+  },
+  {
+    "id": "2994669",
+    "title": "가람문학관",
+    "address": "전북특별자치도 익산시 가람1길 76 가람문학관",
+    "phone": "",
+    "latitude": "36.0353602265",
+    "longitude": "127.0844949735",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/2994662_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "987769",
+    "title": "감우재전승기념관",
+    "address": "충청북도 음성군 음성읍 생음대로 594",
+    "phone": "",
+    "latitude": "36.9506931176",
+    "longitude": "127.6470390172",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3335425_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2657498",
+    "title": "강화문학관",
+    "address": "인천광역시 강화군 강화읍 관청길 40",
+    "phone": "",
+    "latitude": "37.7496074946",
+    "longitude": "126.4855887017",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3350514_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "795012",
+    "title": "경상북도독립운동기념관",
+    "address": "경상북도 안동시 임하면 독립기념관길 2",
+    "phone": "",
+    "latitude": "36.5341299601",
+    "longitude": "128.8563151726",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3585876_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3307775",
+    "title": "경주세계문화엑스포 기념관",
+    "address": "경상북도 경주시 경감로 614 (천군동)",
+    "phone": "",
+    "latitude": "35.8340564631",
+    "longitude": "129.2895443842",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3307763_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2764310",
+    "title": "고당기념관",
+    "address": "서울특별시 중구 수표로 48-2",
+    "phone": "",
+    "latitude": "37.5655129077",
+    "longitude": "126.9901283238",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "2483785",
+    "title": "고암이응노생가기념관",
+    "address": "충청남도 홍성군 홍북면 이응노로 61-7",
+    "phone": "",
+    "latitude": "36.6223823313",
+    "longitude": "126.6317283904",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3351452_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1613706",
+    "title": "관덕정 순교기념관",
+    "address": "대구광역시 중구 관덕정길 11",
+    "phone": "",
+    "latitude": "35.8651399000",
+    "longitude": "128.5911187461",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "252657",
+    "title": "구파백정기의사기념관",
+    "address": "전북특별자치도 정읍시 영원면 영원로 1049",
+    "phone": "",
+    "latitude": "35.6521875698",
+    "longitude": "126.7832623282",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3564466_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2986395",
+    "title": "국립6·25전쟁납북자기념관",
+    "address": "경기도 파주시 문산읍 임진각로 153",
+    "phone": "",
+    "latitude": "37.8892735410",
+    "longitude": "126.7428000677",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3383566_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2813170",
+    "title": "국립대한민국임시정부기념관",
+    "address": "서울특별시 서대문구 통일로 279-24",
+    "phone": "",
+    "latitude": "37.5760332637",
+    "longitude": "126.9542701829",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "2704650",
+    "title": "군산 3·1운동 100주년 기념관",
+    "address": "전북특별자치도 군산시 영명길 29",
+    "phone": "",
+    "latitude": "35.9869820640",
+    "longitude": "126.7422712611",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3509861_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2535347",
+    "title": "근현대사기념관",
+    "address": "서울특별시 강북구 4.19로 114 (수유동)",
+    "phone": "",
+    "latitude": "37.6434957358",
+    "longitude": "127.0028443946",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3400835_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "1282558",
+    "title": "김달진문학관",
+    "address": "경상남도 창원시 진해구 소사로59번길 13",
+    "phone": "",
+    "latitude": "35.1287651382",
+    "longitude": "128.7766337944",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3564817_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1994953",
+    "title": "김대중 노벨평화상 기념관",
+    "address": "전라남도 목포시 삼학로92번길 68",
+    "phone": "",
+    "latitude": "34.7828349612",
+    "longitude": "126.3922741039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3534373_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2764935",
+    "title": "김동명문학관",
+    "address": "강원특별자치도 강릉시 사천면 샛돌1길 30-2",
+    "phone": "",
+    "latitude": "37.8203901500",
+    "longitude": "128.8382365381",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3527814_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2031663",
+    "title": "김만덕기념관",
+    "address": "제주특별자치도 제주시 산지로 7",
+    "phone": "",
+    "latitude": "33.5159064490",
+    "longitude": "126.5304138429",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3396630_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1686651",
+    "title": "김재옥교사기념관",
+    "address": "충청북도 충주시 신니면 동락1길 3-5",
+    "phone": "",
+    "latitude": "37.0036210815",
+    "longitude": "127.6867978305",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3062734_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2405073",
+    "title": "김포독립운동기념관",
+    "address": "경기도 김포시 양촌읍 양곡2로30번길 46",
+    "phone": "",
+    "latitude": "37.6534129204",
+    "longitude": "126.6296559791",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3510617_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "764191",
+    "title": "나주학생독립운동기념관",
+    "address": "전라남도 나주시 죽림길 26",
+    "phone": "",
+    "latitude": "35.0281489469",
+    "longitude": "126.7262830566",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3346465_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "130660",
+    "title": "낙동강승전기념관",
+    "address": "대구광역시 남구 앞산순환로 574-110",
+    "phone": "",
+    "latitude": "35.8271386024",
+    "longitude": "128.5887866745",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3348462_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130475",
+    "title": "난고 김삿갓 문학관",
+    "address": "강원특별자치도 영월군 김삿갓면 김삿갓로 216-22",
+    "phone": "",
+    "latitude": "37.0795432684",
+    "longitude": "128.6017551925",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3580947_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130066",
+    "title": "남농기념관",
+    "address": "전라남도 목포시 남농로 119",
+    "phone": "",
+    "latitude": "34.7929287174",
+    "longitude": "126.4196714410",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "1267091",
+    "title": "남해유배문학관",
+    "address": "경상남도 남해군 남해읍 남해대로 2745",
+    "phone": "",
+    "latitude": "34.8319605048",
+    "longitude": "127.8992182207",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3553481_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2732508",
+    "title": "낭산김준연선생기념관",
+    "address": "전라남도 영암군 영암읍 영암로 1498",
+    "phone": "",
+    "latitude": "34.7924499783",
+    "longitude": "126.6949360532",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3379609_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "3061676",
+    "title": "너븐숭이 4.3기념관",
+    "address": "제주특별자치도 제주시 조천읍 북촌3길 3",
+    "phone": "",
+    "latitude": "33.5460417574",
+    "longitude": "126.6886688475",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3061646_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1937651",
+    "title": "농민문학기념관",
+    "address": "충청북도 영동군 매곡면 노천2길 5-1",
+    "phone": "",
+    "latitude": "36.1888521696",
+    "longitude": "127.9298794149",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3355154_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2406077",
+    "title": "다부동전적기념관",
+    "address": "경상북도 칠곡군 가산면 호국로 1486",
+    "phone": "",
+    "latitude": "36.0464457944",
+    "longitude": "128.5188756149",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3062857_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2734893",
+    "title": "다산기념관",
+    "address": "경기도 남양주시 조안면 다산로747번길 11",
+    "phone": "",
+    "latitude": "37.5163658756",
+    "longitude": "127.2999154230",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3507841_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3029673",
+    "title": "대가야문화누리",
+    "address": "경상북도 고령군 대가야읍 왕릉로 30",
+    "phone": "",
+    "latitude": "35.7236165865",
+    "longitude": "128.2631154387",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3029667_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130852",
+    "title": "대전 3.1의거 기념관",
+    "address": "경상북도 포항시 북구 송라면 대전길120번길 22-5",
+    "phone": "",
+    "latitude": "36.2537380213",
+    "longitude": "129.3555403571",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/188279_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3008952",
+    "title": "대전대학교30주년기념관",
+    "address": "대전광역시 동구 대학로 62 (용운동)",
+    "phone": "",
+    "latitude": "36.3353019905",
+    "longitude": "127.4583035528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3008947_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "3041546",
+    "title": "대포만세운동기념관",
+    "address": "강원특별자치도 속초시 대포항1길 20 (대포동)",
+    "phone": "",
+    "latitude": "38.1755332947",
+    "longitude": "128.6058854135",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3041529_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130926",
+    "title": "도산안창호기념관",
+    "address": "서울특별시 강남구 도산대로45길 20 (신사동)",
+    "phone": "",
+    "latitude": "37.5240046579",
+    "longitude": "127.0356170227",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3507938_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "129790",
+    "title": "독립기념관",
+    "address": "충청남도 천안시 동남구 목천읍 독립기념관로 1",
+    "phone": "",
+    "latitude": "36.7819355926",
+    "longitude": "127.2304173312",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3450021_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2769784",
+    "title": "독립기념관단풍나무숲길(단풍나무숲길독립기념관)",
+    "address": "충청남도 천안시 동남구 목천읍 독립기념관로 1",
+    "phone": "",
+    "latitude": "36.7819355926",
+    "longitude": "127.2304173312",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2770613_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2733136",
+    "title": "독서왕김득신문학관",
+    "address": "충청북도 증평군 증평읍 인삼로 93",
+    "phone": "",
+    "latitude": "36.7897326395",
+    "longitude": "127.5801412206",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3570832_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "775041",
+    "title": "동학농민혁명기념관",
+    "address": "전북특별자치도 정읍시 덕천면 동학로 742",
+    "phone": "",
+    "latitude": "35.6337460189",
+    "longitude": "126.8301308502",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3464600_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1594231",
+    "title": "동학혁명기념관",
+    "address": "전북특별자치도 전주시 완산구 은행로 34",
+    "phone": "",
+    "latitude": "35.8168862888",
+    "longitude": "127.1520252483",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3365115_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "1624929",
+    "title": "만해기념관",
+    "address": "경기도 광주시 남한산성면 남한산성로792번길 24-7",
+    "phone": "",
+    "latitude": "37.4773571334",
+    "longitude": "127.1808551337",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3524714_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2714729",
+    "title": "매월당 김시습 기념관",
+    "address": "강원특별자치도 강릉시 운정길 85",
+    "phone": "",
+    "latitude": "37.7863422759",
+    "longitude": "128.8876331387",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3527877_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2737295",
+    "title": "매향리평화역사관",
+    "address": "경기도 화성시 우정읍 기아자동차로 199",
+    "phone": "",
+    "latitude": "37.0479994245",
+    "longitude": "126.7634883258",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3350214_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "753972",
+    "title": "매헌 윤봉길의사 기념관",
+    "address": "서울특별시 서초구 매헌로 99 (양재동)",
+    "phone": "",
+    "latitude": "37.4691610476",
+    "longitude": "127.0368379074",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3521639_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130327",
+    "title": "명성황후기념관",
+    "address": "경기도 여주시 명성로 71 (능현동)",
+    "phone": "",
+    "latitude": "37.2598715049",
+    "longitude": "127.6554183473",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3565782_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2714790",
+    "title": "목은이색기념관",
+    "address": "경상북도 영덕군 영해면 호지마을1길 24-49",
+    "phone": "",
+    "latitude": "36.5428286306",
+    "longitude": "129.4191678960",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3554575_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130176",
+    "title": "목포문학관",
+    "address": "전라남도 목포시 남농로 95",
+    "phone": "",
+    "latitude": "34.7927925770",
+    "longitude": "126.4169494624",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3534360_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2758036",
+    "title": "몽양여운형기념관",
+    "address": "경기도 양평군 양서면 몽양길 66",
+    "phone": "",
+    "latitude": "37.5305211288",
+    "longitude": "127.3735472165",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3336664_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2553929",
+    "title": "문화비축기지",
+    "address": "서울특별시 마포구 증산로 87",
+    "phone": "",
+    "latitude": "37.5699856862",
+    "longitude": "126.8951646315",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3340967_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130871",
+    "title": "미당 서정주 시문학관",
+    "address": "전북특별자치도 고창군 부안면 질마재로 2-8",
+    "phone": "",
+    "latitude": "35.5355784414",
+    "longitude": "126.6099362723",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3562242_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2775505",
+    "title": "민주화운동기념관",
+    "address": "서울특별시 용산구 한강대로71길 37 (갈월동)",
+    "phone": "",
+    "latitude": "37.5410320944",
+    "longitude": "126.9720501082",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/2779993_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2650992",
+    "title": "밀양의열기념관",
+    "address": "경상남도 밀양시 노상하1길 25-12",
+    "phone": "",
+    "latitude": "35.4936486752",
+    "longitude": "128.7509622025",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3507828_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2369504",
+    "title": "박경리 기념관",
+    "address": "경상남도 통영시 산양읍 산양중앙로 173",
+    "phone": "",
+    "latitude": "34.8023754983",
+    "longitude": "128.4036083118",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "3392096",
+    "title": "박열의사기념관",
+    "address": "경상북도 문경시 마성면 샘골길 44",
+    "phone": "",
+    "latitude": "36.6813191145",
+    "longitude": "128.1356500758",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3538637_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2785601",
+    "title": "박진전쟁기념관",
+    "address": "경상남도 창녕군 남지읍 월상길 27",
+    "phone": "",
+    "latitude": "35.4480082741",
+    "longitude": "128.3862176485",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3568999_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2738042",
+    "title": "박찬호기념관",
+    "address": "충청남도 공주시 산성찬호길 19 (산성동)",
+    "phone": "",
+    "latitude": "36.4590014039",
+    "longitude": "127.1268104441",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3534919_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2823059",
+    "title": "박태준기념관",
+    "address": "부산광역시 기장군 임랑해안길 1 박태준기념관",
+    "phone": "",
+    "latitude": "35.3169141022",
+    "longitude": "129.2612503134",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/2823056_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3025397",
+    "title": "방진관",
+    "address": "전라남도 보성군 보성읍 새싹길 81-10",
+    "phone": "",
+    "latitude": "34.7735446681",
+    "longitude": "127.0806997836",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3025390_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130473",
+    "title": "백범김구기념관",
+    "address": "서울특별시 용산구 임정로 26 (효창동)",
+    "phone": "",
+    "latitude": "37.5443314817",
+    "longitude": "126.9592678461",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3521598_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130153",
+    "title": "백산기념관",
+    "address": "부산광역시 중구 백산길 11",
+    "phone": "",
+    "latitude": "35.1019784209",
+    "longitude": "129.0345787296",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "229913",
+    "title": "백야기념관",
+    "address": "충청남도 홍성군 갈산면 백야로546번길 12",
+    "phone": "",
+    "latitude": "36.5978475838",
+    "longitude": "126.5471366762",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3340061_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3429971",
+    "title": "보재이상설선생기념관",
+    "address": "충청북도 진천군 진천읍 이상설안길 14",
+    "phone": "",
+    "latitude": "36.8627335329",
+    "longitude": "127.4791899222",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3562023_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2946239",
+    "title": "새만금홍보관",
+    "address": "전북특별자치도 부안군 변산면 새만금로 6",
+    "phone": "",
+    "latitude": "35.6966759319",
+    "longitude": "126.5589950731",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/2947626_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2660035",
+    "title": "새천년기념관",
+    "address": "경상북도 포항시 남구 호미곶면 해맞이로 136",
+    "phone": "",
+    "latitude": "36.0761260749",
+    "longitude": "129.5665631226",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3058477_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3081204",
+    "title": "서울시립 백남준을 기억하는 집",
+    "address": "서울특별시 종로구 종로53길 12-1 (창신동)",
+    "phone": "",
+    "latitude": "37.5731180039",
+    "longitude": "127.0137898406",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3081191_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2564147",
+    "title": "석정문학관",
+    "address": "전북특별자치도 부안군 부안읍 선은1길 10",
+    "phone": "",
+    "latitude": "35.7399045555",
+    "longitude": "126.7354087936",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3359598_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2752772",
+    "title": "성김대건신부표착기념관",
+    "address": "제주특별자치도 제주시 한경면 용수1길 108",
+    "phone": "",
+    "latitude": "33.3228915301",
+    "longitude": "126.1677385965",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3396988_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1799798",
+    "title": "손기정기념관",
+    "address": "서울특별시 중구 손기정로 101-4 (만리동2가)",
+    "phone": "",
+    "latitude": "37.5558524631",
+    "longitude": "126.9647225790",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3504754_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130149",
+    "title": "손양원목사 순교기념관",
+    "address": "전라남도 여수시 산돌길 70-62",
+    "phone": "",
+    "latitude": "34.8400383372",
+    "longitude": "127.6349217017",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3580978_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3448312",
+    "title": "송암박두성기념관",
+    "address": "인천광역시 미추홀구 한나루로357번길 105-19 (학익동)",
+    "phone": "",
+    "latitude": "37.4381689811",
+    "longitude": "126.6560401258",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "3080895",
+    "title": "수운최제우유허지 동학관",
+    "address": "울산광역시 중구 원유곡길 106-1 (유곡동)",
+    "phone": "",
+    "latitude": "35.5664866370",
+    "longitude": "129.2911601656",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3510545_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3578346",
+    "title": "신성일기념관",
+    "address": "경상북도 영천시 신성일로 363 (괴연동)",
+    "phone": "",
+    "latitude": "35.8929880370",
+    "longitude": "128.9594994425",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3578341_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3396128",
+    "title": "신아기념관(서울 구 신아일보 별관)",
+    "address": "서울특별시 중구 정동길 33 (정동)",
+    "phone": "",
+    "latitude": "37.5662986053",
+    "longitude": "126.9722049347",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3396166_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130109",
+    "title": "안견기념관",
+    "address": "충청남도 서산시 지곡면 안견관길 15-17",
+    "phone": "",
+    "latitude": "36.8640261369",
+    "longitude": "126.4385283078",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/2537401_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2761633",
+    "title": "안산올림픽기념관",
+    "address": "경기도 안산시 단원구 적금로 202",
+    "phone": "",
+    "latitude": "37.3260683551",
+    "longitude": "126.8273470837",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3340293_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130439",
+    "title": "안성 3·1운동기념관",
+    "address": "경기도 안성시 원곡면 만세로 868",
+    "phone": "",
+    "latitude": "37.0612524074",
+    "longitude": "127.1748479437",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3541959_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2031666",
+    "title": "안용복기념관",
+    "address": "경상북도 울릉군 북면 석포길 500",
+    "phone": "",
+    "latitude": "37.5354647433",
+    "longitude": "130.9070109474",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3464056_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "129794",
+    "title": "안중근의사기념관",
+    "address": "서울특별시 중구 소월로 91 (남대문로5가)",
+    "phone": "",
+    "latitude": "37.5535196824",
+    "longitude": "126.9804184373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3504764_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "731520",
+    "title": "양구전쟁기념관",
+    "address": "강원특별자치도 양구군 해안면 해안서화로 35",
+    "phone": "",
+    "latitude": "38.2899471887",
+    "longitude": "128.1455432111",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "3403787",
+    "title": "양산시립독립기념관",
+    "address": "경상남도 양산시 교동5길 20 (교동)",
+    "phone": "",
+    "latitude": "35.3467480801",
+    "longitude": "129.0278281602",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3395754_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "915509",
+    "title": "에티오피아한국전참전기념관",
+    "address": "강원특별자치도 춘천시 이디오피아길 1",
+    "phone": "",
+    "latitude": "37.8738208146",
+    "longitude": "127.7117508840",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/2743053_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2736377",
+    "title": "영도 조내기 고구마 역사기념관",
+    "address": "부산광역시 영도구 벚꽃길 75 (청학동)",
+    "phone": "",
+    "latitude": "35.0853307223",
+    "longitude": "129.0583548936",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/2736471_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3038813",
+    "title": "영모각",
+    "address": "경상북도 안동시 하회종가길 69",
+    "phone": "",
+    "latitude": "36.5385508509",
+    "longitude": "128.5168340741",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3038796_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130516",
+    "title": "영종대교휴게소 기념관",
+    "address": "인천광역시 서구 정서진남로 25 (청라동)",
+    "phone": "",
+    "latitude": "37.5539740983",
+    "longitude": "126.6071302595",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3529224_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2753938",
+    "title": "영천전투호국기념관",
+    "address": "경상북도 영천시 고경면 용담로 2054",
+    "phone": "",
+    "latitude": "35.9806086886",
+    "longitude": "129.1076450455",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3572473_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3440631",
+    "title": "오방 최흥종 기념관",
+    "address": "광주광역시 남구 제중로 64 (양림동)",
+    "phone": "",
+    "latitude": "35.1403088730",
+    "longitude": "126.9131387513",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3440645_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1940652",
+    "title": "오장환문학관",
+    "address": "충청북도 보은군 회인면 회인로5길 12",
+    "phone": "",
+    "latitude": "36.4930364084",
+    "longitude": "127.5962119042",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3339654_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "742784",
+    "title": "오지호기념관",
+    "address": "전라남도 화순군 동복면 독상1길 10",
+    "phone": "",
+    "latitude": "35.0680318326",
+    "longitude": "127.1310018891",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/742254_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1624470",
+    "title": "외솔기념관",
+    "address": "울산광역시 중구 병영12길 15",
+    "phone": "",
+    "latitude": "35.5746451139",
+    "longitude": "129.3475161286",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3503489_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "1940880",
+    "title": "요산김정한문학관",
+    "address": "부산광역시 금정구 팔송로 60-6",
+    "phone": "",
+    "latitude": "35.2723686113",
+    "longitude": "129.0857918242",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "1608725",
+    "title": "우장춘기념관",
+    "address": "부산광역시 동래구 우장춘로62번길 7",
+    "phone": "",
+    "latitude": "35.2135249530",
+    "longitude": "129.0720279747",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3496889_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "229911",
+    "title": "운강이강년기념관",
+    "address": "경상북도 문경시 가은읍 대야로 1683",
+    "phone": "",
+    "latitude": "36.6716648656",
+    "longitude": "127.9955906441",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3584882_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1605986",
+    "title": "유관순기념관(서울)",
+    "address": "서울특별시 중구 통일로4길 30-1",
+    "phone": "",
+    "latitude": "37.5644487857",
+    "longitude": "126.9702718302",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/1569133_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130495",
+    "title": "유관순열사기념관",
+    "address": "충청남도 천안시 동남구 병천면 유관순길 38",
+    "phone": "",
+    "latitude": "36.7600839409",
+    "longitude": "127.3083636955",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3506368_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2606202",
+    "title": "유류피해 극복기념관",
+    "address": "충청남도 태안군 소원면 천리포1길 120",
+    "phone": "",
+    "latitude": "36.7926877415",
+    "longitude": "126.1483398462",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "1825463",
+    "title": "유엔군 초전기념관",
+    "address": "경기도 오산시 경기대로 742",
+    "phone": "",
+    "latitude": "37.1846136811",
+    "longitude": "127.0490420054",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3528835_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2558329",
+    "title": "유엔평화기념관",
+    "address": "부산광역시 남구 홍곡로320번길 106",
+    "phone": "",
+    "latitude": "35.1250519219",
+    "longitude": "129.0933063256",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3514900_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2739477",
+    "title": "윤동주문학관",
+    "address": "서울특별시 종로구 창의문로 119",
+    "phone": "",
+    "latitude": "37.5921816175",
+    "longitude": "126.9671657723",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3302915_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2514045",
+    "title": "윤봉길의사기념관",
+    "address": "충청남도 예산군 덕산면 덕산온천로 183-5",
+    "phone": "",
+    "latitude": "36.6865252872",
+    "longitude": "126.6513693512",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3039818_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2733381",
+    "title": "의성 최치원문학관",
+    "address": "경상북도 의성군 단촌면 고운사길 241",
+    "phone": "",
+    "latitude": "36.4585361842",
+    "longitude": "128.7294175000",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/2733391_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2710607",
+    "title": "의암류인석기념관",
+    "address": "강원특별자치도 춘천시 남면 충효로 1503",
+    "phone": "",
+    "latitude": "37.7441388313",
+    "longitude": "127.5706730992",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3351760_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3532169",
+    "title": "이사부독도기념관",
+    "address": "강원특별자치도 삼척시 새천년도로 28 (정하동)",
+    "phone": "",
+    "latitude": "37.4365190306",
+    "longitude": "129.1857643879",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3532162_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "130976",
+    "title": "이승복기념관",
+    "address": "강원특별자치도 평창군 용평면 운두령로 500-11",
+    "phone": "",
+    "latitude": "37.6722028672",
+    "longitude": "128.4644553578",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3034019_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2721929",
+    "title": "이육사문학관",
+    "address": "경상북도 안동시 도산면 백운로 525",
+    "phone": "",
+    "latitude": "36.7387789537",
+    "longitude": "128.8633335711",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3585971_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2762871",
+    "title": "이화여고100주년기념관",
+    "address": "서울특별시 중구 정동길 26",
+    "phone": "",
+    "latitude": "37.5658819712",
+    "longitude": "126.9713189165",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3412247_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "130415",
+    "title": "이효석 문학관",
+    "address": "강원특별자치도 평창군 봉평면 효석문학길 73-25",
+    "phone": "",
+    "latitude": "37.6132273340",
+    "longitude": "128.3700073299",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3318470_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130060",
+    "title": "인천상륙작전기념관",
+    "address": "인천광역시 연수구 청량로 138 (옥련동)",
+    "phone": "",
+    "latitude": "37.4195266575",
+    "longitude": "126.6535047631",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3037297_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1608530",
+    "title": "임시수도기념관",
+    "address": "부산광역시 서구 임시수도기념로 45",
+    "phone": "",
+    "latitude": "35.1037640206",
+    "longitude": "129.0176357101",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3546287_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2789438",
+    "title": "임실김용택시인문학관",
+    "address": "전북특별자치도 임실군 덕치면 장암2길 16",
+    "phone": "",
+    "latitude": "35.4850880281",
+    "longitude": "127.1627412404",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3581282_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1945293",
+    "title": "장기려기념 더 나눔센터",
+    "address": "부산광역시 동구 영초윗길 48",
+    "phone": "",
+    "latitude": "35.1185793062",
+    "longitude": "129.0327117725",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3070867_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "631011",
+    "title": "장보고기념관",
+    "address": "전라남도 완도군 청해진로 1455 장보고 기념관",
+    "phone": "",
+    "latitude": "34.3551440609",
+    "longitude": "126.7301796216",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3382645_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2732161",
+    "title": "장사상륙작전 전승기념관",
+    "address": "경상북도 영덕군 남정면 동해대로 3560",
+    "phone": "",
+    "latitude": "36.2801354767",
+    "longitude": "129.3789819656",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3572817_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2033461",
+    "title": "장흥동학농민혁명기념관",
+    "address": "전라남도 장흥군 장흥읍 읍성로 2",
+    "phone": "",
+    "latitude": "34.6691699445",
+    "longitude": "126.8953658641",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3516572_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130431",
+    "title": "전쟁기념관",
+    "address": "서울특별시 용산구 이태원로 29",
+    "phone": "",
+    "latitude": "37.5373270838",
+    "longitude": "126.9784385198",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3465929_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2739478",
+    "title": "전태일기념관",
+    "address": "서울특별시 종로구 청계천로 105 (관수동)",
+    "phone": "",
+    "latitude": "37.5685208763",
+    "longitude": "126.9893144237",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3412126_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "1202162",
+    "title": "정지용 문학관",
+    "address": "충청북도 옥천군 옥천읍 향수길 56",
+    "phone": "",
+    "latitude": "36.3149342963",
+    "longitude": "127.5816069833",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/2622310_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1769266",
+    "title": "제주 세계자연유산센터",
+    "address": "제주특별자치도 제주시 조천읍 선교로 569-36",
+    "phone": "",
+    "latitude": "33.4569159249",
+    "longitude": "126.7147325126",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/2604460_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130308",
+    "title": "제주항일기념관",
+    "address": "제주특별자치도 제주시 조천읍 신북로 303",
+    "phone": "",
+    "latitude": "33.5410109898",
+    "longitude": "126.6407703457",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3333429_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130565",
+    "title": "조병화문학관",
+    "address": "경기도 안성시 양성면 난실길 14-1",
+    "phone": "",
+    "latitude": "37.1120668213",
+    "longitude": "127.2215950764",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3579730_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2754294",
+    "title": "조소앙기념관",
+    "address": "경기도 양주시 남면 양연로173번길 87",
+    "phone": "",
+    "latitude": "37.9217353956",
+    "longitude": "126.9947010577",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3406855_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2764837",
+    "title": "조엄기념관",
+    "address": "강원특별자치도 원주시 지정면 간현웃말길 46",
+    "phone": "",
+    "latitude": "37.3531948914",
+    "longitude": "127.8515479389",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3557103_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2616184",
+    "title": "조태일시문학기념관",
+    "address": "전라남도 곡성군 죽곡면 태안로 622-38",
+    "phone": "",
+    "latitude": "35.1335451855",
+    "longitude": "127.3686376167",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3552809_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2763855",
+    "title": "주기철 목사 기념관",
+    "address": "경상남도 창원시 진해구 웅천동로 174 (남문동)",
+    "phone": "",
+    "latitude": "35.1111777780",
+    "longitude": "128.7523891601",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3050339_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "3565407",
+    "title": "진월 조선수군지 선소기념관",
+    "address": "전라남도 광양시 진월면 선소중앙길 31",
+    "phone": "",
+    "latitude": "34.9783943904",
+    "longitude": "127.7580240377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3565403_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130332",
+    "title": "채만식 문학관",
+    "address": "전북특별자치도 군산시 강변로 449",
+    "phone": "",
+    "latitude": "36.0086437477",
+    "longitude": "126.7578998571",
+    "image": "",
+    "category": "기념관"
+  },
+  {
+    "id": "3070732",
+    "title": "청남대 대한민국 임시정부 기념관",
+    "address": "충청북도 청주시 상당구 문의면 청남대길 646",
+    "phone": "",
+    "latitude": "36.4667931119",
+    "longitude": "127.4925913410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3070720_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2755674",
+    "title": "청마기념관",
+    "address": "경상남도 거제시 둔덕면 방하2길 6",
+    "phone": "",
+    "latitude": "34.8548549965",
+    "longitude": "128.5172359281",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3514935_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2362944",
+    "title": "최용신기념관",
+    "address": "경기도 안산시 상록구 샘골서길 64 (본오동)",
+    "phone": "",
+    "latitude": "37.2990721054",
+    "longitude": "126.8623140995",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3072614_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2782990",
+    "title": "추성창의기념관",
+    "address": "전라남도 담양군 담양읍 죽향문화로 380",
+    "phone": "",
+    "latitude": "35.3313524282",
+    "longitude": "126.9873079311",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3571485_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2357984",
+    "title": "칠곡호국평화기념관",
+    "address": "경상북도 칠곡군 석적읍 강변대로 1580",
+    "phone": "",
+    "latitude": "36.0180496569",
+    "longitude": "128.4027561131",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3488903_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2676149",
+    "title": "펄벅기념관",
+    "address": "경기도 부천시 소사구 성주로214번길 61 (심곡본동)",
+    "phone": "",
+    "latitude": "37.4756112996",
+    "longitude": "126.7817192919",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3453151_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2780019",
+    "title": "학도의용군 전승기념관",
+    "address": "경상북도 포항시 북구 탑산길 14",
+    "phone": "",
+    "latitude": "36.0361487988",
+    "longitude": "129.3567743506",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/2795463_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2759941",
+    "title": "한국교회 100주년 기념관",
+    "address": "서울특별시 종로구 대학로3길 29",
+    "phone": "",
+    "latitude": "37.5745120428",
+    "longitude": "127.0002438136",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3506701_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2702589",
+    "title": "한서남궁억유적지",
+    "address": "강원특별자치도 홍천군 서면 한서로 667",
+    "phone": "",
+    "latitude": "37.6888457742",
+    "longitude": "127.5987832728",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3384685_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "1679578",
+    "title": "한운사기념관",
+    "address": "충청북도 괴산군 청안면 청안읍내로 45-6",
+    "phone": "",
+    "latitude": "36.7739327160",
+    "longitude": "127.6375448417",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3334559_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "3015001",
+    "title": "한화기념관",
+    "address": "인천광역시 남동구 논현고잔로168번길 45 한화기념관",
+    "phone": "",
+    "latitude": "37.3956916760",
+    "longitude": "126.7180328768",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3488115_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3483980",
+    "title": "함석헌기념관",
+    "address": "서울특별시 도봉구 도봉로123길 33-6 (쌍문동)",
+    "phone": "",
+    "latitude": "37.6530146487",
+    "longitude": "127.0348106527",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3483974_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2904457",
+    "title": "헌마공신김만일기념관",
+    "address": "제주특별자치도 서귀포시 서성로 919",
+    "phone": "",
+    "latitude": "33.3361761033",
+    "longitude": "126.6907984475",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/2904445_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2719566",
+    "title": "호남호국기념관",
+    "address": "전라남도 순천시 원연향길 17 (연향동)",
+    "phone": "",
+    "latitude": "34.9360006038",
+    "longitude": "127.5213986609",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3581041_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "1113310",
+    "title": "황어장터 3.1만세운동 기념관",
+    "address": "인천광역시 계양구 황어로126번길 9",
+    "phone": "",
+    "latitude": "37.5790234532",
+    "longitude": "126.7352817448",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3048707_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "130326",
+    "title": "황영조 기념관",
+    "address": "강원특별자치도 삼척시 근덕면 초곡길 176",
+    "phone": "",
+    "latitude": "37.3072804709",
+    "longitude": "129.2947030700",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3071141_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "252656",
+    "title": "효자 정재수 기념관",
+    "address": "경상북도 상주시 화서면 효자로 201",
+    "phone": "",
+    "latitude": "36.4164010793",
+    "longitude": "127.9228848506",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3031079_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3428131",
+    "title": "희움 일본군 위안부 역사관",
+    "address": "대구광역시 중구 경상감영길 50 (서문로1가)",
+    "phone": "",
+    "latitude": "35.8714419480",
+    "longitude": "128.5902325380",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3428119_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2733036",
+    "title": "2018 평창동계올림픽대회 및 동계패럴림픽대회 기념관",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 220",
+    "phone": "",
+    "latitude": "37.6669053592",
+    "longitude": "128.7067558891",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3535178_image2_1.JPG",
+    "category": "기념관"
+  },
+  {
+    "id": "2733454",
+    "title": "2·28 민주운동기념회관",
+    "address": "대구광역시 중구 남산동 2113-10",
+    "phone": "",
+    "latitude": "35.8583906510",
+    "longitude": "128.5903995527",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3376551_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "3432445",
+    "title": "3.15의거 발원지 기념관",
+    "address": "경상남도 창원시 마산합포구 문화의길 54 (오동동)",
+    "phone": "",
+    "latitude": "35.2071304993",
+    "longitude": "128.5772990782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3432370_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2999735",
+    "title": "4·19 민주혁명역사관",
+    "address": "광주광역시 동구 중앙로 302 광주고등학교",
+    "phone": "",
+    "latitude": "35.1587791383",
+    "longitude": "126.9207459497",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/2999721_image2_1.jpg",
+    "category": "기념관"
+  },
+  {
+    "id": "2755010",
+    "title": "5·18민주화운동 기록관",
+    "address": "광주광역시 동구 금남로 221 (금남로3가)",
+    "phone": "",
+    "latitude": "35.1496023298",
+    "longitude": "126.9167687536",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3532032_image2_1.jpg",
+    "category": "기념관"
+  }
+]

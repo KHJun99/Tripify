@@ -1,0 +1,452 @@
+[
+  {
+    "id": "129156",
+    "title": "가덕도 등대",
+    "address": "부산광역시 강서구 외양포로 10",
+    "phone": "",
+    "latitude": "35.0006471157",
+    "longitude": "128.8295937487",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3342781_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129141",
+    "title": "가사도 등대",
+    "address": "전라남도 진도군 조도면 가사도돌목길",
+    "phone": "",
+    "latitude": "34.4611877004",
+    "longitude": "126.0429125538",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "128022",
+    "title": "간절곶",
+    "address": "울산광역시 울주군 서생면 간절곶1길 39-2",
+    "phone": "",
+    "latitude": "35.3589668021",
+    "longitude": "129.3605738299",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3583350_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "3007813",
+    "title": "녹산등대",
+    "address": "전라남도 여수시 삼산면 서도리",
+    "phone": "",
+    "latitude": "36.0625774302",
+    "longitude": "127.2928395524",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3007428_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "128346",
+    "title": "누에섬 등대전망대",
+    "address": "경기도 안산시 단원구 선감동",
+    "phone": "",
+    "latitude": "37.1872782256",
+    "longitude": "126.6322686486",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3342571_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129144",
+    "title": "당사도 등대",
+    "address": "전라남도 완도군 소안면 당사도길 17-239",
+    "phone": "",
+    "latitude": "34.0980262416",
+    "longitude": "126.6019913810",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "129178",
+    "title": "대진등대",
+    "address": "강원특별자치도 고성군 현내면 한나루로4길 16-38",
+    "phone": "",
+    "latitude": "38.5037804603",
+    "longitude": "128.4287940231",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3515892_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129175",
+    "title": "도동등대(행남등대)",
+    "address": "경상북도 울릉군 행남길 291-71 행남등대",
+    "phone": "",
+    "latitude": "37.4869233254",
+    "longitude": "130.9189559357",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "129174",
+    "title": "독도 등대",
+    "address": "경상북도 울릉군 울릉읍 독도이사부길 63",
+    "phone": "",
+    "latitude": "37.2394022532",
+    "longitude": "131.8699668034",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/2726491_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129145",
+    "title": "마라도 등대",
+    "address": "제주특별자치도 서귀포시 대정읍 마라로 (165, 마라도항로표지관리소)",
+    "phone": "",
+    "latitude": "33.1170102919",
+    "longitude": "126.2692287758",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/2617815_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129176",
+    "title": "묵호등대",
+    "address": "강원특별자치도 동해시 해맞이길 300",
+    "phone": "",
+    "latitude": "37.5538569666",
+    "longitude": "129.1181334954",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/2741884_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129149",
+    "title": "백야도 등대",
+    "address": "전라남도 여수시 화정면 백야등대길 48",
+    "phone": "",
+    "latitude": "34.6093811650",
+    "longitude": "127.6539175431",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3549594_image2_1.JPG",
+    "category": "등대"
+  },
+  {
+    "id": "129148",
+    "title": "산지 등대",
+    "address": "제주특별자치도 제주시 사라봉동길 108-1",
+    "phone": "064-722-5707",
+    "latitude": "33.5209144715",
+    "longitude": "126.5456624039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3384639_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "2742128",
+    "title": "서근등대",
+    "address": "전라남도 신안군 팔금면 원산리",
+    "phone": "",
+    "latitude": "34.7874377488",
+    "longitude": "126.0831096645",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3559070_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129130",
+    "title": "선미도 등대",
+    "address": "인천광역시 옹진군 덕적면 선미로 91",
+    "phone": "",
+    "latitude": "37.2871320274",
+    "longitude": "126.0775831577",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3511523_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129150",
+    "title": "소리도 등대",
+    "address": "전라남도 여수시 남면 덕포길 135",
+    "phone": "",
+    "latitude": "34.4113446936",
+    "longitude": "127.8007486027",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3580346_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129153",
+    "title": "소매물도 등대섬",
+    "address": "경상남도 통영시 한산면 소매물도길 246",
+    "phone": "",
+    "latitude": "34.6195540364",
+    "longitude": "128.5480894239",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3515717_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "827203",
+    "title": "소청도 등대",
+    "address": "인천광역시 옹진군 대청면 소청서로 279 (소청도등대)",
+    "phone": "",
+    "latitude": "37.7604542189",
+    "longitude": "124.7282782529",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "128803",
+    "title": "속초등대전망대",
+    "address": "강원특별자치도 속초시 영금정로5길 8-28",
+    "phone": "",
+    "latitude": "38.2137204042",
+    "longitude": "128.6000930800",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3351230_image2_1.JPG",
+    "category": "등대"
+  },
+  {
+    "id": "129166",
+    "title": "송대말 등대",
+    "address": "경상북도 경주시 감포읍 척사길 18-94",
+    "phone": "",
+    "latitude": "35.8080469501",
+    "longitude": "129.5115784813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3544104_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "2752131",
+    "title": "슬도등대",
+    "address": "울산광역시 동구 성끝길 122",
+    "phone": "",
+    "latitude": "35.4781713882",
+    "longitude": "129.4294006019",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3522897_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129139",
+    "title": "신안 가거도 등대",
+    "address": "전라남도 신안군 흑산면 가거도리",
+    "phone": "",
+    "latitude": "34.0947335700",
+    "longitude": "125.0992013701",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "129180",
+    "title": "어룡도 등대",
+    "address": "전라남도 완도군 노화읍 어룡도길 24",
+    "phone": "",
+    "latitude": "34.2872141551",
+    "longitude": "126.4747786355",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "129134",
+    "title": "어청도 등대",
+    "address": "전북특별자치도 군산시 어청도길 240 어청도항로표지 관리",
+    "phone": "",
+    "latitude": "36.1251226614",
+    "longitude": "125.9686621609",
+    "image": "",
+    "category": "등대"
+  },
+  {
+    "id": "129157",
+    "title": "영도 등대",
+    "address": "부산광역시 영도구 전망로 181",
+    "phone": "",
+    "latitude": "35.0523933666",
+    "longitude": "129.0923639479",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3495557_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129422",
+    "title": "영산포 등대",
+    "address": "전라남도 나주시 영산동",
+    "phone": "",
+    "latitude": "34.9996157647",
+    "longitude": "126.7089297388",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3534204_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129152",
+    "title": "오동도 등대",
+    "address": "전라남도 여수시 오동도로 238-32",
+    "phone": "",
+    "latitude": "34.7444013572",
+    "longitude": "127.7678097276",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3019934_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129155",
+    "title": "오륙도 등대",
+    "address": "부산광역시 남구 오륙도로 130",
+    "phone": "해파랑길 관광안내소 051-607-6395<br>오륙도 선착장 051-626-8953",
+    "latitude": "35.0912035523",
+    "longitude": "129.1269154412",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3496792_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129131",
+    "title": "옹도 등대",
+    "address": "충청남도 태안군 근흥면 가의도길 44-69",
+    "phone": "",
+    "latitude": "36.6474521427",
+    "longitude": "126.0085674237",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3494006_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129147",
+    "title": "우도 등대",
+    "address": "제주특별자치도 제주시 우도면 우도봉길 105",
+    "phone": "",
+    "latitude": "33.4920855483",
+    "longitude": "126.9665931996",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3554035_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129165",
+    "title": "울기등대",
+    "address": "울산광역시 동구 등대로 155",
+    "phone": "",
+    "latitude": "35.4924756100",
+    "longitude": "129.4438267191",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3341846_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129177",
+    "title": "울릉도 등대(태하등대)",
+    "address": "경상북도 울릉군 서면 태하등대길 188",
+    "phone": "",
+    "latitude": "37.5204530046",
+    "longitude": "130.7945824886",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/2370066_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "2792565",
+    "title": "이호테우 말 등대",
+    "address": "제주특별자치도 제주시 이호일동 375-43",
+    "phone": "",
+    "latitude": "33.5013929390",
+    "longitude": "126.4532486601",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2799686_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129128",
+    "title": "인천 팔미도 등대",
+    "address": "인천광역시 중구 팔미로 28 (무의동)",
+    "phone": "",
+    "latitude": "37.3583729205",
+    "longitude": "126.5108361238",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3308559_image2_1.jpeg",
+    "category": "등대"
+  },
+  {
+    "id": "2775577",
+    "title": "젖병등대",
+    "address": "부산광역시 기장군 기장읍 연화리 297-5",
+    "phone": "",
+    "latitude": "35.2138277212",
+    "longitude": "129.2230814903",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3494119_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "2743344",
+    "title": "제부도등대",
+    "address": "경기도 화성시 서신면 제부리",
+    "phone": "",
+    "latitude": "37.1795511647",
+    "longitude": "126.6221114499",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3539935_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129173",
+    "title": "죽변등대",
+    "address": "경상북도 울진군 죽변면 등대길 52",
+    "phone": "",
+    "latitude": "37.0579561369",
+    "longitude": "129.4288070904",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3583260_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129146",
+    "title": "추자도 등대",
+    "address": "제주특별자치도 제주시 추자면 영흥리",
+    "phone": "",
+    "latitude": "33.9554316656",
+    "longitude": "126.2964103208",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3528997_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "2931362",
+    "title": "큰끝등대",
+    "address": "전라남도 여수시 돌산읍 평사리",
+    "phone": "",
+    "latitude": "34.6608085851",
+    "longitude": "127.8053724602",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3549517_image2_1.JPG",
+    "category": "등대"
+  },
+  {
+    "id": "2612863",
+    "title": "하멜등대",
+    "address": "전라남도 여수시 하멜로 96",
+    "phone": "",
+    "latitude": "34.7368102045",
+    "longitude": "127.7484366144",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3080240_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129594",
+    "title": "하조대 무인등대",
+    "address": "강원특별자치도 양양군 현북면 조준길 99",
+    "phone": "",
+    "latitude": "38.0211093097",
+    "longitude": "128.7348757570",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3511712_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129424",
+    "title": "하조도 등대",
+    "address": "전라남도 진도군 조도면 조도등대길 429",
+    "phone": "",
+    "latitude": "34.3110747017",
+    "longitude": "126.0878815245",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/2025519_image2_1.JPG",
+    "category": "등대"
+  },
+  {
+    "id": "129168",
+    "title": "호미곶 등대",
+    "address": "경상북도 포항시 남구 호미곶면 호미곶길 99",
+    "phone": "",
+    "latitude": "36.0773121073",
+    "longitude": "129.5694322810",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3410998_image2_1.jpg",
+    "category": "등대"
+  },
+  {
+    "id": "129138",
+    "title": "홍도등대",
+    "address": "전라남도 신안군 흑산면 홍도2길 5",
+    "phone": "",
+    "latitude": "34.7112657750",
+    "longitude": "125.2038033487",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3579166_image2_1.JPG",
+    "category": "등대"
+  },
+  {
+    "id": "129162",
+    "title": "화암추 등대",
+    "address": "울산광역시 동구 화암등대길 50 (방어동)",
+    "phone": "",
+    "latitude": "35.4725632681",
+    "longitude": "129.4073304603",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3073206_image2_1.jpg",
+    "category": "등대"
+  }
+]

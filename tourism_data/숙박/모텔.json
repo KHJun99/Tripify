@@ -1,0 +1,212 @@
+[
+  {
+    "id": "1932645",
+    "title": "그람피하우스",
+    "address": "충청남도 태안군 남면 안면대로 1110-30",
+    "phone": "041-675-6653",
+    "latitude": "36.6565756082",
+    "longitude": "126.3079150768",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/2597755_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3049910",
+    "title": "동해 스테이",
+    "address": "강원특별자치도 동해시 한섬로 136-4 (천곡동)",
+    "phone": "010-2020-8910",
+    "latitude": "37.5208941211",
+    "longitude": "129.1192260813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3060143_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3310791",
+    "title": "또 다른 이야기",
+    "address": "전라남도 보성군 웅치면 대산길 8",
+    "phone": "010-5405-6277",
+    "latitude": "34.7114699949",
+    "longitude": "127.0160819954",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3310774_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "2585795",
+    "title": "라온스테이 인 페를라 호텔",
+    "address": "경상남도 진주시 영천강로 164",
+    "phone": "0507-1319-1001",
+    "latitude": "35.1781564448",
+    "longitude": "128.1395742698",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/2585934_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3082668",
+    "title": "로오우",
+    "address": "경상북도 영덕군 병곡면 흰돌로 116",
+    "phone": "",
+    "latitude": "36.6149008432",
+    "longitude": "129.4119913846",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3082960_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3348137",
+    "title": "멍펜션",
+    "address": "경기도 가평군 조종면 현등사길 55-361",
+    "phone": "",
+    "latitude": "37.8592879266",
+    "longitude": "127.3438653967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3348134_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3446629",
+    "title": "스파뷰호텔",
+    "address": "충청남도 예산군 덕산면 온천단지2로 77",
+    "phone": "",
+    "latitude": "36.6888002118",
+    "longitude": "126.6621238755",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3459522_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3337413",
+    "title": "스페인마을 라스블랑카스 펜션",
+    "address": "경기도 가평군 청평면 남이터길 54-12",
+    "phone": "",
+    "latitude": "37.6894887457",
+    "longitude": "127.3716178046",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3337400_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "2925797",
+    "title": "엘시티 레지던스",
+    "address": "부산광역시 해운대구 달맞이길 30 (중동, 엘시티)",
+    "phone": "",
+    "latitude": "35.1619491796",
+    "longitude": "129.1683126815",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/2928957_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "2823571",
+    "title": "여수 유탑 마리나 호텔&리조트",
+    "address": "전라남도 여수시 오동도로 61-15",
+    "phone": "",
+    "latitude": "34.7444510540",
+    "longitude": "127.7506417828",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/2823725_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3464880",
+    "title": "오라카이 인사동 스위츠",
+    "address": "서울특별시 종로구 인사동4길 18 (낙원동)",
+    "phone": "",
+    "latitude": "37.5730564254",
+    "longitude": "126.9873589182",
+    "image": "",
+    "category": "모텔"
+  },
+  {
+    "id": "2566867",
+    "title": "오션힐호텔",
+    "address": "전라남도 여수시 돌산읍 강남해안로 81",
+    "phone": "",
+    "latitude": "34.7187288599",
+    "longitude": "127.7464039188",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2566892_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3571309",
+    "title": "웨이브엠호텔 이스트",
+    "address": "경기도 시흥시 거북섬로 130 (정왕동)",
+    "phone": "",
+    "latitude": "37.3201108931",
+    "longitude": "126.6803439575",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3571074_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3383407",
+    "title": "유원재",
+    "address": "충청북도 충주시 수안보면 주정산로 6",
+    "phone": "",
+    "latitude": "36.8490721678",
+    "longitude": "127.9887612186",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3383382_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3531408",
+    "title": "전주 시그니처 호텔",
+    "address": "전북특별자치도 전주시 덕진구 백제대로 838 (우아동3가)",
+    "phone": "",
+    "latitude": "35.8487133602",
+    "longitude": "127.1599098239",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3531342_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3316414",
+    "title": "조강276(DMZ 평화의 길 거점센터)",
+    "address": "경기도 김포시 월곶면 용강로250번길 104",
+    "phone": "031-8049-3960",
+    "latitude": "37.7418764745",
+    "longitude": "126.5655065940",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3316407_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3372157",
+    "title": "컨피네스 오션 스위트 호텔",
+    "address": "강원특별자치도 강릉시 사천면 진리항구2길 5",
+    "phone": "",
+    "latitude": "37.8366611982",
+    "longitude": "128.8746494160",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3372129_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3415124",
+    "title": "태백호텔",
+    "address": "강원특별자치도 태백시 태백산로 4761 (소도동)",
+    "phone": "",
+    "latitude": "37.1325190417",
+    "longitude": "128.9602826800",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3414883_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "2731553",
+    "title": "펠릭스바이STX",
+    "address": "부산광역시 해운대구 해운대로 620 해운대 라뮤에뜨",
+    "phone": "051-969-5016",
+    "latitude": "35.1630016570",
+    "longitude": "129.1584801742",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/2816269_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "3543710",
+    "title": "풀스테이 스테이펫 홍천",
+    "address": "강원특별자치도 홍천군 화촌면 답연밭길 5-2",
+    "phone": "",
+    "latitude": "37.7382952558",
+    "longitude": "128.0277873179",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3543704_image2_1.jpg",
+    "category": "모텔"
+  },
+  {
+    "id": "2705418",
+    "title": "해운대 영무파라드호텔",
+    "address": "부산광역시 해운대구 해운대해변로298번길 25 (중동)",
+    "phone": "",
+    "latitude": "35.1609381479",
+    "longitude": "129.1665100882",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/2705420_image2_1.jpg",
+    "category": "모텔"
+  }
+]

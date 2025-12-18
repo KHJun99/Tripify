@@ -1,0 +1,32 @@
+[
+  {
+    "id": "3540485",
+    "title": "주문진식자재마트",
+    "address": "강원특별자치도 강릉시 주문진읍 연주로 324",
+    "phone": "033-661-8500",
+    "latitude": "37.8813884076",
+    "longitude": "128.8262718384",
+    "image": "",
+    "category": "면세점"
+  },
+  {
+    "id": "2753682",
+    "title": "판타지움",
+    "address": "경기도 수원시 영통구 덕영대로 1566 (영통동)",
+    "phone": "",
+    "latitude": "37.2451874572",
+    "longitude": "127.0619141469",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2753613_image2_1.jpg",
+    "category": "면세점"
+  },
+  {
+    "id": "3540260",
+    "title": "한길DC마트",
+    "address": "강원특별자치도 강릉시 화부산로 109 (교동)",
+    "phone": "033-641-4955",
+    "latitude": "37.7650531166",
+    "longitude": "128.8898919271",
+    "image": "",
+    "category": "면세점"
+  }
+]

@@ -3,9 +3,9 @@
     <div v-if="festival" class="festival-detail">
       <!-- 헤더 이미지 -->
       <div class="hero-image">
-        <img :src="festival.image" :alt="festival.name" />
+        <img :src="festival.image_url || 'https://via.placeholder.com/1200x400?text=Festival'" :alt="festival.title" />
         <div class="hero-overlay">
-          <h1>{{ festival.name }}</h1>
+          <h1>{{ festival.title }}</h1>
           <div class="festival-badge">{{ festival.region }}</div>
         </div>
       </div>
@@ -19,86 +19,46 @@
               <div class="info-icon">📅</div>
               <div class="info-content">
                 <h3>개최 기간</h3>
-                <p>{{ festival.period }}</p>
+                <p>{{ formatPeriod() }}</p>
               </div>
             </div>
             <div class="info-card">
               <div class="info-icon">📍</div>
               <div class="info-content">
                 <h3>장소</h3>
-                <p>{{ festival.location }}</p>
+                <p>{{ festival.address }}</p>
               </div>
             </div>
             <div class="info-card">
-              <div class="info-icon">🎫</div>
+              <div class="info-icon">🎭</div>
               <div class="info-content">
-                <h3>입장료</h3>
-                <p>{{ festival.fee }}</p>
+                <h3>카테고리</h3>
+                <p>{{ festival.category || '일반축제' }}</p>
               </div>
             </div>
-            <div class="info-card">
+            <div class="info-card" v-if="festival.phone">
               <div class="info-icon">📞</div>
               <div class="info-content">
                 <h3>문의</h3>
-                <p>{{ festival.contact }}</p>
+                <p>{{ festival.phone }}</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 상세 설명 -->
-        <div class="description-section">
-          <h2>축제 소개</h2>
-          <p class="description">{{ festival.detailedDescription }}</p>
-        </div>
-
-        <!-- 주요 프로그램 -->
-        <div class="program-section" v-if="festival.programs && festival.programs.length > 0">
-          <h2>주요 프로그램</h2>
-          <div class="program-list">
-            <div v-for="(program, index) in festival.programs" :key="index" class="program-item">
-              <div class="program-icon">{{ program.icon }}</div>
-              <div class="program-content">
-                <h3>{{ program.name }}</h3>
-                <p>{{ program.description }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 교통 정보 -->
-        <div class="transport-section">
-          <h2>교통 정보</h2>
-          <div class="transport-tabs">
-            <button
-              v-for="(tab, index) in ['대중교통', '자가용']"
-              :key="index"
-              @click="activeTransportTab = tab"
-              :class="['tab-button', { active: activeTransportTab === tab }]"
-            >
-              {{ tab }}
-            </button>
-          </div>
-          <div class="transport-content">
-            <p v-if="activeTransportTab === '대중교통'">{{ festival.publicTransport }}</p>
-            <p v-if="activeTransportTab === '자가용'">{{ festival.carTransport }}</p>
-          </div>
-        </div>
-
-        <!-- 태그 -->
-        <div class="tags-section">
-          <h2>관련 태그</h2>
-          <div class="tags">
-            <span v-for="tag in festival.tags" :key="tag" class="tag">
-              #{{ tag }}
-            </span>
+        <!-- 위치 정보 -->
+        <div class="location-section" v-if="festival.latitude && festival.longitude">
+          <h2>위치</h2>
+          <div class="location-info">
+            <p><strong>주소:</strong> {{ festival.address }}</p>
+            <p><strong>좌표:</strong> {{ festival.latitude }}, {{ festival.longitude }}</p>
           </div>
         </div>
 
         <!-- 하단 액션 버튼 -->
         <div class="action-buttons">
           <button @click="goBack" class="back-button">
-            ← 목록으로 돌아가기
+            목록으로 돌아가기
           </button>
         </div>
       </div>
@@ -106,7 +66,6 @@
 
     <!-- 로딩 상태 -->
     <div v-else class="loading">
-      <div class="spinner"></div>
       <p>축제 정보를 불러오는 중...</p>
     </div>
   </div>
@@ -119,45 +78,58 @@ import { getFestivalDetail } from '@/api/festivals'
 
 const route = useRoute()
 const router = useRouter()
+
 const festival = ref(null)
-const activeTransportTab = ref('대중교통')
 const loading = ref(false)
 
-// 축제 상세 데이터 가져오기
+const formatPeriod = () => {
+  if (!festival.value) return ''
+
+  if (festival.value.event_start_date && festival.value.event_end_date) {
+    const start = formatDate(festival.value.event_start_date)
+    const end = formatDate(festival.value.event_end_date)
+    return `${start} ~ ${end}`
+  } else if (festival.value.event_start_date) {
+    return formatDate(festival.value.event_start_date)
+  } else if (festival.value.start_month) {
+    return `${festival.value.start_month}월`
+  }
+  return '날짜 미정'
+}
+
+const formatDate = (dateStr) => {
+  if (!dateStr || dateStr.length < 8) return dateStr
+  const year = dateStr.substring(0, 4)
+  const month = dateStr.substring(4, 6)
+  const day = dateStr.substring(6, 8)
+  return `${year}.${month}.${day}`
+}
+
 const fetchFestivalDetail = async () => {
   try {
     loading.value = true
-    const festivalId = parseInt(route.params.id)
-    const data = await getFestivalDetail(festivalId)
-
-    // API 데이터를 뷰에 맞게 변환
-    festival.value = {
-      ...data,
-      detailedDescription: data.detailed_description,
-      publicTransport: data.transportation?.public || '정보 없음',
-      carTransport: data.transportation?.car || '정보 없음'
-    }
+    const festivalId = route.params.id
+    festival.value = await getFestivalDetail(festivalId)
   } catch (error) {
     console.error('축제 상세 정보를 불러오는 데 실패했습니다:', error)
-    router.push('/festivals')
   } finally {
     loading.value = false
   }
 }
 
+const goBack = () => {
+  router.push({ name: 'festivals' })
+}
+
 onMounted(() => {
   fetchFestivalDetail()
 })
-
-const goBack = () => {
-  router.push('/festivals')
-}
 </script>
 
 <style scoped>
 .festival-detail-container {
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #f5f7fa;
 }
 
 .hero-image {
@@ -179,57 +151,48 @@ const goBack = () => {
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  padding: 2rem;
+  padding: 3rem 2rem;
   color: white;
 }
 
 .hero-overlay h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-weight: 700;
 }
 
 .festival-badge {
   display: inline-block;
   background: rgba(52, 152, 219, 0.9);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.95rem;
+  border-radius: 25px;
   font-weight: 600;
 }
 
 .content-wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
 
 .info-section,
-.description-section,
-.program-section,
-.transport-section,
-.tags-section {
+.location-section {
   background: white;
-  padding: 2rem;
   border-radius: 12px;
+  padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-section h2,
-.description-section h2,
-.program-section h2,
-.transport-section h2,
-.tags-section h2 {
-  font-size: 1.5rem;
+.location-section h2 {
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: #333;
-  font-weight: 700;
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
@@ -238,125 +201,36 @@ const goBack = () => {
   gap: 1rem;
   padding: 1.5rem;
   background: #f8f9fa;
-  border-radius: 12px;
-  border: 2px solid #e9ecef;
+  border-radius: 8px;
 }
 
 .info-icon {
   font-size: 2rem;
-  flex-shrink: 0;
 }
 
 .info-content h3 {
-  font-size: 0.9rem;
-  color: #6c757d;
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
 .info-content p {
-  color: #212529;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.description {
-  color: #495057;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-.program-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.program-item {
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 12px;
-  transition: transform 0.2s;
-}
-
-.program-item:hover {
-  transform: translateX(5px);
-}
-
-.program-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-}
-
-.program-content h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.program-content p {
-  color: #6c757d;
+.location-info p {
+  margin-bottom: 0.75rem;
   line-height: 1.6;
-}
-
-.transport-tabs {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tab-button {
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #e9ecef;
-  background: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #6c757d;
-  transition: all 0.2s;
-}
-
-.tab-button.active {
-  background: #3498db;
-  color: white;
-  border-color: #3498db;
-}
-
-.tab-button:hover:not(.active) {
-  border-color: #3498db;
-  color: #3498db;
-}
-
-.transport-content p {
-  color: #495057;
-  line-height: 1.8;
-  font-size: 1.05rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.tag {
-  background: #e9ecef;
-  color: #495057;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  color: #555;
 }
 
 .action-buttons {
-  margin-top: 3rem;
-  text-align: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .back-button {
@@ -366,7 +240,6 @@ const goBack = () => {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -376,47 +249,23 @@ const goBack = () => {
 }
 
 .loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  gap: 1rem;
-}
-
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.2rem;
+  color: #666;
 }
 
 @media (max-width: 768px) {
+  .hero-image {
+    height: 250px;
+  }
+
   .hero-overlay h1 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
-  }
-
-  .content-wrapper {
-    padding: 1rem;
-  }
-
-  .transport-tabs {
-    flex-direction: column;
-  }
-
-  .tab-button {
-    width: 100%;
   }
 }
 </style>

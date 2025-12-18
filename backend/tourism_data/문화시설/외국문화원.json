@@ -1,0 +1,55 @@
+[
+  {
+    "id": "268161",
+    "title": "전주한지박물관",
+    "address": "전북특별자치도 전주시 덕진구 팔복로 59",
+    "phone": "",
+    "latitude": "35.8490178455",
+    "longitude": "127.1002512389",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3552321_image2_1.jpg",
+    "category": "외국문화원",
+    "original_category": "박물관"
+  },
+  {
+    "id": "3065579",
+    "title": "전주한벽문화관",
+    "address": "전북특별자치도 전주시 완산구 전주천동로 20 (교동)",
+    "phone": "",
+    "latitude": "35.8123202733",
+    "longitude": "127.1595996936",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3065554_image2_1.jpg",
+    "category": "외국문화원",
+    "original_category": "전시관"
+  },
+  {
+    "id": "3035802",
+    "title": "안산시세계문화체험관",
+    "address": "경기도 안산시 단원구 부부로 43 (원곡동)",
+    "phone": "",
+    "latitude": "37.3324864006",
+    "longitude": "126.7903530484",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3002590_image2_1.jpg",
+    "category": "외국문화원"
+  },
+  {
+    "id": "130972",
+    "title": "주한 프랑스 대사관 어학센터",
+    "address": "서울특별시 종로구 삼봉로 94 (공평동)",
+    "phone": "",
+    "latitude": "37.5718898027",
+    "longitude": "126.9822483056",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3510459_image2_1.jpg",
+    "category": "외국문화원"
+  },
+  {
+    "id": "3358892",
+    "title": "전주한옥마을 도서관",
+    "address": "전북특별자치도 전주시 완산구 한지길 68-3 (풍남동3가)",
+    "phone": "",
+    "latitude": "35.8173279280",
+    "longitude": "127.1533334537",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3358039_image2_1.JPG",
+    "category": "외국문화원",
+    "original_category": "도서관"
+  }
+]

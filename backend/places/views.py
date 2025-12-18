@@ -1,11 +1,9 @@
 from rest_framework import viewsets, status
-from rest_framework.decorators import action, api_view, permission_classes
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .models import Place, Bookmark
 from .serializers import PlaceSerializer, BookmarkSerializer
-from external_api.tour_api import TourAPI
-from external_api.festival_api import FestivalAPI
 from django.db.models import Q
 
 

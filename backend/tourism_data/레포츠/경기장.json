@@ -1,0 +1,827 @@
+[
+  {
+    "id": "3543994",
+    "title": "강릉실내체육관",
+    "address": "강원특별자치도 강릉시 종합운동장길 32 (교동)",
+    "phone": "",
+    "latitude": "37.7737771598",
+    "longitude": "128.8925858597",
+    "image": "",
+    "category": "경기장",
+    "original_category": "수련시설"
+  },
+  {
+    "id": "2525011",
+    "title": "강릉 올림픽파크",
+    "address": "강원특별자치도 강릉시 수리골길 76",
+    "phone": "",
+    "latitude": "37.7771240815",
+    "longitude": "128.8970436876",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3544100",
+    "title": "강릉강북공설운동장",
+    "address": "강원특별자치도 강릉시 연곡면 연주로 188",
+    "phone": "",
+    "latitude": "37.8716063720",
+    "longitude": "128.8347186016",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3544350",
+    "title": "강릉볼링장",
+    "address": "강원특별자치도 강릉시 남부로 222 (노암동)",
+    "phone": "",
+    "latitude": "37.7436587117",
+    "longitude": "128.9074798939",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3543978",
+    "title": "강릉생활체육센터",
+    "address": "강원특별자치도 강릉시 종합운동장길 69 (교동)",
+    "phone": "",
+    "latitude": "37.7731717564",
+    "longitude": "128.8967993872",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3544490",
+    "title": "강릉스쿼시장",
+    "address": "강원특별자치도 강릉시 남부로 222 (노암동)",
+    "phone": "",
+    "latitude": "37.7436587117",
+    "longitude": "128.9074798939",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3089910",
+    "title": "강변축구장",
+    "address": "대구광역시 북구 서변동",
+    "phone": "",
+    "latitude": "35.9090182510",
+    "longitude": "128.5903731451",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3089902_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "1665536",
+    "title": "거창스포츠파크",
+    "address": "경상남도 거창군 거창읍 심소정길 39-36",
+    "phone": "",
+    "latitude": "35.6939889065",
+    "longitude": "127.9279819277",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "2463896",
+    "title": "계양경기장",
+    "address": "인천광역시 계양구 봉오대로 855",
+    "phone": "032-550-3500",
+    "latitude": "37.5325151261",
+    "longitude": "126.7438989280",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3395525_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2463875",
+    "title": "계양경기장 계양체육관",
+    "address": "인천광역시 계양구 봉오대로 855",
+    "phone": "",
+    "latitude": "37.5325151261",
+    "longitude": "126.7438989280",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3393649_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2463889",
+    "title": "계양경기장 아시아드양궁장",
+    "address": "인천광역시 계양구 봉오대로 855 (서운동)",
+    "phone": "",
+    "latitude": "37.5311014098",
+    "longitude": "126.7443683688",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3393663_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2753222",
+    "title": "고성군 스포츠파크",
+    "address": "경상남도 고성군 고성읍 교사리 411",
+    "phone": "",
+    "latitude": "34.9803344101",
+    "longitude": "128.3068676289",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/2753122_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2591873",
+    "title": "고척 스카이돔",
+    "address": "서울특별시 구로구 경인로 430 (고척동)",
+    "phone": "",
+    "latitude": "37.4992128511",
+    "longitude": "126.8668969788",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3082829_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2534281",
+    "title": "관동하키센터",
+    "address": "강원특별자치도 강릉시 범일로579번길 24",
+    "phone": "",
+    "latitude": "37.7359034011",
+    "longitude": "128.8740192577",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3383804_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "131617",
+    "title": "관악구민운동장",
+    "address": "서울특별시 관악구 낙성대로 40",
+    "phone": "",
+    "latitude": "37.4751755932",
+    "longitude": "126.9574616287",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/1903214_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131611",
+    "title": "광명시민체육관",
+    "address": "경기도 광명시 오리로 703 (하안동)",
+    "phone": "",
+    "latitude": "37.4625588826",
+    "longitude": "126.8729446789",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3027699_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2033064",
+    "title": "광주-기아 챔피언스 필드",
+    "address": "광주광역시 북구 서림로 10",
+    "phone": "070-7686-8000",
+    "latitude": "35.1682414234",
+    "longitude": "126.8890596255",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3441610",
+    "title": "광주광역시 염주종합체육관",
+    "address": "광주광역시 서구 금화로 278 (풍암동)",
+    "phone": "",
+    "latitude": "35.1365809258",
+    "longitude": "126.8781697142",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3441613_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131721",
+    "title": "광주월드컵경기장",
+    "address": "광주광역시 서구 금화로 240",
+    "phone": "062-604-2002",
+    "latitude": "35.1337617441",
+    "longitude": "126.8749061843",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/1587805_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3430135",
+    "title": "남동25시야구센터",
+    "address": "인천광역시 남동구 경신로60번길 22 (수산동)",
+    "phone": "",
+    "latitude": "37.4433529672",
+    "longitude": "126.7270668402",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3429025_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131734",
+    "title": "남해스포츠파크",
+    "address": "경상남도 남해군 서면 스포츠파크길 15",
+    "phone": "",
+    "latitude": "34.8063984218",
+    "longitude": "127.8385936219",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3063310_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3015838",
+    "title": "다사체육공원",
+    "address": "대구광역시 달성군 다사읍 다사로 441",
+    "phone": "",
+    "latitude": "35.8901349840",
+    "longitude": "128.4777808200",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3015764_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2606238",
+    "title": "대구iM뱅크PARK",
+    "address": "대구광역시 북구 고성로 191",
+    "phone": "053-222-3600",
+    "latitude": "35.8830627794",
+    "longitude": "128.5861797933",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3501372_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3008741",
+    "title": "대구삼성라이온즈파크",
+    "address": "대구광역시 수성구 연호동",
+    "phone": "",
+    "latitude": "35.8411720547",
+    "longitude": "128.6812614766",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3008688_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131714",
+    "title": "대구스타디움",
+    "address": "대구광역시 수성구 유니버시아드로 180",
+    "phone": "",
+    "latitude": "35.8299818185",
+    "longitude": "128.6901804487",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3501336_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1353888",
+    "title": "대구시민운동장",
+    "address": "대구광역시 북구 고성로 191",
+    "phone": "053-606-8200",
+    "latitude": "35.8804436428",
+    "longitude": "128.5867964789",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3501373_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2766990",
+    "title": "대전 한화생명 볼파크",
+    "address": "대전광역시 중구 대종로 373",
+    "phone": "",
+    "latitude": "36.3162759121",
+    "longitude": "127.4315370174",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2767186_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3377139",
+    "title": "대전드림아레나",
+    "address": "대전광역시 유성구 대덕대로 480 (도룡동)",
+    "phone": "",
+    "latitude": "36.3759931713",
+    "longitude": "127.3802705364",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3377386_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131720",
+    "title": "대전월드컵경기장",
+    "address": "대전광역시 유성구 월드컵대로 32",
+    "phone": "042-610-2900",
+    "latitude": "36.3651962068",
+    "longitude": "127.3251146529",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3513201_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3543517",
+    "title": "덕산복합문화체육센터",
+    "address": "충청남도 예산군 덕산면 온천단지2로 120",
+    "phone": "",
+    "latitude": "36.6919665073",
+    "longitude": "126.6617432689",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3543319_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2702453",
+    "title": "동해 웰빙레포츠타운",
+    "address": "강원특별자치도 동해시 덕골길 10",
+    "phone": "",
+    "latitude": "37.5169914597",
+    "longitude": "129.1021555093",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "2768087",
+    "title": "롤파크",
+    "address": "서울특별시 종로구 종로 33",
+    "phone": "",
+    "latitude": "37.5710121125",
+    "longitude": "126.9814539585",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3454730_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2755467",
+    "title": "마곡 실내배드민턴장",
+    "address": "서울특별시 강서구 양천로 251 (마곡동)",
+    "phone": "",
+    "latitude": "37.5728175647",
+    "longitude": "126.8321286352",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/2790816_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3024181",
+    "title": "만촌자전거경기장",
+    "address": "대구광역시 수성구 팔현길 241 (만촌동)",
+    "phone": "",
+    "latitude": "35.8744678370",
+    "longitude": "128.6569349112",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3024161_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2782166",
+    "title": "목동종합운동장",
+    "address": "서울특별시 양천구 안양천로 939",
+    "phone": "",
+    "latitude": "37.5301456356",
+    "longitude": "126.8819114075",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3466104_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3351555",
+    "title": "반다비 체육센터",
+    "address": "경상남도 양산시 물금읍 부산대학로 34",
+    "phone": "",
+    "latitude": "35.3230475019",
+    "longitude": "129.0028948765",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3381159_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2733973",
+    "title": "반포종합운동장",
+    "address": "서울특별시 서초구 신반포로16길 30 (반포동)",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/2779899_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2747707",
+    "title": "백석배드민턴경기장",
+    "address": "경기도 고양시 일산동구 일산로 136 (백석동)",
+    "phone": "",
+    "latitude": "37.6487691743",
+    "longitude": "126.7948187898",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2747879_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131715",
+    "title": "부산 아시아드주경기장",
+    "address": "부산광역시 연제구 월드컵대로 344",
+    "phone": "051-500-2123",
+    "latitude": "35.1902245312",
+    "longitude": "129.0582325921",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "3060992",
+    "title": "부산사직종합운동장 사직야구장",
+    "address": "부산광역시 동래구 사직로 45 (사직동)",
+    "phone": "",
+    "latitude": "35.1953684480",
+    "longitude": "129.0608572228",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3060985_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "1358310",
+    "title": "부산종합운동장",
+    "address": "부산광역시 연제구 월드컵대로 344",
+    "phone": "051-504-8001",
+    "latitude": "35.1902245312",
+    "longitude": "129.0582325921",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "1610042",
+    "title": "부안스포츠파크",
+    "address": "전북특별자치도 부안군 행안면 체육공원길 31",
+    "phone": "",
+    "latitude": "35.7005060345",
+    "longitude": "126.7221082088",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3077551_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131612",
+    "title": "부천시민운동장",
+    "address": "경기도 부천시 원미구 부일로 365 (중동)",
+    "phone": "032-665-1071",
+    "latitude": "37.4882901885",
+    "longitude": "126.7708115984",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3475775_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2763827",
+    "title": "불암산스포츠타운",
+    "address": "서울특별시 노원구 중계로 36 (공릉동)",
+    "phone": "",
+    "latitude": "37.6388338383",
+    "longitude": "127.0832566398",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3502703_image2_1.jpeg",
+    "category": "경기장"
+  },
+  {
+    "id": "2702452",
+    "title": "사이클경기장",
+    "address": "강원특별자치도 양양군 손양면 공항로 149",
+    "phone": "",
+    "latitude": "38.0622391049",
+    "longitude": "128.6558260807",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3378616_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "131712",
+    "title": "서울월드컵경기장",
+    "address": "서울특별시 마포구 월드컵로 240 (성산동)",
+    "phone": "",
+    "latitude": "37.5683414708",
+    "longitude": "126.8972867075",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/1805797_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1612637",
+    "title": "수성구민운동장",
+    "address": "대구광역시 수성구 동대구로50길 121-7",
+    "phone": "",
+    "latitude": "35.8504006182",
+    "longitude": "128.6299601799",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3526719_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3057776",
+    "title": "수원KT위즈파크",
+    "address": "경기도 수원시 장안구 경수대로 893 (조원동)",
+    "phone": "",
+    "latitude": "37.2999635410",
+    "longitude": "127.0111672202",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3053197_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131719",
+    "title": "수원월드컵경기장",
+    "address": "경기도 수원시 팔달구 월드컵로 310",
+    "phone": "031-202-2002",
+    "latitude": "37.2865822176",
+    "longitude": "127.0369291446",
+    "image": "",
+    "category": "경기장"
+  },
+  {
+    "id": "2365617",
+    "title": "안양실내체육관",
+    "address": "경기도 안양시 동안구 평촌대로 389",
+    "phone": "031-389-5228",
+    "latitude": "37.4055918073",
+    "longitude": "126.9465312456",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/2353426_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1859317",
+    "title": "안양종합운동장",
+    "address": "경기도 안양시 동안구 평촌대로 389",
+    "phone": "031-389-5220",
+    "latitude": "37.4055918073",
+    "longitude": "126.9465312456",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3506859_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3030470",
+    "title": "양서문화체육공원",
+    "address": "경기도 양평군 양서면 용담리",
+    "phone": "",
+    "latitude": "37.5408467878",
+    "longitude": "127.3229959573",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3030464_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2789427",
+    "title": "에버랜드스피드웨이",
+    "address": "경기도 용인시 처인구 포곡읍 에버랜드로 199",
+    "phone": "",
+    "latitude": "37.2893100954",
+    "longitude": "127.2149184795",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2798986_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1971330",
+    "title": "영월스포츠파크",
+    "address": "강원특별자치도 영월군 영월읍 제방안길 100",
+    "phone": "",
+    "latitude": "37.1758045508",
+    "longitude": "128.4618565465",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3039914_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1621252",
+    "title": "예천 진호국제양궁장",
+    "address": "경상북도 예천군 양궁장길 38 예천진호양궁장",
+    "phone": "",
+    "latitude": "36.6338141171",
+    "longitude": "128.4713464964",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3572384_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3033908",
+    "title": "옥순정 국궁장",
+    "address": "충청북도 제천시 수산면 수산리",
+    "phone": "",
+    "latitude": "36.9327332097",
+    "longitude": "128.2038784338",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3033907_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "3029091",
+    "title": "올림픽공원 SK올림픽핸드볼경기장",
+    "address": "서울특별시 송파구 올림픽로 424 (방이동)",
+    "phone": "",
+    "latitude": "37.5206092598",
+    "longitude": "127.1150682209",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3029078_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2758179",
+    "title": "올림픽체조경기장(KSPO DOME)",
+    "address": "서울특별시 송파구 올림픽로 424 (방이동)",
+    "phone": "",
+    "latitude": "37.5206092598",
+    "longitude": "127.1150682209",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3533809_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131718",
+    "title": "울산 문수축구경기장",
+    "address": "울산광역시 남구 문수로 44 (옥동)",
+    "phone": "",
+    "latitude": "35.5353089936",
+    "longitude": "129.2595610231",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3084236_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1624467",
+    "title": "울산종합운동장",
+    "address": "울산광역시 중구 염포로 55",
+    "phone": "052-290-7200",
+    "latitude": "35.5626603600",
+    "longitude": "129.3479914251",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/1588285_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2370917",
+    "title": "원주종합체육관",
+    "address": "강원특별자치도 원주시 서원대로 281",
+    "phone": "",
+    "latitude": "37.3390648672",
+    "longitude": "127.9419013050",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2688979_image2_1.png",
+    "category": "경기장"
+  },
+  {
+    "id": "3011055",
+    "title": "이용대 체육관",
+    "address": "전라남도 화순군 화순읍 학포로 2698",
+    "phone": "",
+    "latitude": "35.0495422297",
+    "longitude": "126.9660419051",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3011046_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2018223",
+    "title": "인제스피디움 서킷",
+    "address": "강원특별자치도 인제군 기린면 상하답로 130",
+    "phone": "",
+    "latitude": "38.0012086833",
+    "longitude": "128.2950634635",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3502882_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3061208",
+    "title": "인천SSG랜더스필드",
+    "address": "인천광역시 미추홀구 매소홀로 618 (문학동)",
+    "phone": "",
+    "latitude": "37.4382529119",
+    "longitude": "126.6904369874",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3052223_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "131716",
+    "title": "인천문학경기장(인천월드컵경기장)",
+    "address": "인천광역시 미추홀구 매소홀로 618 문학경기장",
+    "phone": "",
+    "latitude": "37.4373363570",
+    "longitude": "126.6907314309",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/1869660_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1939394",
+    "title": "인천아시아드주경기장",
+    "address": "인천광역시 서구 봉수대로 806",
+    "phone": "",
+    "latitude": "37.5452400279",
+    "longitude": "126.6651113190",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3531560_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2758173",
+    "title": "잠실야구장",
+    "address": "서울특별시 송파구 올림픽로 19-2 (잠실동)",
+    "phone": "",
+    "latitude": "37.5113040245",
+    "longitude": "127.0728778799",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/2788139_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "990140",
+    "title": "장충체육관",
+    "address": "서울특별시 중구 동호로 241",
+    "phone": "",
+    "latitude": "37.5582390522",
+    "longitude": "127.0068047884",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3083906_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "131722",
+    "title": "전주월드컵경기장",
+    "address": "전북특별자치도 전주시 덕진구 기린대로 1055",
+    "phone": "",
+    "latitude": "35.8681289403",
+    "longitude": "127.0645233665",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/1605424_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "131717",
+    "title": "제주월드컵경기장",
+    "address": "제주특별자치도 서귀포시 월드컵로 33",
+    "phone": "064-760-3623",
+    "latitude": "33.2462886912",
+    "longitude": "126.5092023235",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/1010424_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "231989",
+    "title": "진주 소힘겨루기 경기장",
+    "address": "경상남도 진주시 판문오동길 100",
+    "phone": "",
+    "latitude": "35.1760132613",
+    "longitude": "128.0406607768",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3492781_image2_1.JPG",
+    "category": "경기장"
+  },
+  {
+    "id": "2764156",
+    "title": "창원NC파크",
+    "address": "경상남도 창원시 마산회원구 삼호로 63",
+    "phone": "",
+    "latitude": "35.2219539258",
+    "longitude": "128.5823260174",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3576682_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3075696",
+    "title": "창원실내수영장",
+    "address": "경상남도 창원시 성산구 원이대로 450 (중앙동)",
+    "phone": "",
+    "latitude": "35.2347151305",
+    "longitude": "128.6663155563",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3576735_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2370995",
+    "title": "탄천종합운동장",
+    "address": "경기도 성남시 분당구 탄천로 215",
+    "phone": "031-725-7100",
+    "latitude": "37.4102555093",
+    "longitude": "127.1212957823",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3053815_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1826441",
+    "title": "통영산양스포츠파크",
+    "address": "경상남도 통영시 산양읍 산양중앙로 100",
+    "phone": "055-643-6839",
+    "latitude": "34.8034502696",
+    "longitude": "128.3975310347",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3476376_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "586113",
+    "title": "통영시공설운동장",
+    "address": "경상남도 통영시 북문2길 25 (북신동)",
+    "phone": "",
+    "latitude": "34.8515093582",
+    "longitude": "128.4296686420",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3476361_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "1353752",
+    "title": "한밭종합운동장",
+    "address": "대전광역시 중구 대종로 373",
+    "phone": "042-610-4900",
+    "latitude": "36.3162759121",
+    "longitude": "127.4315370174",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3568570_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "2714524",
+    "title": "홍천 비발디파크 K1 SPEED",
+    "address": "강원특별자치도 홍천군 서면 한치골길 262",
+    "phone": "",
+    "latitude": "37.6523905338",
+    "longitude": "127.6873540732",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2615592_image2_1.jpg",
+    "category": "경기장"
+  },
+  {
+    "id": "3061220",
+    "title": "선학국제빙상경기장",
+    "address": "인천광역시 연수구 경원대로 526 (선학동)",
+    "phone": "",
+    "latitude": "37.4311899983",
+    "longitude": "126.6992169388",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3051921_image2_1.jpg",
+    "category": "경기장",
+    "original_category": "스케이트"
+  },
+  {
+    "id": "3066521",
+    "title": "전주빙상경기장",
+    "address": "전북특별자치도 전주시 완산구 백제대로 310 (중화산동2가)",
+    "phone": "",
+    "latitude": "35.8204909333",
+    "longitude": "127.1231499460",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3066506_image2_1.jpg",
+    "category": "경기장",
+    "original_category": "스케이트"
+  },
+  {
+    "id": "665164",
+    "title": "탄천종합운동장 빙상장",
+    "address": "경기도 성남시 분당구 탄천로 215 (야탑동)",
+    "phone": "",
+    "latitude": "37.4116303566",
+    "longitude": "127.1216568221",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3490542_image2_1.jpeg",
+    "category": "경기장",
+    "original_category": "스케이트"
+  },
+  {
+    "id": "131523",
+    "title": "수영만 요트경기장",
+    "address": "부산광역시 해운대구 해운대해변로 84",
+    "phone": "",
+    "latitude": "35.1609293352",
+    "longitude": "129.1405651222",
+    "image": "",
+    "category": "경기장",
+    "original_category": "요트"
+  }
+]

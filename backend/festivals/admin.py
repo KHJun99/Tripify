@@ -4,24 +4,24 @@ from .models import Festival
 
 @admin.register(Festival)
 class FestivalAdmin(admin.ModelAdmin):
-    list_display = ['name', 'region', 'month', 'period', 'is_active', 'created_at']
-    list_filter = ['region', 'month', 'is_active']
-    search_fields = ['name', 'location', 'description']
+    list_display = ['title', 'category', 'region', 'start_month', 'event_start_date', 'is_active', 'created_at']
+    list_filter = ['region', 'start_month', 'category', 'is_active']
+    search_fields = ['title', 'address', 'category']
     list_editable = ['is_active']
-    ordering = ['month', 'name']
+    ordering = ['start_month', 'title']
 
     fieldsets = (
         ('기본 정보', {
-            'fields': ('name', 'region', 'location', 'period', 'month', 'is_active')
+            'fields': ('title', 'category', 'region', 'address', 'phone', 'is_active')
         }),
-        ('설명', {
-            'fields': ('description', 'detailed_description', 'image')
+        ('날짜 정보', {
+            'fields': ('event_start_date', 'event_end_date', 'start_month', 'end_month')
         }),
-        ('추가 정보', {
-            'fields': ('fee', 'contact', 'website')
+        ('위치 정보', {
+            'fields': ('latitude', 'longitude', 'image_url')
         }),
-        ('상세 정보', {
-            'fields': ('tags', 'programs', 'transportation'),
+        ('메타 정보', {
+            'fields': ('content_id',),
             'classes': ('collapse',)
         }),
     )

@@ -1,0 +1,424 @@
+[
+  {
+    "id": "125724",
+    "title": "고씨굴 (강원고생대 국가지질공원)",
+    "address": "강원특별자치도 영월군 김삿갓면 영월동로 1117",
+    "phone": "",
+    "latitude": "37.1307444591",
+    "longitude": "128.5353790658",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3374987_image2_1.JPG",
+    "category": "동굴"
+  },
+  {
+    "id": "2649975",
+    "title": "광명동굴",
+    "address": "경기도 광명시 가학로85번길 142 (가학동)",
+    "phone": "",
+    "latitude": "37.4243548415",
+    "longitude": "126.8648909266",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/2649973_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2663268",
+    "title": "광양와인동굴",
+    "address": "전라남도 광양시 광양읍 강정길 33",
+    "phone": "",
+    "latitude": "34.9613492633",
+    "longitude": "127.6086181363",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3571576_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2987914",
+    "title": "광천선굴어드벤처테마파크",
+    "address": "강원특별자치도 평창군 고대동길 119",
+    "phone": "",
+    "latitude": "37.5188259153",
+    "longitude": "128.4516722463",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3381077_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2726420",
+    "title": "근포동굴",
+    "address": "경상남도 거제시 남부면 저구리 423",
+    "phone": "",
+    "latitude": "34.7219794988",
+    "longitude": "128.5912996550",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "125730",
+    "title": "금강굴",
+    "address": "강원특별자치도 속초시 설악산로 1091",
+    "phone": "",
+    "latitude": "38.1735618013",
+    "longitude": "128.4884989154",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/1966637_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "125861",
+    "title": "단양 고수동굴",
+    "address": "충청북도 단양군 단양읍 고수동굴길 8",
+    "phone": "",
+    "latitude": "36.9884523536",
+    "longitude": "128.3815386863",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "125854",
+    "title": "단양 온달동굴",
+    "address": "충청북도 단양군 영춘면 온달로 23",
+    "phone": "",
+    "latitude": "37.0628736682",
+    "longitude": "128.4923432540",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/2534325_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2829793",
+    "title": "당진 용천굴",
+    "address": "충청남도 당진시 석문면 장고항리",
+    "phone": "",
+    "latitude": "37.0366499492",
+    "longitude": "126.5596126829",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "129560",
+    "title": "대금굴 (대이리 동굴지대)",
+    "address": "강원특별자치도 삼척시 신기면 환선로 800",
+    "phone": "",
+    "latitude": "37.3259535342",
+    "longitude": "129.0205714417",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3460189_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2781614",
+    "title": "도선굴",
+    "address": "경상북도 구미시 금오산로 434-1",
+    "phone": "",
+    "latitude": "36.1062405109",
+    "longitude": "128.2988156329",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3566415_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "128976",
+    "title": "마이산 화엄굴",
+    "address": "전북특별자치도 진안군 마령면 마이산남로 367",
+    "phone": "",
+    "latitude": "35.7596501179",
+    "longitude": "127.4127035856",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/198644_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "126452",
+    "title": "만장굴 (제주도 국가지질공원)",
+    "address": "제주특별자치도 제주시 구좌읍 만장굴길 182",
+    "phone": "",
+    "latitude": "33.5280478463",
+    "longitude": "126.7706788052",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3354155_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2738721",
+    "title": "미천굴",
+    "address": "제주특별자치도 서귀포시 성산읍 중산간동로 4150-30",
+    "phone": "",
+    "latitude": "33.3833177616",
+    "longitude": "126.8415509789",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3401661_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2663273",
+    "title": "발효소스토굴",
+    "address": "전북특별자치도 순창군 순창읍 민속마을길 61-59",
+    "phone": "",
+    "latitude": "35.3671558953",
+    "longitude": "127.1021801835",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3445556_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "1333464",
+    "title": "백룡동굴 (강원고생대 국가지질공원)",
+    "address": "강원특별자치도 평창군 미탄면 문희길 63",
+    "phone": "",
+    "latitude": "37.2779144274",
+    "longitude": "128.5770904015",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/2733659_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "126711",
+    "title": "보령 냉풍욕장",
+    "address": "충청남도 보령시 청라면 냉풍욕장길 190",
+    "phone": "",
+    "latitude": "36.3774694637",
+    "longitude": "126.6698231108",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3349981_image2_1.JPG",
+    "category": "동굴"
+  },
+  {
+    "id": "126639",
+    "title": "삼척 초당굴",
+    "address": "강원특별자치도 삼척시 근덕면 금계리",
+    "phone": "",
+    "latitude": "37.3833668740",
+    "longitude": "129.1888407468",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3039438_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "3008392",
+    "title": "성읍녹차동굴",
+    "address": "제주특별자치도 서귀포시 중산간동로 4772",
+    "phone": "",
+    "latitude": "33.3810894210",
+    "longitude": "126.7912859405",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3008379_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2765245",
+    "title": "송악산 진지동굴",
+    "address": "제주특별자치도 서귀포시 대정읍 상모리 238",
+    "phone": "",
+    "latitude": "33.1991210589",
+    "longitude": "126.2935109685",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "129620",
+    "title": "쌍용굴(한림공원)",
+    "address": "제주특별자치도 제주시 한림읍 한림로 300",
+    "phone": "064-796-0001",
+    "latitude": "33.3879021647",
+    "longitude": "126.2418362629",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "2932013",
+    "title": "연화굴",
+    "address": "경상북도 청송군 공원길 346",
+    "phone": "",
+    "latitude": "36.3964180016",
+    "longitude": "129.1559482277",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3407436_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2766539",
+    "title": "옥화1경 청석굴",
+    "address": "충청북도 청주시 상당구 미원면 운암3길 12-16",
+    "phone": "",
+    "latitude": "36.6132409220",
+    "longitude": "127.6860199811",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3504676_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "1627404",
+    "title": "용굴",
+    "address": "전북특별자치도 정읍시 내장산로 936",
+    "phone": "",
+    "latitude": "35.4868275670",
+    "longitude": "126.8877683635",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3581111_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "126732",
+    "title": "용연동굴 (강원고생대 국가지질공원)",
+    "address": "강원특별자치도 태백시 태백로 283-29",
+    "phone": "",
+    "latitude": "37.2089321328",
+    "longitude": "128.9418875782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3422519_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "478113",
+    "title": "용천동굴 [유네스코 세계자연유산]",
+    "address": "제주특별자치도 제주시 구좌읍 월정리",
+    "phone": "",
+    "latitude": "33.5485068173",
+    "longitude": "126.7783610017",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "2614843",
+    "title": "윤필봉 자연동굴 (무등산권 국가지질공원)",
+    "address": "광주광역시 북구 무등로 1550",
+    "phone": "",
+    "latitude": "35.1441458348",
+    "longitude": "126.9890013959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/2614842_image2_1.bmp",
+    "category": "동굴"
+  },
+  {
+    "id": "126722",
+    "title": "자수정 동굴나라",
+    "address": "울산광역시 울주군 자수정로 212 자수정동굴나라",
+    "phone": "",
+    "latitude": "35.5426827762",
+    "longitude": "129.0904172556",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3549535_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2752588",
+    "title": "전촌용굴",
+    "address": "경상북도 경주시 감포읍 장진길 39",
+    "phone": "",
+    "latitude": "35.7915846198",
+    "longitude": "129.4960275363",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3518732_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "477920",
+    "title": "제주 당처물동굴 [유네스코 세계자연유산]",
+    "address": "제주특별자치도 제주시 구좌읍 월정리",
+    "phone": "",
+    "latitude": "33.5567310147",
+    "longitude": "126.7850130123",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3389746_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "478140",
+    "title": "제주 선흘리 벵뒤굴 [유네스코 세계자연유산]",
+    "address": "제주특별자치도 제주시 조천읍",
+    "phone": "",
+    "latitude": "33.4557494354",
+    "longitude": "126.7177322790",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "1597700",
+    "title": "진흥굴",
+    "address": "전북특별자치도 고창군 아산면 선운사로 250",
+    "phone": "",
+    "latitude": "35.4843335466",
+    "longitude": "126.5674663400",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3347587_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2364047",
+    "title": "천곡천연동굴 자연학습체험공원",
+    "address": "강원특별자치도 동해시 동굴로 50 (천곡동)",
+    "phone": "",
+    "latitude": "37.5174221140",
+    "longitude": "129.1097548150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3070322_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "126666",
+    "title": "천곡황금박쥐동굴",
+    "address": "강원특별자치도 동해시 동굴로 50",
+    "phone": "",
+    "latitude": "37.5174026726",
+    "longitude": "129.1097937008",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/2741919_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2614681",
+    "title": "천장굴 (울릉도, 독도 국가지질공원)",
+    "address": "경상북도 울릉군 울릉읍 독도리",
+    "phone": "",
+    "latitude": "37.2385079043",
+    "longitude": "131.8696890800",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/2614678_image2_1.bmp",
+    "category": "동굴"
+  },
+  {
+    "id": "2726311",
+    "title": "충주 활옥동굴",
+    "address": "충청북도 충주시 목벌안길 26",
+    "phone": "",
+    "latitude": "36.9618928764",
+    "longitude": "128.0071091248",
+    "image": "",
+    "category": "동굴"
+  },
+  {
+    "id": "129619",
+    "title": "협재동굴",
+    "address": "제주특별자치도 제주시 한림읍 한림로 300",
+    "phone": "",
+    "latitude": "33.3882881753",
+    "longitude": "126.2381504642",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3053797_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "128661",
+    "title": "화암동굴 (강원고생대 국가지질공원)",
+    "address": "강원특별자치도 정선군 화암면 화암동굴길 12",
+    "phone": "",
+    "latitude": "37.3508184512",
+    "longitude": "128.7905635121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3306102_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "126729",
+    "title": "환선굴 (대이리 동굴지대)",
+    "address": "강원특별자치도 삼척시 신기면 환선로 800",
+    "phone": "",
+    "latitude": "37.3264090504",
+    "longitude": "129.0212519227",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3503951_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "2614710",
+    "title": "황토굴 (울릉군, 독도 국가지질공원)",
+    "address": "경상북도 울릉군 서면 태하리",
+    "phone": "",
+    "latitude": "37.5141509513",
+    "longitude": "130.7947382376",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3520432_image2_1.jpg",
+    "category": "동굴"
+  },
+  {
+    "id": "3006641",
+    "title": "뒹굴동굴",
+    "address": "광주광역시 남구 천변좌로 410 (사동)",
+    "phone": "",
+    "latitude": "35.1430058268",
+    "longitude": "126.9152551638",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3516468_image2_1.jpg",
+    "category": "동굴",
+    "original_category": "유적지사적지"
+  },
+  {
+    "id": "1627373",
+    "title": "제천 점말동굴유적",
+    "address": "충청북도 제천시 송학면 포전리",
+    "phone": "",
+    "latitude": "37.1958144541",
+    "longitude": "128.2249966661",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3062658_image2_1.JPG",
+    "category": "동굴",
+    "original_category": "유적지사적지"
+  }
+]

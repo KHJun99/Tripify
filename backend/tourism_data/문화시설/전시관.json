@@ -1,0 +1,5026 @@
+[
+  {
+    "id": "3032945",
+    "title": "안동포전시관",
+    "address": "경상북도 안동시 금소길 341-12",
+    "phone": "",
+    "latitude": "36.5041721496",
+    "longitude": "128.8502388031",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3032921_image2_1.JPG",
+    "category": "전시관",
+    "original_category": "박물관"
+  },
+  {
+    "id": "2795496",
+    "title": "평택농업전시관",
+    "address": "경기도 평택시 오성면 청오로 33-58",
+    "phone": "",
+    "latitude": "37.0143904762",
+    "longitude": "126.9808612289",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3541079_image2_1.jpg",
+    "category": "전시관",
+    "original_category": "박물관"
+  },
+  {
+    "id": "130343",
+    "title": "지리산 빨치산토벌 전시관",
+    "address": "경상남도 산청군 시천면 지리산대로 536",
+    "phone": "",
+    "latitude": "35.2923173273",
+    "longitude": "127.7541051272",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3538366_image2_1.jpg",
+    "category": "전시관",
+    "original_category": "기념관"
+  },
+  {
+    "id": "3539725",
+    "title": "갈골한과체험전시관",
+    "address": "강원특별자치도 강릉시 사천면 중앙서로 62",
+    "phone": "",
+    "latitude": "37.8245592109",
+    "longitude": "128.8433165066",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3008288",
+    "title": "감만창의 문화촌",
+    "address": "부산광역시 남구 우암로 84-1",
+    "phone": "",
+    "latitude": "35.1184857691",
+    "longitude": "129.0813547668",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3008261_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2715994",
+    "title": "강문화전시관",
+    "address": "경상북도 예천군 풍양면 삼강리길 53-23",
+    "phone": "",
+    "latitude": "36.5636051435",
+    "longitude": "128.3041828373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3572586_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3304115",
+    "title": "강서별빛우주과학관",
+    "address": "서울특별시 강서구 금낭화로 178 (방화동)",
+    "phone": "",
+    "latitude": "37.5810885136",
+    "longitude": "126.8146355542",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3304103_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3386124",
+    "title": "강서아트리움",
+    "address": "서울특별시 강서구 가로공원로 195 (화곡동)",
+    "phone": "",
+    "latitude": "37.5376050905",
+    "longitude": "126.8376513443",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3386169_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130090",
+    "title": "강암서예관",
+    "address": "전북특별자치도 전주시 완산구 전주천동로 74",
+    "phone": "",
+    "latitude": "35.8112813788",
+    "longitude": "127.1524920198",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/1605494_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130733",
+    "title": "강화 화문석 문화관",
+    "address": "인천광역시 강화군 송해면 장정양오길 413",
+    "phone": "",
+    "latitude": "37.7957598993",
+    "longitude": "126.4547735697",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3528515_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3340253",
+    "title": "강화천문과학관",
+    "address": "인천광역시 강화군 하점면 강화서로 915-1",
+    "phone": "",
+    "latitude": "37.7735030392",
+    "longitude": "126.3908883872",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3340232_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1927047",
+    "title": "객주문학관",
+    "address": "경상북도 청송군 진보면 청송로 6359",
+    "phone": "",
+    "latitude": "36.5227236359",
+    "longitude": "129.0398881304",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3560889_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2714515",
+    "title": "거가대교 홍보전시관",
+    "address": "부산광역시 강서구 거가대로 2571 (천성동)",
+    "phone": "",
+    "latitude": "35.0229442663",
+    "longitude": "128.8101226211",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3491895_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2761465",
+    "title": "거북선전시관",
+    "address": "경상남도 남해군 설천면 노량리",
+    "phone": "",
+    "latitude": "34.9420366295",
+    "longitude": "127.8751202708",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3561899_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2001650",
+    "title": "거제씨월드",
+    "address": "경상남도 거제시 일운면 지세포해안로 15",
+    "phone": "",
+    "latitude": "34.8358937646",
+    "longitude": "128.7014926255",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3520897_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1622179",
+    "title": "거제어촌민속전시관",
+    "address": "경상남도 거제시 일운면 지세포해안로 41",
+    "phone": "",
+    "latitude": "34.8337301246",
+    "longitude": "128.7019093134",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3514952_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1576971",
+    "title": "거창사건역사교육관",
+    "address": "경상남도 거창군 신원면 신차로 2924",
+    "phone": "",
+    "latitude": "35.5557433836",
+    "longitude": "127.9248970117",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3476181_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3000522",
+    "title": "거창월성우주창의과학관",
+    "address": "경상남도 거창군 덕유월성로 1312-96 거창군월성청소년수련원",
+    "phone": "",
+    "latitude": "35.7625164353",
+    "longitude": "127.7263062631",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3571296_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3081843",
+    "title": "경기도업사이클플라자",
+    "address": "경기도 수원시 권선구 서둔로 166 (서둔동)",
+    "phone": "",
+    "latitude": "37.2665807612",
+    "longitude": "126.9811903187",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3081839_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3408892",
+    "title": "경기도해양수산자원연구소민물고기생태학습관",
+    "address": "경기도 양평군 용문면 상광길 23-2",
+    "phone": "",
+    "latitude": "37.5117531608",
+    "longitude": "127.6384737204",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3408849_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3349647",
+    "title": "경북 동해안 지질공원센터",
+    "address": "경상북도 울진군 근남면 성류굴로 187",
+    "phone": "",
+    "latitude": "36.9601691590",
+    "longitude": "129.3804504690",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3349653_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1622558",
+    "title": "경상남도교육청 과학교육원",
+    "address": "경상남도 진주시 진성면 진의로 178-35",
+    "phone": "",
+    "latitude": "35.2015359136",
+    "longitude": "128.2260244086",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3538234_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130222",
+    "title": "경상북도교육청과학원",
+    "address": "경상북도 포항시 북구 우미길 93",
+    "phone": "",
+    "latitude": "36.0467002981",
+    "longitude": "129.3523466567",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3482223_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3015385",
+    "title": "경전철 홍보관",
+    "address": "부산광역시 기장군 철마면 반송로 1180",
+    "phone": "",
+    "latitude": "35.2435207690",
+    "longitude": "129.1774735264",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3015366_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3006834",
+    "title": "경주문화관 1918",
+    "address": "경상북도 경주시 원화로 266 경주역",
+    "phone": "",
+    "latitude": "35.8443511604",
+    "longitude": "129.2174642948",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3006813_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3015483",
+    "title": "고리원자력홍보관",
+    "address": "부산광역시 기장군 장안읍 해맞이로 454",
+    "phone": "",
+    "latitude": "35.3299325326",
+    "longitude": "129.2850589899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3015462_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2665293",
+    "title": "고모역복합문화공간",
+    "address": "대구광역시 수성구 고모로 208",
+    "phone": "",
+    "latitude": "35.8583006239",
+    "longitude": "128.6786417851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3526711_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2795251",
+    "title": "고복수음악관",
+    "address": "울산광역시 중구 중앙1길 9",
+    "phone": "",
+    "latitude": "35.5563549816",
+    "longitude": "129.3197857306",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/2795254_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2663316",
+    "title": "고성생태학습관",
+    "address": "경상남도 고성군 고성읍 동해로 115",
+    "phone": "",
+    "latitude": "34.9838013458",
+    "longitude": "128.3437059880",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3537922_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3366619",
+    "title": "고아리 벽화고분 모형관",
+    "address": "경상북도 고령군 대가야읍 벽화길 104",
+    "phone": "",
+    "latitude": "35.7170230367",
+    "longitude": "128.2712982308",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3580733_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1105623",
+    "title": "고양 선인장전시관",
+    "address": "경기도 고양시 일산동구 호수로 731 (장항동)",
+    "phone": "",
+    "latitude": "37.6645195058",
+    "longitude": "126.7604631520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3077038_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "916103",
+    "title": "고양 화장실전시관",
+    "address": "경기도 고양시 일산동구 호수로 595 (장항동)",
+    "phone": "",
+    "latitude": "37.6553373919",
+    "longitude": "126.7689209714",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3513626_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2744492",
+    "title": "고양꽃전시관",
+    "address": "경기도 고양시 일산동구 호수로 595 (장항동)",
+    "phone": "",
+    "latitude": "37.6553373919",
+    "longitude": "126.7689209714",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3513635_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2638440",
+    "title": "고흐의정원",
+    "address": "제주특별자치도 서귀포시 삼달신풍로 126-5",
+    "phone": "",
+    "latitude": "33.3734383381",
+    "longitude": "126.8441009842",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3581334",
+    "title": "고흥갑재민속전시관",
+    "address": "전라남도 고흥군 두원면 두원운석길 9",
+    "phone": "",
+    "latitude": "34.6521649872",
+    "longitude": "127.3126518851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3581306_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3351638",
+    "title": "곡성기차마을 생태학습관",
+    "address": "전라남도 곡성군 오곡면 기차마을로 252-16",
+    "phone": "",
+    "latitude": "35.2812191216",
+    "longitude": "127.3065559809",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3385368_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "129549",
+    "title": "곤충생태관",
+    "address": "경기도 구리시 검배로 200 (수택동)",
+    "phone": "031-550-2586, 2903",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3430689_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3011031",
+    "title": "곤충테마여행",
+    "address": "경기도 포천시 가산면 시우동2길 44-5",
+    "phone": "",
+    "latitude": "37.8322518354",
+    "longitude": "127.1726290380",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3003745_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "129004",
+    "title": "공지천 조각공원",
+    "address": "강원특별자치도 춘천시 옛경춘로 880 (근화동)",
+    "phone": "",
+    "latitude": "37.8732986704",
+    "longitude": "127.7126813699",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3072531_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2606224",
+    "title": "공평도시유적전시관",
+    "address": "서울특별시 종로구 우정국로 26",
+    "phone": "",
+    "latitude": "37.5716231906",
+    "longitude": "126.9835704148",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3514018_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3033137",
+    "title": "광교어린이천문대",
+    "address": "경기도 수원시 영통구 웰빙타운로36번길 46-248 (이의동)",
+    "phone": "",
+    "latitude": "37.3120434732",
+    "longitude": "127.0546073819",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3002272_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3014503",
+    "title": "광안리관광안내소",
+    "address": "부산광역시 수영구 광안동",
+    "phone": "",
+    "latitude": "35.1538130576",
+    "longitude": "129.1185477876",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2733394",
+    "title": "광양 역사문화관",
+    "address": "전라남도 광양시 광양읍 매천로 829",
+    "phone": "",
+    "latitude": "34.9758111359",
+    "longitude": "127.5860086407",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2782651",
+    "title": "광양매화문화관",
+    "address": "전라남도 광양시 다압면 지막1길 21",
+    "phone": "",
+    "latitude": "35.0767465293",
+    "longitude": "127.7181222254",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3345104_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2732668",
+    "title": "광양예술창고",
+    "address": "전라남도 광양시 광양읍 순광로 664",
+    "phone": "",
+    "latitude": "34.9682620238",
+    "longitude": "127.5883252970",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3552400_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2733545",
+    "title": "광주 전통문화관",
+    "address": "광주광역시 동구 의재로 222",
+    "phone": "",
+    "latitude": "35.1336797291",
+    "longitude": "126.9523771168",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/2733546_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2779116",
+    "title": "광주비엔날레전시관",
+    "address": "광주광역시 북구 비엔날레로 111",
+    "phone": "",
+    "latitude": "35.1826203741",
+    "longitude": "126.8902591590",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3351379_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3442399",
+    "title": "광주에너지파크 해담마루",
+    "address": "광주광역시 서구 상무공원로 131 (치평동)",
+    "phone": "",
+    "latitude": "35.1562864272",
+    "longitude": "126.8422057355",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3442402_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3434294",
+    "title": "괴강토종어류체험관",
+    "address": "충청북도 괴산군 괴산읍 쏘가리2길 31",
+    "phone": "",
+    "latitude": "36.8103123838",
+    "longitude": "127.8184303667",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3434229_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2613463",
+    "title": "구 공주읍사무소 (공주역사영상관)",
+    "address": "충청남도 공주시 우체국길 8 (반죽동)",
+    "phone": "",
+    "latitude": "36.4544740602",
+    "longitude": "127.1219721109",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3390706_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3014532",
+    "title": "구례군 농업기술센터 식물표본전시관",
+    "address": "전라남도 구례군 구례읍 동산1길 29",
+    "phone": "",
+    "latitude": "35.1970840553",
+    "longitude": "127.4605862218",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3014523_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2591885",
+    "title": "구로꿈나무장난감나라 오류점",
+    "address": "서울특별시 구로구 경인로20가길 38 (오류동)",
+    "phone": "",
+    "latitude": "37.4954101430",
+    "longitude": "126.8460489851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3540334_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2603493",
+    "title": "구룡포 근대문화역사관",
+    "address": "경상북도 포항시 남구 구룡포읍 구룡포길 153-1",
+    "phone": "",
+    "latitude": "35.9905828688",
+    "longitude": "129.5616299362",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3009794_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2660046",
+    "title": "구룡포과메기문화관",
+    "address": "경상북도 포항시 남구 구룡포읍 구룡포길117번길 28-8",
+    "phone": "",
+    "latitude": "35.9927826242",
+    "longitude": "129.5618298551",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3007378",
+    "title": "구리어린이천문대",
+    "address": "경기도 구리시 동구릉로 427 (사노동)",
+    "phone": "",
+    "latitude": "37.6356380157",
+    "longitude": "127.1401598782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3000717_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2736727",
+    "title": "구미과학관",
+    "address": "경상북도 구미시 3공단1로 219-1",
+    "phone": "",
+    "latitude": "36.1023178242",
+    "longitude": "128.4004984075",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3344613_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130097",
+    "title": "구미시립민속관",
+    "address": "경상북도 구미시 산책길 51",
+    "phone": "",
+    "latitude": "36.1235085753",
+    "longitude": "128.3305901159",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/1061451_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2514027",
+    "title": "구상문학관",
+    "address": "경상북도 칠곡군 왜관읍 구상길 191",
+    "phone": "",
+    "latitude": "35.9839839312",
+    "longitude": "128.3947133261",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3488825_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3394562",
+    "title": "국가유산체험센터",
+    "address": "서울특별시 송파구 올림픽로 240 (잠실동)",
+    "phone": "",
+    "latitude": "37.5123821225",
+    "longitude": "127.0976311526",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3503043_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3580732",
+    "title": "국립가야역사문화센터",
+    "address": "경상남도 김해시 대청로 45 (관동동)",
+    "phone": "",
+    "latitude": "35.1793432071",
+    "longitude": "128.7988749304",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3580705_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3574598",
+    "title": "국립강원전문과학관",
+    "address": "강원특별자치도 원주시 북원로 2790 (태장동)",
+    "phone": "",
+    "latitude": "37.3914756913",
+    "longitude": "127.9533792948",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3574624_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "660722",
+    "title": "국립과천과학관",
+    "address": "경기도 과천시 상하벌로 110 (과천동)",
+    "phone": "",
+    "latitude": "37.4408665329",
+    "longitude": "127.0047138503",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3492577_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2033294",
+    "title": "국립광주과학관",
+    "address": "광주광역시 북구 첨단과기로 235",
+    "phone": "",
+    "latitude": "35.2298976827",
+    "longitude": "126.8498782136",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3492768_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3392763",
+    "title": "국립극장 무대예술지원센터",
+    "address": "경기도 파주시 탄현면 헤이리로 16",
+    "phone": "",
+    "latitude": "37.7833378215",
+    "longitude": "126.6946991484",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3392787_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2037694",
+    "title": "국립낙동강생물자원관",
+    "address": "경상북도 상주시 도남2길 137 (도남동)",
+    "phone": "",
+    "latitude": "36.4458843813",
+    "longitude": "128.2567987281",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3573537_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1956986",
+    "title": "국립대구과학관",
+    "address": "대구광역시 달성군 테크노대로6길 20 국립대구과학관",
+    "phone": "",
+    "latitude": "35.6862439572",
+    "longitude": "128.4664457762",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3025604_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2488233",
+    "title": "국립대구기상과학관",
+    "address": "대구광역시 동구 효동로2길 10 (효목동)",
+    "phone": "",
+    "latitude": "35.8790199813",
+    "longitude": "128.6505242379",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3352874",
+    "title": "국립무형유산원",
+    "address": "전북특별자치도 전주시 완산구 서학로 95 (동서학동)",
+    "phone": "",
+    "latitude": "35.8099038819",
+    "longitude": "127.1596636399",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3535598_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2654508",
+    "title": "국립밀양기상과학관",
+    "address": "경상남도 밀양시 밀양대공원로 84 (교동)",
+    "phone": "",
+    "latitude": "35.5021840039",
+    "longitude": "128.7606583410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3514984_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2385666",
+    "title": "국립부산과학관",
+    "address": "부산광역시 기장군 기장읍 동부산관광6로 59",
+    "phone": "",
+    "latitude": "35.2046146711",
+    "longitude": "129.2127159794",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3511021_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "852304",
+    "title": "국립생물자원관",
+    "address": "인천광역시 서구 환경로28번길 42 (경서동)",
+    "phone": "",
+    "latitude": "37.5626320203",
+    "longitude": "126.6408852687",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3527262_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130606",
+    "title": "국립수산과학관",
+    "address": "부산광역시 기장군 기장읍 기장해안로 216",
+    "phone": "",
+    "latitude": "35.1911580230",
+    "longitude": "129.2223127383",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3507478_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2009775",
+    "title": "국립아시아문화전당",
+    "address": "광주광역시 동구 문화전당로 38 (광산동)",
+    "phone": "",
+    "latitude": "35.1460861028",
+    "longitude": "126.9192936186",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3083359_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2545920",
+    "title": "국립어린이과학관",
+    "address": "서울특별시 종로구 창경궁로 215 (와룡동)",
+    "phone": "",
+    "latitude": "37.5818277974",
+    "longitude": "126.9967994757",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/2545812_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130963",
+    "title": "국립여성사전시관",
+    "address": "경기도 고양시 덕양구 화중로104번길 50 (화정동)",
+    "phone": "",
+    "latitude": "37.6358685979",
+    "longitude": "126.8340489047",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3527701_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3581398",
+    "title": "국립여수해양기상과학관",
+    "address": "전라남도 여수시 오동도로 61-9 (공화동)",
+    "phone": "",
+    "latitude": "34.7473951115",
+    "longitude": "127.7473308868",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3581376_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2551424",
+    "title": "국립일제강제동원역사관",
+    "address": "부산광역시 남구 홍곡로320번길 100",
+    "phone": "",
+    "latitude": "35.1243241989",
+    "longitude": "129.0918731368",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3530178_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2655877",
+    "title": "국립전북기상과학관",
+    "address": "전북특별자치도 정읍시 서부산업도로 168-43 (상평동)",
+    "phone": "",
+    "latitude": "35.5641012876",
+    "longitude": "126.8381291387",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3503330_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "129785",
+    "title": "국립중앙과학관",
+    "address": "대전광역시 유성구 대덕대로 481 (구성동)",
+    "phone": "",
+    "latitude": "36.3760014821",
+    "longitude": "127.3790706436",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2766538",
+    "title": "국립충주기상과학관",
+    "address": "충청북도 충주시 번영대로 270-10 (연수동)",
+    "phone": "",
+    "latitude": "36.9857362806",
+    "longitude": "127.9487886761",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/2767263_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2638444",
+    "title": "국립태안해양유물전시관",
+    "address": "충청남도 태안군 근흥면 신진대교길 94-33",
+    "phone": "",
+    "latitude": "36.6772622281",
+    "longitude": "126.1514203689",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/2639444_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2014616",
+    "title": "국립해양생물자원관",
+    "address": "충청남도 서천군 장항읍 장산로101번길 75",
+    "phone": "",
+    "latitude": "36.0172273716",
+    "longitude": "126.6698297373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3098140_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "129896",
+    "title": "국립해양유산연구소",
+    "address": "전라남도 목포시 남농로 136",
+    "phone": "",
+    "latitude": "34.7918344290",
+    "longitude": "126.4216879560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3533710_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3352523",
+    "title": "국립호남권생물자원관",
+    "address": "전라남도 목포시 고하도안길 99 (달동)",
+    "phone": "",
+    "latitude": "34.7678639705",
+    "longitude": "126.3645296922",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3385430_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1624871",
+    "title": "국악의 성지",
+    "address": "전북특별자치도 남원시 운봉읍 비전길 69",
+    "phone": "",
+    "latitude": "35.4604645134",
+    "longitude": "127.5676310606",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2764516",
+    "title": "국토발전전시관",
+    "address": "서울특별시 중구 정동길 18 (정동)",
+    "phone": "",
+    "latitude": "37.5668623905",
+    "longitude": "126.9700967775",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3081450_image2_1.jpeg",
+    "category": "전시관"
+  },
+  {
+    "id": "3547543",
+    "title": "군산항1981",
+    "address": "전북특별자치도 군산시 내항1길 12 (장미동)",
+    "phone": "",
+    "latitude": "35.9890675184",
+    "longitude": "126.7178039510",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3547535_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3390048",
+    "title": "굽네 플레이타운",
+    "address": "서울특별시 마포구 잔다리로2길 23 (서교동)",
+    "phone": "",
+    "latitude": "37.5517604926",
+    "longitude": "126.9212127711",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3390056_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3043788",
+    "title": "궁산 땅굴 역사전시관",
+    "address": "서울특별시 강서구 양천로49길 106 (마곡동)",
+    "phone": "",
+    "latitude": "37.5727204654",
+    "longitude": "126.8383808453",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3045139_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3081169",
+    "title": "그라운드시소 명동",
+    "address": "서울특별시 중구 남대문로 73 (남대문로2가)",
+    "phone": "",
+    "latitude": "37.5642573461",
+    "longitude": "126.9816707967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3081168_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2717347",
+    "title": "그라운드시소 서촌",
+    "address": "서울특별시 종로구 자하문로6길 18-8 (통의동)",
+    "phone": "",
+    "latitude": "37.5778944928",
+    "longitude": "126.9729323181",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3526479_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2366217",
+    "title": "근대문화체험관 계산예가",
+    "address": "대구광역시 중구 서성로 6-1",
+    "phone": "",
+    "latitude": "35.8671840532",
+    "longitude": "128.5878634206",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3510102_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2720024",
+    "title": "금강생태과학체험장",
+    "address": "충청남도 금산군 제원면 닥실길 16",
+    "phone": "",
+    "latitude": "36.1051052351",
+    "longitude": "127.5686971651",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3334313_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2714800",
+    "title": "기후변화홍보관",
+    "address": "강원특별자치도 원주시 행구로 362",
+    "phone": "",
+    "latitude": "37.3424349430",
+    "longitude": "127.9967462599",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3533840_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3057862",
+    "title": "김수영문학관",
+    "address": "서울특별시 도봉구 해등로32길 80 (방학동)",
+    "phone": "",
+    "latitude": "37.6599775296",
+    "longitude": "127.0238170123",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3057829_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2719828",
+    "title": "김영삼대통령 기록전시관",
+    "address": "경상남도 거제시 장목면 옥포대첩로 743",
+    "phone": "",
+    "latitude": "34.9314500054",
+    "longitude": "128.7154888640",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3515065_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1000981",
+    "title": "김춘수 유품전시관",
+    "address": "경상남도 통영시 해평5길 142-16",
+    "phone": "",
+    "latitude": "34.8333722569",
+    "longitude": "128.4161841816",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3556706_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2674680",
+    "title": "김포평화문화관",
+    "address": "경기도 김포시 월곶면 용강로13번길 38",
+    "phone": "",
+    "latitude": "37.7209509632",
+    "longitude": "126.5556803032",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3467385_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3085026",
+    "title": "김현관 북촌펜드로잉",
+    "address": "서울특별시 종로구 삼청로4길 26 (삼청동)",
+    "phone": "",
+    "latitude": "37.5826302184",
+    "longitude": "126.9821341228",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3084506_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2633947",
+    "title": "김홍신 문학관",
+    "address": "충청남도 논산시 중앙로 146-23",
+    "phone": "",
+    "latitude": "36.1827382381",
+    "longitude": "127.1071251608",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3577039_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2864368",
+    "title": "깨어있는시민 문화체험전시관",
+    "address": "경상남도 김해시 봉하로 132",
+    "phone": "",
+    "latitude": "35.3139498233",
+    "longitude": "128.7717041973",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/2864334_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3337734",
+    "title": "꿈돌이 하우스",
+    "address": "대전광역시 동구 중앙로203번길 3 (중동)",
+    "phone": "",
+    "latitude": "36.3310325580",
+    "longitude": "127.4315143967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3430156_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2751074",
+    "title": "나태주풀꽃문학관",
+    "address": "충청남도 공주시 봉황로 85-12",
+    "phone": "",
+    "latitude": "36.4537074444",
+    "longitude": "127.1198695425",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2756603",
+    "title": "낙동강역사이야기관",
+    "address": "경상북도 상주시 낙동면 낙동1길 116",
+    "phone": "",
+    "latitude": "36.3664277390",
+    "longitude": "128.3087602398",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3579370_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2616195",
+    "title": "낙죽장도 전시관",
+    "address": "전라남도 곡성군 목사동면 공북길 11-19",
+    "phone": "",
+    "latitude": "35.1250971166",
+    "longitude": "127.2639609458",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "229910",
+    "title": "남산골공원서울천년타임캡슐광장",
+    "address": "서울특별시 중구 퇴계로34길 28 (필동2가)",
+    "phone": "",
+    "latitude": "37.5597775194",
+    "longitude": "126.9932865315",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3528440_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2507011",
+    "title": "남양주 어린이비전센터",
+    "address": "경기도 남양주시 진접읍 해밀예당1로 96",
+    "phone": "",
+    "latitude": "37.7171489044",
+    "longitude": "127.1910640109",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3467404_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2658207",
+    "title": "남원 백두대간전시관",
+    "address": "전북특별자치도 남원시 운봉읍 주촌리",
+    "phone": "",
+    "latitude": "35.3977400005",
+    "longitude": "127.5076185514",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3080783_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2660398",
+    "title": "남원다움관",
+    "address": "전북특별자치도 남원시 검멀1길 14",
+    "phone": "",
+    "latitude": "35.4037537154",
+    "longitude": "127.3770243774",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3351493_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2732578",
+    "title": "남해각",
+    "address": "경상남도 남해군 설천면 남해대로 4216",
+    "phone": "",
+    "latitude": "34.9407922785",
+    "longitude": "127.8724733123",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3553615_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1992063",
+    "title": "남해파독전시관",
+    "address": "경상남도 남해군 삼동면 독일로 89-7",
+    "phone": "",
+    "latitude": "34.7997832141",
+    "longitude": "128.0384291090",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3553661_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130234",
+    "title": "내장산 탐방안내소",
+    "address": "전북특별자치도 정읍시 내장산로 1207",
+    "phone": "",
+    "latitude": "35.4879027809",
+    "longitude": "126.9074888076",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3082340_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3060760",
+    "title": "넥스페리움",
+    "address": "대전광역시 유성구 엑스포로 1 (도룡동)",
+    "phone": "",
+    "latitude": "36.3751488554",
+    "longitude": "127.3820815082",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3351080_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2812255",
+    "title": "노사평화의 전당",
+    "address": "대구광역시 달성군 구지면 국가산단대로52길 6",
+    "phone": "",
+    "latitude": "35.6527163436",
+    "longitude": "128.4200285561",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/2814778_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2745731",
+    "title": "노원천문우주과학관",
+    "address": "서울특별시 노원구 동일로205길 13 (중계동)",
+    "phone": "",
+    "latitude": "37.6407999513",
+    "longitude": "127.0652332268",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3463124_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1113463",
+    "title": "노작홍사용문학관",
+    "address": "경기도 화성시 노작로 206",
+    "phone": "",
+    "latitude": "37.2056145088",
+    "longitude": "127.0758834310",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3528827_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130717",
+    "title": "농경유물전시관",
+    "address": "경기도 파주시 통일로 600 (아동동)",
+    "phone": "",
+    "latitude": "37.7638307788",
+    "longitude": "126.7952654950",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3540617_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130712",
+    "title": "농업과학관",
+    "address": "전북특별자치도 전주시 덕진구 농생명로 300 (중동)",
+    "phone": "",
+    "latitude": "35.8304192368",
+    "longitude": "127.0583249029",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3364372_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2787144",
+    "title": "누들플랫폼",
+    "address": "인천광역시 중구 신포로27번길 36 (관동2가)",
+    "phone": "",
+    "latitude": "37.4725699657",
+    "longitude": "126.6235365804",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3379462_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "231970",
+    "title": "능강솟대문화공간",
+    "address": "충청북도 제천시 수산면 옥순봉로 1100",
+    "phone": "",
+    "latitude": "36.9817136347",
+    "longitude": "128.2006773044",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3572044_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3532282",
+    "title": "단오타운전시관",
+    "address": "강원특별자치도 강릉시 단오장길 1 (노암동)",
+    "phone": "",
+    "latitude": "37.7482551607",
+    "longitude": "128.8950697583",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "130667",
+    "title": "단종역사관",
+    "address": "강원특별자치도 영월군 영월읍 단종로 190",
+    "phone": "",
+    "latitude": "37.1951799631",
+    "longitude": "128.4546816177",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3557202_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1761643",
+    "title": "달성 한일우호관",
+    "address": "대구광역시 달성군 가창면 우록길 206",
+    "phone": "",
+    "latitude": "35.7233680767",
+    "longitude": "128.6471510842",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3541655_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2638472",
+    "title": "달성습지생태학습관",
+    "address": "대구광역시 달성군 화원읍 구라1길 88",
+    "phone": "",
+    "latitude": "35.8167268005",
+    "longitude": "128.4870792548",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3541635_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2742100",
+    "title": "담빛예술창고",
+    "address": "전라남도 담양군 담양읍 객사7길 75",
+    "phone": "",
+    "latitude": "35.3233700980",
+    "longitude": "126.9931826132",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3368387_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2823558",
+    "title": "대구 환경사랑홍보교육관",
+    "address": "대구광역시 달서구 성서공단로 40",
+    "phone": "",
+    "latitude": "35.8345247894",
+    "longitude": "128.4873009651",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/2823547_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1251806",
+    "title": "대구근대역사관",
+    "address": "대구광역시 중구 경상감영길 67 (포정동)",
+    "phone": "",
+    "latitude": "35.8718391430",
+    "longitude": "128.5911879980",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3532905_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1186650",
+    "title": "대나무 건강나라",
+    "address": "전라남도 담양군 금성면 원율길 12",
+    "phone": "",
+    "latitude": "35.3525118943",
+    "longitude": "127.0312368377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3571436_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2994530",
+    "title": "대불호텔전시관",
+    "address": "인천광역시 중구 신포로23번길 101",
+    "phone": "",
+    "latitude": "37.4736114488",
+    "longitude": "126.6199896528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/2999549_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3377118",
+    "title": "대전 수학문화관",
+    "address": "대전광역시 유성구 장대로 99-1 (장대동)",
+    "phone": "",
+    "latitude": "36.3630882592",
+    "longitude": "127.3332723136",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3377357_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1964617",
+    "title": "대전근현대사전시관",
+    "address": "대전광역시 중구 중앙로 101",
+    "phone": "",
+    "latitude": "36.3267106425",
+    "longitude": "127.4209543468",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3512218_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2733503",
+    "title": "대전문학관",
+    "address": "대전광역시 동구 송촌남로11번길 116",
+    "phone": "",
+    "latitude": "36.3566825048",
+    "longitude": "127.4372742959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3565147_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3038994",
+    "title": "대전예술가의집",
+    "address": "대전광역시 중구 중앙로 32 (문화동)",
+    "phone": "",
+    "latitude": "36.3224999270",
+    "longitude": "127.4161160046",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3038993_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2605913",
+    "title": "대전전통나래관",
+    "address": "대전광역시 동구 철갑2길 2 (소제동)",
+    "phone": "",
+    "latitude": "36.3350238727",
+    "longitude": "127.4374054282",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3071283_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "736422",
+    "title": "대청호자연생태관",
+    "address": "대전광역시 동구 천개동로 41",
+    "phone": "",
+    "latitude": "36.3733117559",
+    "longitude": "127.4708375091",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/2605601_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2709995",
+    "title": "대통령기록전시관",
+    "address": "세종특별자치시 다솜로 250 (어진동)",
+    "phone": "",
+    "latitude": "36.5017018737",
+    "longitude": "127.2732655939",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3505142_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2753089",
+    "title": "더서울라이티움",
+    "address": "서울특별시 성동구 서울숲2길 32-14 (성수동1가, 갤러리아 포레)",
+    "phone": "",
+    "latitude": "37.5455245178",
+    "longitude": "127.0432601616",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3401437_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2666750",
+    "title": "도계유리나라&나무나라",
+    "address": "강원특별자치도 삼척시 도계읍 강원남부로 893-36",
+    "phone": "",
+    "latitude": "37.1937633978",
+    "longitude": "129.0322021888",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3503896_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3017112",
+    "title": "동래읍성 임진왜란 역사관",
+    "address": "부산광역시 동래구 충렬대로 지하223 (수안동)",
+    "phone": "",
+    "latitude": "35.2018764786",
+    "longitude": "129.0839244809",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3017082_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3032708",
+    "title": "동리목월문학관",
+    "address": "경상북도 경주시 불국로 406-3 동리목월문학관",
+    "phone": "",
+    "latitude": "35.7858682885",
+    "longitude": "129.3335891263",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3454039_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130774",
+    "title": "동삼동패총전시관",
+    "address": "부산광역시 영도구 태종로 729",
+    "phone": "",
+    "latitude": "35.0712160269",
+    "longitude": "129.0796423170",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3031985_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2978178",
+    "title": "딜라이트 담양",
+    "address": "전라남도 담양군 월산면 화방송정길 21-14",
+    "phone": "",
+    "latitude": "35.3369956877",
+    "longitude": "126.9552022981",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/2978163_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2707460",
+    "title": "딜쿠샤",
+    "address": "서울특별시 종로구 사직로2길 17 (행촌동)",
+    "phone": "",
+    "latitude": "37.5730893265",
+    "longitude": "126.9634833153",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3573161_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3075640",
+    "title": "라이트룸 서울(Lightroom Seoul)",
+    "address": "서울특별시 강동구 아리수로61길 103 (고덕동)",
+    "phone": "",
+    "latitude": "37.5656046263",
+    "longitude": "127.1478306247",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3075616_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2615319",
+    "title": "류방택천문기상과학관",
+    "address": "충청남도 서산시 인지면 무학로 1353-4",
+    "phone": "",
+    "latitude": "36.7274220205",
+    "longitude": "126.4131814602",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3566923_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2645244",
+    "title": "류홍쥔 세계민족악기전시관",
+    "address": "강원특별자치도 춘천시 남산면 남이섬길 1",
+    "phone": "",
+    "latitude": "37.7963208193",
+    "longitude": "127.5255090138",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3561545_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3352020",
+    "title": "르 스페이스",
+    "address": "인천광역시 중구 공항문화로 127 (운서동)",
+    "phone": "",
+    "latitude": "37.4657083226",
+    "longitude": "126.3893498220",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3351976_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1181087",
+    "title": "마애선사유적전시관",
+    "address": "경상북도 안동시 풍산읍 풍산단호로 388",
+    "phone": "",
+    "latitude": "36.5524450953",
+    "longitude": "128.5909159791",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3402658_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2733832",
+    "title": "마크트할레",
+    "address": "경기도 고양시 일산동구 중앙로 1036 (백석동)",
+    "phone": "",
+    "latitude": "37.6432308377",
+    "longitude": "126.7896749719",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/2735082_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3017067",
+    "title": "망양로 산복도로 전시관",
+    "address": "부산광역시 동구 망양로 488 (초량동)",
+    "phone": "",
+    "latitude": "35.1177127465",
+    "longitude": "129.0332367504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3017046_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2708333",
+    "title": "명량대첩해전사 기념전시관",
+    "address": "전라남도 해남군 문내면 관광레저로 12",
+    "phone": "",
+    "latitude": "34.5733544172",
+    "longitude": "126.3108224049",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3081760_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1200255",
+    "title": "명지산생태전시관",
+    "address": "경기도 가평군 북면 가화로 2089-42",
+    "phone": "",
+    "latitude": "37.9361010765",
+    "longitude": "127.4879416634",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3503974_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2758461",
+    "title": "모나밸리",
+    "address": "충청남도 아산시 순천향로 624",
+    "phone": "",
+    "latitude": "36.7507877360",
+    "longitude": "126.9923063020",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3353777_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130432",
+    "title": "목면시배유지",
+    "address": "경상남도 산청군 단성면 목화로 887",
+    "phone": "",
+    "latitude": "35.2897101091",
+    "longitude": "127.9580344815",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/2776426_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1586889",
+    "title": "목우헌",
+    "address": "전북특별자치도 전주시 완산구 기린대로 88",
+    "phone": "",
+    "latitude": "35.8170946503",
+    "longitude": "127.1550138656",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3537000_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2536634",
+    "title": "목재문화·자연사체험관",
+    "address": "충청남도 청양군 대치면 칠갑산로 704-21",
+    "phone": "",
+    "latitude": "36.4389210948",
+    "longitude": "126.8504580215",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3334936_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2607311",
+    "title": "목포근대역사관 1관",
+    "address": "전라남도 목포시 영산로29번길 6",
+    "phone": "",
+    "latitude": "34.7875870369",
+    "longitude": "126.3820943332",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3531478_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1908176",
+    "title": "목포근대역사관 2관",
+    "address": "전라남도 목포시 번화로 18",
+    "phone": "",
+    "latitude": "34.7860344247",
+    "longitude": "126.3815027561",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3531504_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1908192",
+    "title": "목포어린이바다과학관",
+    "address": "전라남도 목포시 삼학로92번길 98",
+    "phone": "",
+    "latitude": "34.7820405508",
+    "longitude": "126.3888966436",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3534298_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3081640",
+    "title": "몽환",
+    "address": "경기도 안산시 단원구 원포공원1로 59 (초지동)",
+    "phone": "031-411-1004",
+    "latitude": "37.3025457966",
+    "longitude": "126.8112186481",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3081596_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3376308",
+    "title": "무주 반디별 천문과학관",
+    "address": "전북특별자치도 무주군 설천면 무설로 1324",
+    "phone": "",
+    "latitude": "36.0129274847",
+    "longitude": "127.7603909462",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3377612_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130909",
+    "title": "무주양수홍보관",
+    "address": "전북특별자치도 무주군 적상면 괴목로 788",
+    "phone": "",
+    "latitude": "35.9668985309",
+    "longitude": "127.7124714454",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3583570_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782560",
+    "title": "무흘구곡전시관",
+    "address": "경상북도 김천시 증산면 수도길 25",
+    "phone": "",
+    "latitude": "35.8989173383",
+    "longitude": "128.0207431821",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3402655_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3521859",
+    "title": "문화공장 방어진",
+    "address": "울산광역시 동구 중진2길 5 (방어동)",
+    "phone": "",
+    "latitude": "35.4837151136",
+    "longitude": "129.4242953344",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3521827_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2930851",
+    "title": "문화제조창",
+    "address": "충청북도 청주시 청원구 상당로 314 문화제조창 청주시청제2임시청사",
+    "phone": "",
+    "latitude": "36.6566740551",
+    "longitude": "127.4889281085",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "742820",
+    "title": "물사랑 배움터",
+    "address": "전라남도 화순군 사평면 효당로 400",
+    "phone": "",
+    "latitude": "35.0264195487",
+    "longitude": "127.1129934121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/742209_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130696",
+    "title": "민물고기생태체험관",
+    "address": "경상북도 울진군 근남면 불영계곡로 3532",
+    "phone": "",
+    "latitude": "36.9669072952",
+    "longitude": "129.3813946257",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2638584",
+    "title": "박두진문학관",
+    "address": "경기도 안성시 보개면 남사당로 198-11",
+    "phone": "",
+    "latitude": "37.0350273181",
+    "longitude": "127.3108919406",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3539508_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1932440",
+    "title": "박인환문학관",
+    "address": "강원특별자치도 인제군 인제읍 인제로156번길 50",
+    "phone": "",
+    "latitude": "38.0628824868",
+    "longitude": "128.1717366755",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3335975_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1998842",
+    "title": "박재삼 문학관",
+    "address": "경상남도 사천시 박재삼길 27",
+    "phone": "",
+    "latitude": "34.9259197179",
+    "longitude": "128.0743782548",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3346267_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2732402",
+    "title": "박정희대통령역사자료관",
+    "address": "경상북도 구미시 박정희로 123 (상모동)",
+    "phone": "",
+    "latitude": "36.0906098736",
+    "longitude": "128.3489532959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/2732401_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3028774",
+    "title": "반곡역사관",
+    "address": "강원특별자치도 원주시 양지로 36 (반곡동)",
+    "phone": "",
+    "latitude": "37.3248533763",
+    "longitude": "127.9825674962",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2782711",
+    "title": "발포역사전시체험관",
+    "address": "전라남도 고흥군 도화면 충무사길 101-13",
+    "phone": "",
+    "latitude": "34.4841925738",
+    "longitude": "127.3395092518",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3552650_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2607179",
+    "title": "발해역사관",
+    "address": "강원특별자치도 속초시 신흥2길 16",
+    "phone": "",
+    "latitude": "38.2005790927",
+    "longitude": "128.5396823121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3374163_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "594065",
+    "title": "방림원",
+    "address": "제주특별자치도 제주시 한경면 용금로 864",
+    "phone": "",
+    "latitude": "33.3373165134",
+    "longitude": "126.2685961746",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3553174_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "705088",
+    "title": "방촌유물전시관",
+    "address": "전라남도 장흥군 관산읍 장흥대로 1645",
+    "phone": "",
+    "latitude": "34.5509784424",
+    "longitude": "126.9432867618",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/1374109_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130875",
+    "title": "백제역사문화관",
+    "address": "충청남도 부여군 규암면 백제문로 455",
+    "phone": "",
+    "latitude": "36.3076177120",
+    "longitude": "126.9085090769",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3568089_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3018939",
+    "title": "백호문학관",
+    "address": "전라남도 나주시 다시면 회진리",
+    "phone": "",
+    "latitude": "34.9969264775",
+    "longitude": "126.6668529685",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3540227",
+    "title": "법천사지 유적전시관",
+    "address": "강원특별자치도 원주시 부론면 법천사지길 50-15",
+    "phone": "",
+    "latitude": "37.2063213428",
+    "longitude": "127.7636490060",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3540166_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3013783",
+    "title": "별내어린이천문대",
+    "address": "경기도 남양주시 별내면 용암비루개길 143",
+    "phone": "",
+    "latitude": "37.7344708366",
+    "longitude": "127.1331021325",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3012237_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "128218",
+    "title": "별새꽃돌과학관",
+    "address": "충청북도 제천시 봉양읍 옥전4길 45",
+    "phone": "",
+    "latitude": "37.1863735403",
+    "longitude": "128.0583230398",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3569788_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3022652",
+    "title": "보령해저터널홍보관",
+    "address": "충청남도 보령시 대천항로 250-20 (신흑동)",
+    "phone": "",
+    "latitude": "36.3210537683",
+    "longitude": "126.5110638684",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3022518_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130683",
+    "title": "보물섬 마늘나라",
+    "address": "경상남도 남해군 이동면 남해대로 2443",
+    "phone": "",
+    "latitude": "34.8170570666",
+    "longitude": "127.9248274765",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2733367",
+    "title": "보은군 농경문화관",
+    "address": "충청북도 보은군 보은읍 보청대로 1655-3",
+    "phone": "",
+    "latitude": "36.4960858965",
+    "longitude": "127.7412738479",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3334771_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3562537",
+    "title": "복합문화공간 111씨엠(111CM)",
+    "address": "경기도 수원시 장안구 수성로 195 (정자동)",
+    "phone": "",
+    "latitude": "37.2896949554",
+    "longitude": "126.9926552988",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3562496_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782527",
+    "title": "봇재",
+    "address": "전라남도 보성군 보성읍 녹차로 750",
+    "phone": "",
+    "latitude": "34.7134459772",
+    "longitude": "127.0876951001",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3511574_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3089067",
+    "title": "봉화 농경문화전시관",
+    "address": "경상북도 봉화군 명호면 광석길 39",
+    "phone": "",
+    "latitude": "36.7882516604",
+    "longitude": "128.8940543833",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3088985_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3545737",
+    "title": "부산교육역사관",
+    "address": "부산광역시 사하구 옥천로 130 (감천동)",
+    "phone": "",
+    "latitude": "35.0973812835",
+    "longitude": "129.0112197747",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3545671_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1243628",
+    "title": "부산어촌민속관",
+    "address": "부산광역시 북구 학사로 128",
+    "phone": "",
+    "latitude": "35.2337659545",
+    "longitude": "129.0084662884",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3497025_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2764008",
+    "title": "부산자원순환협력센터",
+    "address": "부산광역시 강서구 생곡산단1로24번길 58",
+    "phone": "",
+    "latitude": "35.1331637995",
+    "longitude": "128.8823411310",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3342761_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130737",
+    "title": "부산자유회관(부산통일관)",
+    "address": "부산광역시 부산진구 초읍천로 113-10",
+    "phone": "",
+    "latitude": "35.1828751212",
+    "longitude": "129.0455755619",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3032342_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3016677",
+    "title": "부산트래블라운지",
+    "address": "부산광역시 동구 대영로243번길 38 (초량동)",
+    "phone": "",
+    "latitude": "35.1138854894",
+    "longitude": "129.0382225321",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3016660_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2037459",
+    "title": "부안누에타운",
+    "address": "전북특별자치도 부안군 변산면 참뽕로 434-20",
+    "phone": "",
+    "latitude": "35.6319714099",
+    "longitude": "126.5130146993",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3375137_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1608766",
+    "title": "부안댐 물문화관",
+    "address": "전북특별자치도 부안군 변산면 부안댐로 290",
+    "phone": "",
+    "latitude": "35.6737980468",
+    "longitude": "126.5629425235",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3561440_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2710922",
+    "title": "부엉이전시관(해피아울하우스)",
+    "address": "강원특별자치도 속초시 바람꽃마을길 118",
+    "phone": "033-638-8475",
+    "latitude": "38.2004732366",
+    "longitude": "128.5235198951",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3351787_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130847",
+    "title": "부천로보파크",
+    "address": "경기도 부천시 원미구 평천로 655",
+    "phone": "070-7094-5479",
+    "latitude": "37.5171339452",
+    "longitude": "126.7644363733",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3526375_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "229909",
+    "title": "북한 반잠수정 전시관",
+    "address": "전라남도 여수시 돌산읍 향일암로 365",
+    "phone": "",
+    "latitude": "34.6054644495",
+    "longitude": "127.7867004926",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3562387",
+    "title": "북한인권전시실",
+    "address": "서울특별시 종로구 삼일대로 393 (관철동)",
+    "phone": "",
+    "latitude": "37.5697262577",
+    "longitude": "126.9874062304",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3562378_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130452",
+    "title": "분원백자자료관",
+    "address": "경기도 광주시 남종면 산수로 1642-1",
+    "phone": "",
+    "latitude": "37.4962682523",
+    "longitude": "127.3024102159",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/919389_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2825252",
+    "title": "브릭캠퍼스 부산",
+    "address": "부산광역시 기장군 동부산관광로 8",
+    "phone": "",
+    "latitude": "35.1928632513",
+    "longitude": "129.2149855504",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2931892",
+    "title": "빛의 벙커",
+    "address": "제주특별자치도 서귀포시 성산읍 서성일로1168번길 89-17",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3548819_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3085292",
+    "title": "빛의 시어터",
+    "address": "서울특별시 광진구 워커힐로 177 (광장동)",
+    "phone": "",
+    "latitude": "37.5518832586",
+    "longitude": "127.1069125182",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3085276_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2623664",
+    "title": "사천항공우주과학관",
+    "address": "경상남도 사천시 사남면 공단1로 108",
+    "phone": "",
+    "latitude": "35.0709449190",
+    "longitude": "128.0634782010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3510281_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "129807",
+    "title": "산림바이오소재연구소",
+    "address": "경상남도 진주시 진주대로 672 (가좌동)",
+    "phone": "",
+    "latitude": "35.1665599239",
+    "longitude": "128.1057080996",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3040248_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2875134",
+    "title": "산정호수 조각공원",
+    "address": "경기도 포천시 영북면 산정호수로411번길 89",
+    "phone": "",
+    "latitude": "38.0689297476",
+    "longitude": "127.3221306810",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/2875122_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1999964",
+    "title": "삼성현 역사문화관",
+    "address": "경상북도 경산시 남산면 삼성현공원로 59",
+    "phone": "",
+    "latitude": "35.8017314290",
+    "longitude": "128.7966385424",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3019657_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130677",
+    "title": "삼척 민물고기전시관",
+    "address": "강원특별자치도 삼척시 근덕면 초당길 234",
+    "phone": "",
+    "latitude": "37.3874804208",
+    "longitude": "129.1955539091",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3039999_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130454",
+    "title": "삼척 어촌민속전시관",
+    "address": "강원특별자치도 삼척시 원덕읍 삼척로 1852-6",
+    "phone": "",
+    "latitude": "37.2680106197",
+    "longitude": "129.3272680373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3070896_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3114489",
+    "title": "새만금 메타버스 체험관",
+    "address": "전북특별자치도 부안군 하서면 신재생에너지로 20-19",
+    "phone": "",
+    "latitude": "35.7109444101",
+    "longitude": "126.5979551241",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3523707_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2613272",
+    "title": "생명건강과학관",
+    "address": "강원특별자치도 홍천군 홍천읍 생명과학관길 78",
+    "phone": "",
+    "latitude": "37.6791521343",
+    "longitude": "127.8805579785",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3381780_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "988207",
+    "title": "서귀포천문과학문화관",
+    "address": "제주특별자치도 서귀포시 1100로 506-1 천문과학문화관",
+    "phone": "",
+    "latitude": "33.2888776636",
+    "longitude": "126.4604111560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3477154_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130152",
+    "title": "서대문형무소역사관",
+    "address": "서울특별시 서대문구 통일로 251",
+    "phone": "",
+    "latitude": "37.5743584811",
+    "longitude": "126.9555506693",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3520329_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130682",
+    "title": "서복전시관",
+    "address": "제주특별자치도 서귀포시 칠십리로 156-8",
+    "phone": "",
+    "latitude": "33.2449259259",
+    "longitude": "126.5706414743",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3023951_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3385777",
+    "title": "서울 의릉 역사문화관",
+    "address": "서울특별시 성북구 화랑로32길 146-37 (석관동)",
+    "phone": "",
+    "latitude": "37.6050484213",
+    "longitude": "127.0579849067",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3382889_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2773382",
+    "title": "서울기록원",
+    "address": "서울특별시 은평구 통일로62길 7 (녹번동)",
+    "phone": "",
+    "latitude": "37.6071987219",
+    "longitude": "126.9340516999",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3500177_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130170",
+    "title": "서울대학교 규장각",
+    "address": "서울특별시 관악구 관악로 1",
+    "phone": "",
+    "latitude": "37.4639934641",
+    "longitude": "126.9522096436",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/762426_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2638478",
+    "title": "서울도시건축전시관",
+    "address": "서울특별시 중구 세종대로 119",
+    "phone": "02-736-8050",
+    "latitude": "37.5669375007",
+    "longitude": "126.9767183947",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2639292_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1897833",
+    "title": "서울상상나라",
+    "address": "서울특별시 광진구 능동로 216 (능동)",
+    "phone": "",
+    "latitude": "37.5493552228",
+    "longitude": "127.0762792676",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3539964_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2745725",
+    "title": "서울시립 난지미술창작스튜디오",
+    "address": "서울특별시 마포구 하늘공원로 108-1",
+    "phone": "",
+    "latitude": "37.5693687945",
+    "longitude": "126.8785522757",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3393092_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2989541",
+    "title": "서울시립과학관",
+    "address": "서울특별시 노원구 한글비석로 160 서울시립과학관",
+    "phone": "",
+    "latitude": "37.6418694763",
+    "longitude": "127.0766127147",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3068951_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1845410",
+    "title": "서울에너지드림센터",
+    "address": "서울특별시 마포구 증산로 14",
+    "phone": "",
+    "latitude": "37.5630864227",
+    "longitude": "126.8914679417",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3350450_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3385165",
+    "title": "서울특별시교육청 융합과학교육원",
+    "address": "서울특별시 관악구 낙성대로 101 (봉천동)",
+    "phone": "",
+    "latitude": "37.4688680271",
+    "longitude": "126.9594255163",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3383319_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2751303",
+    "title": "서울특별시교육청 융합과학교육원 남부분원",
+    "address": "서울특별시 구로구 구로중앙로27나길 21 (구로동)",
+    "phone": "",
+    "latitude": "37.4966190367",
+    "longitude": "126.8853287058",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3540347_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130937",
+    "title": "서울특별시교육청융합과학교육원 남산분원",
+    "address": "서울특별시 중구 소파로 46",
+    "phone": "",
+    "latitude": "37.5545501315",
+    "longitude": "126.9811600067",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/1570642_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2692910",
+    "title": "서울한방진흥센터",
+    "address": "서울특별시 동대문구 약령중앙로 26 (제기동)",
+    "phone": "",
+    "latitude": "37.5806647708",
+    "longitude": "127.0372263800",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "129461",
+    "title": "서천군 조류생태전시관",
+    "address": "충청남도 서천군 마서면 장산로 916",
+    "phone": "",
+    "latitude": "36.0227613199",
+    "longitude": "126.7427397351",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3567118_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3097714",
+    "title": "서촌라운지",
+    "address": "서울특별시 종로구 필운대로 27-4 (누하동)",
+    "phone": "02-736-7909",
+    "latitude": "37.5785415676",
+    "longitude": "126.9688798913",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3097682_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "646954",
+    "title": "설악산 탐방안내소",
+    "address": "강원특별자치도 속초시 설악산로 833 (설악동)",
+    "phone": "",
+    "latitude": "38.1675797134",
+    "longitude": "128.5168243054",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3048537_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2784717",
+    "title": "섬진강기차마을생태학습관",
+    "address": "전라남도 곡성군 오곡면 기차마을로 232",
+    "phone": "",
+    "latitude": "35.2776556637",
+    "longitude": "127.3082114814",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3552874_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3444817",
+    "title": "성주 성산동 고분군 전시관",
+    "address": "경상북도 성주군 성주읍 성산4길 37",
+    "phone": "",
+    "latitude": "35.9067214874",
+    "longitude": "128.2983628647",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3444733_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2756125",
+    "title": "세계물포럼기념센터",
+    "address": "경상북도 안동시 석주로 383 (성곡동)",
+    "phone": "",
+    "latitude": "36.5804564788",
+    "longitude": "128.7753376775",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2765266",
+    "title": "세월호목포신항만거치",
+    "address": "전라남도 목포시 신항로294번길 45",
+    "phone": "",
+    "latitude": "34.7593953177",
+    "longitude": "126.3546168819",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3534342_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2623238",
+    "title": "세종대왕 역사문화관",
+    "address": "경기도 여주시 능서면 영릉로 269-10",
+    "phone": "",
+    "latitude": "37.3049849280",
+    "longitude": "127.6113515895",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3573817_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2733119",
+    "title": "세종대왕자태실 생명문화공원(태실문화관)",
+    "address": "경상북도 성주군 월항면 세종대왕자태실로 616-12",
+    "phone": "",
+    "latitude": "36.0139065237",
+    "longitude": "128.2970600189",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3444608_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "815197",
+    "title": "세종이야기 충무공이야기",
+    "address": "서울특별시 종로구 세종대로 지하175 (세종로)",
+    "phone": "",
+    "latitude": "37.5722341099",
+    "longitude": "126.9768376784",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3550552_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2647918",
+    "title": "소래역사관",
+    "address": "인천광역시 남동구 아암대로 1605",
+    "phone": "",
+    "latitude": "37.3982361693",
+    "longitude": "126.7375060322",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/2647917_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3035690",
+    "title": "소아르떼",
+    "address": "전라남도 담양군 담양읍 깊은실길 84-73",
+    "phone": "",
+    "latitude": "35.3125938122",
+    "longitude": "127.0092286883",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3571442_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1051363",
+    "title": "솔향공원",
+    "address": "충청북도 보은군 속리산면 속리산로 600",
+    "phone": "",
+    "latitude": "36.4992560906",
+    "longitude": "127.8027266027",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/1201766_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2734928",
+    "title": "송내어울마당",
+    "address": "경기도 부천시 소사구 경인로92번길 33 (송내동)",
+    "phone": "",
+    "latitude": "37.4825574465",
+    "longitude": "126.7665704787",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/2735258_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3006865",
+    "title": "송대말 등대 빛 체험전시관",
+    "address": "경상북도 경주시 감포로 226-19",
+    "phone": "",
+    "latitude": "35.8073386854",
+    "longitude": "129.5110091072",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3006762_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3085094",
+    "title": "송파하남어린이천문대",
+    "address": "경기도 하남시 검단산로250번길 36 (창우동)",
+    "phone": "",
+    "latitude": "37.5351624189",
+    "longitude": "127.2296240521",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3085085_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1684395",
+    "title": "수몰역사관",
+    "address": "충청북도 제천시 청풍면 청풍호로 2048",
+    "phone": "",
+    "latitude": "37.0046826650",
+    "longitude": "128.1710681829",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3062597_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2739467",
+    "title": "수애뇨339",
+    "address": "서울특별시 종로구 평창길 339 (평창동)",
+    "phone": "",
+    "latitude": "37.6126127832",
+    "longitude": "126.9787558031",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3540876_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1627305",
+    "title": "수양개선사유물전시관",
+    "address": "충청북도 단양군 수양개유적로 390 수양개선사유물전시관",
+    "phone": "",
+    "latitude": "36.9605129758",
+    "longitude": "128.3324883350",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/1598386_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3453292",
+    "title": "수주문학관",
+    "address": "경기도 부천시 오정구 고리울로8번길 77 (고강동)",
+    "phone": "",
+    "latitude": "37.5243784812",
+    "longitude": "126.8169563803",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3453121_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3012585",
+    "title": "수지어린이천문대",
+    "address": "경기도 용인시 수지구 동천로 535-1 (고기동)",
+    "phone": "",
+    "latitude": "37.3513361208",
+    "longitude": "127.0533813900",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3003051_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2605808",
+    "title": "수창청춘맨숀",
+    "address": "대구광역시 중구 달성로22길 27",
+    "phone": "",
+    "latitude": "35.8754330454",
+    "longitude": "128.5838718758",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3403609_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2612813",
+    "title": "순천문학관",
+    "address": "전라남도 순천시 무진길 130",
+    "phone": "",
+    "latitude": "34.8945801594",
+    "longitude": "127.5157946497",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3370744_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130703",
+    "title": "숲사랑홍보관",
+    "address": "강원특별자치도 강릉시 사천면 미노길 1",
+    "phone": "",
+    "latitude": "37.8172213266",
+    "longitude": "128.8513049021",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3333721_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782732",
+    "title": "스페이스K 서울",
+    "address": "서울특별시 강서구 마곡중앙8로 32 (마곡동)",
+    "phone": "",
+    "latitude": "37.5611466793",
+    "longitude": "126.8309874014",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3569581",
+    "title": "시흥 해양생태과학관",
+    "address": "경기도 시흥시 거북섬서로 35 (정왕동)",
+    "phone": "",
+    "latitude": "37.3294514180",
+    "longitude": "126.6770467767",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3569560_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2783374",
+    "title": "시흥에코센터",
+    "address": "경기도 시흥시 경기과기대로 284 (정왕동)",
+    "phone": "",
+    "latitude": "37.3376126797",
+    "longitude": "126.7392575552",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/2793700_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3036714",
+    "title": "신동엽 문학관",
+    "address": "충청남도 부여군 부여읍 신동엽길 12",
+    "phone": "",
+    "latitude": "36.2775156147",
+    "longitude": "126.9091653716",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3036672_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2753693",
+    "title": "신두리사구센터",
+    "address": "충청남도 태안군 원북면 신두해변길 201-54",
+    "phone": "",
+    "latitude": "36.8428299598",
+    "longitude": "126.1947148731",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3442528",
+    "title": "신라고분정보센터",
+    "address": "경상북도 경주시 봉황로 23 (노서동)",
+    "phone": "",
+    "latitude": "35.8416263274",
+    "longitude": "129.2100372454",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3532127",
+    "title": "신라고분정보센터",
+    "address": "경상북도 경주시 봉황로 23 (노서동)",
+    "phone": "",
+    "latitude": "35.8416263274",
+    "longitude": "129.2100372454",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3532080_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130858",
+    "title": "신라역사과학관",
+    "address": "경상북도 경주시 하동공예촌길 33",
+    "phone": "",
+    "latitude": "35.8071099137",
+    "longitude": "129.3112238105",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "560981",
+    "title": "심청각",
+    "address": "인천광역시 옹진군 백령면 백령로316번길 109-117",
+    "phone": "",
+    "latitude": "37.9797643244",
+    "longitude": "124.7136239269",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3497901_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2007117",
+    "title": "아산 장영실과학관",
+    "address": "충청남도 아산시 실옥로 222",
+    "phone": "",
+    "latitude": "36.7981681429",
+    "longitude": "126.9782035067",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3567355_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2707902",
+    "title": "아산생태곤충원",
+    "address": "충청남도 아산시 실옥로 216 (배미동)",
+    "phone": "",
+    "latitude": "36.7988791920",
+    "longitude": "126.9793089430",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3569347_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2769748",
+    "title": "아산퍼스트빌리지공룡월드",
+    "address": "충청남도 아산시 둔포면 해위안길 127",
+    "phone": "",
+    "latitude": "36.8968743344",
+    "longitude": "127.0290934356",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/2770568_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3370479",
+    "title": "아트팩토리 참기름",
+    "address": "인천광역시 강화군 길상면 까치골길 109",
+    "phone": "",
+    "latitude": "37.6680419146",
+    "longitude": "126.4803747887",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3532856_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2833492",
+    "title": "아트플러그 연수",
+    "address": "인천광역시 연수구 청량로101번길 33",
+    "phone": "",
+    "latitude": "37.4167547711",
+    "longitude": "126.6542631040",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/2833481_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130672",
+    "title": "안동공예문화전시관",
+    "address": "경상북도 안동시 석주로 245 (상아동)",
+    "phone": "",
+    "latitude": "36.5804812101",
+    "longitude": "128.7613083672",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3585839_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3351850",
+    "title": "안산별망어촌문화관",
+    "address": "경기도 안산시 단원구 시화호수로 553 (성곡동)",
+    "phone": "",
+    "latitude": "37.3048357574",
+    "longitude": "126.7297121086",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3408818_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3335937",
+    "title": "안양그린마루",
+    "address": "경기도 안양시 만안구 화창로 10 (석수동)",
+    "phone": "",
+    "latitude": "37.4167229547",
+    "longitude": "126.8963688302",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3335908_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2999378",
+    "title": "안양어린이천문대",
+    "address": "경기도 안양시 만안구 오리로34번길 7-31 (박달동)",
+    "phone": "",
+    "latitude": "37.4089403044",
+    "longitude": "126.8840173948",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/2999375_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2724084",
+    "title": "안정리 예술인광장",
+    "address": "경기도 평택시 팽성읍 안정쇼핑로 11",
+    "phone": "",
+    "latitude": "36.9598534521",
+    "longitude": "127.0443431037",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3558799_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2502569",
+    "title": "약사동 제방유적전시관",
+    "address": "울산광역시 중구 종가14길 22-28",
+    "phone": "",
+    "latitude": "35.5762391804",
+    "longitude": "129.3369503387",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3510540_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130736",
+    "title": "양구통일관",
+    "address": "강원특별자치도 양구군 해안면 해안서화로 35",
+    "phone": "",
+    "latitude": "38.2899471887",
+    "longitude": "128.1455432111",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3332763_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2612093",
+    "title": "양천구 역사홍보관",
+    "address": "서울특별시 양천구 목동동로 81 (신정동)",
+    "phone": "",
+    "latitude": "37.5160302875",
+    "longitude": "126.8638773374",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3384686_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1413224",
+    "title": "양화진홀 전시관",
+    "address": "서울특별시 마포구 양화진길 46",
+    "phone": "",
+    "latitude": "37.5464776030",
+    "longitude": "126.9116998990",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3565321_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3013175",
+    "title": "어둠속의대화 북촌점",
+    "address": "서울특별시 종로구 북촌로 71 (가회동)",
+    "phone": "",
+    "latitude": "37.5833718478",
+    "longitude": "126.9848310783",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3012892_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "804318",
+    "title": "엄홍길전시관",
+    "address": "경상남도 고성군 거류면 거류로 335",
+    "phone": "",
+    "latitude": "34.9725672637",
+    "longitude": "128.3867830796",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3574728_image2_1.jpeg",
+    "category": "전시관"
+  },
+  {
+    "id": "1285440",
+    "title": "에너지환경과학공원 에너지전시관",
+    "address": "경상남도 창원시 진해구 천자로 101",
+    "phone": "",
+    "latitude": "35.1446312289",
+    "longitude": "128.6901742396",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/1273780_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2745602",
+    "title": "에스팩토리",
+    "address": "서울특별시 성동구 연무장15길 11 (성수동2가)",
+    "phone": "",
+    "latitude": "37.5423085165",
+    "longitude": "127.0594809973",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3584568_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2733057",
+    "title": "에코리움",
+    "address": "경기도 오산시 오산천로 52 (오산동)",
+    "phone": "",
+    "latitude": "37.1379915498",
+    "longitude": "127.0633281205",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/2733059_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2736429",
+    "title": "에코센터",
+    "address": "경기도 김포시 김포한강11로 455 (운양동)",
+    "phone": "",
+    "latitude": "37.6548362130",
+    "longitude": "126.6993634541",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2736606_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3488525",
+    "title": "에코스페이스 연의",
+    "address": "서울특별시 양천구 신정이펜1로 12 (신정동)",
+    "phone": "",
+    "latitude": "37.5117497010",
+    "longitude": "126.8342218274",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3411411_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3010511",
+    "title": "여수민속전시관",
+    "address": "전라남도 여수시 서부로 1442 율촌중앙초등학교",
+    "phone": "",
+    "latitude": "34.8465029270",
+    "longitude": "127.5566200664",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3010499_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2692510",
+    "title": "여초서예관",
+    "address": "강원특별자치도 인제군 북면 만해로 154",
+    "phone": "",
+    "latitude": "38.1889706404",
+    "longitude": "128.3198110007",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3502875_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2405963",
+    "title": "영광노을전시관",
+    "address": "전라남도 영광군 백수읍 해안로 957",
+    "phone": "",
+    "latitude": "35.3537120612",
+    "longitude": "126.3892937782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/2716488_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130702",
+    "title": "영덕어촌민속전시관",
+    "address": "경상북도 영덕군 강구면 해상공원길 96-8",
+    "phone": "",
+    "latitude": "36.3502776666",
+    "longitude": "129.3867458908",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3516419_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3017282",
+    "title": "영도해녀문화전시관",
+    "address": "부산광역시 영도구 중리남로 2-36 (동삼동)",
+    "phone": "",
+    "latitude": "35.0670412443",
+    "longitude": "129.0660713884",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3017257_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1131061",
+    "title": "영양고추홍보전시관",
+    "address": "경상북도 영양군 입암면 영양로 883-6",
+    "phone": "",
+    "latitude": "36.6080202748",
+    "longitude": "129.0820374503",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3534472_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1937095",
+    "title": "영월 동굴생태관",
+    "address": "강원특별자치도 영월군 김삿갓면 영월동로 1121-15",
+    "phone": "",
+    "latitude": "37.1303723051",
+    "longitude": "128.5367206235",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3039759_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2762521",
+    "title": "영주댐물문화관",
+    "address": "경상북도 영주시 평은면 문평로 860",
+    "phone": "",
+    "latitude": "36.7263375415",
+    "longitude": "128.6550441304",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "1611872",
+    "title": "예솔분재원",
+    "address": "전북특별자치도 순창군 구림면 강천로 952",
+    "phone": "",
+    "latitude": "35.4311950900",
+    "longitude": "127.0567325728",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3055701_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2953091",
+    "title": "예술공간집",
+    "address": "광주광역시 동구 제봉로158번길 11-5",
+    "phone": "",
+    "latitude": "35.1523409631",
+    "longitude": "126.9199350717",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/2953081_image2_1.png",
+    "category": "전시관"
+  },
+  {
+    "id": "2513112",
+    "title": "와동 생태곤충 체험관",
+    "address": "경기도 안산시 단원구 와동공원로 109 (와동)",
+    "phone": "",
+    "latitude": "37.3412609294",
+    "longitude": "126.8212277732",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3020008_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3019022",
+    "title": "완도군해양생태전시관",
+    "address": "전라남도 완도군 완도읍 장좌리",
+    "phone": "",
+    "latitude": "34.3515583728",
+    "longitude": "126.7315045913",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2782961",
+    "title": "완도군해조류센터",
+    "address": "전라남도 완도군 완도읍 해변공원로 84",
+    "phone": "",
+    "latitude": "34.3207204411",
+    "longitude": "126.7489371333",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2796587_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130504",
+    "title": "완도어촌민속전시관",
+    "address": "전라남도 완도군 완도읍 화흥포길 149",
+    "phone": "",
+    "latitude": "34.3073376133",
+    "longitude": "126.6885705203",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3381085_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3067827",
+    "title": "완판본문화관",
+    "address": "전북특별자치도 전주시 완산구 전주천동로 24 (교동)",
+    "phone": "",
+    "latitude": "35.8120063920",
+    "longitude": "127.1579942895",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3561868_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2714284",
+    "title": "용산도시기억전시관",
+    "address": "서울특별시 용산구 서빙고로 17 (한강로3가)",
+    "phone": "",
+    "latitude": "37.5256560080",
+    "longitude": "126.9667565805",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3437081_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2629751",
+    "title": "용인농촌테마파크 농경문화전시관",
+    "address": "경기도 용인시 처인구 원삼면 농촌파크로 80-1",
+    "phone": "",
+    "latitude": "37.1728195174",
+    "longitude": "127.2984336445",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3068725_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2732148",
+    "title": "용인시기후변화체험교육센터",
+    "address": "경기도 용인시 처인구 동부로162번길 14",
+    "phone": "",
+    "latitude": "37.2223790946",
+    "longitude": "127.2229196401",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2773979_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3012524",
+    "title": "용인어린이천문대",
+    "address": "경기도 용인시 기흥구 지삼로98번길 11 (지곡동)",
+    "phone": "",
+    "latitude": "37.2494909344",
+    "longitude": "127.1287774090",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3012515_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3072038",
+    "title": "용평공룡해양랜드",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 715",
+    "phone": "",
+    "latitude": "37.6509988422",
+    "longitude": "128.7055814809",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3055104_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "661980",
+    "title": "우포늪생태관",
+    "address": "경상남도 창녕군 유어면 우포늪길 220",
+    "phone": "",
+    "latitude": "35.5445368581",
+    "longitude": "128.4182316644",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3537910_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2785997",
+    "title": "우포늪체험장",
+    "address": "경상남도 창녕군 대합면 우포2로 370",
+    "phone": "",
+    "latitude": "35.5659956030",
+    "longitude": "128.4212641473",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3537895_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3375391",
+    "title": "울산 수학문화관",
+    "address": "울산광역시 북구 약수8길 50 (중산동)",
+    "phone": "",
+    "latitude": "35.6476978883",
+    "longitude": "129.3412646072",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3375529_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2778182",
+    "title": "울산과학관",
+    "address": "울산광역시 남구 남부순환도로 111 (옥동)",
+    "phone": "",
+    "latitude": "35.5401280620",
+    "longitude": "129.2684017827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/2800680_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2676283",
+    "title": "울진 국립해양과학관",
+    "address": "경상북도 울진군 죽변면 해양과학길 8",
+    "phone": "",
+    "latitude": "37.0727429632",
+    "longitude": "129.4099305398",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3082289_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3038651",
+    "title": "웅진 백제 문화 역사관",
+    "address": "충청남도 공주시 왕릉로 37 (웅진동)",
+    "phone": "",
+    "latitude": "36.4605731945",
+    "longitude": "127.1125227942",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3038645_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2784176",
+    "title": "웅천 도요지 전시관",
+    "address": "경상남도 창원시 진해구 두동도요로 198",
+    "phone": "",
+    "latitude": "35.1274521069",
+    "longitude": "128.8155693253",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3564659_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3564622",
+    "title": "원주시 문화공유플랫폼",
+    "address": "강원특별자치도 원주시 평원로 22 (평원동)",
+    "phone": "",
+    "latitude": "37.3490111530",
+    "longitude": "127.9533277621",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3564608_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2815536",
+    "title": "월곡 고려인 문화관 결",
+    "address": "광주광역시 광산구 산정공원로50번길 29",
+    "phone": "",
+    "latitude": "35.1718757528",
+    "longitude": "126.8077722811",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/2815525_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3003541",
+    "title": "월미문화관",
+    "address": "인천광역시 중구 월미로 131-22 (북성동1가)",
+    "phone": "",
+    "latitude": "37.4764858311",
+    "longitude": "126.6039104851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3448767_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2753398",
+    "title": "월성원자력홍보관",
+    "address": "경상북도 경주시 양남면 동해안로 671",
+    "phone": "",
+    "latitude": "35.7026024834",
+    "longitude": "129.4701545670",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3543270_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3079178",
+    "title": "웨일즈 판타지움",
+    "address": "울산광역시 남구 장생포고래로 271-1 (매암동)",
+    "phone": "",
+    "latitude": "35.5059562836",
+    "longitude": "129.3831260722",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3079177_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3069589",
+    "title": "유알컬처파크",
+    "address": "강원특별자치도 원주시 지정면 지정로 912",
+    "phone": "",
+    "latitude": "37.3584877652",
+    "longitude": "127.7997469085",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3069569_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2784352",
+    "title": "의령곤충생태학습관",
+    "address": "경상남도 의령군 의령읍 의합대로 28",
+    "phone": "",
+    "latitude": "35.3193292641",
+    "longitude": "128.2843633787",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3337517_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130167",
+    "title": "의령예술촌",
+    "address": "경상남도 의령군 궁류면 벽계로 16-32",
+    "phone": "",
+    "latitude": "35.4350762506",
+    "longitude": "128.2240822352",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3538353_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1850672",
+    "title": "의왕조류생태과학관",
+    "address": "경기도 의왕시 왕송못동로 209 (월암동)",
+    "phone": "",
+    "latitude": "37.3109195184",
+    "longitude": "126.9502752214",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "1942314",
+    "title": "이바구공작소",
+    "address": "부산광역시 동구 망양로486번길 14-13",
+    "phone": "",
+    "latitude": "35.1171267121",
+    "longitude": "129.0338450468",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/2735629_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2033055",
+    "title": "이병주문학관",
+    "address": "경상남도 하동군 북천면 이명골길 14-28",
+    "phone": "",
+    "latitude": "35.0970501102",
+    "longitude": "127.8942340197",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3549439_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3338761",
+    "title": "이봉창 역사울림관",
+    "address": "서울특별시 용산구 백범로 281-9 (효창동)",
+    "phone": "",
+    "latitude": "37.5401569962",
+    "longitude": "126.9608928167",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3338736_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2778041",
+    "title": "이순신대교홍보관",
+    "address": "전라남도 여수시 묘도7길 110 (묘도동)",
+    "phone": "",
+    "latitude": "34.8892423596",
+    "longitude": "127.7046948889",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/2796028_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2606761",
+    "title": "이순신영상관",
+    "address": "경상남도 남해군 고현면 남해대로 3829",
+    "phone": "",
+    "latitude": "34.9133006578",
+    "longitude": "127.8575669932",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/2606746_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1837034",
+    "title": "이화웰컴센터",
+    "address": "서울특별시 서대문구 이화여대길 52",
+    "phone": "",
+    "latitude": "37.5617625629",
+    "longitude": "126.9465962863",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3377142",
+    "title": "인제곤충바이오센터",
+    "address": "강원특별자치도 인제군 상남면 미덕길 253",
+    "phone": "",
+    "latitude": "37.8943819945",
+    "longitude": "128.2839593928",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3377422_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2779442",
+    "title": "인천개항장 근대건축전시관",
+    "address": "인천광역시 중구 신포로23번길 77",
+    "phone": "",
+    "latitude": "37.4729393262",
+    "longitude": "126.6212117826",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3381778_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2648385",
+    "title": "인천대공원 목재문화체험장",
+    "address": "인천광역시 남동구 무네미로 236",
+    "phone": "",
+    "latitude": "37.4577461335",
+    "longitude": "126.7493033010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3499068_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1851364",
+    "title": "인천도시역사관",
+    "address": "인천광역시 연수구 인천타워대로 238",
+    "phone": "",
+    "latitude": "37.3928266701",
+    "longitude": "126.6358737757",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3073287_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782738",
+    "title": "인천시민애집",
+    "address": "인천광역시 중구 신포로39번길 74",
+    "phone": "",
+    "latitude": "37.4743558558",
+    "longitude": "126.6227865996",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3352267_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2662902",
+    "title": "인천어린이과학관",
+    "address": "인천광역시 계양구 방축로 21",
+    "phone": "",
+    "latitude": "37.5516350563",
+    "longitude": "126.7400265233",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3516517_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130741",
+    "title": "인천통일관",
+    "address": "인천광역시 미추홀구 수봉안길 84",
+    "phone": "",
+    "latitude": "37.4598249258",
+    "longitude": "126.6632805309",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "1054895",
+    "title": "인천학생과학관",
+    "address": "인천광역시 중구 영종대로277번길 74-10",
+    "phone": "",
+    "latitude": "37.4906880282",
+    "longitude": "126.5067939592",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3533575_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130476",
+    "title": "일본군 위안부 역사관",
+    "address": "경기도 광주시 퇴촌면 가새골길 85",
+    "phone": "",
+    "latitude": "37.4428414701",
+    "longitude": "127.3219988534",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3527326_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2633952",
+    "title": "일제강점기 군산역사관",
+    "address": "전북특별자치도 군산시 동국사길 21",
+    "phone": "063-467-0815",
+    "latitude": "35.9823486705",
+    "longitude": "126.7078522379",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/2638564_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3507970",
+    "title": "임당유적전시관",
+    "address": "경상북도 경산시 청운2로 29 (임당동)",
+    "phone": "",
+    "latitude": "35.8407817355",
+    "longitude": "128.7516608492",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3507922_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3019134",
+    "title": "잠사곤충사업장",
+    "address": "경상북도 상주시 함창읍 무운로 1621-27",
+    "phone": "",
+    "latitude": "36.5781036262",
+    "longitude": "128.1614507031",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3019280_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2754480",
+    "title": "장생포 고래생태체험관",
+    "address": "울산광역시 남구 장생포고래로 248 (매암동)",
+    "phone": "",
+    "latitude": "35.5023705573",
+    "longitude": "129.3821429257",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3549034_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3338212",
+    "title": "장수역사전시관",
+    "address": "전북특별자치도 장수군 장계면 방천길 11",
+    "phone": "",
+    "latitude": "35.7304704073",
+    "longitude": "127.5883610024",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3338105_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2777939",
+    "title": "장자호수생태체험관",
+    "address": "경기도 구리시 장자호수길 76-42 (교문동)",
+    "phone": "",
+    "latitude": "37.5831774183",
+    "longitude": "127.1386031859",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/2777944_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2638443",
+    "title": "장항도시탐험역",
+    "address": "충청남도 서천군 장항읍 장항로161번길 27",
+    "phone": "",
+    "latitude": "36.0129421851",
+    "longitude": "126.6953025686",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/2639447_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130812",
+    "title": "재활용창작품상설전시관",
+    "address": "서울특별시 양천구 화곡로4길 26",
+    "phone": "",
+    "latitude": "37.5370633175",
+    "longitude": "126.8281522250",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/1865468_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130148",
+    "title": "전라남도해양수산과학관",
+    "address": "전라남도 여수시 돌산읍 돌산로 2876",
+    "phone": "",
+    "latitude": "34.6822334564",
+    "longitude": "127.7759328201",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3576895_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130357",
+    "title": "전주공예품전시관",
+    "address": "전북특별자치도 전주시 완산구 태조로 15",
+    "phone": "",
+    "latitude": "35.8173889921",
+    "longitude": "127.1510086590",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3536979_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2606578",
+    "title": "전주부채문화관",
+    "address": "전북특별자치도 전주시 완산구 경기전길 93 (풍남동3가)",
+    "phone": "",
+    "latitude": "35.8154642222",
+    "longitude": "127.1516530963",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3364412_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1586964",
+    "title": "전주자연생태관",
+    "address": "전북특별자치도 전주시 완산구 바람쐬는길 21 (교동)",
+    "phone": "",
+    "latitude": "35.8116342920",
+    "longitude": "127.1626022226",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3536986_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2514062",
+    "title": "정남진 천문과학관",
+    "address": "전라남도 장흥군 장흥읍 평화우산길 180-608",
+    "phone": "",
+    "latitude": "34.6585660943",
+    "longitude": "126.9262411877",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2514714",
+    "title": "정남진물과학관",
+    "address": "전라남도 장흥군 장흥읍 행원강변길 20",
+    "phone": "",
+    "latitude": "34.6860264648",
+    "longitude": "126.9001316997",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3364462_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3036312",
+    "title": "정선벅스랜드",
+    "address": "강원특별자치도 정선군 여량면 노추산로 745",
+    "phone": "",
+    "latitude": "37.5163898119",
+    "longitude": "128.7273475088",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3036292_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3035875",
+    "title": "정호승 문학관",
+    "address": "대구광역시 수성구 들안로 403-1 (범어동)",
+    "phone": "",
+    "latitude": "35.8661458341",
+    "longitude": "128.6178274765",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3035857_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2406460",
+    "title": "제주 추사관",
+    "address": "제주특별자치도 서귀포시 대정읍 추사로 44",
+    "phone": "",
+    "latitude": "33.2498068953",
+    "longitude": "126.2785639201",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3548271_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2986689",
+    "title": "제주고산리유적안내센터",
+    "address": "제주특별자치도 제주시 노을해안로 1100",
+    "phone": "",
+    "latitude": "33.3044852037",
+    "longitude": "126.1659113851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2986687_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2905116",
+    "title": "제주과학탐구체험관",
+    "address": "제주특별자치도 제주시 산록북로 421-1 (오라이동)",
+    "phone": "",
+    "latitude": "33.4266496763",
+    "longitude": "126.5314546657",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3585158_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130872",
+    "title": "제주국제평화센터",
+    "address": "제주특별자치도 서귀포시 중문관광로 227-24",
+    "phone": "",
+    "latitude": "33.2443708606",
+    "longitude": "126.4220626997",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3577136_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130856",
+    "title": "제주돌마을공원",
+    "address": "제주특별자치도 제주시 한림읍 금능남로 421",
+    "phone": "",
+    "latitude": "33.3537783490",
+    "longitude": "126.2537526540",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3477744_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2660122",
+    "title": "제주라프",
+    "address": "제주특별자치도 제주시 조천읍 선교로 115-1",
+    "phone": "",
+    "latitude": "33.4868513788",
+    "longitude": "126.7069686133",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3477649_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2949573",
+    "title": "제주문학관",
+    "address": "제주특별자치도 제주시 연북로 339 (도남동)",
+    "phone": "",
+    "latitude": "33.4813850713",
+    "longitude": "126.5178573851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/2949529_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3066924",
+    "title": "제주웰컴센터",
+    "address": "제주특별자치도 제주시 선덕로 23 (연동)",
+    "phone": "",
+    "latitude": "33.4857565119",
+    "longitude": "126.4991894640",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3066908_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130745",
+    "title": "제주통일관",
+    "address": "제주특별자치도 제주시 삼성로 46 (일도이동)",
+    "phone": "",
+    "latitude": "33.5068796745",
+    "longitude": "126.5306251413",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3552956_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1685023",
+    "title": "제천의병전시관",
+    "address": "충청북도 제천시 봉양읍 의암로 566-7",
+    "phone": "",
+    "latitude": "37.0992118833",
+    "longitude": "128.0865174789",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3349952_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1624811",
+    "title": "조정래 아리랑문학관",
+    "address": "전북특별자치도 김제시 부량면 용성1길 24",
+    "phone": "",
+    "latitude": "35.7519467849",
+    "longitude": "126.8487428274",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3073870_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "662140",
+    "title": "주남저수지 람사르문화관",
+    "address": "경상남도 창원시 의창구 동읍 주남로101번길 26",
+    "phone": "",
+    "latitude": "35.3072710830",
+    "longitude": "128.6780153447",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3569077_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "662127",
+    "title": "주남저수지 생태학습관",
+    "address": "경상남도 창원시 의창구 동읍 주남로101번길 32",
+    "phone": "",
+    "latitude": "35.3077849126",
+    "longitude": "128.6779236727",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3023343",
+    "title": "주니어천문스쿨 수지점",
+    "address": "경기도 용인시 수지구 성복2로301번길 7 (성복동)",
+    "phone": "",
+    "latitude": "37.3182538749",
+    "longitude": "127.0551599358",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3023342_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3386123",
+    "title": "주정공장수용소 4·3역사관",
+    "address": "제주특별자치도 제주시 임항로 98 (건입동)",
+    "phone": "",
+    "latitude": "33.5181368286",
+    "longitude": "126.5348217428",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3386706_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3090691",
+    "title": "죽동농악전수교육관",
+    "address": "전라남도 곡성군 곡성읍 죽동길 46-1",
+    "phone": "",
+    "latitude": "35.2795244790",
+    "longitude": "127.2839274668",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3090681_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2601703",
+    "title": "중구생활사전시관",
+    "address": "인천광역시 중구 신포로23번길 97 (중앙동1가)",
+    "phone": "",
+    "latitude": "37.4735170173",
+    "longitude": "126.6201063115",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3039462_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2515791",
+    "title": "지리산생태과학관",
+    "address": "경상남도 하동군 악양면 섬진강대로 3358-30",
+    "phone": "",
+    "latitude": "35.1506596925",
+    "longitude": "127.6756629342",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3549388_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1331286",
+    "title": "지리산역사관",
+    "address": "경상남도 하동군 화개로 1438 지리산역사관",
+    "phone": "",
+    "latitude": "35.2895824040",
+    "longitude": "127.6458397314",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/1320861_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2022937",
+    "title": "지영희국악관",
+    "address": "경기도 평택시 현덕면 평택호길 147",
+    "phone": "",
+    "latitude": "36.9215723613",
+    "longitude": "126.9214497062",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3350142_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130862",
+    "title": "진도해양생태관",
+    "address": "전라남도 진도군 고군면 신비의바닷길 64",
+    "phone": "",
+    "latitude": "34.4348484219",
+    "longitude": "126.3529080860",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3561395_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3429810",
+    "title": "진주남강유등전시관",
+    "address": "경상남도 진주시 망경로 207 (망경동)",
+    "phone": "055-762-8583",
+    "latitude": "35.1821771088",
+    "longitude": "128.0773823938",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3488690_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3583697",
+    "title": "진주빛마루",
+    "address": "경상남도 진주시 대곡면 오방로 6",
+    "phone": "",
+    "latitude": "35.2539897372",
+    "longitude": "128.1483187185",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3583671_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2744491",
+    "title": "진주익룡발자국전시관",
+    "address": "경상남도 진주시 영천강로68번길 22",
+    "phone": "",
+    "latitude": "35.1687297283",
+    "longitude": "128.1396384019",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/2746303_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1393632",
+    "title": "진천 향토민속자료전시관",
+    "address": "충청북도 진천군 진천읍 문진로 1323",
+    "phone": "",
+    "latitude": "36.8472898104",
+    "longitude": "127.4205845150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3336328_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2785958",
+    "title": "창녕우포곤충나라",
+    "address": "경상남도 창녕군 대합면 우포2로 333",
+    "phone": "",
+    "latitude": "35.5655900330",
+    "longitude": "128.4179977787",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3538791_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1904774",
+    "title": "창원과학체험관",
+    "address": "경상남도 창원시 성산구 충혼로72번길 16",
+    "phone": "",
+    "latitude": "35.2302794340",
+    "longitude": "128.6616966355",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3070126_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "790937",
+    "title": "창원시립 마산음악관",
+    "address": "경상남도 창원시 마산합포구 수산2길 35",
+    "phone": "",
+    "latitude": "35.1977009071",
+    "longitude": "128.5720386803",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3569094_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2370290",
+    "title": "창원역사민속관",
+    "address": "경상남도 창원시 의창구 창이대로397번길 25 (사림동)",
+    "phone": "",
+    "latitude": "35.2450586828",
+    "longitude": "128.6810695433",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3050198_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "130318",
+    "title": "창원의 집",
+    "address": "경상남도 창원시 의창구 사림로16번길 59 (사림동)",
+    "phone": "",
+    "latitude": "35.2444920850",
+    "longitude": "128.6813750872",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "1560179",
+    "title": "창희보석예술관",
+    "address": "서울특별시 강남구 압구정로 210 (신사동)",
+    "phone": "",
+    "latitude": "37.5277985634",
+    "longitude": "127.0301507464",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3476891_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1391518",
+    "title": "천관문학관",
+    "address": "전라남도 장흥군 대덕읍 천관산문학길 160",
+    "phone": "",
+    "latitude": "34.5156400721",
+    "longitude": "126.9034800024",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3017214",
+    "title": "천마산 조각공원",
+    "address": "부산광역시 서구 천마산로209번길 94 (남부민동)",
+    "phone": "",
+    "latitude": "35.0890628836",
+    "longitude": "129.0173889097",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3017212_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2718735",
+    "title": "천안홍대용과학관",
+    "address": "충청남도 천안시 동남구 수신면 장산서길 113",
+    "phone": "",
+    "latitude": "36.7396666164",
+    "longitude": "127.2956154057",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3568274_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1906578",
+    "title": "천연기념물센터",
+    "address": "대전광역시 서구 유등로 927 (만년동)",
+    "phone": "",
+    "latitude": "36.3678804286",
+    "longitude": "127.3925224386",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3565563_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1798541",
+    "title": "천적생태과학관",
+    "address": "경상남도 거창군 거함대로 3372-60 사과전시관,천적생태과학관",
+    "phone": "",
+    "latitude": "35.6745576914",
+    "longitude": "127.9233745229",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3571340_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2524183",
+    "title": "철암탄광역사촌",
+    "address": "강원특별자치도 태백시 동태백로 406 (철암동)",
+    "phone": "",
+    "latitude": "37.1144170486",
+    "longitude": "129.0372457998",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3498233_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3345718",
+    "title": "철원아트하우스",
+    "address": "강원특별자치도 철원군 동송읍 이평로34번길 20-8",
+    "phone": "",
+    "latitude": "38.2109251676",
+    "longitude": "127.2202719392",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3349568_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "229904",
+    "title": "청마문학관",
+    "address": "경상남도 통영시 망일1길 82",
+    "phone": "",
+    "latitude": "34.8450768451",
+    "longitude": "128.4352822108",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3039619_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "690984",
+    "title": "청와대 사랑채",
+    "address": "서울특별시 종로구 효자로13길 45",
+    "phone": "",
+    "latitude": "37.5824522900",
+    "longitude": "126.9725822208",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3310126_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3071158",
+    "title": "청주랜드 어린이회관",
+    "address": "충청북도 청주시 상당구 명암로 171 (명암동)",
+    "phone": "",
+    "latitude": "36.6499614196",
+    "longitude": "127.5158147711",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3071139_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1627209",
+    "title": "청주백제유물전시관",
+    "address": "충청북도 청주시 흥덕구 1순환로438번길 9",
+    "phone": "",
+    "latitude": "36.6522103207",
+    "longitude": "127.4690189071",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3057376_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1838602",
+    "title": "최무선과학관",
+    "address": "경상북도 영천시 금호읍 창산길 100-29",
+    "phone": "",
+    "latitude": "35.9077821197",
+    "longitude": "128.8810503649",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3572488_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1612096",
+    "title": "추령장승촌",
+    "address": "전북특별자치도 순창군 복흥면 추령로 1792-12",
+    "phone": "",
+    "latitude": "35.4781097935",
+    "longitude": "126.9278428056",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3573322_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2491675",
+    "title": "추억극장미림",
+    "address": "인천광역시 동구 화도진로 31 (송현동)",
+    "phone": "",
+    "latitude": "37.4755448099",
+    "longitude": "126.6343105150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3477028_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3544248",
+    "title": "추억보물섬",
+    "address": "부산광역시 중구 중구로23번길 9 (부평동1가)",
+    "phone": "",
+    "latitude": "35.0998924116",
+    "longitude": "129.0274016328",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3544192_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2756910",
+    "title": "추억의 달동네",
+    "address": "경상북도 경주시 보불로 216-8 (하동)",
+    "phone": "",
+    "latitude": "35.8035797723",
+    "longitude": "129.3120738372",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3514479_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1687039",
+    "title": "충주 민물고기전시관",
+    "address": "충청북도 충주시 충주호수로 423",
+    "phone": "",
+    "latitude": "37.0185633192",
+    "longitude": "127.9628864678",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3062009_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1938381",
+    "title": "충주고구려비전시관",
+    "address": "충청북도 충주시 중앙탑면 감노로 2319",
+    "phone": "",
+    "latitude": "37.0283295264",
+    "longitude": "127.8482076062",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3535007_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130548",
+    "title": "충주농산물가공체험교육관",
+    "address": "충청북도 충주시 동량면 충원대로 1346",
+    "phone": "",
+    "latitude": "37.0450874177",
+    "longitude": "127.9289554218",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3063710_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3045826",
+    "title": "충청남도 종합 관광 안내소",
+    "address": "충청남도 부여군 부여읍 관북리 77 종합관광안내소",
+    "phone": "",
+    "latitude": "36.2841149526",
+    "longitude": "126.9145452696",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3045817_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2614908",
+    "title": "충청북도자연과학교육원 과학체험관",
+    "address": "충청북도 청주시 상당구 대성로 150",
+    "phone": "",
+    "latitude": "36.6382456841",
+    "longitude": "127.4928060477",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3504518_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3537841",
+    "title": "취묵헌서예관",
+    "address": "충청남도 천안시 동남구 목천읍 종합휴양지1길 3",
+    "phone": "",
+    "latitude": "36.7625072359",
+    "longitude": "127.2283986029",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3537787_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2406404",
+    "title": "칠천량해전공원전시관",
+    "address": "경상남도 거제시 하청면 칠천로 265-39",
+    "phone": "",
+    "latitude": "34.9776710338",
+    "longitude": "128.6282618906",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3510642_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3582965",
+    "title": "커맥라농",
+    "address": "충청북도 옥천군 군서면 장령산로 116-93",
+    "phone": "",
+    "latitude": "36.2628811063",
+    "longitude": "127.5366235275",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3582954_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3090678",
+    "title": "코로나19 기억의공간",
+    "address": "대구광역시 중구 달구벌대로 2029 (동산동)",
+    "phone": "",
+    "latitude": "35.8662091225",
+    "longitude": "128.5856664191",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3090666_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2780342",
+    "title": "코스모40",
+    "address": "인천광역시 서구 장고개로231번길 9",
+    "phone": "",
+    "latitude": "37.4865443019",
+    "longitude": "126.6779395614",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/2834069_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "654770",
+    "title": "태백산맥문학관",
+    "address": "전라남도 보성군 벌교읍 홍암로 89-19",
+    "phone": "",
+    "latitude": "34.8492352234",
+    "longitude": "127.3522879249",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2593806_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3057144",
+    "title": "태안 농업 전시 체험관",
+    "address": "충청남도 태안군 태안읍 송암로 523",
+    "phone": "",
+    "latitude": "36.7330250948",
+    "longitude": "126.3060965614",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3057142_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2606222",
+    "title": "태화강생태관",
+    "address": "울산광역시 울주군 구영로 31 태화강생태관",
+    "phone": "052-204-1650",
+    "latitude": "35.5783953902",
+    "longitude": "129.2369923376",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/2608530_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3410708",
+    "title": "태화복합문화공간 만디",
+    "address": "울산광역시 중구 백양로 62 (성안동)",
+    "phone": "",
+    "latitude": "35.5737612241",
+    "longitude": "129.3126997469",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3410681_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2710914",
+    "title": "테디베어팜",
+    "address": "강원특별자치도 속초시 울산바위길 3",
+    "phone": "",
+    "latitude": "38.2050836408",
+    "longitude": "128.5147705470",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3528927_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "736123",
+    "title": "테라",
+    "address": "경기도 파주시 탄현면 헤이리마을길 18-33",
+    "phone": "",
+    "latitude": "37.7867680061",
+    "longitude": "126.6963350125",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/737764_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2710923",
+    "title": "테라크랩팜",
+    "address": "강원특별자치도 속초시 학사평2길 16",
+    "phone": "033-636-6363",
+    "latitude": "38.2056613614",
+    "longitude": "128.5152954813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3353569_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2663239",
+    "title": "테미오래",
+    "address": "대전광역시 중구 보문로205번길 13",
+    "phone": "",
+    "latitude": "36.3207141474",
+    "longitude": "127.4232876341",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3505827_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1718910",
+    "title": "템플스테이 홍보관",
+    "address": "서울특별시 종로구 우정국로 56",
+    "phone": "",
+    "latitude": "37.5739312489",
+    "longitude": "126.9831814961",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3050183_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2763798",
+    "title": "통영 리스타트 플랫폼",
+    "address": "경상남도 통영시 도남로 195",
+    "phone": "",
+    "latitude": "34.8294450903",
+    "longitude": "128.4258112245",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2763787_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782811",
+    "title": "통영수산과학관",
+    "address": "경상남도 통영시 산양읍 척포길 628-111",
+    "phone": "",
+    "latitude": "34.7643325905",
+    "longitude": "128.4071673316",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3580539_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2693521",
+    "title": "트라이보울",
+    "address": "인천광역시 연수구 인천타워대로 250",
+    "phone": "",
+    "latitude": "37.3941653888",
+    "longitude": "126.6350432589",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3489612_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2768192",
+    "title": "틈문화창작지대",
+    "address": "인천광역시 미추홀구 미추홀대로 691",
+    "phone": "",
+    "latitude": "37.4592363955",
+    "longitude": "126.6796929393",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3337086_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "229906",
+    "title": "파로호 안보전시관",
+    "address": "강원특별자치도 화천군 간동면 파로호로 208",
+    "phone": "",
+    "latitude": "38.0949850632",
+    "longitude": "127.7715055013",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3332183_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3543668",
+    "title": "파주 삼릉 역사문화관",
+    "address": "경기도 파주시 조리읍 삼릉로 89",
+    "phone": "",
+    "latitude": "37.7428616134",
+    "longitude": "126.8295157342",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3543661_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2764988",
+    "title": "파주라기파크",
+    "address": "경기도 파주시 회동길 390",
+    "phone": "",
+    "latitude": "37.7178732145",
+    "longitude": "126.6937760801",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/2765037_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2704779",
+    "title": "판소리성지",
+    "address": "전라남도 보성군 회천면 영천길 17-8",
+    "phone": "",
+    "latitude": "34.6798550022",
+    "longitude": "127.0698808267",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3347322_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2605804",
+    "title": "팔복예술공장",
+    "address": "전북특별자치도 전주시 덕진구 구렛들1길 46",
+    "phone": "",
+    "latitude": "35.8613803395",
+    "longitude": "127.1009591859",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3081190",
+    "title": "팝콘D스퀘어",
+    "address": "서울특별시 용산구 한강대로23길 55 (한강로3가)",
+    "phone": "",
+    "latitude": "37.5298249324",
+    "longitude": "126.9647566449",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3081189_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2366225",
+    "title": "패션주얼리전문타운",
+    "address": "대구광역시 중구 경상감영길 176 (동문동)",
+    "phone": "",
+    "latitude": "35.8718170251",
+    "longitude": "128.5967152898",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2733150",
+    "title": "평창돌문화체험관",
+    "address": "강원특별자치도 평창군 평창읍 바위공원길 111",
+    "phone": "",
+    "latitude": "37.3766359759",
+    "longitude": "128.4095414011",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3501932_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130319",
+    "title": "평창무이예술관",
+    "address": "강원특별자치도 평창군 봉평면 사리평길 233",
+    "phone": "",
+    "latitude": "37.6152822479",
+    "longitude": "128.3487564086",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3459441",
+    "title": "평택항 홍보관",
+    "address": "경기도 평택시 포승읍 평택항로 98",
+    "phone": "",
+    "latitude": "36.9701265663",
+    "longitude": "126.8475550625",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3459418_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2648051",
+    "title": "평화문화진지",
+    "address": "서울특별시 도봉구 마들로 932 (도봉동)",
+    "phone": "",
+    "latitude": "37.6907576895",
+    "longitude": "127.0464307380",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3484125_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3008421",
+    "title": "평화테마촌",
+    "address": "전라남도 여수시 향일암로 365 사단법인 여수문화 예술원",
+    "phone": "",
+    "latitude": "34.6055116778",
+    "longitude": "127.7873559899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3008419_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2951844",
+    "title": "풍수원성당 유물전시관",
+    "address": "강원특별자치도 횡성군 서원면 경강로유현1길 50",
+    "phone": "",
+    "latitude": "37.5307182100",
+    "longitude": "127.8199400621",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/2951832_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2693507",
+    "title": "플랫폼엘",
+    "address": "서울특별시 강남구 언주로133길 11 (논현동)",
+    "phone": "",
+    "latitude": "37.5161638784",
+    "longitude": "127.0343062531",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3548925_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3497960",
+    "title": "피오리움(Fiorium)",
+    "address": "전북특별자치도 남원시 소리길 50 (어현동)",
+    "phone": "",
+    "latitude": "35.4017485073",
+    "longitude": "127.3839793696",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3500205_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2762842",
+    "title": "피크닉",
+    "address": "서울특별시 중구 퇴계로6가길 30 (남창동)",
+    "phone": "",
+    "latitude": "37.5563776413",
+    "longitude": "126.9780630156",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3468011_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2778049",
+    "title": "하멜전시관",
+    "address": "전라남도 여수시 하멜로 96",
+    "phone": "",
+    "latitude": "34.7368102045",
+    "longitude": "127.7484366144",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/2796048_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130323",
+    "title": "한국가사문학관",
+    "address": "전라남도 담양군 가사문학면 가사문학로 877",
+    "phone": "",
+    "latitude": "35.1880022746",
+    "longitude": "127.0055016120",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3571427_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2767868",
+    "title": "한국가스공사 가스과학관",
+    "address": "인천광역시 연수구 인천신항대로 960 (송도동)",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3424320_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3582518",
+    "title": "한국가요촌 달하",
+    "address": "전북특별자치도 정읍시 정촌1길 23-85 (신정동)",
+    "phone": "",
+    "latitude": "35.5133931999",
+    "longitude": "126.8408385227",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3582495_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3003299",
+    "title": "한국근대문학관",
+    "address": "인천광역시 중구 신포로15번길 76 (해안동2가)",
+    "phone": "",
+    "latitude": "37.4726671326",
+    "longitude": "126.6210312507",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3001903_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2788392",
+    "title": "한국신발관",
+    "address": "부산광역시 부산진구 백양대로 227",
+    "phone": "",
+    "latitude": "35.1573442832",
+    "longitude": "129.0258252014",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "130141",
+    "title": "한국야구명예전당",
+    "address": "제주특별자치도 서귀포시 중산간서로 97-1",
+    "phone": "",
+    "latitude": "33.2605730556",
+    "longitude": "126.4984223827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3077579_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2751316",
+    "title": "한국영상자료원",
+    "address": "서울특별시 마포구 월드컵북로 400 (상암동)",
+    "phone": "",
+    "latitude": "37.5805038139",
+    "longitude": "126.8899064813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3545448_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1907759",
+    "title": "한국잡월드",
+    "address": "경기도 성남시 분당구 분당수서로 501 (정자동)",
+    "phone": "",
+    "latitude": "37.3785478072",
+    "longitude": "127.1064091409",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3053282_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3414709",
+    "title": "한국전선문화관",
+    "address": "대구광역시 중구 북성로 104-11 (향촌동)",
+    "phone": "",
+    "latitude": "35.8738945176",
+    "longitude": "128.5939960269",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3497166_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782184",
+    "title": "한산모시관",
+    "address": "충청남도 서천군 한산면 충절로 1089",
+    "phone": "",
+    "latitude": "36.0799890767",
+    "longitude": "126.7987165698",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3566615_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3080852",
+    "title": "한생연 실험누리과학관",
+    "address": "서울특별시 강남구 도곡로 408 (대치동)",
+    "phone": "",
+    "latitude": "37.4966637406",
+    "longitude": "127.0552604534",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3080850_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2753817",
+    "title": "한생연 휴먼탐구과학관",
+    "address": "서울특별시 서초구 신반포로3길 8 (반포동)",
+    "phone": "",
+    "latitude": "37.5021924286",
+    "longitude": "126.9869165183",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3393138_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3012716",
+    "title": "한생연융합교육과학관",
+    "address": "서울특별시 종로구 성균관로15길 32 (명륜1가)",
+    "phone": "",
+    "latitude": "37.5892797098",
+    "longitude": "126.9968353725",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2759936",
+    "title": "한생연인간과로봇과학관",
+    "address": "서울특별시 송파구 올림픽로 145",
+    "phone": "",
+    "latitude": "37.5120153076",
+    "longitude": "127.0870265723",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/2790581_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3440381",
+    "title": "한식문화공간 이음",
+    "address": "서울특별시 종로구 북촌로 18 (재동)",
+    "phone": "",
+    "latitude": "37.5784557709",
+    "longitude": "126.9858672342",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3045072",
+    "title": "한양도성유적전시관",
+    "address": "서울특별시 중구 소월로 99 (회현동1가)",
+    "phone": "",
+    "latitude": "37.5542390682",
+    "longitude": "126.9818155115",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3458814_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2998700",
+    "title": "한울에너지팜",
+    "address": "경상북도 울진군 울진북로 2040",
+    "phone": "",
+    "latitude": "37.0971506240",
+    "longitude": "129.3765077672",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3368708",
+    "title": "한지가헌",
+    "address": "서울특별시 종로구 북촌로 31-9 (재동)",
+    "phone": "",
+    "latitude": "37.5795917241",
+    "longitude": "126.9844201117",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3368670_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2633913",
+    "title": "한탄강 지질공원센터",
+    "address": "경기도 포천시 영북면 비둘기낭길 55",
+    "phone": "",
+    "latitude": "38.0732774495",
+    "longitude": "127.2246811432",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3496497_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2784047",
+    "title": "함안수박전시관",
+    "address": "경상남도 함안군 군북면 월촌리 1599",
+    "phone": "",
+    "latitude": "35.3013509739",
+    "longitude": "128.2978126805",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3538197_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3451794",
+    "title": "해성아트베이",
+    "address": "부산광역시 남구 분포로 101 (용호동)",
+    "phone": "",
+    "latitude": "35.1327486901",
+    "longitude": "129.1153458655",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3459571_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2783045",
+    "title": "해양테마체험관 (당진)",
+    "address": "충청남도 당진시 신평면 삽교천3길 79",
+    "phone": "",
+    "latitude": "36.8905825623",
+    "longitude": "126.8243898827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3567695_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2019594",
+    "title": "해양환경공단 해양환경교육원(부산)",
+    "address": "부산광역시 영도구 해양로301번길 23",
+    "phone": "",
+    "latitude": "35.0802260985",
+    "longitude": "129.0779422192",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3336540_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1925403",
+    "title": "해우재",
+    "address": "경기도 수원시 장안구 장안로458번길 9 (이목동)",
+    "phone": "",
+    "latitude": "37.3191857248",
+    "longitude": "126.9781863438",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3020643_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3027942",
+    "title": "해운대관광안내소",
+    "address": "부산광역시 해운대구 해운대해변로 264 (우동)",
+    "phone": "",
+    "latitude": "35.1591465672",
+    "longitude": "129.1603106766",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3027870_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3489545",
+    "title": "해파랑길 관광안내소",
+    "address": "부산광역시 남구 오륙도로 137 (용호동)",
+    "phone": "",
+    "latitude": "35.1015662107",
+    "longitude": "129.1230460500",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3489536_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "759866",
+    "title": "행복한 마음",
+    "address": "경기도 파주시 문발로 197",
+    "phone": "",
+    "latitude": "37.7120182096",
+    "longitude": "126.6863380371",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3509721_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1988024",
+    "title": "향촌문화관",
+    "address": "대구광역시 중구 중앙대로 449",
+    "phone": "",
+    "latitude": "35.8733612482",
+    "longitude": "128.5941849140",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3021063_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "750105",
+    "title": "헌책방 보물섬",
+    "address": "경기도 파주시 회동길 145 (문발동)",
+    "phone": "",
+    "latitude": "37.7086519509",
+    "longitude": "126.6872324943",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3509698_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3085034",
+    "title": "헤레디움",
+    "address": "대전광역시 동구 대전로 735 (인동)",
+    "phone": "",
+    "latitude": "36.3256249136",
+    "longitude": "127.4354725232",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3084458_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "735890",
+    "title": "헤이리 예술마을 동화나라",
+    "address": "경기도 파주시 탄현면 헤이리마을길 93-20",
+    "phone": "",
+    "latitude": "37.7907231397",
+    "longitude": "126.6985402541",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/737637_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2782872",
+    "title": "헤이리스",
+    "address": "경기도 파주시 탄현면 헤이리마을길 7",
+    "phone": "",
+    "latitude": "37.7883427937",
+    "longitude": "126.6947323369",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3509702_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1911160",
+    "title": "헬로키티아일랜드",
+    "address": "제주특별자치도 서귀포시 안덕면 한창로 340",
+    "phone": "",
+    "latitude": "33.2900841569",
+    "longitude": "126.3521344149",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3548380_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2660801",
+    "title": "현대 모터스튜디오 고양",
+    "address": "경기도 고양시 일산서구 킨텍스로 217-6",
+    "phone": "",
+    "latitude": "37.6662607425",
+    "longitude": "126.7476976033",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2732346",
+    "title": "현대 모터스튜디오 부산",
+    "address": "부산광역시 수영구 구락로123번길 20 (망미동)",
+    "phone": "",
+    "latitude": "35.1776908827",
+    "longitude": "129.1154696223",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3488693_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2831799",
+    "title": "현대카드 스토리지",
+    "address": "서울특별시 용산구 이태원로 248",
+    "phone": "",
+    "latitude": "37.5368692063",
+    "longitude": "127.0008809329",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "1691210",
+    "title": "호암공원생태전시관",
+    "address": "충청북도 충주시 상아배이길 84",
+    "phone": "",
+    "latitude": "36.9604359286",
+    "longitude": "127.9225362021",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3062013_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3033280",
+    "title": "홍티예술촌",
+    "address": "부산광역시 사하구 홍티로 76 (다대동)",
+    "phone": "",
+    "latitude": "35.0613260654",
+    "longitude": "128.9611390001",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3492499_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1619680",
+    "title": "화도진전시관",
+    "address": "인천광역시 동구 화도진로 114 (화수동)",
+    "phone": "",
+    "latitude": "37.4813190346",
+    "longitude": "126.6283914500",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3521586_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3013880",
+    "title": "화성ICT 생활문화센터",
+    "address": "경기도 화성시 팔탄면 시청로 895-20",
+    "phone": "",
+    "latitude": "37.1703124558",
+    "longitude": "126.8870237597",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3003980_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3489556",
+    "title": "화순군립 운주사문화관",
+    "address": "전라남도 화순군 도암면 천태로 91-20",
+    "phone": "",
+    "latitude": "34.9180833319",
+    "longitude": "126.8776696356",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3489550_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1922074",
+    "title": "화진포역사안보전시관",
+    "address": "강원특별자치도 고성군 현내면 이승만별장길 33",
+    "phone": "",
+    "latitude": "38.4710316647",
+    "longitude": "128.4367915460",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3394010_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "1757894",
+    "title": "화천생태영상센터",
+    "address": "강원특별자치도 화천군 하남면 용화산로 1357",
+    "phone": "",
+    "latitude": "38.0902397809",
+    "longitude": "127.6973013063",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3485900_image2_1.jpeg",
+    "category": "전시관"
+  },
+  {
+    "id": "3578788",
+    "title": "화포천습지과학관",
+    "address": "경상남도 김해시 진영읍 진영로265번길 330",
+    "phone": "",
+    "latitude": "35.3074145506",
+    "longitude": "128.7773872121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3578778_image2_1.jpeg",
+    "category": "전시관"
+  },
+  {
+    "id": "1679930",
+    "title": "환경문화전시장",
+    "address": "충청북도 괴산군 청천면 괴산로 1248",
+    "phone": "",
+    "latitude": "36.6550288754",
+    "longitude": "127.7454829353",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3334546_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "750126",
+    "title": "활판공방",
+    "address": "경기도 파주시 소라지로 333 (송촌동)",
+    "phone": "",
+    "latitude": "37.7511414889",
+    "longitude": "126.6898532791",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2364867_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3081737",
+    "title": "황금박쥐특별전시관",
+    "address": "전라남도 함평군 함평읍 곤재로 36-13",
+    "phone": "",
+    "latitude": "35.0556534628",
+    "longitude": "126.5165703770",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3081732_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2760939",
+    "title": "황룡사역사문화관",
+    "address": "경상북도 경주시 임해로 64-19 (구황동)",
+    "phone": "",
+    "latitude": "35.8382937612",
+    "longitude": "129.2307271943",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3500576_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2614913",
+    "title": "횡성댐 물문화관",
+    "address": "강원특별자치도 횡성군 갑천면 섬강로 1055",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/2519229_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2952000",
+    "title": "횡성한우체험관",
+    "address": "강원특별자치도 횡성군 문예로 41 횡성한우체험관",
+    "phone": "",
+    "latitude": "37.4918895392",
+    "longitude": "127.9780491205",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3524899_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3352979",
+    "title": "효석달빛언덕",
+    "address": "강원특별자치도 평창군 봉평면 효석문학길 54",
+    "phone": "",
+    "latitude": "37.6122357235",
+    "longitude": "128.3669270822",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3384890_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2811110",
+    "title": "훈데르트바서파크",
+    "address": "제주특별자치도 제주시 우도면 우도해안길 32-12",
+    "phone": "",
+    "latitude": "33.4930408093",
+    "longitude": "126.9549441872",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "3487362",
+    "title": "1934 기차 동래역",
+    "address": "부산광역시 동래구 낙민로 28 (낙민동)",
+    "phone": "",
+    "latitude": "35.1978437104",
+    "longitude": "129.0900546133",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3487355_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2784143",
+    "title": "3D과학체험관",
+    "address": "경상남도 양산시 웅상대로 1009-1 (주진동)",
+    "phone": "",
+    "latitude": "35.3899095005",
+    "longitude": "129.1557852499",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3502205_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130663",
+    "title": "40계단 문화관",
+    "address": "부산광역시 중구 동광길 49",
+    "phone": "",
+    "latitude": "35.1050336342",
+    "longitude": "129.0345397607",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3492323_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3519019",
+    "title": "4233마음센터 연남점",
+    "address": "서울특별시 마포구 월드컵북로4길 43 (동교동)",
+    "phone": "",
+    "latitude": "37.5582625213",
+    "longitude": "126.9215875535",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3518997_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3029585",
+    "title": "5·18기념문화센터",
+    "address": "광주광역시 서구 내방로 152 (쌍촌동)",
+    "phone": "",
+    "latitude": "35.1583447873",
+    "longitude": "126.8575682135",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3029557_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "736620",
+    "title": "6·25 전쟁체험전시관",
+    "address": "강원특별자치도 고성군 현내면 금강산로 481",
+    "phone": "",
+    "latitude": "38.5148372895",
+    "longitude": "128.4178946700",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3394017_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3333975",
+    "title": "(구)주봉초 와동분교장",
+    "address": "강원특별자치도 홍천군 홍천읍 와동로219번길 24",
+    "phone": "033-439-5844",
+    "latitude": "37.7268088664",
+    "longitude": "127.9420343238",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3465454_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "2825248",
+    "title": "e스포츠 명예의 전당",
+    "address": "서울특별시 마포구 매봉산로 31 S-PLEX CENTER",
+    "phone": "",
+    "latitude": "37.5757793646",
+    "longitude": "126.8899871626",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/2825236_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2650054",
+    "title": "GS칼텍스 예울마루",
+    "address": "전라남도 여수시 예울마루로 100",
+    "phone": "",
+    "latitude": "34.7507238766",
+    "longitude": "127.6654490751",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/2650048_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "2751339",
+    "title": "KBS온",
+    "address": "서울특별시 영등포구 여의공원로 13",
+    "phone": "",
+    "latitude": "37.5260245145",
+    "longitude": "126.9167444600",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/2784524_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3080558",
+    "title": "kia360",
+    "address": "서울특별시 강남구 압구정로 417 (압구정동)",
+    "phone": "",
+    "latitude": "37.5276127030",
+    "longitude": "127.0429023684",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3080551_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3481687",
+    "title": "KOICA 월드프렌즈빌리지",
+    "address": "강원특별자치도 영월군 주천면 다래골길 53",
+    "phone": "",
+    "latitude": "37.2791746945",
+    "longitude": "128.2464811763",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3481657_image2_1.JPG",
+    "category": "전시관"
+  },
+  {
+    "id": "3047617",
+    "title": "MUSEUM 209",
+    "address": "서울특별시 송파구 잠실로 209 (신천동)",
+    "phone": "",
+    "latitude": "37.5139237687",
+    "longitude": "127.1063803122",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3047631_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "3308095",
+    "title": "OPCI",
+    "address": "서울특별시 영등포구 영중로 15 (영등포동4가)",
+    "phone": "",
+    "latitude": "37.5178335971",
+    "longitude": "126.9053818370",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3423690_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "1062450",
+    "title": "SJ쿤스트할레",
+    "address": "서울특별시 강남구 언주로148길 5 (논현동)",
+    "phone": "",
+    "latitude": "37.5205606010",
+    "longitude": "127.0349338491",
+    "image": "",
+    "category": "전시관"
+  },
+  {
+    "id": "2833824",
+    "title": "TINC",
+    "address": "서울특별시 성북구 동소문로10길 34-16 명성교회",
+    "phone": "",
+    "latitude": "37.5888800082",
+    "longitude": "127.0108618831",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/2833751_image2_1.jpg",
+    "category": "전시관"
+  },
+  {
+    "id": "130711",
+    "title": "수원시립만석전시관",
+    "address": "경기도 수원시 장안구 송정로 19",
+    "phone": "",
+    "latitude": "37.2970303374",
+    "longitude": "126.9994211461",
+    "image": "",
+    "category": "전시관",
+    "original_category": "미술관화랑"
+  }
+]

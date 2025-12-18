@@ -1,0 +1,682 @@
+[
+  {
+    "id": "2605187",
+    "title": "강릉 대도호부 관아",
+    "address": "강원특별자치도 강릉시 임영로131번길 6",
+    "phone": "",
+    "latitude": "37.7532767444",
+    "longitude": "128.8921226461",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3378379_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "127110",
+    "title": "강진 전라병영성",
+    "address": "전라남도 강진군 병영면 병영성로 175",
+    "phone": "",
+    "latitude": "34.7199712691",
+    "longitude": "126.8171492797",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3533675_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1614793",
+    "title": "강화유수부 동헌",
+    "address": "인천광역시 강화군 강화읍 북문길 42",
+    "phone": "",
+    "latitude": "37.7508851202",
+    "longitude": "126.4854359021",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3528604_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1615571",
+    "title": "강화유수부이방청",
+    "address": "인천광역시 강화군 강화읍 북문길 42",
+    "phone": "",
+    "latitude": "37.7515350315",
+    "longitude": "126.4846998401",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3528623_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "128033",
+    "title": "거제현 관아",
+    "address": "경상남도 거제시 거제면 동상리",
+    "phone": "",
+    "latitude": "34.8508373276",
+    "longitude": "128.5911240482",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3521093_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1627302",
+    "title": "결성동헌",
+    "address": "충청남도 홍성군 결성면 홍남서로738번길 23",
+    "phone": "",
+    "latitude": "36.5240393726",
+    "longitude": "126.5451110316",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3357051_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "147656",
+    "title": "경기전",
+    "address": "전북특별자치도 전주시 완산구 태조로 44 (풍남동3가)",
+    "phone": "",
+    "latitude": "35.8142143363",
+    "longitude": "127.1500366062",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3422574_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126508",
+    "title": "경복궁",
+    "address": "서울특별시 종로구 사직로 161 (세종로)",
+    "phone": "",
+    "latitude": "37.5760836609",
+    "longitude": "126.9767375783",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3487598_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "128526",
+    "title": "경주 동궁과 월지",
+    "address": "경상북도 경주시 원화로 102",
+    "phone": "",
+    "latitude": "35.8352023996",
+    "longitude": "129.2283747104",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/2612562_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126484",
+    "title": "경희궁",
+    "address": "서울특별시 종로구 새문안로 45",
+    "phone": "",
+    "latitude": "37.5704425020",
+    "longitude": "126.9685079323",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3482237_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1606042",
+    "title": "경희궁 숭정전",
+    "address": "서울특별시 중구 장충동2가",
+    "phone": "",
+    "latitude": "37.5577528954",
+    "longitude": "127.0011136538",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/1569195_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126460",
+    "title": "관덕정(제주)",
+    "address": "제주특별자치도 제주시 관덕로 19",
+    "phone": "",
+    "latitude": "33.5132954930",
+    "longitude": "126.5219701925",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3403535_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "793086",
+    "title": "괴산 청안 안민헌",
+    "address": "충청북도 괴산군 청안면 청안읍내로2길 5",
+    "phone": "",
+    "latitude": "36.7719635309",
+    "longitude": "127.6393752881",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3570916_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1433438",
+    "title": "괴산동헌",
+    "address": "충청북도 괴산군 괴산읍 읍내로2길 65-20",
+    "phone": "",
+    "latitude": "36.8104035658",
+    "longitude": "127.7924660259",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3334585_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1610651",
+    "title": "구암정",
+    "address": "전북특별자치도 순창군 동계면 구미리",
+    "phone": "",
+    "latitude": "35.4357026839",
+    "longitude": "127.2051359791",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3573406_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1599176",
+    "title": "김제동헌",
+    "address": "전북특별자치도 김제시 동헌4길 46-1 (교동)",
+    "phone": "",
+    "latitude": "35.8007501353",
+    "longitude": "126.8821413702",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3556600_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126412",
+    "title": "나주 금성관",
+    "address": "전라남도 나주시 금성관길 8",
+    "phone": "",
+    "latitude": "35.0333954147",
+    "longitude": "126.7165671197",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3533503_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2751248",
+    "title": "남한산성행궁",
+    "address": "경기도 광주시 남한산성면 산성리 935-1",
+    "phone": "",
+    "latitude": "37.4788986337",
+    "longitude": "127.1815300290",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3350256_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2782886",
+    "title": "대풍헌",
+    "address": "경상북도 울진군 기성면 구산봉산로 105-2",
+    "phone": "",
+    "latitude": "36.7612908473",
+    "longitude": "129.4702540694",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/2794601_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1166019",
+    "title": "대흥동헌",
+    "address": "충청남도 예산군 대흥면 동서리",
+    "phone": "",
+    "latitude": "36.6067479597",
+    "longitude": "126.7884146792",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3560517_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126509",
+    "title": "덕수궁",
+    "address": "서울특별시 중구 세종대로 99 (정동)",
+    "phone": "",
+    "latitude": "37.5651071556",
+    "longitude": "126.9765906796",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3584644_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1828571",
+    "title": "독립관",
+    "address": "서울특별시 서대문구 통일로 251 (현저동)",
+    "phone": "",
+    "latitude": "37.5746723659",
+    "longitude": "126.9573421635",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/2413928_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2792784",
+    "title": "밀양관아 (밀양관아지)",
+    "address": "경상남도 밀양시 중앙로 348 (내일동)",
+    "phone": "",
+    "latitude": "35.4943181071",
+    "longitude": "128.7543535537",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3369445_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1113314",
+    "title": "부평도호부청사",
+    "address": "인천광역시 계양구 어사대로 20 (계산동)",
+    "phone": "",
+    "latitude": "37.5417359395",
+    "longitude": "126.7249448437",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3523923_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "917778",
+    "title": "서산객사",
+    "address": "충청남도 서산시 동헌로 149",
+    "phone": "",
+    "latitude": "36.7828745986",
+    "longitude": "126.4504488361",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3560064_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "127454",
+    "title": "서울 운현궁",
+    "address": "서울특별시 종로구 삼일대로 464",
+    "phone": "",
+    "latitude": "37.5764588036",
+    "longitude": "126.9871421746",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3577706_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "128115",
+    "title": "선화당(공주)",
+    "address": "충청남도 공주시 웅진동",
+    "phone": "",
+    "latitude": "36.4660475194",
+    "longitude": "127.1098145563",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3396425_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "126190",
+    "title": "성주 세종대왕자 태실",
+    "address": "경상북도 성주군 월항면 인촌리",
+    "phone": "",
+    "latitude": "36.0145453008",
+    "longitude": "128.2949240784",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3564454_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "736662",
+    "title": "수원 화령전",
+    "address": "경기도 수원시 팔달구 신풍로23번길 15 (신풍동)",
+    "phone": "",
+    "latitude": "37.2832821647",
+    "longitude": "127.0125703370",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3334608_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1316476",
+    "title": "여산동헌",
+    "address": "전북특별자치도 익산시 여산면 동헌길 13",
+    "phone": "",
+    "latitude": "36.0593241807",
+    "longitude": "127.0857386748",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3564223_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126386",
+    "title": "여수 진남관",
+    "address": "전라남도 여수시 동문로 11",
+    "phone": "",
+    "latitude": "34.7418705464",
+    "longitude": "127.7367486187",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3520798_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1064469",
+    "title": "연무대(동장대)",
+    "address": "경기도 수원시 팔달구 창룡대로103번길 20",
+    "phone": "",
+    "latitude": "37.2884234215",
+    "longitude": "127.0229636943",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2367186_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1678406",
+    "title": "연풍향청",
+    "address": "충청북도 괴산군 연풍면 중앙로 44",
+    "phone": "",
+    "latitude": "36.7631599411",
+    "longitude": "127.9961241142",
+    "image": "",
+    "category": "고궁"
+  },
+  {
+    "id": "129049",
+    "title": "운봉관",
+    "address": "경상북도 청송군 청송읍 금월로 269",
+    "phone": "",
+    "latitude": "36.4331563533",
+    "longitude": "129.0554838102",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3531352_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2502653",
+    "title": "울산 경상좌도병영성",
+    "address": "울산광역시 중구 서동",
+    "phone": "",
+    "latitude": "35.5769420085",
+    "longitude": "129.3438302741",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3510570_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2502612",
+    "title": "울산동헌 및 내아",
+    "address": "울산광역시 중구 동헌길 167",
+    "phone": "",
+    "latitude": "35.5577409465",
+    "longitude": "129.3202856482",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3341921_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "252557",
+    "title": "원주 강원감영",
+    "address": "강원특별자치도 원주시 원일로 85",
+    "phone": "",
+    "latitude": "37.3478140160",
+    "longitude": "127.9504947193",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3479393_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1627345",
+    "title": "음성 경호정",
+    "address": "충청북도 음성군 음성읍 읍내리",
+    "phone": "",
+    "latitude": "36.9322488265",
+    "longitude": "127.6914188812",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3340628_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "129341",
+    "title": "인천도호부관아",
+    "address": "인천광역시 미추홀구 매소홀로 553",
+    "phone": "",
+    "latitude": "37.4394720720",
+    "longitude": "126.6823626896",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3079385_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2703686",
+    "title": "작원관지",
+    "address": "경상남도 밀양시 삼랑진읍 검세리",
+    "phone": "",
+    "latitude": "35.3975921861",
+    "longitude": "128.8676351911",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3337777_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126910",
+    "title": "적상산사고지",
+    "address": "전북특별자치도 무주군 적상면 산성로 960",
+    "phone": "",
+    "latitude": "35.9486447326",
+    "longitude": "127.6946151904",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3064606_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "2763965",
+    "title": "제승당",
+    "address": "경상남도 통영시 한산일주로 70 제승당",
+    "phone": "",
+    "latitude": "34.7960941315",
+    "longitude": "128.4744856404",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3558314_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "128641",
+    "title": "제주목 관아",
+    "address": "제주특별자치도 제주시 관덕로 25",
+    "phone": "",
+    "latitude": "33.5137037819",
+    "longitude": "126.5220646195",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3403602_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1685484",
+    "title": "제천 청풍 금병헌",
+    "address": "충청북도 제천시 청풍면 청풍호로 2048",
+    "phone": "",
+    "latitude": "37.0039938818",
+    "longitude": "128.1724902977",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3348978_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1685168",
+    "title": "제천 청풍 응청각",
+    "address": "충청북도 제천시 청풍면 청풍호로 2048",
+    "phone": "",
+    "latitude": "37.0053075896",
+    "longitude": "128.1708792933",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3349867_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1017547",
+    "title": "중명전",
+    "address": "서울특별시 중구 정동길 41-11 (정동)",
+    "phone": "",
+    "latitude": "37.5667846662",
+    "longitude": "126.9725521115",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3578397_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126511",
+    "title": "창경궁",
+    "address": "서울특별시 종로구 창경궁로 185 (와룡동)",
+    "phone": "",
+    "latitude": "37.5789336838",
+    "longitude": "126.9964634775",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3536794_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2606158",
+    "title": "창경궁 명정전",
+    "address": "서울특별시 종로구 창경궁로 185 (와룡동)",
+    "phone": "",
+    "latitude": "37.5789336838",
+    "longitude": "126.9964634775",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/2616930_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1604941",
+    "title": "창덕궁 낙선재",
+    "address": "서울특별시 종로구 율곡로 99 (와룡동)",
+    "phone": "",
+    "latitude": "37.5777031595",
+    "longitude": "126.9902446339",
+    "image": "",
+    "category": "고궁"
+  },
+  {
+    "id": "127642",
+    "title": "창덕궁과 후원 [유네스코 세계유산]",
+    "address": "서울특별시 종로구 율곡로 99 (와룡동)",
+    "phone": "",
+    "latitude": "37.5777031595",
+    "longitude": "126.9902446339",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3092503_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "3036061",
+    "title": "창렬서원",
+    "address": "경상북도 안동시 서후면 교리새마을길 73",
+    "phone": "",
+    "latitude": "36.5902422658",
+    "longitude": "128.6700717432",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3036035_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1624502",
+    "title": "창평 남극루",
+    "address": "전라남도 담양군 창평면 창평현로 669",
+    "phone": "",
+    "latitude": "35.2354054998",
+    "longitude": "127.0200213544",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3562557_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2793042",
+    "title": "천진궁",
+    "address": "경상남도 밀양시 중앙로 324 (내일동)",
+    "phone": "",
+    "latitude": "35.4917461810",
+    "longitude": "128.7547091490",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3582816_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "3056238",
+    "title": "청와대칠궁",
+    "address": "서울특별시 종로구 창의문로 12 (궁정동)",
+    "phone": "",
+    "latitude": "37.5847881362",
+    "longitude": "126.9729543430",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3056223_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2434855",
+    "title": "충주 관아공원",
+    "address": "충청북도 충주시 관아1길 21",
+    "phone": "",
+    "latitude": "36.9705377917",
+    "longitude": "127.9359458203",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3561224_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1627247",
+    "title": "충주 제금당",
+    "address": "충청북도 충주시 관아1길 21",
+    "phone": "",
+    "latitude": "36.9707377699",
+    "longitude": "127.9360096976",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3349878_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1690248",
+    "title": "충주 청녕헌",
+    "address": "충청북도 충주시 관아1길 21",
+    "phone": "",
+    "latitude": "36.9705377917",
+    "longitude": "127.9359458203",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3063542_image2_1.JPG",
+    "category": "고궁"
+  },
+  {
+    "id": "1626923",
+    "title": "태안 목애당",
+    "address": "충청남도 태안군 태안읍 백화로 54",
+    "phone": "",
+    "latitude": "36.7577276340",
+    "longitude": "126.2963690126",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3493396_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1626331",
+    "title": "태인동헌",
+    "address": "전북특별자치도 정읍시 태인면 동헌길 24",
+    "phone": "",
+    "latitude": "35.6535763021",
+    "longitude": "126.9460505850",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/1606442_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126867",
+    "title": "태조대왕 태실",
+    "address": "충청남도 금산군 추부면 마전리",
+    "phone": "",
+    "latitude": "36.1989896970",
+    "longitude": "127.4532326993",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3559888_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "231923",
+    "title": "통영 삼도수군통제영",
+    "address": "경상남도 통영시 세병로 27",
+    "phone": "",
+    "latitude": "34.8477207784",
+    "longitude": "128.4232443009",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/2987148_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "126198",
+    "title": "통영 세병관",
+    "address": "경상남도 통영시 세병로 27",
+    "phone": "",
+    "latitude": "34.8477429972",
+    "longitude": "128.4231637515",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3580566_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "2702596",
+    "title": "평창 오대산사고",
+    "address": "강원특별자치도 평창군 진부면 오대산로 713-77",
+    "phone": "",
+    "latitude": "37.7562729848",
+    "longitude": "128.5725013801",
+    "image": "",
+    "category": "고궁"
+  },
+  {
+    "id": "1626645",
+    "title": "홍산객사",
+    "address": "충청남도 부여군 홍산면 북촌로 47",
+    "phone": "",
+    "latitude": "36.2158450375",
+    "longitude": "126.7566778923",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3348728_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1626625",
+    "title": "홍산동헌",
+    "address": "충청남도 부여군 홍산면 동헌로 38",
+    "phone": "",
+    "latitude": "36.2147923550",
+    "longitude": "126.7552308277",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3336441_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "129437",
+    "title": "화성행궁",
+    "address": "경기도 수원시 팔달구 정조로 825 (남창동)",
+    "phone": "",
+    "latitude": "37.2818685077",
+    "longitude": "127.0163894742",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3448371_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1604450",
+    "title": "황학정",
+    "address": "서울특별시 종로구 사직로9길 15-32 (사직동)",
+    "phone": "",
+    "latitude": "37.5771000006",
+    "longitude": "126.9651024987",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3350631_image2_1.jpg",
+    "category": "고궁"
+  },
+  {
+    "id": "1597891",
+    "title": "흥성동헌",
+    "address": "전북특별자치도 고창군 흥덕면 동헌길 4",
+    "phone": "",
+    "latitude": "35.5225092259",
+    "longitude": "126.7001924599",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3362382_image2_1.JPG",
+    "category": "고궁"
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "2366244",
+    "title": "대구국제공항 면세점",
+    "address": "대구광역시 동구 공항로 221",
+    "phone": "1800-1160",
+    "latitude": "35.9000395862",
+    "longitude": "128.6376608952",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/2366246_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "132178",
+    "title": "동화면세점",
+    "address": "서울특별시 종로구 세종대로 149 (세종로)",
+    "phone": "02-399-3270",
+    "latitude": "37.5696232899",
+    "longitude": "126.9761544804",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/2589341_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "132318",
+    "title": "롯데면세점 본점",
+    "address": "서울특별시 중구 을지로 30 (소공동)",
+    "phone": "02-759-6660~2",
+    "latitude": "37.5654016461",
+    "longitude": "126.9810458210",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/2871621_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "132531",
+    "title": "신라면세점 서울점",
+    "address": "서울특별시 중구 동호로 249 (장충동2가)",
+    "phone": "",
+    "latitude": "37.5588667447",
+    "longitude": "127.0061409418",
+    "image": "",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "132177",
+    "title": "신라면세점(제주점)",
+    "address": "제주특별자치도 제주시 노연로 69",
+    "phone": "1688-1110",
+    "latitude": "33.4862784922",
+    "longitude": "126.4875960157",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/2977602_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "2359162",
+    "title": "신라아이파크면세점",
+    "address": "서울특별시 용산구 한강대로23길 55 (한강로3가)",
+    "phone": "",
+    "latitude": "37.5298249324",
+    "longitude": "126.9647566449",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3497566_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "2708336",
+    "title": "제주관광공사 중문면세점",
+    "address": "제주특별자치도 서귀포시 중문관광로 224",
+    "phone": "",
+    "latitude": "33.2413184576",
+    "longitude": "126.4244653377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3477413_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "132487",
+    "title": "JDC국내선면세점 제주국제공항점",
+    "address": "제주특별자치도 제주시 공항로 2",
+    "phone": "064-740-9900",
+    "latitude": "33.5071207433",
+    "longitude": "126.4947726967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3477681_image2_1.jpg",
+    "category": "면세점",
+    "original_category": "백화점"
+  },
+  {
+    "id": "2753682",
+    "title": "판타지움",
+    "address": "경기도 수원시 영통구 덕영대로 1566 (영통동)",
+    "phone": "",
+    "latitude": "37.2451874572",
+    "longitude": "127.0619141469",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2753613_image2_1.jpg",
+    "category": "면세점"
+  }
+]

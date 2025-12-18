@@ -1,0 +1,582 @@
+[
+  {
+    "id": "131845",
+    "title": "갈매기배낚시",
+    "address": "인천광역시 동구 보세로 6-1",
+    "phone": "",
+    "latitude": "37.4876876432",
+    "longitude": "126.6229917663",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3477043_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131542",
+    "title": "갬주리코지(볼락코지)",
+    "address": "제주특별자치도 서귀포시 대정읍 가파로",
+    "phone": "",
+    "latitude": "33.1738429901",
+    "longitude": "126.2741882040",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/2676399_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2752162",
+    "title": "거금해양낚시공원",
+    "address": "전라남도 고흥군 금산면 신촌내동길 18-132",
+    "phone": "",
+    "latitude": "34.4694652638",
+    "longitude": "127.1045912779",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2752192_image2_1.jpeg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2833823",
+    "title": "경민호",
+    "address": "강원특별자치도 강릉시 주문진읍 주문리",
+    "phone": "",
+    "latitude": "37.8947536355",
+    "longitude": "128.8319264685",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/2833784_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131629",
+    "title": "구을비도",
+    "address": "경상남도 통영시 한산면 매죽리",
+    "phone": "055-650-4553",
+    "latitude": "34.5796057333",
+    "longitude": "128.5493792431",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131272",
+    "title": "금진방파제",
+    "address": "강원특별자치도 강릉시 옥계면 금진리",
+    "phone": "033-660-3626",
+    "latitude": "37.6504723123",
+    "longitude": "129.0524725126",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3069333_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131815",
+    "title": "당진 장고항",
+    "address": "충청남도 당진시 석문면 장고항로",
+    "phone": "041-360-8220",
+    "latitude": "37.0312922335",
+    "longitude": "126.5595239472",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3567533_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "3083600",
+    "title": "대천항 아인스월드",
+    "address": "충청남도 보령시 대천항중앙길 2 (신흑동)",
+    "phone": "",
+    "latitude": "36.3271642376",
+    "longitude": "126.5145217314",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3083594_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2768071",
+    "title": "동검레저바다낚시",
+    "address": "인천광역시 강화군 길상면 동검길65번길 93-6",
+    "phone": "",
+    "latitude": "37.5862743699",
+    "longitude": "126.5206206021",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2702210",
+    "title": "동명 방파제",
+    "address": "강원특별자치도 속초시 영금정로 46",
+    "phone": "",
+    "latitude": "38.2114873475",
+    "longitude": "128.6009597378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3394169_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131277",
+    "title": "동호항방파제",
+    "address": "경상남도 통영시 정량동",
+    "phone": "055-650-0580",
+    "latitude": "34.8421717211",
+    "longitude": "128.4412706549",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3556843_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2782566",
+    "title": "득량만바다낚시공원",
+    "address": "전라남도 보성군 득량면 선소당산길 36-13",
+    "phone": "",
+    "latitude": "34.6949525235",
+    "longitude": "127.1880311942",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2788413_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131273",
+    "title": "마량 방파제",
+    "address": "충청남도 서천군 서면 서인로 56",
+    "phone": "041-950-4114",
+    "latitude": "36.1294478189",
+    "longitude": "126.5036250656",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3513963_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2817814",
+    "title": "배안타는 볼락 밤낚시 체험",
+    "address": "경상남도 남해군 동부대로960번길 14-13",
+    "phone": "",
+    "latitude": "34.7879486423",
+    "longitude": "128.0506422369",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/2817807_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131369",
+    "title": "벌말선착장",
+    "address": "충청남도 서산시 대산읍 오지리",
+    "phone": "041-660-2601",
+    "latitude": "36.9613491909",
+    "longitude": "126.3335102359",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3531424_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131114",
+    "title": "비응도",
+    "address": "전북특별자치도 군산시 외항로 1391",
+    "phone": "",
+    "latitude": "35.9478967019",
+    "longitude": "126.5242195567",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131598",
+    "title": "비진도 외항",
+    "address": "경상남도 통영시 한산면 비진리",
+    "phone": "",
+    "latitude": "34.7165277385",
+    "longitude": "128.4587974243",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3565223_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131094",
+    "title": "사량도 바다낚시",
+    "address": "경상남도 통영시 사량면",
+    "phone": "055-650-0580",
+    "latitude": "34.8455146347",
+    "longitude": "128.2201676171",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/2016230_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131692",
+    "title": "새천년도로변",
+    "address": "강원특별자치도 삼척시 삼척항길 196",
+    "phone": "033-570-3915",
+    "latitude": "37.4362635512",
+    "longitude": "129.1881530710",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/2747895_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2768107",
+    "title": "선재낚시공원",
+    "address": "인천광역시 옹진군 영흥면 선재로226번길 164",
+    "phone": "",
+    "latitude": "37.2542685314",
+    "longitude": "126.5220129578",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/2791214_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131099",
+    "title": "신지도.고금도.약산도(바다낚시)",
+    "address": "전라남도 완도군 신지면",
+    "phone": "061-550-5152",
+    "latitude": "34.3347257192",
+    "longitude": "126.8271688340",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2702441",
+    "title": "아야진 드래곤피싱",
+    "address": "강원특별자치도 고성군 토성면 아야진해변길 80",
+    "phone": "",
+    "latitude": "38.2722016251",
+    "longitude": "128.5560424763",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "3057179",
+    "title": "안면도 라암도 해상낚시공원",
+    "address": "충청남도 태안군 안면읍 중장리",
+    "phone": "",
+    "latitude": "36.4910464019",
+    "longitude": "126.4097102229",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3057168_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131082",
+    "title": "양포방파제",
+    "address": "경상북도 포항시 남구 장기면 양포항길",
+    "phone": "",
+    "latitude": "35.8816666247",
+    "longitude": "129.5219810062",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3063788_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131591",
+    "title": "연화도선착장(바다낚시)",
+    "address": "경상남도 통영시 욕지면 본촌길",
+    "phone": "055-650-0580",
+    "latitude": "34.6503915491",
+    "longitude": "128.3517056802",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/1918668_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131071",
+    "title": "오십천하구",
+    "address": "강원특별자치도 삼척시 오분동 삼척항길",
+    "phone": "033-570-4452",
+    "latitude": "37.4324501078",
+    "longitude": "129.1884642714",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3394103_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131116",
+    "title": "오천 안면도",
+    "address": "충청남도 보령시 오천면 오천해안로",
+    "phone": "041-932-4050",
+    "latitude": "36.4393209133",
+    "longitude": "126.5207654560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3343267_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "3015456",
+    "title": "온정방파제",
+    "address": "부산광역시 기장군 일광읍 동백리",
+    "phone": "",
+    "latitude": "35.2819401966",
+    "longitude": "129.2586292900",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3015419_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131087",
+    "title": "용호동일대 바다낚시",
+    "address": "부산광역시 남구 용호동",
+    "phone": "",
+    "latitude": "35.1335291572",
+    "longitude": "129.1153208463",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3496786_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131242",
+    "title": "위도바다낚시",
+    "address": "전북특별자치도 부안군 위도면 진리안길",
+    "phone": "063-583-3947",
+    "latitude": "35.5967549089",
+    "longitude": "126.2832194198",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "3034203",
+    "title": "의항리 해상낚시공원",
+    "address": "충청남도 태안군 소원면 의항리",
+    "phone": "",
+    "latitude": "36.8394603792",
+    "longitude": "126.1638538741",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3034184_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2702316",
+    "title": "인구항 배낚시",
+    "address": "강원특별자치도 양양군 현남면 인구리 1-104",
+    "phone": "",
+    "latitude": "37.9705796230",
+    "longitude": "128.7636275061",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3387560_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131074",
+    "title": "임원항 (임원항방파제 ~ 도미굴)",
+    "address": "강원특별자치도 삼척시 원덕읍 임원항구로 26",
+    "phone": "",
+    "latitude": "37.2298514642",
+    "longitude": "129.3452731581",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3039294_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2702243",
+    "title": "장사어촌계 배낚시",
+    "address": "강원특별자치도 속초시 장사항해안길 45",
+    "phone": "",
+    "latitude": "38.2255854598",
+    "longitude": "128.5882965585",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131359",
+    "title": "장포리 바다낚시",
+    "address": "경상남도 남해군 창선면 흥선로1505번길 7-84",
+    "phone": "",
+    "latitude": "34.8447203855",
+    "longitude": "128.0688891757",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3476200_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131073",
+    "title": "장호항방파제",
+    "address": "강원특별자치도 삼척시 근덕면 장호항길",
+    "phone": "033-570-3915",
+    "latitude": "37.2885719499",
+    "longitude": "129.3171960822",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3503822_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "1984255",
+    "title": "정남진해양낚시공원",
+    "address": "전라남도 장흥군 회진면 해양낚시길 137",
+    "phone": "",
+    "latitude": "34.4702935943",
+    "longitude": "126.9769385515",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/2661629_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2798709",
+    "title": "제주피싱테마파크",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 247-2",
+    "phone": "",
+    "latitude": "33.5512932840",
+    "longitude": "126.6469556842",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/2800004_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131106",
+    "title": "제주항 서부두방파제",
+    "address": "제주특별자치도 제주시 서부두길 22",
+    "phone": "064-758-8877",
+    "latitude": "33.5181617247",
+    "longitude": "126.5284806266",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3396830_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131271",
+    "title": "주문진 방파제",
+    "address": "강원특별자치도 강릉시 주문진읍 해안로 1609",
+    "phone": "",
+    "latitude": "37.8796220881",
+    "longitude": "128.8335906768",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/2656581_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131084",
+    "title": "주전항",
+    "address": "울산광역시 동구 주전동",
+    "phone": "052-229-6350",
+    "latitude": "35.5619402987",
+    "longitude": "129.4581290629",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3549103_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131370",
+    "title": "중왕리수로",
+    "address": "충청남도 서산시 지곡면 닷개길",
+    "phone": "",
+    "latitude": "36.8676302042",
+    "longitude": "126.3762894096",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3566983_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2774838",
+    "title": "지세포 낚시공원",
+    "address": "경상남도 거제시 일운면 지세포리 275-2",
+    "phone": "",
+    "latitude": "34.8356551773",
+    "longitude": "128.7167274191",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/2774914_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2865744",
+    "title": "진해삼포방파제",
+    "address": "경상남도 창원시 진해구 명제로324번길 14-9",
+    "phone": "",
+    "latitude": "35.0946569707",
+    "longitude": "128.7284139175",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/2865719_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131107",
+    "title": "차귀도 바다낚시",
+    "address": "제주특별자치도 제주시 한경면 고락로 200-52",
+    "phone": "064-740-6001",
+    "latitude": "33.3011472996",
+    "longitude": "126.2053163667",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3477931_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131103",
+    "title": "추자군도",
+    "address": "제주특별자치도 제주시 추자면 추자로",
+    "phone": "064-710-3250",
+    "latitude": "33.9501296887",
+    "longitude": "126.3095287389",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3411263_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131821",
+    "title": "태안 모항항",
+    "address": "충청남도 태안군 소원면 모항항길 122-29",
+    "phone": "041-670-2114",
+    "latitude": "36.7750867374",
+    "longitude": "126.1330944692",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/217786_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131813",
+    "title": "태안 방포항",
+    "address": "충청남도 태안군 안면읍 방포항길 94",
+    "phone": "041-670-2691",
+    "latitude": "36.5045935537",
+    "longitude": "126.3340361422",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3034584_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131812",
+    "title": "통개항",
+    "address": "충청남도 태안군 소원면 파도리",
+    "phone": "041-670-2852",
+    "latitude": "36.7251482201",
+    "longitude": "126.1426088039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3553078_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2611153",
+    "title": "통영등대낚시공원",
+    "address": "경상남도 통영시 산양읍 삼칭이해안길 441",
+    "phone": "",
+    "latitude": "34.8107946704",
+    "longitude": "128.4410937160",
+    "image": "",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131100",
+    "title": "평일도일대",
+    "address": "전라남도 완도군 금일읍 금일로",
+    "phone": "061-550-5130",
+    "latitude": "34.3484333052",
+    "longitude": "127.0420496950",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/2497134_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2902170",
+    "title": "하서항",
+    "address": "경상북도 경주시 양남면 하서리 61",
+    "phone": "",
+    "latitude": "35.6794745173",
+    "longitude": "129.4694330678",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/2902141_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131771",
+    "title": "학암포항",
+    "address": "충청남도 태안군 원북면 옥파로 1216",
+    "phone": "041-674-7924",
+    "latitude": "36.9023510565",
+    "longitude": "126.2063650191",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3553352_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131068",
+    "title": "화진포",
+    "address": "강원특별자치도 고성군 거진읍 화포리",
+    "phone": "",
+    "latitude": "38.4711039385",
+    "longitude": "128.4398829285",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/1813110_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "3034264",
+    "title": "황금백호",
+    "address": "충청남도 태안군 안면읍 꽃지해안로 177-12",
+    "phone": "",
+    "latitude": "36.4888288167",
+    "longitude": "126.3408609377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3034239_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131400",
+    "title": "회진 바다낚시",
+    "address": "전라남도 장흥군 회진면",
+    "phone": "061-860-0412",
+    "latitude": "34.4808640796",
+    "longitude": "126.9436634329",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/1970551_image2_1.jpg",
+    "category": "바다낚시"
+  },
+  {
+    "id": "131276",
+    "title": "후포방파제",
+    "address": "경상북도 울진군 후포면 울진대게로 236-26",
+    "phone": "",
+    "latitude": "36.6776224472",
+    "longitude": "129.4619989785",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3065168_image2_1.JPG",
+    "category": "바다낚시"
+  },
+  {
+    "id": "2741014",
+    "title": "24시 마린낚시",
+    "address": "경기도 화성시 서신면 전곡항로 317",
+    "phone": "",
+    "latitude": "37.1900398066",
+    "longitude": "126.6772950363",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/2750414_image2_1.jpg",
+    "category": "바다낚시"
+  }
+]

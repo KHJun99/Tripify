@@ -1,0 +1,562 @@
+[
+  {
+    "id": "2029545",
+    "title": "강릉교동건어물",
+    "address": "강원특별자치도 강릉시 옥가로50번길 7",
+    "phone": "",
+    "latitude": "37.7607093929",
+    "longitude": "128.9011021629",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1249666",
+    "title": "강화젓갈",
+    "address": "인천광역시 강화군 내가면 해안서로 899-2",
+    "phone": "032-933-2497",
+    "latitude": "37.7007946382",
+    "longitude": "126.3784665487",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/1946482_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1343990",
+    "title": "경남 하동군 으뜸상품홍보관",
+    "address": "경상남도 하동군 하동읍 군청로 36",
+    "phone": "055-883-5852",
+    "latitude": "35.0654039604",
+    "longitude": "127.7524806130",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3336600",
+    "title": "고래서이뻐",
+    "address": "부산광역시 해운대구 우동1로38번길 15-1 (우동)",
+    "phone": "",
+    "latitude": "35.1657319056",
+    "longitude": "129.1583856629",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1911421",
+    "title": "고성 DMZ박물관 뮤지엄샵",
+    "address": "강원특별자치도 고성군 현내면 통일전망대로 369",
+    "phone": "",
+    "latitude": "38.5763766314",
+    "longitude": "128.3827237217",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3026739_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2435007",
+    "title": "곡성 기차당 뚝방마켓",
+    "address": "전라남도 곡성군 곡성읍 곡성로 898",
+    "phone": "061-360-8758",
+    "latitude": "35.2814328952",
+    "longitude": "127.3012647759",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "969943",
+    "title": "국제자수원 3호점",
+    "address": "서울특별시 종로구 인사동길 41",
+    "phone": "",
+    "latitude": "37.5739368319",
+    "longitude": "126.9847702401",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/1010348_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2717546",
+    "title": "남도상회",
+    "address": "전라남도 광양시 눈소9길 55 (마동)",
+    "phone": "010-2547-9188",
+    "latitude": "34.9464750697",
+    "longitude": "127.7187894096",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3548136_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1343524",
+    "title": "다자연 영농조합법인",
+    "address": "경상남도 사천시 곤명면 금성들길 55",
+    "phone": "",
+    "latitude": "35.1407770642",
+    "longitude": "127.9688430006",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3476246_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3409880",
+    "title": "단양노트",
+    "address": "충청북도 단양군 단양읍 도전4길 22-1",
+    "phone": "",
+    "latitude": "36.9818195586",
+    "longitude": "128.3696316123",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3409645_image2_1.JPG",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2738023",
+    "title": "대전원협노은농산물공판장",
+    "address": "대전광역시 유성구 노은동로 8",
+    "phone": "",
+    "latitude": "36.3630435661",
+    "longitude": "127.3189458190",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "583930",
+    "title": "대호누비",
+    "address": "경상남도 통영시 통영해안로 355",
+    "phone": "",
+    "latitude": "34.8448572610",
+    "longitude": "128.4261052378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/2369614_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1862763",
+    "title": "더 아일랜더",
+    "address": "제주특별자치도 제주시 관덕로4길 7",
+    "phone": "070-8811-9562",
+    "latitude": "33.5124261350",
+    "longitude": "126.5213730415",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/2948751_image2_1.JPG",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2703695",
+    "title": "독일마을공식기념품판매점",
+    "address": "경상남도 남해군 삼동면 독일로 84-2",
+    "phone": "",
+    "latitude": "34.8004692645",
+    "longitude": "128.0393206798",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3561981_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1343107",
+    "title": "동박새꿈정원",
+    "address": "전라남도 여수시 오동도로 238-32 오동도 등대",
+    "phone": "061-681-2107",
+    "latitude": "34.7444819002",
+    "longitude": "127.7676180755",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2689353",
+    "title": "레드애플 팜",
+    "address": "경상남도 밀양시 산내면 하양지길 25-40",
+    "phone": "",
+    "latitude": "35.5927578819",
+    "longitude": "128.9512946963",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/2689343_image2_1.bmp",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2717565",
+    "title": "만세장터 봉사회",
+    "address": "충청남도 부여군 임천면 성흥로88번길 10",
+    "phone": "010-6797-2288",
+    "latitude": "36.1898670059",
+    "longitude": "126.8915331555",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3571055",
+    "title": "무릉외갓집",
+    "address": "제주특별자치도 서귀포시 대정읍 중산간서로2881번길 35-8",
+    "phone": "",
+    "latitude": "33.2734619526",
+    "longitude": "126.2361809653",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3571025_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2789355",
+    "title": "바람",
+    "address": "제주특별자치도 제주시 구좌읍 월정1길 46-9",
+    "phone": "",
+    "latitude": "33.5551951990",
+    "longitude": "126.7927818175",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/2792035_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3303452",
+    "title": "바래온",
+    "address": "경상남도 남해군 남해읍 스포츠로 173-9",
+    "phone": "",
+    "latitude": "34.8217420332",
+    "longitude": "127.8893776769",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2752730",
+    "title": "바이제주",
+    "address": "제주특별자치도 제주시 서해안로 626 (용담삼동)",
+    "phone": "",
+    "latitude": "33.5167476030",
+    "longitude": "126.5040466723",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3579098_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3471629",
+    "title": "백년미가영덕대게빵",
+    "address": "경상북도 영덕군 강구면 영덕대게로 49",
+    "phone": "",
+    "latitude": "36.3597487642",
+    "longitude": "129.3841763945",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3471490_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1344469",
+    "title": "백록다원",
+    "address": "전라남도 보성군 회천면 봉서동길 81-7",
+    "phone": "",
+    "latitude": "34.6654673910",
+    "longitude": "127.0498634939",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3411702",
+    "title": "보리올",
+    "address": "전라남도 영광군 영광읍 옥당로 179",
+    "phone": "",
+    "latitude": "35.2778141720",
+    "longitude": "126.5000580349",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3411654_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1344669",
+    "title": "보성농협녹차잡곡사업소",
+    "address": "전라남도 보성군 보성읍 유촌길 151",
+    "phone": "061-852-5640",
+    "latitude": "34.7528600882",
+    "longitude": "127.0337127585",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1344657",
+    "title": "보향다원",
+    "address": "전라남도 보성군 보성읍 동암1길 144",
+    "phone": "061-852-0626",
+    "latitude": "34.7573325195",
+    "longitude": "127.0759367142",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3446370",
+    "title": "서담상회",
+    "address": "충청남도 태안군 안면읍 안면대로 2703",
+    "phone": "010-2242-2815",
+    "latitude": "36.5307407790",
+    "longitude": "126.3477203344",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3446364_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2852532",
+    "title": "선물가게 바나나",
+    "address": "제주특별자치도 서귀포시 일주서로 875",
+    "phone": "",
+    "latitude": "33.2580637163",
+    "longitude": "126.4171378214",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/2852529_image2_1.JPG",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3502045",
+    "title": "선물고팡 공항본점",
+    "address": "제주특별자치도 제주시 월성로 15 (용담이동)",
+    "phone": "",
+    "latitude": "33.5030019167",
+    "longitude": "126.5049524611",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3502022_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2704789",
+    "title": "솔향명품샵",
+    "address": "강원특별자치도 강릉시 율곡로3139번길 24",
+    "phone": "033-660-3304",
+    "latitude": "37.7783124358",
+    "longitude": "128.8766649308",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3502802_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2851737",
+    "title": "스노우맨 아트샵",
+    "address": "강원특별자치도 춘천시 남이섬길 1 남이섬",
+    "phone": "",
+    "latitude": "37.7963208193",
+    "longitude": "127.5255090138",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "132583",
+    "title": "양구명품관(강원)",
+    "address": "강원특별자치도 양구군 양구읍 관공서로 10",
+    "phone": "",
+    "latitude": "38.1069378024",
+    "longitude": "127.9906379341",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3077199_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2810060",
+    "title": "어거스트램",
+    "address": "경상남도 통영시 통새미길 18",
+    "phone": "",
+    "latitude": "34.8446239809",
+    "longitude": "128.4276273335",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1343910",
+    "title": "옥선명차사(요산당)",
+    "address": "경상남도 하동군 화개면 화개로 814",
+    "phone": "055-883-5007",
+    "latitude": "35.2544473530",
+    "longitude": "127.6387079395",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3443061_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1013289",
+    "title": "이제주숍",
+    "address": "제주특별자치도 제주시 연삼로 473",
+    "phone": "064-751-3360",
+    "latitude": "33.4993528886",
+    "longitude": "126.5405800026",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3396921_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3110778",
+    "title": "장생포고래박물관",
+    "address": "울산광역시 남구 장생포고래로 244",
+    "phone": "",
+    "latitude": "35.5032009945",
+    "longitude": "129.3808374607",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3454245_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "132337",
+    "title": "전북인삼농협",
+    "address": "전북특별자치도 진안군 진무로 1021 인삼협동조합",
+    "phone": "063-433-3112~4",
+    "latitude": "35.7872554994",
+    "longitude": "127.4231824821",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/1164389_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3066402",
+    "title": "전북특별자치도 관광기념품 100선 판매관",
+    "address": "전북특별자치도 전주시 완산구 은행로 96-1 (교동)",
+    "phone": "",
+    "latitude": "35.8114702540",
+    "longitude": "127.1529364199",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3066384_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2859034",
+    "title": "제스토리",
+    "address": "제주특별자치도 서귀포시 막숙포로 60 (법환동)",
+    "phone": "",
+    "latitude": "33.2361121271",
+    "longitude": "126.5149353881",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3579104_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1864828",
+    "title": "제일토산품",
+    "address": "제주특별자치도 제주시 관덕로 24",
+    "phone": "064-753-7319",
+    "latitude": "33.5129733047",
+    "longitude": "126.5218590979",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2788115",
+    "title": "제주기념품가게 올레파머스 함덕점",
+    "address": "제주특별자치도 제주시 조천읍 조함해안로 528",
+    "phone": "",
+    "latitude": "33.5425390555",
+    "longitude": "126.6692595025",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2953017",
+    "title": "제주수울 (JEJUSUUL)",
+    "address": "제주특별자치도 제주시 서문로 72-1",
+    "phone": "",
+    "latitude": "33.5120650209",
+    "longitude": "126.5186677297",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/2953016_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3371002",
+    "title": "제천샌드",
+    "address": "충청북도 제천시 풍양로13길 10-1 (중앙로1가)",
+    "phone": "010-9966-4717",
+    "latitude": "37.1380291892",
+    "longitude": "128.2114773476",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3373079_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3357428",
+    "title": "지리산맑은물춘향골 영농조합법인",
+    "address": "전북특별자치도 남원시 주천면 장백산로 10",
+    "phone": "",
+    "latitude": "35.3920479512",
+    "longitude": "127.4487405659",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3357446_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2952655",
+    "title": "지리산조청아낙",
+    "address": "전라남도 구례군 산동면 지리산온천로 280",
+    "phone": "",
+    "latitude": "35.3173954524",
+    "longitude": "127.4589804839",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/2952650_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3375828",
+    "title": "진달래섬",
+    "address": "인천광역시 강화군 강화읍 향나무길5번길 1",
+    "phone": "010-5160-3774",
+    "latitude": "37.7475243106",
+    "longitude": "126.4802753583",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3375817_image2_1.JPG",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3539789",
+    "title": "청정건어물직매장",
+    "address": "강원특별자치도 강릉시 주문진읍 해안로 1747",
+    "phone": "033-662-5915",
+    "latitude": "37.8910928796",
+    "longitude": "128.8283907906",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "3468176",
+    "title": "태복당",
+    "address": "충청남도 태안군 태안읍 동백로 311",
+    "phone": "",
+    "latitude": "36.7481122137",
+    "longitude": "126.3043852071",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3468158_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "969950",
+    "title": "통인가게",
+    "address": "서울특별시 종로구 인사동길 32",
+    "phone": "",
+    "latitude": "37.5735757835",
+    "longitude": "126.9859145904",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/994901_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2785877",
+    "title": "팰롱팰롱빛나는",
+    "address": "제주특별자치도 제주시 애월읍 애월해안로 474",
+    "phone": "",
+    "latitude": "33.4776578999",
+    "longitude": "126.3550077410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/2792126_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "132590",
+    "title": "한국관광명품점",
+    "address": "서울특별시 종로구 인사동5길 14 (관훈동)",
+    "phone": "",
+    "latitude": "37.5728175285",
+    "longitude": "126.9853729947",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3502231_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "584703",
+    "title": "한려물산 멸치원(통영)",
+    "address": "경상남도 통영시 멘데산업길 41",
+    "phone": "",
+    "latitude": "34.8442491640",
+    "longitude": "128.4355377658",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/584704_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "132561",
+    "title": "한림공원 다화원휴게소 (제주)",
+    "address": "제주특별자치도 제주시 한림읍 한림로 300",
+    "phone": "064-796-0009",
+    "latitude": "33.3897241270",
+    "longitude": "126.2381087692",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/818792_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "132560",
+    "title": "한림공원 쌍용각 휴게소",
+    "address": "제주특별자치도 제주시 한림읍 협재리",
+    "phone": "064-796-0008",
+    "latitude": "33.3901296439",
+    "longitude": "126.2385087250",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3477997_image2_1.jpg",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "1343713",
+    "title": "한밭제다",
+    "address": "경상남도 하동군 화개면 부춘길 22",
+    "phone": "055-883-2288",
+    "latitude": "35.1665518557",
+    "longitude": "127.6474705578",
+    "image": "",
+    "category": "한국관광명품점"
+  },
+  {
+    "id": "2814518",
+    "title": "DMZ 라운지",
+    "address": "경기도 파주시 탄현면 새오리로161번길 90",
+    "phone": "",
+    "latitude": "37.8004522940",
+    "longitude": "126.6835996809",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/2814828_image2_1.jpg",
+    "category": "한국관광명품점"
+  }
+]

@@ -1,0 +1,224 @@
+[
+  {
+    "id": "2648061",
+    "title": "시네마360",
+    "address": "충청북도 제천시 청풍면 물태리",
+    "phone": "",
+    "latitude": "37.0013079736",
+    "longitude": "128.1667992192",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3348779_image2_1.JPG",
+    "category": "영화관",
+    "original_category": "전시관"
+  },
+  {
+    "id": "3531852",
+    "title": "[대한민국 구석구석 팝업] 구석구석 영화관",
+    "address": "서울특별시 성동구 연무장19길 4 (성수동2가)",
+    "phone": "",
+    "latitude": "37.5406059894",
+    "longitude": "127.0624363319",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3537759_image2_1.jpg",
+    "category": "영화관",
+    "original_category": "전시관"
+  },
+  {
+    "id": "2774692",
+    "title": "강릉자동차극장",
+    "address": "강원특별자치도 강릉시 구정면 칠성로 13-8",
+    "phone": "",
+    "latitude": "37.6935226206",
+    "longitude": "128.8961380184",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3393445_image2_1.JPG",
+    "category": "영화관"
+  },
+  {
+    "id": "3444271",
+    "title": "고한시네마",
+    "address": "강원특별자치도 정선군 고한읍 고한10길 28-12",
+    "phone": "0335927053",
+    "latitude": "37.1994427006",
+    "longitude": "128.8570371167",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3444114_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "3380156",
+    "title": "광주극장",
+    "address": "광주광역시 동구 충장로46번길 10 (충장로5가)",
+    "phone": "",
+    "latitude": "35.1498577834",
+    "longitude": "126.9124774602",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3380149_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "3380159",
+    "title": "광주자동차극장",
+    "address": "광주광역시 북구 우치로 649 (생용동)",
+    "phone": "",
+    "latitude": "35.2206801686",
+    "longitude": "126.9024237945",
+    "image": "",
+    "category": "영화관"
+  },
+  {
+    "id": "3449587",
+    "title": "대가야시네마",
+    "address": "경상북도 고령군 대가야읍 대가야로 1216",
+    "phone": "",
+    "latitude": "35.7212529077",
+    "longitude": "128.2599602256",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3449080_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "2948061",
+    "title": "동광극장",
+    "address": "경기도 동두천시 동광로 33 (생연동)",
+    "phone": "",
+    "latitude": "37.9088879332",
+    "longitude": "127.0520211817",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3573763_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "3076677",
+    "title": "라이카시네마",
+    "address": "서울특별시 서대문구 연희로8길 18 (연희동)",
+    "phone": "",
+    "latitude": "37.5652202133",
+    "longitude": "126.9309503921",
+    "image": "",
+    "category": "영화관"
+  },
+  {
+    "id": "2609506",
+    "title": "무주 산골영화관",
+    "address": "전북특별자치도 무주군 무주읍 한풍루로 326-17",
+    "phone": "",
+    "latitude": "36.0023797159",
+    "longitude": "127.6625471455",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3560963_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "3449443",
+    "title": "별고을시네마",
+    "address": "경상북도 성주군 성주읍 경산길 17",
+    "phone": "",
+    "latitude": "35.9169895282",
+    "longitude": "128.2852387411",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3449050_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "2569516",
+    "title": "산천어시네마",
+    "address": "강원특별자치도 화천군 화천읍 상승로2길 25-10",
+    "phone": "",
+    "latitude": "38.1061491407",
+    "longitude": "127.7028780980",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3465530_image2_1.JPG",
+    "category": "영화관"
+  },
+  {
+    "id": "3038985",
+    "title": "씨네 인디 유",
+    "address": "대전광역시 중구 계백로 1712 (문화동)",
+    "phone": "",
+    "latitude": "36.3211777431",
+    "longitude": "127.4097638307",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3038950_image2_1.JPG",
+    "category": "영화관"
+  },
+  {
+    "id": "2804927",
+    "title": "애관극장",
+    "address": "인천광역시 중구 개항로 63-2 (경동)",
+    "phone": "",
+    "latitude": "37.4722617789",
+    "longitude": "126.6298082395",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/2725208_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "2941021",
+    "title": "양산 영화공장",
+    "address": "경상남도 양산시 덕계북길 35",
+    "phone": "",
+    "latitude": "35.3826936731",
+    "longitude": "129.1573686459",
+    "image": "",
+    "category": "영화관"
+  },
+  {
+    "id": "3013546",
+    "title": "여수자동차극장",
+    "address": "전라남도 여수시 소호12길 67",
+    "phone": "",
+    "latitude": "34.7296341826",
+    "longitude": "127.6428738068",
+    "image": "",
+    "category": "영화관"
+  },
+  {
+    "id": "2989894",
+    "title": "옥천향수시네마",
+    "address": "충청북도 옥천군 문정1길 47",
+    "phone": "",
+    "latitude": "36.3040743190",
+    "longitude": "127.5755911499",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/2989893_image2_1.JPG",
+    "category": "영화관"
+  },
+  {
+    "id": "3023146",
+    "title": "자유로자동차극장",
+    "address": "경기도 파주시 탄현면 엘지로 697",
+    "phone": "",
+    "latitude": "37.8347769932",
+    "longitude": "126.7354911763",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3541448_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "3081720",
+    "title": "함평자동차극장",
+    "address": "전라남도 함평군 함평읍 함장로 1160",
+    "phone": "",
+    "latitude": "35.0583504774",
+    "longitude": "126.5224197932",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3081715_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "2654543",
+    "title": "헤이리시네마",
+    "address": "경기도 파주시 탄현면 헤이리마을길 93-119 커피공장 103 카페 3층",
+    "phone": "",
+    "latitude": "37.7917257856",
+    "longitude": "126.6976930811",
+    "image": "",
+    "category": "영화관"
+  },
+  {
+    "id": "3345026",
+    "title": "BNK부산은행아트시네마 모퉁이극장",
+    "address": "부산광역시 중구 광복중앙로 13 (신창동1가)",
+    "phone": "",
+    "latitude": "35.1005479603",
+    "longitude": "129.0310040798",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3349406_image2_1.jpg",
+    "category": "영화관"
+  },
+  {
+    "id": "2772449",
+    "title": "HAPPY700 평창시네마",
+    "address": "강원특별자치도 평창군 용평면 경강로 1689",
+    "phone": "",
+    "latitude": "37.5888227069",
+    "longitude": "128.4163566593",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/2772397_image2_1.jpg",
+    "category": "영화관"
+  }
+]

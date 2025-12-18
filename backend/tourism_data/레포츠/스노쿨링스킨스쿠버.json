@@ -1,0 +1,162 @@
+[
+  {
+    "id": "3038535",
+    "title": "남애스쿠버리조트",
+    "address": "강원특별자치도 양양군 현남면 매바위길 77",
+    "phone": "",
+    "latitude": "37.9415612310",
+    "longitude": "128.7874401442",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3038518_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "131913",
+    "title": "뉴서울 다이빙 풀",
+    "address": "경기도 광명시 하안로288번길 15",
+    "phone": "",
+    "latitude": "37.4623118393",
+    "longitude": "126.8813661410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2827487_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "2773417",
+    "title": "다이브라이프",
+    "address": "서울특별시 서초구 반포대로20길 27 (서초동)",
+    "phone": "",
+    "latitude": "37.4881167222",
+    "longitude": "127.0113174718",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/2794416_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "636073",
+    "title": "다이브랜드",
+    "address": "제주특별자치도 서귀포시 보목포로 29 (보목동)",
+    "phone": "",
+    "latitude": "33.2408297167",
+    "longitude": "126.6059829492",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3477467_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3433028",
+    "title": "딥스테이션",
+    "address": "경기도 용인시 처인구 포곡읍 성산로 523",
+    "phone": "",
+    "latitude": "37.2806636007",
+    "longitude": "127.1997256560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3431435_image2_1.JPG",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3065391",
+    "title": "문암다이브리조트",
+    "address": "강원특별자치도 고성군 죽왕면 교암2길 65",
+    "phone": "",
+    "latitude": "38.2955404356",
+    "longitude": "128.5490090521",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3065389_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "2820293",
+    "title": "바다다이브",
+    "address": "제주특별자치도 서귀포시 동홍로12번길 5",
+    "phone": "",
+    "latitude": "33.2498392394",
+    "longitude": "126.5684943279",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2820267_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "2747766",
+    "title": "바다여행잠수교실",
+    "address": "경상남도 창원시 의창구 대봉로26번길 28 (봉림동)",
+    "phone": "",
+    "latitude": "35.2511939049",
+    "longitude": "128.6700925582",
+    "image": "",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3069529",
+    "title": "보보스다이브리조트",
+    "address": "강원특별자치도 강릉시 사천면 진리항구길 26-3",
+    "phone": "",
+    "latitude": "37.8349364138",
+    "longitude": "128.8754493976",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3050964_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "1200671",
+    "title": "울릉아쿠아캠프리조트",
+    "address": "경상북도 울릉군 울릉읍 울릉순환로 31-3",
+    "phone": "",
+    "latitude": "37.5053516685",
+    "longitude": "130.9139641032",
+    "image": "",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3029655",
+    "title": "울진해양레포츠센터",
+    "address": "경상북도 울진군 매화면 오산항길 59",
+    "phone": "",
+    "latitude": "36.8902722267",
+    "longitude": "129.4128941491",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3052546_image2_1.JPG",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3022829",
+    "title": "천학정스쿠버리조트",
+    "address": "강원특별자치도 고성군 토성면 천학정길 39",
+    "phone": "",
+    "latitude": "38.2917713827",
+    "longitude": "128.5465566154",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3022476_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3373390",
+    "title": "파라다이브",
+    "address": "경기도 시흥시 거북섬중앙로 1 (정왕동)",
+    "phone": "",
+    "latitude": "37.3255214189",
+    "longitude": "126.6827491442",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3373107_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3029909",
+    "title": "해원다이브리조트",
+    "address": "강원특별자치도 강릉시 사천면 진리항구길 45",
+    "phone": "033-644-6207",
+    "latitude": "37.8371111598",
+    "longitude": "128.8753548942",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3029893_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "2713438",
+    "title": "K-26",
+    "address": "경기도 가평군 청평면 고재길 262-57",
+    "phone": "",
+    "latitude": "37.7030731565",
+    "longitude": "127.5163236873",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3357584_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  },
+  {
+    "id": "3082541",
+    "title": "L.F문암다이브리조트",
+    "address": "강원특별자치도 고성군 죽왕면 괘진길 69",
+    "phone": "",
+    "latitude": "38.2964431328",
+    "longitude": "128.5502783528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3082534_image2_1.jpg",
+    "category": "스노쿨링스킨스쿠버"
+  }
+]

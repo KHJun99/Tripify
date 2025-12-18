@@ -13,6 +13,7 @@ class Place(models.Model):
 
     title = models.CharField(max_length=255, help_text="장소명")
     place_type = models.CharField(max_length=20, choices=PLACE_TYPE_CHOICES, default='tourist')
+    category = models.CharField(max_length=100, blank=True, help_text="세부 카테고리 (예: 사찰, 해수욕장, 한식 등)")
     address = models.CharField(max_length=500, help_text="주소")
     latitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)
     longitude = models.DecimalField(max_digits=10, decimal_places=7, null=True, blank=True)

@@ -1,0 +1,472 @@
+[
+  {
+    "id": "2750143",
+    "title": "가가책방",
+    "address": "충청남도 공주시 당간지주길 10 (반죽동)",
+    "phone": "",
+    "latitude": "36.4521187744",
+    "longitude": "127.1219749520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3564906_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2782914",
+    "title": "고래책방",
+    "address": "강원특별자치도 강릉시 율곡로 2848 (옥천동)",
+    "phone": "",
+    "latitude": "37.7582957085",
+    "longitude": "128.8972525847",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/2793046_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "130285",
+    "title": "교보문고",
+    "address": "서울특별시 종로구 종로 1",
+    "phone": "",
+    "latitude": "37.5709759433",
+    "longitude": "126.9779820539",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/2721826_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2664757",
+    "title": "국자와 주걱",
+    "address": "인천광역시 강화군 양도면 강화남로428번길 46-27",
+    "phone": "",
+    "latitude": "37.6533568942",
+    "longitude": "126.4450895395",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3350540_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2778915",
+    "title": "나이롱책방",
+    "address": "제주특별자치도 제주시 관덕로8길 17 (이도일동)",
+    "phone": "",
+    "latitude": "33.5116956936",
+    "longitude": "126.5234478780",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3553414_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2751035",
+    "title": "느리게 책방",
+    "address": "충청남도 공주시 우체국길 24 (중동)",
+    "phone": "",
+    "latitude": "36.4544768689",
+    "longitude": "127.1237469514",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "3514236",
+    "title": "다시서점",
+    "address": "서울특별시 강서구 공항대로8길 77-24 (공항동)",
+    "phone": "",
+    "latitude": "37.5574578985",
+    "longitude": "126.8129919243",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3514229_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2946632",
+    "title": "대오서점",
+    "address": "서울특별시 종로구 자하문로7길 55 (누하동)",
+    "phone": "",
+    "latitude": "37.5797886525",
+    "longitude": "126.9693409251",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3300727_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2781519",
+    "title": "더폴락",
+    "address": "대구광역시 중구 경상감영1길 62-5",
+    "phone": "",
+    "latitude": "35.8736945265",
+    "longitude": "128.5932516535",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3338468_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2651025",
+    "title": "독립서점 틔움",
+    "address": "강원특별자치도 원주시 남산로 209 (학성동)",
+    "phone": "",
+    "latitude": "37.3547575025",
+    "longitude": "127.9420980526",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "3041240",
+    "title": "동그란책",
+    "address": "강원특별자치도 속초시 중앙로46번길 45 (교동)",
+    "phone": "",
+    "latitude": "38.1985385120",
+    "longitude": "128.5833256329",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3041221_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2651026",
+    "title": "동네책방 스몰굿씽",
+    "address": "강원특별자치도 원주시 판부면 매봉길 52-1",
+    "phone": "",
+    "latitude": "37.3205642927",
+    "longitude": "127.9454709672",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "2710945",
+    "title": "동아서점",
+    "address": "강원특별자치도 속초시 수복로 108",
+    "phone": "033-632-1555",
+    "latitude": "38.2009215203",
+    "longitude": "128.5809063338",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3528892_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3546106",
+    "title": "마리서사",
+    "address": "전북특별자치도 군산시 구영5길 21-26 (월명동)",
+    "phone": "",
+    "latitude": "35.9858204915",
+    "longitude": "126.7075660618",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3545821_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3545735",
+    "title": "만춘서점",
+    "address": "제주특별자치도 제주시 조천읍 함덕로 9",
+    "phone": "",
+    "latitude": "33.5407532094",
+    "longitude": "126.6734425132",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3545550_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2710965",
+    "title": "문우당서림",
+    "address": "강원특별자치도 속초시 중앙로 45",
+    "phone": "",
+    "latitude": "38.2003604840",
+    "longitude": "128.5814007510",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/2948016_image2_1.jpeg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2650449",
+    "title": "물레책방",
+    "address": "대구광역시 수성구 달구벌대로492길 15 (범어동)",
+    "phone": "",
+    "latitude": "35.8574387529",
+    "longitude": "128.6322514488",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "2778939",
+    "title": "밤수지맨드라미 북스토어",
+    "address": "제주특별자치도 제주시 우도면 우도해안길 530",
+    "phone": "",
+    "latitude": "33.5207431980",
+    "longitude": "126.9484913275",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3553400_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2783339",
+    "title": "별책부록",
+    "address": "서울특별시 용산구 신흥로16길 7 (용산동2가)",
+    "phone": "",
+    "latitude": "37.5449846812",
+    "longitude": "126.9870125224",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/2794361_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2987044",
+    "title": "봄날의 책방",
+    "address": "경상남도 통영시 봉수1길 6-1",
+    "phone": "",
+    "latitude": "34.8263702490",
+    "longitude": "128.4154399858",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/2987028_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2782869",
+    "title": "삼일문고",
+    "address": "경상북도 구미시 금오시장로 6 (원평동)",
+    "phone": "",
+    "latitude": "36.1254835359",
+    "longitude": "128.3406613907",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3566129_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2606740",
+    "title": "서울책보고",
+    "address": "서울특별시 송파구 오금로 1 (신천동)",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3498038_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "1937744",
+    "title": "소심한 책방",
+    "address": "제주특별자치도 제주시 구좌읍 종달동길 36-10",
+    "phone": "",
+    "latitude": "33.4903069304",
+    "longitude": "126.9026654476",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3507618_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2932044",
+    "title": "수연목서",
+    "address": "경기도 여주시 산북면 주어로 58",
+    "phone": "",
+    "latitude": "37.4081920593",
+    "longitude": "127.4390753365",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/2931938_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2362581",
+    "title": "숲속작은책방",
+    "address": "충청북도 괴산군 칠성면 명태재로미루길 90",
+    "phone": "",
+    "latitude": "36.7674425204",
+    "longitude": "127.8301777458",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3489628_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "3072018",
+    "title": "숲속책방",
+    "address": "강원특별자치도 정선군 정선읍 덕산기길 632",
+    "phone": "",
+    "latitude": "37.3766619350",
+    "longitude": "128.7509773934",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "2384290",
+    "title": "스토리지북앤필름",
+    "address": "서울특별시 용산구 신흥로 115-1 (용산동2가)",
+    "phone": "",
+    "latitude": "37.5447790803",
+    "longitude": "126.9831545461",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2377887_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3056153",
+    "title": "스페인책방",
+    "address": "서울특별시 중구 퇴계로36길 29 (필동2가)",
+    "phone": "",
+    "latitude": "37.5605996785",
+    "longitude": "126.9950780118",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3455483_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2864966",
+    "title": "심플책방",
+    "address": "대구광역시 동구 동부로34길 4",
+    "phone": "",
+    "latitude": "35.8771503798",
+    "longitude": "128.6305899348",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "3501256",
+    "title": "쓰다북스 x 원더러스트커피",
+    "address": "부산광역시 금정구 금정로 197 (구서동)",
+    "phone": "",
+    "latitude": "35.2422720356",
+    "longitude": "129.0884924174",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3501227_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3545910",
+    "title": "아크앤북 광안리",
+    "address": "부산광역시 수영구 광남로 96 (광안동, 광안 포디움프레스티지 1)",
+    "phone": "",
+    "latitude": "35.1504883662",
+    "longitude": "129.1151037338",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3545786_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2805916",
+    "title": "안녕 책",
+    "address": "충청북도 제천시 봉양읍 용두대로36길 (21)",
+    "phone": "",
+    "latitude": "37.1580564691",
+    "longitude": "128.1596203107",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3568615_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3067368",
+    "title": "앤블가옥",
+    "address": "충청남도 천안시 동남구 원거리13길 1 (원성동)",
+    "phone": "",
+    "latitude": "36.8032901372",
+    "longitude": "127.1555929276",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3067352_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3494598",
+    "title": "여행자의 책",
+    "address": "대구광역시 동구 방천로2길 3 (불로동)",
+    "phone": "",
+    "latitude": "35.8990146157",
+    "longitude": "128.6330141111",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3494588_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2657247",
+    "title": "우공책방",
+    "address": "인천광역시 강화군 내가면 연촌길 77-10",
+    "phone": "",
+    "latitude": "37.7319250130",
+    "longitude": "126.4167788373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3350551_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "3064803",
+    "title": "우리글방 북카페",
+    "address": "부산광역시 중구 대청로 63 (보수동1가)",
+    "phone": "",
+    "latitude": "35.1032781347",
+    "longitude": "129.0269099165",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3064791_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2044896",
+    "title": "유어마인드",
+    "address": "서울특별시 서대문구 연희로11라길 10-6 (연희동)",
+    "phone": "",
+    "latitude": "37.5684503823",
+    "longitude": "126.9303170256",
+    "image": "",
+    "category": "대형서점"
+  },
+  {
+    "id": "3012808",
+    "title": "중림창고",
+    "address": "서울특별시 중구 서소문로6길 33 (중림동)",
+    "phone": "",
+    "latitude": "37.5597326129",
+    "longitude": "126.9672389067",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3012801_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2822910",
+    "title": "창비부산",
+    "address": "부산광역시 동구 중앙대로209번길 16",
+    "phone": "",
+    "latitude": "35.1163768939",
+    "longitude": "129.0391696039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2822867_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2782714",
+    "title": "책방봄봄",
+    "address": "부산광역시 해운대구 좌동로 9 (중동)",
+    "phone": "",
+    "latitude": "35.1673652425",
+    "longitude": "129.1684791847",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/2795954_image2_1.png",
+    "category": "대형서점"
+  },
+  {
+    "id": "2664755",
+    "title": "책방시점",
+    "address": "인천광역시 강화군 길상면 마니산로 101-16",
+    "phone": "",
+    "latitude": "37.6377677007",
+    "longitude": "126.4824476638",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3350520_image2_1.JPG",
+    "category": "대형서점"
+  },
+  {
+    "id": "2782757",
+    "title": "책방오월",
+    "address": "부산광역시 수영구 수영로607번길 28 (광안동)",
+    "phone": "",
+    "latitude": "35.1604483075",
+    "longitude": "129.1121398296",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/2795997_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2782877",
+    "title": "책봄",
+    "address": "경상북도 구미시 금오산로22길 24-1 (원평동)",
+    "phone": "",
+    "latitude": "36.1262665850",
+    "longitude": "128.3300373097",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/2794582_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3335691",
+    "title": "최인아책방",
+    "address": "서울특별시 강남구 선릉로 521 (역삼동)",
+    "phone": "",
+    "latitude": "37.5061041798",
+    "longitude": "127.0479247426",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3335690_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3037374",
+    "title": "카페책자국",
+    "address": "제주특별자치도 제주시 구좌읍 종달로1길 117",
+    "phone": "",
+    "latitude": "33.4962702419",
+    "longitude": "126.9076926516",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3037357_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "2790518",
+    "title": "플리커책방",
+    "address": "전북특별자치도 완주군 소양면 송광수만로 472-23",
+    "phone": "",
+    "latitude": "35.9031141763",
+    "longitude": "127.2433009708",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/2792965_image2_1.jpg",
+    "category": "대형서점"
+  },
+  {
+    "id": "3545156",
+    "title": "해필",
+    "address": "충청남도 부여군 부여읍 석탑로41번길 4",
+    "phone": "",
+    "latitude": "36.2799820538",
+    "longitude": "126.9123400217",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3543810_image2_1.jpg",
+    "category": "대형서점"
+  }
+]

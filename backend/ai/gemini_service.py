@@ -2,6 +2,8 @@ import os
 import json
 import requests
 from dotenv import load_dotenv
+from places.models import Place
+from festivals.models import Festival
 
 load_dotenv()
 
@@ -20,6 +22,18 @@ class GeminiService:
         # 여행 일수 계산
         days = (end_date - start_date).days + 1
 
+        # 데이터베이스에서 해당 지역의 실제 장소 정보 가져오기
+        tourist_spots = self._get_places_by_region(region, 'tourist', limit=15)
+        restaurants = self._get_places_by_region(region, 'restaurant', limit=10)
+        accommodations = self._get_places_by_region(region, 'accommodation', limit=5)
+        festivals = self._get_festivals_by_region(region, start_date, end_date)
+
+        # 장소 정보를 문자열로 포맷팅
+        tourist_spots_str = self._format_places(tourist_spots)
+        restaurants_str = self._format_places(restaurants)
+        accommodations_str = self._format_places(accommodations)
+        festivals_str = self._format_festivals(festivals)
+
         # 프롬프트 생성
         prompt = f"""
 다음 조건으로 {days}일 여행 계획을 상세한 JSON 형식으로 작성해주세요:
@@ -29,11 +43,26 @@ class GeminiService:
 - 여행 스타일: {travel_style}
 - 숙박 타입: {accommodation_type}
 
+**{region} 지역의 실제 데이터베이스 정보를 활용하세요:**
+
+📍 추천 관광지 (이 중에서 선택하세요):
+{tourist_spots_str}
+
+🍽️ 추천 음식점 (이 중에서 선택하세요):
+{restaurants_str}
+
+🏨 추천 숙박시설 (이 중에서 선택하세요):
+{accommodations_str}
+
+🎉 해당 기간의 축제/행사:
+{festivals_str}
+
 각 일차별로 다음 정보를 **매우 구체적으로** 포함해주세요:
 
 1. **관광지 정보** (attractions):
+   - 위의 추천 관광지 목록에서 선택하여 사용하세요
    - 각 관광지의 정확한 명칭, 방문 시간, 소요 시간, 간단한 설명 포함
-   - 해당 지역의 유명 관광지, 박물관, 명소 등을 구체적으로 명시
+   - 이동 동선을 고려하여 효율적으로 배치하세요
 
 2. **교통수단 정보** (transportation_info):
    - 주요 이동 구간별 교통수단 (버스, 지하철, 택시, 렌터카 등)
@@ -45,12 +74,13 @@ class GeminiService:
    - 체크인/체크아웃 시간
 
 4. **식사 정보** (meals_info):
+   - 위의 추천 음식점 목록에서 선택하여 사용하세요
    - 아침, 점심, 저녁 각각의 추천 식당명 또는 음식 종류
    - 예상 식사 비용
 
 5. **축제/행사 정보** (events_info):
-   - 해당 날짜와 지역에서 열리는 축제, 행사가 있다면 포함
-   - 축제명, 시간, 위치 등
+   - 위에 나열된 축제/행사 정보가 있다면 일정에 포함하세요
+   - 축제명, 시간, 위치 등을 정확히 기재
 
 6. **예상 비용** (estimated_cost):
    - 해당 일차의 총 예상 비용 (교통비 + 식비 + 입장료 + 숙박비 등)
@@ -114,10 +144,11 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 }}
 
 **중요**:
-- 모든 장소명, 식당명은 가능한 한 구체적으로 작성해주세요
-- {region} 지역의 실제 존재하는 명소와 맛집을 우선적으로 추천해주세요
+- 반드시 위에 제공된 실제 데이터베이스의 장소/음식점 목록에서 선택하여 사용하세요
+- 장소명은 데이터베이스의 정확한 명칭을 그대로 사용하세요
 - 예산 {budget:,}원을 {days}일로 나누어 각 일차별로 합리적으로 배분해주세요
 - 이동 동선이 효율적이도록 근처 장소들을 묶어서 계획해주세요
+- 축제/행사 정보가 있다면 일정에 우선적으로 포함하세요
 """
 
         # API 키가 없으면 샘플 데이터 반환
@@ -230,3 +261,54 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                 'estimated_cost': 130000
             })
         return {'days': sample_days}
+
+    def _get_places_by_region(self, region, place_type, limit=10):
+        """지역과 타입으로 장소 검색"""
+        try:
+            places = Place.objects.filter(
+                region__icontains=region,
+                place_type=place_type
+            )[:limit]
+            return list(places)
+        except Exception as e:
+            print(f'장소 조회 오류: {e}')
+            return []
+
+    def _get_festivals_by_region(self, region, start_date, end_date):
+        """지역과 기간으로 축제 검색"""
+        try:
+            # 여행 시작 월 기준으로 축제 검색
+            month = start_date.month
+            festivals = Festival.objects.filter(
+                region__icontains=region,
+                start_month=month,
+                is_active=True
+            )[:5]
+            return list(festivals)
+        except Exception as e:
+            print(f'축제 조회 오류: {e}')
+            return []
+
+    def _format_places(self, places):
+        """장소 목록을 프롬프트용 문자열로 포맷"""
+        if not places:
+            return "해당 지역의 데이터가 없습니다."
+
+        formatted = []
+        for place in places:
+            category = f" ({place.category})" if place.category else ""
+            formatted.append(f"- {place.title}{category}: {place.address}")
+
+        return "\n".join(formatted)
+
+    def _format_festivals(self, festivals):
+        """축제 목록을 프롬프트용 문자열로 포맷"""
+        if not festivals:
+            return "해당 기간에 축제/행사가 없습니다."
+
+        formatted = []
+        for festival in festivals:
+            period = f"{festival.event_start_date} ~ {festival.event_end_date}" if festival.event_start_date else "날짜 미정"
+            formatted.append(f"- {festival.title} ({festival.category}): {period} @ {festival.address}")
+
+        return "\n".join(formatted)

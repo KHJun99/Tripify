@@ -1,0 +1,811 @@
+[
+  {
+    "id": "513254",
+    "title": "강윤정프로샵 오크밸리점",
+    "address": "강원특별자치도 원주시 지정면 구재로 216",
+    "phone": "",
+    "latitude": "37.4032492434",
+    "longitude": "127.7990540044",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/446987_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "512074",
+    "title": "겨울세상",
+    "address": "강원특별자치도 정선군 고한읍 고한로 81",
+    "phone": "",
+    "latitude": "37.2055918085",
+    "longitude": "128.8473989061",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3562189_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "681561",
+    "title": "곤지암렌탈샵 장비좋은집",
+    "address": "경기도 광주시 도척면 독고개길 307",
+    "phone": "",
+    "latitude": "37.3390143099",
+    "longitude": "127.3054866406",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3438016_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "3585883",
+    "title": "곤지암렌탈샵 코코넛스키",
+    "address": "경기도 광주시 도척면 독고개길302번길 2",
+    "phone": "",
+    "latitude": "37.3394864583",
+    "longitude": "127.3044339451",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3585884_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "646762",
+    "title": "곤지암리조트 스키장",
+    "address": "경기도 광주시 도척면 도척윗로 278",
+    "phone": "",
+    "latitude": "37.3366645398",
+    "longitude": "127.3031619183",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "510546",
+    "title": "국가대표",
+    "address": "전북특별자치도 무주군 설천면 구천동로 1101",
+    "phone": "",
+    "latitude": "35.9111307052",
+    "longitude": "127.7592799068",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/446655_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "512084",
+    "title": "넌스키 난보드",
+    "address": "강원특별자치도 원주시 지정면 구재로 132",
+    "phone": "",
+    "latitude": "37.3988190692",
+    "longitude": "127.7919686623",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3562173_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "508237",
+    "title": "노블스키샵",
+    "address": "전북특별자치도 무주군 설천면 구천동로 1083-11",
+    "phone": "",
+    "latitude": "35.9095142154",
+    "longitude": "127.7588910966",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/447573_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "522920",
+    "title": "눈내리는겨울",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 236",
+    "phone": "033-335-9959",
+    "latitude": "37.6652110774",
+    "longitude": "128.7050116534",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/446930_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "512033",
+    "title": "눈의나라",
+    "address": "강원특별자치도 정선군 사북읍 하이원길 36",
+    "phone": "",
+    "latitude": "37.2232891555",
+    "longitude": "128.8152012550",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/2866354_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "522878",
+    "title": "닥터스노우",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 56",
+    "phone": "",
+    "latitude": "37.6738294379",
+    "longitude": "128.7005062406",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/446936_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "514175",
+    "title": "드림월드프로샵",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 397",
+    "phone": "",
+    "latitude": "37.4982437048",
+    "longitude": "128.2390059239",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2522287_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "3441600",
+    "title": "드림피플엔터",
+    "address": "광주광역시 남구 천변좌로338번길 16 (구동)",
+    "phone": "",
+    "latitude": "35.1486189729",
+    "longitude": "126.9088194808",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3441604_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506828",
+    "title": "드림하이원스키샵",
+    "address": "강원특별자치도 정선군 고한읍 물한리길 52",
+    "phone": "",
+    "latitude": "37.2101716627",
+    "longitude": "128.8383023595",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/449271_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "513977",
+    "title": "록키스키",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 389",
+    "phone": "",
+    "latitude": "37.4987519689",
+    "longitude": "128.2384254056",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/2455102_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507759",
+    "title": "리틀프린스 스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 34-1",
+    "phone": "",
+    "latitude": "35.9104362764",
+    "longitude": "127.7557357959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/449249_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131634",
+    "title": "모나 용평 스키장",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 715",
+    "phone": "033-335-5757",
+    "latitude": "37.6509988422",
+    "longitude": "128.7055814809",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "523921",
+    "title": "모닝스키",
+    "address": "경기도 이천시 마장면 지산로 257-7",
+    "phone": "",
+    "latitude": "37.2163903827",
+    "longitude": "127.3483584545",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131123",
+    "title": "무주덕유산리조트 스키장",
+    "address": "전북특별자치도 무주군 설천면 만선로 185",
+    "phone": "",
+    "latitude": "35.8790813030",
+    "longitude": "127.7443793143",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507532",
+    "title": "무주스키",
+    "address": "전북특별자치도 무주군 설천면 만선로 70",
+    "phone": "",
+    "latitude": "35.9069394452",
+    "longitude": "127.7553692561",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507977",
+    "title": "무주스키스쿨",
+    "address": "전북특별자치도 무주군 설천면 만선로 49",
+    "phone": "",
+    "latitude": "35.9086253719",
+    "longitude": "127.7557580650",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "508196",
+    "title": "무주스키텔 스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 36-19",
+    "phone": "",
+    "latitude": "35.9095141432",
+    "longitude": "127.7548470105",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/447584_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "1141128",
+    "title": "미필스키랜드",
+    "address": "경기도 성남시 분당구 구미로 120",
+    "phone": "",
+    "latitude": "37.3398081343",
+    "longitude": "127.1221421382",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/1893535_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "681425",
+    "title": "바나나스키",
+    "address": "경기도 광주시 도척면 도척윗로 194",
+    "phone": "",
+    "latitude": "37.3376647350",
+    "longitude": "127.3203408884",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3510148_image2_1.JPG",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506235",
+    "title": "바이스포츠",
+    "address": "강원특별자치도 평창군 대관령면 삼현동1길 10-6",
+    "phone": "",
+    "latitude": "37.6622474079",
+    "longitude": "128.6986539835",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/447816_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "511187",
+    "title": "백암스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 32",
+    "phone": "",
+    "latitude": "35.9104362812",
+    "longitude": "127.7560024387",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/447240_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "522525",
+    "title": "백야",
+    "address": "강원특별자치도 평창군 봉평면 태기로 527",
+    "phone": "",
+    "latitude": "37.5641743685",
+    "longitude": "128.3538491497",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/446783_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506532",
+    "title": "보드트레이더",
+    "address": "강원특별자치도 평창군 봉평면 태기로 439",
+    "phone": "",
+    "latitude": "37.5675877493",
+    "longitude": "128.3479273594",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3582535_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131301",
+    "title": "비발디파크 스키장",
+    "address": "강원특별자치도 홍천군 서면 한치골길 262",
+    "phone": "",
+    "latitude": "37.6523905338",
+    "longitude": "127.6873540732",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/2779470_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "523030",
+    "title": "비전스키샵",
+    "address": "강원특별자치도 홍천군 서면 한서로 2166",
+    "phone": "",
+    "latitude": "37.6147640884",
+    "longitude": "127.6735730921",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506233",
+    "title": "사람과자연",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 234",
+    "phone": "",
+    "latitude": "37.6653332916",
+    "longitude": "128.7053477308",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/692905_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "522857",
+    "title": "설인스키샵",
+    "address": "강원특별자치도 평창군 대관령면 삼현동1길 10-6",
+    "phone": "",
+    "latitude": "37.6622474079",
+    "longitude": "128.6986539835",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/446953_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "513725",
+    "title": "성우스키샵",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 419",
+    "phone": "",
+    "latitude": "37.4973855055",
+    "longitude": "128.2408502273",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/693415_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506800",
+    "title": "세븐스키",
+    "address": "강원특별자치도 정선군 고한읍 고한로 8",
+    "phone": "",
+    "latitude": "37.2096578916",
+    "longitude": "128.8413659899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/693355_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "510584",
+    "title": "스노우밸리콘도스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 36-37",
+    "phone": "",
+    "latitude": "35.9091141855",
+    "longitude": "127.7546470392",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "511953",
+    "title": "스노우뱅크",
+    "address": "강원특별자치도 정선군 고한읍 고한로 36",
+    "phone": "",
+    "latitude": "37.2079414594",
+    "longitude": "128.8432742038",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/693361_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507504",
+    "title": "스노우파크",
+    "address": "전북특별자치도 무주군 설천면 만선1로 60",
+    "phone": "",
+    "latitude": "35.9047952464",
+    "longitude": "127.7554831926",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/449624_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "3047624",
+    "title": "스노우플렉스",
+    "address": "경기도 하남시 덕풍천서로 77-9 (신장동)",
+    "phone": "",
+    "latitude": "37.5478440439",
+    "longitude": "127.2165970971",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3047625_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "508041",
+    "title": "스카이스키샵",
+    "address": "전북특별자치도 무주군 설천면 구천동로 1063",
+    "phone": "",
+    "latitude": "35.9077949825",
+    "longitude": "127.7597799522",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "513482",
+    "title": "스키911",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 162",
+    "phone": "",
+    "latitude": "37.5114002413",
+    "longitude": "128.2243901850",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/693424_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "510559",
+    "title": "스키광장",
+    "address": "전북특별자치도 무주군 설천면 만선로 60",
+    "phone": "",
+    "latitude": "35.9079282167",
+    "longitude": "127.7550803659",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/692252_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "509295",
+    "title": "스키라이프",
+    "address": "전북특별자치도 무주군 설천면 만선로 36-2",
+    "phone": "",
+    "latitude": "35.9100779847",
+    "longitude": "127.7557691357",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/449628_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "522886",
+    "title": "스키뱅크",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 56",
+    "phone": "",
+    "latitude": "37.6738294379",
+    "longitude": "128.7005062406",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/446957_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "513284",
+    "title": "스키짱 주인짱",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 98",
+    "phone": "",
+    "latitude": "37.5097919572",
+    "longitude": "128.2171269990",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/693433_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "505886",
+    "title": "스키토탈",
+    "address": "강원특별자치도 홍천군 서면 한서로 2101",
+    "phone": "033-435-0888",
+    "latitude": "37.6191051633",
+    "longitude": "127.6687900655",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507943",
+    "title": "실크로드스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 57",
+    "phone": "",
+    "latitude": "35.9079671099",
+    "longitude": "127.7555803203",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/447645_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507864",
+    "title": "알토스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선로 72",
+    "phone": "",
+    "latitude": "35.9068116808",
+    "longitude": "127.7553025983",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "509342",
+    "title": "알파인스키보드 대여점",
+    "address": "전북특별자치도 무주군 설천면 만선로 6",
+    "phone": "",
+    "latitude": "35.9110223782",
+    "longitude": "127.7589354964",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "898016",
+    "title": "알펜시아리조트 스키장",
+    "address": "강원특별자치도 평창군 대관령면 솔봉로 325",
+    "phone": "",
+    "latitude": "37.6575030436",
+    "longitude": "128.6743702048",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/1985699_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "324429",
+    "title": "에덴밸리스키장 (에덴밸리리조트)",
+    "address": "경상남도 양산시 원동면 어실로 1206",
+    "phone": "",
+    "latitude": "35.4247357285",
+    "longitude": "128.9839409477",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "505932",
+    "title": "에스앤에스",
+    "address": "강원특별자치도 홍천군 서면 한서로 2054",
+    "phone": "",
+    "latitude": "37.6223741708",
+    "longitude": "127.6656930288",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/449603_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131759",
+    "title": "엘리시안 강촌 스키장",
+    "address": "강원특별자치도 춘천시 남산면 북한강변길 688",
+    "phone": "",
+    "latitude": "37.8301345384",
+    "longitude": "127.5787976128",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "514561",
+    "title": "오리온스",
+    "address": "강원특별자치도 횡성군 둔내면 고원로412번길 6",
+    "phone": "",
+    "latitude": "37.4969160933",
+    "longitude": "128.2396642371",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/447232_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131878",
+    "title": "오크밸리스키장",
+    "address": "강원특별자치도 원주시 지정면 오크밸리2길 58",
+    "phone": "",
+    "latitude": "37.4057326010",
+    "longitude": "127.8158885215",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/2777750_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "639996",
+    "title": "오투리조트 스키장",
+    "address": "강원특별자치도 태백시 오투로 266 (황지동)",
+    "phone": "",
+    "latitude": "37.1715506527",
+    "longitude": "128.9593454775",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3547621_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "2818713",
+    "title": "용평백컨트리투어앤교육센터 아웃바운더리",
+    "address": "강원특별자치도 평창군 올림픽로 715 용평리조트",
+    "phone": "",
+    "latitude": "37.6450240222",
+    "longitude": "128.6791090477",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/2818702_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "513359",
+    "title": "월드스키",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 112",
+    "phone": "",
+    "latitude": "37.5101447290",
+    "longitude": "128.2189962641",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/447202_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131299",
+    "title": "웰리힐리파크 스노우파크",
+    "address": "강원특별자치도 횡성군 둔내면 고원로 451",
+    "phone": "",
+    "latitude": "37.4872340609",
+    "longitude": "128.2492886569",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/2778391_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506464",
+    "title": "준스키",
+    "address": "강원특별자치도 평창군 봉평면 태기로 155",
+    "phone": "",
+    "latitude": "37.5846659337",
+    "longitude": "128.3270592861",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/448097_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "681615",
+    "title": "준스키",
+    "address": "경기도 광주시 도척면 도척윗로 230",
+    "phone": "",
+    "latitude": "37.3357482323",
+    "longitude": "127.3171301227",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131723",
+    "title": "지산 포레스트 리조트 스키장",
+    "address": "경기도 이천시 마장면 지산로 267",
+    "phone": "",
+    "latitude": "37.2167736527",
+    "longitude": "127.3472918733",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3549253_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507868",
+    "title": "초이스스키샵",
+    "address": "전북특별자치도 무주군 설천면 만선1로 114",
+    "phone": "",
+    "latitude": "35.9095363982",
+    "longitude": "127.7568246120",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/447705_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506216",
+    "title": "코리아레저스쿨",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 234",
+    "phone": "",
+    "latitude": "37.6653027395",
+    "longitude": "128.7053560639",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3550039_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "509371",
+    "title": "테라스스키",
+    "address": "경기도 이천시 마장면 지산로 242",
+    "phone": "",
+    "latitude": "37.2162459885",
+    "longitude": "127.3502249566",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/693156_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506252",
+    "title": "포인트스키",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 12",
+    "phone": "",
+    "latitude": "37.6778234103",
+    "longitude": "128.6999922759",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/693014_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131869",
+    "title": "하이원리조트 스키장",
+    "address": "강원특별자치도 정선군 고한읍 하이원길 500",
+    "phone": "",
+    "latitude": "37.2039890632",
+    "longitude": "128.8394968825",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3578080_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "514521",
+    "title": "화이트스포츠",
+    "address": "강원특별자치도 횡성군 둔내면 고원로398번길 15-1",
+    "phone": "",
+    "latitude": "37.4967549725",
+    "longitude": "128.2381921527",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/447238_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "506241",
+    "title": "환타피아",
+    "address": "강원특별자치도 평창군 대관령면 올림픽로 240",
+    "phone": "",
+    "latitude": "37.6650944142",
+    "longitude": "128.7045228121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/693021_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "131300",
+    "title": "휘닉스 스노우파크",
+    "address": "강원특별자치도 평창군 봉평면 면온리",
+    "phone": "",
+    "latitude": "37.5829021870",
+    "longitude": "128.3237818572",
+    "image": "",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "507511",
+    "title": "k2스키클럽",
+    "address": "전북특별자치도 무주군 설천면 만선로 63",
+    "phone": "",
+    "latitude": "35.9075838220",
+    "longitude": "127.7556719892",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/692286_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "508401",
+    "title": "ok스키샵",
+    "address": "전북특별자치도 무주군 설천면 내배방길 6",
+    "phone": "",
+    "latitude": "35.9115584122",
+    "longitude": "127.7580244510",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/449597_image2_1.jpg",
+    "category": "스키스노보드"
+  },
+  {
+    "id": "1845517",
+    "title": "원마운트 스노우파크",
+    "address": "경기도 고양시 일산서구 한류월드로 300 (대화동)",
+    "phone": "",
+    "latitude": "37.6646082788",
+    "longitude": "126.7545414686",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3079526_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "스케이트"
+  },
+  {
+    "id": "131702",
+    "title": "경주월드 스노우파크",
+    "address": "경상북도 경주시 보문로 544 (천군동)",
+    "phone": "",
+    "latitude": "35.8361977800",
+    "longitude": "129.2838448224",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3550072_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "썰매장"
+  },
+  {
+    "id": "2787407",
+    "title": "남원워터월드수상스키장",
+    "address": "전북특별자치도 남원시 주생면 주생금풍길 268",
+    "phone": "",
+    "latitude": "35.3830155456",
+    "longitude": "127.2830498863",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/2790674_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "2758033",
+    "title": "남한강수상스키장",
+    "address": "경기도 양평군 옥천면 남한강변길 274-1",
+    "phone": "",
+    "latitude": "37.5101858123",
+    "longitude": "127.4400334310",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/2758374_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "767780",
+    "title": "리버시티수상스키장",
+    "address": "서울특별시 강남구 압구정로11길 37-53 (압구정동)",
+    "phone": "",
+    "latitude": "37.5291121024",
+    "longitude": "127.0191711533",
+    "image": "",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "2765251",
+    "title": "물새수상스키장",
+    "address": "경기도 남양주시 화도읍 북한강로1570번길 46",
+    "phone": "",
+    "latitude": "37.6499683061",
+    "longitude": "127.3698607749",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/2765300_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "2666839",
+    "title": "용인수상스키장",
+    "address": "경기도 용인시 처인구 이동읍 어진로 765",
+    "phone": "",
+    "latitude": "37.1063308060",
+    "longitude": "127.1899953166",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3023296_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "2760785",
+    "title": "지천지수상스키장",
+    "address": "경상북도 칠곡군 지천면 창평리 627-3",
+    "phone": "",
+    "latitude": "35.9697622947",
+    "longitude": "128.4899941957",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/2760847_image2_1.JPG",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  },
+  {
+    "id": "2769756",
+    "title": "충주 포세이돈 수상레저(포세이돈수상스키장)",
+    "address": "충청북도 충주시 살미면 월악로 1087",
+    "phone": "",
+    "latitude": "36.9201903267",
+    "longitude": "128.0606721838",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/2771315_image2_1.jpg",
+    "category": "스키스노보드",
+    "original_category": "윈드서핑제트스키"
+  }
+]

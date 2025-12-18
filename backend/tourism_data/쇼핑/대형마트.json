@@ -1,0 +1,2273 @@
+[
+  {
+    "id": "3540485",
+    "title": "주문진식자재마트",
+    "address": "강원특별자치도 강릉시 주문진읍 연주로 324",
+    "phone": "033-661-8500",
+    "latitude": "37.8813884076",
+    "longitude": "128.8262718384",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "면세점"
+  },
+  {
+    "id": "3540260",
+    "title": "한길DC마트",
+    "address": "강원특별자치도 강릉시 화부산로 109 (교동)",
+    "phone": "033-641-4955",
+    "latitude": "37.7650531166",
+    "longitude": "128.8898919271",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "면세점"
+  },
+  {
+    "id": "2750144",
+    "title": "가가상점",
+    "address": "충청남도 공주시 감영길 3",
+    "phone": "",
+    "latitude": "36.4529297875",
+    "longitude": "127.1216721795",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "132201",
+    "title": "강남고속터미널 혼수상가",
+    "address": "서울특별시 서초구 신반포로 194 (반포동)",
+    "phone": "",
+    "latitude": "37.5062061855",
+    "longitude": "127.0055841495",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3527832_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2775527",
+    "title": "강릉항회센터",
+    "address": "강원특별자치도 강릉시 창해로14번길 55-21 (견소동)",
+    "phone": "",
+    "latitude": "37.7701176433",
+    "longitude": "128.9525889012",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3577853_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1177090",
+    "title": "강화 인삼센터",
+    "address": "인천광역시 강화군 강화읍 강화대로 335",
+    "phone": "032-933-8913",
+    "latitude": "37.7421168236",
+    "longitude": "126.4924882782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/1163172_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132205",
+    "title": "견지동 불교용품거리",
+    "address": "서울특별시 종로구 우정국로 55",
+    "phone": "",
+    "latitude": "37.5744783860",
+    "longitude": "126.9819927000",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3050213_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "3539434",
+    "title": "경기건어물",
+    "address": "강원특별자치도 강릉시 주문진읍 해안로 1747-2",
+    "phone": "033-661-4552",
+    "latitude": "37.8912623040",
+    "longitude": "128.8283630094",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2503117",
+    "title": "고궁마실",
+    "address": "서울특별시 종로구 창경궁로 229",
+    "phone": "",
+    "latitude": "37.5825082936",
+    "longitude": "126.9978910234",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "3023080",
+    "title": "고기리농장",
+    "address": "경기도 용인시 수지구 호수로 11-4 (고기동)",
+    "phone": "",
+    "latitude": "37.3580994945",
+    "longitude": "127.0683742827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3023067_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132574",
+    "title": "광복 지하도상가",
+    "address": "부산광역시 중구 중앙대로 지하17 (중앙동6가)",
+    "phone": "051-713-8200",
+    "latitude": "35.0997620313",
+    "longitude": "129.0361453203",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3561855_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2988778",
+    "title": "광야 서울",
+    "address": "서울특별시 성동구 왕십리로 83-21 아크로 서울포레스트",
+    "phone": "",
+    "latitude": "37.5445357444",
+    "longitude": "127.0432879644",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/2988777_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132420",
+    "title": "구로 중앙유통단지",
+    "address": "서울특별시 구로구 경인로53길 15",
+    "phone": "",
+    "latitude": "37.5009544532",
+    "longitude": "126.8746156713",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3526888_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "920406",
+    "title": "군산수산물종합센터",
+    "address": "전북특별자치도 군산시 내항2길 216",
+    "phone": "",
+    "latitude": "35.9940306175",
+    "longitude": "126.7047549900",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3041521_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2484146",
+    "title": "궁가는여우",
+    "address": "서울특별시 종로구 자하문로 3 (내자동)",
+    "phone": "",
+    "latitude": "37.5764807580",
+    "longitude": "126.9723657428",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3567726_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1304260",
+    "title": "금강제화 명동본점",
+    "address": "서울특별시 중구 명동8길 30 (명동2가)",
+    "phone": "02-753-9411",
+    "latitude": "37.5624659415",
+    "longitude": "126.9846816840",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/1309149_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1621305",
+    "title": "금남지하도상가",
+    "address": "광주광역시 동구 서석로 지하 56",
+    "phone": "062-227-1535",
+    "latitude": "35.1485941049",
+    "longitude": "126.9164688054",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3515188_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3010413",
+    "title": "김미영 돌산갓김치",
+    "address": "전라남도 여수시 돌산읍 향일암로 57",
+    "phone": "",
+    "latitude": "34.5939771211",
+    "longitude": "127.8026854999",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3010383_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2796874",
+    "title": "김해농수산물종합유통센터",
+    "address": "경상남도 김해시 칠산로 128 (신문동)",
+    "phone": "",
+    "latitude": "35.1860598032",
+    "longitude": "128.8361798283",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/2799044_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "969803",
+    "title": "나이프갤러리",
+    "address": "서울특별시 종로구 인사동9길 7 (관훈동)",
+    "phone": "",
+    "latitude": "37.5737313000",
+    "longitude": "126.9847508030",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3502260_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "132226",
+    "title": "낙원 악기상가",
+    "address": "서울특별시 종로구 삼일대로 428",
+    "phone": "02-743-6131",
+    "latitude": "37.5727564697",
+    "longitude": "126.9878811011",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/923719_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132557",
+    "title": "남대문 메사 (MESA)",
+    "address": "서울특별시 중구 남대문시장10길 2 MESA",
+    "phone": "02-2128-7800",
+    "latitude": "37.5604271986",
+    "longitude": "126.9796155373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/668128_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "985961",
+    "title": "남대문 문구상가",
+    "address": "서울특별시 중구 남대문로 6-2 (남대문로4가)",
+    "phone": "",
+    "latitude": "37.5604465848",
+    "longitude": "126.9765019308",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3573137_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "986011",
+    "title": "남대문 본동의류상가",
+    "address": "서울특별시 중구 남대문시장2길 3-2 (남창동)",
+    "phone": "02-753-2805",
+    "latitude": "37.5598688770",
+    "longitude": "126.9766574889",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3568376_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132213",
+    "title": "남대문 안경상가",
+    "address": "서울특별시 중구 남창동",
+    "phone": "남대문 상가 02-753-2805",
+    "latitude": "37.5594522508",
+    "longitude": "126.9762158742",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3514370_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132211",
+    "title": "남대문 액세사리상가",
+    "address": "서울특별시 중구 남대문시장4길 21",
+    "phone": "02-778-8932",
+    "latitude": "37.5591939725",
+    "longitude": "126.9776157542",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/1984373_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1013076",
+    "title": "남대문 종합상가",
+    "address": "서울특별시 중구 남대문시장4길 21",
+    "phone": "02-753-2805",
+    "latitude": "37.5592134153",
+    "longitude": "126.9776518607",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/1015004_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "986038",
+    "title": "남대문 중앙상가",
+    "address": "서울특별시 중구 남대문시장4길 21",
+    "phone": "02-753-2805",
+    "latitude": "37.5591939725",
+    "longitude": "126.9776157542",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/1009887_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2759937",
+    "title": "남사화훼집하장",
+    "address": "경기도 용인시 처인구 남사읍 천덕산로 304",
+    "phone": "",
+    "latitude": "37.1040467720",
+    "longitude": "127.1361002560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/2760012_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2761466",
+    "title": "남평화상가",
+    "address": "서울특별시 중구 장충단로 282-10 (신당동)",
+    "phone": "",
+    "latitude": "37.5692239587",
+    "longitude": "127.0108429971",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3568464_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132187",
+    "title": "남포동 지하도상가",
+    "address": "부산광역시 중구 구덕로 지하 44",
+    "phone": "051-713-8200",
+    "latitude": "35.0980149031",
+    "longitude": "129.0306458464",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3561825_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1030777",
+    "title": "노스비치 (North Beach)",
+    "address": "서울특별시 용산구 이태원로 171",
+    "phone": "",
+    "latitude": "37.5346221062",
+    "longitude": "126.9931372569",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/1031725_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132235",
+    "title": "논현 가구거리",
+    "address": "서울특별시 강남구 학동로 125 (논현동)",
+    "phone": "",
+    "latitude": "37.5124558057",
+    "longitude": "127.0248794386",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3571728_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2523267",
+    "title": "농부마켓 & 농부밥상",
+    "address": "충청남도 청양군 대치면 칠갑산로 704-18",
+    "phone": "",
+    "latitude": "36.4385461196",
+    "longitude": "126.8493997933",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3047163_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "807619",
+    "title": "눈스퀘어",
+    "address": "서울특별시 중구 명동길 14 (명동2가)",
+    "phone": "",
+    "latitude": "37.5634685712",
+    "longitude": "126.9829151500",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3481981_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2713241",
+    "title": "늘미곡",
+    "address": "전북특별자치도 전주시 완산구 선너머로 16 (중화산동2가, 중화산동 광진아파트)",
+    "phone": "",
+    "latitude": "35.8161831496",
+    "longitude": "127.1265580887",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/2713147_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2721465",
+    "title": "다다르다",
+    "address": "대전광역시 중구 중교로73번길 6",
+    "phone": "",
+    "latitude": "36.3270523898",
+    "longitude": "127.4276954012",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2784351",
+    "title": "다대씨파크",
+    "address": "부산광역시 사하구 다대동로 20 (다대동)",
+    "phone": "",
+    "latitude": "35.0551547329",
+    "longitude": "128.9719937791",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/2787660_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2946235",
+    "title": "단하",
+    "address": "서울특별시 종로구 팔판길 39-7 (팔판동)",
+    "phone": "",
+    "latitude": "37.5837550672",
+    "longitude": "126.9809508653",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/2947568_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "282011",
+    "title": "답십리 고미술상가",
+    "address": "서울특별시 동대문구 고미술로 39",
+    "phone": "",
+    "latitude": "37.5682581489",
+    "longitude": "127.0522448086",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3055898_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2037022",
+    "title": "당진시 수산물 유통센터",
+    "address": "충청남도 당진시 석문면 장고항로 334-48",
+    "phone": "",
+    "latitude": "37.0352362128",
+    "longitude": "126.5589961101",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3567483_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2557725",
+    "title": "대구종합유통단지관리공단",
+    "address": "대구광역시 북구 유통단지로13길 9",
+    "phone": "",
+    "latitude": "35.9082297975",
+    "longitude": "128.6091270699",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/2557722_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "985952",
+    "title": "대도종합상가",
+    "address": "서울특별시 중구 남대문시장4길 9 (남창동)",
+    "phone": "02-752-2689",
+    "latitude": "37.5597216902",
+    "longitude": "126.9776907326",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3570439_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132202",
+    "title": "대학천 책방거리",
+    "address": "서울특별시 종로구 종로 258 (종로6가)",
+    "phone": "",
+    "latitude": "37.5707098195",
+    "longitude": "127.0064961295",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3571897_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2618267",
+    "title": "더블유피엠",
+    "address": "서울특별시 중구 소공로 58 회현지하도상가 다-32호",
+    "phone": "",
+    "latitude": "37.5604550174",
+    "longitude": "126.9820764229",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/2618266_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2779150",
+    "title": "덕분애",
+    "address": "서울특별시 서초구 효령로 276 (서초동)",
+    "phone": "",
+    "latitude": "37.4844366508",
+    "longitude": "127.0144700672",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2799213_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782699",
+    "title": "데팡스가든센터",
+    "address": "부산광역시 금정구 중앙대로 2315 (노포동)",
+    "phone": "",
+    "latitude": "35.2908112060",
+    "longitude": "129.0975791779",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/2795674_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782154",
+    "title": "동명활어센터",
+    "address": "강원특별자치도 속초시 영금정로 50",
+    "phone": "",
+    "latitude": "38.2105763512",
+    "longitude": "128.6013958377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3515559_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132506",
+    "title": "동보프라자",
+    "address": "부산광역시 부산진구 중앙대로 704",
+    "phone": "051-803-0009",
+    "latitude": "35.1555117782",
+    "longitude": "129.0595973128",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/1982195_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1890343",
+    "title": "동부농원",
+    "address": "제주특별자치도 서귀포시 성산읍 서성일로 1007",
+    "phone": "",
+    "latitude": "33.4429313439",
+    "longitude": "126.8862290743",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3477505_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3357668",
+    "title": "동아완구",
+    "address": "서울특별시 종로구 종로52길 5 (창신동)",
+    "phone": "",
+    "latitude": "37.5719181289",
+    "longitude": "127.0129788379",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3357663_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2762868",
+    "title": "동화상가",
+    "address": "서울특별시 중구 장충단로13길 34 (을지로6가)",
+    "phone": "",
+    "latitude": "37.5682434466",
+    "longitude": "127.0069017178",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3570470_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1623725",
+    "title": "둔산전자타운",
+    "address": "대전광역시 서구 도산로403번길 21",
+    "phone": "042-534-4225, 526-8470",
+    "latitude": "36.3401141826",
+    "longitude": "127.3937786355",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3565560_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2505619",
+    "title": "디타워 광화문",
+    "address": "서울특별시 종로구 종로3길 17 (청진동)",
+    "phone": "",
+    "latitude": "37.5710481741",
+    "longitude": "126.9789291877",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3573106_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2636336",
+    "title": "때때롯살롱",
+    "address": "서울특별시 종로구 수표로28길 21-12",
+    "phone": "",
+    "latitude": "37.5734536461",
+    "longitude": "126.9898531239",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/2636323_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782750",
+    "title": "러브이즈기빙",
+    "address": "부산광역시 수영구 광안로49번길 24 (광안동)",
+    "phone": "",
+    "latitude": "35.1560822443",
+    "longitude": "129.1183532979",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/2794238_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782748",
+    "title": "러브이즈기빙하트베어",
+    "address": "부산광역시 수영구 광남로 159",
+    "phone": "",
+    "latitude": "35.1555156397",
+    "longitude": "129.1182783198",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/2794272_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2756702",
+    "title": "리빙파워센터",
+    "address": "경기도 용인시 기흥구 신고매로 59 (고매동)",
+    "phone": "",
+    "latitude": "37.2234659076",
+    "longitude": "127.1142627868",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/2756897_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2946229",
+    "title": "리슬한복",
+    "address": "서울특별시 마포구 서교동 331-10",
+    "phone": "",
+    "latitude": "37.5558934247",
+    "longitude": "126.9256205862",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/2947573_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1113581",
+    "title": "맥스타일 (maxtyle)",
+    "address": "서울특별시 중구 마장로 3",
+    "phone": "02-2234-0981",
+    "latitude": "37.5688045577",
+    "longitude": "127.0105235943",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/1984393_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2996472",
+    "title": "메종쥬 성수 부티끄",
+    "address": "서울특별시 성동구 서울숲4길 28-14",
+    "phone": "",
+    "latitude": "37.5467688264",
+    "longitude": "127.0437545254",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2996467_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3493824",
+    "title": "메튜장 안국",
+    "address": "서울특별시 종로구 율곡로 33 (안국동)",
+    "phone": "",
+    "latitude": "37.5759671280",
+    "longitude": "126.9834397483",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3493822_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2740004",
+    "title": "모나미 스토어 본사수지점",
+    "address": "경기도 용인시 수지구 손곡로 17 (동천동)",
+    "phone": "",
+    "latitude": "37.3355999035",
+    "longitude": "127.1006886483",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2776854",
+    "title": "묵호항 활·선어판매센터",
+    "address": "강원특별자치도 동해시 묵호진동",
+    "phone": "",
+    "latitude": "37.5519515485",
+    "longitude": "129.1139283754",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3448321_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2666703",
+    "title": "물치항활어회센터",
+    "address": "강원특별자치도 양양군 강현면 동해대로 3584",
+    "phone": "",
+    "latitude": "38.1561050811",
+    "longitude": "128.6100911934",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3500540_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2497259",
+    "title": "미라이안경[한국관광 품질인증/Korea Quality]",
+    "address": "서울특별시 강남구 삼성로 716 (청담동)",
+    "phone": "02-517-1478",
+    "latitude": "37.5199609425",
+    "longitude": "127.0500602669",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/2579662_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "273758",
+    "title": "밀리오레 동대문점",
+    "address": "서울특별시 중구 장충단로 263",
+    "phone": "",
+    "latitude": "37.5679629533",
+    "longitude": "127.0085265783",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3065149_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "132558",
+    "title": "밀리오레 명동점",
+    "address": "서울특별시 중구 퇴계로 115 (충무로1가)",
+    "phone": "",
+    "latitude": "37.5611022086",
+    "longitude": "126.9845400690",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3468830_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3097021",
+    "title": "바니스튜디오 안경 명동역점",
+    "address": "서울특별시 중구 명동8가길 21 (충무로2가)",
+    "phone": "",
+    "latitude": "37.5619326982",
+    "longitude": "126.9862787758",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3096932_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1863246",
+    "title": "바당수산",
+    "address": "제주특별자치도 제주시 임항로 49",
+    "phone": "064-758-3945",
+    "latitude": "33.5169924336",
+    "longitude": "126.5300249638",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3396935_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1624562",
+    "title": "방어진 활어센터",
+    "address": "울산광역시 동구 중진2길 5",
+    "phone": "052-233-0108",
+    "latitude": "35.4835706862",
+    "longitude": "129.4243453342",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3497435_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2776856",
+    "title": "방파제회센터",
+    "address": "강원특별자치도 강릉시 주문진읍 해안로 1822",
+    "phone": "",
+    "latitude": "37.8944842599",
+    "longitude": "128.8338429706",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3577807_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3035159",
+    "title": "밸리피싱",
+    "address": "충청남도 논산시 가야곡면 병암리",
+    "phone": "",
+    "latitude": "36.1748851637",
+    "longitude": "127.1976450565",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3035116_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2875203",
+    "title": "베니스스퀘어",
+    "address": "경기도 시흥시 서울대학로278번길 61 (배곧동)",
+    "phone": "",
+    "latitude": "37.3682367524",
+    "longitude": "126.7306852647",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/2875202_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "3540459",
+    "title": "베이비하우스 강릉점",
+    "address": "강원특별자치도 강릉시 옥가로 24 (옥천동)",
+    "phone": "033-655-1004",
+    "latitude": "37.7584012980",
+    "longitude": "128.8996329222",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2776844",
+    "title": "봉포항활어회센터",
+    "address": "강원특별자치도 고성군 토성면 토성로 44-12",
+    "phone": "",
+    "latitude": "38.2524041656",
+    "longitude": "128.5680947778",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3557132_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1013366",
+    "title": "부르뎅 아동복 (Burdeng)",
+    "address": "서울특별시 중구 남대문시장8길 14",
+    "phone": "02-755-5737",
+    "latitude": "37.5599161253",
+    "longitude": "126.9784156601",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/1015026_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1303697",
+    "title": "부산 르네시떼",
+    "address": "부산광역시 사상구 광장로 7",
+    "phone": "051-319-5000",
+    "latitude": "35.1638537784",
+    "longitude": "128.9776597721",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3476772_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2785631",
+    "title": "부산청과",
+    "address": "부산광역시 사상구 농산물시장로 17 (엄궁동)",
+    "phone": "",
+    "latitude": "35.1275492847",
+    "longitude": "128.9653340573",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2790679_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "132550",
+    "title": "부평동한복거리",
+    "address": "부산광역시 중구 부평2길 44",
+    "phone": "",
+    "latitude": "35.1014505558",
+    "longitude": "129.0265905492",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3476844_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782747",
+    "title": "분홍이네",
+    "address": "부산광역시 수영구 광안로45번길 2 (광안동, 광안비취빌리지)",
+    "phone": "",
+    "latitude": "35.1554211893",
+    "longitude": "129.1173728455",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/2794294_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1863266",
+    "title": "사회복지법인 평화의마을",
+    "address": "제주특별자치도 서귀포시 대정읍 중산간서로 2195-12",
+    "phone": "064-794-6277",
+    "latitude": "33.2790122238",
+    "longitude": "126.2926509377",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2946240",
+    "title": "산리오 러버스 클럽",
+    "address": "서울특별시 마포구 와우산로19길 18 (서교동)",
+    "phone": "",
+    "latitude": "37.5513716661",
+    "longitude": "126.9221376978",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/2947662_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3540644",
+    "title": "삼성스토어 강릉옥천점 (구 삼성전자서비스 강릉센터)",
+    "address": "강원특별자치도 강릉시 율곡로 2849 (옥천동)",
+    "phone": "033-648-7821 (1588-3366)",
+    "latitude": "37.7581262707",
+    "longitude": "128.8965970933",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "1019638",
+    "title": "삼익패션타운",
+    "address": "서울특별시 중구 남대문시장8길 7 (남창동)",
+    "phone": "1566-4578",
+    "latitude": "37.5601966561",
+    "longitude": "126.9788489464",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3064057_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "3014436",
+    "title": "삼정타워",
+    "address": "부산광역시 부산진구 중앙대로 672 (부전동)",
+    "phone": "",
+    "latitude": "35.1530453881",
+    "longitude": "129.0596334885",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3014331_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2776833",
+    "title": "삼척항활어회센터",
+    "address": "강원특별자치도 삼척시 이사부길 38 (정하동)",
+    "phone": "",
+    "latitude": "37.4382189672",
+    "longitude": "129.1925248413",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3488503_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2514779",
+    "title": "삼천포수협회센터",
+    "address": "경상남도 사천시 유람선길 176",
+    "phone": "055-833-4354",
+    "latitude": "34.9270083693",
+    "longitude": "128.0678343542",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3040220_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2765207",
+    "title": "상무화훼단지",
+    "address": "광주광역시 서구 마륵벽진길 23",
+    "phone": "",
+    "latitude": "35.1428074499",
+    "longitude": "126.8455168899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3528427_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2836586",
+    "title": "새서울프라자",
+    "address": "경기도 과천시 별양상가2로 20 (별양동)",
+    "phone": "",
+    "latitude": "37.4268790494",
+    "longitude": "126.9925709039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/2836580_image2_1.jpeg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132185",
+    "title": "서면 지하도상가",
+    "address": "부산광역시 부산진구 중앙대로 737",
+    "phone": "051-713-8261",
+    "latitude": "35.1602390548",
+    "longitude": "129.0611192742",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3493459_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132230",
+    "title": "서울고속버스터미널 꽃도매상가",
+    "address": "서울특별시 서초구 신반포로 194 (반포동)",
+    "phone": "",
+    "latitude": "37.5062061855",
+    "longitude": "127.0055841495",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3527824_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132184",
+    "title": "서울고속버스터미널 의류도매상가",
+    "address": "서울특별시 서초구 신반포로 194 (반포동)",
+    "phone": "",
+    "latitude": "37.5062061855",
+    "longitude": "127.0055841495",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3527841_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2774454",
+    "title": "서울청과",
+    "address": "서울특별시 송파구 양재대로 932 (가락동)",
+    "phone": "",
+    "latitude": "37.4960786971",
+    "longitude": "127.1107693087",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3568008_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2860526",
+    "title": "서울프라자",
+    "address": "경기도 안산시 단원구 삼일로 310 (선부동)",
+    "phone": "",
+    "latitude": "37.3338727358",
+    "longitude": "126.8121149188",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/2860519_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2477064",
+    "title": "서촌나들이",
+    "address": "서울특별시 종로구 자하문로 13",
+    "phone": "",
+    "latitude": "37.5772389972",
+    "longitude": "126.9720046434",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/2477062_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782720",
+    "title": "서해5도수산물복합문화센터",
+    "address": "인천광역시 서구 정서진로 651",
+    "phone": "",
+    "latitude": "37.5709927287",
+    "longitude": "126.6730904266",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "1030600",
+    "title": "석바위 지하도상가",
+    "address": "인천광역시 미추홀구 경원대로 848",
+    "phone": "",
+    "latitude": "37.4577784192",
+    "longitude": "126.6903114559",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3395097_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2776876",
+    "title": "설악항활어회센터",
+    "address": "강원특별자치도 속초시 동해대로 3666",
+    "phone": "",
+    "latitude": "38.1634097665",
+    "longitude": "128.6090299508",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3515555_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132627",
+    "title": "성남프라자",
+    "address": "울산광역시 중구 중앙3길 6",
+    "phone": "",
+    "latitude": "35.5545329223",
+    "longitude": "129.3175526435",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2498048",
+    "title": "세란안경[한국관광 품질인증/Korea Quality]",
+    "address": "서울특별시 중구 을지로 30 롯데호텔",
+    "phone": "010-8746-2715",
+    "latitude": "37.5654016461",
+    "longitude": "126.9810458210",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/2532850_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132218",
+    "title": "세브도르",
+    "address": "서울특별시 강남구 언주로 431",
+    "phone": "",
+    "latitude": "37.4789545450",
+    "longitude": "127.0474283341",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/1926445_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132231",
+    "title": "세운전자상가",
+    "address": "서울특별시 종로구 청계천로 159 (장사동)",
+    "phone": "",
+    "latitude": "37.5693347773",
+    "longitude": "126.9952555258",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3571821_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2497571",
+    "title": "세인트 제임스 삼청[한국관광 품질인증/Korea Quality]",
+    "address": "서울특별시 종로구 삼청로 78",
+    "phone": "02-742-4628(내선 207)",
+    "latitude": "37.5823663566",
+    "longitude": "126.9818897082",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/2628608_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2497361",
+    "title": "세인트 제임스 서울",
+    "address": "서울특별시 강남구 논현로175길 94",
+    "phone": "02-543-4628",
+    "latitude": "37.5232461617",
+    "longitude": "127.0216544267",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/2628384_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3539350",
+    "title": "센스안경",
+    "address": "강원특별자치도 강릉시 교동광장로 137 (교동)",
+    "phone": "033-645-0491",
+    "latitude": "37.7645363166",
+    "longitude": "128.8799900575",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2364960",
+    "title": "속초수협 청호활어센터",
+    "address": "강원특별자치도 속초시 설악금강대교로 67",
+    "phone": "",
+    "latitude": "38.1962834336",
+    "longitude": "128.5943524795",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3394137_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "1976879",
+    "title": "수협 보성회천수산물위판장",
+    "address": "전라남도 보성군 회천면 남부관광로 2274",
+    "phone": "061-852-2151",
+    "latitude": "34.6672566546",
+    "longitude": "127.0841159983",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2748748",
+    "title": "순천도축장 (순천육류도소매장)",
+    "address": "전라남도 순천시 홍내교길 106",
+    "phone": "",
+    "latitude": "34.9152945251",
+    "longitude": "127.5172439964",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "1013079",
+    "title": "숭례문(남대문) 수입상가",
+    "address": "서울특별시 중구 남대문시장4길 21 (남창동)",
+    "phone": "02-779-2951",
+    "latitude": "37.5592411902",
+    "longitude": "126.9776685255",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3083029_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "3111794",
+    "title": "스타필드 고양",
+    "address": "경기도 고양시 덕양구 고양대로 1955",
+    "phone": "1833-9001",
+    "latitude": "37.6470294966",
+    "longitude": "126.8947930433",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "3335600",
+    "title": "스타필드 수원",
+    "address": "경기도 수원시 장안구 수성로 175 (정자동)",
+    "phone": "",
+    "latitude": "37.2874813034",
+    "longitude": "126.9915582378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3550987_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2606110",
+    "title": "스타필드 시티 위례",
+    "address": "경기도 하남시 위례대로 200",
+    "phone": "031-8097-1101",
+    "latitude": "37.4801895523",
+    "longitude": "127.1484191135",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/2606104_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3351398",
+    "title": "스타필드 안성",
+    "address": "경기도 안성시 공도읍 서동대로 3930-39",
+    "phone": "",
+    "latitude": "36.9946845979",
+    "longitude": "127.1472661744",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3455318_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2437611",
+    "title": "스타필드 하남",
+    "address": "경기도 하남시 미사대로 750 (신장동)",
+    "phone": "",
+    "latitude": "37.5454888917",
+    "longitude": "127.2237576241",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/2437612_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1020938",
+    "title": "스토리 (Stori)",
+    "address": "서울특별시 강서구 허준로 217",
+    "phone": "02-735-7101",
+    "latitude": "37.5609028297",
+    "longitude": "126.8627595100",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/1020540_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3468496",
+    "title": "스페이스 도산",
+    "address": "서울특별시 강남구 압구정로46길 38 (신사동)",
+    "phone": "",
+    "latitude": "37.5262099619",
+    "longitude": "127.0358919354",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3468489_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1304880",
+    "title": "승진완구",
+    "address": "서울특별시 종로구 종로52길 30 (창신동)",
+    "phone": "",
+    "latitude": "37.5713959893",
+    "longitude": "127.0142037410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3583807_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2763846",
+    "title": "시몬스 테라스점",
+    "address": "경기도 이천시 모가면 사실로 988",
+    "phone": "",
+    "latitude": "37.1982914740",
+    "longitude": "127.4464473193",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3578612_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2863873",
+    "title": "신안프라자",
+    "address": "경기도 안산시 상록구 반석로 54 (본오동)",
+    "phone": "",
+    "latitude": "37.2965252403",
+    "longitude": "126.8658360727",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/2863858_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2762844",
+    "title": "신평화패션타운",
+    "address": "서울특별시 중구 청계천로 298 (신당동)",
+    "phone": "",
+    "latitude": "37.5694989313",
+    "longitude": "127.0110679692",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3569022_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3097631",
+    "title": "심리편집샵, 서로",
+    "address": "서울특별시 영등포구 양평로22길 4 (양평동4가)",
+    "phone": "",
+    "latitude": "37.5381810356",
+    "longitude": "126.8943739341",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3097623_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132395",
+    "title": "아남프라자",
+    "address": "강원특별자치도 속초시 동해대로 4236",
+    "phone": "033-636-2000",
+    "latitude": "38.1974551954",
+    "longitude": "128.5777261751",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3394130_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2830878",
+    "title": "아브뉴프랑 광명점",
+    "address": "경기도 광명시 양지로 16 (일직동, 광명역 써밋플레이스)",
+    "phone": "",
+    "latitude": "37.4172920659",
+    "longitude": "126.8813840674",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/2830865_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2040546",
+    "title": "아브뉴프랑 판교",
+    "address": "경기도 성남시 분당구 동판교로177번길 25 (삼평동, 판교 호반 써밋 플레이스)",
+    "phone": "",
+    "latitude": "37.3973735308",
+    "longitude": "127.1135662935",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3053597_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "984588",
+    "title": "아이닥안경",
+    "address": "서울특별시 중구 명동3길 6",
+    "phone": "",
+    "latitude": "37.5638935340",
+    "longitude": "126.9836150743",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3363978_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2497414",
+    "title": "아트코리아",
+    "address": "서울특별시 종로구 자하문로 231",
+    "phone": "010-7377-5375",
+    "latitude": "37.5947562474",
+    "longitude": "126.9632160596",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/2628634_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3544731",
+    "title": "야옹아멍멍해봐 강릉내곡점",
+    "address": "강원특별자치도 강릉시 남부로17번길 8 (내곡동)",
+    "phone": "",
+    "latitude": "37.7404169309",
+    "longitude": "128.8823850316",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2905301",
+    "title": "어뮤즈 한남 쇼룸",
+    "address": "서울특별시 용산구 이태원로55가길 49",
+    "phone": "",
+    "latitude": "37.5364108974",
+    "longitude": "126.9992783141",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/2905269_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3302551",
+    "title": "어서어서",
+    "address": "경상북도 경주시 포석로 1083 (황남동)",
+    "phone": "",
+    "latitude": "35.8378184184",
+    "longitude": "129.2097318255",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3302544_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2436503",
+    "title": "언더스탠드에비뉴",
+    "address": "서울특별시 성동구 왕십리로 63",
+    "phone": "",
+    "latitude": "37.5436136344",
+    "longitude": "127.0435962960",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3502700_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2775554",
+    "title": "에프마켓남부낚시",
+    "address": "서울특별시 금천구 시흥대로 443",
+    "phone": "",
+    "latitude": "37.4733414088",
+    "longitude": "126.8978921041",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "679686",
+    "title": "엔터식스 왕십리역점",
+    "address": "서울특별시 성동구 왕십리광장로 17 (행당동)",
+    "phone": "",
+    "latitude": "37.5614947974",
+    "longitude": "127.0384101499",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3512313_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3353969",
+    "title": "엠플레이그라운드 홍대본점 (Tax Refund Shop)",
+    "address": "서울특별시 마포구 어울마당로 94 (서교동)",
+    "phone": "",
+    "latitude": "37.5533880976",
+    "longitude": "126.9221154207",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3353954_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1304864",
+    "title": "영풍문고 종각종로본점",
+    "address": "서울특별시 종로구 청계천로 41 (서린동)",
+    "phone": "",
+    "latitude": "37.5697233868",
+    "longitude": "126.9821983715",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3571814_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782203",
+    "title": "영흥수협회센터",
+    "address": "인천광역시 옹진군 영흥면 영흥로 109-12",
+    "phone": "",
+    "latitude": "37.2543291975",
+    "longitude": "126.4969235740",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/2786711_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782864",
+    "title": "예밀와인 힐링센터",
+    "address": "강원특별자치도 영월군 김삿갓면 예밀촌길 229-3",
+    "phone": "",
+    "latitude": "37.1416164777",
+    "longitude": "128.5905432481",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/2797090_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132581",
+    "title": "온양도자기",
+    "address": "충청남도 아산시 신창면 서부남로 559",
+    "phone": "041-541-2477",
+    "latitude": "36.7922733404",
+    "longitude": "126.9192867604",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/1963336_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1966706",
+    "title": "온양도자기(인주면)",
+    "address": "충청남도 아산시 인주면 현대로 984",
+    "phone": "",
+    "latitude": "36.8423974516",
+    "longitude": "126.8812888285",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/1963333_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3544682",
+    "title": "요넥스 강릉점(모던스포츠)",
+    "address": "강원특별자치도 강릉시 강릉대로 304 (포남동)",
+    "phone": "",
+    "latitude": "37.7636729511",
+    "longitude": "128.9017270149",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "132229",
+    "title": "용산전자랜드",
+    "address": "서울특별시 용산구 청파로 74",
+    "phone": "02-707-4700, 4694",
+    "latitude": "37.5327661639",
+    "longitude": "126.9595403701",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2788397",
+    "title": "울산농산물종합유통센터",
+    "address": "울산광역시 북구 진장유통로 90",
+    "phone": "",
+    "latitude": "35.5791531527",
+    "longitude": "129.3587816842",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2844761",
+    "title": "울산업스퀘어",
+    "address": "울산광역시 남구 화합로 185 (삼산동)",
+    "phone": "",
+    "latitude": "35.5413875802",
+    "longitude": "129.3389289269",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/2844754_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2794711",
+    "title": "울산큰애기상점가",
+    "address": "울산광역시 중구 문화의거리 42 (옥교동)",
+    "phone": "",
+    "latitude": "35.5569771700",
+    "longitude": "129.3216938801",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/2794925_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2712630",
+    "title": "원천상회",
+    "address": "강원특별자치도 화천군 하남면 영서로 5500",
+    "phone": "",
+    "latitude": "38.0578818807",
+    "longitude": "127.6672216868",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/2710993_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782599",
+    "title": "유진참치",
+    "address": "인천광역시 계양구 아나지로 466",
+    "phone": "",
+    "latitude": "37.5248965770",
+    "longitude": "126.7444463127",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2788197",
+    "title": "유키효잡화점",
+    "address": "제주특별자치도 제주시 남성로 160 (삼도이동)",
+    "phone": "",
+    "latitude": "33.5092487261",
+    "longitude": "126.5224563532",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/2792417_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132238",
+    "title": "을지로 철제가구거리",
+    "address": "서울특별시 중구 창경궁로 34-1 (예관동)",
+    "phone": "",
+    "latitude": "37.5654602842",
+    "longitude": "126.9984164588",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3077634_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2770098",
+    "title": "음성축산물유통단지",
+    "address": "충청북도 음성군 대소면 오류리",
+    "phone": "",
+    "latitude": "36.9833499747",
+    "longitude": "127.4667182226",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/2770289_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "985264",
+    "title": "이새",
+    "address": "서울특별시 종로구 인사동길 30-1 (관훈동)",
+    "phone": "",
+    "latitude": "37.5734702409",
+    "longitude": "126.9859507010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3440572_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2847506",
+    "title": "이후북스 제주점",
+    "address": "제주특별자치도 제주시 관덕로4길 3",
+    "phone": "",
+    "latitude": "33.5126316662",
+    "longitude": "126.5212480480",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3583282_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132219",
+    "title": "인사동 문화의 거리",
+    "address": "서울특별시 종로구 인사동",
+    "phone": "",
+    "latitude": "37.5739535014",
+    "longitude": "126.9850146618",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/3571886_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132509",
+    "title": "일산가구단지",
+    "address": "경기도 고양시 일산서구 경의로917번길 26",
+    "phone": "0507-1364-0640",
+    "latitude": "37.7005208354",
+    "longitude": "126.7586206379",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2788393",
+    "title": "일산수산물판매센터",
+    "address": "울산광역시 동구 일산진11길 150",
+    "phone": "",
+    "latitude": "35.5000718136",
+    "longitude": "129.4350800443",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3549073_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1013388",
+    "title": "장안 악세사리상가",
+    "address": "서울특별시 중구 남대문시장4길 42-2",
+    "phone": "02-753-5600",
+    "latitude": "37.5582885065",
+    "longitude": "126.9767436373",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/1015043_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3539451",
+    "title": "제임스딘 강릉점",
+    "address": "강원특별자치도 강릉시 금성로 24 (금학동)",
+    "phone": "033-642-1828",
+    "latitude": "37.7541934153",
+    "longitude": "128.8977748864",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "1014672",
+    "title": "제주 중앙지하상가",
+    "address": "제주특별자치도 제주시 중앙로 60",
+    "phone": "064-752-8776",
+    "latitude": "33.5131677726",
+    "longitude": "126.5246699600",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3527922_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1867129",
+    "title": "제주민속식품(사월의 꿩)",
+    "address": "제주특별자치도 제주시 구좌읍 번영로 2178",
+    "phone": "",
+    "latitude": "33.4279447092",
+    "longitude": "126.7509911404",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/2393614_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1871024",
+    "title": "제주칠성로상점가",
+    "address": "제주특별자치도 제주시 관덕로13길 12 (일도일동)",
+    "phone": "064-723-1510",
+    "latitude": "33.5140565855",
+    "longitude": "126.5261253693",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3396972_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3022959",
+    "title": "조인폴리아",
+    "address": "경기도 파주시 월롱면 황소바위길 304",
+    "phone": "",
+    "latitude": "37.7795873860",
+    "longitude": "126.8014005973",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3022946_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132421",
+    "title": "종로귀금속거리",
+    "address": "서울특별시 종로구 봉익동",
+    "phone": "",
+    "latitude": "37.5715539165",
+    "longitude": "126.9926140374",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3571858_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1304515",
+    "title": "좌천동 가구거리",
+    "address": "부산광역시 동구 중앙대로460번나길 24 (좌천동)",
+    "phone": "",
+    "latitude": "35.1351167823",
+    "longitude": "129.0564925856",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3552613_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2638045",
+    "title": "주식회사 신만 [한국관광 품질인증/Korea Quality]",
+    "address": "서울특별시 마포구 방울내로 83 (망원동)",
+    "phone": "",
+    "latitude": "37.5612313103",
+    "longitude": "126.9042279413",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "1845457",
+    "title": "주얼팰리스",
+    "address": "전북특별자치도 익산시 왕궁면 호반로 8",
+    "phone": "063-834-5100",
+    "latitude": "35.9911739189",
+    "longitude": "127.1028389452",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3562596_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132502",
+    "title": "중곡동 가구거리",
+    "address": "서울특별시 광진구 능동",
+    "phone": "010-5508-0089",
+    "latitude": "37.5566516806",
+    "longitude": "127.0809147499",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3478411_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2755850",
+    "title": "중앙쇼핑센터",
+    "address": "전라남도 여수시 무선중앙로 43 (선원동)",
+    "phone": "",
+    "latitude": "34.7737876842",
+    "longitude": "127.6495248838",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3582109_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2774568",
+    "title": "중앙청과",
+    "address": "서울특별시 송파구 양재대로 932 (가락동)",
+    "phone": "",
+    "latitude": "37.4960786971",
+    "longitude": "127.1107693087",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2790967_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "1303722",
+    "title": "쥬디스태화",
+    "address": "부산광역시 부산진구 중앙대로 694",
+    "phone": "",
+    "latitude": "35.1547174233",
+    "longitude": "129.0596306657",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/1982270_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3539544",
+    "title": "참조은생활마트 포남점",
+    "address": "강원특별자치도 강릉시 강릉대로 422-8 (포남동)",
+    "phone": "033-651-8999",
+    "latitude": "37.7710167147",
+    "longitude": "128.9103648985",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2741499",
+    "title": "채그로",
+    "address": "서울특별시 마포구 마포대로4다길 31 (마포동)",
+    "phone": "",
+    "latitude": "37.5357044387",
+    "longitude": "126.9442833439",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/2741490_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2805691",
+    "title": "채즈칩스 스토어",
+    "address": "인천광역시 부평구  부평대로32번길 (20)",
+    "phone": "",
+    "latitude": "37.4943886518",
+    "longitude": "126.7241212413",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3566513_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782794",
+    "title": "천연제작소",
+    "address": "부산광역시 동래구 석사로 26 (사직동)",
+    "phone": "",
+    "latitude": "35.1991375040",
+    "longitude": "129.0626958480",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/2796008_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132244",
+    "title": "청계 조명기구상가",
+    "address": "서울특별시 종로구 청계천로 155",
+    "phone": "",
+    "latitude": "37.5671405907",
+    "longitude": "126.9954361275",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3064041_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "132207",
+    "title": "청오가방도매상가",
+    "address": "서울특별시 종로구 청계천로 229",
+    "phone": "",
+    "latitude": "37.5701348234",
+    "longitude": "127.0029909094",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3109826_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "1013394",
+    "title": "청자 수입상가",
+    "address": "서울특별시 중구 남대문시장4길 29",
+    "phone": "",
+    "latitude": "37.5588356763",
+    "longitude": "126.9773491223",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/1015053_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2498434",
+    "title": "청하고려인삼[한국관광 품질인증/Korea Quality]",
+    "address": "서울특별시 종로구 자하문로 280 청하빌딩",
+    "phone": "02-395-1688",
+    "latitude": "37.5987029838",
+    "longitude": "126.9616966416",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/2579813_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2779513",
+    "title": "청해수산",
+    "address": "인천광역시 중구 축항대로86번길 100",
+    "phone": "",
+    "latitude": "37.4486112500",
+    "longitude": "126.6014642587",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2819463",
+    "title": "초록스토어",
+    "address": "경상남도 남해군 동부대로1876번길 38",
+    "phone": "",
+    "latitude": "34.8306791470",
+    "longitude": "128.0037841145",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/2819391_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2578284",
+    "title": "카카오프렌즈 홍대 플래그십 스토어",
+    "address": "서울특별시 마포구 양화로 162",
+    "phone": "",
+    "latitude": "37.5563933350",
+    "longitude": "126.9238651767",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3092408_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2988926",
+    "title": "캐논플렉스",
+    "address": "서울특별시 강남구 봉은사로 217",
+    "phone": "",
+    "latitude": "37.5082342692",
+    "longitude": "127.0357452353",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3494665_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2027870",
+    "title": "커먼그라운드",
+    "address": "서울특별시 광진구 아차산로 200",
+    "phone": "",
+    "latitude": "37.5414726033",
+    "longitude": "127.0650860666",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3516224_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3079643",
+    "title": "컨셉스토어 튠",
+    "address": "서울특별시 성동구 성수이로7가길 3 (성수동2가)",
+    "phone": "",
+    "latitude": "37.5406891747",
+    "longitude": "127.0547314762",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "3535136",
+    "title": "케이팝 스퀘어 홍대",
+    "address": "서울특별시 마포구 양화로 141 (동교동)",
+    "phone": "",
+    "latitude": "37.5558072531",
+    "longitude": "126.9216848363",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3535117_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2943363",
+    "title": "코오롱스포츠 솟솟618점",
+    "address": "서울특별시 서초구 원터2길 9",
+    "phone": "",
+    "latitude": "37.4439226495",
+    "longitude": "127.0557785643",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "3424281",
+    "title": "코오롱스포츠 솟솟리버스제주점",
+    "address": "제주특별자치도 제주시 탑동로 13 (삼도이동)",
+    "phone": "",
+    "latitude": "33.5169923266",
+    "longitude": "126.5233172132",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2386144",
+    "title": "콰니 경복궁(KWANI Gyeongbokgung)",
+    "address": "서울특별시 종로구 사직로8길 1-3",
+    "phone": "",
+    "latitude": "37.5756391332",
+    "longitude": "126.9692271641",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/2636217_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2848391",
+    "title": "클래식문구사",
+    "address": "제주특별자치도 제주시 관덕로4길 1-2",
+    "phone": "",
+    "latitude": "33.5126538873",
+    "longitude": "126.5213619265",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/2827120_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "806322",
+    "title": "타임스퀘어",
+    "address": "서울특별시 영등포구 영중로 15 (영등포동4가)",
+    "phone": "",
+    "latitude": "37.5178335971",
+    "longitude": "126.9053818370",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3361454_image2_1.png",
+    "category": "대형마트"
+  },
+  {
+    "id": "2768185",
+    "title": "테마의거리상점가",
+    "address": "인천광역시 부평구 대정로 66",
+    "phone": "",
+    "latitude": "37.4936276750",
+    "longitude": "126.7267071382",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "690568",
+    "title": "테크노마트 강변점",
+    "address": "서울특별시 광진구 광나루로56길 85 (구의동)",
+    "phone": "",
+    "latitude": "37.5357793715",
+    "longitude": "127.0957084403",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3467060_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2751644",
+    "title": "텍스트 칼로리",
+    "address": "대전광역시 동구 철갑3길 13 (소제동)",
+    "phone": "",
+    "latitude": "36.3342267501",
+    "longitude": "127.4378609651",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/2753833_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2946404",
+    "title": "토인",
+    "address": "서울특별시 종로구 인사동길 48 (관훈동)",
+    "phone": "",
+    "latitude": "37.5744589884",
+    "longitude": "126.9844702526",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2947786_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132198",
+    "title": "퇴계로 오토바이상가",
+    "address": "서울특별시 중구 충무로4가",
+    "phone": "",
+    "latitude": "36.9844568739",
+    "longitude": "126.9273224518",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/47/3077647_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2689322",
+    "title": "트리플스트리트",
+    "address": "인천광역시 연수구 송도과학로16번길 33-3",
+    "phone": "",
+    "latitude": "37.3798397316",
+    "longitude": "126.6609690710",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3497309_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2775517",
+    "title": "파스텔상점",
+    "address": "강원특별자치도 강릉시 강릉대로211번길 20-1",
+    "phone": "",
+    "latitude": "37.7603787408",
+    "longitude": "128.8941694640",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3585949_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "1521999",
+    "title": "페라라 코리아",
+    "address": "서울특별시 용산구 이태원로 169",
+    "phone": "02-797-5117",
+    "latitude": "37.5346359849",
+    "longitude": "126.9926706333",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/1309082_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2805901",
+    "title": "페이퍼돌메이트 아틀리에 서울숲점",
+    "address": "서울특별시 성동구 서울숲2길 45-1 (성수동1가)",
+    "phone": "",
+    "latitude": "37.5464327563",
+    "longitude": "127.0438461937",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2899951",
+    "title": "포셋",
+    "address": "서울특별시 서대문구 증가로 18 (연희동)",
+    "phone": "",
+    "latitude": "37.5700557687",
+    "longitude": "126.9312780037",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2784912",
+    "title": "프레젠트모먼트",
+    "address": "서울특별시 마포구 동교로 49-1",
+    "phone": "",
+    "latitude": "37.5531767536",
+    "longitude": "126.9077278490",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/2785791_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2718357",
+    "title": "필름로그 현상소",
+    "address": "서울특별시 중구 퇴계로53길 6-17",
+    "phone": "",
+    "latitude": "37.5643077477",
+    "longitude": "127.0043631719",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2713581",
+    "title": "하우스 도산",
+    "address": "서울특별시 강남구 압구정로46길 50 (신사동)",
+    "phone": "",
+    "latitude": "37.5254239385",
+    "longitude": "127.0356947531",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/2713444_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2782875",
+    "title": "하이브로우타운",
+    "address": "경기도 양평군 서종면 소나기마을길 31",
+    "phone": "",
+    "latitude": "37.5951915173",
+    "longitude": "127.3799003329",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/2989436_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2779451",
+    "title": "한국청과",
+    "address": "서울특별시 송파구 양재대로 932 (가락동)",
+    "phone": "",
+    "latitude": "37.4960786971",
+    "longitude": "127.1107693087",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2791392_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "987669",
+    "title": "한순례한복침구",
+    "address": "서울특별시 강남구 압구정로 164 (신사동)",
+    "phone": "",
+    "latitude": "37.5265819931",
+    "longitude": "127.0276621188",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3579249_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "132580",
+    "title": "해밀톤 쇼핑센터",
+    "address": "서울특별시 용산구 이태원로 179 (이태원동)",
+    "phone": "02-3786-6351",
+    "latitude": "37.5346860011",
+    "longitude": "126.9938927421",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3467130_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3083550",
+    "title": "허브 하우스",
+    "address": "충청남도 당진시 송산면 가곡리",
+    "phone": "",
+    "latitude": "36.9842719338",
+    "longitude": "126.6765979377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3083534_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "3423768",
+    "title": "헤트라스 안국",
+    "address": "서울특별시 종로구 창덕궁1길 42 (계동)",
+    "phone": "",
+    "latitude": "37.5794556725",
+    "longitude": "126.9868810023",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3423732_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "984585",
+    "title": "헬로우 에이피엠 (Hello apm)",
+    "address": "서울특별시 중구 장충단로 253",
+    "phone": "",
+    "latitude": "37.5674741142",
+    "longitude": "127.0081710683",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3462914_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3544733",
+    "title": "헬스케어의료기",
+    "address": "강원특별자치도 강릉시 보래미하길 19 (포남동)",
+    "phone": "",
+    "latitude": "37.7719165956",
+    "longitude": "128.9096010505",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2711768",
+    "title": "현대카드 바이닐앤플라스틱",
+    "address": "서울특별시 용산구 이태원로 248",
+    "phone": "",
+    "latitude": "37.5368803162",
+    "longitude": "127.0008837102",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2864631",
+    "title": "홀리데이비지터샵",
+    "address": "대구광역시 중구 경상감영길 184",
+    "phone": "",
+    "latitude": "35.8719781290",
+    "longitude": "128.5973180095",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2768105",
+    "title": "황산어판장",
+    "address": "인천광역시 강화군 길상면 해안남로65번길 35-33",
+    "phone": "",
+    "latitude": "37.6245035773",
+    "longitude": "126.5391400669",
+    "image": "",
+    "category": "대형마트"
+  },
+  {
+    "id": "2773281",
+    "title": "10꼬르소꼬모 청담점",
+    "address": "서울특별시 강남구 압구정로 416 (청담동)",
+    "phone": "",
+    "latitude": "37.5269822119",
+    "longitude": "127.0424190965",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/2947692_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2900483",
+    "title": "AK PLAZA 홍대",
+    "address": "서울특별시 마포구 양화로 188 (동교동)",
+    "phone": "",
+    "latitude": "37.5577987750",
+    "longitude": "126.9265121176",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3573277_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "3061217",
+    "title": "NC큐브 커낼워크",
+    "address": "인천광역시 연수구 아트센터대로 107 (송도동)",
+    "phone": "",
+    "latitude": "37.4010785360",
+    "longitude": "126.6385260838",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3001614_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2946552",
+    "title": "T1 HQ SHOP",
+    "address": "서울특별시 강남구 선릉로 627 (논현동)",
+    "phone": "",
+    "latitude": "37.5125116770",
+    "longitude": "127.0428028051",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2946987_image2_1.jpg",
+    "category": "대형마트"
+  },
+  {
+    "id": "2435596",
+    "title": "Y'Z PARK (와이즈파크)",
+    "address": "부산광역시 중구 광복로39번길 6",
+    "phone": "",
+    "latitude": "35.0997674661",
+    "longitude": "129.0296125548",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/2435680_image2_1.JPG",
+    "category": "대형마트"
+  },
+  {
+    "id": "2708345",
+    "title": "하모니마트 명동역점",
+    "address": "서울특별시 중구 명동10길 58",
+    "phone": "02-752-2269",
+    "latitude": "37.5613522015",
+    "longitude": "126.9857705052",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3041080_image2_1.bmp",
+    "category": "대형마트",
+    "original_category": "한국관광명품점"
+  },
+  {
+    "id": "3544636",
+    "title": "강릉식자재마트",
+    "address": "강원특별자치도 강릉시 정원로 68 (교동)",
+    "phone": "",
+    "latitude": "37.7626808654",
+    "longitude": "128.8743350687",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3540175",
+    "title": "강원식자재마트 주문진점 (구 강원양돈하나로마트주문진지점)",
+    "address": "강원특별자치도 강릉시 주문진읍 시장길 28",
+    "phone": "033-662-2212",
+    "latitude": "37.8902707345",
+    "longitude": "128.8274603439",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3544739",
+    "title": "꽃사슴복권마트(슈퍼맨편의점)",
+    "address": "강원특별자치도 강릉시 경강로 2113 (임당동)",
+    "phone": "",
+    "latitude": "37.7561431866",
+    "longitude": "128.8976220619",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3540270",
+    "title": "소금강행복펜션마트",
+    "address": "강원특별자치도 강릉시 연곡면 소금강길 3",
+    "phone": "033-661-4115",
+    "latitude": "37.8465762113",
+    "longitude": "128.7058837858",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3539984",
+    "title": "에이스마트 주문진점",
+    "address": "강원특별자치도 강릉시 주문진읍 주문로 144",
+    "phone": "033-662-8461",
+    "latitude": "37.8948980383",
+    "longitude": "128.8306404689",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3539750",
+    "title": "월드마트 초당점",
+    "address": "강원특별자치도 강릉시 연당길 74 (초당동)",
+    "phone": "033-653-9899",
+    "latitude": "37.7843874886",
+    "longitude": "128.9153973642",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3544744",
+    "title": "이마트24 강릉여고점",
+    "address": "강원특별자치도 강릉시 경강로 2144-1 (옥천동)",
+    "phone": "010-3470-4744",
+    "latitude": "37.7574875327",
+    "longitude": "128.9005356469",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  },
+  {
+    "id": "3539784",
+    "title": "주문진원마트",
+    "address": "강원특별자치도 강릉시 주문진읍 장성로 51",
+    "phone": "033-662-8890",
+    "latitude": "37.8880876272",
+    "longitude": "128.8260772034",
+    "image": "",
+    "category": "대형마트",
+    "original_category": "복합쇼핑몰"
+  }
+]

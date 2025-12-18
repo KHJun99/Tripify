@@ -1,0 +1,985 @@
+[
+  {
+    "id": "142962",
+    "title": "덕구온천호텔&콘도",
+    "address": "경상북도 울진군 북면 덕구온천로 924",
+    "phone": "054-782-0677",
+    "latitude": "37.0790592288",
+    "longitude": "129.2842331949",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3503639_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "관광호텔"
+  },
+  {
+    "id": "137477",
+    "title": "금강산콘도",
+    "address": "강원특별자치도 고성군 현내면 금강산로 416",
+    "phone": "033-680-7800",
+    "latitude": "38.5108294531",
+    "longitude": "128.4193668841",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/1335487_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "138365",
+    "title": "나인브릿지콘도",
+    "address": "제주특별자치도 서귀포시 안덕면 광평로 34-156",
+    "phone": "064-793-9999",
+    "latitude": "33.3404016406",
+    "longitude": "126.4042620974",
+    "image": "",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "136118",
+    "title": "도고 글로리콘도",
+    "address": "충청남도 아산시 도고면 도고온천로 124-23",
+    "phone": "041-541-7100",
+    "latitude": "36.7654231248",
+    "longitude": "126.8890846592",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/1601586_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "139010",
+    "title": "보성다비치콘도",
+    "address": "전라남도 보성군 회천면 충의로 36",
+    "phone": "061-850-1100",
+    "latitude": "34.6710730011",
+    "longitude": "127.0905125649",
+    "image": "",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "2907507",
+    "title": "양양비치콘도",
+    "address": "강원특별자치도 양양군 일출로 159-6 더시크릿양양패밀리텔",
+    "phone": "",
+    "latitude": "38.1083945647",
+    "longitude": "128.6410537608",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3565235_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "3079973",
+    "title": "일성콘도 제주비치",
+    "address": "제주특별자치도 제주시 한림읍 한림로 127",
+    "phone": "",
+    "latitude": "33.3856937508",
+    "longitude": "126.2211270025",
+    "image": "",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "137814",
+    "title": "제주 금강산콘도",
+    "address": "제주특별자치도 제주시 한림읍 협재로 210-18",
+    "phone": "064-795-7800",
+    "latitude": "33.3795865508",
+    "longitude": "126.2502662709",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/1341265_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "136549",
+    "title": "코레스코치악산콘도미니엄",
+    "address": "강원특별자치도 횡성군 우천면 전재로 254",
+    "phone": "033-342-7880",
+    "latitude": "37.4372675050",
+    "longitude": "128.0958623122",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/1584040_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "138941",
+    "title": "퀸크루즈 리조텔 콘도",
+    "address": "경상남도 거제시 동부면 거제대로 975",
+    "phone": "055-635-7611",
+    "latitude": "34.7767576394",
+    "longitude": "128.6425743124",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/1981420_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "137476",
+    "title": "토비스콘도 제주",
+    "address": "제주특별자치도 제주시 애월읍 애월로1길 8",
+    "phone": "",
+    "latitude": "33.4631615996",
+    "longitude": "126.3117312768",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/2650208_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "138965",
+    "title": "하이원콘도(마운틴콘도 / 밸리콘도 / 힐콘도)",
+    "address": "강원특별자치도 정선군 고한읍 하이원길 265-1",
+    "phone": "1588-7789",
+    "latitude": "37.2104297527",
+    "longitude": "128.8271727915",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3019583_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "136616",
+    "title": "휘닉스 평창 콘도",
+    "address": "강원특별자치도 평창군 봉평면 태기로 174",
+    "phone": "1577-0069",
+    "latitude": "37.5804025028",
+    "longitude": "128.3251818060",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/1335736_image2_1.jpg",
+    "category": "콘도미니엄",
+    "original_category": "호스텔"
+  },
+  {
+    "id": "1979670",
+    "title": "가평 하이랜드",
+    "address": "경기도 가평군 북면 가화로 2369-19",
+    "phone": "",
+    "latitude": "37.9525433965",
+    "longitude": "127.4766560979",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3574099_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2521964",
+    "title": "강화평화빌리지",
+    "address": "인천광역시 강화군 송해면 상도숭뢰길 183",
+    "phone": "032-930-7058, 7062",
+    "latitude": "37.7866919073",
+    "longitude": "126.4771467709",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/2521951_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3044521",
+    "title": "거제스테이",
+    "address": "경상남도 거제시 거제중앙로17길 5 (고현동)",
+    "phone": "010-6668-4808",
+    "latitude": "34.8847591334",
+    "longitude": "128.6243008183",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3049913",
+    "title": "경주 소울메이트",
+    "address": "경상북도 경주시 태종로685번길 28 (노서동)",
+    "phone": "010-5316-1138",
+    "latitude": "35.8407151896",
+    "longitude": "129.2031545416",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3059473_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1204528",
+    "title": "고추잠자리",
+    "address": "인천광역시 부평구 동암광장로4번길 12",
+    "phone": "032-421-0381",
+    "latitude": "37.4704965856",
+    "longitude": "126.7016156268",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/1213836_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "397834",
+    "title": "구름위의산책",
+    "address": "경상남도 고성군 상리면 삼상로 1312-35",
+    "phone": "055-673-9111",
+    "latitude": "34.9755824961",
+    "longitude": "128.1693186595",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/1150162_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1366226",
+    "title": "그곳애",
+    "address": "전라남도 여수시 율촌면 조화길 3",
+    "phone": "061-681-0015",
+    "latitude": "34.8637321296",
+    "longitude": "127.5902750118",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2498670",
+    "title": "나인스파빌",
+    "address": "제주특별자치도 제주시 애월읍 하광로 518",
+    "phone": "064-727-1000",
+    "latitude": "33.4453932160",
+    "longitude": "126.4301213796",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/2498643_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2849981",
+    "title": "넘버25 수원화성행궁점",
+    "address": "경기도 수원시 팔달구 정조로810번길 20 (남수동)",
+    "phone": "",
+    "latitude": "37.2802937185",
+    "longitude": "127.0179532651",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/2849972_image2_1.jpeg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "139054",
+    "title": "뉴월드",
+    "address": "강원특별자치도 횡성군 둔내면 두원길 15-9",
+    "phone": "033-344-3579",
+    "latitude": "37.4961773648",
+    "longitude": "128.2436361227",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/1815518_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "824811",
+    "title": "늘송파크텔",
+    "address": "제주특별자치도 제주시 원노형5길 22 (노형동)",
+    "phone": "010-9264-4831",
+    "latitude": "33.4875921654",
+    "longitude": "126.4831824807",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/824923_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "137326",
+    "title": "대궐파크",
+    "address": "강원특별자치도 속초시 부월1길 38",
+    "phone": "033-633-1988",
+    "latitude": "38.1895175764",
+    "longitude": "128.5955053642",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/709642_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2770515",
+    "title": "대천리조텔",
+    "address": "충청남도 보령시 고잠1길 38 (신흑동)",
+    "phone": "",
+    "latitude": "36.3117049145",
+    "longitude": "126.5153720579",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2772106_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2042125",
+    "title": "더 레드 하우스",
+    "address": "강원특별자치도 속초시 설악산로836번길 17",
+    "phone": "033-636-7127",
+    "latitude": "38.1696183575",
+    "longitude": "128.5164548310",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/2042111_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2754601",
+    "title": "더펫텔프리미엄스위트",
+    "address": "부산광역시 해운대구 해운대해변로197번길 12",
+    "phone": "",
+    "latitude": "35.1592408683",
+    "longitude": "129.1531418525",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/2754616_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3483874",
+    "title": "더휴식 누베르 서울 이태원점",
+    "address": "서울특별시 용산구 우사단로14길 11 (이태원동)",
+    "phone": "",
+    "latitude": "37.5343166442",
+    "longitude": "126.9963480845",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3483867_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3483847",
+    "title": "더휴식 아늑 워커스 안산점",
+    "address": "경기도 안산시 상록구 성호로1길 12-4 (일동)",
+    "phone": "",
+    "latitude": "37.3097209861",
+    "longitude": "126.8687937702",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3483803_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3547880",
+    "title": "드림파크",
+    "address": "강원특별자치도 강릉시 성덕포남로149번길 8 (포남동)",
+    "phone": "",
+    "latitude": "37.7654534768",
+    "longitude": "128.9107539250",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3537686",
+    "title": "라라",
+    "address": "강원특별자치도 강릉시 옥천로62번길 6 (옥천동)",
+    "phone": "",
+    "latitude": "37.7601066496",
+    "longitude": "128.8992995662",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2502361",
+    "title": "라마다 앙코르 바이윈덤 부산 해운대",
+    "address": "부산광역시 해운대구 구남로 9",
+    "phone": "",
+    "latitude": "35.1633127546",
+    "longitude": "129.1596439530",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3523880_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "136577",
+    "title": "르아브르",
+    "address": "서울특별시 강서구 까치산로 83",
+    "phone": "02-2606-9552",
+    "latitude": "37.5460598395",
+    "longitude": "126.8475613135",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/1805439_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3535335",
+    "title": "만수파크",
+    "address": "강원특별자치도 강릉시 성덕포남로153번길 38 (포남동)",
+    "phone": "",
+    "latitude": "37.7637175169",
+    "longitude": "128.9082153176",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2488920",
+    "title": "메종드메르",
+    "address": "강원특별자치도 양양군 현남면 동해대로 694",
+    "phone": "033-671-3338",
+    "latitude": "37.9659495739",
+    "longitude": "128.7620472367",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/2488904_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2434843",
+    "title": "몽산포정다운",
+    "address": "충청남도 태안군 남면 몽대로 489",
+    "phone": "0507-1395-6367",
+    "latitude": "36.6731619956",
+    "longitude": "126.2733483244",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3546578_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1836508",
+    "title": "무주스키텔",
+    "address": "전북특별자치도 무주군 설천면 만선로 36-19",
+    "phone": "010-5172-1133",
+    "latitude": "35.9095669153",
+    "longitude": "127.7548581195",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/1836556_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3547635",
+    "title": "바다여행",
+    "address": "강원특별자치도 강릉시 강동면 정동5길 10",
+    "phone": "",
+    "latitude": "37.6843792481",
+    "longitude": "129.0392365409",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3535297",
+    "title": "벨라지오",
+    "address": "강원특별자치도 강릉시 강릉대로 265-7 (교동)",
+    "phone": "",
+    "latitude": "37.7617286569",
+    "longitude": "128.8978968646",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "816762",
+    "title": "북면황토방온천장",
+    "address": "경상남도 창원시 의창구 북면 천주로1170번길 17-10",
+    "phone": "055-298-9890",
+    "latitude": "35.3539451933",
+    "longitude": "128.6123337123",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3046233",
+    "title": "브라운도트 천안성정점",
+    "address": "충청남도 천안시 서북구 성정공원4길 28 (성정동)",
+    "phone": "",
+    "latitude": "36.8268566629",
+    "longitude": "127.1440322106",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3046218_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3023167",
+    "title": "브라운스위트 신촌센트럴",
+    "address": "서울특별시 마포구 서강로 137 (노고산동)",
+    "phone": "",
+    "latitude": "37.5547215174",
+    "longitude": "126.9356085978",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3023104_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3532430",
+    "title": "블루콘텔",
+    "address": "강원특별자치도 강릉시 주문진읍 항구윗길 16",
+    "phone": "",
+    "latitude": "37.8939842226",
+    "longitude": "128.8289767592",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3543317",
+    "title": "빌리언스",
+    "address": "강원특별자치도 강릉시 강동면 안인진길 27-2",
+    "phone": "",
+    "latitude": "37.7343669334",
+    "longitude": "128.9890117309",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1365671",
+    "title": "산동약수장",
+    "address": "전라남도 구례군 산동면 지리산온천로 146",
+    "phone": "061-781-5820",
+    "latitude": "35.3120402824",
+    "longitude": "127.4464011765",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1257924",
+    "title": "산이야기",
+    "address": "강원특별자치도 화천군 사내면 천문대길 2",
+    "phone": "033-441-8558",
+    "latitude": "38.1023003280",
+    "longitude": "127.4442074124",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/1849326_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3473400",
+    "title": "산택스테이",
+    "address": "경상북도 예천군 용궁면 경서로 1089",
+    "phone": "010-2080-3819",
+    "latitude": "36.6078943407",
+    "longitude": "128.2942713476",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3473322_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1433244",
+    "title": "성주 포천파크",
+    "address": "경상북도 성주군 가천면 포천계곡로 81",
+    "phone": "054-932-9339",
+    "latitude": "35.8694539641",
+    "longitude": "128.1716111985",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/2408890_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2992043",
+    "title": "소테츠 프레사 인 서울 명동",
+    "address": "서울특별시 중구 명동길 48 (명동2가)",
+    "phone": "",
+    "latitude": "37.5637380215",
+    "longitude": "126.9850260612",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/2992021_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3534304",
+    "title": "솔올파크",
+    "address": "강원특별자치도 강릉시 하슬라로192번길 14 (교동)",
+    "phone": "",
+    "latitude": "37.7665721326",
+    "longitude": "128.8769097165",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1746376",
+    "title": "솜누스",
+    "address": "경상남도 진주시 논개길 53",
+    "phone": "055-748-7457",
+    "latitude": "35.1909151926",
+    "longitude": "128.0873979517",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3546833_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1135110",
+    "title": "송월파크",
+    "address": "강원특별자치도 속초시 설악산로 818",
+    "phone": "033-636-7029",
+    "latitude": "38.1683935350",
+    "longitude": "128.5182324854",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/1149361_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3049900",
+    "title": "수비즈텔",
+    "address": "경상북도 포항시 남구 새천년대로450번길 22 (대잠동)",
+    "phone": "010-7152-1480",
+    "latitude": "36.0145010721",
+    "longitude": "129.3476396666",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3484585",
+    "title": "스테이 패스포트 신당 료칸",
+    "address": "서울특별시 중구 난계로11길 33 (황학동)",
+    "phone": "",
+    "latitude": "37.5666161270",
+    "longitude": "127.0218837323",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3484572_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3484356",
+    "title": "스테이 패스포트 익스프레스 스파 당산점",
+    "address": "서울특별시 영등포구 양평로 92-1 (양평동4가)",
+    "phone": "",
+    "latitude": "37.5367006990",
+    "longitude": "126.8969987368",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3484339_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582163",
+    "title": "시월애",
+    "address": "전라남도 목포시 원형동로 50",
+    "phone": "061-281-7300",
+    "latitude": "34.7997309424",
+    "longitude": "126.4326812392",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1268009",
+    "title": "씨싸이드캐슬",
+    "address": "충청남도 태안군 소원면 만리포1길 8",
+    "phone": "041-673-1321",
+    "latitude": "36.7839941960",
+    "longitude": "126.1421711898",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3538983",
+    "title": "씨웰빙하우스",
+    "address": "강원특별자치도 강릉시 창해로14번길 40-4 (견소동)",
+    "phone": "",
+    "latitude": "37.7712924322",
+    "longitude": "128.9487392113",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "139819",
+    "title": "씨젠콘도텔",
+    "address": "강원특별자치도 양양군 강현면 동해대로 3066-7",
+    "phone": "033-671-7730",
+    "latitude": "38.1165295211",
+    "longitude": "128.6302933717",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/632339_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1635368",
+    "title": "아리울파크",
+    "address": "전북특별자치도 부안군 변산면 격포항길 5",
+    "phone": "063-582-2722",
+    "latitude": "35.6247354303",
+    "longitude": "126.4718352207",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3532217",
+    "title": "아스라",
+    "address": "강원특별자치도 강릉시 옥천로 72-3 (교동)",
+    "phone": "",
+    "latitude": "37.7605426904",
+    "longitude": "128.8982579799",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "820165",
+    "title": "아일랜드캐슬",
+    "address": "인천광역시 옹진군 백령면 백령로 215",
+    "phone": "032-836-6700",
+    "latitude": "37.9672464866",
+    "longitude": "124.7218346007",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/820386_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1273119",
+    "title": "아일랜드콘도",
+    "address": "충청남도 태안군 근흥면 마도길 79-5",
+    "phone": "041-674-4488",
+    "latitude": "36.6792867581",
+    "longitude": "126.1374493595",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "139820",
+    "title": "알프스비치",
+    "address": "강원특별자치도 양양군 현북면 하조대해안길 11",
+    "phone": "033-671-7900",
+    "latitude": "38.0215424252",
+    "longitude": "128.7262792989",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/217915_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3074655",
+    "title": "어반스테이더센트럴",
+    "address": "부산광역시 부산진구 중앙대로 752 (부전동)",
+    "phone": "",
+    "latitude": "35.1593502620",
+    "longitude": "129.0609443134",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2534236",
+    "title": "어반스테이플러스",
+    "address": "충청남도 천안시 서북구 성정공원4길 31 (성정동)",
+    "phone": "070-5158-5924",
+    "latitude": "36.8270816457",
+    "longitude": "127.1445321591",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3342549_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2770588",
+    "title": "오션뷰리조텔",
+    "address": "충청남도 보령시 대천항1길 17 (신흑동)",
+    "phone": "",
+    "latitude": "36.3238756207",
+    "longitude": "126.5083584821",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/2772131_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1748017",
+    "title": "오슬로 무인텔",
+    "address": "인천광역시 연수구 능허대로 120",
+    "phone": "032-834-4848",
+    "latitude": "37.4216845574",
+    "longitude": "126.6431362041",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/1745631_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "495904",
+    "title": "왕포리조텔",
+    "address": "전북특별자치도 부안군 진서면 왕포길 30-12",
+    "phone": "063-582-3812",
+    "latitude": "35.5861468507",
+    "longitude": "126.5597533551",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/826322_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1508575",
+    "title": "웨스트오션 컨트리클럽",
+    "address": "전라남도 영광군 백수읍 해안로 1362-70",
+    "phone": "061-350-2023",
+    "latitude": "35.3562565686",
+    "longitude": "126.4104668320",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/2575345_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582538",
+    "title": "유달장",
+    "address": "전라남도 목포시 용당로216번길 24",
+    "phone": "061-272-7121",
+    "latitude": "34.8061741375",
+    "longitude": "126.4007283509",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2004636",
+    "title": "이코노미 해운대점",
+    "address": "부산광역시 해운대구 구남로12번길 11",
+    "phone": "051-746-0006",
+    "latitude": "35.1623184121",
+    "longitude": "129.1591134710",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/2610843_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3540952",
+    "title": "인터파크",
+    "address": "강원특별자치도 강릉시 창해로 21 (견소동)",
+    "phone": "",
+    "latitude": "37.7739281563",
+    "longitude": "128.9445450633",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582557",
+    "title": "자라무인텔",
+    "address": "전라남도 목포시 평화로61번길 8",
+    "phone": "061-283-7559",
+    "latitude": "34.7966951534",
+    "longitude": "126.4314814183",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1932640",
+    "title": "제이드리조텔",
+    "address": "충청남도 태안군 근흥면 신진도길 69",
+    "phone": "041-674-4999, 5999",
+    "latitude": "36.6822419631",
+    "longitude": "126.1368937771",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/1931762_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2531364",
+    "title": "채석리조텔오크빌",
+    "address": "전북특별자치도 부안군 변산면 격포로 196",
+    "phone": "063-583-8046",
+    "latitude": "35.6245076862",
+    "longitude": "126.4722907418",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/2529986_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "816272",
+    "title": "척산온천장",
+    "address": "강원특별자치도 속초시 관광로 288",
+    "phone": "033-636-4806",
+    "latitude": "38.1870501912",
+    "longitude": "128.5437490313",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "136594",
+    "title": "초콜릿",
+    "address": "서울특별시 강서구 강서로5가길 24",
+    "phone": "0507-1389-6223",
+    "latitude": "37.5293367694",
+    "longitude": "126.8467646344",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/1805451_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582686",
+    "title": "카이저",
+    "address": "전라남도 목포시 하당남부로51번길 27",
+    "phone": "061-282-5689",
+    "latitude": "34.8019472866",
+    "longitude": "126.4282482442",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "1263421",
+    "title": "태생파크",
+    "address": "강원특별자치도 화천군 화천읍 중앙로2길 31-4",
+    "phone": "033-442-3009",
+    "latitude": "38.1035355820",
+    "longitude": "127.7042280527",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/1849287_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582825",
+    "title": "테마",
+    "address": "전라남도 목포시 비파로108번길 15",
+    "phone": "061-282-4711",
+    "latitude": "34.8084964992",
+    "longitude": "126.4251816902",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "594392",
+    "title": "통영스테이",
+    "address": "경상남도 통영시 산양읍 산양일주로 1050",
+    "phone": "",
+    "latitude": "34.7695403309",
+    "longitude": "128.4065478045",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3523780_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582840",
+    "title": "투유무인텔",
+    "address": "전라남도 목포시 해안로237번길 31",
+    "phone": "061-243-1100",
+    "latitude": "34.7875593081",
+    "longitude": "126.3848968641",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2582871",
+    "title": "티무인텔",
+    "address": "전라남도 목포시 번화로 82",
+    "phone": "061-247-5800",
+    "latitude": "34.7885064647",
+    "longitude": "126.3874077306",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "138794",
+    "title": "티파니리조텔",
+    "address": "경상남도 거제시 동부면 거제중앙로 3",
+    "phone": "010-4564-2911",
+    "latitude": "34.7749272539",
+    "longitude": "128.6406661924",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/86/1981386_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3539694",
+    "title": "풀하우스",
+    "address": "강원특별자치도 강릉시 강동면 정동역길 26",
+    "phone": "",
+    "latitude": "37.6908144968",
+    "longitude": "129.0331535551",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2603252",
+    "title": "프레이저 플레이스 센트럴 서울",
+    "address": "서울특별시 중구 통일로 78",
+    "phone": "02-2220-8000",
+    "latitude": "37.5654208468",
+    "longitude": "126.9675887136",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/2997624_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2551774",
+    "title": "플레아 드 블랑 (PLEA DE BLANC)",
+    "address": "부산광역시 해운대구 해운대해변로298번길 29",
+    "phone": "051-742-2277",
+    "latitude": "35.1609798175",
+    "longitude": "129.1668989422",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/2551742_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2499273",
+    "title": "하조대 비치하우스",
+    "address": "강원특별자치도 양양군 현북면 하륜길 26",
+    "phone": "033-673-8253",
+    "latitude": "38.0200426008",
+    "longitude": "128.7263543389",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/2499244_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "620968",
+    "title": "해피하우스",
+    "address": "강원특별자치도 속초시 중앙로 192",
+    "phone": "033-633-4406",
+    "latitude": "38.2076320898",
+    "longitude": "128.5931938973",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/735318_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2432993",
+    "title": "홍천 ST리조텔",
+    "address": "강원특별자치도 홍천군 서면 한서로 2141-15",
+    "phone": "033-436-3339",
+    "latitude": "37.6172609990",
+    "longitude": "127.6723620177",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/2432856_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "819941",
+    "title": "히로텔",
+    "address": "대구광역시 중구 국채보상로 657-12 (동인동2가)",
+    "phone": "",
+    "latitude": "35.8700840060",
+    "longitude": "128.6031119965",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3476610_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "3470274",
+    "title": "(주)동성갤러리아",
+    "address": "대구광역시 중구 동성로2길 18-19 (삼덕동1가)",
+    "phone": "",
+    "latitude": "35.8667176143",
+    "longitude": "128.5973570412",
+    "image": "",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2950046",
+    "title": "g2002[한국관광 품질인증/Korea Quality]",
+    "address": "강원특별자치도 고성군 공현진길 8",
+    "phone": "033-638-2002",
+    "latitude": "38.3526607841",
+    "longitude": "128.5094525292",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/2949418_image2_1.jpg",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2618398",
+    "title": "HOTEL 자라",
+    "address": "경기도 가평군 가평읍 가화로 41-27",
+    "phone": "",
+    "latitude": "37.8226120104",
+    "longitude": "127.5149342060",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/2618390_image2_1.JPG",
+    "category": "콘도미니엄"
+  },
+  {
+    "id": "2018270",
+    "title": "MK 리버티하우스",
+    "address": "서울특별시 용산구 청파로95길 5",
+    "phone": "02-717-7633",
+    "latitude": "37.5546471180",
+    "longitude": "126.9686444779",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/2018242_image2_1.JPG",
+    "category": "콘도미니엄"
+  }
+]

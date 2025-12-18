@@ -36,26 +36,25 @@
     <div v-if="filteredFestivals.length > 0" class="festivals-grid">
       <div v-for="festival in filteredFestivals" :key="festival.id" class="festival-card" @click="goToDetail(festival.id)">
         <div class="festival-image">
-          <img :src="festival.image" :alt="festival.name" />
+          <img :src="festival.image_url || 'https://via.placeholder.com/400x200?text=Festival'" :alt="festival.title" />
           <div class="festival-badge">{{ festival.region }}</div>
         </div>
         <div class="festival-content">
-          <h3>{{ festival.name }}</h3>
+          <h3>{{ festival.title }}</h3>
           <div class="festival-info">
             <div class="info-item">
               <span class="icon">📅</span>
-              <span>{{ festival.period }}</span>
+              <span>{{ formatPeriod(festival) }}</span>
             </div>
             <div class="info-item">
               <span class="icon">📍</span>
-              <span>{{ festival.location }}</span>
+              <span>{{ festival.address }}</span>
             </div>
           </div>
-          <p class="festival-description">{{ festival.description }}</p>
-          <div class="festival-tags">
-            <span v-for="tag in festival.tags" :key="tag" class="tag">
-              {{ tag }}
-            </span>
+          <p class="festival-description" v-if="festival.category">{{ festival.category }}</p>
+          <div class="festival-tags" v-if="festival.start_month">
+            <span class="tag">{{ festival.start_month }}월</span>
+            <span class="tag" v-if="festival.phone">{{ festival.phone }}</span>
           </div>
         </div>
       </div>
@@ -102,11 +101,33 @@ const regions = [
   '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'
 ]
 
+// 날짜 포맷 함수
+const formatPeriod = (festival) => {
+  if (festival.event_start_date && festival.event_end_date) {
+    const start = formatDate(festival.event_start_date)
+    const end = formatDate(festival.event_end_date)
+    return `${start} ~ ${end}`
+  } else if (festival.event_start_date) {
+    return formatDate(festival.event_start_date)
+  } else if (festival.start_month) {
+    return `${festival.start_month}월`
+  }
+  return '날짜 미정'
+}
+
+const formatDate = (dateStr) => {
+  if (!dateStr || dateStr.length < 8) return dateStr
+  const year = dateStr.substring(0, 4)
+  const month = dateStr.substring(4, 6)
+  const day = dateStr.substring(6, 8)
+  return `${year}.${month}.${day}`
+}
+
 // Computed - 필터링된 축제 목록
 const filteredFestivals = computed(() => {
   return festivals.value.filter(festival => {
-    const matchMonth = !selectedMonth.value || festival.month === selectedMonth.value
-    const matchRegion = !selectedRegion.value || festival.region === selectedRegion.value
+    const matchMonth = !selectedMonth.value || festival.start_month === selectedMonth.value
+    const matchRegion = !selectedRegion.value || festival.region.includes(selectedRegion.value)
     return matchMonth && matchRegion
   })
 })
@@ -116,7 +137,7 @@ const fetchFestivals = async () => {
   try {
     loading.value = true
     const params = {}
-    if (selectedMonth.value) params.month = selectedMonth.value
+    if (selectedMonth.value) params.start_month = selectedMonth.value
     if (selectedRegion.value) params.region = selectedRegion.value
 
     const data = await getFestivals(params)

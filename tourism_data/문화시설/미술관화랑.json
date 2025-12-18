@@ -1,0 +1,24 @@
+[
+  {
+    "id": "3583362",
+    "title": "목포모자아트갤러리",
+    "address": "전라남도 목포시 해안로229번길 20-2 (영해동2가)",
+    "phone": "",
+    "latitude": "34.7869760475",
+    "longitude": "126.3853301730",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3585859_image2_1.jpg",
+    "category": "미술관화랑",
+    "original_category": "박물관"
+  },
+  {
+    "id": "3014604",
+    "title": "영산포역사갤러리",
+    "address": "전라남도 나주시 영산3길 17 (영산동)",
+    "phone": "",
+    "latitude": "35.0007601230",
+    "longitude": "126.7115155936",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3014591_image2_1.jpg",
+    "category": "미술관화랑",
+    "original_category": "박물관"
+  }
+]

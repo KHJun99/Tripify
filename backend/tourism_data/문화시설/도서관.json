@@ -1,0 +1,2222 @@
+[
+  {
+    "id": "2997700",
+    "title": "가일서가",
+    "address": "경상북도 안동시 풍천면 노동길 16",
+    "phone": "",
+    "latitude": "36.5739941223",
+    "longitude": "128.5220131517",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3586006_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130233",
+    "title": "가톨릭대학교 성신교정도서관",
+    "address": "서울특별시 종로구 창경궁로 296-12",
+    "phone": "",
+    "latitude": "37.5859580079",
+    "longitude": "127.0043347827",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/1894738_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130820",
+    "title": "갈마도서관",
+    "address": "대전광역시 서구 신갈마로127번길 138",
+    "phone": "",
+    "latitude": "36.3408413787",
+    "longitude": "127.3657033482",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3585076_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3536896",
+    "title": "강동숲속도서관",
+    "address": "서울특별시 강동구 구천면로 587 (상일동)",
+    "phone": "",
+    "latitude": "37.5512926876",
+    "longitude": "127.1638101348",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3536885_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3022375",
+    "title": "강릉교육문화관",
+    "address": "강원특별자치도 강릉시 노암등길 37-1 (노암동)",
+    "phone": "",
+    "latitude": "37.7460638413",
+    "longitude": "128.8998721711",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3022291_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1623643",
+    "title": "강진군도서관",
+    "address": "전라남도 강진군 강진읍 남문길 10",
+    "phone": "",
+    "latitude": "34.6404905180",
+    "longitude": "126.7697553845",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/1606620_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130232",
+    "title": "건국대학교 상허기념도서관",
+    "address": "서울특별시 광진구 능동로 120 (화양동)",
+    "phone": "",
+    "latitude": "37.5416615911",
+    "longitude": "127.0717965616",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/1502949_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130832",
+    "title": "경기도교육청과천도서관",
+    "address": "경기도 과천시 도서관길 36",
+    "phone": "",
+    "latitude": "37.4323257114",
+    "longitude": "126.9965953850",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3503477_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130830",
+    "title": "경기도교육청성남도서관",
+    "address": "경기도 성남시 수정구 공원로370번길 26 (신흥동)",
+    "phone": "",
+    "latitude": "37.4466823581",
+    "longitude": "127.1500560266",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3584771_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130831",
+    "title": "경기도교육청중앙도서관",
+    "address": "경기도 수원시 장안구 조원로 18 (조원동)",
+    "phone": "",
+    "latitude": "37.2971862973",
+    "longitude": "127.0230523298",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3475913_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3564769",
+    "title": "경기도서관",
+    "address": "경기도 수원시 영통구 도청로 40 (이의동)",
+    "phone": "",
+    "latitude": "37.2879573518",
+    "longitude": "127.0533442831",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3564753_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3440333",
+    "title": "경상남도교육청 마산지혜의바다도서관",
+    "address": "경상남도 창원시 마산회원구 구암북12길 24-1 (구암동)",
+    "phone": "",
+    "latitude": "35.2565114477",
+    "longitude": "128.5984125679",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3443660",
+    "title": "경상북도교육청 청도도서관",
+    "address": "경상북도 청도군 청도읍 청화로 124",
+    "phone": "",
+    "latitude": "35.6455591265",
+    "longitude": "128.7399062030",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3443633_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3453492",
+    "title": "경주중앙도서관",
+    "address": "경상북도 경주시 금성로 236 (사정동)",
+    "phone": "",
+    "latitude": "35.8386210597",
+    "longitude": "129.2072931267",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3453271_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130734",
+    "title": "고성교육도서관",
+    "address": "강원특별자치도 고성군 거진읍 거탄진로29번길 7",
+    "phone": "",
+    "latitude": "38.4391967511",
+    "longitude": "128.4500107853",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3564543_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130354",
+    "title": "고신대학교복음병원 의학도서관",
+    "address": "부산광역시 서구 감천로 262",
+    "phone": "",
+    "latitude": "35.0809776153",
+    "longitude": "129.0139810929",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/1982307_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1694495",
+    "title": "고양시립 주엽어린이도서관",
+    "address": "경기도 고양시 일산서구 주엽로 104 (주엽동)",
+    "phone": "",
+    "latitude": "37.6685161922",
+    "longitude": "126.7565189557",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3451580",
+    "title": "고양시립마두도서관",
+    "address": "경기도 고양시 일산동구 일산로 355 (마두동)",
+    "phone": "",
+    "latitude": "37.6667696285",
+    "longitude": "126.7820694474",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3451511_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3351144",
+    "title": "곡성어린이도서관",
+    "address": "전라남도 곡성군 곡성읍 곡성로 903",
+    "phone": "",
+    "latitude": "35.2819689562",
+    "longitude": "127.3018647091",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3351125_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130808",
+    "title": "광주 송정다가치문화도서관",
+    "address": "광주광역시 광산구 송정공원로 8-13",
+    "phone": "",
+    "latitude": "35.1449147758",
+    "longitude": "126.7998069918",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/1587327_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130835",
+    "title": "광주광역시립 사직도서관",
+    "address": "광주광역시 남구 제중로 56",
+    "phone": "",
+    "latitude": "35.1395200873",
+    "longitude": "126.9139775859",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3367615_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130810",
+    "title": "광주광역시립무등도서관",
+    "address": "광주광역시 북구 면앙로 130",
+    "phone": "",
+    "latitude": "35.1766327548",
+    "longitude": "126.9253034327",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3367804_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130811",
+    "title": "광주광역시립산수도서관",
+    "address": "광주광역시 동구 경양로 355",
+    "phone": "",
+    "latitude": "35.1544075405",
+    "longitude": "126.9284731545",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3367745_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130809",
+    "title": "광주학생교육문화회관",
+    "address": "광주광역시 서구 상무민주로 61",
+    "phone": "",
+    "latitude": "35.1557506526",
+    "longitude": "126.8585681905",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3367295_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "129757",
+    "title": "광주학생독립운동기념회관",
+    "address": "광주광역시 서구 학생독립로 30",
+    "phone": "",
+    "latitude": "35.1406302465",
+    "longitude": "126.8650124428",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3367258_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3455122",
+    "title": "구로미래도서관",
+    "address": "서울특별시 구로구 새말로 111 (구로동)",
+    "phone": "",
+    "latitude": "37.5070512677",
+    "longitude": "126.8914778520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3453375_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3076249",
+    "title": "구립구산동도서관마을",
+    "address": "서울특별시 은평구 연서로13길 29-23 (구산동)",
+    "phone": "",
+    "latitude": "37.6095619607",
+    "longitude": "126.9131035437",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3502794_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130740",
+    "title": "구미시립중앙도서관",
+    "address": "경상북도 구미시 경은로 85",
+    "phone": "",
+    "latitude": "36.1138069853",
+    "longitude": "128.3352233093",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3029334_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1896898",
+    "title": "국립세종도서관",
+    "address": "세종특별자치시 다솜3로 48",
+    "phone": "",
+    "latitude": "36.4988104520",
+    "longitude": "127.2683855544",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/1896903_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3386145",
+    "title": "국립어린이청소년도서관",
+    "address": "서울특별시 강남구 테헤란로7길 21 (역삼동)",
+    "phone": "",
+    "latitude": "37.5007239303",
+    "longitude": "127.0301681782",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3386193_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130303",
+    "title": "국립중앙도서관",
+    "address": "서울특별시 서초구 반포대로 201",
+    "phone": "",
+    "latitude": "37.4979793138",
+    "longitude": "127.0028374099",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3491272_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130746",
+    "title": "국채보상운동기념도서관",
+    "address": "대구광역시 중구 공평로10길 25 (동인동2가)",
+    "phone": "",
+    "latitude": "35.8684841619",
+    "longitude": "128.6017371619",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3569648_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3428697",
+    "title": "국회도서관",
+    "address": "서울특별시 영등포구 의사당대로 1 (여의도동)",
+    "phone": "02-6788-4211",
+    "latitude": "37.5294241180",
+    "longitude": "126.9166304856",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3080293",
+    "title": "국회부산도서관",
+    "address": "부산광역시 강서구 명지국제1로 161 (명지동)",
+    "phone": "",
+    "latitude": "35.1035508545",
+    "longitude": "128.9044233450",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3546344_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3447831",
+    "title": "금사도서관",
+    "address": "경기도 여주시 흥천면 이여로 1278-2",
+    "phone": "",
+    "latitude": "37.3884072056",
+    "longitude": "127.5345978054",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "1105923",
+    "title": "금천구립가산도서관",
+    "address": "서울특별시 금천구 가산로5길 43",
+    "phone": "",
+    "latitude": "37.4734829558",
+    "longitude": "126.8921037384",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3512710_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1116132",
+    "title": "금천구립금나래도서관",
+    "address": "서울특별시 금천구 시흥대로73길 70",
+    "phone": "",
+    "latitude": "37.4570654814",
+    "longitude": "126.8956816515",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "1105911",
+    "title": "금천구립독산도서관",
+    "address": "서울특별시 금천구 독산로54길 114 (독산동)",
+    "phone": "",
+    "latitude": "37.4676339207",
+    "longitude": "126.9081191108",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3501432_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130807",
+    "title": "금호평생교육관",
+    "address": "광주광역시 남구 중앙로 15",
+    "phone": "",
+    "latitude": "35.1450970088",
+    "longitude": "126.9005647433",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3366693_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "699241",
+    "title": "김대중도서관",
+    "address": "서울특별시 마포구 신촌로4길 5-26",
+    "phone": "",
+    "latitude": "37.5569933677",
+    "longitude": "126.9295757507",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3393053_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3442973",
+    "title": "김영삼 도서관",
+    "address": "서울특별시 동작구 매봉로 1 (상도1동)",
+    "phone": "",
+    "latitude": "37.5055274904",
+    "longitude": "126.9499808987",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3546163",
+    "title": "김영수도서관",
+    "address": "제주특별자치도 제주시 중앙로8길 18 (삼도이동)",
+    "phone": "",
+    "latitude": "33.5150230696",
+    "longitude": "126.5213952028",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3546135_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3512824",
+    "title": "김포만화도서관",
+    "address": "경기도 김포시 고촌읍 수기로 63",
+    "phone": "",
+    "latitude": "37.5976607216",
+    "longitude": "126.7661256276",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3512726_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3069144",
+    "title": "꿈이랑도서관",
+    "address": "경상남도 통영시 산양읍 둔전길 155",
+    "phone": "",
+    "latitude": "34.8029058139",
+    "longitude": "128.3934730699",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3556788_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130729",
+    "title": "남산도서관(춘천)",
+    "address": "강원특별자치도 춘천시 남산면 강촌로 311",
+    "phone": "",
+    "latitude": "37.7931761426",
+    "longitude": "127.6432928307",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3478090_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3451241",
+    "title": "내를건너서숲으로도서관",
+    "address": "서울특별시 은평구 증산로17길 50 (신사동)",
+    "phone": "",
+    "latitude": "37.5917500532",
+    "longitude": "126.9080628412",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3450473_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3432213",
+    "title": "논현문화마루도서관",
+    "address": "서울특별시 강남구 논현로131길 40 (논현동)",
+    "phone": "",
+    "latitude": "37.5139001229",
+    "longitude": "127.0271208603",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3431756_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2650448",
+    "title": "농부네 텃밭도서관",
+    "address": "전라남도 광양시 진상면 청도길 19",
+    "phone": "",
+    "latitude": "35.0144231169",
+    "longitude": "127.7259370363",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3456907",
+    "title": "뉴평리도서관",
+    "address": "대구광역시 서구 평리로73길 37 (평리동)",
+    "phone": "",
+    "latitude": "35.8689556044",
+    "longitude": "128.5623128448",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3456902_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3066196",
+    "title": "다가 여행자 도서관",
+    "address": "전북특별자치도 전주시 완산구 전라감영2길 28 (다가동1가)",
+    "phone": "",
+    "latitude": "35.8158806712",
+    "longitude": "127.1418400701",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3066174_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3334724",
+    "title": "다산성곽도서관",
+    "address": "서울특별시 중구 동호로17길 173 (신당동)",
+    "phone": "",
+    "latitude": "37.5517008803",
+    "longitude": "127.0044079695",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3334720_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3427637",
+    "title": "달성군립도서관",
+    "address": "",
+    "phone": "0535840011",
+    "latitude": "0",
+    "longitude": "0",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3427721_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130806",
+    "title": "대구광역시립남부도서관",
+    "address": "대구광역시 남구 앞산순환로 512 (대명동)",
+    "phone": "",
+    "latitude": "35.8320990049",
+    "longitude": "128.5807761305",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3571594_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130802",
+    "title": "대전 가수원도서관",
+    "address": "대전광역시 서구 가수원로 91-11 (가수원동)",
+    "phone": "",
+    "latitude": "36.3017122245",
+    "longitude": "127.3489475718",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/58/3033558_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130760",
+    "title": "대전한밭도서관",
+    "address": "대전광역시 중구 서문로 10",
+    "phone": "",
+    "latitude": "36.3092763148",
+    "longitude": "127.4091336540",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3063023_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3083404",
+    "title": "도모헌 들락날락 어린이도서관",
+    "address": "부산광역시 수영구 황령산로7번길 60 (남천동)",
+    "phone": "",
+    "latitude": "35.1462164864",
+    "longitude": "129.1077767106",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3584384_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130730",
+    "title": "동내도서관",
+    "address": "강원특별자치도 춘천시 동내면 학곡동1길 17-4",
+    "phone": "",
+    "latitude": "37.8361594807",
+    "longitude": "127.7628584618",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3475476_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1897900",
+    "title": "동두천꿈나무정보도서관",
+    "address": "경기도 동두천시 지행로 38",
+    "phone": "",
+    "latitude": "37.8921509849",
+    "longitude": "127.0513883897",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3114427",
+    "title": "동문헌책도서관",
+    "address": "전북특별자치도 전주시 완산구 동문길 51 (풍남동1가)",
+    "phone": "",
+    "latitude": "35.8187693936",
+    "longitude": "127.1512197150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3449578_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130345",
+    "title": "동의대학교 중앙도서관",
+    "address": "부산광역시 부산진구 엄광로 176",
+    "phone": "",
+    "latitude": "35.1418461812",
+    "longitude": "129.0346331923",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/1982322_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130240",
+    "title": "마동도서관",
+    "address": "전북특별자치도 익산시 선화1로 99 (마동)",
+    "phone": "",
+    "latitude": "35.9398413415",
+    "longitude": "126.9690550056",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3573534_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2633907",
+    "title": "마포중앙도서관",
+    "address": "서울특별시 마포구 성산로 128 (성산동)",
+    "phone": "",
+    "latitude": "37.5639338440",
+    "longitude": "126.9081275097",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "1941168",
+    "title": "명봉도서관",
+    "address": "전북특별자치도 정읍시 태인면 태인로 33-9",
+    "phone": "",
+    "latitude": "35.6523902597",
+    "longitude": "126.9422148461",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3564467_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3508797",
+    "title": "모담도서관",
+    "address": "경기도 김포시 모담공원로 118 (운양동)",
+    "phone": "",
+    "latitude": "37.6499033192",
+    "longitude": "126.6917948402",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3508794_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130753",
+    "title": "목포시립도서관",
+    "address": "전라남도 목포시 용당로160번길 32 (용당동)",
+    "phone": "",
+    "latitude": "34.8033133793",
+    "longitude": "126.4026032539",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3381468_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3565296",
+    "title": "문산도서관",
+    "address": "경기도 파주시 문산읍 방촌로 1671",
+    "phone": "",
+    "latitude": "37.8635216692",
+    "longitude": "126.7806973274",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3565265_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3056730",
+    "title": "민병갈 식물도서관",
+    "address": "충청남도 태안군 소원면 천리포1길 234-5",
+    "phone": "",
+    "latitude": "36.8028227426",
+    "longitude": "126.1519170331",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3493036_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2848497",
+    "title": "바람숲그림책도서관",
+    "address": "인천광역시 강화군 덕진로159번길 66-34 바람숲그림책도서관",
+    "phone": "",
+    "latitude": "37.6486835254",
+    "longitude": "126.5068590137",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/2848436_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130827",
+    "title": "바른샘어린이도서관",
+    "address": "경기도 수원시 영통구 매봉로 10 (매탄동)",
+    "phone": "",
+    "latitude": "37.2689067635",
+    "longitude": "127.0523865699",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3475897_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "2665320",
+    "title": "반야월역사작은도서관",
+    "address": "대구광역시 동구 신서로 50",
+    "phone": "",
+    "latitude": "35.8725054296",
+    "longitude": "128.7249595330",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3342730_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130796",
+    "title": "반여도서관",
+    "address": "부산광역시 해운대구 재반로282번길 38",
+    "phone": "",
+    "latitude": "35.2020357183",
+    "longitude": "129.1338451325",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3081430_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3543500",
+    "title": "배방월천도서관",
+    "address": "충청남도 아산시 배방읍 월천5길 13",
+    "phone": "",
+    "latitude": "36.7706730772",
+    "longitude": "127.0783174520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3543292_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3456336",
+    "title": "배봉산숲속도서관",
+    "address": "서울특별시 동대문구 전농로16길 97 (전농동)",
+    "phone": "",
+    "latitude": "37.5784960375",
+    "longitude": "127.0627518944",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3455797_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2507822",
+    "title": "별마당도서관",
+    "address": "서울특별시 강남구 영동대로 513",
+    "phone": "",
+    "latitude": "37.5118092746",
+    "longitude": "127.0591318945",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3584529_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3335521",
+    "title": "별마당도서관 스타필드 수원점",
+    "address": "경기도 수원시 장안구 수성로 175 (정자동)",
+    "phone": "",
+    "latitude": "37.2874813034",
+    "longitude": "126.9915582378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3546877_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130798",
+    "title": "부산 동구도서관",
+    "address": "부산광역시 동구 성북로36번길 54",
+    "phone": "",
+    "latitude": "35.1380885970",
+    "longitude": "129.0524428566",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3343348_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130766",
+    "title": "부산 해운대도서관",
+    "address": "부산광역시 해운대구 양운로 183",
+    "phone": "",
+    "latitude": "35.1779224038",
+    "longitude": "129.1689871837",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/1859067_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130799",
+    "title": "부산광역시 기장도서관",
+    "address": "부산광역시 기장군 기장읍 차성동로126번길 13-5",
+    "phone": "",
+    "latitude": "35.2497097044",
+    "longitude": "129.2172810028",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3476687_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130793",
+    "title": "부산광역시 영도도서관",
+    "address": "부산광역시 영도구 함지로79번길 6",
+    "phone": "",
+    "latitude": "35.0755014082",
+    "longitude": "129.0660433825",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3032044_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130749",
+    "title": "부산광역시립 명장도서관",
+    "address": "부산광역시 동래구 명안로46번길 35",
+    "phone": "",
+    "latitude": "35.2008714550",
+    "longitude": "129.1065697598",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/3476728_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130750",
+    "title": "부산광역시립 부전도서관",
+    "address": "부산광역시 부산진구 동천로 79",
+    "phone": "",
+    "latitude": "35.1558673423",
+    "longitude": "129.0622192978",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/1571952_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130751",
+    "title": "부산광역시립 사하도서관",
+    "address": "부산광역시 사하구 승학로 247 (괴정동)",
+    "phone": "",
+    "latitude": "35.1029441857",
+    "longitude": "128.9914435666",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3541509_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130801",
+    "title": "부산광역시립 서동도서관",
+    "address": "부산광역시 금정구 서부로76번길 5",
+    "phone": "",
+    "latitude": "35.2198858586",
+    "longitude": "129.0994365249",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/1982357_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130752",
+    "title": "부산광역시립 시민도서관",
+    "address": "부산광역시 부산진구 월드컵대로 462 (초읍동)",
+    "phone": "",
+    "latitude": "35.1828835404",
+    "longitude": "129.0503001507",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3336501_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130797",
+    "title": "부산광역시립 연산도서관",
+    "address": "부산광역시 연제구 고분로191번길 16 부산광역시립연산도서관",
+    "phone": "",
+    "latitude": "35.1861091721",
+    "longitude": "129.1040120547",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3343405_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130795",
+    "title": "부산광역시립 중앙도서관",
+    "address": "부산광역시 중구 망양로193번길 146",
+    "phone": "",
+    "latitude": "35.1099940500",
+    "longitude": "129.0269458417",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3049829_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130483",
+    "title": "부산금정도서관",
+    "address": "부산광역시 금정구 금정도서관로 33",
+    "phone": "",
+    "latitude": "35.2726271087",
+    "longitude": "129.0962020218",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/3070525_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3017153",
+    "title": "부산도서관",
+    "address": "부산광역시 사상구 사상로310번길 33 (덕포동)",
+    "phone": "",
+    "latitude": "35.1727612544",
+    "longitude": "128.9853255285",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3017141_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130834",
+    "title": "부산점자도서관",
+    "address": "부산광역시 사상구 덕상로72번길 9",
+    "phone": "",
+    "latitude": "35.1781301800",
+    "longitude": "128.9898027697",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3338053_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3351748",
+    "title": "부천시립 별빛마루도서관",
+    "address": "경기도 부천시 소사구 옥길로 105 (옥길동)",
+    "phone": "",
+    "latitude": "37.4667713612",
+    "longitude": "126.8211687219",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3408764_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3351807",
+    "title": "부천시립 한울빛도서관",
+    "address": "경기도 부천시 소사구 소사로 107 (소사본동)",
+    "phone": "",
+    "latitude": "37.4679957834",
+    "longitude": "126.7966570324",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3408773_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130821",
+    "title": "부천시립꿈빛도서관",
+    "address": "경기도 부천시 원미구 신흥로275번길 19 (중동)",
+    "phone": "",
+    "latitude": "37.5081684859",
+    "longitude": "126.7737274437",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3523703_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130822",
+    "title": "부천시립북부도서관",
+    "address": "경기도 부천시 원미구 삼작로301번길 5 (도당동)",
+    "phone": "",
+    "latitude": "37.5204424387",
+    "longitude": "126.7950862626",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3335789_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130819",
+    "title": "부천시립심곡도서관",
+    "address": "경기도 부천시 소사구 성무로 24 (심곡본동)",
+    "phone": "",
+    "latitude": "37.4809635015",
+    "longitude": "126.7843022402",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3565827_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130818",
+    "title": "부천시립원미도서관",
+    "address": "경기도 부천시 원미구 소사로 456 (원미동)",
+    "phone": "",
+    "latitude": "37.4981561744",
+    "longitude": "126.7970033792",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3504217_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3351814",
+    "title": "부천시수주도서관",
+    "address": "경기도 부천시 오정구 고리울로8번길 77 (고강동)",
+    "phone": "",
+    "latitude": "37.5243784812",
+    "longitude": "126.8169563803",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3408785_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1997652",
+    "title": "부평 기적의도서관",
+    "address": "인천광역시 부평구 길주남로 166",
+    "phone": "",
+    "latitude": "37.5034323298",
+    "longitude": "126.7401834131",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/3078597_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3015944",
+    "title": "북두칠성도서관",
+    "address": "부산광역시 동구 충장대로 160 (초량동)",
+    "phone": "",
+    "latitude": "35.1157687420",
+    "longitude": "129.0453024210",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3454099_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3442626",
+    "title": "사천시립도서관",
+    "address": "경상남도 사천시 정동면 반룡로 27",
+    "phone": "",
+    "latitude": "35.0710091227",
+    "longitude": "128.0816627180",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3442876_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1939093",
+    "title": "삼매봉도서관",
+    "address": "제주특별자치도 서귀포시 남성중로153번길 15",
+    "phone": "",
+    "latitude": "33.2447978549",
+    "longitude": "126.5512403807",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3383849_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2465042",
+    "title": "삼산도서관",
+    "address": "인천광역시 부평구 부평북로 445",
+    "phone": "",
+    "latitude": "37.5221579814",
+    "longitude": "126.7430381845",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2462006_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1116611",
+    "title": "서구어린이도서관",
+    "address": "대구광역시 서구 문화로 123",
+    "phone": "",
+    "latitude": "35.8743074824",
+    "longitude": "128.5463779885",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3338131_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130837",
+    "title": "서수원도서관",
+    "address": "경기도 수원시 권선구 탑동로57번길 35",
+    "phone": "",
+    "latitude": "37.2732048313",
+    "longitude": "126.9720381867",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/1785997_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130183",
+    "title": "서울도서관",
+    "address": "서울특별시 중구 세종대로 110",
+    "phone": "",
+    "latitude": "37.5665986816",
+    "longitude": "126.9783710306",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "130304",
+    "title": "서울특별시교육청 강남도서관",
+    "address": "서울특별시 강남구 선릉로116길 45",
+    "phone": "",
+    "latitude": "37.5136338386",
+    "longitude": "127.0466663104",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3509938_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130772",
+    "title": "서울특별시교육청 강동도서관",
+    "address": "서울특별시 강동구 양재대로116길 57 (길동)",
+    "phone": "",
+    "latitude": "37.5381244077",
+    "longitude": "127.1436067925",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3518573_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130782",
+    "title": "서울특별시교육청 고덕평생학습관",
+    "address": "서울특별시 강동구 고덕로 295 (고덕동)",
+    "phone": "",
+    "latitude": "37.5561725729",
+    "longitude": "127.1580549635",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3566274_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130764",
+    "title": "서울특별시교육청 고척도서관",
+    "address": "서울특별시 구로구 고척로45길 31",
+    "phone": "",
+    "latitude": "37.5053563345",
+    "longitude": "126.8530397360",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3509487_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130771",
+    "title": "서울특별시교육청 구로도서관",
+    "address": "서울특별시 구로구 공원로 15 시립구로도서관",
+    "phone": "",
+    "latitude": "37.4985994791",
+    "longitude": "126.8918613884",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3566348_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130352",
+    "title": "서울특별시교육청 남산도서관",
+    "address": "서울특별시 용산구 소월로 109 (후암동)",
+    "phone": "",
+    "latitude": "37.5524531569",
+    "longitude": "126.9813656031",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3466473_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130761",
+    "title": "서울특별시교육청 노원평생학습관",
+    "address": "서울특별시 노원구 동일로204길 13 (중계동)",
+    "phone": "",
+    "latitude": "37.6395668082",
+    "longitude": "127.0678358024",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3566267_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130763",
+    "title": "서울특별시교육청 도봉도서관",
+    "address": "서울특별시 도봉구 삼양로 556 (쌍문동)",
+    "phone": "",
+    "latitude": "37.6528198332",
+    "longitude": "127.0129515410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3510590_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130783",
+    "title": "서울특별시교육청 동대문도서관",
+    "address": "서울특별시 동대문구 천호대로4길 22",
+    "phone": "",
+    "latitude": "37.5738542164",
+    "longitude": "127.0241777625",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3478436_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130770",
+    "title": "서울특별시교육청 동작도서관",
+    "address": "서울특별시 동작구 장승배기로 94",
+    "phone": "",
+    "latitude": "37.5059328296",
+    "longitude": "126.9405206377",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3488953_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130767",
+    "title": "서울특별시교육청 서대문도서관",
+    "address": "서울특별시 서대문구 모래내로 412",
+    "phone": "",
+    "latitude": "37.5833099553",
+    "longitude": "126.9408850861",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "130765",
+    "title": "서울특별시교육청 송파도서관",
+    "address": "서울특별시 송파구 동남로 263 송파도서관",
+    "phone": "",
+    "latitude": "37.5000481143",
+    "longitude": "127.1348670039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3509945_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130769",
+    "title": "서울특별시교육청 양천도서관",
+    "address": "서울특별시 양천구 목동서로 113 (목동)",
+    "phone": "",
+    "latitude": "37.5335784600",
+    "longitude": "126.8757368741",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3499681_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130778",
+    "title": "서울특별시교육청 어린이도서관",
+    "address": "서울특별시 종로구 사직로 89 (사직동)",
+    "phone": "",
+    "latitude": "37.5758446558",
+    "longitude": "126.9687216489",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3414044_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130779",
+    "title": "서울특별시교육청 영등포평생학습관",
+    "address": "서울특별시 영등포구 버드나루로15길 10",
+    "phone": "",
+    "latitude": "37.5260548983",
+    "longitude": "126.9073230952",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3581795_image2_1.jpeg",
+    "category": "도서관"
+  },
+  {
+    "id": "130355",
+    "title": "서울특별시교육청 용산도서관",
+    "address": "서울특별시 용산구 두텁바위로 160",
+    "phone": "",
+    "latitude": "37.5519892991",
+    "longitude": "126.9801268407",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3514601_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1019294",
+    "title": "서울특별시교육청 정독도서관",
+    "address": "서울특별시 종로구 북촌로5길 48",
+    "phone": "",
+    "latitude": "37.5797611278",
+    "longitude": "126.9832368815",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3510466_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130759",
+    "title": "서울특별시교육청 종로도서관",
+    "address": "서울특별시 종로구 사직로9길 15-14 (사직동)",
+    "phone": "",
+    "latitude": "37.5765000951",
+    "longitude": "126.9664829454",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3497581_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2363243",
+    "title": "서초구립반포도서관",
+    "address": "서울특별시 서초구 고무래로 34 (반포동)",
+    "phone": "",
+    "latitude": "37.5025400697",
+    "longitude": "127.0125280654",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3573069_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3019383",
+    "title": "서학예술마을도서관",
+    "address": "전북특별자치도 전주시 완산구 서학로 12-1 (서서학동)",
+    "phone": "",
+    "latitude": "35.8095593229",
+    "longitude": "127.1508033263",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/78/3019378_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3443300",
+    "title": "석봉도서관",
+    "address": "대전광역시 대덕구 대덕대로 1579 (석봉동)",
+    "phone": "",
+    "latitude": "36.4508159254",
+    "longitude": "127.4232257656",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "130814",
+    "title": "성남시 분당도서관",
+    "address": "경기도 성남시 분당구 불정로 110 (정자동)",
+    "phone": "",
+    "latitude": "37.3581559086",
+    "longitude": "127.1165949023",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3053810_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130813",
+    "title": "성남시 수정도서관",
+    "address": "경기도 성남시 수정구 수정로332번길 32 (산성동)",
+    "phone": "",
+    "latitude": "37.4524400746",
+    "longitude": "127.1528917167",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3053835_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130817",
+    "title": "성남시 중앙도서관",
+    "address": "경기도 성남시 분당구 판교로 546 (야탑동)",
+    "phone": "",
+    "latitude": "37.4071866498",
+    "longitude": "127.1340169357",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3062529_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130815",
+    "title": "성남시 중원도서관",
+    "address": "경기도 성남시 중원구 원터로17번길 46 (성남동)",
+    "phone": "",
+    "latitude": "37.4302813049",
+    "longitude": "127.1401823886",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3053774_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3043851",
+    "title": "성동구립매봉산숲속도서관",
+    "address": "서울특별시 성동구 매봉길 49-29 (옥수동)",
+    "phone": "",
+    "latitude": "37.5459599953",
+    "longitude": "127.0108269919",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3043834_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3429640",
+    "title": "성동책마루도서관",
+    "address": "서울특별시 성동구 고산자로 270 (행당동)",
+    "phone": "02-2286-6025",
+    "latitude": "37.5634750974",
+    "longitude": "127.0369796686",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3424100",
+    "title": "소래빛도서관",
+    "address": "경기도 시흥시 비둘기공원로 25 (대야동)",
+    "phone": "",
+    "latitude": "37.4439123972",
+    "longitude": "126.7926052966",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3424116_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3351903",
+    "title": "소리울도서관",
+    "address": "경기도 오산시 경기대로 102-25 (원동)",
+    "phone": "",
+    "latitude": "37.1326451523",
+    "longitude": "127.0749299965",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3408908_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130727",
+    "title": "소양도서관",
+    "address": "강원특별자치도 춘천시 삭주로145번길 69-8",
+    "phone": "",
+    "latitude": "37.8928719974",
+    "longitude": "127.7450806177",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3475356_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2904906",
+    "title": "손기정문화도서관",
+    "address": "서울특별시 중구 손기정로 101-3 손기정공원",
+    "phone": "",
+    "latitude": "37.5559746682",
+    "longitude": "126.9645531466",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3458214_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "2366240",
+    "title": "수성구립 고산도서관",
+    "address": "대구광역시 수성구 달구벌대로650길 6 고산도서관",
+    "phone": "",
+    "latitude": "35.8379479631",
+    "longitude": "128.7106589801",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3342691_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2366227",
+    "title": "수성구립 범어도서관",
+    "address": "대구광역시 수성구 달구벌대로 2451",
+    "phone": "",
+    "latitude": "35.8593857259",
+    "longitude": "128.6306820879",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3336296_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2366233",
+    "title": "수성구립 용학도서관",
+    "address": "대구광역시 수성구 지범로41길 36",
+    "phone": "",
+    "latitude": "35.8212375490",
+    "longitude": "128.6461040147",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3578103_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130816",
+    "title": "수원 영통도서관",
+    "address": "경기도 수원시 영통구 청명로 151 (영통동)",
+    "phone": "",
+    "latitude": "37.2572112467",
+    "longitude": "127.0720545580",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3475884_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130829",
+    "title": "수원선경도서관",
+    "address": "경기도 수원시 팔달구 신풍로23번길 68 (신풍동)",
+    "phone": "",
+    "latitude": "37.2838931788",
+    "longitude": "127.0110898983",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3057760_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130828",
+    "title": "수원시립중앙도서관",
+    "address": "경기도 수원시 팔달구 팔달산로 318 (교동)",
+    "phone": "",
+    "latitude": "37.2736304972",
+    "longitude": "127.0121484228",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3057769_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "231975",
+    "title": "순천 기적의도서관",
+    "address": "전라남도 순천시 해룡면 기적의도서관길 60",
+    "phone": "",
+    "latitude": "34.9472022308",
+    "longitude": "127.5276811578",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3541130_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2032152",
+    "title": "순천시립 그림책 도서관",
+    "address": "전라남도 순천시 도서관길 33 (동외동)",
+    "phone": "",
+    "latitude": "34.9573559328",
+    "longitude": "127.4863539728",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/01/3541901_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130826",
+    "title": "슬기샘어린이도서관",
+    "address": "경기도 수원시 장안구 송정로 9 (송죽동)",
+    "phone": "",
+    "latitude": "37.2976274856",
+    "longitude": "126.9991267118",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3057856_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3449158",
+    "title": "시흥시립대야도서관",
+    "address": "경기도 시흥시 은행로173번길 14 (대야동)",
+    "phone": "",
+    "latitude": "37.4453650832",
+    "longitude": "126.7969159745",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3448887_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2611675",
+    "title": "신월음악도서관",
+    "address": "서울특별시 양천구 오목로5길 34 (신월동)",
+    "phone": "",
+    "latitude": "37.5247705145",
+    "longitude": "126.8401042589",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3568172_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3449022",
+    "title": "신천도서관",
+    "address": "경기도 시흥시 신천로 89-18 (신천동)",
+    "phone": "",
+    "latitude": "37.4384601185",
+    "longitude": "126.7850478039",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3448853_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3526568",
+    "title": "아중호수도서관",
+    "address": "전북특별자치도 전주시 덕진구 아중호수길 131 (우아동1가)",
+    "phone": "",
+    "latitude": "35.8231887388",
+    "longitude": "127.1744453107",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3525860_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3310700",
+    "title": "안산다문화작은도서관",
+    "address": "경기도 안산시 단원구 부부로 43 (원곡동)",
+    "phone": "",
+    "latitude": "37.3324864006",
+    "longitude": "126.7903530484",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/3310676_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3448385",
+    "title": "안산미디어도서관",
+    "address": "경기도 안산시 단원구 광덕1로 198 (고잔동)",
+    "phone": "",
+    "latitude": "37.3072650480",
+    "longitude": "126.8311833688",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3450098_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130867",
+    "title": "안성시 중앙도서관",
+    "address": "경기도 안성시 안성맞춤대로 1150 (금산동)",
+    "phone": "",
+    "latitude": "37.0156065653",
+    "longitude": "127.2679296954",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/3475956_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3335564",
+    "title": "양천공원 책쉼터",
+    "address": "서울특별시 양천구 목동동로 135 (신정동)",
+    "phone": "",
+    "latitude": "37.5185800701",
+    "longitude": "126.8682935295",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3579870_image2_1.jpeg",
+    "category": "도서관"
+  },
+  {
+    "id": "2611626",
+    "title": "양천구 갈산도서관",
+    "address": "서울특별시 양천구 목동남로4길 48-6",
+    "phone": "",
+    "latitude": "37.5088978449",
+    "longitude": "126.8673577758",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/2611609_image2_1.bmp",
+    "category": "도서관"
+  },
+  {
+    "id": "2616589",
+    "title": "양천구 영어특성화도서관",
+    "address": "서울특별시 양천구 목동동로 81 (신정동)",
+    "phone": "",
+    "latitude": "37.5160302875",
+    "longitude": "126.8638773374",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/2612082_image2_1.bmp",
+    "category": "도서관"
+  },
+  {
+    "id": "3428546",
+    "title": "양평물빛정원도서관",
+    "address": "경기도 양평군 양평읍 마유산로 1",
+    "phone": "",
+    "latitude": "37.4968909467",
+    "longitude": "127.4846214348",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3428375_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3449373",
+    "title": "어깨동무도서관",
+    "address": "서울특별시 마포구 월드컵로 386 (상암동)",
+    "phone": "",
+    "latitude": "37.5750349409",
+    "longitude": "126.8863069637",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3449270_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3458646",
+    "title": "여의샛강도서관",
+    "address": "서울특별시 영등포구 여의대로 24 (여의도동)",
+    "phone": "",
+    "latitude": "37.5224555385",
+    "longitude": "126.9197415097",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3458612_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3454578",
+    "title": "여주대신도서관",
+    "address": "경기도 여주시 대신면 율촌1길 12-10",
+    "phone": "",
+    "latitude": "37.3715211845",
+    "longitude": "127.5844771087",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/15/3454515_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3423015",
+    "title": "역삼도서관",
+    "address": "서울특별시 강남구 역삼로7길 16 (역삼동)",
+    "phone": "",
+    "latitude": "37.4953968261",
+    "longitude": "127.0332430485",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3457790_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3056503",
+    "title": "연화정 도서관",
+    "address": "전북특별자치도 전주시 덕진구 권삼득로 390-1 (덕진동1가)",
+    "phone": "",
+    "latitude": "35.8491321219",
+    "longitude": "127.1233519567",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3053513_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2556171",
+    "title": "영광군립도서관",
+    "address": "전라남도 영광군 영광읍 중앙로 228-16",
+    "phone": "",
+    "latitude": "35.2792531625",
+    "longitude": "126.5159399224",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/1971116_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3012036",
+    "title": "오동숲속도서관",
+    "address": "서울특별시 성북구 화랑로13가길 110-10 (하월곡동)",
+    "phone": "",
+    "latitude": "37.6101975169",
+    "longitude": "127.0409890862",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3430210_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2989907",
+    "title": "옥천교육도서관",
+    "address": "충청북도 옥천군 관성로3길 7 옥천교육도서관",
+    "phone": "",
+    "latitude": "36.3010857124",
+    "longitude": "127.5722581956",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2989906_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "2714225",
+    "title": "용인어린이상상의숲",
+    "address": "경기도 용인시 처인구 동백죽전대로 61 (삼가동)",
+    "phone": "",
+    "latitude": "37.2496832314",
+    "longitude": "127.1651741040",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/3566761_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3457702",
+    "title": "우리소리도서관",
+    "address": "서울특별시 종로구 삼일대로30길 47 (익선동)",
+    "phone": "",
+    "latitude": "37.5745451930",
+    "longitude": "126.9902475015",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3457760_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3375344",
+    "title": "울산 강동바다도서관",
+    "address": "울산광역시 북구 산하중앙3로 62 (산하동)",
+    "phone": "",
+    "latitude": "35.6309654560",
+    "longitude": "129.4362095707",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3376952_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "129813",
+    "title": "울산남부도서관",
+    "address": "울산광역시 남구 거마로13번길 6",
+    "phone": "",
+    "latitude": "35.5359345895",
+    "longitude": "129.2950218004",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3581332_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130519",
+    "title": "울산동부도서관",
+    "address": "울산광역시 동구 봉수로 505",
+    "phone": "",
+    "latitude": "35.5282379059",
+    "longitude": "129.4250884527",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3073190_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130520",
+    "title": "울산울주도서관",
+    "address": "울산광역시 울주군 언양읍 언양로 109",
+    "phone": "",
+    "latitude": "35.5584568854",
+    "longitude": "129.1377460121",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3377659_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3334487",
+    "title": "원당마을한옥도서관",
+    "address": "서울특별시 도봉구 해등로32가길 17 (방학동)",
+    "phone": "",
+    "latitude": "37.6603441175",
+    "longitude": "127.0218144070",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3334473_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2714497",
+    "title": "원주시립미리내도서관",
+    "address": "강원특별자치도 원주시 양지로 46 (반곡동)",
+    "phone": "",
+    "latitude": "37.3253311221",
+    "longitude": "127.9838229245",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3440050_image2_1.jpeg",
+    "category": "도서관"
+  },
+  {
+    "id": "2556193",
+    "title": "원주시립중앙도서관",
+    "address": "강원특별자치도 원주시 서원대로 472-12",
+    "phone": "",
+    "latitude": "37.3265443133",
+    "longitude": "127.9538339271",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/2556187_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130804",
+    "title": "유성도서관",
+    "address": "대전광역시 유성구 대덕대로 507-38",
+    "phone": "",
+    "latitude": "36.3784122613",
+    "longitude": "127.3759125266",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3585105_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2010617",
+    "title": "응암정보도서관",
+    "address": "서울특별시 은평구 가좌로 179 (응암동)",
+    "phone": "",
+    "latitude": "37.5871091510",
+    "longitude": "126.9206340476",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3399744_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3369859",
+    "title": "의정부 과학도서관",
+    "address": "경기도 의정부시 추동로124번길 52 (신곡동)",
+    "phone": "",
+    "latitude": "37.7449684562",
+    "longitude": "127.0691076714",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3369816_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2705299",
+    "title": "의정부미술도서관",
+    "address": "경기도 의정부시 민락로 248 (민락동)",
+    "phone": "031-828-8870",
+    "latitude": "37.7451996551",
+    "longitude": "127.1061431730",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/2947297_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2841316",
+    "title": "의정부음악도서관",
+    "address": "경기도 의정부시 장곡로 280",
+    "phone": "",
+    "latitude": "37.7285173163",
+    "longitude": "127.0537900969",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3566790_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130787",
+    "title": "인천 계양도서관",
+    "address": "인천광역시 계양구 계양산로134번길 18",
+    "phone": "",
+    "latitude": "37.5460438645",
+    "longitude": "126.7301609134",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "130754",
+    "title": "인천광역시 중앙도서관",
+    "address": "인천광역시 남동구 정각로 9",
+    "phone": "",
+    "latitude": "37.4562843746",
+    "longitude": "126.7031103304",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3457898_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130791",
+    "title": "인천광역시교육청부평도서관",
+    "address": "인천광역시 부평구 경원대로 1191",
+    "phone": "",
+    "latitude": "37.4849755107",
+    "longitude": "126.7045538444",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3529063_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130792",
+    "title": "인천광역시교육청북구도서관",
+    "address": "인천광역시 부평구 신트리로 21 (부평동)",
+    "phone": "",
+    "latitude": "37.5059789623",
+    "longitude": "126.7236181866",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3078640_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130788",
+    "title": "인천광역시교육청서구도서관",
+    "address": "인천광역시 서구 건지로334번길 45",
+    "phone": "",
+    "latitude": "37.4943406472",
+    "longitude": "126.6796003048",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/1860355_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130790",
+    "title": "인천광역시교육청주안도서관",
+    "address": "인천광역시 미추홀구 구월남로 27",
+    "phone": "",
+    "latitude": "37.4554592893",
+    "longitude": "126.6928668431",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/66/3499466_image2_1.jpeg",
+    "category": "도서관"
+  },
+  {
+    "id": "130786",
+    "title": "인천광역시교육청화도진도서관",
+    "address": "인천광역시 동구 화도진로 122 화도진도서관",
+    "phone": "",
+    "latitude": "37.4818911891",
+    "longitude": "126.6283608811",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3529003_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130785",
+    "title": "인천도서관",
+    "address": "인천광역시 남동구 인주대로776번길 53 (구월동)",
+    "phone": "",
+    "latitude": "37.4471219348",
+    "longitude": "126.7248641582",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/31/3528731_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3382909",
+    "title": "장성군립중앙도서관",
+    "address": "전라남도 장성군 장성읍 문화로 110",
+    "phone": "",
+    "latitude": "35.3016853956",
+    "longitude": "126.7675670383",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3382583_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "2445701",
+    "title": "전북도청도서관",
+    "address": "전북특별자치도 전주시 완산구 효자로 225 (효자동3가)",
+    "phone": "",
+    "latitude": "35.8192769633",
+    "longitude": "127.1104844388",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3561848_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3350911",
+    "title": "전주 연화정 도서관",
+    "address": "전북특별자치도 전주시 덕진구 권삼득로 390-1 (덕진동1가)",
+    "phone": "",
+    "latitude": "35.8491321219",
+    "longitude": "127.1233519567",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3380293_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3547241",
+    "title": "전주시립도서관꽃심",
+    "address": "전북특별자치도 전주시 완산구 백제대로 306 (중화산동2가)",
+    "phone": "",
+    "latitude": "35.8203659591",
+    "longitude": "127.1238193341",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3547232_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1626068",
+    "title": "전주완산도서관",
+    "address": "전북특별자치도 전주시 완산구 곤지산4길 12 (동완산동)",
+    "phone": "",
+    "latitude": "35.8094953880",
+    "longitude": "127.1477258240",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3562110_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2788928",
+    "title": "정약용도서관",
+    "address": "경기도 남양주시 다산중앙로82번안길 138 (다산동)",
+    "phone": "",
+    "latitude": "37.6122106760",
+    "longitude": "127.1673719588",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3507827_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3301905",
+    "title": "제3의 시간",
+    "address": "서울특별시 종로구 대학로10길 8 (동숭동)",
+    "phone": "",
+    "latitude": "37.5816279261",
+    "longitude": "127.0026322831",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3301885_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130756",
+    "title": "제천기적의도서관",
+    "address": "충청북도 제천시 용두천로38길 30",
+    "phone": "",
+    "latitude": "37.1552495890",
+    "longitude": "128.2200482973",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3349000_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130755",
+    "title": "제천시립도서관",
+    "address": "충청북도 제천시 내제로 318",
+    "phone": "",
+    "latitude": "37.1450674296",
+    "longitude": "128.2201152553",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3349042_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "1939078",
+    "title": "조천읍도서관",
+    "address": "제주특별자치도 제주시 조천읍 일주동로 1189",
+    "phone": "",
+    "latitude": "33.5377090094",
+    "longitude": "126.6676791949",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/3553088_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1116975",
+    "title": "중랑구립면목정보도서관",
+    "address": "서울특별시 중랑구 면목로 397",
+    "phone": "",
+    "latitude": "37.5873454537",
+    "longitude": "127.0874049520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3509709_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130174",
+    "title": "중랑구립정보도서관",
+    "address": "서울특별시 중랑구 신내로15길 197",
+    "phone": "",
+    "latitude": "37.6151533233",
+    "longitude": "127.0868930950",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3509723_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "719514",
+    "title": "지식재산전문도서관",
+    "address": "서울특별시 강남구 테헤란로 131 한국지식재산센터",
+    "phone": "",
+    "latitude": "37.5001351590",
+    "longitude": "127.0329540519",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3400808_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "130825",
+    "title": "지혜샘어린이도서관",
+    "address": "경기도 수원시 권선구 동탄원천로 818 지혜샘도서관",
+    "phone": "",
+    "latitude": "37.2481339456",
+    "longitude": "127.0399243928",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "2609320",
+    "title": "지혜의 숲",
+    "address": "경기도 파주시 회동길 145 (문발동)",
+    "phone": "",
+    "latitude": "37.7086519509",
+    "longitude": "126.6872324943",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3039023_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2721611",
+    "title": "첫마중길 여행자도서관",
+    "address": "전북특별자치도 전주시 덕진구 백제대로 823 (우아동3가)",
+    "phone": "",
+    "latitude": "35.8489133063",
+    "longitude": "127.1580988686",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3377693_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "2465166",
+    "title": "청라호수도서관",
+    "address": "인천광역시 서구 크리스탈로 59",
+    "phone": "",
+    "latitude": "37.5305967767",
+    "longitude": "126.6362810266",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3529712_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2692866",
+    "title": "청운문학도서관",
+    "address": "서울특별시 종로구 자하문로36길 40 (청운동)",
+    "phone": "",
+    "latitude": "37.5904317988",
+    "longitude": "126.9659326010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3531837_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130118",
+    "title": "추리문학관",
+    "address": "부산광역시 해운대구 달맞이길117번나길 111",
+    "phone": "",
+    "latitude": "35.1616939311",
+    "longitude": "129.1833308273",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "130833",
+    "title": "춘천시립도서관(장난감도서관)",
+    "address": "강원특별자치도 춘천시 우석로 100",
+    "phone": "",
+    "latitude": "37.8638561555",
+    "longitude": "127.7572803690",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/2745899_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130758",
+    "title": "충주시립도서관",
+    "address": "충청북도 충주시 예성로 207",
+    "phone": "",
+    "latitude": "36.9748428128",
+    "longitude": "127.9338125553",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3347573_image2_1.JPG",
+    "category": "도서관"
+  },
+  {
+    "id": "3441442",
+    "title": "태장도서관",
+    "address": "강원특별자치도 원주시 치악로 2068 (태장동)",
+    "phone": "",
+    "latitude": "37.3634985591",
+    "longitude": "127.9635958568",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3441439_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3525982",
+    "title": "토성산맹꽁이작은도서관",
+    "address": "충청남도 서산시 인지면 토성산길 29-6",
+    "phone": "",
+    "latitude": "36.7584879207",
+    "longitude": "126.4154582076",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3525981_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1622623",
+    "title": "통영시립도서관",
+    "address": "경상남도 통영시 무전3길 29",
+    "phone": "",
+    "latitude": "34.8615137068",
+    "longitude": "128.4247382528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/3556771_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "130824",
+    "title": "파주중앙도서관",
+    "address": "경기도 파주시 쇠재로 33",
+    "phone": "",
+    "latitude": "37.7499847328",
+    "longitude": "126.7707514636",
+    "image": "",
+    "category": "도서관"
+  },
+  {
+    "id": "3452874",
+    "title": "폭포책방 아름인도서관",
+    "address": "서울특별시 서대문구 연희로 262-24 (홍은동)",
+    "phone": "",
+    "latitude": "37.5813490039",
+    "longitude": "126.9370354929",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3452674_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2721624",
+    "title": "학산숲속시집도서관",
+    "address": "전북특별자치도 전주시 완산구 평화5길 36-46 (평화동2가)",
+    "phone": "",
+    "latitude": "35.7836537921",
+    "longitude": "127.1425269613",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3562117_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2816541",
+    "title": "한국근현대음악관",
+    "address": "경기도 평택시 현덕면 평택호길 147",
+    "phone": "",
+    "latitude": "36.9212584984",
+    "longitude": "126.9208719893",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/2816535_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "761929",
+    "title": "한국학중앙연구원 한국학도서관.장서각",
+    "address": "경기도 성남시 분당구 하오개로 323 (운중동)",
+    "phone": "",
+    "latitude": "37.3919897713",
+    "longitude": "127.0550773146",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3065307_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3363297",
+    "title": "한내지혜의숲도서관",
+    "address": "서울특별시 노원구 마들로 86 (월계동)",
+    "phone": "",
+    "latitude": "37.6236297880",
+    "longitude": "127.0687028445",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3363265_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3062173",
+    "title": "한옥글방",
+    "address": "전라남도 순천시 금곡길 28 (행동)",
+    "phone": "",
+    "latitude": "34.9551172176",
+    "longitude": "127.4818322047",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3062163_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1622631",
+    "title": "함안도서관",
+    "address": "경상남도 함안군 가야읍 선왕길 16",
+    "phone": "",
+    "latitude": "35.2848213752",
+    "longitude": "128.4019484421",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3077434_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3082918",
+    "title": "해남군립도서관",
+    "address": "전라남도 해남군 해남읍 군청길 4",
+    "phone": "",
+    "latitude": "34.5723009063",
+    "longitude": "126.5989026153",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3082894_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "2465132",
+    "title": "해돋이도서관",
+    "address": "인천광역시 연수구 해돋이로 7",
+    "phone": "",
+    "latitude": "37.3857834511",
+    "longitude": "126.6590274163",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3533395_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "3428325",
+    "title": "현대카드 뮤직 라이브러리",
+    "address": "서울특별시 용산구 이태원로 246 (한남동)",
+    "phone": "",
+    "latitude": "37.5366886688",
+    "longitude": "127.0007170640",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3432157_image2_1.JPEG",
+    "category": "도서관"
+  },
+  {
+    "id": "1626209",
+    "title": "홍천교육도서관",
+    "address": "강원특별자치도 홍천군 홍천읍 꽃뫼로 93",
+    "phone": "",
+    "latitude": "37.6917868398",
+    "longitude": "127.8838073105",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/1583777_image2_1.jpg",
+    "category": "도서관"
+  },
+  {
+    "id": "1626328",
+    "title": "화천교육도서관",
+    "address": "강원특별자치도 화천군 화천읍 상승로3길 22",
+    "phone": "",
+    "latitude": "38.1067352079",
+    "longitude": "127.7041779613",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3577638_image2_1.jpg",
+    "category": "도서관"
+  }
+]

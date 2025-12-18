@@ -1,0 +1,232 @@
+[
+  {
+    "id": "2707934",
+    "title": "경주화백컨벤션센터",
+    "address": "경상북도 경주시 보문로 507 (신평동)",
+    "phone": "",
+    "latitude": "35.8384670465",
+    "longitude": "129.2879693962",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3405895_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "1125796",
+    "title": "구미코",
+    "address": "경상북도 구미시 산동읍 첨단기업1로 49",
+    "phone": "",
+    "latitude": "36.1416419026",
+    "longitude": "128.4422575010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3401565_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "252654",
+    "title": "김대중컨벤션센터",
+    "address": "광주광역시 서구 상무누리로 30 (치평동)",
+    "phone": "",
+    "latitude": "35.1467152588",
+    "longitude": "126.8405588979",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3567649_image2_1.png",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "1918263",
+    "title": "누리마루 APEC하우스",
+    "address": "부산광역시 해운대구 동백로 116",
+    "phone": "",
+    "latitude": "35.1523943787",
+    "longitude": "129.1513116443",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/20/3334420_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "644085",
+    "title": "대전컨벤션센터(DCC)",
+    "address": "대전광역시 유성구 엑스포로 107 대전컨벤션센터",
+    "phone": "",
+    "latitude": "36.3750212633",
+    "longitude": "127.3916945410",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3031790_image2_1.JPG",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2848495",
+    "title": "배다리 아트스테이1930",
+    "address": "인천광역시 동구 금곡로11번길 1-4 진도여인숙",
+    "phone": "",
+    "latitude": "37.4728896065",
+    "longitude": "126.6367686979",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/2848483_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "130668",
+    "title": "벡스코(BEXCO)",
+    "address": "부산광역시 해운대구 APEC로 55",
+    "phone": "",
+    "latitude": "35.1691116738",
+    "longitude": "129.1363347095",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3020355_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "250469",
+    "title": "서울무역전시컨벤션센터(SETEC)",
+    "address": "서울특별시 강남구 남부순환로 3104",
+    "phone": "",
+    "latitude": "37.4958252427",
+    "longitude": "127.0715423291",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/29/3526629_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "742171",
+    "title": "송도컨벤시아",
+    "address": "인천광역시 연수구 센트럴로 123",
+    "phone": "",
+    "latitude": "37.3890356252",
+    "longitude": "126.6461951621",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3037277_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "3075791",
+    "title": "수원메쎄",
+    "address": "경기도 수원시 권선구 세화로134번길 37 (서둔동)",
+    "phone": "",
+    "latitude": "37.2668587922",
+    "longitude": "126.9971971906",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/89/3514989_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2703375",
+    "title": "수원컨벤션센터",
+    "address": "경기도 수원시 영통구 광교중앙로 140",
+    "phone": "",
+    "latitude": "37.2858799237",
+    "longitude": "127.0594632301",
+    "image": "",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "250468",
+    "title": "엑스코(EXCO)",
+    "address": "대구광역시 북구 엑스코로 10 (산격동)",
+    "phone": "",
+    "latitude": "35.9071133308",
+    "longitude": "128.6130989730",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/82/3526582_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2714152",
+    "title": "울산전시컨벤션센터",
+    "address": "울산광역시 울주군 삼남읍 울산역로 255",
+    "phone": "",
+    "latitude": "35.5556598644",
+    "longitude": "129.1316827314",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3581367_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2008556",
+    "title": "정부세종컨벤션센터",
+    "address": "세종특별자치시 다솜3로 66 (어진동)",
+    "phone": "",
+    "latitude": "36.5010685337",
+    "longitude": "127.2688382303",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/93/3564593_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "130877",
+    "title": "제주국제컨벤션센터",
+    "address": "제주특별자치도 서귀포시 중문관광로 224",
+    "phone": "",
+    "latitude": "33.2412740186",
+    "longitude": "126.4244958917",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3582910_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "3545184",
+    "title": "청주오스코",
+    "address": "충청북도 청주시 흥덕구 오송읍 오송생명로 250",
+    "phone": "",
+    "latitude": "36.6266442008",
+    "longitude": "127.3354815972",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3543832_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "250465",
+    "title": "킨텍스",
+    "address": "경기도 고양시 일산서구 킨텍스로 217-60",
+    "phone": "",
+    "latitude": "37.6689909419",
+    "longitude": "126.7455782754",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3020806_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2834048",
+    "title": "하이커 그라운드",
+    "address": "서울특별시 중구 청계천로 40 한국관광공사 서울센터",
+    "phone": "",
+    "latitude": "37.5685818430",
+    "longitude": "126.9816428989",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/2833957_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "229901",
+    "title": "한국종합무역센터(코엑스)",
+    "address": "서울특별시 강남구 영동대로 513",
+    "phone": "",
+    "latitude": "37.5117453937",
+    "longitude": "127.0591541159",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/2005261_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "250466",
+    "title": "aT센터",
+    "address": "서울특별시 서초구 강남대로 27 (양재동)",
+    "phone": "",
+    "latitude": "37.4673918780",
+    "longitude": "127.0407514903",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/3554636_image2_1.jpg",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "252655",
+    "title": "CECO 창원컨벤션센터",
+    "address": "경상남도 창원시 성산구 원이대로 362 (대원동)",
+    "phone": "",
+    "latitude": "35.2382867979",
+    "longitude": "128.6578550874",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3050224_image2_1.JPG",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "2762798",
+    "title": "LW컨벤션",
+    "address": "서울특별시 중구 청파로 464 (중림동)",
+    "phone": "",
+    "latitude": "37.5608741650",
+    "longitude": "126.9682415607",
+    "image": "",
+    "category": "컨벤션센터"
+  },
+  {
+    "id": "3531853",
+    "title": "[한국관광공사 오디(Odii) 팝업] 오딩이네 캠핑장",
+    "address": "서울특별시 용산구 한강대로23길 55 (한강로3가)",
+    "phone": "",
+    "latitude": "37.5298249324",
+    "longitude": "126.9647566449",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3540987_image2_1.png",
+    "category": "컨벤션센터"
+  }
+]

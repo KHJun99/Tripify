@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "1857095",
+    "title": "강원 영월 김삿갓면 [슬로시티]",
+    "address": "강원특별자치도 영월군 김삿갓면 옥동장터길 36",
+    "phone": "",
+    "latitude": "37.1256818109",
+    "longitude": "128.5701372137",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/2026085_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "893974",
+    "title": "개평한옥마을",
+    "address": "경상남도 함양군 지곡면 개평길 59",
+    "phone": "",
+    "latitude": "35.5658144475",
+    "longitude": "127.7673717569",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3538275_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2784264",
+    "title": "거북선마을",
+    "address": "경상남도 사천시 용현면 사천대교로 75-61",
+    "phone": "",
+    "latitude": "34.9985498643",
+    "longitude": "128.0406209830",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/3515680_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128947",
+    "title": "거창 황산마을 옛 담장",
+    "address": "경상남도 거창군 위천면 황산1길 109-5",
+    "phone": "",
+    "latitude": "35.7631683370",
+    "longitude": "127.8373158638",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3018406_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2737307",
+    "title": "경기광주 한옥마을",
+    "address": "경기도 광주시 새오개길 39 (목현동)",
+    "phone": "",
+    "latitude": "37.4385041952",
+    "longitude": "127.2300295488",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/3527342_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "773075",
+    "title": "경남 하동 악양면 [슬로시티]",
+    "address": "경상남도 하동군 악양면 악양서로 357",
+    "phone": "",
+    "latitude": "35.1623867315",
+    "longitude": "127.7089347057",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2026206_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1857022",
+    "title": "경북 상주 함창·이안·공검면 [슬로시티]",
+    "address": "경상북도 상주시 함창읍 함창중앙로 135",
+    "phone": "",
+    "latitude": "36.5701909740",
+    "longitude": "128.1794354346",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3042612_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1857094",
+    "title": "경북 청송 주왕산면·파천면 [슬로시티]",
+    "address": "경상북도 청송군 주왕산면 이전앞길 1",
+    "phone": "",
+    "latitude": "36.3569003365",
+    "longitude": "129.1593574127",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3536675_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128676",
+    "title": "경주 교촌마을",
+    "address": "경상북도 경주시 교촌길 39-2",
+    "phone": "",
+    "latitude": "35.8296749875",
+    "longitude": "129.2147232863",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3507141_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "127855",
+    "title": "경주 양동마을 [유네스코 세계유산]",
+    "address": "경상북도 경주시 강동면 양동마을길 134",
+    "phone": "",
+    "latitude": "35.9967040757",
+    "longitude": "129.2536900913",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3506362_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "126229",
+    "title": "경주민속공예촌",
+    "address": "경상북도 경주시 보불로 230",
+    "phone": "",
+    "latitude": "35.8044963203",
+    "longitude": "129.3112683256",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "126725",
+    "title": "계룡산 도자예술촌",
+    "address": "충청남도 공주시 반포면 도예촌길 71-25",
+    "phone": "",
+    "latitude": "36.3900525298",
+    "longitude": "127.2152488189",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3534879_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "125804",
+    "title": "고성 왕곡마을",
+    "address": "강원특별자치도 고성군 왕곡마을길 41",
+    "phone": "",
+    "latitude": "38.3405981100",
+    "longitude": "128.4995815837",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/75/3332475_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128946",
+    "title": "고성 학동마을 옛 담장",
+    "address": "경상남도 고성군 하일면 학동돌담길 11-5",
+    "phone": "",
+    "latitude": "34.9444364434",
+    "longitude": "128.1950033417",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3349191_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2785906",
+    "title": "관동마을",
+    "address": "경상남도 하동군 적량면 관리",
+    "phone": "",
+    "latitude": "35.0855380447",
+    "longitude": "127.7660205704",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/71/2788071_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127714",
+    "title": "괴시리 전통마을",
+    "address": "경상북도 영덕군 영해면 호지마을1길 16-1",
+    "phone": "",
+    "latitude": "36.5431729856",
+    "longitude": "129.4165708929",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3039221_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794637",
+    "title": "구례예술인마을",
+    "address": "전라남도 구례군 광의면 예술인길 46",
+    "phone": "",
+    "latitude": "35.2751750445",
+    "longitude": "127.4489380158",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3570826_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "895327",
+    "title": "남도한옥민박마을",
+    "address": "전라남도 해남군 삼산면 민박촌길 44",
+    "phone": "",
+    "latitude": "34.5093191952",
+    "longitude": "126.6057535234",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/3563063_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128440",
+    "title": "남사예담촌",
+    "address": "경상남도 산청군 단성면 지리산대로2897번길 10",
+    "phone": "",
+    "latitude": "35.2741948084",
+    "longitude": "127.9364784516",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3524844_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "126747",
+    "title": "남산골한옥마을",
+    "address": "서울특별시 중구 퇴계로34길 28 (필동2가)",
+    "phone": "",
+    "latitude": "37.5597775194",
+    "longitude": "126.9932865315",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/2932494_image2_1.bmp",
+    "category": "민속마을"
+  },
+  {
+    "id": "128402",
+    "title": "남원 흥부마을",
+    "address": "전북특별자치도 남원시 아영면 흥부로 275",
+    "phone": "",
+    "latitude": "35.5203886528",
+    "longitude": "127.5882859988",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/3583477_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "129489",
+    "title": "남해독일마을",
+    "address": "경상남도 남해군 독일로 89-7",
+    "phone": "",
+    "latitude": "34.8000859569",
+    "longitude": "128.0383624398",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3304479_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2657953",
+    "title": "내포보부상촌",
+    "address": "충청남도 예산군 덕산면 온천단지1로 55",
+    "phone": "",
+    "latitude": "36.6912719405",
+    "longitude": "126.6500748968",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3365065_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "3033516",
+    "title": "논산한옥마을",
+    "address": "충청남도 논산시 연산면 임3길 2",
+    "phone": "",
+    "latitude": "36.2114890274",
+    "longitude": "127.1812566549",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/3033494_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "128953",
+    "title": "담양 창평 삼지내마을",
+    "address": "전라남도 담양군 창평면 돌담길 9-22",
+    "phone": "",
+    "latitude": "35.2380579619",
+    "longitude": "127.0190630391",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3370481_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2732615",
+    "title": "대가야생활촌",
+    "address": "경상북도 고령군 대가야읍 신남로 81",
+    "phone": "",
+    "latitude": "35.7118958019",
+    "longitude": "128.2692652160",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/2732625_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794635",
+    "title": "대장마을",
+    "address": "경상남도 산청군 금서면 친환경로2506번길 85",
+    "phone": "",
+    "latitude": "35.4147359120",
+    "longitude": "127.8584760530",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3535041_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "2786920",
+    "title": "대촌마을",
+    "address": "경상남도 하동군 악양면 대촌길 10",
+    "phone": "",
+    "latitude": "35.1524570270",
+    "longitude": "127.6936585281",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/56/2787256_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1856774",
+    "title": "대흥슬로시티",
+    "address": "충청남도 예산군 대흥면 중리길 49",
+    "phone": "",
+    "latitude": "36.6066757790",
+    "longitude": "126.7903256198",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3585434_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2733144",
+    "title": "덕촌리 독립운동가 마을",
+    "address": "충청북도 청주시 흥덕구 옥산면 덕촌삼성골길 42-8",
+    "phone": "",
+    "latitude": "36.6625738944",
+    "longitude": "127.3626559477",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3491333_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2732546",
+    "title": "도래마을",
+    "address": "전라남도 나주시 다도면 동력길 16",
+    "phone": "",
+    "latitude": "34.9984650156",
+    "longitude": "126.8224502959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/3529479_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "250458",
+    "title": "동편제탯자리",
+    "address": "전북특별자치도 남원시 운봉읍 비전길 7",
+    "phone": "",
+    "latitude": "35.4580397018",
+    "longitude": "127.5627232241",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3583521_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1928731",
+    "title": "뒤웅박고을",
+    "address": "세종특별자치시 전동면 배일길 90-43",
+    "phone": "",
+    "latitude": "36.6759371809",
+    "longitude": "127.2591732122",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "128775",
+    "title": "만해마을",
+    "address": "강원특별자치도 인제군 북면 만해로 91",
+    "phone": "",
+    "latitude": "38.1859431442",
+    "longitude": "128.3161336509",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3557272_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "962201",
+    "title": "모평마을",
+    "address": "전라남도 함평군 해보면 상모길 80",
+    "phone": "",
+    "latitude": "35.1604068068",
+    "longitude": "126.5943525751",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3583007_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1610897",
+    "title": "묘골마을",
+    "address": "대구광역시 달성군 하빈면 육신사길 39-4",
+    "phone": "",
+    "latitude": "35.9091122520",
+    "longitude": "128.4157940963",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/3570070_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "894087",
+    "title": "무섬마을",
+    "address": "경상북도 영주시 문수면 무섬로234번길 31-12",
+    "phone": "",
+    "latitude": "36.7309752730",
+    "longitude": "128.6217802905",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3513808_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128950",
+    "title": "무주 지전마을 옛 담장",
+    "address": "전북특별자치도 무주군 설천면 길산리 48-1",
+    "phone": "",
+    "latitude": "36.0271450456",
+    "longitude": "127.7455474342",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3550421_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2764599",
+    "title": "박사마을",
+    "address": "강원특별자치도 춘천시 서면 당산1길 7",
+    "phone": "",
+    "latitude": "37.8970784279",
+    "longitude": "127.6692318440",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "2795184",
+    "title": "방곡마을",
+    "address": "경상남도 산청군 금서면 화계오봉로540번길 57",
+    "phone": "",
+    "latitude": "35.4233252461",
+    "longitude": "127.7813798422",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/2795964_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794632",
+    "title": "방광마을",
+    "address": "전라남도 구례군 광의면 방광길 35",
+    "phone": "",
+    "latitude": "35.2612046487",
+    "longitude": "127.4633565489",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3570818_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "895495",
+    "title": "보성 강골마을",
+    "address": "전라남도 보성군 득량면 강골길 45-1",
+    "phone": "",
+    "latitude": "34.7627254392",
+    "longitude": "127.1859213635",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "127035",
+    "title": "봉화 닭실마을",
+    "address": "경상북도 봉화군 봉화읍 충재길 60",
+    "phone": "",
+    "latitude": "36.9053242594",
+    "longitude": "128.7422977813",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3526096_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2607171",
+    "title": "부여 반교마을",
+    "address": "충청남도 부여군 외산면 반교동로 9-8",
+    "phone": "",
+    "latitude": "36.2838199141",
+    "longitude": "126.7176434997",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3336439_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1100498",
+    "title": "북촌 8경",
+    "address": "서울특별시 종로구 계동길 37",
+    "phone": "",
+    "latitude": "37.5791612548",
+    "longitude": "126.9864254967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/933781_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "126537",
+    "title": "북촌한옥마을",
+    "address": "서울특별시 종로구 계동길 37 (계동)",
+    "phone": "",
+    "latitude": "37.5790529392",
+    "longitude": "126.9867060298",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3304404_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "619823",
+    "title": "비금도 내촌마을 옛 담장",
+    "address": "전라남도 신안군 비금면 효자촌길 16",
+    "phone": "",
+    "latitude": "34.7406873269",
+    "longitude": "125.9017518265",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3572102_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2773346",
+    "title": "빨래골",
+    "address": "서울특별시 강북구 수유동 산127-1",
+    "phone": "",
+    "latitude": "37.6484562534",
+    "longitude": "127.0019471132",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3468053_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2781613",
+    "title": "산운마을",
+    "address": "경상북도 의성군 금성면 수정사길 19",
+    "phone": "",
+    "latitude": "36.2430268955",
+    "longitude": "128.7034981899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3406114_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128948",
+    "title": "산청 단계마을 옛 담장",
+    "address": "경상남도 산청군 신등면 단계리",
+    "phone": "",
+    "latitude": "35.3823338954",
+    "longitude": "128.0083442751",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3549365_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127732",
+    "title": "삼척 신리 너와집과 민속유물",
+    "address": "강원특별자치도 삼척시 도계읍 문의재로 1223-9",
+    "phone": "",
+    "latitude": "37.1870605810",
+    "longitude": "129.1337572152",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3503434_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2792617",
+    "title": "상사마을",
+    "address": "전라남도 구례군 마산면 장수길 6-1",
+    "phone": "",
+    "latitude": "35.2153215467",
+    "longitude": "127.4985935150",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/3547862_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2615321",
+    "title": "상서마을 옛 돌담길",
+    "address": "전라남도 완도군 청산면 상동길 91-1",
+    "phone": "",
+    "latitude": "34.1761530714",
+    "longitude": "126.9067962163",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2520606_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "129430",
+    "title": "선비촌",
+    "address": "경상북도 영주시 순흥면 소백로 2796",
+    "phone": "",
+    "latitude": "36.9283157941",
+    "longitude": "128.5812364783",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3500904_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "126471",
+    "title": "성읍민속마을",
+    "address": "제주특별자치도 서귀포시 표선면 성읍리",
+    "phone": "",
+    "latitude": "33.3884302280",
+    "longitude": "126.7882138165",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3551564_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127717",
+    "title": "성주 한개마을",
+    "address": "경상북도 성주군 월항면 대산리 67",
+    "phone": "",
+    "latitude": "35.9287028395",
+    "longitude": "128.3264042258",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3535509_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2784188",
+    "title": "소사동마을",
+    "address": "경상남도 창원시 진해구 소사동",
+    "phone": "",
+    "latitude": "35.1287929127",
+    "longitude": "128.7766476811",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3568518_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2767851",
+    "title": "송도 한옥마을",
+    "address": "인천광역시 연수구 테크노파크로 180 (송도동)",
+    "phone": "",
+    "latitude": "37.3903047923",
+    "longitude": "126.6388013567",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3524687_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794604",
+    "title": "송하마을",
+    "address": "경상남도 산청군 시천면 송하중태길 23",
+    "phone": "",
+    "latitude": "35.2748430026",
+    "longitude": "127.8383731702",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/2796030_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1614506",
+    "title": "순창 전통고추장 민속마을",
+    "address": "전북특별자치도 순창군 순창읍 민속마을길 5-13",
+    "phone": "",
+    "latitude": "35.3669032664",
+    "longitude": "127.1091962359",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3573345_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127931",
+    "title": "순천 낙안읍성",
+    "address": "전라남도 순천시 낙안면 충민길 30",
+    "phone": "",
+    "latitude": "34.9060980993",
+    "longitude": "127.3417429744",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3497851_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794614",
+    "title": "신기마을",
+    "address": "전북특별자치도 남원시 운봉읍 운봉신기길 103",
+    "phone": "",
+    "latitude": "35.4521400229",
+    "longitude": "127.5429751230",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3343853_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2414753",
+    "title": "아라리촌",
+    "address": "강원특별자치도 정선군 정선읍 애산로 37",
+    "phone": "",
+    "latitude": "37.3749217329",
+    "longitude": "128.6720900814",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3565990_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2784697",
+    "title": "악양대봉감 정보화마을",
+    "address": "경상남도 하동군 악양면 대축길 26",
+    "phone": "",
+    "latitude": "35.1429110694",
+    "longitude": "127.7045439293",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/48/3550248_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128558",
+    "title": "안동 군자마을(오천유적지)",
+    "address": "경상북도 안동시 와룡면 군자리길 29",
+    "phone": "",
+    "latitude": "36.6735519186",
+    "longitude": "128.8025019983",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3414809_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2657845",
+    "title": "안동 내앞마을",
+    "address": "경상북도 안동시 임하면 내앞길 5-4",
+    "phone": "",
+    "latitude": "36.5353826033",
+    "longitude": "128.8567151003",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3402568_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "894027",
+    "title": "안동 하회마을 [유네스코 세계유산]",
+    "address": "경상북도 안동시 풍천면 전서로 186-8",
+    "phone": "",
+    "latitude": "36.5506607937",
+    "longitude": "128.5283188170",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3542033_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127339",
+    "title": "안동민속촌",
+    "address": "경상북도 안동시 성곡동",
+    "phone": "",
+    "latitude": "36.5794980910",
+    "longitude": "128.7666690305",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3538752_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "126680",
+    "title": "안동포마을",
+    "address": "경상북도 안동시 임하면 금소3길 3",
+    "phone": "",
+    "latitude": "36.5049387502",
+    "longitude": "128.8513720140",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3552233_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "894204",
+    "title": "영암 왕인박사마을",
+    "address": "전라남도 영암군 군서면 구림로 43-14",
+    "phone": "",
+    "latitude": "34.7638964859",
+    "longitude": "126.6255623080",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/3028245_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "547873",
+    "title": "영양 두들마을",
+    "address": "경상북도 영양군 석보면 두들마을길 62",
+    "phone": "",
+    "latitude": "36.5594127800",
+    "longitude": "129.1266432640",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3531124_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "894008",
+    "title": "영양 주실마을",
+    "address": "경상북도 영양군 일월면 주실길 55",
+    "phone": "",
+    "latitude": "36.7187302601",
+    "longitude": "129.1025768058",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/27/3531127_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128159",
+    "title": "영월 섶다리 마을",
+    "address": "강원특별자치도 영월군 주천면 평창강로 262-7",
+    "phone": "",
+    "latitude": "37.3002602828",
+    "longitude": "128.3477936655",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3532240_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2720207",
+    "title": "예끼마을",
+    "address": "경상북도 안동시 도산면 선성길 14",
+    "phone": "",
+    "latitude": "36.6995158058",
+    "longitude": "128.8123448093",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "894158",
+    "title": "예천 금당실마을",
+    "address": "경상북도 예천군 용문면 금당실길 118-32",
+    "phone": "",
+    "latitude": "36.6932034107",
+    "longitude": "128.4105057637",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/3036072_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2686588",
+    "title": "오성한옥마을",
+    "address": "전북특별자치도 완주군 소양면 송광수만로 472-23",
+    "phone": "",
+    "latitude": "35.9031141763",
+    "longitude": "127.2433009708",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "2769810",
+    "title": "오창 미래지 한옥마을",
+    "address": "충청북도 청주시 청원구 오창읍 미래지로 71-53",
+    "phone": "",
+    "latitude": "36.7351024259",
+    "longitude": "127.4047362764",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/68/3399268_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "126001",
+    "title": "외암민속마을",
+    "address": "충청남도 아산시 송악면 외암민속길9번길 13-2",
+    "phone": "",
+    "latitude": "36.7310403994",
+    "longitude": "127.0144465112",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/3355137_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794625",
+    "title": "외평마을",
+    "address": "전북특별자치도 남원시 주천면 장안리 260-1",
+    "phone": "",
+    "latitude": "35.3910396771",
+    "longitude": "127.4455825376",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3358639_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "2724392",
+    "title": "은평한옥마을",
+    "address": "서울특별시 은평구 진관동",
+    "phone": "",
+    "latitude": "37.6412531600",
+    "longitude": "126.9377142893",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3530324_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "894183",
+    "title": "의성 사촌마을",
+    "address": "경상북도 의성군 점곡면 점곡길 17-1",
+    "phone": "",
+    "latitude": "36.4257099805",
+    "longitude": "128.7619516732",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3533902_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128951",
+    "title": "익산 함라마을 옛 담장",
+    "address": "전북특별자치도 익산시 함라면",
+    "phone": "",
+    "latitude": "36.0610903939",
+    "longitude": "126.9110209070",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3371735_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "128026",
+    "title": "인량리 전통테마마을",
+    "address": "경상북도 영덕군 창수면 인량길 178",
+    "phone": "",
+    "latitude": "36.5522294128",
+    "longitude": "129.3712746237",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/3009006_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1611938",
+    "title": "인흥마을",
+    "address": "대구광역시 달성군 화원읍 인흥3길 16",
+    "phone": "",
+    "latitude": "35.7932244734",
+    "longitude": "128.5181077268",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3570032_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2786928",
+    "title": "입석마을",
+    "address": "경상남도 하동군 악양면 입석길 39-12",
+    "phone": "",
+    "latitude": "35.1586258383",
+    "longitude": "127.6971886133",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/2787367_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2783373",
+    "title": "자부마을",
+    "address": "경상남도 통영시 욕지면 동항리",
+    "phone": "",
+    "latitude": "34.6364361017",
+    "longitude": "128.2698214964",
+    "image": "",
+    "category": "민속마을"
+  },
+  {
+    "id": "593382",
+    "title": "전남 담양 창평면 [슬로시티]",
+    "address": "전라남도 담양군 창평면 돌담길 56-24",
+    "phone": "",
+    "latitude": "35.2352804779",
+    "longitude": "127.0179187658",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/41/3562741_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "264284",
+    "title": "전북 전주 한옥마을 [슬로시티]",
+    "address": "전북특별자치도 전주시 완산구 기린대로 99 (남노송동)",
+    "phone": "",
+    "latitude": "35.8183167088",
+    "longitude": "127.1536278459",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3479250_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "3424542",
+    "title": "종로 무계원",
+    "address": "서울특별시 종로구 창의문로11길 4-1 (부암동)",
+    "phone": "0237971312",
+    "latitude": "37.5948701151",
+    "longitude": "126.9627744300",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3424735_image2_1.jpeg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2787465",
+    "title": "중군마을",
+    "address": "전북특별자치도 남원시 인월면 일출봉1길 24",
+    "phone": "",
+    "latitude": "35.4448114275",
+    "longitude": "127.6075585006",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/3583430_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "127254",
+    "title": "지례예술촌",
+    "address": "경상북도 안동시 임동면 지례예술촌길 427",
+    "phone": "",
+    "latitude": "36.5100511642",
+    "longitude": "128.9508713825",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3412303_image2_1.JPG",
+    "category": "민속마을"
+  },
+  {
+    "id": "125576",
+    "title": "지순택요(고려도요)",
+    "address": "경기도 이천시 신둔면 경충대로 3217",
+    "phone": "",
+    "latitude": "37.3119635789",
+    "longitude": "127.3988789484",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/13/3392213_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2710984",
+    "title": "청정신흥마을",
+    "address": "강원특별자치도 동해시 서동로 825-1",
+    "phone": "",
+    "latitude": "37.5194784796",
+    "longitude": "129.0210932573",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3440203_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "1857109",
+    "title": "충북 제천 수산면 [슬로시티]",
+    "address": "충청북도 제천시 수산면 월악로26길 5",
+    "phone": "",
+    "latitude": "36.9346575039",
+    "longitude": "128.1778196011",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3303218_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2702546",
+    "title": "토성민속마을",
+    "address": "강원특별자치도 철원군 갈말읍 토성길 98",
+    "phone": "",
+    "latitude": "38.2450178894",
+    "longitude": "127.3430679949",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/69/3558069_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "125578",
+    "title": "한국민속촌",
+    "address": "경기도 용인시 기흥구 민속촌로 90 (보라동)",
+    "phone": "",
+    "latitude": "37.2567648379",
+    "longitude": "127.1145951569",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3563987_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "128949",
+    "title": "한밤마을",
+    "address": "대구광역시 군위군 부계면 한티로 2137-3",
+    "phone": "",
+    "latitude": "36.0593162984",
+    "longitude": "128.6549493486",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3422804_image2_1.png",
+    "category": "민속마을"
+  },
+  {
+    "id": "127034",
+    "title": "화순 복조리마을",
+    "address": "전라남도 화순군 백아면 복조리길 27",
+    "phone": "",
+    "latitude": "35.1898824355",
+    "longitude": "127.1578075552",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/97/2515997_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "893948",
+    "title": "황산마을",
+    "address": "경상남도 거창군 위천면 황산2길 13",
+    "phone": "",
+    "latitude": "35.7622712372",
+    "longitude": "127.8384713411",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3501532_image2_1.jpg",
+    "category": "민속마을"
+  },
+  {
+    "id": "2794650",
+    "title": "회덕마을",
+    "address": "전북특별자치도 남원시 주천면 회덕길 27",
+    "phone": "",
+    "latitude": "35.3978897622",
+    "longitude": "127.4949696652",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/80/2796880_image2_1.jpg",
+    "category": "민속마을"
+  }
+]

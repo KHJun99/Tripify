@@ -1,0 +1,1286 @@
+[
+  {
+    "id": "3035896",
+    "title": "감골시민홀",
+    "address": "경기도 안산시 상록구 석호로 226 (사동)",
+    "phone": "",
+    "latitude": "37.2937531552",
+    "longitude": "126.8554148743",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/3003318_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131139",
+    "title": "강남청소년센터",
+    "address": "서울특별시 강남구 영동대로131길 26 (청담동)",
+    "phone": "",
+    "latitude": "37.5205165055",
+    "longitude": "127.0540626647",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/49/3495049_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3544047",
+    "title": "강릉국민체육센터",
+    "address": "강원특별자치도 강릉시 수리골길 76 (교동)",
+    "phone": "",
+    "latitude": "37.7771018606",
+    "longitude": "128.8969770271",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131140",
+    "title": "강서청소년회관",
+    "address": "서울특별시 강서구 공항대로42길 23-19",
+    "phone": "02-3664-2456~8",
+    "latitude": "37.5564807920",
+    "longitude": "126.8442724314",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/55/3437455_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131169",
+    "title": "강원특별자치도 세계잼버리 수련장",
+    "address": "강원특별자치도 고성군 토성면 잼버리로 244",
+    "phone": "",
+    "latitude": "38.2226840374",
+    "longitude": "128.4976743306",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131456",
+    "title": "강원특별자치도청소년수련원",
+    "address": "강원특별자치도 춘천시 신샘밭로 89",
+    "phone": "033-255-6601",
+    "latitude": "37.9225569719",
+    "longitude": "127.7204153141",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3382505_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "1896625",
+    "title": "경기도청소년수련원",
+    "address": "경기도 안산시 단원구 선감로 255 (선감동)",
+    "phone": "032-886-6900",
+    "latitude": "37.2165055300",
+    "longitude": "126.6400199207",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3480324_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131212",
+    "title": "경상북도 환경연수원",
+    "address": "경상북도 구미시 금오산로 336-97 (남통동)",
+    "phone": "",
+    "latitude": "36.1197558559",
+    "longitude": "128.3105225533",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3499214_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131885",
+    "title": "경주시청소년수련관",
+    "address": "경상북도 경주시 알천북로 131 (황성동)",
+    "phone": "",
+    "latitude": "35.8544694288",
+    "longitude": "129.2156919397",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3575764_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2465040",
+    "title": "계산국민체육센터",
+    "address": "인천광역시 계양구 주부토로 580",
+    "phone": "",
+    "latitude": "37.5461382805",
+    "longitude": "126.7291748899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3393633_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131453",
+    "title": "관악청소년센터",
+    "address": "서울특별시 관악구 신림로23길 17",
+    "phone": "",
+    "latitude": "37.4702257699",
+    "longitude": "126.9351915730",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "1622322",
+    "title": "광주광역시청소년수련원",
+    "address": "광주광역시 서구 학생독립로 37 (화정동)",
+    "phone": "",
+    "latitude": "35.1415662888",
+    "longitude": "126.8671816721",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3576643_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131450",
+    "title": "광주북구청소년수련관",
+    "address": "광주광역시 북구 대천로 86",
+    "phone": "",
+    "latitude": "35.1848927862",
+    "longitude": "126.9166678776",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/1892816_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131513",
+    "title": "구룡포청소년수련원",
+    "address": "경상북도 포항시 남구 구룡포읍 명월길 51",
+    "phone": "054-240-9100",
+    "latitude": "36.0299786569",
+    "longitude": "129.5740138160",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/65/3511865_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131207",
+    "title": "구미시평생교육원",
+    "address": "경상북도 구미시 산호대로 243",
+    "phone": "054-480-4300",
+    "latitude": "36.1055838153",
+    "longitude": "128.3839608909",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/57/3029257_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131847",
+    "title": "국립중앙청소년수련원",
+    "address": "충청남도 천안시 동남구 목천읍 서리4길 48",
+    "phone": "041-620-7700",
+    "latitude": "36.7862767300",
+    "longitude": "127.2287479169",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/1876085_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131633",
+    "title": "국립평창청소년수련원",
+    "address": "강원특별자치도 평창군 용평면 새터마을길 108",
+    "phone": "033-330-0800",
+    "latitude": "37.5832702987",
+    "longitude": "128.4020303407",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3388817_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "3067893",
+    "title": "금산청소년수련원",
+    "address": "충청남도 금산군 제원면 용화로 343",
+    "phone": "",
+    "latitude": "36.0957790254",
+    "longitude": "127.5971032217",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3067884_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "752301",
+    "title": "금촌청소년문화의집",
+    "address": "경기도 파주시 시민회관길 40",
+    "phone": "",
+    "latitude": "37.7586144499",
+    "longitude": "126.7801281391",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/1862638_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3034941",
+    "title": "김수녕양궁장",
+    "address": "충청북도 청주시 상당구 1순환로1514번길 89 (용정동)",
+    "phone": "",
+    "latitude": "36.6271364406",
+    "longitude": "127.5258311713",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3034787_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131696",
+    "title": "김포시청소년수련원",
+    "address": "경기도 김포시 월곶면 용강로13번길 38",
+    "phone": "031-989-6700",
+    "latitude": "37.7207870316",
+    "longitude": "126.5521834056",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3404798_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "1614574",
+    "title": "녹두장군 전봉준관",
+    "address": "전북특별자치도 순창군 쌍치면 피노길 65-29",
+    "phone": "063-650-1633, 1628",
+    "latitude": "35.5241699103",
+    "longitude": "127.0127229851",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/81/3519581_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131477",
+    "title": "늘푸른전당",
+    "address": "경상남도 창원시 성산구 두대로 97 (삼동동)",
+    "phone": "055-712-0372",
+    "latitude": "35.2298126855",
+    "longitude": "128.6543250696",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/16/3499616_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131522",
+    "title": "다물민족학교 다물평생교육원",
+    "address": "경상남도 산청군 단성면 호암로 631",
+    "phone": "055-973-1754",
+    "latitude": "35.3170615590",
+    "longitude": "127.9002305096",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "1610250",
+    "title": "달서구청소년수련관",
+    "address": "대구광역시 달서구 상화로 420",
+    "phone": "",
+    "latitude": "35.8072514270",
+    "longitude": "128.5596342372",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/77/1573877_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131451",
+    "title": "대구광역시청소년수련원",
+    "address": "대구광역시 달서구 앞산순환로 180",
+    "phone": "",
+    "latitude": "35.8200081984",
+    "longitude": "128.5531788967",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/1892842_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1613631",
+    "title": "대구수성구청소년수련관",
+    "address": "대구광역시 수성구 청수로45길 100",
+    "phone": "",
+    "latitude": "35.8450540459",
+    "longitude": "128.6323962254",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/1575207_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131149",
+    "title": "대전근로자종합복지회관",
+    "address": "대전광역시 대덕구 대화로 10",
+    "phone": "042-621-2462",
+    "latitude": "36.3683308474",
+    "longitude": "127.4189978360",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131449",
+    "title": "동구청소년자연수련원",
+    "address": "대전광역시 동구 산내로474번길 123",
+    "phone": "042-274-2270",
+    "latitude": "36.2233118636",
+    "longitude": "127.4500434378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3512644_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3006882",
+    "title": "동천재활체육센터",
+    "address": "서울특별시 노원구 노원로18길 41",
+    "phone": "",
+    "latitude": "37.6442385976",
+    "longitude": "127.0739601103",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/43/3006843_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131339",
+    "title": "딱따구리청소년수련원",
+    "address": "경기도 양주시 광적면 현석로 313-44",
+    "phone": "031-837-4461~2",
+    "latitude": "37.8327698118",
+    "longitude": "126.9415029278",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "2770347",
+    "title": "마음수련 메인센터(마음수련 논산 메인센터)",
+    "address": "충청남도 논산시 상월면 상월로 749-23",
+    "phone": "",
+    "latitude": "36.3219875052",
+    "longitude": "127.1814786757",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2772079_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3060929",
+    "title": "마천청소년센터",
+    "address": "서울특별시 송파구 성내천로 319 (마천동)",
+    "phone": "",
+    "latitude": "37.4923910635",
+    "longitude": "127.1566596841",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3053851_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131834",
+    "title": "만해마을 수련원",
+    "address": "강원특별자치도 인제군 북면 만해로 91",
+    "phone": "033-462-2303",
+    "latitude": "38.1862375638",
+    "longitude": "128.3166085986",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3397253_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131181",
+    "title": "박달재수련원",
+    "address": "충청북도 제천시 봉양읍 박달로 256-46",
+    "phone": "043-652-9222",
+    "latitude": "37.1431285608",
+    "longitude": "128.0603407805",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/1596851_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131686",
+    "title": "보령시청소년수련관",
+    "address": "충청남도 보령시 성주면 성주산로 500",
+    "phone": "041-931-2336",
+    "latitude": "36.3273276778",
+    "longitude": "126.6515066314",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/25/1601125_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2751122",
+    "title": "복합생활스포츠타운",
+    "address": "경기도 군포시 군포로 339 (부곡동)",
+    "phone": "",
+    "latitude": "37.3389437977",
+    "longitude": "126.9362396026",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131145",
+    "title": "부산광역시 금련산청소년수련원",
+    "address": "부산광역시 수영구 황령산로 156",
+    "phone": "051-625-0709",
+    "latitude": "35.1552848264",
+    "longitude": "129.1029352159",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/1572153_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131146",
+    "title": "부산광역시교육청학생인성교육원",
+    "address": "부산광역시 금정구 북문로 178",
+    "phone": "",
+    "latitude": "35.2606108543",
+    "longitude": "129.0456984184",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/2445261_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131406",
+    "title": "부산사회체육센터",
+    "address": "부산광역시 해운대구 APEC로 68",
+    "phone": "",
+    "latitude": "35.1674341084",
+    "longitude": "129.1376763055",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/1863200_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1885110",
+    "title": "부여군 청소년수련원",
+    "address": "충청남도 부여군 충화면 충신로 618",
+    "phone": "041-835-5502, 5509",
+    "latitude": "36.1459847619",
+    "longitude": "126.8249013885",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3341085_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131187",
+    "title": "부여청소년수련원",
+    "address": "충청남도 부여군 충화면 충신로 618",
+    "phone": "",
+    "latitude": "36.1459458779",
+    "longitude": "126.8249152769",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/14/3568114_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131534",
+    "title": "사당청소년센터",
+    "address": "서울특별시 동작구 사당로23길 57-7 (사당동)",
+    "phone": "",
+    "latitude": "37.4854386174",
+    "longitude": "126.9757430085",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/2958145_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131687",
+    "title": "새마을운동중앙연수원",
+    "address": "경기도 성남시 분당구 새마을로 257 (율동)",
+    "phone": "",
+    "latitude": "37.3890558273",
+    "longitude": "127.1567487170",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3499783_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131152",
+    "title": "새싹동산 청려수련원",
+    "address": "경기도 화성시 풀무골로110번길 69",
+    "phone": "",
+    "latitude": "37.2050574979",
+    "longitude": "127.1461770776",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131644",
+    "title": "서귀포시청소년수련관",
+    "address": "제주특별자치도 서귀포시 중산간서로 97-1",
+    "phone": "",
+    "latitude": "33.2607119261",
+    "longitude": "126.4982279520",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3550252_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2745948",
+    "title": "서수원주민편익시설",
+    "address": "경기도 수원시 권선구 매송고색로 620 (고색동)",
+    "phone": "",
+    "latitude": "37.2478050113",
+    "longitude": "126.9729415907",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/06/2746106_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2762808",
+    "title": "서울시립망우청소년센터",
+    "address": "서울특별시 중랑구 송림길 156 (망우동)",
+    "phone": "",
+    "latitude": "37.6062741967",
+    "longitude": "127.1088552361",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131136",
+    "title": "서울시립문래청소년센터",
+    "address": "서울특별시 영등포구 문래로 110 (문래동3가)",
+    "phone": "02-2167-0100",
+    "latitude": "37.5189054929",
+    "longitude": "126.8941300544",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3497984_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131408",
+    "title": "서울시립보라매청소년센터",
+    "address": "서울특별시 동작구 여의대방로20길 61 (신대방동)",
+    "phone": "",
+    "latitude": "37.4938977769",
+    "longitude": "126.9215449274",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3535092_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131455",
+    "title": "서울시립수서청소년센터",
+    "address": "서울특별시 강남구 광평로 144 (수서동)",
+    "phone": "",
+    "latitude": "37.4836658521",
+    "longitude": "127.0887661062",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/52/3494652_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "749895",
+    "title": "서울액션스쿨 (마샬아트센터)",
+    "address": "경기도 파주시 탄현면 헤이리마을길 18-61",
+    "phone": "",
+    "latitude": "37.7873873494",
+    "longitude": "126.6947129213",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/737673_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131852",
+    "title": "서울여성플라자",
+    "address": "서울특별시 동작구 여의대방로54길 18 (대방동)",
+    "phone": "",
+    "latitude": "37.5116624815",
+    "longitude": "126.9272050230",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/07/3503407_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131138",
+    "title": "서울청소년수련관",
+    "address": "서울특별시 중구 을지로11길 23 (수표동)",
+    "phone": "",
+    "latitude": "37.5675210155",
+    "longitude": "126.9905726704",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3568498_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2739431",
+    "title": "서조체육시설",
+    "address": "경기도 안양시 만안구 삼봉로 73",
+    "phone": "",
+    "latitude": "37.3983862580",
+    "longitude": "126.8999940142",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/2768384_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2539535",
+    "title": "서천국민체육센터",
+    "address": "충청남도 서천군 마서면 마서로 400",
+    "phone": "041-950-4766",
+    "latitude": "36.0594974548",
+    "longitude": "126.6647624295",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "3046095",
+    "title": "서천군청소년수련관",
+    "address": "충청남도 서천군 장항읍 장항산단로34번길 60-23",
+    "phone": "",
+    "latitude": "36.0228433286",
+    "longitude": "126.6658549477",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3046087_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131447",
+    "title": "성남시수정청소년수련관",
+    "address": "경기도 성남시 수정구 수정로 150 (신흥동)",
+    "phone": "",
+    "latitude": "37.4421187589",
+    "longitude": "127.1367323667",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/1875392_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131204",
+    "title": "성암국제수련원",
+    "address": "전라남도 담양군 수북면 한수동로 872",
+    "phone": "",
+    "latitude": "35.3160026510",
+    "longitude": "126.8981995454",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/79/2705479_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2465135",
+    "title": "송도스포츠파크",
+    "address": "인천광역시 연수구 인천신항대로892번길 40",
+    "phone": "",
+    "latitude": "37.3514033971",
+    "longitude": "126.6185598310",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3395892_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "2736372",
+    "title": "송산 테니스장",
+    "address": "경기도 의정부시 부용로214번길 51 (신곡동)",
+    "phone": "",
+    "latitude": "37.7475599563",
+    "longitude": "127.0765819147",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/2768422_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1623973",
+    "title": "송호학생수련장",
+    "address": "전라남도 해남군 송지면 땅끝해안로 1823",
+    "phone": "",
+    "latitude": "34.3148312347",
+    "longitude": "126.5194018458",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/3576859_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3487759",
+    "title": "수락산스포츠타운",
+    "address": "서울특별시 노원구 상계동",
+    "phone": "",
+    "latitude": "37.6683524029",
+    "longitude": "127.0708152647",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3487746_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131767",
+    "title": "수원체육문화센터",
+    "address": "경기도 수원시 영통구 영통로 383 (영통동)",
+    "phone": "031-273-3030",
+    "latitude": "37.2575972508",
+    "longitude": "127.0685687522",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3430100_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2505393",
+    "title": "스몹 고양",
+    "address": "경기도 고양시 덕양구 고양대로 1955 (동산동)",
+    "phone": "",
+    "latitude": "37.6470294966",
+    "longitude": "126.8947930433",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/3551432_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3116121",
+    "title": "스몹 대전",
+    "address": "대전광역시 유성구 엑스포로 1 (도룡동)",
+    "phone": "",
+    "latitude": "36.3751488554",
+    "longitude": "127.3820815082",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3535595_image2_1.png",
+    "category": "수련시설"
+  },
+  {
+    "id": "3116124",
+    "title": "스몹 수원",
+    "address": "경기도 수원시 장안구 수성로 175 (정자동)",
+    "phone": "",
+    "latitude": "37.2874813034",
+    "longitude": "126.9915582378",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/11/3499911_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2432831",
+    "title": "스몹 하남",
+    "address": "경기도 하남시 미사대로 750 (신장동)",
+    "phone": "",
+    "latitude": "37.5454888917",
+    "longitude": "127.2237576241",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/2858912_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2760833",
+    "title": "스토피아아카데미",
+    "address": "경기도 성남시 수정구 동판교로 308 (사송동)",
+    "phone": "",
+    "latitude": "37.4102720695",
+    "longitude": "127.1154602010",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/2760899_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3065312",
+    "title": "시립 문수 궁도장",
+    "address": "울산광역시 남구 남부순환도로 555 (신정동)",
+    "phone": "",
+    "latitude": "35.5216474180",
+    "longitude": "129.3009494625",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3065296_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131137",
+    "title": "시립목동청소년센터",
+    "address": "서울특별시 양천구 목동서로 143 (목동)",
+    "phone": "02-2642-1318",
+    "latitude": "37.5307732268",
+    "longitude": "126.8755119732",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3564108_image2_1.png",
+    "category": "수련시설"
+  },
+  {
+    "id": "131533",
+    "title": "신림체육센터",
+    "address": "서울특별시 관악구 남부순환로 1369 (신림동)",
+    "phone": "",
+    "latitude": "37.4801823706",
+    "longitude": "126.9029108992",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131441",
+    "title": "아침햇살수련원",
+    "address": "경기도 포천시 관인면 찬우물길 177",
+    "phone": "031-533-0573",
+    "latitude": "38.1624845909",
+    "longitude": "127.2735740368",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/1956139_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3075836",
+    "title": "안산올림픽기념관 수영장",
+    "address": "경기도 안산시 단원구 고잔동",
+    "phone": "",
+    "latitude": "37.3261405584",
+    "longitude": "126.8267471363",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "3074611",
+    "title": "안산호수공원 실내수영장",
+    "address": "경기도 안산시 상록구 광덕대로 70 (사동)",
+    "phone": "",
+    "latitude": "37.3021600647",
+    "longitude": "126.8300919431",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/3074600_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131393",
+    "title": "양구청소년수련관",
+    "address": "강원특별자치도 양구군 양구읍 박수근로 366-27",
+    "phone": "",
+    "latitude": "38.1053905899",
+    "longitude": "127.9816443558",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/26/3475026_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3019981",
+    "title": "양주시청소년수련원",
+    "address": "경기도 양주시 평화로1475번길 623 (덕계동)",
+    "phone": "",
+    "latitude": "37.8195340600",
+    "longitude": "127.0298091210",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3012350_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131471",
+    "title": "어성전 산림교육관",
+    "address": "강원특별자치도 양양군 현북면 부연동길 1303",
+    "phone": "양양국유림관리소 경영기획팀 033-670-3063",
+    "latitude": "37.8997634189",
+    "longitude": "128.6505982528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/28/1813428_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "682380",
+    "title": "에덴스포츠타운",
+    "address": "경기도 가평군 청평면 경춘로 1436",
+    "phone": "031-581-1300",
+    "latitude": "37.7773718983",
+    "longitude": "127.4644706829",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/00/1900100_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3413141",
+    "title": "여의나루역 러너스테이션",
+    "address": "서울특별시 영등포구 여의동로 350 (여의도동)",
+    "phone": "",
+    "latitude": "37.5282689639",
+    "longitude": "126.9316013762",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/3413104_image2_1.png",
+    "category": "수련시설"
+  },
+  {
+    "id": "2768143",
+    "title": "연수드림필드",
+    "address": "인천광역시 연수구 동춘동 913-51",
+    "phone": "",
+    "latitude": "37.4006400655",
+    "longitude": "126.6593464207",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/63/2789463_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2710985",
+    "title": "연평평화안보수련원",
+    "address": "인천광역시 옹진군 연평면 연평중앙로24번길 25",
+    "phone": "",
+    "latitude": "37.6654510122",
+    "longitude": "125.7040350309",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/2710950_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "2782760",
+    "title": "영남스포츠월드",
+    "address": "인천광역시 연수구 새말로107번길 16 영남스포츠센터",
+    "phone": "",
+    "latitude": "37.4194299436",
+    "longitude": "126.6816966401",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "1971323",
+    "title": "영월국민체육센터",
+    "address": "강원특별자치도 영월군 영월읍 제방안길 100",
+    "phone": "",
+    "latitude": "37.1758045508",
+    "longitude": "128.4618565465",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3040154_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1971317",
+    "title": "영월군청소년수련관",
+    "address": "강원특별자치도 영월군 영월읍 제방안길 100",
+    "phone": "033-813-1388",
+    "latitude": "37.1742741201",
+    "longitude": "128.4591485012",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/74/3394674_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "2559537",
+    "title": "영월에코빌리지 유스호스텔",
+    "address": "강원특별자치도 영월군 영월읍 동강로 716",
+    "phone": "",
+    "latitude": "37.2279854836",
+    "longitude": "128.5055649706",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131122",
+    "title": "올림픽기념국민생활관",
+    "address": "서울특별시 종로구 성균관로 91 (혜화동)",
+    "phone": "",
+    "latitude": "19.6944274800",
+    "longitude": "117.9925662504",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/53/3501553_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131474",
+    "title": "원주시청소년수련관",
+    "address": "강원특별자치도 원주시 서원대로 234",
+    "phone": "033-742-9997",
+    "latitude": "37.3410950748",
+    "longitude": "127.9357906866",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/1813435_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3029947",
+    "title": "원주양궁장",
+    "address": "강원특별자치도 원주시 문막읍 원문로 1231",
+    "phone": "",
+    "latitude": "37.3315142081",
+    "longitude": "127.8593811948",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3029910_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3037265",
+    "title": "월평싸이클장",
+    "address": "대전광역시 서구 신갈마로 55-3 (내동)",
+    "phone": "",
+    "latitude": "36.3373917346",
+    "longitude": "127.3635036389",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/44/3037244_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131150",
+    "title": "의정부시 청소년수련관",
+    "address": "경기도 의정부시 의정로 27 (의정부동)",
+    "phone": "031-828-9501",
+    "latitude": "37.7352800768",
+    "longitude": "127.0348638535",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3566287_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131621",
+    "title": "익산시 국민생활관",
+    "address": "전북특별자치도 익산시 선화로 255",
+    "phone": "063-859-4621",
+    "latitude": "35.9455016216",
+    "longitude": "126.9583308152",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3061408_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131193",
+    "title": "익산시여성회관",
+    "address": "전북특별자치도 익산시 배산로 193-9 (모현동2가)",
+    "phone": "063-859-4986~8",
+    "latitude": "35.9550085798",
+    "longitude": "126.9414376306",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/40/3576140_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1618051",
+    "title": "인천 올림픽기념국민생활관",
+    "address": "인천광역시 남동구 구월로 251",
+    "phone": "032-468-8182~4",
+    "latitude": "37.4574289656",
+    "longitude": "126.7189116357",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/1577483_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131148",
+    "title": "인천광역시 미추홀구 청소년수련관",
+    "address": "인천광역시 미추홀구 경인로42번길 23 미추홀구청소년수련관",
+    "phone": "",
+    "latitude": "37.4632270456",
+    "longitude": "126.6483679078",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/12/3395112_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "2465032",
+    "title": "인천동구청소년수련관",
+    "address": "인천광역시 동구 솔빛로 82",
+    "phone": "",
+    "latitude": "37.4760504522",
+    "longitude": "126.6425597485",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/85/3394885_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131192",
+    "title": "전북특별자치도교육청 전주학생교육문화관",
+    "address": "전북특별자치도 전주시 덕진구 안덕원로 71 (진북동)",
+    "phone": "",
+    "latitude": "35.8287124772",
+    "longitude": "127.1379956321",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3550091_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1624838",
+    "title": "전북특별자치도교육청학생수련원",
+    "address": "전북특별자치도 남원시 운봉읍 행정공안길 302",
+    "phone": "",
+    "latitude": "35.3956074382",
+    "longitude": "127.5380020361",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/62/1604062_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "1624975",
+    "title": "전북특별자치도교육청학생해양수련원",
+    "address": "전북특별자치도 부안군 변산면 변산로 3318",
+    "phone": "063-580-1710",
+    "latitude": "35.5919811218",
+    "longitude": "126.4896927857",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/1604245_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131195",
+    "title": "전북특별자치도자연환경연수원",
+    "address": "전북특별자치도 무주군 안성면 칠연로 607",
+    "phone": "",
+    "latitude": "35.8396960688",
+    "longitude": "127.6983872270",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/10/3563210_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3057777",
+    "title": "정자유스센터",
+    "address": "경기도 성남시 분당구 성남대로407번길 12 (정자동)",
+    "phone": "",
+    "latitude": "37.3728123592",
+    "longitude": "127.1063398645",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/84/3001384_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131222",
+    "title": "제주청소년수련원",
+    "address": "제주특별자치도 제주시 한림읍 금능남로 128",
+    "phone": "064-796-0924",
+    "latitude": "33.3776143276",
+    "longitude": "126.2363341931",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3396996_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2392565",
+    "title": "제천청소년수련원",
+    "address": "충청북도 제천시 봉양읍 제원로 623",
+    "phone": "043-653-5670~3",
+    "latitude": "37.1685846514",
+    "longitude": "128.0973894873",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/32/2392532_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131624",
+    "title": "종로구민회관",
+    "address": "서울특별시 종로구 지봉로5길 7-5",
+    "phone": "",
+    "latitude": "37.5735124146",
+    "longitude": "127.0144592128",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3510022_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131693",
+    "title": "지리산청소년수련원",
+    "address": "경상남도 산청군 단성면 지리산대로2395번길 26-25",
+    "phone": "055-974-1100",
+    "latitude": "35.2718721515",
+    "longitude": "127.8970958633",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/59/1892859_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131958",
+    "title": "창동문화체육센터",
+    "address": "서울특별시 도봉구 노해로69길 132",
+    "phone": "",
+    "latitude": "37.6582337733",
+    "longitude": "127.0507507166",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/38/3531538_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131188",
+    "title": "천안시 태조산청소년수련관",
+    "address": "충청남도 천안시 동남구 태조산길 261 태조산청소년수련관",
+    "phone": "",
+    "latitude": "36.8210858969",
+    "longitude": "127.1885561346",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/30/881330_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2357470",
+    "title": "철원군 병영체험수련원",
+    "address": "강원특별자치도 철원군 갈말읍 텃골4길 3-26",
+    "phone": "",
+    "latitude": "38.1961881175",
+    "longitude": "127.3770913263",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/35/3580135_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131167",
+    "title": "철원청소년회관",
+    "address": "강원특별자치도 철원군 갈말읍 명성로139번길 52",
+    "phone": "033-450-4741",
+    "latitude": "38.1459314979",
+    "longitude": "127.3022080118",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/1846745_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131470",
+    "title": "청소년수련마을보람원",
+    "address": "충청북도 괴산군 청천면 대야로 487",
+    "phone": "",
+    "latitude": "36.6939853866",
+    "longitude": "127.8907021743",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/99/3585899_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131732",
+    "title": "청정테마힐링센터",
+    "address": "전북특별자치도 완주군 구이면 장미로 31",
+    "phone": "063-222-7754",
+    "latitude": "35.6859419409",
+    "longitude": "127.1000777228",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/70/1974470_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131190",
+    "title": "충청남도교육청안전수련원",
+    "address": "충청남도 공주시 연수원길 88-42",
+    "phone": "",
+    "latitude": "36.4907148733",
+    "longitude": "127.1517406832",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3396573_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "1973366",
+    "title": "태백국민체육센터",
+    "address": "강원특별자치도 태백시 번영로 220",
+    "phone": "033-552-4499",
+    "latitude": "37.1630160198",
+    "longitude": "128.9851545408",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/88/1947688_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2790479",
+    "title": "태백스포츠파크",
+    "address": "강원특별자치도 태백시 백두대간로 179 (황지동)",
+    "phone": "",
+    "latitude": "37.1960842937",
+    "longitude": "128.9773431298",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/2790845_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "1973361",
+    "title": "태백시청소년수련관",
+    "address": "강원특별자치도 태백시 천제단길 148",
+    "phone": "",
+    "latitude": "37.1217701097",
+    "longitude": "128.9516837702",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/34/3342434_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131824",
+    "title": "통영시청소년수련관",
+    "address": "경상남도 통영시 발개로 194 (도남동)",
+    "phone": "",
+    "latitude": "34.8253622248",
+    "longitude": "128.4264612752",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/3476390_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "2584768",
+    "title": "팀업캠퍼스",
+    "address": "경기도 광주시 곤지암읍 경충대로 729",
+    "phone": "",
+    "latitude": "37.3524797465",
+    "longitude": "127.3236790533",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/94/2584694_image2_1.bmp",
+    "category": "수련시설"
+  },
+  {
+    "id": "131640",
+    "title": "평택시 무봉산청소년수련원",
+    "address": "경기도 평택시 진위면 진위로 181-94",
+    "phone": "031-610-4416",
+    "latitude": "37.1067930078",
+    "longitude": "127.0986341254",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/3369524_image2_1.png",
+    "category": "수련시설"
+  },
+  {
+    "id": "131452",
+    "title": "함지골청소년수련관",
+    "address": "부산광역시 영도구 절영로 321",
+    "phone": "051-405-5223",
+    "latitude": "35.0744874138",
+    "longitude": "129.0541777748",
+    "image": "",
+    "category": "수련시설"
+  },
+  {
+    "id": "131909",
+    "title": "해양관광레저스포츠센터",
+    "address": "강원특별자치도 삼척시 근덕면 덕산해변길 104",
+    "phone": "033-576-0611~3",
+    "latitude": "37.3860370272",
+    "longitude": "129.2407360256",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3394046_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131476",
+    "title": "해운청소년수련원",
+    "address": "경상남도 양산시 하북면 삼수온천길 27",
+    "phone": "",
+    "latitude": "35.4628720450",
+    "longitude": "129.0762984906",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/08/3077008_image2_1.JPG",
+    "category": "수련시설"
+  },
+  {
+    "id": "131413",
+    "title": "화랑교육원",
+    "address": "경상북도 경주시 새남산길 62",
+    "phone": "",
+    "latitude": "35.8053198838",
+    "longitude": "129.2402134126",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/64/3034364_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131218",
+    "title": "황석산청소년수련원",
+    "address": "경상남도 함양군 서하면 육십령로 2991",
+    "phone": "",
+    "latitude": "35.6259216351",
+    "longitude": "127.7731196529",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3538254_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "131326",
+    "title": "KBS스포츠월드",
+    "address": "서울특별시 강서구 공항대로 376",
+    "phone": "02-2600-8808",
+    "latitude": "37.5569085725",
+    "longitude": "126.8472165959",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/76/1805776_image2_1.jpg",
+    "category": "수련시설"
+  },
+  {
+    "id": "3090506",
+    "title": "대구교육팔공산수련원",
+    "address": "대구광역시 동구 용천로 538 (신무동)",
+    "phone": "",
+    "latitude": "35.9943793908",
+    "longitude": "128.6642920170",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3090496_image2_1.JPG",
+    "category": "수련시설",
+    "original_category": "썰매장"
+  },
+  {
+    "id": "2751856",
+    "title": "용인시청소년수련원 사계절썰매장",
+    "address": "경기도 용인시 처인구 양지면 죽양대로2071번길 50",
+    "phone": "",
+    "latitude": "37.2147205042",
+    "longitude": "127.3136283104",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/91/3501591_image2_1.jpg",
+    "category": "수련시설",
+    "original_category": "썰매장"
+  },
+  {
+    "id": "2792241",
+    "title": "성북구 삼척수련원",
+    "address": "강원특별자치도 삼척시 근덕면 상맹방길 398-4",
+    "phone": "",
+    "latitude": "37.4077893687",
+    "longitude": "129.2043997160",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/2793209_image2_1.jpg",
+    "category": "수련시설",
+    "original_category": "야영장오토캠핑장"
+  },
+  {
+    "id": "2792372",
+    "title": "한성연수원 야영장",
+    "address": "경상북도 문경시 마성면 하내2길 55",
+    "phone": "",
+    "latitude": "36.6648560883",
+    "longitude": "128.0801499458",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/36/2792736_image2_1.jpg",
+    "category": "수련시설",
+    "original_category": "야영장오토캠핑장"
+  }
+]

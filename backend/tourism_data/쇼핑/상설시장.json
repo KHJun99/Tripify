@@ -1,0 +1,32 @@
+[
+  {
+    "id": "3344379",
+    "title": "더현대 대구",
+    "address": "대구광역시 중구 달구벌대로 2077 (계산동2가)",
+    "phone": "",
+    "latitude": "35.8666702733",
+    "longitude": "128.5906548560",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/54/3349454_image2_1.jpg",
+    "category": "상설시장"
+  },
+  {
+    "id": "2708109",
+    "title": "더현대 서울",
+    "address": "서울특별시 영등포구 여의대로 108 (여의도동)",
+    "phone": "",
+    "latitude": "37.5271495732",
+    "longitude": "126.9273156868",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/37/2933437_image2_1.bmp",
+    "category": "상설시장"
+  },
+  {
+    "id": "3452369",
+    "title": "AK플라자 광명점",
+    "address": "경기도 광명시 양지로 17 (일직동)",
+    "phone": "",
+    "latitude": "37.4187335920",
+    "longitude": "126.8829033333",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/33/3451633_image2_1.jpg",
+    "category": "상설시장"
+  }
+]

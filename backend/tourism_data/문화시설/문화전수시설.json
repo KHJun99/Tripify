@@ -1,0 +1,453 @@
+[
+  {
+    "id": "3032920",
+    "title": "탈놀이전수관",
+    "address": "경상북도 안동시 풍천면 하회종가길 3-15",
+    "phone": "",
+    "latitude": "36.5410923672",
+    "longitude": "128.5243083364",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/05/3032905_image2_1.JPG",
+    "category": "문화전수시설",
+    "original_category": "공연장"
+  },
+  {
+    "id": "1722228",
+    "title": "강릉단오제전수교육관",
+    "address": "강원특별자치도 강릉시 단오장길 1",
+    "phone": "",
+    "latitude": "37.7481857234",
+    "longitude": "128.8950253200",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/67/3047867_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1621168",
+    "title": "고싸움놀이전수교육관",
+    "address": "광주광역시 남구 고싸움로 2",
+    "phone": "",
+    "latitude": "35.0697294541",
+    "longitude": "126.8375388610",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/3367587_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3029313",
+    "title": "광산문화예술회관",
+    "address": "광주광역시 광산구 광산로68번길 13 (송정동)",
+    "phone": "",
+    "latitude": "35.1405513707",
+    "longitude": "126.7992682593",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/03/3029303_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130200",
+    "title": "구덕민속예술관",
+    "address": "부산광역시 서구 대신공원로 34-91 (서대신동3가)",
+    "phone": "",
+    "latitude": "35.1239756631",
+    "longitude": "129.0185100829",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/42/2649742_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130559",
+    "title": "구례향제줄풍류전수관",
+    "address": "전라남도 구례군 구례읍 봉성산길 16",
+    "phone": "",
+    "latitude": "35.2084078164",
+    "longitude": "127.4627690718",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/61/1971061_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3030079",
+    "title": "구룡포생활문화센터(아라예술촌)",
+    "address": "경상북도 포항시 남구 구룡포읍 용주로7번길 30",
+    "phone": "",
+    "latitude": "35.9918216106",
+    "longitude": "129.5612410449",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130198",
+    "title": "국가무형유산전수교육관",
+    "address": "서울특별시 강남구 봉은사로 406",
+    "phone": "",
+    "latitude": "37.5102008674",
+    "longitude": "127.0446443698",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/60/3548960_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "596511",
+    "title": "국기원(세계태권도본부)",
+    "address": "서울특별시 강남구 테헤란로7길 32 (역삼동)",
+    "phone": "",
+    "latitude": "37.5027681388",
+    "longitude": "127.0302403356",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3567696_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130124",
+    "title": "국립국악원",
+    "address": "서울특별시 서초구 남부순환로 2364",
+    "phone": "",
+    "latitude": "37.4778373158",
+    "longitude": "127.0088596528",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3540546_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130861",
+    "title": "국립남도국악원",
+    "address": "전라남도 진도군 진도대로 3818 국립남도국악원",
+    "phone": "",
+    "latitude": "34.3847797583",
+    "longitude": "126.2255871331",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/83/3561383_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "129721",
+    "title": "국립민속국악원",
+    "address": "전북특별자치도 남원시 양림길 54",
+    "phone": "",
+    "latitude": "35.4015986550",
+    "longitude": "127.3915259291",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/22/3358422_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1395604",
+    "title": "국립부산국악원",
+    "address": "부산광역시 부산진구 국악로 2",
+    "phone": "",
+    "latitude": "35.1714404510",
+    "longitude": "129.0542528980",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2737317",
+    "title": "국립청소년농생명센터",
+    "address": "전북특별자치도 김제시 부량면 벽골제로 421",
+    "phone": "",
+    "latitude": "35.7535771949",
+    "longitude": "126.8510731334",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/90/2737490_image2_1.png",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "129705",
+    "title": "기지시 줄다리기 보존회",
+    "address": "충청남도 당진시 송악읍 안틀모시길 11",
+    "phone": "",
+    "latitude": "36.8962157548",
+    "longitude": "126.6947486805",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/02/3357402_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2733533",
+    "title": "대전무형유산전수교육관",
+    "address": "대전광역시 대덕구 동춘당로94번길 50",
+    "phone": "",
+    "latitude": "36.3664675758",
+    "longitude": "127.4417014113",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3565095_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3416331",
+    "title": "도모헌",
+    "address": "부산광역시 수영구 황령산로7번길 60 (남천동)",
+    "phone": "",
+    "latitude": "35.1462164864",
+    "longitude": "129.1077767106",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/19/3416319_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2999840",
+    "title": "동구인문학당",
+    "address": "광주광역시 동구 동계천로 168-5",
+    "phone": "",
+    "latitude": "35.1488275990",
+    "longitude": "126.9275344882",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/2999817_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130558",
+    "title": "동편제 판소리전수관",
+    "address": "전라남도 구례군 구례읍 동편제길 53",
+    "phone": "",
+    "latitude": "35.2158568958",
+    "longitude": "127.4581248447",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3082948",
+    "title": "땅끝순례문학관",
+    "address": "전라남도 해남군 해남읍 녹우당길 123",
+    "phone": "",
+    "latitude": "34.5501565188",
+    "longitude": "126.6201762760",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/23/3082923_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "553448",
+    "title": "목포 국가무형문화재전수교육관",
+    "address": "전라남도 목포시 남농로 83",
+    "phone": "",
+    "latitude": "34.7927259017",
+    "longitude": "126.4159606625",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1626463",
+    "title": "박동진 판소리전수관",
+    "address": "충청남도 공주시 무릉중말길 22-14",
+    "phone": "",
+    "latitude": "36.4581967182",
+    "longitude": "127.1709398394",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/73/3355673_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3442561",
+    "title": "빛고을국악전수관",
+    "address": "광주광역시 서구 풍금로 182 (금호동)",
+    "phone": "",
+    "latitude": "35.1319894683",
+    "longitude": "126.8598131185",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/50/3442550_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2554122",
+    "title": "산청 목조각장전수관",
+    "address": "경상남도 산청군 생초면 산수로 1064",
+    "phone": "",
+    "latitude": "35.4923599972",
+    "longitude": "127.8313513907",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1055166",
+    "title": "서천 무형유산복합전수관",
+    "address": "충청남도 서천군 한산면 충절로 1120",
+    "phone": "",
+    "latitude": "36.0803613212",
+    "longitude": "126.8024828899",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/2032745_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2569468",
+    "title": "양구돌산령지게놀이 전수관",
+    "address": "강원특별자치도 양구군 바랑길158번길 5 양구팔랑마을민속관",
+    "phone": "",
+    "latitude": "38.2093883976",
+    "longitude": "128.0658057367",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/21/3515421_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "596259",
+    "title": "예지원",
+    "address": "서울특별시 성북구 길음로13길 39 (길음동, 길음뉴타운)",
+    "phone": "",
+    "latitude": "37.6089278094",
+    "longitude": "127.0181662030",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/04/696904_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130116",
+    "title": "우도농악전수관",
+    "address": "전라남도 영광군 영광읍 물무로1길 11",
+    "phone": "",
+    "latitude": "35.2785947225",
+    "longitude": "126.5050742370",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130202",
+    "title": "은율탈춤전수관",
+    "address": "인천광역시 미추홀구 수봉안길 78",
+    "phone": "",
+    "latitude": "37.4615191552",
+    "longitude": "126.6622472444",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/98/3530698_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130238",
+    "title": "익산국악원",
+    "address": "전북특별자치도 익산시 평동로9길 66-3 (갈산동)",
+    "phone": "",
+    "latitude": "35.9375163034",
+    "longitude": "126.9514983000",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/96/3371696_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130055",
+    "title": "전북특별자치도립국악원",
+    "address": "전북특별자치도 전주시 덕진구 권삼득로 400",
+    "phone": "",
+    "latitude": "35.8488820858",
+    "longitude": "127.1195939648",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/17/3577117_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130757",
+    "title": "정선아리랑 전수관",
+    "address": "강원특별자치도 정선군 여량면 아우라지길 69",
+    "phone": "",
+    "latitude": "37.4756000133",
+    "longitude": "128.7242156942",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/24/2731324_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130043",
+    "title": "정읍사국악원",
+    "address": "전북특별자치도 정읍시 시기4길 23 (시기동)",
+    "phone": "",
+    "latitude": "35.5534584435",
+    "longitude": "126.8611662513",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/87/1606487_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2615388",
+    "title": "주철장 전수교육관",
+    "address": "충청북도 진천군 진천읍 백곡로 1504-12",
+    "phone": "",
+    "latitude": "36.8691816260",
+    "longitude": "127.4145011200",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/95/3341195_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1623923",
+    "title": "진도군무형유산전수관",
+    "address": "전라남도 진도군 진도읍 동외1길 6-9",
+    "phone": "",
+    "latitude": "34.4808613695",
+    "longitude": "126.2703476024",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/18/2516718_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2795796",
+    "title": "진주목공예전수관",
+    "address": "경상남도 진주시 명석면 광제산로 367",
+    "phone": "",
+    "latitude": "35.2470636202",
+    "longitude": "128.0418115809",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/72/2796572_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3035793",
+    "title": "청년스테이션",
+    "address": "경기도 시흥시 정왕대로233번길 19-1 (정왕동)",
+    "phone": "",
+    "latitude": "37.3467421668",
+    "longitude": "126.7387351272",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/51/3002551_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1927032",
+    "title": "청송백자전수관",
+    "address": "경상북도 청송군 주왕산면 청송백자로 32-16",
+    "phone": "",
+    "latitude": "36.3779330826",
+    "longitude": "129.1082390903",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/46/3407546_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1690303",
+    "title": "충주시택견원",
+    "address": "충청북도 충주시 중원대로 3326 (호암동)",
+    "phone": "",
+    "latitude": "36.9650604523",
+    "longitude": "127.9255607981",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/39/3560439_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1904335",
+    "title": "태권도원",
+    "address": "전북특별자치도 무주군 설천면 무설로 1482",
+    "phone": "",
+    "latitude": "36.0093532183",
+    "longitude": "127.7786783080",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "2878135",
+    "title": "포천 무형유산 전수교육관",
+    "address": "경기도 포천시 정금로 267-1",
+    "phone": "",
+    "latitude": "37.8164595456",
+    "longitude": "127.1898918072",
+    "image": "",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "130037",
+    "title": "필봉농악전수관",
+    "address": "전북특별자치도 임실군 강진면 강운로 272",
+    "phone": "",
+    "latitude": "35.5363792923",
+    "longitude": "127.1542878904",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/45/219745_image2_1.jpg",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "1623998",
+    "title": "한천농악전수회관",
+    "address": "전라남도 화순군 동복면 김삿갓로 720",
+    "phone": "",
+    "latitude": "35.0595799899",
+    "longitude": "127.1299799697",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/09/3347009_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "3014434",
+    "title": "호천문화플랫폼",
+    "address": "부산광역시 부산진구 엄광로 491 (범천동)",
+    "phone": "",
+    "latitude": "35.1442517735",
+    "longitude": "129.0512372374",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3014292_image2_1.JPG",
+    "category": "문화전수시설"
+  },
+  {
+    "id": "129704",
+    "title": "(사) 국가무형유산 고성오광대보존회",
+    "address": "경상남도 고성군 고성읍 남해안대로 2571",
+    "phone": "",
+    "latitude": "34.9736412020",
+    "longitude": "128.3341209812",
+    "image": "http://tong.visitkorea.or.kr/cms/resource/92/3424592_image2_1.JPG",
+    "category": "문화전수시설"
+  }
+]
