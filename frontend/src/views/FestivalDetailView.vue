@@ -119,6 +119,7 @@ const routeDistance = ref('')
 const startMarker = ref(null)
 const endMarker = ref(null)
 const polyline = ref(null)
+const kakaoSdkLoaded = ref(false)
 
 const formatPeriod = () => {
   if (!festival.value) return ''
@@ -143,32 +144,74 @@ const formatDate = (dateStr) => {
   return `${year}.${month}.${day}`
 }
 
+// 카카오맵 SDK 동적 로드
+const loadKakaoMapSDK = () => {
+  return new Promise((resolve, reject) => {
+    // 이미 로드되었는지 확인
+    if (window.kakao && window.kakao.maps) {
+      console.log('✓ 카카오맵 SDK 이미 로드됨')
+      kakaoSdkLoaded.value = true
+      resolve()
+      return
+    }
+
+    // 환경변수에서 API 키 가져오기
+    const apiKey = import.meta.env.VITE_KAKAO_MAP_KEY
+
+    if (!apiKey || apiKey === 'your_kakao_javascript_key_here') {
+      console.error('✗ 카카오맵 API 키가 설정되지 않았습니다.')
+      reject(new Error('카카오맵 API 키를 .env 파일에 설정해주세요.\nVITE_KAKAO_MAP_KEY=your_actual_key'))
+      return
+    }
+
+    console.log('카카오맵 SDK 로딩 시작...')
+
+    // 스크립트 동적 로드
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}&libraries=services,clusterer,drawing&autoload=false`
+
+    script.onload = () => {
+      console.log('카카오맵 SDK 스크립트 로드 완료, 초기화 중...')
+
+      // SDK 초기화 대기
+      if (window.kakao && window.kakao.maps) {
+        window.kakao.maps.load(() => {
+          console.log('✓ 카카오맵 SDK 초기화 완료!')
+          kakaoSdkLoaded.value = true
+          resolve()
+        })
+      } else {
+        reject(new Error('카카오맵 SDK 로드 실패'))
+      }
+    }
+
+    script.onerror = () => {
+      console.error('✗ 카카오맵 SDK 스크립트 로드 실패')
+      reject(new Error('카카오맵 SDK 스크립트를 불러올 수 없습니다. API 키를 확인해주세요.'))
+    }
+
+    document.head.appendChild(script)
+  })
+}
+
 const fetchFestivalDetail = async () => {
   try {
     loading.value = true
     const festivalId = route.params.id
     festival.value = await getFestivalDetail(festivalId)
 
-    // 축제 정보 로드 후 지도 초기화 (카카오맵 SDK 로드 대기)
+    // 축제 정보 로드 후 지도 초기화
     await nextTick()
     if (festival.value && festival.value.latitude && festival.value.longitude) {
-      // 카카오맵 SDK가 로드될 때까지 대기
-      if (window.kakao && window.kakao.maps) {
+      try {
+        // 카카오맵 SDK 동적 로드
+        await loadKakaoMapSDK()
+        // SDK 로드 완료 후 지도 초기화
         initKakaoMap()
-      } else {
-        // SDK가 아직 로드되지 않았으면 최대 3초 대기
-        let attempts = 0
-        const checkKakao = setInterval(() => {
-          attempts++
-          if (window.kakao && window.kakao.maps) {
-            clearInterval(checkKakao)
-            initKakaoMap()
-          } else if (attempts > 30) {
-            clearInterval(checkKakao)
-            console.error('카카오맵 SDK 로드 타임아웃')
-            alert('카카오맵을 로드하는데 실패했습니다. 페이지를 새로고침해주세요.')
-          }
-        }, 100)
+      } catch (error) {
+        console.error('카카오맵 초기화 실패:', error)
+        alert(`카카오맵을 로드하는데 실패했습니다.\n\n${error.message}\n\n다음을 확인하세요:\n1. frontend/.env 파일에 VITE_KAKAO_MAP_KEY 설정\n2. 카카오 개발자 콘솔에서 http://localhost:5173 도메인 등록\n3. 프론트엔드 서버 재시작`)
       }
     }
   } catch (error) {
@@ -180,22 +223,21 @@ const fetchFestivalDetail = async () => {
 
 // 카카오맵 초기화
 const initKakaoMap = () => {
-  console.log('initKakaoMap 호출됨')
-  console.log('festival 좌표:', festival.value?.latitude, festival.value?.longitude)
+  console.log('🗺️ initKakaoMap 호출됨')
+  console.log('📍 festival 좌표:', festival.value?.latitude, festival.value?.longitude)
 
-  if (!window.kakao || !window.kakao.maps) {
-    console.error('카카오맵 SDK가 로드되지 않았습니다.')
-    alert('카카오맵을 로드할 수 없습니다. index.html에서 YOUR_KAKAO_JAVASCRIPT_KEY를 실제 카카오 JavaScript 키로 교체해주세요.')
+  if (!kakaoSdkLoaded.value || !window.kakao || !window.kakao.maps) {
+    console.error('✗ 카카오맵 SDK가 로드되지 않았습니다.')
     return
   }
 
   const container = document.getElementById('kakao-map')
   if (!container) {
-    console.error('kakao-map 요소를 찾을 수 없습니다.')
+    console.error('✗ kakao-map 요소를 찾을 수 없습니다.')
     return
   }
 
-  console.log('지도 컨테이너 발견:', container)
+  console.log('✓ 지도 컨테이너 발견')
 
   try {
     const options = {
@@ -205,7 +247,7 @@ const initKakaoMap = () => {
 
     console.log('지도 생성 중...')
     map.value = new window.kakao.maps.Map(container, options)
-    console.log('지도 생성 완료!')
+    console.log('✓ 지도 생성 완료!')
 
     // 목적지 마커 생성 (빨간색)
     const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
@@ -225,9 +267,9 @@ const initKakaoMap = () => {
     })
     infowindow.open(map.value, endMarker.value)
 
-    console.log('마커 및 인포윈도우 생성 완료!')
+    console.log('✓ 마커 및 인포윈도우 생성 완료!')
   } catch (error) {
-    console.error('지도 생성 중 오류:', error)
+    console.error('✗ 지도 생성 중 오류:', error)
     alert('지도를 표시하는 중 오류가 발생했습니다: ' + error.message)
   }
 }
