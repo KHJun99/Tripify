@@ -149,10 +149,27 @@ const fetchFestivalDetail = async () => {
     const festivalId = route.params.id
     festival.value = await getFestivalDetail(festivalId)
 
-    // 축제 정보 로드 후 지도 초기화
+    // 축제 정보 로드 후 지도 초기화 (카카오맵 SDK 로드 대기)
     await nextTick()
     if (festival.value && festival.value.latitude && festival.value.longitude) {
-      initKakaoMap()
+      // 카카오맵 SDK가 로드될 때까지 대기
+      if (window.kakao && window.kakao.maps) {
+        initKakaoMap()
+      } else {
+        // SDK가 아직 로드되지 않았으면 최대 3초 대기
+        let attempts = 0
+        const checkKakao = setInterval(() => {
+          attempts++
+          if (window.kakao && window.kakao.maps) {
+            clearInterval(checkKakao)
+            initKakaoMap()
+          } else if (attempts > 30) {
+            clearInterval(checkKakao)
+            console.error('카카오맵 SDK 로드 타임아웃')
+            alert('카카오맵을 로드하는데 실패했습니다. 페이지를 새로고침해주세요.')
+          }
+        }, 100)
+      }
     }
   } catch (error) {
     console.error('축제 상세 정보를 불러오는 데 실패했습니다:', error)
