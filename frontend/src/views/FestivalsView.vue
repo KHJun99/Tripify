@@ -136,11 +136,8 @@ const filteredFestivals = computed(() => {
 const fetchFestivals = async () => {
   try {
     loading.value = true
-    const params = {}
-    if (selectedMonth.value) params.start_month = selectedMonth.value
-    if (selectedRegion.value) params.region = selectedRegion.value
-
-    const data = await getFestivals(params)
+    // 서버에서 모든 데이터를 가져옴 (필터링은 클라이언트에서 수행)
+    const data = await getFestivals()
     festivals.value = data
   } catch (error) {
     console.error('축제 목록을 불러오는 데 실패했습니다:', error)
@@ -150,13 +147,12 @@ const fetchFestivals = async () => {
 }
 
 const applyFilters = () => {
-  fetchFestivals()
+  // 클라이언트 측 필터링만 사용 (computed에서 자동 처리)
 }
 
 const resetFilters = () => {
   selectedMonth.value = ''
   selectedRegion.value = ''
-  fetchFestivals()
 }
 
 const goToDetail = (festivalId) => {
