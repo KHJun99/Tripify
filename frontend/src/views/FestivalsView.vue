@@ -274,6 +274,16 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  /* 이미지 렌더링 품질 향상 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  /* 이미지 스무딩 개선 */
+  -ms-interpolation-mode: bicubic;
 }
 
 .festival-badge {
