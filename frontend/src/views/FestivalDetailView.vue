@@ -163,42 +163,56 @@ const fetchFestivalDetail = async () => {
 
 // 카카오맵 초기화
 const initKakaoMap = () => {
+  console.log('initKakaoMap 호출됨')
+  console.log('festival 좌표:', festival.value?.latitude, festival.value?.longitude)
+
   if (!window.kakao || !window.kakao.maps) {
     console.error('카카오맵 SDK가 로드되지 않았습니다.')
     alert('카카오맵을 로드할 수 없습니다. index.html에서 YOUR_KAKAO_JAVASCRIPT_KEY를 실제 카카오 JavaScript 키로 교체해주세요.')
     return
   }
 
-  // 카카오맵 SDK 로드 대기
-  window.kakao.maps.load(() => {
-    const container = document.getElementById('kakao-map')
-    if (!container) return
+  const container = document.getElementById('kakao-map')
+  if (!container) {
+    console.error('kakao-map 요소를 찾을 수 없습니다.')
+    return
+  }
 
+  console.log('지도 컨테이너 발견:', container)
+
+  try {
     const options = {
       center: new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude),
       level: 5
     }
 
+    console.log('지도 생성 중...')
     map.value = new window.kakao.maps.Map(container, options)
+    console.log('지도 생성 완료!')
 
-  // 목적지 마커 생성 (빨간색)
-  const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
-  const imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
-  const imageSize = new window.kakao.maps.Size(40, 42)
-  const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize)
+    // 목적지 마커 생성 (빨간색)
+    const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
+    const imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
+    const imageSize = new window.kakao.maps.Size(40, 42)
+    const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize)
 
-  endMarker.value = new window.kakao.maps.Marker({
-    position: markerPosition,
-    image: markerImage
-  })
-  endMarker.value.setMap(map.value)
+    endMarker.value = new window.kakao.maps.Marker({
+      position: markerPosition,
+      image: markerImage
+    })
+    endMarker.value.setMap(map.value)
 
     // 인포윈도우 생성
     const infowindow = new window.kakao.maps.InfoWindow({
       content: `<div style="padding:10px;font-size:14px;font-weight:bold;">🎉 ${festival.value.title}</div>`
     })
     infowindow.open(map.value, endMarker.value)
-  })
+
+    console.log('마커 및 인포윈도우 생성 완료!')
+  } catch (error) {
+    console.error('지도 생성 중 오류:', error)
+    alert('지도를 표시하는 중 오류가 발생했습니다: ' + error.message)
+  }
 }
 
 // 현재 위치 가져오기
