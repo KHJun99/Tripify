@@ -54,28 +54,11 @@
             <p><strong>좌표:</strong> {{ festival.latitude }}, {{ festival.longitude }}</p>
           </div>
 
-          <!-- 출발지 입력 및 경로 표시 컨트롤 -->
-          <div class="route-controls">
-            <button @click="getCurrentLocation" class="location-btn" :disabled="loadingLocation">
-              <span class="btn-icon">📍</span>
-              {{ loadingLocation ? '위치 확인 중...' : '현재 위치에서 출발' }}
-            </button>
-            <div v-if="userLocation" class="route-info">
-              <p>📍 출발지: {{ userLocation.address || '현재 위치' }}</p>
-              <p v-if="routeDistance">🚗 거리: {{ routeDistance }}</p>
-              <p v-if="routeDuration">⏱️ 소요 시간: {{ routeDuration }}</p>
-            </div>
-          </div>
-
           <!-- 카카오맵 표시 -->
           <div id="kakao-map" class="kakao-map"></div>
 
           <!-- 길찾기 버튼 -->
           <div class="map-buttons">
-            <button @click="showRouteOnMap" class="map-button route-btn" :disabled="!userLocation">
-              <span class="btn-icon">🗺️</span>
-              {{ userLocation ? '지도에서 경로 보기' : '먼저 출발지를 설정하세요' }}
-            </button>
             <button @click="openKakaoNavi" class="map-button navi-btn">
               <span class="btn-icon">🧭</span>
               카카오내비로 길찾기
@@ -113,14 +96,8 @@ const router = useRouter()
 
 const festival = ref(null)
 const loading = ref(false)
-const loadingLocation = ref(false)
 const map = ref(null)
-const userLocation = ref(null)
-const routeDistance = ref('')
-const routeDuration = ref('')
-const startMarker = ref(null)
 const endMarker = ref(null)
-const polyline = ref(null)
 const kakaoSdkLoaded = ref(false)
 
 const formatPeriod = () => {
@@ -276,231 +253,6 @@ const initKakaoMap = () => {
   }
 }
 
-// 현재 위치 가져오기
-const getCurrentLocation = () => {
-  if (!navigator.geolocation) {
-    alert('현재 브라우저에서는 위치 서비스를 지원하지 않습니다.')
-    return
-  }
-
-  loadingLocation.value = true
-
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      const lat = position.coords.latitude
-      const lng = position.coords.longitude
-
-      userLocation.value = {
-        lat,
-        lng,
-        address: '현재 위치'
-      }
-
-      // 출발지 마커 추가
-      if (startMarker.value) {
-        startMarker.value.setMap(null)
-      }
-
-      const markerPosition = new window.kakao.maps.LatLng(lat, lng)
-      const imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_blue.png'
-      const imageSize = new window.kakao.maps.Size(40, 42)
-      const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize)
-
-      startMarker.value = new window.kakao.maps.Marker({
-        position: markerPosition,
-        image: markerImage
-      })
-      startMarker.value.setMap(map.value)
-
-      // 출발지 인포윈도우
-      const startInfo = new window.kakao.maps.InfoWindow({
-        content: `<div style="padding:10px;font-size:14px;font-weight:bold;">📍 출발지</div>`
-      })
-      startInfo.open(map.value, startMarker.value)
-
-      // 지도 범위 재설정 (출발지와 도착지 모두 보이도록)
-      const bounds = new window.kakao.maps.LatLngBounds()
-      bounds.extend(markerPosition)
-      bounds.extend(new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude))
-      map.value.setBounds(bounds)
-
-      loadingLocation.value = false
-
-      // 자동으로 실제 경로 표시
-      showRouteOnMap()
-    },
-    (error) => {
-      console.error('위치 정보를 가져올 수 없습니다:', error)
-      alert('위치 정보를 가져올 수 없습니다. 위치 권한을 허용해주세요.')
-      loadingLocation.value = false
-    }
-  )
-}
-
-// 카카오 길찾기 API로 실제 경로 가져오기
-const getActualRoute = async () => {
-  if (!userLocation.value || !festival.value) return null
-
-  try {
-    const apiKey = import.meta.env.VITE_KAKAO_REST_API_KEY
-
-    if (!apiKey || apiKey === 'your_kakao_rest_api_key_here') {
-      console.warn('⚠ 카카오 REST API 키가 설정되지 않아 직선 경로로 표시합니다.')
-      return null
-    }
-
-    // 카카오 길찾기 API 호출
-    const origin = `${userLocation.value.lng},${userLocation.value.lat}` // 경도,위도 순서
-    const destination = `${festival.value.longitude},${festival.value.latitude}`
-
-    console.log('🔍 실제 경로 조회 중...')
-
-    const response = await fetch(
-      `https://apis-navi.kakaomobility.com/v1/directions?origin=${origin}&destination=${destination}&priority=RECOMMEND`,
-      {
-        headers: {
-          Authorization: `KakaoAK ${apiKey}`,
-          'Content-Type': 'application/json'
-        }
-      }
-    )
-
-    if (!response.ok) {
-      console.warn('⚠ 길찾기 API 호출 실패, 직선 경로로 표시합니다.')
-      return null
-    }
-
-    const data = await response.json()
-
-    if (data.routes && data.routes.length > 0) {
-      const route = data.routes[0]
-      const sections = route.sections
-
-      // 경로 좌표 추출
-      const pathCoords = []
-      sections.forEach(section => {
-        section.roads.forEach(road => {
-          road.vertexes.forEach((vertex, index) => {
-            // vertexes는 [lng, lat, lng, lat, ...] 형태
-            if (index % 2 === 0) {
-              const lng = vertex
-              const lat = road.vertexes[index + 1]
-              pathCoords.push(new window.kakao.maps.LatLng(lat, lng))
-            }
-          })
-        })
-      })
-
-      // 거리와 소요 시간
-      const totalDistance = route.summary.distance // 미터
-      const totalDuration = route.summary.duration // 초
-
-      console.log(`✓ 실제 경로 로드 완료 (${pathCoords.length}개 좌표)`)
-
-      return {
-        path: pathCoords,
-        distance: totalDistance,
-        duration: totalDuration
-      }
-    }
-
-    return null
-  } catch (error) {
-    console.error('경로 조회 중 오류:', error)
-    return null
-  }
-}
-
-// 지도에 경로 표시
-const showRouteOnMap = async () => {
-  if (!userLocation.value || !festival.value) {
-    alert('먼저 출발지를 설정해주세요.')
-    return
-  }
-
-  // 기존 polyline 제거
-  if (polyline.value) {
-    polyline.value.setMap(null)
-  }
-
-  // 실제 경로 가져오기
-  const routeData = await getActualRoute()
-
-  let linePath
-
-  if (routeData && routeData.path.length > 0) {
-    // 실제 도로 경로 사용
-    linePath = routeData.path
-
-    // 거리 표시
-    const distanceKm = routeData.distance / 1000
-    if (distanceKm >= 1) {
-      routeDistance.value = `${distanceKm.toFixed(1)}km`
-    } else {
-      routeDistance.value = `${routeData.distance}m`
-    }
-
-    // 소요 시간 표시
-    const durationMin = Math.ceil(routeData.duration / 60)
-    const hours = Math.floor(durationMin / 60)
-    const minutes = durationMin % 60
-
-    if (hours > 0) {
-      routeDuration.value = `약 ${hours}시간 ${minutes}분`
-    } else {
-      routeDuration.value = `약 ${minutes}분`
-    }
-
-    console.log(`✓ 실제 도로 경로로 표시: ${routeDistance.value}, ${routeDuration.value}`)
-  } else {
-    // 실패 시 직선 경로로 폴백
-    const startPos = new window.kakao.maps.LatLng(userLocation.value.lat, userLocation.value.lng)
-    const endPos = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
-    linePath = [startPos, endPos]
-
-    // 직선 거리 계산 (Haversine formula)
-    const R = 6371
-    const lat1 = userLocation.value.lat
-    const lon1 = userLocation.value.lng
-    const lat2 = festival.value.latitude
-    const lon2 = festival.value.longitude
-
-    const dLat = (lat2 - lat1) * Math.PI / 180
-    const dLon = (lon2 - lon1) * Math.PI / 180
-    const a =
-      Math.sin(dLat/2) * Math.sin(dLat/2) +
-      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-      Math.sin(dLon/2) * Math.sin(dLon/2)
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
-    const distance = R * c * 1000
-
-    if (distance >= 1000) {
-      routeDistance.value = `약 ${(distance / 1000).toFixed(1)}km (직선거리)`
-    } else {
-      routeDistance.value = `약 ${Math.round(distance)}m (직선거리)`
-    }
-
-    routeDuration.value = ''
-    console.log('⚠ 직선 경로로 표시')
-  }
-
-  // 경로 선 그리기
-  polyline.value = new window.kakao.maps.Polyline({
-    path: linePath,
-    strokeWeight: 5,
-    strokeColor: '#3498db',
-    strokeOpacity: 0.7,
-    strokeStyle: 'solid'
-  })
-
-  polyline.value.setMap(map.value)
-
-  // 지도 범위 재설정
-  const bounds = new window.kakao.maps.LatLngBounds()
-  linePath.forEach(coord => bounds.extend(coord))
-  map.value.setBounds(bounds)
-}
-
 // 카카오내비 앱으로 길찾기
 const openKakaoNavi = () => {
   if (!festival.value) return
@@ -509,29 +261,8 @@ const openKakaoNavi = () => {
   const lng = festival.value.longitude
   const name = encodeURIComponent(festival.value.title)
 
-  // 카카오내비 딥링크
-  let naviUrl = `kakaomap://route?ep=${lat},${lng}&by=CAR`
-
-  // 출발지가 설정되어 있으면 출발지도 포함
-  if (userLocation.value) {
-    naviUrl = `kakaomap://route?sp=${userLocation.value.lat},${userLocation.value.lng}&ep=${lat},${lng}&by=CAR`
-  }
-
-  // 모바일이면 앱으로, 아니면 카카오맵 웹으로
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-
-  if (isMobile) {
-    // 앱 실행 시도
-    window.location.href = naviUrl
-
-    // 앱이 없으면 2초 후 카카오맵 웹으로 이동
-    setTimeout(() => {
-      window.open(`https://map.kakao.com/link/to/${name},${lat},${lng}`, '_blank')
-    }, 2000)
-  } else {
-    // 데스크톱은 카카오맵 웹 길찾기로
-    window.open(`https://map.kakao.com/link/to/${name},${lat},${lng}`, '_blank')
-  }
+  // 카카오맵 웹 길찾기 URL
+  window.open(`https://map.kakao.com/link/to/${name},${lat},${lng}`, '_blank')
 }
 
 // 주소 복사
@@ -667,60 +398,6 @@ onMounted(() => {
   color: #555;
 }
 
-/* 경로 컨트롤 */
-.route-controls {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 10px;
-}
-
-.location-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 100%;
-}
-
-.location-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #229954 0%, #1e8449 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
-}
-
-.location-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.route-info {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  border-left: 4px solid #3498db;
-}
-
-.route-info p {
-  margin-bottom: 0.5rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.route-info p:last-child {
-  margin-bottom: 0;
-}
-
 /* 카카오맵 스타일 */
 .kakao-map {
   width: 100%;
@@ -753,24 +430,8 @@ onMounted(() => {
   transition: all 0.3s;
 }
 
-.map-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .map-button .btn-icon {
   font-size: 1.3rem;
-}
-
-.route-btn {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-  color: white;
-}
-
-.route-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
 }
 
 .navi-btn {
