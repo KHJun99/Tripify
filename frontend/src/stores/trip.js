@@ -25,6 +25,14 @@ export const useTripStore = defineStore('trip', () => {
     loading.value = true
     try {
       const response = await tripAPI.getPlan(id)
+      console.log('=== fetchPlan API Response ===')
+      console.log('Plan ID:', response.data?.id)
+      console.log('Has itineraries:', !!response.data?.itineraries)
+      console.log('Itineraries length:', response.data?.itineraries?.length || 0)
+      if (response.data?.itineraries?.length > 0) {
+        console.log('First itinerary:', response.data.itineraries[0])
+      }
+      console.log('Full response:', response.data)
       currentPlan.value = response.data
       return response.data
     } catch (error) {
@@ -53,6 +61,10 @@ export const useTripStore = defineStore('trip', () => {
     loading.value = true
     try {
       const response = await tripAPI.generatePlan(data)
+      console.log('=== generatePlan API Response ===')
+      console.log('Plan ID:', response.data?.id)
+      console.log('Has itineraries:', !!response.data?.itineraries)
+      console.log('Itineraries length:', response.data?.itineraries?.length || 0)
       plans.value.unshift(response.data)
       return response.data
     } catch (error) {

@@ -51,6 +51,7 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
             )
 
             # 일정 데이터 저장 (itinerary_data가 있는 경우)
+            created_count = 0
             if itinerary_data and 'days' in itinerary_data:
                 for day_data in itinerary_data['days']:
                     Itinerary.objects.create(
@@ -65,8 +66,20 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                         events_info=day_data.get('events_info', []),
                         estimated_cost=day_data.get('estimated_cost', None)
                     )
+                    created_count += 1
+
+            print(f'✓ Itinerary 생성 완료: {created_count}개')
+
+            # Refresh to get itineraries
+            travel_plan.refresh_from_db()
+            itinerary_count = travel_plan.itineraries.count()
+            print(f'✓ TravelPlan의 itineraries 개수: {itinerary_count}')
 
             response_serializer = TravelPlanSerializer(travel_plan)
+            print(f'✓ Serialized data에 itineraries 포함: {"itineraries" in response_serializer.data}')
+            if 'itineraries' in response_serializer.data:
+                print(f'✓ Serialized itineraries 개수: {len(response_serializer.data["itineraries"])}')
+
             return Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
         except Exception as e:
