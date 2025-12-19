@@ -183,18 +183,27 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                 if 'parts' in content and len(content['parts']) > 0:
                     text = content['parts'][0]['text']
 
+                    print('=== Gemini API 원본 응답 ===')
+                    print(f'응답 길이: {len(text)} 글자')
+                    print(f'첫 200자: {text[:200]}')
+                    print('=' * 50)
+
                     # JSON 파싱 시도
                     try:
                         # 코드 블록 제거 (```json ... ``` 형식)
+                        original_text = text
                         if '```json' in text:
                             text = text.split('```json')[1].split('```')[0].strip()
                         elif '```' in text:
                             text = text.split('```')[1].split('```')[0].strip()
 
                         itinerary_data = json.loads(text)
+                        print(f'✓ JSON 파싱 성공! Days: {len(itinerary_data.get("days", []))}')
                         return itinerary_data
-                    except json.JSONDecodeError:
+                    except json.JSONDecodeError as e:
                         # JSON 파싱 실패 시 텍스트 기반 응답 처리
+                        print(f'✗ JSON 파싱 실패: {e}')
+                        print(f'파싱 시도한 텍스트 (첫 500자):\n{text[:500]}')
                         return self._parse_text_response(text, days, region, travel_style)
 
             # 응답이 비정상인 경우 샘플 데이터 반환
