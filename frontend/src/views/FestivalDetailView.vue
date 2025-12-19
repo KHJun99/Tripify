@@ -46,12 +46,31 @@
           </div>
         </div>
 
-        <!-- 위치 정보 -->
+        <!-- 위치 정보 및 카카오맵 -->
         <div class="location-section" v-if="festival.latitude && festival.longitude">
-          <h2>위치</h2>
+          <h2>위치 및 길찾기</h2>
           <div class="location-info">
             <p><strong>주소:</strong> {{ festival.address }}</p>
             <p><strong>좌표:</strong> {{ festival.latitude }}, {{ festival.longitude }}</p>
+          </div>
+
+          <!-- 카카오맵 표시 -->
+          <div id="kakao-map" class="kakao-map"></div>
+
+          <!-- 길찾기 버튼 -->
+          <div class="map-buttons">
+            <button @click="openKakaoMap" class="map-button kakao-btn">
+              <span class="btn-icon">🗺️</span>
+              카카오맵에서 보기
+            </button>
+            <button @click="openKakaoNavi" class="map-button navi-btn">
+              <span class="btn-icon">🧭</span>
+              카카오내비 길찾기
+            </button>
+            <button @click="copyAddress" class="map-button copy-btn">
+              <span class="btn-icon">📋</span>
+              주소 복사
+            </button>
           </div>
         </div>
 
@@ -72,7 +91,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { getFestivalDetail } from '@/api/festivals'
 
@@ -81,6 +100,7 @@ const router = useRouter()
 
 const festival = ref(null)
 const loading = ref(false)
+const map = ref(null)
 
 const formatPeriod = () => {
   if (!festival.value) return ''
@@ -110,10 +130,108 @@ const fetchFestivalDetail = async () => {
     loading.value = true
     const festivalId = route.params.id
     festival.value = await getFestivalDetail(festivalId)
+
+    // 축제 정보 로드 후 지도 초기화
+    await nextTick()
+    if (festival.value && festival.value.latitude && festival.value.longitude) {
+      initKakaoMap()
+    }
   } catch (error) {
     console.error('축제 상세 정보를 불러오는 데 실패했습니다:', error)
   } finally {
     loading.value = false
+  }
+}
+
+// 카카오맵 초기화
+const initKakaoMap = () => {
+  if (!window.kakao || !window.kakao.maps) {
+    console.error('카카오맵 SDK가 로드되지 않았습니다.')
+    return
+  }
+
+  const container = document.getElementById('kakao-map')
+  if (!container) return
+
+  const options = {
+    center: new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude),
+    level: 3
+  }
+
+  map.value = new window.kakao.maps.Map(container, options)
+
+  // 마커 생성
+  const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
+  const marker = new window.kakao.maps.Marker({
+    position: markerPosition
+  })
+  marker.setMap(map.value)
+
+  // 인포윈도우 생성
+  const infowindow = new window.kakao.maps.InfoWindow({
+    content: `<div style="padding:10px;font-size:14px;font-weight:bold;">${festival.value.title}</div>`
+  })
+  infowindow.open(map.value, marker)
+}
+
+// 카카오맵 앱/웹으로 열기
+const openKakaoMap = () => {
+  if (!festival.value) return
+
+  const name = encodeURIComponent(festival.value.title)
+  const lat = festival.value.latitude
+  const lng = festival.value.longitude
+
+  // 카카오맵 길찾기 URL (목적지 설정)
+  const url = `https://map.kakao.com/link/to/${name},${lat},${lng}`
+  window.open(url, '_blank')
+}
+
+// 카카오내비 앱으로 길찾기
+const openKakaoNavi = () => {
+  if (!festival.value) return
+
+  const lat = festival.value.latitude
+  const lng = festival.value.longitude
+  const name = encodeURIComponent(festival.value.title)
+
+  // 카카오내비 딥링크 (목적지 설정)
+  const naviUrl = `kakaomap://route?ep=${lat},${lng}&by=CAR`
+
+  // 모바일이면 앱으로, 아니면 카카오맵 웹으로
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+  if (isMobile) {
+    // 앱 실행 시도
+    window.location.href = naviUrl
+
+    // 앱이 없으면 2초 후 카카오맵 웹으로 이동
+    setTimeout(() => {
+      window.open(`https://map.kakao.com/link/to/${name},${lat},${lng}`, '_blank')
+    }, 2000)
+  } else {
+    // 데스크톱은 카카오맵 웹 길찾기로
+    window.open(`https://map.kakao.com/link/to/${name},${lat},${lng}`, '_blank')
+  }
+}
+
+// 주소 복사
+const copyAddress = async () => {
+  if (!festival.value || !festival.value.address) return
+
+  try {
+    await navigator.clipboard.writeText(festival.value.address)
+    alert('주소가 클립보드에 복사되었습니다!')
+  } catch (err) {
+    console.error('주소 복사 실패:', err)
+    // 폴백: 수동 복사
+    const textArea = document.createElement('textarea')
+    textArea.value = festival.value.address
+    document.body.appendChild(textArea)
+    textArea.select()
+    document.execCommand('copy')
+    document.body.removeChild(textArea)
+    alert('주소가 복사되었습니다!')
   }
 }
 
@@ -220,10 +338,82 @@ onMounted(() => {
   font-weight: 500;
 }
 
+.location-info {
+  margin-bottom: 1.5rem;
+}
+
 .location-info p {
   margin-bottom: 0.75rem;
   line-height: 1.6;
   color: #555;
+}
+
+/* 카카오맵 스타일 */
+.kakao-map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+}
+
+/* 지도 버튼 스타일 */
+.map-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.map-button .btn-icon {
+  font-size: 1.3rem;
+}
+
+.kakao-btn {
+  background: linear-gradient(135deg, #FEE500 0%, #FFEB3B 100%);
+  color: #3c1e1e;
+}
+
+.kakao-btn:hover {
+  background: linear-gradient(135deg, #FFEB3B 0%, #FDD835 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(254, 229, 0, 0.4);
+}
+
+.navi-btn {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+}
+
+.navi-btn:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  color: white;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #7f8c8d 0%, #6c7a7b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 140, 141, 0.4);
 }
 
 .action-buttons {
@@ -265,6 +455,14 @@ onMounted(() => {
   }
 
   .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kakao-map {
+    height: 300px;
+  }
+
+  .map-buttons {
     grid-template-columns: 1fr;
   }
 }
