@@ -312,15 +312,14 @@ onMounted(() => {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* 이미지 렌더링 품질 향상 */
+  /* 이미지 부드러운 스케일링 */
+  image-rendering: auto;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  /* 이미지 스무딩 개선 */
   -ms-interpolation-mode: bicubic;
+  /* 렌더링 최적화 */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  will-change: transform;
 }
 
 .hero-overlay {
