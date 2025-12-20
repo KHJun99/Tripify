@@ -137,6 +137,12 @@ const loadKakaoMapSDK = () => {
     // 환경변수에서 API 키 가져오기
     const apiKey = import.meta.env.VITE_KAKAO_MAP_KEY
 
+    // 디버깅: 환경변수 값 확인
+    console.log('🔍 환경변수 체크:')
+    console.log('  - VITE_KAKAO_MAP_KEY:', apiKey)
+    console.log('  - 타입:', typeof apiKey)
+    console.log('  - 길이:', apiKey?.length)
+
     if (!apiKey || apiKey === 'your_kakao_javascript_key_here') {
       console.error('✗ 카카오맵 API 키가 설정되지 않았습니다.')
       reject(new Error('카카오맵 API 키를 .env 파일에 설정해주세요.\nVITE_KAKAO_MAP_KEY=your_actual_key'))
