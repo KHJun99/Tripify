@@ -20,12 +20,21 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.login(credentials)
       token.value = response.data.token
-      user.value = {
-        username: response.data.username,
-        id: response.data.user_id,
-      }
       localStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
+      
+      // 프로필 정보 가져오기
+      try {
+        const profile = await getProfile()
+        user.value = profile
+      } catch (error) {
+        // 프로필 가져오기 실패 시 기본 정보만 저장
+        user.value = {
+          username: response.data.username,
+          id: response.data.user_id,
+        }
+      }
+      
       return response.data
     } catch (error) {
       throw error
@@ -69,14 +78,23 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.kakaoLogin(code)
       token.value = response.data.token
-      user.value = {
-        username: response.data.username,
-        id: response.data.user_id,
-        email: response.data.email,
-        loginType: response.data.login_type,
-      }
       localStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
+      
+      // 프로필 정보 가져오기
+      try {
+        const profile = await getProfile()
+        user.value = profile
+      } catch (error) {
+        // 프로필 가져오기 실패 시 기본 정보만 저장
+        user.value = {
+          username: response.data.username,
+          id: response.data.user_id,
+          email: response.data.email,
+          loginType: response.data.login_type,
+        }
+      }
+      
       return response.data
     } catch (error) {
       throw error
@@ -87,14 +105,23 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.googleLogin(code)
       token.value = response.data.token
-      user.value = {
-        username: response.data.username,
-        id: response.data.user_id,
-        email: response.data.email,
-        loginType: response.data.login_type,
-      }
       localStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
+      
+      // 프로필 정보 가져오기
+      try {
+        const profile = await getProfile()
+        user.value = profile
+      } catch (error) {
+        // 프로필 가져오기 실패 시 기본 정보만 저장
+        user.value = {
+          username: response.data.username,
+          id: response.data.user_id,
+          email: response.data.email,
+          loginType: response.data.login_type,
+        }
+      }
+      
       return response.data
     } catch (error) {
       throw error

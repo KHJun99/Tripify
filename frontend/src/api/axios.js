@@ -26,8 +26,12 @@ instance.interceptors.response.use(
   },
   (error) => {
     if (error.response && error.response.status === 401) {
-      localStorage.removeItem('token')
-      window.location.href = '/login'
+      // 로그인 페이지나 회원가입 페이지에서는 리다이렉트하지 않음
+      const currentPath = window.location.pathname
+      if (currentPath !== '/login' && currentPath !== '/signup') {
+        localStorage.removeItem('token')
+        window.location.href = '/login'
+      }
     }
     return Promise.reject(error)
   },

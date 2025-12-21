@@ -9,4 +9,5 @@ app_name = 'trips'
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('recommended/', views.recommended_plans, name='recommended-plans'),
 ]

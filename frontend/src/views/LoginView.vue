@@ -12,6 +12,7 @@ const formData = ref({
 })
 
 const error = ref('')
+const isLoading = ref(false)
 
 const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY || ''
 const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI || 'http://localhost:5173/auth/kakao/callback'
@@ -20,11 +21,17 @@ const GOOGLE_REDIRECT_URI = import.meta.env.VITE_GOOGLE_REDIRECT_URI || 'http://
 
 const handleLogin = async () => {
   try {
+    // 로그인 시도 시에만 오류 초기화 (폼 입력 중에는 유지)
     error.value = ''
+    isLoading.value = true
     await authStore.login(formData.value)
     router.push('/')
   } catch (err) {
+    // 오류 발생 시 메시지 설정 (재로그인 시도 전까지 유지)
     error.value = err.response?.data?.error || '로그인에 실패했습니다.'
+    console.error('Login error:', err)
+  } finally {
+    isLoading.value = false
   }
 }
 
@@ -63,7 +70,9 @@ const handleGoogleLogin = () => {
           <router-link to="/auth/reset-password" class="recovery-link">비밀번호 찾기</router-link>
         </div>
 
-        <button type="submit" class="btn-primary">로그인</button>
+        <button type="submit" class="btn-primary" :disabled="isLoading">
+          {{ isLoading ? '로그인 중...' : '로그인' }}
+        </button>
       </form>
 
       <div class="divider">
@@ -110,11 +119,21 @@ h1 {
 }
 
 .error-message {
-  padding: 1rem;
-  background-color: #ffe6e6;
-  color: #c00;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  color: #c62828;
+  border-left: 4px solid #f44336;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(244, 67, 54, 0.1);
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
 .form-group {
@@ -148,8 +167,13 @@ h1 {
   transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
+.btn-primary:hover:not(:disabled) {
   background-color: #2980b9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .signup-link {

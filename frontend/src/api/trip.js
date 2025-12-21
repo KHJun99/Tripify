@@ -27,4 +27,16 @@ export const tripAPI = {
   deletePlan(id) {
     return axios.delete(`/travel/plans/${id}/`)
   },
+  
+  recommendPlan(id, data) {
+    return axios.post(`/travel/plans/${id}/recommend/`, data)
+  },
+  
+  unrecommendPlan(id) {
+    return axios.delete(`/travel/plans/${id}/recommend/`)
+  },
+  
+  getRecommendedPlans() {
+    return axios.get('/travel/recommended/')
+  },
 }

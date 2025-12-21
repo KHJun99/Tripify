@@ -142,6 +142,7 @@ def kakao_login(request):
                 user = User.objects.create_user(
                     username=username,
                     email=email,
+                    nickname=nickname if nickname else '',  # 카카오 닉네임 설정
                     kakao_id=kakao_id,
                     login_type='kakao',
                     is_email_verified=True,  # 소셜 로그인은 자동 인증
@@ -149,11 +150,15 @@ def kakao_login(request):
                 # 카카오 로그인은 비밀번호가 필요 없으므로 사용 불가능하게 설정
                 user.set_unusable_password()
                 user.save()
-
             except IntegrityError:
                 return Response({
                     'error': '이미 존재하는 사용자입니다.'
                 }, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # 기존 사용자의 경우 닉네임이 없으면 업데이트
+            if not user.nickname and nickname:
+                user.nickname = nickname
+                user.save()
 
         # 5. 토큰 생성 및 반환
         token, created = Token.objects.get_or_create(user=user)
@@ -211,9 +216,13 @@ def google_login(request):
                 email = f"google_{google_id}@google.user"
 
             try:
+                # 구글 사용자 정보에서 이름 가져오기
+                google_name = google_user_info.get('name', '')
+                
                 user = User.objects.create_user(
                     username=username,
                     email=email,
+                    nickname=google_name if google_name else '',  # 구글 이름을 닉네임으로 설정
                     google_id=google_id,
                     login_type='google',
                     is_email_verified=True,  # 소셜 로그인은 자동 인증
@@ -226,6 +235,12 @@ def google_login(request):
                 return Response({
                     'error': '이미 존재하는 사용자입니다.'
                 }, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # 기존 사용자의 경우 닉네임이 없으면 업데이트
+            google_name = google_user_info.get('name', '')
+            if not user.nickname and google_name:
+                user.nickname = google_name
+                user.save()
 
         # 5. 토큰 생성 및 반환
         token, created = Token.objects.get_or_create(user=user)

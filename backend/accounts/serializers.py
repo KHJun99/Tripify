@@ -8,7 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
     """사용자 정보 Serializer"""
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'profile_image', 'preferred_region',
+        fields = ['id', 'username', 'email', 'nickname', 'profile_image', 'preferred_region',
                   'travel_style', 'login_type', 'created_at']
         read_only_fields = ['id', 'login_type', 'created_at']
 
@@ -20,7 +20,7 @@ class SignupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['username', 'password', 'password_confirm', 'email', 
+        fields = ['username', 'password', 'password_confirm', 'email', 'nickname',
                   'preferred_region', 'travel_style']
 
     def validate(self, attrs):

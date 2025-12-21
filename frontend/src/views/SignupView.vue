@@ -9,6 +9,7 @@ const authStore = useAuthStore()
 const formData = ref({
   username: '',
   email: '',
+  nickname: '',
   password: '',
   password_confirm: '',
 })
@@ -19,6 +20,7 @@ const showSuccessDialog = ref(false)
 
 const handleSignup = async () => {
   try {
+    // 회원가입 시도 시에만 오류 초기화
     error.value = ''
     success.value = ''
     const response = await authStore.signup(formData.value)
@@ -36,7 +38,9 @@ const handleSignup = async () => {
       router.push('/login')
     }
   } catch (err) {
+    // 오류 발생 시 메시지 설정 (재시도 전까지 유지)
     error.value = err.response?.data?.error || '회원가입에 실패했습니다.'
+    console.error('Signup error:', err)
   }
 }
 </script>
@@ -66,6 +70,11 @@ const handleSignup = async () => {
         <div class="form-group">
           <label>이메일</label>
           <input v-model="formData.email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label>닉네임</label>
+          <input v-model="formData.nickname" type="text" required placeholder="홈페이지에 표시될 닉네임을 입력하세요" />
         </div>
 
         <div class="form-group">
@@ -111,11 +120,21 @@ h1 {
 }
 
 .error-message {
-  padding: 1rem;
-  background-color: #ffe6e6;
-  color: #c00;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  color: #c62828;
+  border-left: 4px solid #f44336;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(244, 67, 54, 0.1);
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
 .form-group {

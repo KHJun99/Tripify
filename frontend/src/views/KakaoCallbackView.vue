@@ -39,7 +39,7 @@ onMounted(async () => {
 <template>
   <div class="callback-view">
     <div class="callback-card">
-      <LoadingSpinner v-if="isProcessing" />
+      <LoadingSpinner v-if="isProcessing" message="로그인 중..." />
 
       <div v-if="!isProcessing && !error" class="success-message">
         <h2>로그인 성공!</h2>

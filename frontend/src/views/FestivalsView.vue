@@ -61,7 +61,6 @@
               <span>{{ festival.address }}</span>
             </div>
           </div>
-          <p class="festival-description" v-if="festival.category">{{ festival.category }}</p>
           <div class="festival-tags" v-if="festival.start_month">
             <span class="tag">{{ festival.start_month }}월</span>
             <span class="tag" v-if="festival.phone">{{ festival.phone }}</span>

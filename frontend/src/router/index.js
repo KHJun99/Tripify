@@ -15,6 +15,7 @@ import ResetPasswordConfirmView from '@/views/ResetPasswordConfirmView.vue'
 import AccountSettingsView from '@/views/AccountSettingsView.vue'
 import FestivalsView from '@/views/FestivalsView.vue'
 import FestivalDetailView from '@/views/FestivalDetailView.vue'
+import RecommendedTripsView from '@/views/RecommendedTripsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -102,6 +103,11 @@ const router = createRouter({
       path: '/festivals/:id',
       name: 'festival-detail',
       component: FestivalDetailView,
+    },
+    {
+      path: '/recommended',
+      name: 'recommended-trips',
+      component: RecommendedTripsView,
     },
   ],
 })

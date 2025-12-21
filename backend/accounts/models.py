@@ -8,6 +8,7 @@ import hashlib
 class User(AbstractUser):
     """커스텀 사용자 모델"""
     email = models.EmailField(unique=True)
+    nickname = models.CharField(max_length=50, blank=True, help_text="닉네임")
     profile_image = models.ImageField(upload_to='profiles/', null=True, blank=True)
     preferred_region = models.CharField(max_length=100, blank=True, help_text="선호 지역")
     travel_style = models.CharField(max_length=100, blank=True, help_text="여행 스타일")

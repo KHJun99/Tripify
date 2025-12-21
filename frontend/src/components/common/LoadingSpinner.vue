@@ -1,11 +1,16 @@
 <script setup>
-// \) §< ÙÏ∏
+defineProps({
+  message: {
+    type: String,
+    default: 'Î°úÎî© Ï§ë...'
+  }
+})
 </script>
 
 <template>
   <div class="loading-spinner">
     <div class="spinner"></div>
-    <p>ò¨ Ö»‰...</p>
+    <p>{{ message }}</p>
   </div>
 </template>
 

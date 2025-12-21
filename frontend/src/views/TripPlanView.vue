@@ -8,9 +8,11 @@ const tripStore = useTripStore()
 
 const formData = ref({
   budget: 500000,
+  people_count: 2,
   start_date: '',
   end_date: '',
-  region: '서울',
+  departure_location: '서울특별시',
+  region: '서울특별시',
   travel_style: '관광',
   accommodation_type: 'hotel',
 })
@@ -62,12 +64,25 @@ const handleSubmit = async () => {
   <div class="trip-plan-view">
     <h1>AI 여행 계획 생성</h1>
 
+    <div class="info-notice">
+      <span class="notice-icon">ℹ️</span>
+      <p>AI가 생성하는 예상 금액은 참고용이며 실제와 다를 수 있습니다. 실제 예약 전 반드시 확인해주세요.</p>
+    </div>
+
     <div v-if="error" class="error-message">{{ error }}</div>
 
     <form @submit.prevent="handleSubmit" class="plan-form">
-      <div class="form-group">
-        <label>예산 (원)</label>
-        <input v-model.number="formData.budget" type="number" min="0" step="10000" required />
+      <div class="form-row">
+        <div class="form-group">
+          <label>예산 (원)</label>
+          <input v-model.number="formData.budget" type="number" min="0" step="10000" required />
+          <span class="helper-text">총 예산을 입력하세요</span>
+        </div>
+        <div class="form-group">
+          <label>인원 (명)</label>
+          <input v-model.number="formData.people_count" type="number" min="1" max="20" required />
+          <span class="helper-text">여행 인원수</span>
+        </div>
       </div>
 
       <div class="form-row">
@@ -81,13 +96,25 @@ const handleSubmit = async () => {
         </div>
       </div>
 
-      <div class="form-group">
-        <label>지역</label>
-        <select v-model="formData.region" required class="region-select">
-          <option v-for="region in regions" :key="region" :value="region">
-            {{ region }}
-          </option>
-        </select>
+      <div class="form-row">
+        <div class="form-group">
+          <label>출발지</label>
+          <select v-model="formData.departure_location" required class="region-select">
+            <option v-for="region in regions" :key="region" :value="region">
+              {{ region }}
+            </option>
+          </select>
+          <span class="helper-text">여행을 시작하는 지역</span>
+        </div>
+        <div class="form-group">
+          <label>여행 지역</label>
+          <select v-model="formData.region" required class="region-select">
+            <option v-for="region in regions" :key="region" :value="region">
+              {{ region }}
+            </option>
+          </select>
+          <span class="helper-text">여행할 목적지</span>
+        </div>
       </div>
 
       <div class="form-group">
@@ -139,8 +166,32 @@ const handleSubmit = async () => {
 }
 
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
+}
+
+.info-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-left: 4px solid #2196f3;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.1);
+}
+
+.notice-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.info-notice p {
+  margin: 0;
+  color: #1565c0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .error-message {
@@ -190,6 +241,13 @@ h1 {
 .form-group select:focus {
   outline: none;
   border-color: #3498db;
+}
+
+.helper-text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #666;
 }
 
 .region-select {

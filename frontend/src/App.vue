@@ -1,13 +1,27 @@
 <script setup>
-import { RouterView, RouterLink } from 'vue-router'
+import { RouterView, RouterLink, useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 
+const router = useRouter()
 const authStore = useAuthStore()
 const isAuthenticated = computed(() => authStore.isAuthenticated)
 
+onMounted(async () => {
+  // 로그인 상태면 프로필 정보 가져오기
+  if (isAuthenticated.value && !authStore.user) {
+    try {
+      await authStore.getProfile()
+    } catch (error) {
+      console.error('프로필 로드 실패:', error)
+    }
+  }
+})
+
 const handleLogout = async () => {
   await authStore.logout()
+  // 로그아웃 후 메인페이지로 이동
+  router.push('/')
 }
 </script>
 
@@ -20,8 +34,12 @@ const handleLogout = async () => {
       <div class="nav-links">
         <RouterLink to="/">홈</RouterLink>
         <template v-if="isAuthenticated">
+          <div class="user-greeting" v-if="authStore.user?.nickname">
+            <span class="greeting-text">{{ authStore.user.nickname }} 오늘도 좋은 여행하세요</span>
+          </div>
           <RouterLink to="/trips">내 여행</RouterLink>
           <RouterLink to="/trip/new">여행 계획</RouterLink>
+          <RouterLink to="/recommended">추천된 여행지</RouterLink>
           <RouterLink to="/settings">마이페이지</RouterLink>
           <button @click="handleLogout" class="btn-link">로그아웃</button>
         </template>
@@ -72,6 +90,19 @@ const handleLogout = async () => {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+}
+
+.user-greeting {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.greeting-text {
+  color: white;
+  font-weight: 500;
 }
 
 .nav-links a,
