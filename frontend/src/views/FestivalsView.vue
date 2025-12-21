@@ -8,16 +8,6 @@
     <!-- 필터 섹션 -->
     <div class="filters">
       <div class="filter-group">
-        <label>년도</label>
-        <select v-model="selectedYear" @change="applyFilters" class="filter-select">
-          <option value="">전체</option>
-          <option v-for="year in years" :key="year" :value="year">
-            {{ year }}년
-          </option>
-        </select>
-      </div>
-
-      <div class="filter-group">
         <label>월별</label>
         <select v-model="selectedMonth" @change="applyFilters" class="filter-select">
           <option value="">전체</option>
@@ -43,8 +33,8 @@
     </div>
 
     <!-- 축제 목록 -->
-    <div v-if="paginatedFestivals.length > 0" class="festivals-grid">
-      <div v-for="festival in paginatedFestivals" :key="festival.id" class="festival-card" @click="goToDetail(festival.id)">
+    <div v-if="filteredFestivals.length > 0" class="festivals-grid">
+      <div v-for="festival in filteredFestivals" :key="festival.id" class="festival-card" @click="goToDetail(festival.id)">
         <div class="festival-image">
           <img :src="festival.image_url || 'https://via.placeholder.com/400x200?text=Festival'" :alt="festival.title" />
           <div class="festival-badge">{{ festival.region }}</div>
@@ -61,56 +51,13 @@
               <span>{{ festival.address }}</span>
             </div>
           </div>
+          <p class="festival-description" v-if="festival.category">{{ festival.category }}</p>
           <div class="festival-tags" v-if="festival.start_month">
             <span class="tag">{{ festival.start_month }}월</span>
             <span class="tag" v-if="festival.phone">{{ festival.phone }}</span>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 페이지네이션 -->
-    <div v-if="filteredFestivals.length > 0" class="pagination">
-      <button
-        @click="goToPage(1)"
-        :disabled="currentPage === 1"
-        class="pagination-button"
-      >
-        처음
-      </button>
-      <button
-        @click="goToPage(currentPage - 1)"
-        :disabled="currentPage === 1"
-        class="pagination-button"
-      >
-        이전
-      </button>
-
-      <div class="pagination-numbers">
-        <button
-          v-for="page in visiblePages"
-          :key="page"
-          @click="goToPage(page)"
-          :class="['pagination-number', { active: currentPage === page }]"
-        >
-          {{ page }}
-        </button>
-      </div>
-
-      <button
-        @click="goToPage(currentPage + 1)"
-        :disabled="currentPage === totalPages"
-        class="pagination-button"
-      >
-        다음
-      </button>
-      <button
-        @click="goToPage(totalPages)"
-        :disabled="currentPage === totalPages"
-        class="pagination-button"
-      >
-        마지막
-      </button>
     </div>
 
     <!-- 결과 없음 -->
@@ -129,17 +76,10 @@ import { getFestivals } from '@/api/festivals'
 
 const router = useRouter()
 
-const selectedYear = ref('')
 const selectedMonth = ref('')
 const selectedRegion = ref('')
 const festivals = ref([])
 const loading = ref(false)
-const currentPage = ref(1)
-const itemsPerPage = 12
-
-// 년도 목록 생성 (현재 년도부터 +2년까지)
-const currentYear = new Date().getFullYear()
-const years = [currentYear, currentYear + 1, currentYear + 2]
 
 const months = [
   { value: 1, label: '1월' },
@@ -163,19 +103,12 @@ const regions = [
 
 // 날짜 포맷 함수
 const formatPeriod = (festival) => {
-  // eventstartdate와 eventenddate도 확인 (JSON 파일의 필드명)
-  const startDate = festival.event_start_date || festival.eventstartdate
-  const endDate = festival.event_end_date || festival.eventenddate
-
-  if (startDate && endDate) {
-    const start = formatDate(startDate)
-    const end = formatDate(endDate)
-    if (start === end) {
-      return start
-    }
+  if (festival.event_start_date && festival.event_end_date) {
+    const start = formatDate(festival.event_start_date)
+    const end = formatDate(festival.event_end_date)
     return `${start} ~ ${end}`
-  } else if (startDate) {
-    return formatDate(startDate)
+  } else if (festival.event_start_date) {
+    return formatDate(festival.event_start_date)
   } else if (festival.start_month) {
     return `${festival.start_month}월`
   }
@@ -190,129 +123,13 @@ const formatDate = (dateStr) => {
   return `${year}.${month}.${day}`
 }
 
-// 년도 필터링 함수
-const isInSelectedYear = (festival, selectedYear) => {
-  if (!selectedYear) return true // 전체 선택 시 모든 축제 표시
-
-  const startDate = festival.event_start_date || festival.eventstartdate
-  const endDate = festival.event_end_date || festival.eventenddate
-
-  if (startDate && startDate.length >= 4) {
-    const startYear = parseInt(startDate.substring(0, 4))
-
-    if (endDate && endDate.length >= 4) {
-      const endYear = parseInt(endDate.substring(0, 4))
-      // 축제 기간이 선택된 년도를 포함하는지 확인
-      return selectedYear >= startYear && selectedYear <= endYear
-    }
-
-    return selectedYear === startYear
-  }
-
-  // 날짜 정보가 없으면 모든 년도에 표시
-  return true
-}
-
-// 월 필터링 함수 - event_start_date와 event_end_date를 파싱하여 월 범위 확인
-const isInSelectedMonth = (festival, selectedMonth) => {
-  if (!selectedMonth) return true // 전체 선택 시 모든 축제 표시
-
-  // start_month가 있으면 기존 로직 사용
-  if (festival.start_month) {
-    // 시작월과 종료월 범위 확인
-    if (festival.end_month) {
-      // 연말-연초를 넘어가는 경우 처리 (예: 12월 ~ 2월)
-      if (festival.start_month > festival.end_month) {
-        return selectedMonth >= festival.start_month || selectedMonth <= festival.end_month
-      }
-      return selectedMonth >= festival.start_month && selectedMonth <= festival.end_month
-    }
-    return selectedMonth === festival.start_month
-  }
-
-  // start_month가 없으면 event_start_date/eventstartdate와 event_end_date/eventenddate를 파싱
-  const startDate = festival.event_start_date || festival.eventstartdate
-  const endDate = festival.event_end_date || festival.eventenddate
-
-  if (startDate && startDate.length >= 6) {
-    const startMonth = parseInt(startDate.substring(4, 6))
-    const startDay = startDate.length >= 8 ? parseInt(startDate.substring(6, 8)) : 1
-
-    if (endDate && endDate.length >= 6) {
-      const endMonth = parseInt(endDate.substring(4, 6))
-      const endDay = endDate.length >= 8 ? parseInt(endDate.substring(6, 8)) : 31
-
-      const startYear = parseInt(startDate.substring(0, 4))
-      const endYear = parseInt(endDate.substring(0, 4))
-
-      // 다년도에 걸친 축제인 경우
-      if (startYear !== endYear) {
-        return true // 여러 해에 걸친 축제는 모든 월에 표시
-      }
-
-      // 연말-연초를 넘어가는 경우 처리
-      if (startMonth > endMonth) {
-        return selectedMonth >= startMonth || selectedMonth <= endMonth
-      }
-      return selectedMonth >= startMonth && selectedMonth <= endMonth
-    }
-
-    return selectedMonth === startMonth
-  }
-
-  // 날짜 정보가 없으면 모든 월에 표시
-  return true
-}
-
 // Computed - 필터링된 축제 목록
 const filteredFestivals = computed(() => {
   return festivals.value.filter(festival => {
-    const matchYear = isInSelectedYear(festival, selectedYear.value)
-    const matchMonth = isInSelectedMonth(festival, selectedMonth.value)
+    const matchMonth = !selectedMonth.value || festival.start_month === selectedMonth.value
     const matchRegion = !selectedRegion.value || festival.region.includes(selectedRegion.value)
-    return matchYear && matchMonth && matchRegion
+    return matchMonth && matchRegion
   })
-})
-
-// 전체 페이지 수
-const totalPages = computed(() => {
-  return Math.ceil(filteredFestivals.value.length / itemsPerPage)
-})
-
-// 페이지네이션된 축제 목록
-const paginatedFestivals = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  const end = start + itemsPerPage
-  return filteredFestivals.value.slice(start, end)
-})
-
-// 표시할 페이지 번호들 (최대 5개)
-const visiblePages = computed(() => {
-  const pages = []
-  const total = totalPages.value
-  const current = currentPage.value
-
-  if (total <= 5) {
-    // 전체 페이지가 5개 이하면 모두 표시
-    for (let i = 1; i <= total; i++) {
-      pages.push(i)
-    }
-  } else {
-    // 현재 페이지를 중심으로 5개 표시
-    let start = Math.max(1, current - 2)
-    let end = Math.min(total, start + 4)
-
-    // 끝에 가까우면 start 조정
-    if (end === total) {
-      start = Math.max(1, end - 4)
-    }
-
-    for (let i = start; i <= end; i++) {
-      pages.push(i)
-    }
-  }
-
-  return pages
 })
 
 // API에서 축제 데이터 가져오기
@@ -330,23 +147,12 @@ const fetchFestivals = async () => {
 }
 
 const applyFilters = () => {
-  // 필터 변경 시 첫 페이지로 이동
-  currentPage.value = 1
+  // 클라이언트 측 필터링만 사용 (computed에서 자동 처리)
 }
 
 const resetFilters = () => {
-  selectedYear.value = ''
   selectedMonth.value = ''
   selectedRegion.value = ''
-  currentPage.value = 1
-}
-
-const goToPage = (page) => {
-  if (page >= 1 && page <= totalPages.value) {
-    currentPage.value = page
-    // 페이지 이동 시 스크롤을 맨 위로
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
 }
 
 const goToDetail = (festivalId) => {
@@ -469,14 +275,15 @@ onMounted(() => {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* 이미지 부드러운 스케일링 */
-  image-rendering: auto;
+  /* 이미지 렌더링 품질 향상 */
   image-rendering: -webkit-optimize-contrast;
-  -ms-interpolation-mode: bicubic;
-  /* 렌더링 최적화 */
+  image-rendering: crisp-edges;
   backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  /* 이미지 스무딩 개선 */
+  -ms-interpolation-mode: bicubic;
 }
 
 .festival-badge {
@@ -541,75 +348,6 @@ onMounted(() => {
   font-size: 0.85rem;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 3rem;
-  padding: 2rem 0;
-}
-
-.pagination-button {
-  padding: 0.6rem 1.2rem;
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  color: #555;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.pagination-button:hover:not(:disabled) {
-  background: #f5f5f5;
-  border-color: #3498db;
-  color: #3498db;
-}
-
-.pagination-button:disabled {
-  background: #f5f5f5;
-  color: #ccc;
-  cursor: not-allowed;
-  border-color: #f0f0f0;
-}
-
-.pagination-numbers {
-  display: flex;
-  gap: 0.3rem;
-}
-
-.pagination-number {
-  min-width: 40px;
-  height: 40px;
-  padding: 0.5rem;
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  color: #555;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pagination-number:hover {
-  background: #f5f5f5;
-  border-color: #3498db;
-  color: #3498db;
-}
-
-.pagination-number.active {
-  background: #3498db;
-  border-color: #3498db;
-  color: white;
-  font-weight: 600;
-}
-
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
@@ -649,22 +387,6 @@ onMounted(() => {
 
   .festivals-grid {
     grid-template-columns: 1fr;
-  }
-
-  .pagination {
-    flex-wrap: wrap;
-    gap: 0.3rem;
-  }
-
-  .pagination-button {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .pagination-number {
-    min-width: 35px;
-    height: 35px;
-    font-size: 0.85rem;
   }
 }
 </style>

@@ -1,10 +1,103 @@
 <script setup>
-import { onMounted, computed } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import { useTripStore } from '@/stores/trip'
 import { useRouter } from 'vue-router'
 
 const tripStore = useTripStore()
 const router = useRouter()
+
+// --- 색상 팔레트 ---
+const colorPalette = [
+  { bg: '#e3f2fd', text: '#1565c0' }, // 파랑
+  { bg: '#e8f5e9', text: '#2e7d32' }, // 초록
+  { bg: '#f3e5f5', text: '#7b1fa2' }, // 보라
+  { bg: '#fff3e0', text: '#ef6c00' }, // 주황
+  { bg: '#ffebee', text: '#c62828' }, // 빨강
+  { bg: '#e0f7fa', text: '#006064' }, // 하늘
+  { bg: '#fff8e1', text: '#ff8f00' }, // 노랑
+  { bg: '#fce4ec', text: '#c2185b' }, // 분홍
+]
+
+const getPlanStyle = (id) => {
+  const numId = typeof id === 'number' ? id : String(id).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+  const color = colorPalette[numId % colorPalette.length]
+  return { '--plan-bg': color.bg, '--plan-text': color.text }
+}
+
+// --- 달력 상태 ---
+const currentDate = ref(new Date())
+const weekDays = ['일', '월', '화', '수', '목', '금', '토']
+
+const currentYear = computed(() => currentDate.value.getFullYear())
+const currentMonth = computed(() => currentDate.value.getMonth())
+const daysInMonth = computed(() => new Date(currentYear.value, currentMonth.value + 1, 0).getDate())
+const startDay = computed(() => new Date(currentYear.value, currentMonth.value, 1).getDay())
+
+const changeMonth = (diff) => {
+  currentDate.value = new Date(currentYear.value, currentMonth.value + diff, 1)
+}
+
+// --- 일정 정렬 ---
+const sortedPlans = computed(() => {
+  return [...tripStore.plans].sort((a, b) => {
+    const startA = new Date(a.start_date)
+    const startB = new Date(b.start_date)
+    if (startA - startB !== 0) return startA - startB
+    const endA = new Date(a.end_date)
+    const endB = new Date(b.end_date)
+    return endB - endA
+  })
+})
+
+const getPlansForDate = (day) => {
+  if (!sortedPlans.value.length) return []
+  const targetDate = new Date(currentYear.value, currentMonth.value, day)
+  targetDate.setHours(0, 0, 0, 0)
+
+  return sortedPlans.value.filter(plan => {
+    const start = new Date(plan.start_date)
+    const end = new Date(plan.end_date)
+    start.setHours(0, 0, 0, 0)
+    end.setHours(0, 0, 0, 0)
+    return targetDate >= start && targetDate <= end
+  })
+}
+
+// 클래스 판별 로직
+const getPlanClass = (day, plan) => {
+  const targetDate = new Date(currentYear.value, currentMonth.value, day)
+  const targetTime = targetDate.setHours(0,0,0,0)
+  const dayOfWeek = targetDate.getDay()
+
+  const start = new Date(plan.start_date).setHours(0,0,0,0)
+  const end = new Date(plan.end_date).setHours(0,0,0,0)
+
+  const classes = []
+  const isVisualStart = (targetTime === start) || (dayOfWeek === 0)
+  const isVisualEnd = (targetTime === end) || (dayOfWeek === 6)
+
+  if (isVisualStart) classes.push('is-start')
+  if (isVisualEnd) classes.push('is-end')
+  if (!isVisualStart && !isVisualEnd) classes.push('is-middle')
+
+  return classes.join(' ')
+}
+
+// 텍스트 너비 계산 (연속된 일정 표시용)
+const getSegmentWidth = (day, plan) => {
+  const targetDate = new Date(currentYear.value, currentMonth.value, day)
+  const dayOfWeek = targetDate.getDay()
+
+  const endDate = new Date(plan.end_date)
+  endDate.setHours(0,0,0,0)
+
+  const daysLeftInWeek = 7 - dayOfWeek
+  const msPerDay = 1000 * 60 * 60 * 24
+  const daysLeftInPlan = Math.floor((endDate - targetDate) / msPerDay) + 1
+
+  const span = Math.min(daysLeftInWeek, daysLeftInPlan)
+  return `calc(100% * ${span} + ${span - 1}px)`
+}
 
 onMounted(async () => {
   await tripStore.fetchPlans()
@@ -14,378 +107,214 @@ const goToTrip = (id) => {
   router.push({ name: 'itinerary', params: { id } })
 }
 
-// 날짜 포맷팅
-const formatDate = (dateString) => {
-  if (!dateString) return ''
-  const date = new Date(dateString)
-  return date.toLocaleDateString('ko-KR', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  })
-}
-
-// 기간 계산
-const getDuration = (startDate, endDate) => {
-  if (!startDate || !endDate) return 0
-  const start = new Date(startDate)
-  const end = new Date(endDate)
-  const diffTime = Math.abs(end - start)
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1
-  return diffDays
+const goToCreate = () => {
+  router.push('/trip/new')
 }
 </script>
 
 <template>
   <div class="my-trips-view">
-    <div class="header-section">
-      <h1>✈️ 내 여행 계획</h1>
-      <p class="subtitle">총 {{ tripStore.plans.length }}개의 여행 계획</p>
-    </div>
+    <h1></h1>
+    <div v-if="tripStore.loading" class="loading">로딩 중...</div>
 
-    <div v-if="tripStore.loading" class="loading">
-      <div class="loading-spinner"></div>
-      <p>여행 계획을 불러오는 중...</p>
-    </div>
-
-    <div v-else-if="tripStore.plans.length === 0" class="empty-state">
-      <div class="empty-icon">🗺️</div>
-      <h2>아직 여행 계획이 없습니다</h2>
-      <p>새로운 여행 계획을 만들어보세요!</p>
-      <router-link to="/trip/new" class="btn-primary">
-        <span>➕</span>
-        여행 계획 만들기
-      </router-link>
-    </div>
-
-    <div v-else class="trips-container">
-      <div class="trips-grid">
-        <div 
-          v-for="plan in tripStore.plans" 
-          :key="plan.id" 
-          class="trip-card" 
-          @click="goToTrip(plan.id)"
-        >
-          <div class="card-header">
-            <div class="card-badge" v-if="plan.is_generated">AI 생성</div>
-            <h3>{{ plan.title }}</h3>
+    <div v-else>
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <div class="month-nav">
+            <button @click="changeMonth(-1)">&lt;</button>
+            <h2>{{ currentYear }}. {{ currentMonth + 1 }}</h2>
+            <button @click="changeMonth(1)">&gt;</button>
           </div>
-          
-          <div class="card-body">
-            <div class="info-row">
-              <span class="info-icon">📍</span>
-              <span class="info-text">{{ plan.region }}</span>
-            </div>
-            
-            <div class="info-row">
-              <span class="info-icon">📅</span>
-              <span class="info-text">
-                {{ formatDate(plan.start_date) }} ~ {{ formatDate(plan.end_date) }}
-              </span>
-            </div>
-            
-            <div class="info-row">
-              <span class="info-icon">⏱️</span>
-              <span class="info-text">{{ getDuration(plan.start_date, plan.end_date) }}일</span>
-            </div>
-            
-            <div class="info-row">
-              <span class="info-icon">👥</span>
-              <span class="info-text">{{ plan.people_count }}명</span>
-            </div>
-            
-            <div class="info-row">
-              <span class="info-icon">🎨</span>
-              <span class="info-text">{{ plan.travel_style }}</span>
-            </div>
-          </div>
-          
-          <div class="card-footer">
-            <div class="budget-section">
-              <span class="budget-label">예산</span>
-              <span class="budget-amount">{{ plan.budget.toLocaleString() }}원</span>
-            </div>
-            <div class="view-button">
-              <span>자세히 보기 →</span>
+          <button class="btn-create" @click="goToCreate">여행 추가 +</button>
+        </div>
+
+        <div class="calendar-board">
+          <div v-for="day in weekDays" :key="day" class="weekday">{{ day }}</div>
+          <div v-for="n in startDay" :key="'blank-' + n" class="day blank"></div>
+
+          <div v-for="day in daysInMonth" :key="day" class="day">
+            <span class="day-number">{{ day }}</span>
+
+            <div class="plan-bars">
+              <div
+                v-for="plan in getPlansForDate(day)"
+                :key="plan.id"
+                class="plan-bar"
+                :class="getPlanClass(day, plan)"
+                :style="getPlanStyle(plan.id)"
+                @click.stop="goToTrip(plan.id)"
+              >
+                <span
+                  v-if="getPlanClass(day, plan).includes('is-start')"
+                  class="plan-title"
+                  :style="{ width: getSegmentWidth(day, plan) }"
+                >
+                  {{ plan.title }}
+                </span>
+                <span v-else class="plan-title-hidden">&nbsp;</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      </div>
   </div>
 </template>
 
 <style scoped>
-.my-trips-view {
-  background: #f5f7fa;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-}
+/* 기본 레이아웃 */
+h1 { margin-bottom: 2rem; color: #333; }
+.loading { text-align: center; padding: 2rem; }
 
-.header-section {
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.loading {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid #e8ecef;
-  border-top-color: #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 1rem;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.loading p {
-  color: #6c757d;
-  font-size: 1.1rem;
-}
-
-.empty-state {
-  text-align: center;
-  padding: 4rem 2rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.empty-icon {
-  font-size: 5rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.6;
-}
-
-.empty-state h2 {
-  font-size: 1.8rem;
-  color: #2c3e50;
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-}
-
-.empty-state p {
-  color: #6c757d;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-}
-
-.trips-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.trips-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.trip-card {
+/* 달력 스타일 */
+.calendar-section {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid #e8ecef;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.trip-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-  border-color: #3498db;
-}
-
-.card-header {
-  padding: 1.5rem 1.5rem 1rem;
-  border-bottom: 2px solid #f0f0f0;
-  position: relative;
-}
-
-.card-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 0.25rem 0.75rem;
+  padding: 20px;
   border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-}
-
-.card-header h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  line-height: 1.4;
-  padding-right: 80px;
-}
-
-.card-body {
-  padding: 1.5rem;
-  flex-grow: 1;
-}
-
-.info-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0;
-}
-
-.info-row:last-child {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.info-icon {
-  font-size: 1.2rem;
-  width: 24px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.info-text {
-  font-size: 1rem;
-  color: #495057;
-  font-weight: 500;
-}
-
-.card-footer {
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-top: 1px solid #e8ecef;
+/* 헤더 스타일 개선 */
+.calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.budget-section {
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.month-nav h2 { margin: 0; font-size: 1.5rem; }
+.month-nav button { padding: 5px 15px; border: 1px solid #ddd; background: white; border-radius: 4px; cursor: pointer; }
+
+/* 여행 추가 버튼 스타일 */
+.btn-create {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+.btn-create:hover {
+  background-color: #2980b9;
+}
+
+.calendar-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  table-layout: fixed;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  background: #f9f9f9;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.day {
+  min-height: 100px;
+  padding: 30px 0 0 0;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  min-width: 0;
+  background-color: #fff;
+  overflow: visible;
+  z-index: 1;
+}
+
+.day-number {
+  position: absolute;
+  top: 8px; left: 8px;
+  font-size: 0.9rem; font-weight: bold; color: #333;
+}
+
+.blank { background: #fdfdfd; }
+
+.plan-bars {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 2px;
+  width: 100%;
+  position: relative;
 }
 
-.budget-label {
-  font-size: 0.85rem;
-  color: #6c757d;
+.plan-bar {
+  background-color: var(--plan-bg);
+  color: var(--plan-text);
+  font-size: 0.8rem;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  white-space: nowrap;
+  text-align: left;
+  position: relative;
+}
+
+.plan-bar:hover {
+  filter: brightness(0.95);
+}
+
+.plan-bar.is-start {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-left: 4px;
+  border-left: 3px solid var(--plan-text);
+  z-index: 10;
+}
+
+.plan-bar.is-end {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-right: 4px;
+}
+
+.plan-title {
+  display: block;
+  position: absolute;
+  top: 0; left: 0; height: 100%;
+  padding-left: 6px;
+  box-sizing: border-box;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
 }
 
-.budget-amount {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #2c3e50;
-}
+.plan-title-hidden { visibility: hidden; }
 
-.view-button {
-  color: #3498db;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.trip-card:hover .view-button {
-  transform: translateX(4px);
-  color: #2980b9;
-}
-
-/* 반응형 디자인 */
 @media (max-width: 768px) {
-  .my-trips-view {
-    padding: 1rem 0.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .trips-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .card-header h3 {
-    font-size: 1.2rem;
-    padding-right: 0;
-  }
-
-  .card-badge {
-    position: static;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
+  .calendar-section { padding: 10px; }
+  .month-nav { margin-left: 0; } /* 모바일에서는 중앙 정렬 보정 해제 */
+  .day { min-height: 70px; padding-top: 25px; }
+  .plan-bar { font-size: 10px; height: 18px; line-height: 18px; }
+  .day-number { font-size: 0.8rem; top: 4px; left: 4px; }
+  .btn-create { padding: 6px 12px; font-size: 0.8rem; }
 }
-
-/* 카드 애니메이션 */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.trip-card {
-  animation: fadeInUp 0.5s ease-out;
-}
-
-.trip-card:nth-child(1) { animation-delay: 0.1s; }
-.trip-card:nth-child(2) { animation-delay: 0.2s; }
-.trip-card:nth-child(3) { animation-delay: 0.3s; }
-.trip-card:nth-child(4) { animation-delay: 0.4s; }
-.trip-card:nth-child(5) { animation-delay: 0.5s; }
-.trip-card:nth-child(6) { animation-delay: 0.6s; }
 </style>
