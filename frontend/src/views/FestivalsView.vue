@@ -123,10 +123,51 @@ const formatDate = (dateStr) => {
   return `${year}.${month}.${day}`
 }
 
+// 월 필터링 함수 - event_start_date와 event_end_date를 파싱하여 월 범위 확인
+const isInSelectedMonth = (festival, selectedMonth) => {
+  if (!selectedMonth) return true // 전체 선택 시 모든 축제 표시
+
+  // start_month가 있으면 기존 로직 사용
+  if (festival.start_month) {
+    // 시작월과 종료월 범위 확인
+    if (festival.end_month) {
+      // 연말-연초를 넘어가는 경우 처리 (예: 12월 ~ 2월)
+      if (festival.start_month > festival.end_month) {
+        return selectedMonth >= festival.start_month || selectedMonth <= festival.end_month
+      }
+      return selectedMonth >= festival.start_month && selectedMonth <= festival.end_month
+    }
+    return selectedMonth === festival.start_month
+  }
+
+  // start_month가 없으면 event_start_date와 event_end_date를 파싱
+  const startDate = festival.event_start_date
+  const endDate = festival.event_end_date
+
+  if (startDate && startDate.length >= 6) {
+    const startMonth = parseInt(startDate.substring(4, 6))
+
+    if (endDate && endDate.length >= 6) {
+      const endMonth = parseInt(endDate.substring(4, 6))
+
+      // 연말-연초를 넘어가는 경우 처리
+      if (startMonth > endMonth) {
+        return selectedMonth >= startMonth || selectedMonth <= endMonth
+      }
+      return selectedMonth >= startMonth && selectedMonth <= endMonth
+    }
+
+    return selectedMonth === startMonth
+  }
+
+  // 날짜 정보가 없으면 모든 월에 표시
+  return true
+}
+
 // Computed - 필터링된 축제 목록
 const filteredFestivals = computed(() => {
   return festivals.value.filter(festival => {
-    const matchMonth = !selectedMonth.value || festival.start_month === selectedMonth.value
+    const matchMonth = isInSelectedMonth(festival, selectedMonth.value)
     const matchRegion = !selectedRegion.value || festival.region.includes(selectedRegion.value)
     return matchMonth && matchRegion
   })
