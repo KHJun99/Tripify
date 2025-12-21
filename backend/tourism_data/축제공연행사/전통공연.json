@@ -8,8 +8,8 @@
     "longitude": "127.0081070890",
     "image": "http://tong.visitkorea.or.kr/cms/resource/34/3484034_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250403",
+    "eventenddate": "20251225"
   },
   {
     "id": "2809535",
@@ -20,8 +20,8 @@
     "longitude": "126.9836898995",
     "image": "http://tong.visitkorea.or.kr/cms/resource/85/3486485_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250101",
+    "eventenddate": "20251231"
   },
   {
     "id": "3429922",
@@ -32,8 +32,8 @@
     "longitude": "127.3894005357",
     "image": "http://tong.visitkorea.or.kr/cms/resource/64/3480464_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250308",
+    "eventenddate": "20251122"
   },
   {
     "id": "292961",
@@ -44,8 +44,8 @@
     "longitude": "126.9765906796",
     "image": "http://tong.visitkorea.or.kr/cms/resource/45/3520845_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250101",
+    "eventenddate": "20251231"
   },
   {
     "id": "3021908",
@@ -56,8 +56,8 @@
     "longitude": "127.0982534743",
     "image": "http://tong.visitkorea.or.kr/cms/resource/69/3546369_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251017",
+    "eventenddate": "20251019"
   },
   {
     "id": "3560787",
@@ -68,8 +68,8 @@
     "longitude": "127.4986816658",
     "image": "http://tong.visitkorea.or.kr/cms/resource/80/3560780_image2_1.png",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251108",
+    "eventenddate": "20251108"
   },
   {
     "id": "3497454",
@@ -80,8 +80,8 @@
     "longitude": "126.9783985779",
     "image": "http://tong.visitkorea.or.kr/cms/resource/53/3497453_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250506",
+    "eventenddate": "20251008"
   },
   {
     "id": "3482443",
@@ -92,8 +92,8 @@
     "longitude": "126.9951471543",
     "image": "http://tong.visitkorea.or.kr/cms/resource/24/3484124_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250424",
+    "eventenddate": "20250502"
   },
   {
     "id": "293030",
@@ -104,8 +104,8 @@
     "longitude": "127.3101448759",
     "image": "http://tong.visitkorea.or.kr/cms/resource/05/3107105_image2_1.png",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20240406",
+    "eventenddate": "20241124"
   },
   {
     "id": "2611054",
@@ -116,8 +116,8 @@
     "longitude": "129.2147788361",
     "image": "http://tong.visitkorea.or.kr/cms/resource/80/3490380_image2_1.png",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250419",
+    "eventenddate": "20251005"
   },
   {
     "id": "2853386",
@@ -128,8 +128,8 @@
     "longitude": "128.8950697583",
     "image": "http://tong.visitkorea.or.kr/cms/resource/46/3562846_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251127",
+    "eventenddate": "20251129"
   },
   {
     "id": "2993282",
@@ -140,8 +140,8 @@
     "longitude": "127.1104844388",
     "image": "http://tong.visitkorea.or.kr/cms/resource/35/3532535_image2_1.jpg",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250712",
+    "eventenddate": "20250927"
   },
   {
     "id": "3557873",
@@ -152,8 +152,8 @@
     "longitude": "127.0188136657",
     "image": "http://tong.visitkorea.or.kr/cms/resource/72/3557872_image2_1.png",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251101",
+    "eventenddate": "20251102"
   },
   {
     "id": "3526946",
@@ -164,7 +164,7 @@
     "longitude": "129.2869971085",
     "image": "http://tong.visitkorea.or.kr/cms/resource/45/3526945_image2_1.png",
     "category": "전통공연",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250823",
+    "eventenddate": "20251029"
   }
 ]

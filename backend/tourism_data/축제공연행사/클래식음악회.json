@@ -8,8 +8,8 @@
     "longitude": "126.7214915674",
     "image": "http://tong.visitkorea.or.kr/cms/resource/86/3534486_image2_1.jpg",
     "category": "클래식음악회",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250920",
+    "eventenddate": "20250921"
   },
   {
     "id": "1817328",
@@ -20,8 +20,8 @@
     "longitude": "126.9277599856",
     "image": "http://tong.visitkorea.or.kr/cms/resource/62/3492862_image2_1.jpg",
     "category": "클래식음악회",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250613",
+    "eventenddate": "20250614"
   },
   {
     "id": "3547386",
@@ -32,8 +32,8 @@
     "longitude": "126.7675670383",
     "image": "http://tong.visitkorea.or.kr/cms/resource/85/3547385_image2_1.jpg",
     "category": "클래식음악회",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251029",
+    "eventenddate": "20251029"
   },
   {
     "id": "3525756",
@@ -44,8 +44,8 @@
     "longitude": "127.1596636399",
     "image": "http://tong.visitkorea.or.kr/cms/resource/55/3525755_image2_1.jpg",
     "category": "클래식음악회",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250926",
+    "eventenddate": "20250927"
   },
   {
     "id": "590921",
@@ -56,7 +56,7 @@
     "longitude": "128.6685317384",
     "image": "http://tong.visitkorea.or.kr/cms/resource/92/3502592_image2_1.png",
     "category": "클래식음악회",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250723",
+    "eventenddate": "20250802"
   }
 ]

@@ -8,8 +8,8 @@
     "longitude": "129.1270687971",
     "image": "http://tong.visitkorea.or.kr/cms/resource/84/3489184_image2_1.jpg",
     "category": "무용",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250604",
+    "eventenddate": "20250608"
   },
   {
     "id": "629023",
@@ -20,8 +20,8 @@
     "longitude": "127.0031961055",
     "image": "http://tong.visitkorea.or.kr/cms/resource/24/3356724_image2_1.jpg",
     "category": "무용",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20240901",
+    "eventenddate": "20240914"
   },
   {
     "id": "629742",
@@ -32,8 +32,8 @@
     "longitude": "127.0029878163",
     "image": "http://tong.visitkorea.or.kr/cms/resource/87/3567087_image2_1.jpg",
     "category": "무용",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251121",
+    "eventenddate": "20251207"
   },
   {
     "id": "2558683",
@@ -44,7 +44,7 @@
     "longitude": "127.0029878163",
     "image": "http://tong.visitkorea.or.kr/cms/resource/32/3442732_image2_1.jpg",
     "category": "무용",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20241219",
+    "eventenddate": "20241219"
   }
 ]

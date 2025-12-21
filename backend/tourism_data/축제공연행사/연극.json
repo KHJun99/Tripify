@@ -8,8 +8,8 @@
     "longitude": "127.1024487705",
     "image": "http://tong.visitkorea.or.kr/cms/resource/61/3558561_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20251028",
+    "eventenddate": "20251101"
   },
   {
     "id": "2543724",
@@ -20,8 +20,8 @@
     "longitude": "128.8903006749",
     "image": "http://tong.visitkorea.or.kr/cms/resource/50/3505650_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250820",
+    "eventenddate": "20250824"
   },
   {
     "id": "142033",
@@ -32,8 +32,8 @@
     "longitude": "127.0037293912",
     "image": "http://tong.visitkorea.or.kr/cms/resource/38/3428338_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20241227",
+    "eventenddate": "20250105"
   },
   {
     "id": "142193",
@@ -44,8 +44,8 @@
     "longitude": "126.9158380144",
     "image": "http://tong.visitkorea.or.kr/cms/resource/26/3507626_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250731",
+    "eventenddate": "20250817"
   },
   {
     "id": "2829118",
@@ -56,8 +56,8 @@
     "longitude": "126.6663190490",
     "image": "http://tong.visitkorea.or.kr/cms/resource/97/3525797_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250927",
+    "eventenddate": "20250927"
   },
   {
     "id": "3488421",
@@ -68,8 +68,8 @@
     "longitude": "126.6946991484",
     "image": "http://tong.visitkorea.or.kr/cms/resource/17/3563317_image2_1.png",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250426",
+    "eventenddate": "20251227"
   },
   {
     "id": "1824778",
@@ -80,8 +80,8 @@
     "longitude": "128.4275024122",
     "image": "http://tong.visitkorea.or.kr/cms/resource/11/3495211_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250711",
+    "eventenddate": "20250720"
   },
   {
     "id": "573459",
@@ -92,8 +92,8 @@
     "longitude": "127.7207542053",
     "image": "http://tong.visitkorea.or.kr/cms/resource/19/3486919_image2_1.png",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250523",
+    "eventenddate": "20250601"
   },
   {
     "id": "3395327",
@@ -104,8 +104,8 @@
     "longitude": "127.0035405691",
     "image": "http://tong.visitkorea.or.kr/cms/resource/38/3394938_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20241104",
+    "eventenddate": "20241215"
   },
   {
     "id": "2547013",
@@ -116,8 +116,8 @@
     "longitude": "127.1500366062",
     "image": "http://tong.visitkorea.or.kr/cms/resource/68/3485868_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250412",
+    "eventenddate": "20251025"
   },
   {
     "id": "1809861",
@@ -128,8 +128,8 @@
     "longitude": "127.7312071874",
     "image": "http://tong.visitkorea.or.kr/cms/resource/13/3329813_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20240628",
+    "eventenddate": "20241019"
   },
   {
     "id": "1825520",
@@ -140,8 +140,8 @@
     "longitude": "126.9811903187",
     "image": "http://tong.visitkorea.or.kr/cms/resource/88/3497488_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250716",
+    "eventenddate": "20250727"
   },
   {
     "id": "577335",
@@ -152,7 +152,7 @@
     "longitude": "126.9811903187",
     "image": "http://tong.visitkorea.or.kr/cms/resource/78/3487778_image2_1.jpg",
     "category": "연극",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250517",
+    "eventenddate": "20250518"
   }
 ]

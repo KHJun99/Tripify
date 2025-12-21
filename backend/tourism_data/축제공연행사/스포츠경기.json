@@ -8,8 +8,8 @@
     "longitude": "126.8964785141",
     "image": "http://tong.visitkorea.or.kr/cms/resource/00/3480400_image2_1.jpg",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250503",
+    "eventenddate": "20250503"
   },
   {
     "id": "2617883",
@@ -20,8 +20,8 @@
     "longitude": "126.4141813511",
     "image": "http://tong.visitkorea.or.kr/cms/resource/63/3536363_image2_1.jpg",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250920",
+    "eventenddate": "20250921"
   },
   {
     "id": "3116038",
@@ -32,8 +32,8 @@
     "longitude": "127.5977035276",
     "image": "http://tong.visitkorea.or.kr/cms/resource/56/3491856_image2_1.png",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250607",
+    "eventenddate": "20250608"
   },
   {
     "id": "3497739",
@@ -44,8 +44,8 @@
     "longitude": "126.6466173186",
     "image": "http://tong.visitkorea.or.kr/cms/resource/36/3497736_image2_1.jpg",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250705",
+    "eventenddate": "20250706"
   },
   {
     "id": "3470738",
@@ -56,8 +56,8 @@
     "longitude": "128.0160572268",
     "image": "http://tong.visitkorea.or.kr/cms/resource/43/3478743_image2_1.jpg",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250426",
+    "eventenddate": "20250426"
   },
   {
     "id": "2865520",
@@ -68,8 +68,8 @@
     "longitude": "128.3514221857",
     "image": "http://tong.visitkorea.or.kr/cms/resource/60/3501060_image2_1.jpeg",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250801",
+    "eventenddate": "20250803"
   },
   {
     "id": "3114675",
@@ -80,8 +80,8 @@
     "longitude": "128.8819461313",
     "image": "http://tong.visitkorea.or.kr/cms/resource/24/3480224_image2_1.png",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20250524",
+    "eventenddate": "20250524"
   },
   {
     "id": "3420072",
@@ -92,8 +92,8 @@
     "longitude": "127.3797705782",
     "image": "http://tong.visitkorea.or.kr/cms/resource/57/3572757_image2_1.png",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20260101",
+    "eventenddate": "20260101"
   },
   {
     "id": "2992829",
@@ -104,8 +104,8 @@
     "longitude": "128.6130989730",
     "image": "http://tong.visitkorea.or.kr/cms/resource/88/3579088_image2_1.png",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20260411",
+    "eventenddate": "20260412"
   },
   {
     "id": "2852365",
@@ -116,7 +116,7 @@
     "longitude": "126.7468134698",
     "image": "http://tong.visitkorea.or.kr/cms/resource/61/3335761_image2_1.png",
     "category": "스포츠경기",
-    "eventstartdate": "",
-    "eventenddate": ""
+    "eventstartdate": "20241005",
+    "eventenddate": "20241006"
   }
 ]
