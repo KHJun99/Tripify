@@ -28,8 +28,8 @@ const formatDate = (dateString) => {
   const date = new Date(dateString)
   return date.toLocaleDateString('ko-KR', {
     year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+    month: '2-digit',
+    day: '2-digit'
   })
 }
 
@@ -52,24 +52,24 @@ onMounted(() => {
 
 <template>
   <div class="recommended-trips-view">
-    <div class="header">
-      <h1>⭐ 추천된 여행지</h1>
-      <p class="subtitle">다른 여행자들이 추천한 여행 계획을 확인해보세요!</p>
+    <div class="page-header">
+      <h1>추천 여행지</h1>
+      <p>다른 여행자들이 검증한 알짜배기 여행 코스를 확인하세요.</p>
     </div>
 
-    <div v-if="loading" class="loading">
-      <p>로딩 중...</p>
+    <div v-if="loading" class="status-box">
+      <p>데이터를 불러오고 있습니다...</p>
     </div>
 
-    <div v-else-if="error" class="error">
+    <div v-else-if="error" class="status-box">
       <p>{{ error }}</p>
     </div>
 
-    <div v-else-if="recommendedPlans.length === 0" class="empty">
-      <p>아직 추천된 여행 계획이 없습니다.</p>
+    <div v-else-if="recommendedPlans.length === 0" class="status-box">
+      <p>등록된 추천 여행이 없습니다.</p>
     </div>
 
-    <div v-else class="plans-grid">
+    <div v-else class="plans-list">
       <div
         v-for="plan in recommendedPlans"
         :key="plan.id"
@@ -77,42 +77,47 @@ onMounted(() => {
         @click="goToPlan(plan.id)"
       >
         <div class="card-header">
-          <h3>{{ plan.title }}</h3>
+          <div class="title-section">
+            <span class="region-label">{{ plan.region }}</span>
+            <h3>{{ plan.title }}</h3>
+          </div>
           <div class="rating-badge">
-            <span class="star">⭐</span>
-            <span class="rating-value">{{ plan.rating }}</span>
+            <span class="star">★</span>
+            <span class="score">{{ plan.rating }}</span>
           </div>
         </div>
 
-        <div class="card-info">
+        <div class="info-grid">
           <div class="info-item">
-            <span class="info-label">📍 지역</span>
-            <span class="info-value">{{ plan.region }}</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">📅 기간</span>
-            <span class="info-value">
+            <span class="label">여행 기간</span>
+            <span class="value date-value">
               {{ formatDate(plan.start_date) }} ~ {{ formatDate(plan.end_date) }}
-              ({{ getDuration(plan.start_date, plan.end_date) }}일)
+              <span class="duration">({{ getDuration(plan.start_date, plan.end_date) }}일)</span>
             </span>
           </div>
+          
           <div class="info-item">
-            <span class="info-label">👥 인원</span>
-            <span class="info-value">{{ plan.people_count }}명</span>
+            <span class="label">인원</span>
+            <span class="value">{{ plan.people_count }}명</span>
           </div>
-          <div class="info-item">
-            <span class="info-label">💰 예산</span>
-            <span class="info-value">{{ plan.budget.toLocaleString() }}원</span>
+
+          <div class="info-item budget-item">
+            <span class="label">총 예산</span>
+            <span class="value price">{{ plan.budget.toLocaleString() }}원</span>
           </div>
         </div>
 
-        <div v-if="plan.review" class="review-preview">
-          <p class="review-text">{{ plan.review }}</p>
-        </div>
-
-        <div class="card-footer">
-          <span class="author">작성자: {{ plan.user }}</span>
-          <span class="date">{{ formatDate(plan.recommended_at) }}</span>
+        <div class="card-footer-content">
+          <div v-if="plan.review" class="review-section">
+            <span class="review-label">Traveler's Note</span>
+            <p class="review-text">{{ plan.review }}</p>
+          </div>
+          
+          <div class="meta-info">
+            <span class="author">By. <b>{{ plan.user }}</b></span>
+            <span class="separator">|</span>
+            <span class="date">{{ formatDate(plan.recommended_at) }} 작성</span>
+          </div>
         </div>
       </div>
     </div>
@@ -121,185 +126,203 @@ onMounted(() => {
 
 <style scoped>
 .recommended-trips-view {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  background: #f5f7fa;
+  padding: 3rem 1rem;
+  background-color: #f5f7fa;
   min-height: 100vh;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+.page-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
 }
 
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
+.page-header h1 {
+  font-size: 2rem;
+  color: #111;
   margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
-.subtitle {
-  color: #6c757d;
-  font-size: 1.1rem;
+.page-header p {
+  color: #666;
+  font-size: 1rem;
 }
 
-.loading,
-.error,
-.empty {
+.status-box {
   text-align: center;
   padding: 3rem;
   background: white;
-  border-radius: 16px;
-  color: #6c757d;
-  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  color: #888;
 }
 
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+.plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .plan-card {
   background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid #e8ecef;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
 }
 
 .plan-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
 }
 
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #f1f3f5;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e8ecef;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.region-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #667eea;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .card-header h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #1a1a1a;
-  flex: 1;
+  color: #2d3748;
 }
 
 .rating-badge {
+  background: #fff9db;
+  color: #f08c00;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 600;
+  gap: 4px;
 }
 
-.star {
-  font-size: 1.2rem;
-}
-
-.rating-value {
-  font-size: 1rem;
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+.info-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .info-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-.info-label {
+.label {
+  font-size: 0.75rem;
+  color: #868e96;
   font-weight: 600;
-  color: #6c757d;
+}
+
+.value {
+  font-size: 1rem;
+  color: #343a40;
+  font-weight: 500;
+}
+
+.date-value {
+  font-family: 'Roboto', sans-serif;
+}
+
+.duration {
+  color: #667eea;
+  font-weight: 600;
+  margin-left: 4px;
   font-size: 0.9rem;
 }
 
-.info-value {
-  color: #2c3e50;
-  font-weight: 500;
-  text-align: right;
+.budget-item .price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111;
 }
 
-.review-preview {
-  margin: 1.5rem 0;
+.card-footer-content {
+  background-color: #f8f9fa;
   padding: 1rem;
-  background: #f8f9fa;
   border-radius: 8px;
-  border-left: 4px solid #667eea;
+}
+
+.review-section {
+  margin-bottom: 0.8rem;
+}
+
+.review-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #adb5bd;
+  margin-bottom: 0.3rem;
 }
 
 .review-text {
+  font-size: 0.95rem;
   color: #495057;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
-.card-footer {
+.meta-info {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
-  border-top: 1px solid #e8ecef;
-  font-size: 0.85rem;
-  color: #6c757d;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #868e96;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
 }
 
-.author {
-  font-weight: 500;
+.separator {
+  color: #dee2e6;
+  font-size: 0.7rem;
 }
 
-.date {
-  color: #adb5bd;
-}
-
-@media (max-width: 768px) {
-  .recommended-trips-view {
-    padding: 1rem 0.5rem;
-  }
-
-  .header {
-    padding: 1.5rem;
-  }
-
-  .header h1 {
-    font-size: 2rem;
-  }
-
-  .plans-grid {
+@media (max-width: 600px) {
+  .info-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
-
-  .plan-card {
-    padding: 1.5rem;
+  
+  .card-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .rating-badge {
+    align-self: flex-start;
   }
 }
 </style>
-

@@ -5,7 +5,6 @@ import { placeAPI } from '@/api/place'
 export const usePlaceStore = defineStore('place', () => {
   const places = ref([])
   const festivals = ref([])
-  const bookmarks = ref([])
   const currentPlace = ref(null)
   const loading = ref(false)
 
@@ -51,52 +50,13 @@ export const usePlaceStore = defineStore('place', () => {
     }
   }
 
-  const fetchBookmarks = async () => {
-    loading.value = true
-    try {
-      const response = await placeAPI.getBookmarks()
-      bookmarks.value = response.data
-      return response.data
-    } catch (error) {
-      console.error('Error fetching bookmarks:', error)
-      throw error
-    } finally {
-      loading.value = false
-    }
-  }
-
-  const addBookmark = async (placeId) => {
-    try {
-      const response = await placeAPI.createBookmark(placeId)
-      bookmarks.value.push(response.data)
-      return response.data
-    } catch (error) {
-      console.error('Error adding bookmark:', error)
-      throw error
-    }
-  }
-
-  const removeBookmark = async (id) => {
-    try {
-      await placeAPI.deleteBookmark(id)
-      bookmarks.value = bookmarks.value.filter((b) => b.id !== id)
-    } catch (error) {
-      console.error('Error removing bookmark:', error)
-      throw error
-    }
-  }
-
   return {
     places,
     festivals,
-    bookmarks,
     currentPlace,
     loading,
     fetchPlaces,
     fetchPlace,
     fetchFestivals,
-    fetchBookmarks,
-    addBookmark,
-    removeBookmark,
   }
 })

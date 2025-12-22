@@ -82,7 +82,7 @@ const handleLogout = async () => {
 .nav-brand a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #4285f4;
+  color: white;
   text-decoration: none;
 }
 
@@ -95,13 +95,13 @@ const handleLogout = async () => {
 .user-greeting {
   margin-right: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
 .greeting-text {
-  color: #333;
+  color: white;
   font-weight: 500;
 }
 

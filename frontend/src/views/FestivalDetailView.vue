@@ -1,93 +1,91 @@
 <template>
-  <div class="festival-detail-container">
-    <div v-if="festival" class="festival-detail">
-      <!-- 헤더 이미지 -->
-      <div class="hero-image">
-        <img :src="festival.image_url || 'https://via.placeholder.com/1200x400?text=Festival'" :alt="festival.title" />
-        <div class="hero-overlay">
-          <h1>{{ festival.title }}</h1>
-          <div class="festival-badge">{{ festival.region }}</div>
+  <div class="page-container">
+    <div v-if="festival" class="content-wrap">
+      
+      <!-- 히어로 섹션 -->
+      <section class="hero-section">
+        <div class="image-container">
+          <div class="bg-image-blur" :style="`background-image: url(${imageUrl})`"></div>
+          <img class="main-image" :src="imageUrl" :alt="festival.title" />
         </div>
-      </div>
+      </section>
 
-      <!-- 기본 정보 -->
-      <div class="content-wrapper">
-        <div class="info-section">
-          <h2>축제 정보</h2>
-          <div class="info-grid">
-            <div class="info-card">
-              <div class="info-icon">📅</div>
-              <div class="info-content">
-                <h3>개최 기간</h3>
-                <p>{{ formatPeriod() }}</p>
-              </div>
+      <!-- 메인 컨텐츠 -->
+      <main class="main-container">
+        
+        <!-- 축제 헤더 -->
+        <header class="festival-header">
+          <div class="tags">
+            <span class="tag region">{{ festival.region }}</span>
+            <span class="tag category">{{ festival.category || '축제' }}</span>
+          </div>
+          <h1 class="title">{{ festival.title }}</h1>
+          <p class="date-range">{{ formatPeriod() }}</p>
+        </header>
+
+        <div class="divider"></div>
+
+        <!-- 상세 정보 그리드 -->
+        <div class="detail-grid">
+          
+          <!-- 좌측 패널 -->
+          <div class="left-panel">
+            <!-- 위치 정보 -->
+            <div class="info-group">
+              <h3 class="group-label">위치</h3>
+              <p class="group-value">{{ festival.address }}</p>
+              <button @click="copyAddress" class="btn-text-action">
+                주소 복사
+              </button>
             </div>
-            <div class="info-card">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <h3>장소</h3>
-                <p>{{ festival.address }}</p>
-              </div>
+
+            <!-- 연락처 -->
+            <div class="info-group" v-if="festival.phone">
+              <h3 class="group-label">문의</h3>
+              <p class="group-value">{{ festival.phone }}</p>
             </div>
-            <div class="info-card">
-              <div class="info-icon">🎭</div>
-              <div class="info-content">
-                <h3>카테고리</h3>
-                <p>{{ festival.category || '일반축제' }}</p>
-              </div>
-            </div>
-            <div class="info-card" v-if="festival.phone">
-              <div class="info-icon">📞</div>
-              <div class="info-content">
-                <h3>문의</h3>
-                <p>{{ festival.phone }}</p>
-              </div>
+
+            <!-- 액션 버튼 -->
+            <div class="action-area">
+              <button @click="goBack" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                목록으로
+              </button>
             </div>
           </div>
-        </div>
 
-        <!-- 위치 정보 및 카카오맵 -->
-        <div class="location-section" v-if="festival.latitude && festival.longitude">
-          <h2>위치 및 길찾기</h2>
-          <div class="location-info">
-            <p><strong>주소:</strong> {{ festival.address }}</p>
-            <p><strong>좌표:</strong> {{ festival.latitude }}, {{ festival.longitude }}</p>
+          <!-- 우측 패널 (지도) -->
+          <div class="right-panel" v-if="festival.latitude && festival.longitude">
+            <div class="map-card">
+              <div class="map-header">
+                <span class="map-label">지도 보기</span>
+                <button @click="openKakaoNavi" class="btn-kakao-official">
+                  <svg class="kakao-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000">
+                    <path d="M12 3c-5.52 0-10 3.68-10 8.21 0 2.89 1.92 5.45 4.89 6.94-.24.88-.87 3.18-.99 3.64-.05.19-.03.37.08.49.1.12.28.18.45.18.1 0 .2-.03.29-.09l4.77-3.23c.17.01.33.03.51.03 5.52 0 10-3.68 10-8.21C22 6.68 17.52 3 12 3z"/>
+                  </svg>
+                  카카오맵에서 경로 보러가기
+                </button>
+              </div>
+              <div id="kakao-map" class="kakao-map"></div>
+            </div>
           </div>
 
-          <!-- 카카오맵 표시 -->
-          <div id="kakao-map" class="kakao-map"></div>
-
-          <!-- 길찾기 버튼 -->
-          <div class="map-buttons">
-            <button @click="openKakaoNavi" class="map-button navi-btn">
-              <span class="btn-icon">🧭</span>
-              카카오내비로 길찾기
-            </button>
-            <button @click="copyAddress" class="map-button copy-btn">
-              <span class="btn-icon">📋</span>
-              주소 복사
-            </button>
-          </div>
         </div>
-
-        <!-- 하단 액션 버튼 -->
-        <div class="action-buttons">
-          <button @click="goBack" class="back-button">
-            목록으로 돌아가기
-          </button>
-        </div>
-      </div>
+      </main>
     </div>
 
     <!-- 로딩 상태 -->
-    <div v-else class="loading">
-      <p>축제 정보를 불러오는 중...</p>
+    <div v-else class="loading-container">
+      <div class="loader"></div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { getFestivalDetail } from '@/api/festivals'
 
@@ -99,7 +97,12 @@ const loading = ref(false)
 const map = ref(null)
 const endMarker = ref(null)
 const kakaoSdkLoaded = ref(false)
-const userLocation = ref(null) // 사용자 현재 위치
+const userLocation = ref(null)
+
+// 이미지 URL 계산
+const imageUrl = computed(() => {
+  return festival.value?.image_url || 'https://via.placeholder.com/1920x800?text=No+Image'
+})
 
 const formatPeriod = () => {
   if (!festival.value) return ''
@@ -131,7 +134,7 @@ const formatPeriod = () => {
       const start = formatDate(startStr)
       const end = formatDate(endStr)
       if (start && end) {
-        return `${start} ~ ${end}`
+        return `${start} - ${end}`
       }
     }
   }
@@ -166,7 +169,7 @@ const formatPeriod = () => {
       if (startMonth === endMonth) {
         return `${startMonth}월`
       } else {
-        return `${startMonth}월 ~ ${endMonth}월`
+        return `${startMonth}월 - ${endMonth}월`
       }
     }
   }
@@ -175,7 +178,7 @@ const formatPeriod = () => {
   if (festival.value.start_month != null) {
     const startMonth = Number(festival.value.start_month)
     if (!isNaN(startMonth) && startMonth >= 1 && startMonth <= 12) {
-      return `${startMonth}월`
+      return `${startMonth}월 예정`
     }
   }
   
@@ -183,7 +186,7 @@ const formatPeriod = () => {
   if (festival.value.end_month != null) {
     const endMonth = Number(festival.value.end_month)
     if (!isNaN(endMonth) && endMonth >= 1 && endMonth <= 12) {
-      return `${endMonth}월`
+      return `${endMonth}월 예정`
     }
   }
   
@@ -330,38 +333,27 @@ const initKakaoMap = () => {
   try {
     const options = {
       center: new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude),
-      level: 5
+      level: 4
     }
 
     console.log('지도 생성 중...')
     map.value = new window.kakao.maps.Map(container, options)
     console.log('✓ 지도 생성 완료!')
 
-    // 목적지 마커 생성 (빨간색)
+    // 목적지 마커 생성
     const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
-    const imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png'
-    const imageSize = new window.kakao.maps.Size(40, 42)
-    const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize)
-
+    
     endMarker.value = new window.kakao.maps.Marker({
-      position: markerPosition,
-      image: markerImage
+      position: markerPosition
     })
     endMarker.value.setMap(map.value)
 
-    // 인포윈도우 생성
-    const infowindow = new window.kakao.maps.InfoWindow({
-      content: `<div style="padding:10px;font-size:14px;font-weight:bold;">🎉 ${festival.value.title}</div>`
-    })
-    infowindow.open(map.value, endMarker.value)
-
-    console.log('✓ 마커 및 인포윈도우 생성 완료!')
+    console.log('✓ 마커 생성 완료!')
   } catch (error) {
     console.error('✗ 지도 생성 중 오류:', error)
     alert('지도를 표시하는 중 오류가 발생했습니다: ' + error.message)
   }
 }
-
 
 // 좌표를 주소로 변환 (카카오맵 Geocoder 사용)
 const coordToAddress = (lat, lng) => {
@@ -424,8 +416,8 @@ const getUserCurrentLocation = () => {
       },
       {
         timeout: 5000,
-        maximumAge: 60000, // 1분 캐시
-        enableHighAccuracy: false // 빠른 응답을 위해 정확도 낮춤
+        maximumAge: 60000,
+        enableHighAccuracy: false
       }
     )
   })
@@ -468,29 +460,24 @@ const openKakaoNavi = async () => {
   }
 
   // 카카오맵 길찾기 URL 생성
-  // 출발지는 사용자 현재 위치, 도착지는 축제 위치로 자동 입력
-  // /link/from/.../to/... 형식 사용 (출발지와 도착지 모두 자동 입력)
   let naviUrl = ''
   
   if (startLocation && startLocation.lat && startLocation.lng && endLat && endLng) {
     // 출발지와 도착지 모두 좌표가 있는 경우
-    // 형식: https://map.kakao.com/link/from/현재위치,위도,경도/to/도착지명,위도,경도
     try {
-      // 좌표를 숫자로 명시적으로 변환
       const startLat = parseFloat(startLocation.lat)
       const startLng = parseFloat(startLocation.lng)
       const endLatNum = parseFloat(endLat)
       const endLngNum = parseFloat(endLng)
       
-      // /link/from/.../to/... 형식으로 URL 생성
       naviUrl = `https://map.kakao.com/link/from/현재위치,${startLat},${startLng}/to/${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
       
-      console.log('카카오맵 길찾기 URL (출발지+도착지 자동 입력 - /link/from/.../to/...):', naviUrl)
+      console.log('카카오맵 길찾기 URL (출발지+도착지 자동 입력):', naviUrl)
       console.log('출발지:', { lat: startLat, lng: startLng, address: startLocation.address })
       console.log('도착지:', { name: endAddress, lat: endLatNum, lng: endLngNum })
     } catch (error) {
       console.error('URL 생성 오류:', error)
-      // 폴백: 도착지만 포함하는 /link/to/ 경로 사용
+      // 폴백: 도착지만 포함
       const endLatNum = parseFloat(endLat)
       const endLngNum = parseFloat(endLng)
       const endParam = `${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
@@ -499,16 +486,14 @@ const openKakaoNavi = async () => {
     }
   } else if (endLat && endLng) {
     // 출발지 정보가 없는 경우 (도착지만)
-    // 형식: https://map.kakao.com/link/to/도착지명,도착지위도,도착지경도
     try {
       const endLatNum = parseFloat(endLat)
       const endLngNum = parseFloat(endLng)
       const endParam = `${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
       naviUrl = `https://map.kakao.com/link/to/${endParam}`
-      console.log('카카오맵 URL (도착지만 자동 입력 - /link/to/):', naviUrl)
+      console.log('카카오맵 URL (도착지만 자동 입력):', naviUrl)
     } catch (error) {
       console.error('URL 생성 오류:', error)
-      // 폴백: 좌표만 사용
       const endLatNum = parseFloat(endLat)
       const endLngNum = parseFloat(endLng)
       naviUrl = `https://map.kakao.com/link/to/${endLatNum},${endLngNum}`
@@ -527,12 +512,10 @@ const openKakaoNavi = async () => {
   try {
     const newWindow = window.open(naviUrl, '_blank')
     if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-      // 팝업이 차단된 경우 현재 창에서 열기
       window.location.href = naviUrl
     }
   } catch (error) {
     console.error('카카오맵 열기 실패:', error)
-    // 폴백: 현재 창에서 열기
     window.location.href = naviUrl
   }
 }
@@ -567,224 +550,337 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.festival-detail-container {
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
   min-height: 100vh;
-  background-color: #f5f7fa;
+  background-color: #ffffff;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: #191f28;
 }
 
-.hero-image {
-  position: relative;
+/* 1. 히어로 섹션 (이미지 품질 개선) */
+.hero-section {
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  height: 50vh;
+  min-height: 400px;
+  background-color: #111;
 }
 
-.hero-image img {
+.image-container {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  /* 이미지 부드러운 스케일링 */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(0.7);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.main-image {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   image-rendering: auto;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: bicubic;
-  /* 렌더링 최적화 */
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
-  will-change: transform;
 }
 
-.hero-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  padding: 3rem 2rem;
-  color: white;
+/* 2. 메인 컨테이너 */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
+/* 헤더 스타일 */
+.festival-header {
+  margin-bottom: 2rem;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
   margin-bottom: 1rem;
 }
 
-.festival-badge {
-  display: inline-block;
-  background: rgba(52, 152, 219, 0.9);
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  font-weight: 600;
+.tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+.tag.region {
+  color: #3182f6;
+  background-color: rgba(49, 130, 246, 0.1);
 }
 
-.info-section,
-.location-section {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.tag.category {
+  color: #4e5968;
+  background-color: #f2f4f6;
 }
 
-.info-section h2,
-.location-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.info-card {
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-}
-
-.info-icon {
-  font-size: 2rem;
-}
-
-.info-content h3 {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.info-content p {
-  font-size: 1.1rem;
-  color: #333;
+.date-range {
+  font-size: 1.25rem;
+  color: #4e5968;
   font-weight: 500;
 }
 
-.location-info {
-  margin-bottom: 1.5rem;
-}
-
-.location-info p {
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* 카카오맵 스타일 */
-.kakao-map {
+.divider {
   width: 100%;
-  height: 500px;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  border: 2px solid #e0e0e0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 1px;
+  background-color: #e5e8eb;
+  margin-bottom: 3rem;
 }
 
-/* 지도 버튼 스타일 */
-.map-buttons {
+/* 3. 그리드 레이아웃 */
+.detail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
 }
 
-.map-button {
+/* 좌측 패널 */
+.left-panel {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1rem 1.5rem;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-group .group-label {
+  font-size: 0.95rem;
+  color: #8b95a1;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.info-group .group-value {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #191f28;
+  line-height: 1.5;
+}
+
+.info-group .group-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+.btn-text-action {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #8b95a1;
+  background: none;
   border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.btn-text-action:hover {
+  color: #333;
+}
+
+.action-area {
+  margin-top: 1rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
   border-radius: 10px;
+  border: 1px solid #d1d6db;
+  background-color: white;
   font-size: 1rem;
   font-weight: 600;
+  color: #333;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
-.map-button .btn-icon {
-  font-size: 1.3rem;
+.btn-back:hover {
+  background-color: #f9fafb;
+  border-color: #b0b8c1;
 }
 
-.navi-btn {
-  background: linear-gradient(135deg, #FEE500 0%, #FFEB3B 100%);
-  color: #3c1e1e;
+/* 우측 패널 (Sticky 지도) */
+.right-panel {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
 }
 
-.navi-btn:hover {
-  background: linear-gradient(135deg, #FFEB3B 0%, #FDD835 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(254, 229, 0, 0.4);
+.map-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-.copy-btn {
-  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
-  color: white;
-}
-
-.copy-btn:hover {
-  background: linear-gradient(135deg, #7f8c8d 0%, #6c7a7b 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(127, 140, 141, 0.4);
-}
-
-.action-buttons {
+.map-header {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  background-color: white;
+  border-bottom: 1px solid #f2f4f6;
 }
 
-.back-button {
-  padding: 1rem 2rem;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  border-radius: 8px;
+.map-label {
   font-size: 1rem;
+  font-weight: 800;
+  color: #191f28;
+}
+
+/* 카카오내비 버튼 스타일 */
+.btn-kakao-official {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FEE500;
+  border: none;
+  padding: 8px 16px 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #000000;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.back-button:hover {
-  background-color: #5a6268;
+.btn-kakao-official:hover {
+  background-color: #fdd835;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.loading {
-  text-align: center;
-  padding: 4rem 2rem;
-  font-size: 1.2rem;
-  color: #666;
+.btn-kakao-official:active {
+  transform: translateY(0);
+}
+
+.kakao-svg {
+  width: 18px;
+  height: 18px;
+}
+
+.kakao-map {
+  width: 100%;
+  height: 420px;
+  background-color: #f2f4f6;
+}
+
+/* 로딩 */
+.loading-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #e5e8eb;
+  border-top-color: #3182f6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .right-panel {
+    position: static;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .hero-section {
+    height: 40vh;
+  }
+
+  .main-container {
+    padding: 3rem 1rem 4rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-image {
-    height: 250px;
+  .hero-section {
+    height: 35vh;
+    min-height: 300px;
   }
 
-  .hero-overlay h1 {
+  .title {
     font-size: 1.8rem;
   }
 
-  .info-grid {
-    grid-template-columns: 1fr;
+  .date-range {
+    font-size: 1.1rem;
+  }
+
+  .detail-grid {
+    gap: 3rem;
   }
 
   .kakao-map {
     height: 350px;
   }
 
-  .map-buttons {
-    grid-template-columns: 1fr;
+  .main-container {
+    padding: 2rem 1rem 3rem;
   }
 }
 </style>

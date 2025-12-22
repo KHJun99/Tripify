@@ -1,283 +1,275 @@
 <template>
-  <div class="mypage-container">
+  <div class="mypage-wrapper">
     <!-- 비밀번호 확인 모달 (일반 로그인 사용자만) -->
-    <div v-if="showPasswordVerification" class="modal-overlay">
-      <div class="modal-content verification-modal">
-        <h3 class="modal-title">마이페이지 접근 인증</h3>
-        <p class="modal-info">
-          보안을 위해 비밀번호를 입력해주세요.
-        </p>
+    <transition name="modal-fade">
+      <div v-if="showPasswordVerification" class="modal-backdrop">
+        <div class="modal-card verification-modal">
+          <div class="modal-header">
+            <div class="icon-circle lock-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="modal-title">본인 확인</h3>
+            <p class="modal-desc">
+              개인정보 보호를 위해 비밀번호를 입력해주세요.
+            </p>
+          </div>
 
-        <div class="password-input-section">
-          <label for="verify-password">비밀번호</label>
-          <input
-            type="password"
-            id="verify-password"
-            v-model="verifyPassword"
-            placeholder="비밀번호를 입력하세요"
-            class="password-input"
-            @keyup.enter="handlePasswordVerification"
-            autofocus
-          />
-        </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <input
+                type="password"
+                v-model="verifyPassword"
+                placeholder="비밀번호 입력"
+                class="clean-input"
+                @keyup.enter="handlePasswordVerification"
+                autofocus
+              />
+            </div>
+            <p v-if="verifyError" class="error-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              {{ verifyError }}
+            </p>
+          </div>
 
-        <div v-if="verifyError" class="error-message">
-          {{ verifyError }}
-        </div>
-
-        <div class="modal-buttons">
-          <button
-            @click="handlePasswordVerification"
-            class="verify-button"
-            :disabled="isVerifying || !verifyPassword"
-          >
-            {{ isVerifying ? '확인 중...' : '확인' }}
-          </button>
-          <button
-            @click="handleCancelVerification"
-            class="cancel-button"
-            :disabled="isVerifying"
-          >
-            취소
-          </button>
+          <div class="modal-footer">
+            <button
+              @click="handleCancelVerification"
+              class="btn btn-ghost"
+              :disabled="isVerifying"
+            >
+              취소
+            </button>
+            <button
+              @click="handlePasswordVerification"
+              class="btn btn-primary"
+              :disabled="isVerifying || !verifyPassword"
+            >
+              {{ isVerifying ? '확인 중...' : '확인하기' }}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
 
     <!-- 마이페이지 컨텐츠 -->
-    <div v-if="isVerified" class="mypage-content">
-      <div class="mypage-card">
-        <div class="page-header">
-          <h2 class="page-title">👤 마이페이지</h2>
-          <p class="page-subtitle">계정 정보 및 설정을 관리하세요</p>
-        </div>
+    <div v-if="isVerified" class="content-container">
+      <div class="dashboard-grid">
+        
+        <!-- 프로필 사이드바 -->
+        <aside class="profile-sidebar">
+          <div class="card profile-card">
+            <div class="profile-avatar">
+              <span class="avatar-text">{{ user?.nickname?.charAt(0) || user?.username?.charAt(0) || 'U' }}</span>
+            </div>
+            
+            <div class="profile-header">
+              <h2 class="profile-name">
+                {{ user?.nickname || '닉네임 없음' }}
+                <button @click="startEditNickname" class="btn-icon-edit" title="닉네임 수정">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                </button>
+              </h2>
+              <p class="profile-email">{{ user?.email }}</p>
+            </div>
+            
+            <div class="profile-badges">
+              <span class="badge" :class="getLoginTypeClass(user?.login_type)">
+                {{ getLoginTypeLabel(user?.login_type) }}
+              </span>
+            </div>
 
-        <!-- 회원 정보 섹션 -->
-        <section class="info-section">
-          <h3 class="section-title">
-            <span class="section-icon">📋</span>
-            회원 정보
-          </h3>
-          <div class="info-grid" v-if="user">
-            <div class="info-item">
-              <div class="info-icon">👤</div>
-              <div class="info-content">
-                <label>아이디</label>
-                <span>{{ user.username }}</span>
-              </div>
-            </div>
-            <div class="info-item">
-              <div class="info-icon">📧</div>
-              <div class="info-content">
-                <label>이메일</label>
-                <span>{{ user.email }}</span>
-              </div>
-            </div>
-            <div class="info-item editable">
-              <div class="info-icon">✨</div>
-              <div class="info-content">
-                <label>닉네임</label>
-                <div v-if="!isEditingNickname" class="nickname-display">
-                  <span>{{ user.nickname || '닉네임이 없습니다' }}</span>
-                  <button @click.stop="startEditNickname" class="edit-btn">✏️ 수정</button>
+            <transition name="slide-fade">
+              <div v-if="isEditingNickname" class="nickname-edit-box">
+                <input 
+                  v-model="editingNickname" 
+                  type="text" 
+                  class="clean-input sm"
+                  placeholder="새 닉네임"
+                  maxlength="50"
+                  @keyup.enter="saveNickname"
+                  @keyup.esc="cancelEditNickname"
+                  ref="nicknameInputRef"
+                />
+                <div class="edit-actions">
+                  <button @click="saveNickname" class="btn btn-primary btn-sm" :disabled="isSavingNickname">저장</button>
+                  <button @click="cancelEditNickname" class="btn btn-ghost btn-sm">취소</button>
                 </div>
-                <div v-else class="nickname-edit">
-                  <input 
-                    v-model="editingNickname" 
-                    type="text" 
-                    class="nickname-input"
-                    placeholder="닉네임을 입력하세요"
-                    maxlength="50"
-                    @keyup.enter="saveNickname"
-                    @keyup.esc="cancelEditNickname"
-                    ref="nicknameInputRef"
-                  />
-                  <div class="edit-buttons">
-                    <button @click.stop="saveNickname" class="save-btn" :disabled="isSavingNickname">저장</button>
-                    <button @click.stop="cancelEditNickname" class="cancel-btn">취소</button>
+                <p v-if="nicknameError" class="error-text sm">{{ nicknameError }}</p>
+                <p v-if="nicknameSuccess" class="success-text sm">{{ nicknameSuccess }}</p>
+              </div>
+            </transition>
+            
+            <div class="profile-meta">
+              <div class="meta-item">
+                <span class="label">가입일</span>
+                <span class="value">{{ formatDate(user?.created_at) }}</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- 설정 메인 -->
+        <main class="settings-main">
+          
+          <!-- 회원 정보 섹션 -->
+          <section class="card settings-card">
+            <div class="card-header">
+              <h3 class="card-title">내 정보</h3>
+            </div>
+            <div class="card-body">
+              <div class="info-list">
+                <div class="info-row">
+                  <span class="info-label">아이디</span>
+                  <span class="info-value">{{ user?.username }}</span>
+                </div>
+                <div class="divider"></div>
+                <div class="info-row" v-if="user?.preferred_region">
+                  <span class="info-label">선호 지역</span>
+                  <span class="info-value">{{ user.preferred_region }}</span>
+                </div>
+                <div class="info-row" v-if="user?.travel_style">
+                  <span class="info-label">여행 스타일</span>
+                  <span class="info-value">{{ user.travel_style }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 비밀번호 변경 섹션 -->
+          <section class="card settings-card">
+            <div class="card-header">
+              <h3 class="card-title">보안 설정</h3>
+            </div>
+            
+            <div class="card-body">
+              <div v-if="isNormalLogin" class="form-container">
+                <form @submit.prevent="handlePasswordChange">
+                  <div class="form-group">
+                    <label>현재 비밀번호</label>
+                    <input
+                      type="password"
+                      v-model="passwordForm.currentPassword"
+                      class="clean-input"
+                      placeholder="••••••••"
+                    />
                   </div>
+                  
+                  <div class="form-row two-col">
+                    <div class="form-group">
+                      <label>새 비밀번호</label>
+                      <input
+                        type="password"
+                        v-model="passwordForm.newPassword"
+                        class="clean-input"
+                        placeholder="8자 이상"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>새 비밀번호 확인</label>
+                      <input
+                        type="password"
+                        v-model="passwordForm.newPasswordConfirm"
+                        class="clean-input"
+                        placeholder="다시 입력"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <p v-if="passwordError" class="error-text">{{ passwordError }}</p>
+                    <p v-if="passwordSuccess" class="success-text">{{ passwordSuccess }}</p>
+                    <button
+                      type="submit"
+                      class="btn btn-dark"
+                      :disabled="isChangingPassword || !isPasswordFormValid"
+                    >
+                      {{ isChangingPassword ? '변경 중...' : '비밀번호 변경' }}
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div v-else class="social-notice">
+                <div class="notice-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                 </div>
-                <div v-if="nicknameError" class="nickname-error">{{ nicknameError }}</div>
-                <div v-if="nicknameSuccess" class="nickname-success">{{ nicknameSuccess }}</div>
+                <p>소셜 로그인 계정(카카오/구글)은 해당 플랫폼에서 비밀번호를 관리합니다.</p>
               </div>
             </div>
-            <div class="info-item highlight">
-              <div class="info-icon">🔐</div>
-              <div class="info-content">
-                <label>로그인 타입</label>
-                <span class="login-type-badge" :class="getLoginTypeClass(user.login_type)">
-                  {{ getLoginTypeLabel(user.login_type) }}
-                </span>
+          </section>
+
+          <!-- 회원탈퇴 섹션 -->
+          <section class="card settings-card danger-zone">
+            <div class="card-header">
+              <h3 class="card-title">계정 관리</h3>
+            </div>
+            <div class="card-body">
+              <div class="danger-row">
+                <div class="danger-info">
+                  <h4>회원 탈퇴</h4>
+                  <p>탈퇴 시 모든 데이터가 영구적으로 삭제되며 복구할 수 없습니다.</p>
+                </div>
+                <button
+                  @click="showDeleteConfirmation = true"
+                  class="btn btn-outline-danger"
+                  :disabled="isDeleting"
+                >
+                  회원 탈퇴
+                </button>
               </div>
             </div>
-            <div class="info-item">
-              <div class="info-icon">📅</div>
-              <div class="info-content">
-                <label>가입일</label>
-                <span>{{ formatDate(user.created_at) }}</span>
-              </div>
-            </div>
-            <div class="info-item" v-if="user.preferred_region">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <label>선호 지역</label>
-                <span>{{ user.preferred_region }}</span>
-              </div>
-            </div>
-            <div class="info-item" v-if="user.travel_style">
-              <div class="info-icon">🎨</div>
-              <div class="info-content">
-                <label>여행 스타일</label>
-                <span>{{ user.travel_style }}</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- 비밀번호 변경 섹션 (일반 로그인만) -->
-        <section class="password-section" v-if="isNormalLogin">
-          <h3 class="section-title">
-            <span class="section-icon">🔑</span>
-            비밀번호 변경
-          </h3>
-
-        <form @submit.prevent="handlePasswordChange" class="password-form">
-          <div class="form-group">
-            <label for="current-password">현재 비밀번호</label>
-            <input
-              type="password"
-              id="current-password"
-              v-model="passwordForm.currentPassword"
-              placeholder="현재 비밀번호를 입력하세요"
-              class="form-input"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="new-password">새 비밀번호</label>
-            <input
-              type="password"
-              id="new-password"
-              v-model="passwordForm.newPassword"
-              placeholder="새 비밀번호를 입력하세요"
-              class="form-input"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="new-password-confirm">새 비밀번호 확인</label>
-            <input
-              type="password"
-              id="new-password-confirm"
-              v-model="passwordForm.newPasswordConfirm"
-              placeholder="새 비밀번호를 다시 입력하세요"
-              class="form-input"
-            />
-          </div>
-
-          <div v-if="passwordError" class="error-message">
-            {{ passwordError }}
-          </div>
-
-          <div v-if="passwordSuccess" class="success-message">
-            {{ passwordSuccess }}
-          </div>
-
-          <button
-            type="submit"
-            class="change-password-button"
-            :disabled="isChangingPassword || !isPasswordFormValid"
-          >
-            {{ isChangingPassword ? '변경 중...' : '비밀번호 변경' }}
-          </button>
-        </form>
-      </section>
-
-        <section class="password-section" v-else>
-          <h3 class="section-title">
-            <span class="section-icon">🔑</span>
-            비밀번호 변경
-          </h3>
-          <div class="info-box">
-            <p class="info-text">
-              <span class="info-icon-text">ℹ️</span>
-              소셜 로그인 사용자는 비밀번호를 변경할 수 없습니다.
-            </p>
-          </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- 회원탈퇴 섹션 -->
-        <section class="delete-section">
-          <h3 class="danger-title">
-            <span class="section-icon">⚠️</span>
-            회원탈퇴
-          </h3>
-          <div class="warning-box">
-            <p class="warning-text">
-              회원탈퇴 시 모든 데이터가 삭제되며 복구할 수 없습니다.
-            </p>
-          </div>
-
-          <button
-            @click="showDeleteConfirmation = true"
-            class="delete-button"
-            :disabled="isDeleting"
-          >
-            <span>🗑️</span>
-            회원탈퇴
-          </button>
-        </section>
+          </section>
+        </main>
       </div>
     </div>
 
     <!-- 회원탈퇴 확인 모달 -->
-    <div v-if="showDeleteConfirmation" class="modal-overlay" @click.self="closeDeleteModal">
-      <div class="modal-content">
-        <h3 class="modal-title">회원탈퇴 확인</h3>
-        <p class="modal-warning">
-          정말로 회원탈퇴를 하시겠습니까?<br />
-          모든 데이터가 삭제되며 복구할 수 없습니다.
-        </p>
+    <transition name="modal-fade">
+      <div v-if="showDeleteConfirmation" class="modal-backdrop" @click.self="closeDeleteModal">
+        <div class="modal-card delete-modal">
+          <div class="modal-header">
+            <div class="icon-circle danger-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="modal-title">정말 떠나시겠습니까?</h3>
+            <p class="modal-desc">
+              계정을 삭제하면 복구가 불가능합니다.
+            </p>
+          </div>
 
-        <!-- 일반 로그인 사용자는 비밀번호 입력 필요 -->
-        <div v-if="isNormalLogin" class="password-input-section">
-          <label for="delete-password">비밀번호 확인</label>
-          <input
-            type="password"
-            id="delete-password"
-            v-model="deletePassword"
-            placeholder="비밀번호를 입력하세요"
-            class="password-input"
-            @keyup.enter="handleDeleteAccount"
-          />
-        </div>
+          <div class="modal-body">
+            <div v-if="isNormalLogin" class="input-group">
+              <label class="input-label">비밀번호 확인</label>
+              <input
+                type="password"
+                v-model="deletePassword"
+                placeholder="현재 비밀번호 입력"
+                class="clean-input"
+                @keyup.enter="handleDeleteAccount"
+              />
+            </div>
+            <p v-if="deleteError" class="error-text center">{{ deleteError }}</p>
+          </div>
 
-        <div v-if="deleteError" class="error-message">
-          {{ deleteError }}
-        </div>
-
-        <div class="modal-buttons">
-          <button
-            @click="handleDeleteAccount"
-            class="confirm-button"
-            :disabled="isDeleting || (isNormalLogin && !deletePassword)"
-          >
-            {{ isDeleting ? '처리 중...' : '탈퇴하기' }}
-          </button>
-          <button
-            @click="closeDeleteModal"
-            class="cancel-button"
-            :disabled="isDeleting"
-          >
-            취소
-          </button>
+          <div class="modal-footer">
+            <button
+              @click="closeDeleteModal"
+              class="btn btn-ghost"
+              :disabled="isDeleting"
+            >
+              취소
+            </button>
+            <button
+              @click="handleDeleteAccount"
+              class="btn btn-danger"
+              :disabled="isDeleting || (isNormalLogin && !deletePassword)"
+            >
+              {{ isDeleting ? '처리 중...' : '탈퇴하기' }}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -357,7 +349,6 @@ const startEditNickname = () => {
   isEditingNickname.value = true
   nicknameError.value = ''
   nicknameSuccess.value = ''
-  // 다음 틱에서 포커스
   setTimeout(() => {
     if (nicknameInputRef.value) {
       nicknameInputRef.value.focus()
@@ -395,7 +386,6 @@ const saveNickname = async () => {
     nicknameSuccess.value = '닉네임이 변경되었습니다.'
     isEditingNickname.value = false
     
-    // 3초 후 성공 메시지 제거
     setTimeout(() => {
       nicknameSuccess.value = ''
     }, 3000)
@@ -441,20 +431,20 @@ const handleCancelVerification = () => {
 
 const getLoginTypeLabel = (type) => {
   const labels = {
-    normal: '일반 로그인',
-    kakao: '카카오 로그인',
-    google: '구글 로그인',
+    normal: '일반 회원',
+    kakao: 'KAKAO',
+    google: 'GOOGLE',
   }
-  return labels[type] || '일반 로그인'
+  return labels[type] || '일반 회원'
 }
 
 const getLoginTypeClass = (type) => {
   const classes = {
-    normal: 'login-normal',
-    kakao: 'login-kakao',
-    google: 'login-google',
+    normal: 'badge-normal',
+    kakao: 'badge-kakao',
+    google: 'badge-google',
   }
-  return classes[type] || 'login-normal'
+  return classes[type] || 'badge-normal'
 }
 
 const formatDate = (dateString) => {
@@ -562,612 +552,411 @@ const handleDeleteAccount = async () => {
 </script>
 
 <style scoped>
-.mypage-container {
-  background: #f5f7fa;
-  min-height: 100vh;
-  padding: 2rem 1rem;
+/* Reset */
+* {
+  box-sizing: border-box;
 }
 
-.mypage-content {
-  max-width: 900px;
+.mypage-wrapper {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 3rem 1rem;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: #333;
+}
+
+.content-container {
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.mypage-card {
-  background: white;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e8ecef;
-}
-
-.page-header {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid #3498db;
-}
-
-.page-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #1a1a1a;
-  font-weight: 700;
-}
-
-.page-subtitle {
-  font-size: 1.1rem;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.section-icon {
-  font-size: 1.3rem;
-}
-
-.info-section {
-  margin-bottom: 2.5rem;
-}
-
-.info-grid {
+/* Grid Layout */
+.dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: 350px 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: #f8f9fa;
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Common Card */
+.card {
+  background: white;
   border-radius: 12px;
-  border: 1px solid #e8ecef;
-  border-left: 4px solid #3498db;
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
 }
 
-.info-item:hover {
-  background: #e9ecef;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
 }
 
-.info-item.highlight {
-  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
-  border-left-color: #ff9800;
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
 }
 
-.info-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Profile Sidebar */
+.profile-card {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e4ff;
+  color: #5a67d8;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
-.info-content {
-  flex: 1;
+.profile-header {
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
-.info-item label {
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: #6c757d;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.btn-icon-edit {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  transition: color 0.2s;
 }
 
-.info-item span {
-  color: #1a1a1a;
-  font-size: 1.1rem;
-  font-weight: 600;
+.btn-icon-edit:hover {
+  color: #4a5568;
 }
 
-.login-type-badge {
+.profile-email {
+  color: #718096;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.profile-badges {
+  margin-bottom: 2rem;
+}
+
+.badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.badge-normal { background: #edf2f7; color: #4a5568; }
+.badge-kakao { background: #fee500; color: #191919; }
+.badge-google { background: #fff; border: 1px solid #e2e8f0; color: #4a5568; }
+
+.profile-meta {
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
   font-size: 0.9rem;
+}
+
+.meta-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.meta-item .label { color: #a0aec0; }
+.meta-item .value { color: #4a5568; font-weight: 500; }
+
+/* Settings Main */
+.settings-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: #718096;
   font-weight: 600;
 }
 
-.login-type-badge.login-normal {
-  background: #e3f2fd;
-  color: #1976d2;
-}
-
-.login-type-badge.login-kakao {
-  background: #fef3e2;
-  color: #f9a825;
-}
-
-.login-type-badge.login-google {
-  background: #e8f5e9;
-  color: #388e3c;
+.info-value {
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 500;
 }
 
 .divider {
-  height: 2px;
-  background: linear-gradient(to right, transparent, #e8ecef, transparent);
-  margin: 2.5rem 0;
-  border: none;
+  height: 1px;
+  background-color: #f0f0f0;
+  width: 100%;
 }
 
-.password-section {
-  margin-bottom: 2.5rem;
-}
-
-.info-box {
-  padding: 1.25rem;
-  background: #f8f9fa;
-  border-radius: 12px;
-  border-left: 4px solid #3498db;
-}
-
-.info-text {
-  color: #495057;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.info-icon-text {
-  font-size: 1.2rem;
-}
-
-.password-form {
-  max-width: 500px;
-}
-
+/* Forms & Inputs */
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .form-group label {
   display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
   margin-bottom: 0.5rem;
-  color: #495057;
+}
+
+.form-row.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.clean-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background-color: #fff;
+}
+
+.clean-input:focus {
+  outline: none;
+  border-color: #5a67d8;
+  box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1);
+}
+
+.clean-input.sm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
-}
-
-.form-input {
-  width: 100%;
-  padding: 0.875rem 1rem;
-  border: 2px solid #dee2e6;
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
-}
-
-.change-password-button {
-  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-  color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 0.5rem;
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
-
-.change-password-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-}
-
-.change-password-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.delete-section {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #fff5f5;
-  border-radius: 12px;
-  border: 2px solid #ffebee;
-}
-
-.danger-title {
-  font-size: 1.5rem;
-  color: #dc3545;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.warning-box {
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid #dc3545;
-}
-
-.warning-text {
-  color: #495057;
-  margin: 0;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
-.delete-button {
-  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.delete-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
-}
-
-.delete-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.error-message {
-  background-color: #f8d7da;
-  color: #721c24;
-  padding: 0.875rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  border: 1px solid #f5c6cb;
-}
-
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 0.875rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  border: 1px solid #c3e6cb;
-}
-
-/* 모달 스타일 */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: white;
-  border-radius: 16px;
-  padding: 2.5rem;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  animation: modalFadeIn 0.3s ease-out;
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.verification-modal {
-  max-width: 450px;
-}
-
-.modal-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-  font-weight: 700;
-}
-
-.modal-info {
-  color: #6c757d;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.modal-warning {
-  color: #6c757d;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.password-input-section {
-  margin-bottom: 1.5rem;
-}
-
-.password-input-section label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #495057;
-  font-weight: 600;
-}
-
-.password-input {
-  width: 100%;
-  padding: 0.875rem;
-  border: 2px solid #dee2e6;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.2s;
-}
-
-.password-input:focus {
-  outline: none;
-  border-color: #4CAF50;
-}
-
-.modal-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-}
-
-.verify-button,
-.confirm-button,
-.cancel-button {
-  padding: 0.875rem 1.75rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
   transition: all 0.2s;
 }
 
-.verify-button {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.verify-button:hover:not(:disabled) {
-  background-color: #45a049;
-}
-
-.verify-button:disabled {
+.btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.confirm-button {
-  background-color: #dc3545;
+.btn-primary {
+  background-color: #5a67d8;
   color: white;
 }
+.btn-primary:hover:not(:disabled) { background-color: #4c51bf; }
 
-.confirm-button:hover:not(:disabled) {
-  background-color: #c82333;
-}
-
-.confirm-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.cancel-button {
-  background-color: #6c757d;
+.btn-dark {
+  background-color: #2d3748;
   color: white;
 }
+.btn-dark:hover:not(:disabled) { background-color: #1a202c; }
 
-.cancel-button:hover:not(:disabled) {
-  background-color: #5a6268;
+.btn-ghost {
+  background: transparent;
+  color: #718096;
+}
+.btn-ghost:hover:not(:disabled) { background-color: #f7fafc; }
+
+.btn-danger {
+  background-color: #e53e3e;
+  color: white;
+}
+.btn-danger:hover:not(:disabled) { background-color: #c53030; }
+
+.btn-outline-danger {
+  background: white;
+  border: 1px solid #e53e3e;
+  color: #e53e3e;
+}
+.btn-outline-danger:hover:not(:disabled) {
+  background-color: #fff5f5;
 }
 
-.cancel-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-  .mypage-container {
-    padding: 1rem 0.5rem;
-  }
-
-  .mypage-card {
-    padding: 1.5rem;
-  }
-
-  .page-title {
-    font-size: 2rem;
-  }
-
-  .page-subtitle {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.3rem;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .info-item {
-    padding: 1rem;
-  }
-
-  .modal-content {
-    padding: 1.5rem;
-  }
-
-  .modal-buttons {
-    flex-direction: column-reverse;
-    gap: 0.75rem;
-  }
-
-  .verify-button,
-  .confirm-button,
-  .cancel-button {
-    width: 100%;
-  }
-
-  .delete-section {
-    padding: 1rem;
-  }
+/* Danger Zone */
+.danger-zone {
+  border: 1px solid #fed7d7;
+  background-color: #fff5f5;
 }
 
-/* 닉네임 수정 스타일 */
-.info-item.editable {
-  border-left-color: #ff9800;
+.danger-zone .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid #fed7d7;
 }
 
-.nickname-display {
+.danger-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.nickname-display span {
-  flex: 1;
+.danger-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #c53030;
+  font-size: 1rem;
 }
 
-.edit-btn {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
+.danger-info p {
+  margin: 0;
+  color: #c53030;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Social Notice */
+.social-notice {
+  background-color: #f7fafc;
+  padding: 1.5rem;
   border-radius: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #718096;
+  font-size: 0.95rem;
 }
 
-.edit-btn:hover {
-  background: #2980b9;
-  transform: translateY(-1px);
+/* Modals */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
 }
 
-.nickname-edit {
+.modal-card {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 2rem 1.5rem 1rem;
+  text-align: center;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+.lock-icon { background: #ebf4ff; color: #5a67d8; }
+.danger-icon { background: #fff5f5; color: #e53e3e; }
+
+.modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+
+.modal-desc {
+  margin: 0;
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.modal-body {
+  padding: 1rem 1.5rem;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Transitions */
+.modal-fade-enter-active, .modal-fade-leave-active { transition: opacity 0.2s; }
+.modal-fade-enter-from, .modal-fade-leave-to { opacity: 0; }
+
+.slide-fade-enter-active { transition: all 0.3s ease; }
+.slide-fade-leave-active { transition: all 0.2s ease; }
+.slide-fade-enter-from, .slide-fade-leave-to { transform: translateY(-5px); opacity: 0; }
+
+.nickname-edit-box {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-}
-
-.nickname-input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #3498db;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.nickname-input:focus {
-  outline: none;
-  border-color: #2980b9;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-}
-
-.edit-buttons {
-  display: flex;
   gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
-
-.save-btn,
-.cancel-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.save-btn {
-  background: #4CAF50;
-  color: white;
-}
-
-.save-btn:hover:not(:disabled) {
-  background: #45a049;
-  transform: translateY(-1px);
-}
-
-.save-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.cancel-btn {
-  background: #6c757d;
-  color: white;
-}
-
-.cancel-btn:hover {
-  background: #5a6268;
-}
-
-.nickname-error {
-  color: #dc3545;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-}
-
-.nickname-success {
-  color: #28a745;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-  font-weight: 600;
-}
+.edit-actions { display: flex; gap: 0.5rem; justify-content: center; }
+.error-text { color: #e53e3e; font-size: 0.85rem; margin-top: 0.5rem; text-align: center; }
+.error-text.sm { font-size: 0.8rem; }
+.success-text { color: #38a169; font-size: 0.85rem; margin-top: 0.5rem; text-align: center; }
+.success-text.sm { font-size: 0.8rem; }
 </style>
