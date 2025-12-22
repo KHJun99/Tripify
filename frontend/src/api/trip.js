@@ -39,4 +39,10 @@ export const tripAPI = {
   getRecommendedPlans() {
     return axios.get('/travel/recommended/')
   },
+  
+  modifyPlan(id, data) {
+    return axios.post(`/travel/plans/${id}/modify/`, data, {
+      timeout: 60000, // 60초
+    })
+  },
 }

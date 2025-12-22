@@ -74,15 +74,15 @@ const handleLogout = async () => {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #3498db;
-  color: white;
+  background-color: #e0efff;
+  color: #333;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand a {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: #4285f4;
   text-decoration: none;
 }
 
@@ -95,19 +95,19 @@ const handleLogout = async () => {
 .user-greeting {
   margin-right: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   font-size: 0.9rem;
 }
 
 .greeting-text {
-  color: white;
+  color: #333;
   font-weight: 500;
 }
 
 .nav-links a,
 .btn-link {
-  color: white;
+  color: #333;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -127,8 +127,8 @@ const handleLogout = async () => {
 }
 
 .main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 </style>

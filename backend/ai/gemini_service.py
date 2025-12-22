@@ -643,3 +643,286 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             formatted.append(f"- {festival.title} ({festival.category}): {period} @ {festival.address}")
 
         return "\n".join(formatted)
+
+    def modify_itinerary(self, existing_plan, requirements, budget, people_count, start_date, end_date, departure_location, region, travel_style, accommodation_type):
+        """
+        기존 여행 계획을 사용자 요구사항에 맞게 수정
+        """
+        # 여행 일수 계산
+        days = (end_date - start_date).days + 1
+        
+        # 기존 일정을 JSON 형식으로 포맷팅
+        existing_itinerary_str = self._format_existing_itinerary(existing_plan)
+        
+        # 데이터베이스에서 해당 지역의 실제 장소 정보 가져오기
+        tourist_spots = self._get_places_by_region(region, 'tourist', limit=15)
+        restaurants = self._get_places_by_region(region, 'restaurant', limit=10)
+        accommodations = self._get_places_by_region(region, 'accommodation', limit=5)
+        festivals = self._get_festivals_by_region(region, start_date, end_date)
+        
+        # 장소 정보를 문자열로 포맷팅
+        tourist_spots_str = self._format_places(tourist_spots)
+        restaurants_str = self._format_places(restaurants)
+        accommodations_str = self._format_places(accommodations)
+        festivals_str = self._format_festivals(festivals)
+        
+        # 일일 예산 계산
+        daily_budget = budget // days
+        budget_max = int(budget * 1.1)
+        
+        # 기존 일정을 JSON 형식으로 변환
+        existing_days_data = []
+        for itinerary in existing_plan.itineraries.all().order_by('day_number'):
+            existing_days_data.append({
+                'day_number': itinerary.day_number,
+                'description': itinerary.description,
+                'attractions': itinerary.attractions or [],
+                'transportation_info': itinerary.transportation_info or {},
+                'accommodation_info': itinerary.accommodation_info or {},
+                'meals_info': itinerary.meals_info or {},
+                'events_info': itinerary.events_info or [],
+                'estimated_cost': itinerary.estimated_cost or 0
+            })
+        
+        existing_json = json.dumps(existing_days_data, ensure_ascii=False, indent=2)
+        
+        # 프롬프트 생성
+        prompt = f"""
+다음은 기존 여행 계획입니다. **기존 계획을 최대한 유지하면서** 사용자의 요구사항에 맞게 **부분적으로만 수정**해주세요.
+
+**⚠️ 매우 중요: 기존 계획의 구조와 내용을 최대한 유지하세요. 요구사항에 명시되지 않은 부분은 그대로 유지해야 합니다.**
+
+**기존 여행 계획 (JSON 형식):**
+```json
+{existing_json}
+```
+
+**사용자 요구사항:**
+{requirements}
+
+**기본 여행 정보:**
+- 총 예산: {budget:,}원 (총 {people_count}명, 1인당 약 {budget // people_count:,}원)
+- 여행 인원: {people_count}명
+- 여행 기간: {start_date} ~ {end_date} ({days}일)
+- 출발지: {departure_location}
+- 여행 지역: {region}
+- 여행 스타일: {travel_style}
+- 숙박 타입: {accommodation_type}
+
+**{region} 지역의 실제 데이터베이스 정보를 활용하세요:**
+
+📍 추천 관광지 (이 중에서 선택하세요):
+{tourist_spots_str}
+
+🍽️ 추천 음식점 (이 중에서 선택하세요):
+{restaurants_str}
+
+🏨 추천 숙박시설 (이 중에서 선택하세요):
+{accommodations_str}
+
+🎉 해당 기간의 축제/행사:
+{festivals_str}
+
+**수정 지침 (매우 중요):**
+1. **기존 계획의 구조를 그대로 유지하세요** - day_number, 일정 순서, 전체적인 흐름은 변경하지 마세요
+2. **요구사항에 명시된 부분만 수정하세요** - 예를 들어 "2일차 저녁 식사"만 언급되었다면, 2일차 저녁 식사만 변경하고 나머지는 그대로 유지
+3. **요구사항에 해당하지 않는 일정은 기존 내용을 그대로 반환하세요**
+4. 예산은 {budget:,}원을 초과하지 않도록 주의하세요 (최대 {budget_max:,}원)
+5. **반드시 {days}일치 일정을 모두 반환해야 하며, 각 일정의 day_number는 기존과 동일해야 합니다**
+6. 각 일차마다 meals_info에 아침, 점심, 저녁 식사 정보를 반드시 포함하세요
+7. **기존 계획에서 좋은 부분(요구사항과 무관한 부분)은 절대 변경하지 마세요**
+
+JSON 형식 (정확히 이 구조를 따라주세요):
+{{
+  "days": [
+    {{
+      "day_number": 1,
+      "description": "수정된 일정 전체 요약",
+      "attractions": [
+        {{
+          "name": "관광지명",
+          "time": "09:00",
+          "duration": "2시간",
+          "description": "관광지 설명"
+        }}
+      ],
+      "transportation_info": {{
+        "오전": "교통수단 및 비용",
+        "오후": "교통수단 및 비용",
+        "저녁": "교통수단 및 비용"
+      }},
+      "accommodation_info": {{
+        "name": "숙소명",
+        "cost": 80000,
+        "check_in": "15:00",
+        "check_out": "11:00"
+      }},
+      "meals_info": {{
+        "아침": {{
+          "restaurant": "식당명 또는 음식 종류",
+          "cost": 10000
+        }},
+        "점심": {{
+          "restaurant": "식당명 또는 음식 종류",
+          "cost": 15000
+        }},
+        "저녁": {{
+          "restaurant": "식당명 또는 음식 종류",
+          "cost": 20000
+        }}
+      }},
+      "events_info": [],
+      "estimated_cost": {daily_budget}
+    }}{f''',
+    {{
+      "day_number": {days},
+      "description": "수정된 {days}일차 일정 요약",
+      "attractions": [...],
+      "transportation_info": {{...}},
+      "accommodation_info": {{...}},
+      "meals_info": {{...}},
+      "events_info": [],
+      "estimated_cost": {daily_budget}
+    }}''' if days > 1 else ''}
+  ]
+}}
+
+**중요:**
+- 모든 텍스트는 한글로 작성하세요
+- transportation_info의 키: "오전", "오후", "저녁" 사용
+- meals_info는 반드시 "아침", "점심", "저녁" 키를 모두 가져야 합니다
+- 사용자 요구사항을 반드시 반영하세요
+- 예산을 준수하세요
+"""
+
+        # API 키가 없으면 기존 계획 반환
+        if not self.api_key:
+            print('경고: GMS_API_KEY가 설정되지 않았습니다. 기존 계획을 반환합니다.')
+            return self._get_existing_itinerary_data(existing_plan)
+        
+        # SSAFY GMS API 호출
+        try:
+            url = f'{self.base_url}?key={self.api_key}'
+            headers = {'Content-Type': 'application/json'}
+            payload = {
+                'contents': [
+                    {
+                        'parts': [
+                            {'text': prompt}
+                        ]
+                    }
+                ]
+            }
+            
+            response = requests.post(url, headers=headers, json=payload, timeout=60)
+            response.raise_for_status()
+            
+            result = response.json()
+            
+            # Gemini API 응답 파싱
+            if 'candidates' in result and len(result['candidates']) > 0:
+                content = result['candidates'][0]['content']
+                if 'parts' in content and len(content['parts']) > 0:
+                    text = content['parts'][0]['text']
+                    
+                    print('=== 수정된 계획 API 원본 응답 ===')
+                    print(f'응답 길이: {len(text)} 글자')
+                    print(f'첫 200자: {text[:200]}')
+                    print('=' * 50)
+                    
+                    # JSON 파싱 시도
+                    try:
+                        # 코드 블록 제거
+                        if '```json' in text:
+                            text = text.split('```json')[1].split('```')[0].strip()
+                        elif '```' in text:
+                            text = text.split('```')[1].split('```')[0].strip()
+                        
+                        itinerary_data = json.loads(text)
+                        days_count = len(itinerary_data.get("days", []))
+                        print(f'✓ 수정된 계획 JSON 파싱 성공! Days: {days_count}개 (요청: {days}일)')
+                        
+                        # 일수 검증
+                        if days_count != days:
+                            print(f'⚠️ 일수 불일치! 요청: {days}일, 생성: {days_count}일')
+                        
+                        # 예산 검증
+                        self._validate_budget(itinerary_data, budget, int(budget * 0.9), budget_max)
+                        
+                        return itinerary_data
+                    except json.JSONDecodeError as e:
+                        print(f'✗ JSON 파싱 실패: {e}')
+                        print(f'파싱 시도한 텍스트 (첫 500자):\n{text[:500]}')
+                        return self._get_existing_itinerary_data(existing_plan)
+            
+            # 응답이 비정상인 경우 기존 계획 반환
+            return self._get_existing_itinerary_data(existing_plan)
+            
+        except requests.exceptions.RequestException as e:
+            print(f'GMS API 호출 오류: {e}')
+            return self._get_existing_itinerary_data(existing_plan)
+
+    def _format_existing_itinerary(self, travel_plan):
+        """기존 여행 계획을 프롬프트용 문자열로 포맷팅"""
+        if not travel_plan or not hasattr(travel_plan, 'itineraries'):
+            return "기존 계획 정보가 없습니다."
+        
+        formatted = []
+        formatted.append(f"제목: {travel_plan.title}")
+        formatted.append(f"예산: {travel_plan.budget:,}원")
+        formatted.append(f"인원: {travel_plan.people_count}명")
+        formatted.append(f"기간: {travel_plan.start_date} ~ {travel_plan.end_date}")
+        formatted.append(f"지역: {travel_plan.region}")
+        formatted.append(f"스타일: {travel_plan.travel_style}")
+        formatted.append(f"숙박: {travel_plan.accommodation_type}")
+        formatted.append("")
+        formatted.append("일정:")
+        
+        for itinerary in travel_plan.itineraries.all().order_by('day_number'):
+            formatted.append(f"\n[Day {itinerary.day_number}] {itinerary.date}")
+            formatted.append(f"설명: {itinerary.description}")
+            
+            if itinerary.attractions:
+                formatted.append("관광지:")
+                for attr in itinerary.attractions:
+                    if isinstance(attr, dict):
+                        formatted.append(f"  - {attr.get('name', '')} ({attr.get('time', '')}, {attr.get('duration', '')})")
+            
+            if itinerary.transportation_info:
+                formatted.append("교통:")
+                for key, value in itinerary.transportation_info.items():
+                    formatted.append(f"  - {key}: {value}")
+            
+            if itinerary.accommodation_info:
+                acc = itinerary.accommodation_info
+                if isinstance(acc, dict):
+                    formatted.append(f"숙소: {acc.get('name', '')} ({acc.get('cost', 0):,}원)")
+            
+            if itinerary.meals_info:
+                formatted.append("식사:")
+                for meal_time, meal_info in itinerary.meals_info.items():
+                    if isinstance(meal_info, dict):
+                        formatted.append(f"  - {meal_time}: {meal_info.get('restaurant', '')} ({meal_info.get('cost', 0):,}원)")
+                    else:
+                        formatted.append(f"  - {meal_time}: {meal_info}")
+            
+            if itinerary.estimated_cost:
+                formatted.append(f"예상 비용: {itinerary.estimated_cost:,}원")
+        
+        return "\n".join(formatted)
+
+    def _get_existing_itinerary_data(self, travel_plan):
+        """기존 여행 계획을 JSON 형식으로 변환"""
+        days = []
+        for itinerary in travel_plan.itineraries.all().order_by('day_number'):
+            days.append({
+                'day_number': itinerary.day_number,
+                'description': itinerary.description,
+                'attractions': itinerary.attractions or [],
+                'transportation_info': itinerary.transportation_info or {},
+                'accommodation_info': itinerary.accommodation_info or {},
+                'meals_info': itinerary.meals_info or {},
+                'events_info': itinerary.events_info or [],
+                'estimated_cost': itinerary.estimated_cost or 0
+            })
+        return {'days': days}

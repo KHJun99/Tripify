@@ -126,19 +126,33 @@ export const useTripStore = defineStore('trip', () => {
 
   const unrecommendPlan = async (id) => {
     try {
+      console.log('[Store] 추천 취소 시작 - Plan ID:', id)
       const response = await tripAPI.unrecommendPlan(id)
+      console.log('[Store] 추천 취소 성공:', response.data)
+      
       // 현재 계획 업데이트
       if (currentPlan.value && currentPlan.value.id === id) {
         currentPlan.value = response.data
+        console.log('[Store] currentPlan 업데이트 완료')
       }
+      
       // 목록 업데이트
       const index = plans.value.findIndex((p) => p.id === id)
       if (index !== -1) {
         plans.value[index] = response.data
+        console.log('[Store] plans 목록 업데이트 완료')
       }
+      
       return response.data
     } catch (error) {
-      console.error('Error unrecommending plan:', error)
+      console.error('[Store] 추천 취소 오류 상세:', {
+        message: error.message,
+        response: error.response,
+        status: error.response?.status,
+        statusText: error.response?.statusText,
+        data: error.response?.data,
+        config: error.config
+      })
       throw error
     }
   }
@@ -150,6 +164,40 @@ export const useTripStore = defineStore('trip', () => {
       return response.data
     } catch (error) {
       console.error('Error fetching recommended plans:', error)
+      throw error
+    } finally {
+      loading.value = false
+    }
+  }
+
+  const modifyPlan = async (id, requirements) => {
+    loading.value = true
+    try {
+      console.log('[Store] 계획 수정 시작 - Plan ID:', id, '요구사항:', requirements)
+      const response = await tripAPI.modifyPlan(id, { requirements })
+      console.log('[Store] 계획 수정 성공:', response.data)
+      
+      // 현재 계획 업데이트
+      if (currentPlan.value && currentPlan.value.id === id) {
+        currentPlan.value = response.data
+        console.log('[Store] currentPlan 업데이트 완료')
+      }
+      
+      // 목록 업데이트
+      const index = plans.value.findIndex((p) => p.id === id)
+      if (index !== -1) {
+        plans.value[index] = response.data
+        console.log('[Store] plans 목록 업데이트 완료')
+      }
+      
+      return response.data
+    } catch (error) {
+      console.error('[Store] 계획 수정 오류 상세:', {
+        message: error.message,
+        response: error.response,
+        status: error.response?.status,
+        data: error.response?.data
+      })
       throw error
     } finally {
       loading.value = false
@@ -169,5 +217,6 @@ export const useTripStore = defineStore('trip', () => {
     recommendPlan,
     unrecommendPlan,
     fetchRecommendedPlans,
+    modifyPlan,
   }
 })

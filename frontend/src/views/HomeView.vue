@@ -2,10 +2,15 @@
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { getFestivals } from '@/api/festivals'
-
 const router = useRouter()
 const searchQuery = ref('')
 const festivals = ref([])
+
+// 북마크 카드 클릭 핸들러 - 카카오맵으로 이동
+// 카카오맵에서 카카오 로그인을 할 수 있습니다
+const handleBookmarkClick = () => {
+  window.open('https://map.kakao.com/', '_blank')
+}
 
 // --- 1. 여행지 데이터 및 랜덤 추천 로직 (기존 유지) ---
 const allDestinations = [
@@ -268,13 +273,14 @@ onUnmounted(() => {
           </div>
         </div>
         
-        <div class="feature-card">
+        <div class="feature-card clickable" @click="handleBookmarkClick">
           <div class="icon-circle">
             <span class="icon">⭐</span>
           </div>
           <div class="card-content">
             <h3>나만의 북마크</h3>
             <p>마음에 드는 장소를 발견하셨나요? 저장해두고 언제든 확인하세요.</p>
+            <span class="link-text">장소 북마크하기 &rarr;</span>
           </div>
         </div>
       </div>
@@ -330,8 +336,12 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.home {
+  width: 100%;
+}
+
 /* --- Hero 섹션 스타일 (기존 유지) --- */
-.hero-container { position: relative; width: 100%; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; color: #fff; background-color: #1f2937; }
+.hero-container { position: relative; width: 100%; height: 600px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; color: #fff; background-color: #1f2937; }
 .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: blur(3px) brightness(0.8); z-index: 0; transform: scale(1.05); transition: transform 6s linear; }
 .fade-enter-active, .fade-leave-active { transition: opacity 0.8s ease-in-out; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
@@ -364,7 +374,7 @@ onUnmounted(() => {
 .pos-2 { transform: rotate(9deg) translateX(100px) translateY(-20px); z-index: 3; }
 
 /* --- 기타 섹션 스타일 --- */
-.features { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+.features { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
 .section-header { text-align: center; margin-bottom: 3rem; }
 .features h2 { font-size: 2.2rem; color: #1f2937; font-weight: 800; margin-bottom: 0.5rem; }
 .section-desc { color: #6b7280; font-size: 1.1rem; }
@@ -379,7 +389,7 @@ onUnmounted(() => {
 .feature-card.clickable { cursor: pointer; }
 .link-text { font-size: 0.95rem; font-weight: 600; color: #4285f4; opacity: 0; transform: translateX(-10px); transition: all 0.3s ease; display: inline-block; }
 .feature-card.clickable:hover .link-text { opacity: 1; transform: translateX(0); }
-.calendar-section { max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem; }
+.calendar-section { max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem; width: 100%; }
 .calendar-title { text-align: center; font-size: 1.8rem; margin-bottom: 1.5rem; color: #333; }
 .calendar-wrapper { display: flex; align-items: center; background: white; padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); height: 100px; border: 1px solid #eee; }
 .calendar-left { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 100px; gap: 0.25rem; }

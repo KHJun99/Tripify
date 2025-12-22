@@ -14,6 +14,12 @@ const rating = ref(5)
 const isSubmitting = ref(false)
 const reviewError = ref('')
 
+// 계획 수정 관련
+const showModifyModal = ref(false)
+const requirements = ref('')
+const isModifying = ref(false)
+const modifyError = ref('')
+
 // 숙박 타입 한글 변환
 const getAccommodationTypeLabel = (type) => {
   const labels = {
@@ -39,12 +45,16 @@ const isOwner = computed(() => {
     return false
   }
   
-  // user 필드가 문자열인 경우 (StringRelatedField)
+  // user_id로 비교 (가장 정확한 방법)
+  if (tripStore.currentPlan.user_id && authStore.user.id) {
+    return tripStore.currentPlan.user_id === authStore.user.id
+  }
+  
+  // user_id가 없으면 username으로 fallback
   const planUser = typeof tripStore.currentPlan.user === 'string' 
     ? tripStore.currentPlan.user 
     : tripStore.currentPlan.user?.username || tripStore.currentPlan.user
   
-  // authStore.user가 객체인 경우 username 사용
   const currentUser = authStore.user.username || authStore.user
   
   return planUser === currentUser
@@ -64,9 +74,20 @@ const handleUnrecommend = async () => {
   if (!confirm('추천을 취소하시겠습니까?')) return
   
   try {
-    await tripStore.unrecommendPlan(tripStore.currentPlan.id)
+    console.log('추천 취소 시작 - Plan ID:', tripStore.currentPlan.id)
+    const result = await tripStore.unrecommendPlan(tripStore.currentPlan.id)
+    console.log('추천 취소 성공:', result)
+    // 성공 메시지
+    alert('추천이 취소되었습니다.')
   } catch (error) {
-    alert('추천 취소 중 오류가 발생했습니다.')
+    console.error('추천 취소 오류 상세:', {
+      message: error.message,
+      response: error.response,
+      status: error.response?.status,
+      data: error.response?.data
+    })
+    const errorMessage = error.response?.data?.error || error.message || '추천 취소 중 오류가 발생했습니다.'
+    alert(errorMessage)
   }
 }
 
@@ -104,6 +125,56 @@ const closeReviewModal = () => {
   review.value = ''
   rating.value = 5
   reviewError.value = ''
+}
+
+const handleModify = () => {
+  showModifyModal.value = true
+  requirements.value = ''
+  modifyError.value = ''
+}
+
+const closeModifyModal = () => {
+  showModifyModal.value = false
+  requirements.value = ''
+  modifyError.value = ''
+}
+
+const submitModify = async () => {
+  if (!requirements.value.trim()) {
+    modifyError.value = '수정 요구사항을 입력해주세요.'
+    return
+  }
+  
+  if (requirements.value.trim().length > 2000) {
+    modifyError.value = '요구사항은 2000자 이하여야 합니다.'
+    return
+  }
+  
+  if (!confirm('계획을 수정하시겠습니까? 기존 일정이 삭제되고 새로운 일정으로 대체됩니다.')) {
+    return
+  }
+  
+  isModifying.value = true
+  modifyError.value = ''
+  
+  try {
+    console.log('계획 수정 시작 - Plan ID:', tripStore.currentPlan.id)
+    await tripStore.modifyPlan(tripStore.currentPlan.id, requirements.value.trim())
+    console.log('계획 수정 성공')
+    showModifyModal.value = false
+    requirements.value = ''
+    alert('계획이 성공적으로 수정되었습니다!')
+  } catch (error) {
+    console.error('계획 수정 오류 상세:', {
+      message: error.message,
+      response: error.response,
+      status: error.response?.status,
+      data: error.response?.data
+    })
+    modifyError.value = error.response?.data?.error || error.message || '계획 수정 중 오류가 발생했습니다.'
+  } finally {
+    isModifying.value = false
+  }
 }
 
 const error = ref('')
@@ -150,21 +221,30 @@ onMounted(async () => {
     <div v-else-if="tripStore.currentPlan" class="itinerary-content">
       <div class="header-section">
         <h1>{{ tripStore.currentPlan.title }}</h1>
-        <div v-if="isOwner" class="recommend-section">
+        <div v-if="isOwner" class="action-buttons">
           <button 
-            v-if="!tripStore.currentPlan.is_recommended"
-            @click="handleRecommend" 
-            class="btn-recommend"
+            @click="handleModify" 
+            class="btn-modify"
+            :disabled="tripStore.loading || isModifying"
           >
-            ⭐ 추천하기
+            ✏️ 계획 수정
           </button>
-          <button 
-            v-else
-            @click="handleUnrecommend" 
-            class="btn-recommended"
-          >
-            ⭐ 추천됨
-          </button>
+          <div class="recommend-section">
+            <button 
+              v-if="!tripStore.currentPlan.is_recommended"
+              @click="handleRecommend" 
+              class="btn-recommend"
+            >
+              ⭐ 추천하기
+            </button>
+            <button 
+              v-else
+              @click="handleUnrecommend" 
+              class="btn-recommended"
+            >
+              ⭐ 추천됨
+            </button>
+          </div>
         </div>
       </div>
 
@@ -302,6 +382,39 @@ onMounted(async () => {
       </div>
     </div>
 
+    <!-- 계획 수정 모달 -->
+    <div v-if="showModifyModal" class="modal-overlay" @click.self="closeModifyModal">
+      <div class="modal-content modify-modal">
+        <h2>여행 계획 수정</h2>
+        <p class="modal-subtitle">수정하고 싶은 요구사항을 자세히 작성해주세요. AI가 요구사항에 맞게 계획을 수정해드립니다.</p>
+        
+        <div class="modify-form">
+          <div class="form-group">
+            <label>수정 요구사항</label>
+            <textarea
+              v-model="requirements"
+              placeholder="예: 2일차에 해변 관광지를 추가하고 싶어요. 저녁 식사는 해산물 요리로 변경해주세요. 예산을 조금 더 절약할 수 있도록 저렴한 숙소로 변경해주세요."
+              rows="10"
+              maxlength="2000"
+              class="requirements-textarea"
+            ></textarea>
+            <div class="char-count">{{ requirements.length }} / 2000</div>
+          </div>
+          
+          <div v-if="modifyError" class="error-message">{{ modifyError }}</div>
+          
+          <div class="modal-buttons">
+            <button @click="closeModifyModal" class="btn-cancel" :disabled="isModifying">
+              취소
+            </button>
+            <button @click="submitModify" class="btn-submit" :disabled="isModifying">
+              {{ isModifying ? '수정 중...' : '수정하기' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 후기 작성 모달 -->
     <div v-if="showReviewModal" class="modal-overlay" @click.self="closeReviewModal">
       <div class="modal-content review-modal">
@@ -380,6 +493,12 @@ onMounted(async () => {
   gap: 1rem;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 h1 {
   margin: 0;
   font-size: 2rem;
@@ -391,6 +510,30 @@ h1 {
 .recommend-section {
   display: flex;
   gap: 0.5rem;
+}
+
+.btn-modify {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
+
+.btn-modify:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(30, 144, 255, 0.4);
+}
+
+.btn-modify:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .btn-recommend,
@@ -935,7 +1078,8 @@ h1 {
   font-size: 1.1rem;
 }
 
-.review-textarea {
+.review-textarea,
+.requirements-textarea {
   width: 100%;
   padding: 1rem;
   border: 2px solid #e8ecef;
@@ -946,9 +1090,10 @@ h1 {
   transition: border-color 0.3s ease;
 }
 
-.review-textarea:focus {
+.review-textarea:focus,
+.requirements-textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #1e90ff;
 }
 
 .char-count {
@@ -1009,17 +1154,48 @@ h1 {
   cursor: not-allowed;
 }
 
+.modify-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+.modify-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .header-section {
     flex-direction: column;
     align-items: flex-start;
   }
   
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  
+  .btn-modify,
+  .btn-recommend,
+  .btn-recommended {
+    width: 100%;
+  }
+  
   h1 {
     font-size: 1.5rem;
   }
   
-  .review-modal {
+  .review-modal,
+  .modify-modal {
     padding: 1.5rem;
   }
 }
