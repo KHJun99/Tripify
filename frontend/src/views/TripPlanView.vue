@@ -23,6 +23,8 @@ onMounted(() => {
   if (route.query.search) {
     formData.value.region = route.query.search
   }
+  // 예산 초기값 포맷팅
+  budgetDisplay.value = formData.value.budget.toLocaleString('ko-KR')
 })
 
 // 지역 옵션 (실제 tourism_data 기반)
@@ -53,6 +55,29 @@ const accommodationTypes = [
 
 const loading = ref(false)
 const error = ref('')
+
+// 예산 표시용 (쉼표 포함)
+const budgetDisplay = ref('500,000')
+
+// 예산 입력 처리 (쉼표 추가/제거)
+const handleBudgetInput = (event) => {
+  const value = event.target.value.replace(/,/g, '') // 쉼표 제거
+  if (!isNaN(value) && value !== '') {
+    const numValue = parseInt(value)
+    formData.value.budget = numValue
+    budgetDisplay.value = numValue.toLocaleString('ko-KR')
+  } else if (value === '') {
+    formData.value.budget = 0
+    budgetDisplay.value = '0'
+  }
+}
+
+// 예산 포커스 아웃 시 포맷팅
+const handleBudgetBlur = () => {
+  if (formData.value.budget > 0) {
+    budgetDisplay.value = formData.value.budget.toLocaleString('ko-KR')
+  }
+}
 
 const handleSubmit = async () => {
   try {
@@ -87,11 +112,11 @@ const handleSubmit = async () => {
               <div class="input-row">
                   <div class="input-wrap">
                   <span class="sub-label">시작일</span>
-                  <input v-model="formData.start_date" type="date" required />
+                  <input v-model="formData.start_date" type="date" required placeholder="YYYY-MM-DD" />
                   </div>
                   <div class="input-wrap">
                   <span class="sub-label">종료일</span>
-                  <input v-model="formData.end_date" type="date" required />
+                  <input v-model="formData.end_date" type="date" required placeholder="YYYY-MM-DD" />
                   </div>
               </div>
             </div>
@@ -113,12 +138,12 @@ const handleSubmit = async () => {
                   <div class="input-wrap">
                   <span class="sub-label">예산(KRW)</span>
                   <input 
-                      v-model.number="formData.budget" 
-                      type="number"
-                      min="0"
-                      step="10000" 
+                      :value="budgetDisplay"
+                      @input="handleBudgetInput"
+                      @blur="handleBudgetBlur"
+                      type="text"
                       required
-                      placeholder="500000"
+                      placeholder="500,000"
                   />
                   </div>
               </div>
@@ -326,6 +351,48 @@ input:focus, select:focus {
 input::placeholder {
   color: #9ca3af;
   font-weight: 400;
+}
+
+/* Date input의 기본 placeholder 텍스트를 YYYY-MM-DD로 변경 */
+.input-wrap {
+  position: relative;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+
+input[type="date"]:focus::-webkit-datetime-edit,
+input[type="date"]:valid::-webkit-datetime-edit {
+  color: #111;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  color: #9ca3af;
+  font-weight: 400;
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+input[type="date"]:valid::before,
+input[type="date"]:focus::before {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 18px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /* Preferences Layout */

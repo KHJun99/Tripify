@@ -1,10 +1,11 @@
 <script setup>
 import { onMounted, computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useTripStore } from '@/stores/trip'
 import { useAuthStore } from '@/stores/auth'
 
 const route = useRoute()
+const router = useRouter()
 const tripStore = useTripStore()
 const authStore = useAuthStore()
 
@@ -19,6 +20,9 @@ const showModifyModal = ref(false)
 const requirements = ref('')
 const isModifying = ref(false)
 const modifyError = ref('')
+
+// 계획 삭제 관련
+const isDeleting = ref(false)
 
 // 작성자 닉네임 가져오기
 const getWriterNickname = (planUser) => {
@@ -243,7 +247,7 @@ const submitModify = async () => {
     return
   }
   
-  if (!confirm('계획을 수정하시겠습니까? 기존 일정이 삭제되고 새로운 일정으로 대체됩니다.')) {
+  if (!confirm('계획을 수정하시겠습니까?\n\n기존 계획의 내용을 최대한 유지하면서,\n요청하신 부분만 AI가 수정합니다.')) {
     return
   }
   
@@ -262,6 +266,31 @@ const submitModify = async () => {
     modifyError.value = error.response?.data?.error || error.message || '계획 수정 중 오류가 발생했습니다.'
   } finally {
     isModifying.value = false
+  }
+}
+
+const handleDeletePlan = async () => {
+  if (!tripStore.currentPlan) return
+  const planId = tripStore.currentPlan.id
+
+  const confirmed = confirm('이 여행 계획을 삭제하시겠습니까?\n\n삭제 후에는 되돌릴 수 없습니다.')
+  if (!confirmed) return
+
+  isDeleting.value = true
+  try {
+    await tripStore.deletePlan(planId)
+    alert('여행 계획이 삭제되었습니다.')
+    router.push({ name: 'my-trips' })
+  } catch (error) {
+    console.error('계획 삭제 오류:', error)
+    const message =
+      error.response?.data?.error ||
+      error.response?.data?.detail ||
+      error.message ||
+      '여행 계획 삭제 중 오류가 발생했습니다.'
+    alert(message)
+  } finally {
+    isDeleting.value = false
   }
 }
 
@@ -350,11 +379,14 @@ onMounted(async () => {
               class="btn-modify"
               :disabled="tripStore.loading || isModifying"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-              </svg>
-              계획 수정
+              수정
+            </button>
+            <button
+              @click="handleDeletePlan"
+              class="btn-delete"
+              :disabled="tripStore.loading || isDeleting"
+            >
+              삭제
             </button>
             <button 
               @click="handleRecommend"
@@ -363,7 +395,6 @@ onMounted(async () => {
               <svg class="icon-svg heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
-              {{ tripStore.currentPlan.is_recommended ? '추천됨' : '추천하기' }}
             </button>
           </div>
           
@@ -375,7 +406,6 @@ onMounted(async () => {
               <svg class="icon-svg heart" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
-              {{ tripStore.currentPlan.is_recommended ? '추천됨' : '추천하기' }}
             </button>
           </div>
         </div>
@@ -526,9 +556,19 @@ onMounted(async () => {
                     교통
                   </h4>
                   <div class="transport-list">
-                    <div v-for="(info, key) in itinerary.transportation_info" :key="key" class="transport-item">
-                      <span class="transport-label">{{ getTransportKeyLabel(key) }}</span>
-                      <span class="transport-value">{{ getTransportationValueLabel(info) }}</span>
+                    <div 
+                      v-for="(info, key) in itinerary.transportation_info" 
+                      :key="key" 
+                      class="transport-item"
+                    >
+                      <div class="transport-time-pill">
+                        {{ getTransportKeyLabel(key) }}
+                      </div>
+                      <div class="transport-content">
+                        <p class="transport-main">
+                          {{ getTransportationValueLabel(info) }}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -734,7 +774,7 @@ onMounted(async () => {
 
 .location-badge {
   background: #f3e8ff;
-  color: #6a11cb;
+  color: #FF4757;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   font-size: 0.85rem;
@@ -809,29 +849,75 @@ onMounted(async () => {
   flex-wrap: wrap;
 }
 
+
 .btn-modify {
   padding: 0.7rem 1.4rem;
-  border-radius: 8px;
+  border-radius: 50px; 
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: all 0.2s ease;
-  background: #1e90ff;
-  border: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  background:  #2F80ED;
+  border: 1px solid transparent; 
   color: white;
+  box-shadow: 0 4px 6px rgba(106, 17, 203, 0.2); 
+}
+.btn-modify:hover:not(:disabled) {
+  background:#2F80ED;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px #2F80ED;
 }
 
-.btn-modify:hover:not(:disabled) {
-  background: #1873cc;
-  transform: translateY(-1px);
+/* 클릭 효과 */
+.btn-modify:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(106, 17, 203, 0.2);
 }
 
 .btn-modify:disabled {
-  opacity: 0.6;
+  background: #a5a5a5;
+  box-shadow: none;
+  opacity: 0.7;
   cursor: not-allowed;
+  transform: none;
+}
+
+.btn-delete {
+  padding: 0.7rem 1.4rem;
+  border-radius: 50px; 
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+  background:  #FF4757;
+  border: 1px solid transparent; 
+  color: white;
+  box-shadow: 0 4px 6px rgba(106, 17, 203, 0.2); 
+}
+
+.btn-delete:hover:not(:disabled) {
+  background:#FF4757;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px #FF4757;
+}
+
+.btn-delete:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(106, 17, 203, 0.2);
+}
+
+.btn-delete:disabled {
+  background: #a5a5a5;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* 추천 버튼 */
@@ -875,14 +961,15 @@ onMounted(async () => {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  align-items: stretch;
 }
 
 .budget-overview {
   flex: 1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.8rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   background: #f8f9fa;
   border: none;
   flex-wrap: wrap;
@@ -908,9 +995,10 @@ onMounted(async () => {
 .price-notice {
   flex: 1.5;
   display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
   background: #fff9db;
   border: 1px solid #ffec99;
   color: #664d03;
@@ -919,8 +1007,9 @@ onMounted(async () => {
 
 .price-notice p {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* 상세 일정 */
@@ -1131,16 +1220,17 @@ onMounted(async () => {
 .transport-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .transport-item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: flex-start;
   font-size: 0.85rem;
   color: #555;
   line-height: 1.6;
+  column-gap: 0.75rem;
 }
 
 .transport-label {
@@ -1149,13 +1239,28 @@ onMounted(async () => {
   flex-shrink: 0;
 }
 
-.transport-value {
+.transport-time-pill {
+  min-width: 46px;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: #f3f4ff;
+  color: #4b5bd5;
   font-weight: 600;
-  color: #444;
-  text-align: right;
+  font-size: 0.78rem;
+  text-align: center;
+  border: 1px solid #e0e3ff;
+}
+
+.transport-content {
   flex: 1;
+}
+
+.transport-main {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #444;
   word-break: keep-all;
-  margin-left: 0.5rem;
 }
 
 .daily-cost-summary {

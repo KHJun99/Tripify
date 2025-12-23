@@ -13,7 +13,9 @@ class GeminiService:
 
     def __init__(self):
         self.api_key = os.getenv('GMS_API_KEY', '')
-        self.base_url = 'https://gms.ssafy.io/gmsapi/generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent'
+        # Anthropic Claude 모델 (SSAFY GMS 프록시 경유)
+        self.base_url = 'https://gms.ssafy.io/gmsapi/api.anthropic.com/v1/messages'
+        self.model = 'claude-3-5-haiku-latest'
 
     def generate_itinerary(self, budget, people_count, start_date, end_date, departure_location, region, travel_style, accommodation_type):
         """
@@ -97,6 +99,12 @@ class GeminiService:
 5. **축제/행사 정보** (events_info):
    - 위에 나열된 축제/행사 정보가 있다면 일정에 포함하세요
    - 축제명, 시간, 위치 등을 정확히 기재
+
+7. **일정 다양성 규칙 (중요)**:
+   - 각 day_number(1일차, 2일차, 3일차 ...)의 일정은 서로 다른 코스로 구성해야 합니다
+   - 단순히 동일한 일정을 복사하여 day_number만 바꾸면 안 됩니다
+   - attractions, transportation_info, meals_info, events_info, estimated_cost를 각 일차마다 의미 있게 다르게 구성하세요
+   - 예를 들어 1일차와 2일차의 관광지 목록과 식사 장소는 반드시 달라야 합니다
 
 6. **예상 비용** (estimated_cost):
    - 해당 일차의 총 예상 비용 (교통비 + 식비 + 입장료 + 숙박비 등)
@@ -197,6 +205,11 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 - 각 일차의 estimated_cost를 모두 합산했을 때 총 예산의 110%를 넘지 않도록 주의하세요
 - 예산을 초과할 가능성이 있으면 저렴한 음식점/숙소를 선택하고, 불필요한 택시 이용을 줄이세요
 
+**반복/복사 금지 규칙 (매우 중요)**:
+- 각 일차의 내용을 그대로 복사해서 붙여넣지 마세요
+- 특히 attractions, meals_info, transportation_info는 각 일차마다 다른 장소/내용을 사용하세요
+- 같은 장소를 여러 날에 사용할 수는 있지만, 그 경우에도 시간대나 동선, 함께 방문하는 다른 장소를 달리 구성하세요
+
 **기타 중요 사항**:
 - 반드시 위에 제공된 실제 데이터베이스의 장소/음식점 목록에서 선택하여 사용하세요
 - 장소명은 데이터베이스의 정확한 명칭을 그대로 사용하세요
@@ -211,32 +224,42 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             print('경고: GMS_API_KEY가 설정되지 않았습니다. 샘플 데이터를 반환합니다.')
             return self._get_sample_data(days, region, travel_style, people_count, departure_location)
 
-        # SSAFY GMS API 호출
+        # SSAFY GMS API 호출 (Claude 3.5 Haiku)
         try:
-            url = f'{self.base_url}?key={self.api_key}'
+            url = self.base_url
             headers = {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-api-key': self.api_key,
+                'anthropic-version': '2023-06-01',
             }
             payload = {
-                'contents': [
+                'model': self.model,
+                'max_tokens': 4096,
+                'messages': [
                     {
-                        'parts': [
-                            {'text': prompt}
-                        ]
+                        'role': 'user',
+                        'content': prompt,
                     }
-                ]
+                ],
             }
 
-            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            response = requests.post(url, headers=headers, json=payload, timeout=60)
             response.raise_for_status()
 
             result = response.json()
 
-            # Gemini API 응답 파싱
-            if 'candidates' in result and len(result['candidates']) > 0:
-                content = result['candidates'][0]['content']
-                if 'parts' in content and len(content['parts']) > 0:
-                    text = content['parts'][0]['text']
+            # Claude API 응답 파싱
+            if 'content' in result and isinstance(result['content'], list):
+                # 여러 블록 중 text 타입만 이어붙이기
+                text_parts = []
+                for block in result['content']:
+                    if isinstance(block, dict):
+                        # SSAFY GMS는 { "type": "text", "text": "..." } 형태 사용
+                        if block.get('type') == 'text' and 'text' in block:
+                            text_parts.append(block['text'])
+                text = ''.join(text_parts).strip()
+
+                if text:
 
                     print('=== Gemini API 원본 응답 ===')
                     print(f'응답 길이: {len(text)} 글자')
@@ -245,14 +268,8 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 
                     # JSON 파싱 시도
                     try:
-                        # 코드 블록 제거 (```json ... ``` 형식)
-                        original_text = text
-                        if '```json' in text:
-                            text = text.split('```json')[1].split('```')[0].strip()
-                        elif '```' in text:
-                            text = text.split('```')[1].split('```')[0].strip()
-
-                        itinerary_data = json.loads(text)
+                        # 텍스트에서 JSON 부분만 추출하여 파싱
+                        itinerary_data = self._extract_json_from_text(text)
                         days_count = len(itinerary_data.get("days", []))
                         print(f'✓ JSON 파싱 성공! Days: {days_count}개 (요청: {days}일)')
                         
@@ -275,6 +292,11 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                                         print(f'⚠️ Day {i} - meals_info에 누락된 키: {missing_keys}')
                                     else:
                                         print(f'✓ Day {i} - meals_info 정상: {list(meals_info.keys())}')
+
+                        # 일정 다양성 검증: 모든 일차가 거의 동일하면 실패로 간주
+                        if self._all_days_almost_same(itinerary_data):
+                            print('⚠️ 모든 일차의 일정이 거의 동일합니다. 샘플(DB 기반) 데이터를 사용해 대체합니다.')
+                            return self._get_sample_data(days, region, travel_style, people_count, departure_location)
 
                         # 예산 검증
                         if not self._validate_budget(itinerary_data, budget, budget_min, budget_max):
@@ -408,6 +430,10 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 6. **예상 비용** (estimated_cost):
    - 해당 일차의 총 예상 비용 (교통비 + 식비 + 입장료 + 숙박비 등)
 
+7. **일정 다양성 규칙 (중요)**:
+   - 각 day_number의 일정은 서로 다른 코스로 구성해야 합니다
+   - 단순 복사/붙여넣기 형태의 동일한 일정을 여러 날에 반복해서 사용하면 안 됩니다
+
 JSON 형식 (정확히 이 구조를 따라주세요):
 **반드시 "days" 배열에 정확히 {days}개의 일정 객체를 포함해야 합니다. day_number는 1부터 {days}까지 순서대로여야 합니다.**
 
@@ -479,6 +505,10 @@ JSON 형식 (정확히 이 구조를 따라주세요):
   * 각 일차별 비용을 {daily_budget:,}원 이하로 유지
 - **총 비용 합계가 {budget_max:,}원을 넘지 않도록 각 일차의 estimated_cost를 신중하게 계산하세요**
 
+**반복/복사 금지 규칙 (매우 중요)**:
+- 각 일차의 attractions, meals_info, transportation_info를 그대로 복사하지 마세요
+- 재생성 시에도 1일차, 2일차, 3일차 등은 서로 다른 일정이 되도록 구성하세요
+
 **기타 중요 사항**:
 - 반드시 위에 제공된 실제 데이터베이스의 장소/음식점 목록에서 선택하여 사용하세요
 - 장소명은 데이터베이스의 정확한 명칭을 그대로 사용하세요
@@ -488,34 +518,41 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 """
 
         try:
-            url = f'{self.base_url}?key={self.api_key}'
-            headers = {'Content-Type': 'application/json'}
+            url = self.base_url
+            headers = {
+                'Content-Type': 'application/json',
+                'x-api-key': self.api_key,
+                'anthropic-version': '2023-06-01',
+            }
             payload = {
-                'contents': [
+                'model': self.model,
+                'max_tokens': 4096,
+                'messages': [
                     {
-                        'parts': [
-                            {'text': prompt}
-                        ]
+                        'role': 'user',
+                        'content': prompt,
                     }
-                ]
+                ],
             }
 
-            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            response = requests.post(url, headers=headers, json=payload, timeout=60)
             response.raise_for_status()
             result = response.json()
 
-            if 'candidates' in result and len(result['candidates']) > 0:
-                content = result['candidates'][0]['content']
-                if 'parts' in content and len(content['parts']) > 0:
-                    text = content['parts'][0]['text']
+            # Claude API 응답 파싱
+            if 'content' in result and isinstance(result['content'], list):
+                text_parts = []
+                for block in result['content']:
+                    if isinstance(block, dict) and block.get('type') == 'text' and 'text' in block:
+                        text_parts.append(block['text'])
+                text = ''.join(text_parts).strip()
 
-                    # 코드 블록 제거
-                    if '```json' in text:
-                        text = text.split('```json')[1].split('```')[0].strip()
-                    elif '```' in text:
-                        text = text.split('```')[1].split('```')[0].strip()
+                if text:
 
-                    itinerary_data = json.loads(text)
+                    # 텍스트에서 JSON 부분만 추출하여 파싱
+                    itinerary_data = self._extract_json_from_text(text)
+                    if isinstance(itinerary_data, list):
+                        itinerary_data = {'days': itinerary_data}
                     days_count = len(itinerary_data.get("days", []))
                     print(f'✓ 재생성 성공! Days: {days_count}개 (요청: {days}일)')
                     
@@ -566,10 +603,30 @@ JSON 형식 (정확히 이 구조를 따라주세요):
         }
 
     def _get_sample_data(self, days, region, travel_style, people_count, departure_location='서울특별시'):
-        """샘플 데이터 반환 (API 키가 없거나 오류 발생 시)"""
+        """
+        샘플 데이터 반환 (API 키가 없거나 오류 발생 시)
+        - 실제 DB의 장소/음식점/숙소/축제 데이터를 사용
+        - 각 일차마다 다른 코스로 구성하여 "복붙"처럼 보이지 않도록 함
+        """
+        try:
+            tourist_spots = self._get_places_by_region(region, 'tourist', limit=30)
+            restaurants = self._get_places_by_region(region, 'restaurant', limit=30)
+            accommodations = self._get_places_by_region(region, 'accommodation', limit=10)
+            # 축제는 대략적인 기간 정보만 사용
+            festivals = self._get_festivals_by_region(region, days and days >= 1 and None or None, None, None)
+        except Exception:
+            tourist_spots, restaurants, accommodations, festivals = [], [], [], []
+
+        # 이름 리스트로 변환
+        tourist_list = list(tourist_spots)
+        restaurant_list = list(restaurants)
+        accommodation_list = list(accommodations)
+
         sample_days = []
         for i in range(days):
-            # 첫날에는 출발지에서 여행 지역으로의 이동 정보 포함
+            day_number = i + 1
+
+            # 첫날에는 출발지 → 지역 이동 포함
             if i == 0:
                 transportation_info = {
                     '오전': f'{departure_location} → {region} 이동 (KTX 또는 고속버스, 예상 비용: 50,000원)',
@@ -582,44 +639,152 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                     '오후': '도보 또는 택시',
                     '저녁': '대중교통'
                 }
-            
-            sample_days.append({
-                'day_number': i + 1,
-                'description': f'{region} {travel_style} 여행 {i + 1}일차',
-                'attractions': [
-                    {
-                        'name': f'{region} 대표 관광지 {j + 1}',
+
+            # 관광지: 날짜마다 시작 인덱스를 다르게 해서 다른 조합 사용
+            day_attractions = []
+            if tourist_list:
+                for j in range(3):
+                    idx = (i * 3 + j) % len(tourist_list)
+                    place = tourist_list[idx]
+                    day_attractions.append({
+                        'name': place.title,
                         'time': f'{9 + j * 2}:00',
                         'duration': '2시간',
-                        'description': f'{region}의 유명한 명소'
+                        'description': place.address,
+                    })
+            else:
+                # DB에 데이터가 없을 때의 최소한의 더미
+                for j in range(3):
+                    day_attractions.append({
+                        'name': f'{region} 대표 관광지 {day_number}-{j + 1}',
+                        'time': f'{9 + j * 2}:00',
+                        'duration': '2시간',
+                        'description': f'{region}의 유명한 명소',
+                    })
+
+            # 식사: 각 일차마다 다른 식당을 쓰도록 인덱스 회전
+            def _pick_restaurant(offset):
+                if restaurant_list:
+                    place = restaurant_list[(i + offset) % len(restaurant_list)]
+                    return {
+                        'restaurant': place.title,
+                        'cost': 15000,
                     }
-                    for j in range(3)
-                ],
-                'transportation_info': transportation_info,
-                'accommodation_info': {
-                    'name': f'{region} 지역 숙소',
+                return {
+                    'restaurant': f'{region} 맛집 {day_number}-{offset + 1}',
+                    'cost': 15000,
+                }
+
+            meals_info = {
+                '아침': {
+                    'restaurant': '호텔 조식 또는 근처 식당',
+                    'cost': 10000,
+                },
+                '점심': _pick_restaurant(0),
+                '저녁': _pick_restaurant(1),
+            }
+
+            # 숙소: 여러 개가 있으면 날짜별로 다른 숙소 사용
+            if accommodation_list:
+                acc = accommodation_list[i % len(accommodation_list)]
+                accommodation_info = {
+                    'name': acc.title,
                     'cost': 80000,
                     'check_in': '15:00',
-                    'check_out': '11:00'
-                },
-                'meals_info': {
-                    '아침': {
-                        'restaurant': '호텔 조식 또는 근처 식당',
-                        'cost': 10000
-                    },
-                    '점심': {
-                        'restaurant': f'{region} 맛집',
-                        'cost': 15000
-                    },
-                    '저녁': {
-                        'restaurant': f'{region} 특선 요리',
-                        'cost': 20000
-                    }
-                },
+                    'check_out': '11:00',
+                }
+            else:
+                accommodation_info = {
+                    'name': f'{region} 지역 숙소 {day_number}',
+                    'cost': 80000,
+                    'check_in': '15:00',
+                    'check_out': '11:00',
+                }
+
+            sample_days.append({
+                'day_number': day_number,
+                'description': f'{region} {travel_style} 여행 {day_number}일차 - 추천 코스',
+                'attractions': day_attractions,
+                'transportation_info': transportation_info,
+                'accommodation_info': accommodation_info,
+                'meals_info': meals_info,
                 'events_info': [],
-                'estimated_cost': 130000
+                'estimated_cost': 130000,
             })
+
         return {'days': sample_days}
+
+    def _extract_json_from_text(self, text):
+        """
+        LLM 응답 텍스트에서 JSON 부분만 안전하게 추출하여 dict로 반환
+        - ```json ... ``` 코드블록 우선 사용
+        - 없으면 첫 '{'부터 마지막 '}'까지를 잘라서 파싱 시도
+        """
+        original_text = text
+
+        # 0) 전체 텍스트를 그대로 JSON으로 해석해보기 (이미 순수 JSON일 수 있음)
+        try:
+            stripped = text.strip()
+            if stripped:
+                return json.loads(stripped)
+        except Exception:
+            # 실패하면 아래 단계들 진행
+            pass
+
+        # 1) ```json 코드블록 처리
+        if '```json' in text:
+            try:
+                body = text.split('```json', 1)[1].split('```', 1)[0].strip()
+                return json.loads(body)
+            except Exception:
+                text = original_text
+
+        # 2) 일반 ``` 코드블록 처리
+        if '```' in text:
+            try:
+                body = text.split('```', 1)[1].split('```', 1)[0].strip()
+                return json.loads(body)
+            except Exception:
+                text = original_text
+
+        # 3) 자연어 설명 + JSON 형태: 첫 '{' ~ 마지막 '}' 구간만 추출
+        first_brace = text.find('{')
+        last_brace = text.rfind('}')
+        if first_brace != -1 and last_brace != -1 and last_brace > first_brace:
+            candidate = text[first_brace:last_brace + 1].strip()
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError as e:
+                print('✗ _extract_json_from_text JSONDecodeError:', e)
+                print('추출된 candidate 앞 300자:\n', candidate[:300])
+                raise
+
+        # 어떤 형태로도 JSON을 찾지 못한 경우
+        raise json.JSONDecodeError('No valid JSON object found in text', original_text, 0)
+
+    def _all_days_almost_same(self, itinerary_data):
+        """
+        모든 일차의 내용이 거의 동일한지 검사
+        - day_number, description을 제외한 나머지 필드가 모두 동일하면 "복붙"으로 간주
+        """
+        days = itinerary_data.get('days') or []
+        if len(days) <= 1:
+            return False
+
+        normalized = []
+        for day in days:
+            # 비교에 사용하지 않을 키 제거
+            cmp_day = dict(day)
+            cmp_day.pop('day_number', None)
+            cmp_day.pop('description', None)
+            # 정렬된 JSON 문자열로 변환하여 비교
+            try:
+                normalized.append(json.dumps(cmp_day, sort_keys=True, ensure_ascii=False))
+            except TypeError:
+                # JSON으로 직렬화 안 되는 값이 있으면 문자열 변환
+                normalized.append(str(cmp_day))
+
+        return len(set(normalized)) == 1
 
     def _get_places_by_region(self, region, place_type, limit=10):
         """지역과 타입으로 장소 검색"""
@@ -759,6 +924,8 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 5. **반드시 {days}일치 일정을 모두 반환해야 하며, 각 일정의 day_number는 기존과 동일해야 합니다**
 6. 각 일차마다 meals_info에 아침, 점심, 저녁 식사 정보를 반드시 포함하세요
 7. **기존 계획에서 좋은 부분(요구사항과 무관한 부분)은 절대 변경하지 마세요**
+8. **설명 문장, 해설, 코드블록(```` ````, ```json```)은 절대 출력하지 말고, 오직 하나의 JSON 객체만 출력하세요.**
+9. **"meals_info" 일부만 출력하거나 특정 일차만 따로 출력하지 말고, 항상 전체 일차를 포함한 완전한 JSON 객체를 출력해야 합니다.**
 
 JSON 형식 (정확히 이 구조를 따라주세요):
 {{
@@ -815,8 +982,9 @@ JSON 형식 (정확히 이 구조를 따라주세요):
   ]
 }}
 
-**중요:**
-- 모든 텍스트는 한글로 작성하세요
+**중요 출력 규칙:**
+- 출력은 반드시 **위 JSON 객체 하나만** 포함해야 합니다.
+- JSON 앞뒤에 자연어 설명, 요약 문장, 마크다운, 코드블록 기호( ``` ) 등을 절대 추가하지 마세요.
 - transportation_info의 키: "오전", "오후", "저녁" 사용
 - meals_info는 반드시 "아침", "점심", "저녁" 키를 모두 가져야 합니다
 - 사용자 요구사항을 반드시 반영하세요
@@ -828,18 +996,23 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             print('경고: GMS_API_KEY가 설정되지 않았습니다. 기존 계획을 반환합니다.')
             return self._get_existing_itinerary_data(existing_plan)
         
-        # SSAFY GMS API 호출
+        # SSAFY GMS API 호출 (Claude 3.5 Haiku)
         try:
-            url = f'{self.base_url}?key={self.api_key}'
-            headers = {'Content-Type': 'application/json'}
+            url = self.base_url
+            headers = {
+                'Content-Type': 'application/json',
+                'x-api-key': self.api_key,
+                'anthropic-version': '2023-06-01',
+            }
             payload = {
-                'contents': [
+                'model': self.model,
+                'max_tokens': 4096,
+                'messages': [
                     {
-                        'parts': [
-                            {'text': prompt}
-                        ]
+                        'role': 'user',
+                        'content': prompt,
                     }
-                ]
+                ],
             }
             
             response = requests.post(url, headers=headers, json=payload, timeout=60)
@@ -847,11 +1020,15 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             
             result = response.json()
             
-            # Gemini API 응답 파싱
-            if 'candidates' in result and len(result['candidates']) > 0:
-                content = result['candidates'][0]['content']
-                if 'parts' in content and len(content['parts']) > 0:
-                    text = content['parts'][0]['text']
+            # Claude API 응답 파싱
+            if 'content' in result and isinstance(result['content'], list):
+                text_parts = []
+                for block in result['content']:
+                    if isinstance(block, dict) and block.get('type') == 'text' and 'text' in block:
+                        text_parts.append(block['text'])
+                text = ''.join(text_parts).strip()
+                
+                if text:
                     
                     print('=== 수정된 계획 API 원본 응답 ===')
                     print(f'응답 길이: {len(text)} 글자')
@@ -860,13 +1037,13 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                     
                     # JSON 파싱 시도
                     try:
-                        # 코드 블록 제거
-                        if '```json' in text:
-                            text = text.split('```json')[1].split('```')[0].strip()
-                        elif '```' in text:
-                            text = text.split('```')[1].split('```')[0].strip()
-                        
-                        itinerary_data = json.loads(text)
+                        # 텍스트에서 JSON 부분만 추출하여 파싱
+                        itinerary_data = self._extract_json_from_text(text)
+                        if isinstance(itinerary_data, list):
+                            itinerary_data = {'days': itinerary_data}
+                        # 모델이 [ {...}, {...} ] 형태의 배열만 보낸 경우 보정
+                        if isinstance(itinerary_data, list):
+                            itinerary_data = {'days': itinerary_data}
                         days_count = len(itinerary_data.get("days", []))
                         print(f'✓ 수정된 계획 JSON 파싱 성공! Days: {days_count}개 (요청: {days}일)')
                         

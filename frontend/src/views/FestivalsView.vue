@@ -147,10 +147,11 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { getFestivals } from '@/api/festivals'
 
 const router = useRouter()
+const route = useRoute()
 
 const selectedMonth = ref('')
 const selectedRegion = ref('')
@@ -412,6 +413,13 @@ const goToDetail = (festivalId) => {
 }
 
 onMounted(() => {
+  // URL query parameter에서 월 정보 읽기
+  if (route.query.month) {
+    const month = parseInt(route.query.month, 10)
+    if (month >= 1 && month <= 12) {
+      selectedMonth.value = month
+    }
+  }
   fetchFestivals()
 })
 </script>

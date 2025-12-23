@@ -1,19 +1,25 @@
 <template>
-  <div class="kakao-map-search" :class="{ 'bookmark-mode': bookmark, 'show': bookmark }">
+  <div class="kakao-map-search" :class="{ 'bookmark-mode': bookmark || allBookmarks, 'show': bookmark || allBookmarks }">
     <!-- 헤더는 북마크 모드가 아닐 때만 표시 -->
-    <div v-if="!bookmark" class="search-header">
+    <div v-if="!bookmark && !allBookmarks" class="search-header">
       <h2>장소 검색 및 북마크</h2>
       <button class="close-btn" @click="$emit('close')">✕</button>
     </div>
     
-    <!-- 북마크 모드일 때는 간단한 헤더 -->
-    <div v-if="bookmark" class="bookmark-header">
+    <!-- 단일 북마크 모드일 때는 간단한 헤더 -->
+    <div v-if="bookmark && !allBookmarks" class="bookmark-header">
       <h2>북마크 위치</h2>
       <button class="close-btn" @click="$emit('close')">✕</button>
     </div>
 
-    <!-- 북마크 모드일 때는 정보 카드와 지도만 표시 -->
-    <template v-if="bookmark && bookmark.place">
+    <!-- 모든 북마크 모드일 때 헤더 -->
+    <div v-if="allBookmarks" class="bookmark-header">
+      <h2>모든 북마크 ({{ allBookmarks.length }}개)</h2>
+      <button class="close-btn" @click="$emit('close')">✕</button>
+    </div>
+
+    <!-- 단일 북마크 모드일 때는 정보 카드와 지도만 표시 -->
+    <template v-if="bookmark && bookmark.place && !allBookmarks">
       <div class="bookmark-info-card">
         <h3>{{ bookmark.place.title }}</h3>
         <p class="address">{{ bookmark.place.address }}</p>
@@ -24,8 +30,15 @@
       </div>
     </template>
 
+    <!-- 모든 북마크 모드일 때는 지도만 표시 -->
+    <template v-if="allBookmarks && allBookmarks.length > 0">
+      <div class="map-container">
+        <div id="map" style="width:100%;height:600px;"></div>
+      </div>
+    </template>
+
     <!-- 일반 모드일 때는 전체 기능 표시 -->
-    <template v-else>
+    <template v-if="!bookmark && !allBookmarks">
       <!-- 검색 기능 -->
       <div class="search-container">
         <div class="search-box">
@@ -85,6 +98,10 @@ import { useAuthStore } from '@/stores/auth'
 const props = defineProps({
   bookmark: {
     type: Object,
+    default: null
+  },
+  allBookmarks: {
+    type: Array,
     default: null
   }
 })
@@ -147,9 +164,46 @@ const loadKakaoMap = () => {
 // 지도 초기화
 const initMap = () => {
   const container = document.getElementById('map')
+  if (!container || !window.kakao || !window.kakao.maps) {
+    console.error('지도 초기화 실패: container 또는 kakao.maps가 없습니다')
+    return
+  }
   
-  // 북마크 모드인 경우 해당 위치로 초기화
-  if (props.bookmark && props.bookmark.place && props.bookmark.place.latitude && props.bookmark.place.longitude) {
+  // 모든 북마크 모드인 경우
+  if (props.allBookmarks && props.allBookmarks.length > 0) {
+    // 모든 북마크의 중심점 계산
+    const validPositions = []
+    
+    props.allBookmarks.forEach(bookmark => {
+      if (bookmark.place && bookmark.place.latitude && bookmark.place.longitude) {
+        const lat = parseFloat(bookmark.place.latitude)
+        const lng = parseFloat(bookmark.place.longitude)
+        if (!isNaN(lat) && !isNaN(lng)) {
+          validPositions.push({ lat, lng })
+        }
+      }
+    })
+    
+    if (validPositions.length > 0) {
+      // 좌표들의 평균으로 중심점 계산
+      const avgLat = validPositions.reduce((sum, pos) => sum + pos.lat, 0) / validPositions.length
+      const avgLng = validPositions.reduce((sum, pos) => sum + pos.lng, 0) / validPositions.length
+      
+      const options = {
+        center: new window.kakao.maps.LatLng(avgLat, avgLng),
+        level: 5
+      }
+      map.value = new window.kakao.maps.Map(container, options)
+    } else {
+      // 유효한 좌표가 없으면 기본 위치
+      const options = {
+        center: new window.kakao.maps.LatLng(37.5665, 126.9780),
+        level: 3
+      }
+      map.value = new window.kakao.maps.Map(container, options)
+    }
+  } else if (props.bookmark && props.bookmark.place && props.bookmark.place.latitude && props.bookmark.place.longitude) {
+    // 단일 북마크 모드인 경우 해당 위치로 초기화
     const place = props.bookmark.place
     const options = {
       center: new window.kakao.maps.LatLng(parseFloat(place.latitude), parseFloat(place.longitude)),
@@ -227,7 +281,7 @@ const searchPlaces = () => {
 
 // 북마크 정보가 변경되면 지도 업데이트
 watch(() => props.bookmark, (newBookmark) => {
-  if (newBookmark && newBookmark.place && map.value && window.kakao && window.kakao.maps) {
+  if (newBookmark && newBookmark.place && map.value && window.kakao && window.kakao.maps && !props.allBookmarks) {
     const place = newBookmark.place
     if (place.latitude && place.longitude) {
       clearMarkers()
@@ -253,6 +307,13 @@ watch(() => props.bookmark, (newBookmark) => {
     }
   }
 }, { immediate: false })
+
+// 모든 북마크가 변경되면 지도 업데이트
+watch(() => props.allBookmarks, () => {
+  if (props.allBookmarks && props.allBookmarks.length > 0 && map.value && window.kakao && window.kakao.maps) {
+    displayAllBookmarks()
+  }
+}, { immediate: false, deep: true })
 
 // 북마크 저장
 const bookmarkPlace = async (place) => {
@@ -333,14 +394,120 @@ const bookmarkPlace = async (place) => {
   }
 }
 
+// 모든 북마크 마커 표시
+const displayAllBookmarks = () => {
+  if (!map.value || !props.allBookmarks || props.allBookmarks.length === 0 || !window.kakao || !window.kakao.maps) {
+    return
+  }
+  
+  clearMarkers()
+  const bounds = new window.kakao.maps.LatLngBounds()
+  const infowindows = []
+  
+  // 다양한 마커 색상 배열
+  const markerColors = [
+    '#FF6B6B', // 빨강
+    '#4ECDC4', // 청록
+    '#45B7D1', // 파랑
+    '#FFA07A', // 연어색
+    '#98D8C8', // 민트
+    '#F7DC6F', // 노랑
+    '#BB8FCE', // 보라
+    '#85C1E2', // 하늘색
+    '#F8B739', // 주황
+    '#52BE80', // 초록
+    '#EC7063', // 코랄
+    '#5DADE2', // 밝은 파랑
+  ]
+  
+  props.allBookmarks.forEach((bookmark, index) => {
+    if (!bookmark.place || !bookmark.place.latitude || !bookmark.place.longitude) {
+      return
+    }
+    
+    const place = bookmark.place
+    const position = new window.kakao.maps.LatLng(parseFloat(place.latitude), parseFloat(place.longitude))
+    bounds.extend(position)
+    
+    // 각 마커마다 다른 색상 선택
+    const color = markerColors[index % markerColors.length]
+    
+    // Canvas를 사용하여 커스텀 마커 이미지 생성
+    const canvas = document.createElement('canvas')
+    canvas.width = 40
+    canvas.height = 50
+    const ctx = canvas.getContext('2d')
+    
+    // 마커 모양 그리기 (핀 모양)
+    ctx.beginPath()
+    ctx.moveTo(20, 0)
+    ctx.lineTo(8, 20)
+    ctx.quadraticCurveTo(8, 30, 12, 35)
+    ctx.lineTo(20, 50)
+    ctx.lineTo(28, 35)
+    ctx.quadraticCurveTo(32, 30, 32, 20)
+    ctx.closePath()
+    ctx.fillStyle = color
+    ctx.fill()
+    ctx.strokeStyle = '#fff'
+    ctx.lineWidth = 2
+    ctx.stroke()
+    
+    // 중앙 원 그리기
+    ctx.beginPath()
+    ctx.arc(20, 20, 8, 0, Math.PI * 2)
+    ctx.fillStyle = '#fff'
+    ctx.fill()
+    
+    const imageSrc = canvas.toDataURL()
+    const imageSize = new window.kakao.maps.Size(40, 50)
+    const imageOption = { offset: new window.kakao.maps.Point(20, 50) }
+    const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize, imageOption)
+    
+    // 마커 생성
+    const marker = new window.kakao.maps.Marker({
+      position: position,
+      image: markerImage,
+      map: map.value
+    })
+    markers.value.push(marker)
+    
+    // 인포윈도우 생성
+    const infowindow = new window.kakao.maps.InfoWindow({
+      content: `<div style="padding:10px;font-size:14px;min-width:150px;">
+        <strong>${place.title || '장소명 없음'}</strong><br/>
+        <span style="font-size:12px;color:#666;">${place.address || '주소 없음'}</span>
+      </div>`
+    })
+    infowindows.push(infowindow)
+    
+    // 마커 클릭 이벤트
+    window.kakao.maps.event.addListener(marker, 'click', () => {
+      // 다른 인포윈도우 닫기
+      infowindows.forEach(iw => iw.close())
+      infowindow.open(map.value, marker)
+    })
+  })
+  
+  // 모든 마커가 보이도록 지도 범위 조정
+  if (markers.value.length > 0) {
+    map.value.setBounds(bounds)
+  }
+}
+
 onMounted(async () => {
   try {
+    console.log('KakaoMapSearch onMounted, allBookmarks:', props.allBookmarks)
     await loadKakaoMap()
     await nextTick()
     initMap()
     
-    // 북마크 모드인 경우 마커 표시
-    if (props.bookmark && props.bookmark.place && map.value && window.kakao && window.kakao.maps) {
+    // 모든 북마크 모드인 경우
+    if (props.allBookmarks && props.allBookmarks.length > 0 && map.value) {
+      console.log('모든 북마크 표시 시작:', props.allBookmarks.length)
+      displayAllBookmarks()
+    } else if (props.bookmark && props.bookmark.place && map.value && window.kakao && window.kakao.maps) {
+      // 단일 북마크 모드인 경우 마커 표시
       const place = props.bookmark.place
       if (place.latitude && place.longitude) {
         const position = new window.kakao.maps.LatLng(parseFloat(place.latitude), parseFloat(place.longitude))

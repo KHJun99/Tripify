@@ -252,6 +252,10 @@ const goToFestivals = () => {
   router.push({ name: 'festivals' })
 }
 
+const goToFestivalsWithMonth = (year, month) => {
+  router.push({ name: 'festivals', query: { month: month } })
+}
+
 // 축제 데이터를 Map으로 가공
 const processFestivalsData = (data) => {
   const map = {}
@@ -443,7 +447,12 @@ onUnmounted(() => {
           <div v-if="monthFestivals.length > 0" class="month-festivals" :key="selectedDate.toString()">
             <div class="list-header">
               <h4>{{ selectedDate.getFullYear() }}년 {{ selectedDate.getMonth() + 1 }}월의 축제</h4>
-              <span class="count-badge">{{ monthFestivals.length }}개</span>
+              <button 
+                class="view-all-btn" 
+                @click="goToFestivalsWithMonth(selectedDate.getFullYear(), selectedDate.getMonth() + 1)"
+              >
+                {{ selectedDate.getMonth() + 1 }}월 축제 모두보기
+              </button>
             </div>
             <div class="festival-grid">
               <div
@@ -1015,6 +1024,7 @@ onUnmounted(() => {
   gap: 10px; 
   margin-bottom: 1.5rem; 
   padding-left: 5px; 
+  justify-content: space-between;
 }
 
 .month-festivals h4 { 
@@ -1024,13 +1034,26 @@ onUnmounted(() => {
   margin: 0; 
 }
 
-.count-badge { 
-  background-color: #eff6ff; 
-  color: #4285f4; 
-  font-size: 0.85rem; 
-  font-weight: 700; 
-  padding: 4px 10px; 
-  border-radius: 20px; 
+.view-all-btn {
+  margin-left: auto;
+  padding: 0.5rem 1.2rem;
+  background-color: white;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(66, 133, 244, 0.1);
+}
+
+.view-all-btn:hover {
+  background-color: #4285f4;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
 }
 
 .festival-grid { 

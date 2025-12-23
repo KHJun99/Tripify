@@ -17,7 +17,11 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
         return TravelPlan.objects.filter(user=self.request.user)
 
     def get_object(self):
-        """객체 조회 - 추천된 계획은 누구나 볼 수 있도록"""
+        """
+        기본 조회 동작:
+        - 본인 여행 계획은 항상 조회 가능
+        - 추천된 계획(is_recommended=True)은 다른 사용자도 조회만 가능
+        """
         queryset = self.filter_queryset(self.get_queryset())
         
         # URL에서 pk 가져오기
@@ -29,13 +33,30 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
             obj = queryset.get(pk=lookup_value)
             return obj
         except TravelPlan.DoesNotExist:
-            # 본인 계획이 아니면 추천된 계획인지 확인
-            try:
-                obj = TravelPlan.objects.get(pk=lookup_value, is_recommended=True)
-                return obj
-            except TravelPlan.DoesNotExist:
-                from rest_framework.exceptions import NotFound
-                raise NotFound('여행 계획을 찾을 수 없습니다.')
+            # 읽기 전용 요청(GET)에서만 추천된 계획 허용
+            if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
+                try:
+                    obj = TravelPlan.objects.get(pk=lookup_value, is_recommended=True)
+                    return obj
+                except TravelPlan.DoesNotExist:
+                    pass
+            
+            from rest_framework.exceptions import NotFound
+            raise NotFound('여행 계획을 찾을 수 없습니다.')
+
+    def destroy(self, request, *args, **kwargs):
+        """여행 계획 삭제 - 본인 계획만 삭제 가능"""
+        pk = kwargs.get(self.lookup_field or 'pk')
+        try:
+            plan = TravelPlan.objects.get(pk=pk, user=request.user)
+        except TravelPlan.DoesNotExist:
+            return Response(
+                {'error': '본인의 여행 계획만 삭제할 수 있습니다.'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+        
+        self.perform_destroy(plan)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=False, methods=['post'], url_path='generate')
     def generate_itinerary(self, request):
@@ -257,7 +278,7 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
             
             # 기존 일정을 업데이트 (삭제하지 않고 수정)
             updated_count = 0
-            if modified_itinerary_data and isinstance(modified_itinerary_data, dict) and 'days' in modified_itinerary_data:
+            if modified_itinerary_data and isinstance(modified_itinerary_data, dict) and 'days' in modified_itinerary_data and modified_itinerary_data.get('days'):
                 # 기존 일정을 day_number로 매핑
                 existing_itineraries = {
                     it.day_number: it 
@@ -301,6 +322,12 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                         traceback.print_exc()
             
             print(f'✓ 일정 업데이트 완료: {updated_count}개')
+
+            # AI가 유효한 수정 결과를 주지 못한 경우
+            if updated_count == 0:
+                return Response({
+                    'error': 'AI가 수정된 일정을 생성하지 못했습니다. 잠시 후 다시 시도해 주세요.'
+                }, status=status.HTTP_400_BAD_REQUEST)
             
             # Refresh to get updated itineraries
             travel_plan.refresh_from_db()

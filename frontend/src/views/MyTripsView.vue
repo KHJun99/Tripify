@@ -70,18 +70,17 @@ const sortedPlans = computed(() => {
   })
 })
 
-const getPlansForDate = (day) => {
-  if (!sortedPlans.value.length) return []
+// 특정 날짜에 계획이 포함되는지 여부
+const isPlanInDate = (plan, day) => {
   const targetDate = new Date(currentYear.value, currentMonth.value, day)
   targetDate.setHours(0, 0, 0, 0)
 
-  return sortedPlans.value.filter(plan => {
-    const start = new Date(plan.start_date)
-    const end = new Date(plan.end_date)
-    start.setHours(0, 0, 0, 0)
-    end.setHours(0, 0, 0, 0)
-    return targetDate >= start && targetDate <= end
-  })
+  const start = new Date(plan.start_date)
+  const end = new Date(plan.end_date)
+  start.setHours(0, 0, 0, 0)
+  end.setHours(0, 0, 0, 0)
+
+  return targetDate >= start && targetDate <= end
 }
 
 // 클래스 판별 로직
@@ -198,6 +197,7 @@ const bookmarks = ref([])
 const isLoadingBookmarks = ref(false)
 const showBookmarkModal = ref(false)
 const selectedBookmark = ref(null)
+const showAllBookmarksModal = ref(false)
 
 // 북마크 조회
 const fetchBookmarks = async () => {
@@ -222,6 +222,13 @@ const fetchBookmarks = async () => {
 const openBookmarkModal = (bookmark) => {
   selectedBookmark.value = bookmark
   showBookmarkModal.value = true
+}
+
+// 모든 북마크 보기 모달 열기
+const openAllBookmarksModal = () => {
+  console.log('모든 북마크 보기 버튼 클릭됨', bookmarks.value)
+  showAllBookmarksModal.value = true
+  console.log('showAllBookmarksModal:', showAllBookmarksModal.value)
 }
 
 // 북마크 삭제
@@ -299,15 +306,18 @@ const goToCreate = () => {
 
               <div class="plan-bars">
                 <div
-                  v-for="plan in getPlansForDate(day)"
+                  v-for="plan in sortedPlans"
                   :key="plan.id"
                   class="plan-bar"
-                  :class="getPlanClass(day, plan)"
+                  :class="[
+                    getPlanClass(day, plan),
+                    { 'is-inactive': !isPlanInDate(plan, day) }
+                  ]"
                   :style="getPlanStyle(plan.id)"
-                  @click.stop="goToTrip(plan.id)"
+                  @click.stop="isPlanInDate(plan, day) && goToTrip(plan.id)"
                 >
                   <span
-                    v-if="getPlanClass(day, plan).includes('is-start')"
+                    v-if="isPlanInDate(plan, day) && getPlanClass(day, plan).includes('is-start')"
                     class="plan-title"
                     :style="{ width: getSegmentWidth(day, plan) }"
                   >
@@ -327,8 +337,19 @@ const goToCreate = () => {
         <!-- 북마크 카드 -->
         <div class="card bookmark-card glass-card">
           <div class="card-header">
-            <h3>⭐ 저장된 북마크</h3>
-            <span class="subtitle">저장한 장소를 확인하세요</span>
+            <div class="header-content">
+              <div>
+                <h3>⭐ 저장된 북마크</h3>
+                <span class="subtitle">저장한 장소를 확인하세요</span>
+              </div>
+              <button 
+                v-if="bookmarks.length > 0"
+                class="view-all-bookmarks-btn" 
+                @click="openAllBookmarksModal"
+              >
+                모든 북마크 보기
+              </button>
+            </div>
           </div>
           
           <div v-if="isLoadingBookmarks" class="loading-msg">로딩 중...</div>
@@ -389,6 +410,15 @@ const goToCreate = () => {
       @click.self="!selectedBookmark && (showBookmarkModal = false)"
     >
       <KakaoMapSearch :bookmark="selectedBookmark" @close="showBookmarkModal = false" />
+    </div>
+
+    <!-- 모든 북마크 보기 모달 -->
+    <div 
+      v-if="showAllBookmarksModal" 
+      class="modal-overlay bookmark-overlay"
+      @click.self="showAllBookmarksModal = false"
+    >
+      <KakaoMapSearch :allBookmarks="bookmarks" @close="showAllBookmarksModal = false" />
     </div>
   </div>
 </template>
@@ -618,6 +648,11 @@ const goToCreate = () => {
   margin: 1px 0;
 }
 
+.plan-bar.is-inactive {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .plan-bar:hover {
   filter: brightness(0.95);
   z-index: 5;
@@ -667,6 +702,13 @@ const goToCreate = () => {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.card-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .card-header {
@@ -779,21 +821,25 @@ const goToCreate = () => {
 }
 
 .btn-add {
-  background: #2563eb;
+  padding: 12px 24px;
+  background-color: #111;
   color: white;
   border: none;
-  width: 48px;
-  border-radius: 12px;
+  border-radius: 30px; 
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1.4rem;
+  transition: all 0.2s;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .btn-add:hover {
-  background: #1d4ed8;
+  background-color: #333;
+  transform: translateY(-2px);
 }
 
 .wish-list {
@@ -852,6 +898,28 @@ const goToCreate = () => {
 
 .btn-del:hover {
   opacity: 1;
+}
+
+.view-all-bookmarks-btn {
+  padding: 0.5rem 1.2rem;
+  background-color: white;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(66, 133, 244, 0.1);
+  flex-shrink: 0;
+}
+
+.view-all-bookmarks-btn:hover {
+  background-color: #4285f4;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
 }
 
 .empty-msg {
