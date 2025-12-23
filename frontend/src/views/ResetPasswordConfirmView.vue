@@ -49,7 +49,17 @@ const handleSubmit = async () => {
       router.push('/login')
     }, 3000)
   } catch (err) {
-    error.value = err.response?.data?.error || '비밀번호 재설정에 실패했습니다.'
+    // 백엔드에서 반환하는 에러 메시지 처리
+    if (err.response?.data?.error) {
+      error.value = err.response.data.error
+    } else if (err.response?.data?.new_password) {
+      // Serializer ValidationError는 필드명으로 반환됨
+      error.value = Array.isArray(err.response.data.new_password) 
+        ? err.response.data.new_password[0] 
+        : err.response.data.new_password
+    } else {
+      error.value = '비밀번호 재설정에 실패했습니다.'
+    }
   } finally {
     loading.value = false
   }

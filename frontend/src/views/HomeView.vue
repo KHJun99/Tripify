@@ -2,15 +2,17 @@
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { getFestivals } from '@/api/festivals'
+import KakaoMapSearch from '@/components/KakaoMapSearch.vue'
 
 const router = useRouter()
 const searchQuery = ref('')
 const festivals = ref([]) 
 const festivalsMap = ref({}) 
+const showBookmarkModal = ref(false)
 
-// 북마크 카드 클릭 핸들러 - 카카오맵으로 이동
+// 북마크 카드 클릭 핸들러 - 카카오맵 검색 모달 열기
 const handleBookmarkClick = () => {
-  window.open('https://map.kakao.com/', '_blank')
+  showBookmarkModal.value = true
 }
 
 // --- 1. 여행지 데이터 및 랜덤 추천 로직 ---
@@ -124,6 +126,7 @@ const monthFestivals = computed(() => {
   return festivalsMap.value[key] || [] 
 })
 
+
 const scrollToCurrentDate = () => {
   if (scrollContainer.value) {
     const currentIndex = dateList.value.findIndex(d =>
@@ -131,27 +134,117 @@ const scrollToCurrentDate = () => {
       d.getMonth() === today.getMonth()
     )
     if (currentIndex !== -1) {
-      const itemWidth = 84 
-      const containerWidth = scrollContainer.value.clientWidth
-      const scrollPos = (currentIndex * itemWidth) - (containerWidth / 2) + (itemWidth / 2)
-      scrollContainer.value.scrollLeft = scrollPos
+      // 실제 DOM 요소의 너비 측정
+      const dateItems = scrollContainer.value.querySelectorAll('.date-item')
+      if (dateItems.length > 0) {
+        const firstItem = dateItems[0]
+        const itemRect = firstItem.getBoundingClientRect()
+        const itemWidth = itemRect.width + 12 // gap 12px 포함
+        
+        const containerWidth = scrollContainer.value.clientWidth
+        // 현재 달을 가운데로 위치시키기
+        const scrollPos = (currentIndex * itemWidth) - (containerWidth / 2) + (itemWidth / 2)
+        scrollContainer.value.scrollLeft = Math.max(0, scrollPos)
+      }
     }
   }
 }
 
 const scroll = (direction) => {
-  if (scrollContainer.value) {
-    const scrollAmount = 200
-    scrollContainer.value.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth'
-    })
+  if (!scrollContainer.value || dateList.value.length === 0) return
+  
+  // 현재 선택된 날짜의 인덱스 찾기
+  const currentIndex = dateList.value.findIndex(d =>
+    d.getFullYear() === selectedDate.value.getFullYear() &&
+    d.getMonth() === selectedDate.value.getMonth()
+  )
+  
+  if (currentIndex === -1) return
+  
+  // 다음/이전 달 인덱스 계산
+  let targetIndex
+  if (direction === 'left') {
+    targetIndex = Math.max(0, currentIndex - 1)
+  } else {
+    targetIndex = Math.min(dateList.value.length - 1, currentIndex + 1)
   }
+  
+  // 날짜 선택 변경
+  selectDate(dateList.value[targetIndex])
+  
+  // 해당 달을 가운데로 스크롤
+  setTimeout(() => {
+    scrollToDate(dateList.value[targetIndex])
+  }, 50)
+}
+
+// 특정 날짜로 스크롤 (가운데 정렬)
+const scrollToDate = (targetDate) => {
+  if (!scrollContainer.value) return
+  
+  const targetIndex = dateList.value.findIndex(d =>
+    d.getFullYear() === targetDate.getFullYear() &&
+    d.getMonth() === targetDate.getMonth()
+  )
+  
+  if (targetIndex !== -1) {
+    const dateItems = scrollContainer.value.querySelectorAll('.date-item')
+    if (dateItems.length > 0) {
+      const firstItem = dateItems[0]
+      const itemRect = firstItem.getBoundingClientRect()
+      const itemWidth = itemRect.width + 12 // gap 12px 포함
+      
+      const containerWidth = scrollContainer.value.clientWidth
+      // 해당 달을 가운데로 위치시키기
+      const scrollPos = (targetIndex * itemWidth) - (containerWidth / 2) + (itemWidth / 2)
+      scrollContainer.value.scrollTo({
+        left: Math.max(0, scrollPos),
+        behavior: 'smooth'
+      })
+    }
+  }
+}
+
+// 지역명 정규화 함수 (예: '대구' -> '대구광역시')
+const normalizeRegion = (input) => {
+  const regionMap = {
+    '서울': '서울특별시',
+    '부산': '부산광역시',
+    '대구': '대구광역시',
+    '인천': '인천광역시',
+    '광주': '광주광역시',
+    '대전': '대전광역시',
+    '울산': '울산광역시',
+    '세종': '세종특별자치시',
+    '경기': '경기도',
+    '강원': '강원특별자치도',
+    '충북': '충청북도',
+    '충남': '충청남도',
+    '전북': '전북특별자치도',
+    '전남': '전라남도',
+    '경북': '경상북도',
+    '경남': '경상남도',
+    '제주': '제주특별자치도',
+  }
+  
+  // 입력값에서 공백 제거 및 정규화
+  const normalized = input.trim()
+  
+  // 매핑에 있는 경우 변환
+  for (const [key, value] of Object.entries(regionMap)) {
+    if (normalized.includes(key)) {
+      return value
+    }
+  }
+  
+  // 매핑에 없는 경우 원본 반환
+  return normalized
 }
 
 const handleSearch = () => {
   if (searchQuery.value) {
-    router.push({ name: 'trip-plan', query: { search: searchQuery.value } })
+    const normalizedRegion = normalizeRegion(searchQuery.value)
+    router.push({ name: 'trip-plan', query: { search: normalizedRegion } })
   }
 }
 
@@ -170,7 +263,7 @@ const processFestivalsData = (data) => {
     if (!map[key]) { 
       map[key] = [] 
     }
-    if (map[key].length < 5) { 
+    if (map[key].length < 6) { 
       map[key].push(festival) 
     }
   })
@@ -194,7 +287,10 @@ onMounted(async () => {
   generateMonths()
   await loadFestivals()
   await nextTick()
-  scrollToCurrentDate()
+  // DOM이 완전히 렌더링된 후 스크롤 (현재 달을 가운데로)
+  setTimeout(() => {
+    scrollToCurrentDate()
+  }, 100)
 })
 
 onUnmounted(() => {
@@ -204,7 +300,7 @@ onUnmounted(() => {
 
 <template>
   <div class="home">
-    <!-- 고정 배경 -->
+    <!-- 고정 배경 (배경색 제거됨) -->
     <div class="static-bg-wrapper"></div>
 
     <!-- Hero 섹션 -->
@@ -270,13 +366,14 @@ onUnmounted(() => {
       </div>
 
       <div class="feature-grid">
-        <div class="feature-card glass-card">
+        <div class="feature-card glass-card clickable" @click="router.push({ name: 'trip-plan' })">
           <div class="icon-circle">
             <span class="icon">🤖</span>
           </div>
           <div class="card-content">
             <h3>Tripify 맞춤 추천</h3>
             <p>예산과 여행 스타일에 딱 맞는 최적의 코스를 AI가 자동으로 생성해드립니다.</p>
+            <span class="link-text">여행 계획 만들기 &rarr;</span>
           </div>
         </div>
         
@@ -370,6 +467,11 @@ onUnmounted(() => {
         </transition>
       </div>
     </section>
+
+    <!-- 카카오맵 검색 모달 -->
+    <div v-if="showBookmarkModal" class="modal-overlay" @click.self="showBookmarkModal = false">
+      <KakaoMapSearch @close="showBookmarkModal = false" />
+    </div>
   </div>
 </template>
 
@@ -381,7 +483,7 @@ onUnmounted(() => {
   overflow-x: hidden;
 }
 
-/* --- 고정형 배경 스타일 (연한 핑크색) --- */
+/* --- 고정형 배경 스타일 (배경색 제거됨) --- */
 .static-bg-wrapper {
   position: fixed;
   top: 0;
@@ -389,22 +491,20 @@ onUnmounted(() => {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  background-color: #f5f7fa;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(161, 196, 253, 0.5) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(255, 182, 193, 0.3) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(132, 250, 176, 0.4) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(194, 233, 251, 0.5) 0px, transparent 50%);
+  /* background-color 및 background-image 제거됨 */
   background-attachment: fixed;
   background-size: cover;
   pointer-events: none;
 }
 
-/* --- Glassmorphism 효과 --- */
+/* --- Glassmorphism 효과 (그림자 강화) --- */
 .glass-card {
   background: rgba(255, 255, 255, 0.75) !important; 
   border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+  /* 기존보다 조금 더 진하고 명확한 이중 그림자 적용 */
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.05), /* 가까운 그림자 (윤곽) */
+    0 8px 16px rgba(0, 0, 0, 0.08) !important; /* 먼 그림자 (깊이감) */
 }
 
 /* --- Hero Section --- */
@@ -418,7 +518,7 @@ onUnmounted(() => {
   justify-content: center; 
   margin-bottom: 2rem; 
   color: #fff; 
-  background-color: #1f2937; 
+  /* background-color 제거됨 */
 }
 
 .hero-bg { 
@@ -1103,8 +1203,22 @@ onUnmounted(() => {
     margin: 10px 0; 
   }
   
-  .festival-grid { 
-    grid-template-columns: 1fr; 
+  .festival-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

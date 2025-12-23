@@ -4,6 +4,7 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'plans', views.TravelPlanViewSet, basename='travelplan')
+router.register(r'wishlists', views.WishlistViewSet, basename='wishlist')
 
 app_name = 'trips'
 

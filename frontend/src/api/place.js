@@ -24,4 +24,8 @@ export const placeAPI = {
   deleteBookmark(id) {
     return axios.delete(`/bookmarks/${id}/`)
   },
+  
+  createPlaceFromKakao(data) {
+    return axios.post('/places/kakao/', data)
+  },
 }

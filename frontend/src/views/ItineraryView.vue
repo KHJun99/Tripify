@@ -122,17 +122,14 @@ const isOwner = computed(() => {
   return planUser === currentUser
 })
 
-// 별점 채우기 퍼센티지 계산
+// 별점 채우기 퍼센티지 계산 (1단위)
 const getStarFill = (index) => {
-  const currentRating = parseFloat(rating.value)
-  if (currentRating >= index) return '100%'
-  if (currentRating >= index - 0.5) return '50%'
-  return '0%'
+  return rating.value >= index ? '100%' : '0%'
 }
 
-// 별점 설정
-const setRating = (index, isHalf) => {
-  rating.value = isHalf ? index - 0.5 : parseFloat(index)
+// 별점 설정 (1단위)
+const setRating = (index) => {
+  rating.value = index
 }
 
 // 시간대별 색상 클래스 반환
@@ -643,8 +640,7 @@ onMounted(async () => {
                       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                     </svg>
                   </div>
-                  <div class="click-area left" @click="setRating(index, true)"></div>
-                  <div class="click-area right" @click="setRating(index, false)"></div>
+                  <div class="click-area" style="width: 100%; left: 0;" @click="setRating(index)"></div>
                 </div>
                 <span class="rating-text">{{ rating.toFixed(1) }}</span>
               </div>
@@ -1356,17 +1352,9 @@ onMounted(async () => {
 .click-area {
   position: absolute;
   top: 0;
-  width: 50%;
   height: 100%;
-  z-index: 1;
-}
-
-.click-area.left {
-  left: 0;
-}
-
-.click-area.right {
-  right: 0;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .rating-text {

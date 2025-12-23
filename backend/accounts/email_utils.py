@@ -80,7 +80,7 @@ def send_verification_email(user, token):
 
 def send_password_reset_email(user, token):
     """비밀번호 재설정 메일 발송"""
-    reset_url = f"{settings.FRONTEND_URL}/auth/reset-password?token={token.token}"
+    reset_url = f"{settings.FRONTEND_URL}/auth/reset-password/confirm?token={token.token}"
 
     subject = '[Tripify] 비밀번호 재설정 안내'
 

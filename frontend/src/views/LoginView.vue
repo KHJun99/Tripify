@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 
@@ -15,6 +15,21 @@ const rememberId = ref(false)
 const error = ref('')
 const showPassword = ref(false)
 
+// localStorage 키
+const STORAGE_KEY_USERNAME = 'tripify_saved_username'
+const STORAGE_KEY_REMEMBER = 'tripify_remember_id'
+
+// 저장된 아이디 불러오기
+onMounted(() => {
+  const savedUsername = localStorage.getItem(STORAGE_KEY_USERNAME)
+  const savedRemember = localStorage.getItem(STORAGE_KEY_REMEMBER)
+  
+  if (savedUsername && savedRemember === 'true') {
+    formData.value.username = savedUsername
+    rememberId.value = true
+  }
+})
+
 // --- 환경 변수 로드 ---
 const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY || ''
 const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI || 'http://localhost:5173/auth/kakao/callback'
@@ -26,6 +41,16 @@ const handleLogin = async () => {
   try {
     error.value = ''
     await authStore.login(formData.value)
+    
+    // 로그인 성공 시 아이디 저장 처리
+    if (rememberId.value) {
+      localStorage.setItem(STORAGE_KEY_USERNAME, formData.value.username)
+      localStorage.setItem(STORAGE_KEY_REMEMBER, 'true')
+    } else {
+      localStorage.removeItem(STORAGE_KEY_USERNAME)
+      localStorage.removeItem(STORAGE_KEY_REMEMBER)
+    }
+    
     router.push('/')
   } catch (err) {
     console.error(err)
@@ -33,20 +58,44 @@ const handleLogin = async () => {
   }
 }
 
-const handleKakaoLogin = () => {
+const handleKakaoLogin = async () => {
   if (!KAKAO_REST_API_KEY) {
     alert('카카오 API 키가 설정되지 않았습니다.')
     return
   }
-  window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`
+  
+  // 기존 로그인 상태 확인 및 로그아웃
+  if (authStore.isAuthenticated) {
+    try {
+      await authStore.logout()
+    } catch (error) {
+      console.error('로그아웃 실패:', error)
+      // 로그아웃 실패해도 계속 진행
+    }
+  }
+  
+  // prompt=select_account 추가하여 계정 선택 화면 표시
+  window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code&prompt=select_account`
 }
 
-const handleGoogleLogin = () => {
+const handleGoogleLogin = async () => {
   if (!GOOGLE_CLIENT_ID) {
     alert('구글 Client ID가 설정되지 않았습니다.')
     return
   }
-  window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${GOOGLE_REDIRECT_URI}&response_type=code&scope=openid email profile`
+  
+  // 기존 로그인 상태 확인 및 로그아웃
+  if (authStore.isAuthenticated) {
+    try {
+      await authStore.logout()
+    } catch (error) {
+      console.error('로그아웃 실패:', error)
+      // 로그아웃 실패해도 계속 진행
+    }
+  }
+  
+  // prompt=select_account 추가하여 계정 선택 화면 표시
+  window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${GOOGLE_REDIRECT_URI}&response_type=code&scope=openid email profile&prompt=select_account`
 }
 </script>
 

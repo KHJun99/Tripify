@@ -80,3 +80,19 @@ class ItineraryPlace(models.Model):
 
     def __str__(self):
         return f"{self.itinerary} - {self.place.title}"
+
+
+class Wishlist(models.Model):
+    """여행 위시리스트 모델"""
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='wishlists')
+    text = models.CharField(max_length=255, help_text="위시리스트 항목")
+    checked = models.BooleanField(default=False, help_text="완료 여부")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'wishlists'
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"{self.user.username} - {self.text}"

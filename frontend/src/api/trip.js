@@ -45,4 +45,20 @@ export const tripAPI = {
       timeout: 60000, // 60초
     })
   },
+  
+  getWishlists() {
+    return axios.get('/travel/wishlists/')
+  },
+  
+  createWishlist(data) {
+    return axios.post('/travel/wishlists/', data)
+  },
+  
+  updateWishlist(id, data) {
+    return axios.patch(`/travel/wishlists/${id}/`, data)
+  },
+  
+  deleteWishlist(id) {
+    return axios.delete(`/travel/wishlists/${id}/`)
+  },
 }

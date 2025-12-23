@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TravelPlan, Itinerary, ItineraryPlace
+from .models import TravelPlan, Itinerary, ItineraryPlace, Wishlist
 from places.serializers import PlaceSerializer
 
 class ItineraryPlaceSerializer(serializers.ModelSerializer):
@@ -77,3 +77,12 @@ class TravelPlanCreateSerializer(serializers.Serializer):
         if attrs['start_date'] >= attrs['end_date']:
             raise serializers.ValidationError("종료일은 시작일보다 이후여야 합니다.")
         return attrs
+
+
+class WishlistSerializer(serializers.ModelSerializer):
+    """여행 위시리스트 Serializer"""
+    
+    class Meta:
+        model = Wishlist
+        fields = ['id', 'text', 'checked', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at']

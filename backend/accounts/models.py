@@ -111,3 +111,40 @@ class PasswordResetToken(models.Model):
     def is_valid(self):
         """토큰 유효성 검사"""
         return not self.is_used and timezone.now() < self.expires_at
+
+
+class PasswordHistory(models.Model):
+    """비밀번호 변경 이력 모델"""
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='password_history')
+    password_hash = models.CharField(max_length=128, help_text="비밀번호 해시")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'password_history'
+        ordering = ['-created_at']
+        indexes = [
+            models.Index(fields=['user', '-created_at']),
+        ]
+
+    def __str__(self):
+        return f"{self.user.username} - {self.created_at}"
+
+    @classmethod
+    def save_password(cls, user, password_hash):
+        """비밀번호 해시를 저장 (password_hash는 이미 해시된 값)"""
+        # 최근 5개만 유지 (오래된 이력 삭제)
+        history = cls.objects.filter(user=user).order_by('-created_at')
+        if history.count() >= 5:
+            # 5번째 이후의 오래된 이력 삭제
+            old_history = history[4:]
+            cls.objects.filter(id__in=[h.id for h in old_history]).delete()
+        
+        return cls.objects.create(
+            user=user,
+            password_hash=password_hash
+        )
+
+    def check_password(self, raw_password):
+        """저장된 비밀번호 해시와 비교"""
+        from django.contrib.auth.hashers import check_password
+        return check_password(raw_password, self.password_hash)

@@ -32,13 +32,11 @@ const handleLogout = async () => {
         <RouterLink to="/">Tripify</RouterLink>
       </div>
       <div class="nav-links">
-        <RouterLink to="/">홈</RouterLink>
         <template v-if="isAuthenticated">
           <div class="user-greeting" v-if="authStore.user?.nickname">
-            <span class="greeting-text">{{ authStore.user.nickname }} 오늘도 좋은 여행하세요</span>
+            <span class="greeting-text"><strong>{{ authStore.user.nickname }}</strong>님 오늘도 좋은 여행하세요</span>
           </div>
           <RouterLink to="/trips">내 여행</RouterLink>
-          <RouterLink to="/trip/new">여행 계획</RouterLink>
           <RouterLink to="/recommended">추천된 여행지</RouterLink>
           <RouterLink to="/settings">마이페이지</RouterLink>
           <button @click="handleLogout" class="btn-link">로그아웃</button>
@@ -64,7 +62,7 @@ const handleLogout = async () => {
 }
 
 #app {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #2c3e50;
   min-height: 100vh;
 }
@@ -74,16 +72,18 @@ const handleLogout = async () => {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #e0efff;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: none;
 }
 
 .nav-brand a {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+  font-weight: 800;
+  color: #6a11cb;
   text-decoration: none;
+  letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -94,29 +94,42 @@ const handleLogout = async () => {
 
 .user-greeting {
   margin-right: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #f1f3f5;
+  border-radius: 50px;
+  font-size: 0.85rem;
 }
 
 .greeting-text {
-  color: white;
-  font-weight: 500;
+  color: #495057;
+  font-weight: 400;
+}
+
+.greeting-text strong {
+  color: #6a11cb;
+  font-weight: 600;
 }
 
 .nav-links a,
 .btn-link {
-  color: #333;
+  color: #495057;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 .nav-links a:hover,
 .btn-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #f8f9fa;
+  color: #6a11cb;
+  transform: translateY(-1px);
+}
+
+.nav-links a.router-link-active {
+  color: #6a11cb;
+  font-weight: 600;
 }
 
 .btn-link {

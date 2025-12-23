@@ -2,8 +2,8 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .models import TravelPlan, Itinerary, ItineraryPlace
-from .serializers import TravelPlanSerializer, TravelPlanCreateSerializer, ItinerarySerializer
+from .models import TravelPlan, Itinerary, ItineraryPlace, Wishlist
+from .serializers import TravelPlanSerializer, TravelPlanCreateSerializer, ItinerarySerializer, WishlistSerializer
 from ai.gemini_service import GeminiService
 from datetime import timedelta
 
@@ -325,4 +325,18 @@ def recommended_plans(request):
     plans = TravelPlan.objects.filter(is_recommended=True).order_by('-recommended_at')
     serializer = TravelPlanSerializer(plans, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class WishlistViewSet(viewsets.ModelViewSet):
+    """여행 위시리스트 ViewSet - 본인 것만 조회 가능"""
+    serializer_class = WishlistSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        """본인의 위시리스트만 조회 가능"""
+        return Wishlist.objects.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        """생성 시 자동으로 현재 사용자 할당"""
+        serializer.save(user=self.request.user)
 

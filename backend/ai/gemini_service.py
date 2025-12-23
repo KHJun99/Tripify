@@ -279,13 +279,35 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                         # 예산 검증
                         if not self._validate_budget(itinerary_data, budget, budget_min, budget_max):
                             print('⚠️  예산 초과! 재생성을 시도합니다...')
-                            # 재생성 시도 (1회)
-                            return self._regenerate_with_budget_constraint(
-                                budget, people_count, start_date, end_date, departure_location, region,
-                                travel_style, accommodation_type, days,
-                                daily_budget, budget_min, budget_max,
-                                tourist_spots_str, restaurants_str, accommodations_str, festivals_str
-                            )
+                            # 재생성 시도 (최대 5회 반복)
+                            max_retries = 5
+                            retry_count = 0
+                            
+                            while retry_count < max_retries:
+                                retry_count += 1
+                                print(f'재생성 시도 {retry_count}/{max_retries}...')
+                                
+                                regenerated_data = self._regenerate_with_budget_constraint(
+                                    budget, people_count, start_date, end_date, departure_location, region,
+                                    travel_style, accommodation_type, days,
+                                    daily_budget, budget_min, budget_max,
+                                    tourist_spots_str, restaurants_str, accommodations_str, festivals_str,
+                                    retry_count=retry_count - 1
+                                )
+                                
+                                # 재생성된 데이터의 예산 검증
+                                if regenerated_data and self._validate_budget(regenerated_data, budget, budget_min, budget_max):
+                                    print(f'✓ 재생성 성공! ({retry_count}회 시도)')
+                                    return regenerated_data
+                                else:
+                                    if retry_count < max_retries:
+                                        print(f'⚠️ 재생성 {retry_count}회차도 예산 초과. 다시 시도합니다...')
+                                    else:
+                                        print(f'⚠️ 최대 재시도 횟수({max_retries}회)에 도달했습니다. 마지막 결과를 반환합니다.')
+                                        return regenerated_data if regenerated_data else itinerary_data
+                            
+                            # 루프를 빠져나온 경우 (이론적으로는 발생하지 않음)
+                            return regenerated_data if 'regenerated_data' in locals() else itinerary_data
 
                         return itinerary_data
                     except json.JSONDecodeError as e:
@@ -326,8 +348,9 @@ JSON 형식 (정확히 이 구조를 따라주세요):
     def _regenerate_with_budget_constraint(self, budget, people_count, start_date, end_date, departure_location,
                                           region, travel_style, accommodation_type, days,
                                           daily_budget, budget_min, budget_max,
-                                          tourist_spots_str, restaurants_str, accommodations_str, festivals_str):
-        """예산 제약을 더 강조하여 재생성"""
+                                          tourist_spots_str, restaurants_str, accommodations_str, festivals_str,
+                                          retry_count=0):
+        """예산 제약을 더 강조하여 재생성 (재시도 횟수 포함)"""
         budget_per_person = budget // people_count
 
         prompt = f"""
@@ -448,12 +471,13 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 - 일일 목표 예산: 약 {daily_budget:,}원
 - **전체 {days}일간 총 비용 합계는 절대적으로 {budget_max:,}원을 초과하지 않아야 합니다 (예산의 110% 이하)**
 - 예산보다 작게 생성되는 것은 문제없지만, 예산을 10% 초과하면 안 됩니다
-- 첫 번째 시도에서 예산을 초과했으므로, 이번에는 더 저렴한 옵션을 선택하세요:
-  * 게스트하우스나 모텔 등 저렴한 숙소 선택
-  * 대중교통 이용 (택시 최소화)
-  * 가성비 좋은 음식점 선택
-  * 무료 관광지 우선 포함
-- 각 일차별 비용이 {daily_budget:,}원을 크게 넘지 않도록 주의하세요
+- **이전 시도에서 예산을 초과했으므로, 이번에는 반드시 더 저렴한 옵션을 선택하세요** (재시도 횟수: {retry_count + 1}회):
+  * 게스트하우스나 모텔 등 저렴한 숙소 선택 (호텔 피하기)
+  * 대중교통 이용 (택시 최소화, 가능하면 도보)
+  * 가성비 좋은 음식점 선택 (고급 레스토랑 피하기)
+  * 무료 관광지 우선 포함 (유료 입장료 최소화)
+  * 각 일차별 비용을 {daily_budget:,}원 이하로 유지
+- **총 비용 합계가 {budget_max:,}원을 넘지 않도록 각 일차의 estimated_cost를 신중하게 계산하세요**
 
 **기타 중요 사항**:
 - 반드시 위에 제공된 실제 데이터베이스의 장소/음식점 목록에서 선택하여 사용하세요
@@ -515,8 +539,12 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                                 else:
                                     print(f'✓ Day {i} - meals_info 정상: {list(meals_info.keys())}')
 
-                    # 재생성된 데이터도 예산 검증 (통과 여부와 관계없이 반환)
-                    self._validate_budget(itinerary_data, budget, budget_min, budget_max)
+                    # 재생성된 데이터도 예산 검증
+                    if self._validate_budget(itinerary_data, budget, budget_min, budget_max):
+                        print(f'✓ 재생성된 계획이 예산 범위 내입니다.')
+                    else:
+                        print(f'⚠️ 재생성된 계획도 여전히 예산을 초과합니다.')
+                    
                     return itinerary_data
 
         except Exception as e:

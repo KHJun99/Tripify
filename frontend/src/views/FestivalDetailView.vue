@@ -81,6 +81,7 @@
     <div v-else class="loading-container">
       <div class="loader"></div>
     </div>
+
   </div>
 </template>
 
@@ -883,4 +884,5 @@ onMounted(() => {
     padding: 2rem 1rem 3rem;
   }
 }
+
 </style>

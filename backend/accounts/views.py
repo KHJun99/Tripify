@@ -387,6 +387,14 @@ def reset_password_confirm(request):
 
             # 비밀번호 재설정
             user = reset_token.user
+            
+            # 새 비밀번호가 현재 비밀번호와 동일한지 확인 (추가 검증)
+            from django.contrib.auth.hashers import check_password
+            if check_password(new_password, user.password):
+                return Response({
+                    'error': '새 비밀번호는 현재 비밀번호와 동일할 수 없습니다. 다른 비밀번호를 입력해주세요.'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
             user.set_password(new_password)
             user.save()
 

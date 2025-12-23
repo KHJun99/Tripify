@@ -20,24 +20,6 @@ export const useAuthStore = defineStore('auth', () => {
       
       if (remaining > 0) {
         remainingTime.value = remaining
-        
-        // 개발자 콘솔에 남은 시간 출력 (같은 위치에 업데이트되도록)
-        const hours = Math.floor(remaining / (60 * 60 * 1000))
-        const minutes = Math.floor((remaining % (60 * 60 * 1000)) / (60 * 1000))
-        const seconds = Math.floor((remaining % (60 * 1000)) / 1000)
-        
-        let timeString = ''
-        if (hours > 0) {
-          timeString = `${hours}시간 ${minutes}분 ${seconds}초`
-        } else if (minutes > 0) {
-          timeString = `${minutes}분 ${seconds}초`
-        } else {
-          timeString = `${seconds}초`
-        }
-        
-        // 콘솔을 지우고 최신 시간만 표시 (같은 위치에 업데이트되는 효과)
-        console.clear()
-        console.log(`%c⏱️ 자동 로그아웃까지 남은 시간: ${timeString}`, 'color: #ff6b00; font-weight: bold; font-size: 14px;')
       } else {
         remainingTime.value = 0
       }
@@ -106,7 +88,6 @@ export const useAuthStore = defineStore('auth', () => {
 
     // 6시간 후 자동 로그아웃
     autoLogoutTimer = setTimeout(async () => {
-      console.log('6시간 경과로 자동 로그아웃됩니다.')
       alert('6시간이 경과하여 자동으로 로그아웃됩니다.')
       await logout()
       // 로그인 페이지로 리다이렉트
@@ -127,6 +108,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   // 페이지 로드 시 로그인 시간 확인 및 타이머 설정
+  // logout 함수가 정의된 후에 호출되도록 함수 내부에서 정의
   const checkLoginTime = () => {
     const loginTime = localStorage.getItem('loginTime')
     if (loginTime && token.value) {
@@ -135,7 +117,6 @@ export const useAuthStore = defineStore('auth', () => {
 
       if (elapsed >= sixHours) {
         // 이미 6시간이 경과한 경우 즉시 로그아웃
-        console.log('로그인 후 6시간이 경과하여 자동 로그아웃됩니다.')
         logout()
         if (window.location.pathname !== '/login') {
           window.location.href = '/login'
@@ -147,7 +128,6 @@ export const useAuthStore = defineStore('auth', () => {
         // 남은 시간만큼 타이머 설정
         const remaining = sixHours - elapsed
         autoLogoutTimer = setTimeout(async () => {
-          console.log('6시간 경과로 자동 로그아웃됩니다.')
           alert('6시간이 경과하여 자동으로 로그아웃됩니다.')
           await logout()
           if (window.location.pathname !== '/login') {
@@ -156,11 +136,6 @@ export const useAuthStore = defineStore('auth', () => {
         }, remaining)
       }
     }
-  }
-
-  // 초기화 시 로그인 시간 확인
-  if (token.value) {
-    checkLoginTime()
   }
 
   const signup = async (data) => {
@@ -204,7 +179,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       await authAPI.logout()
     } catch (error) {
-      console.error('Logout error:', error)
+      // 에러는 조용히 처리
     } finally {
       // 자동 로그아웃 타이머 제거
       clearAutoLogoutTimer()
@@ -332,6 +307,14 @@ export const useAuthStore = defineStore('auth', () => {
     } catch (error) {
       throw error
     }
+  }
+
+  // 초기화 시 로그인 시간 확인 (logout 함수가 정의된 후에 호출)
+  if (token.value) {
+    // 다음 틱에서 실행하여 모든 함수가 정의된 후에 호출되도록 함
+    setTimeout(() => {
+      checkLoginTime()
+    }, 0)
   }
 
   return {

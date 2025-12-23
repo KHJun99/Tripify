@@ -1,9 +1,14 @@
 <script setup>
 import { onMounted, ref, computed, watch } from 'vue'
 import { useTripStore } from '@/stores/trip'
+import { useAuthStore } from '@/stores/auth'
 import { useRouter } from 'vue-router'
+import { tripAPI } from '@/api/trip'
+import { placeAPI } from '@/api/place'
+import KakaoMapSearch from '@/components/KakaoMapSearch.vue'
 
 const tripStore = useTripStore()
+const authStore = useAuthStore()
 const router = useRouter()
 
 // --- 색상 팔레트 (확장) ---
@@ -34,7 +39,7 @@ const getPlanStyle = (id) => {
 
 // --- 달력 상태 ---
 const currentDate = ref(new Date())
-const weekDays = ['일', '월', '화', '수', '목', '금', '토']
+const weekDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
 const currentYear = computed(() => currentDate.value.getFullYear())
 const currentMonth = computed(() => currentDate.value.getMonth())
@@ -43,6 +48,14 @@ const startDay = computed(() => new Date(currentYear.value, currentMonth.value, 
 
 const changeMonth = (diff) => {
   currentDate.value = new Date(currentYear.value, currentMonth.value + diff, 1)
+}
+
+// 오늘 날짜 확인 함수
+const isToday = (day) => {
+  const today = new Date()
+  return today.getDate() === day &&
+         today.getMonth() === currentMonth.value &&
+         today.getFullYear() === currentYear.value
 }
 
 // --- 일정 정렬 ---
@@ -104,45 +117,132 @@ const getSegmentWidth = (day, plan) => {
   const daysLeftInPlan = Math.floor((endDate - targetDate) / msPerDay) + 1
 
   const span = Math.min(daysLeftInWeek, daysLeftInPlan)
-  return `calc(100% * ${span} + ${span - 1}px - 6px)`
+  return `calc(100% * ${span} + ${span}px - 12px)`
 }
 
 // --- 위시리스트 기능 ---
 const newWish = ref('')
-const savedWishlist = localStorage.getItem('my-trip-wishlist')
-const wishlist = ref(savedWishlist ? JSON.parse(savedWishlist) : [
-  { id: 1, text: '제주도 한라산 등반', checked: false },
-  { id: 2, text: '부산 해운대 요트 투어', checked: false },
-])
+const wishlist = ref([])
+const isLoadingWishlist = ref(false)
 
-watch(wishlist, (newVal) => {
-  localStorage.setItem('my-trip-wishlist', JSON.stringify(newVal))
-}, { deep: true })
-
-const addWish = () => {
-  if (newWish.value.trim()) {
-    wishlist.value.push({
-      id: Date.now(),
-      text: newWish.value,
-      checked: false
-    })
-    newWish.value = ''
+// 위시리스트 조회
+const fetchWishlists = async () => {
+  if (!authStore.isAuthenticated) {
+    wishlist.value = []
+    return
+  }
+  
+  try {
+    isLoadingWishlist.value = true
+    const response = await tripAPI.getWishlists()
+    wishlist.value = response.data
+  } catch (error) {
+    console.error('위시리스트 조회 실패:', error)
+    wishlist.value = []
+  } finally {
+    isLoadingWishlist.value = false
   }
 }
 
-const removeWish = (id) => {
-  wishlist.value = wishlist.value.filter(item => item.id !== id)
+// 위시리스트 추가
+const addWish = async () => {
+  if (!newWish.value.trim()) return
+  
+  if (!authStore.isAuthenticated) {
+    alert('로그인이 필요합니다.')
+    return
+  }
+  
+  try {
+    const response = await tripAPI.createWishlist({
+      text: newWish.value.trim(),
+      checked: false
+    })
+    wishlist.value.push(response.data)
+    newWish.value = ''
+  } catch (error) {
+    console.error('위시리스트 추가 실패:', error)
+    alert('위시리스트 추가에 실패했습니다.')
+  }
 }
 
-// --- 추천 여행지 ---
-const recommendations = ref([
-  { id: 1, title: '강원도 평창', tag: '#겨울왕국 #스키', color: '#E3F2FD', icon: '❄️' },
-  { id: 2, title: '여수 밤바다', tag: '#야경 #낭만포차', color: '#E8EAF6', icon: '🌊' },
-  { id: 3, title: '전주 한옥마을', tag: '#먹방 #한복체험', color: '#F3E5F5', icon: '🏯' },
-])
+// 위시리스트 체크 상태 변경
+const toggleWish = async (item) => {
+  if (!authStore.isAuthenticated) return
+  
+  try {
+    await tripAPI.updateWishlist(item.id, {
+      checked: !item.checked
+    })
+    item.checked = !item.checked
+  } catch (error) {
+    console.error('위시리스트 업데이트 실패:', error)
+  }
+}
+
+// 위시리스트 삭제
+const removeWish = async (id) => {
+  if (!authStore.isAuthenticated) return
+  
+  try {
+    await tripAPI.deleteWishlist(id)
+    wishlist.value = wishlist.value.filter(item => item.id !== id)
+  } catch (error) {
+    console.error('위시리스트 삭제 실패:', error)
+    alert('위시리스트 삭제에 실패했습니다.')
+  }
+}
+
+// --- 북마크 기능 ---
+const bookmarks = ref([])
+const isLoadingBookmarks = ref(false)
+const showBookmarkModal = ref(false)
+const selectedBookmark = ref(null)
+
+// 북마크 조회
+const fetchBookmarks = async () => {
+  if (!authStore.isAuthenticated) {
+    bookmarks.value = []
+    return
+  }
+  
+  try {
+    isLoadingBookmarks.value = true
+    const response = await placeAPI.getBookmarks()
+    bookmarks.value = response.data
+  } catch (error) {
+    console.error('북마크 조회 실패:', error)
+    bookmarks.value = []
+  } finally {
+    isLoadingBookmarks.value = false
+  }
+}
+
+// 북마크 클릭 시 모달 열기
+const openBookmarkModal = (bookmark) => {
+  selectedBookmark.value = bookmark
+  showBookmarkModal.value = true
+}
+
+// 북마크 삭제
+const removeBookmark = async (id, event) => {
+  event.stopPropagation() // 클릭 이벤트 전파 방지
+  if (!authStore.isAuthenticated) return
+  
+  try {
+    await placeAPI.deleteBookmark(id)
+    bookmarks.value = bookmarks.value.filter(item => item.id !== id)
+  } catch (error) {
+    console.error('북마크 삭제 실패:', error)
+    alert('북마크 삭제에 실패했습니다.')
+  }
+}
+
 
 onMounted(async () => {
   await tripStore.fetchPlans()
+  await fetchWishlists()
+  await fetchBookmarks()
 })
 
 const goToTrip = (id) => {
@@ -166,37 +266,55 @@ const goToCreate = () => {
       <div class="calendar-section glass-card">
         <div class="calendar-header">
           <div class="month-nav">
-            <button @click="changeMonth(-1)">&lt;</button>
-            <h2>{{ currentYear }}. {{ currentMonth + 1 }}</h2>
-            <button @click="changeMonth(1)">&gt;</button>
+            <button class="nav-btn" @click="changeMonth(-1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="current-date-display">
+              <span class="year-label">{{ currentYear }}</span>
+              <span class="month-label">{{ currentMonth + 1 }}월</span>
+            </div>
+            <button class="nav-btn" @click="changeMonth(1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
-          <button class="btn-create" @click="goToCreate">여행 추가 +</button>
+          <button class="btn-create" @click="goToCreate">
+            <span class="plus-icon">+</span> 새로운 여행
+          </button>
         </div>
 
         <div class="calendar-board">
-          <div v-for="day in weekDays" :key="day" class="weekday">{{ day }}</div>
-          <div v-for="n in startDay" :key="'blank-' + n" class="day blank"></div>
+          <div class="week-header">
+            <div v-for="day in weekDays" :key="day" class="weekday" :class="{ 'sunday': day === 'SUN', 'saturday': day === 'SAT' }">
+              {{ day }}
+            </div>
+          </div>
+          
+          <div class="days-grid">
+            <div v-for="n in startDay" :key="'blank-' + n" class="day blank"></div>
 
-          <div v-for="day in daysInMonth" :key="day" class="day">
-            <span class="day-number">{{ day }}</span>
+            <div v-for="day in daysInMonth" :key="day" class="day" :class="{ 'is-today': isToday(day) }">
+              <div class="day-top">
+                <span class="day-number" :class="{ 'today-badge': isToday(day) }">{{ day }}</span>
+              </div>
 
-            <div class="plan-bars">
-              <div
-                v-for="plan in getPlansForDate(day)"
-                :key="plan.id"
-                class="plan-bar"
-                :class="getPlanClass(day, plan)"
-                :style="getPlanStyle(plan.id)"
-                @click.stop="goToTrip(plan.id)"
-              >
-                <span
-                  v-if="getPlanClass(day, plan).includes('is-start')"
-                  class="plan-title"
-                  :style="{ width: getSegmentWidth(day, plan) }"
+              <div class="plan-bars">
+                <div
+                  v-for="plan in getPlansForDate(day)"
+                  :key="plan.id"
+                  class="plan-bar"
+                  :class="getPlanClass(day, plan)"
+                  :style="getPlanStyle(plan.id)"
+                  @click.stop="goToTrip(plan.id)"
                 >
-                  {{ plan.title }}
-                </span>
-                <span v-else class="plan-title-hidden">&nbsp;</span>
+                  <span
+                    v-if="getPlanClass(day, plan).includes('is-start')"
+                    class="plan-title"
+                    :style="{ width: getSegmentWidth(day, plan) }"
+                  >
+                    {{ plan.title }}
+                  </span>
+                  <span v-else class="plan-title-hidden">&nbsp;</span>
+                </div>
               </div>
             </div>
           </div>
@@ -206,6 +324,32 @@ const goToCreate = () => {
       <!-- 하단 섹션 -->
       <div class="bottom-section">
         
+        <!-- 북마크 카드 -->
+        <div class="card bookmark-card glass-card">
+          <div class="card-header">
+            <h3>⭐ 저장된 북마크</h3>
+            <span class="subtitle">저장한 장소를 확인하세요</span>
+          </div>
+          
+          <div v-if="isLoadingBookmarks" class="loading-msg">로딩 중...</div>
+          <ul v-else class="bookmark-list">
+            <li 
+              v-for="bookmark in bookmarks" 
+              :key="bookmark.id" 
+              class="bookmark-item"
+              @click="openBookmarkModal(bookmark)"
+            >
+              <div class="bookmark-info">
+                <h4 class="bookmark-title">{{ bookmark.place?.title || '장소명 없음' }}</h4>
+                <p class="bookmark-address">{{ bookmark.place?.address || '주소 없음' }}</p>
+                <span v-if="bookmark.place?.category" class="bookmark-category">{{ bookmark.place.category }}</span>
+              </div>
+              <button @click="removeBookmark(bookmark.id, $event)" class="btn-del" title="북마크 삭제">×</button>
+            </li>
+            <li v-if="bookmarks.length === 0" class="empty-msg">저장된 북마크가 없습니다.</li>
+          </ul>
+        </div>
+
         <!-- 위시리스트 카드 -->
         <div class="card wishlist-card glass-card">
           <div class="card-header">
@@ -226,7 +370,7 @@ const goToCreate = () => {
           <ul class="wish-list">
             <li v-for="item in wishlist" :key="item.id" class="wish-item">
               <label :class="{ checked: item.checked }">
-                <input type="checkbox" v-model="item.checked" />
+                <input type="checkbox" :checked="item.checked" @change="toggleWish(item)" />
                 <span class="wish-text">{{ item.text }}</span>
               </label>
               <button @click="removeWish(item.id)" class="btn-del">×</button>
@@ -234,45 +378,29 @@ const goToCreate = () => {
             <li v-if="wishlist.length === 0" class="empty-msg">위시리스트가 비어있습니다.</li>
           </ul>
         </div>
-
-        <!-- 추천 여행지 카드 -->
-        <div class="card recommend-card glass-card">
-          <div class="card-header">
-            <h3>☃️ {{ currentMonth + 1 }}월의 추천 여행지</h3>
-            <span class="subtitle">지금 떠나기 딱 좋은 곳들</span>
-          </div>
-          
-          <div class="recommend-grid">
-            <div 
-              v-for="place in recommendations" 
-              :key="place.id" 
-              class="recommend-item"
-              :style="{ backgroundColor: place.color }"
-            >
-              <div class="place-icon">{{ place.icon }}</div>
-              <div class="place-info">
-                <span class="place-tag">{{ place.tag }}</span>
-                <strong class="place-title">{{ place.title }}</strong>
-              </div>
-            </div>
-          </div>
-          <div class="more-link">
-            <span>더 많은 여행지 찾아보기 &rarr;</span>
-          </div>
-        </div>
-
       </div>
+    </div>
+
+    <!-- 북마크 모달 -->
+    <div 
+      v-if="showBookmarkModal" 
+      class="modal-overlay" 
+      :class="{ 'bookmark-overlay': selectedBookmark }"
+      @click.self="!selectedBookmark && (showBookmarkModal = false)"
+    >
+      <KakaoMapSearch :bookmark="selectedBookmark" @close="showBookmarkModal = false" />
     </div>
   </div>
 </template>
 
 <style scoped>
-/* --- 고정형 배경 스타일 (연한 핑크) --- */
+/* --- 고정형 배경 스타일 --- */
 .my-trips-view {
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background-color: #f9f9f9; 
 }
 
 .static-bg-wrapper {
@@ -282,32 +410,25 @@ const goToCreate = () => {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  background-color: #f5f7fa;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(161, 196, 253, 0.5) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(255, 182, 193, 0.3) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(132, 250, 176, 0.4) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(194, 233, 251, 0.5) 0px, transparent 50%);
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: #f9f9f9;
   pointer-events: none;
 }
 
-/* --- 유리 질감 클래스 --- */
+/* --- 카드 스타일 --- */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75) !important;
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* --- 기본 레이아웃 --- */
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 1200px;
+  gap: 24px;
+  max-width: 1400px; 
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
   position: relative;
   z-index: 1;
 }
@@ -320,8 +441,8 @@ const goToCreate = () => {
 
 /* --- 달력 섹션 --- */
 .calendar-section {
-  padding: 24px;
-  border-radius: 16px;
+  padding: 40px; 
+  border-radius: 24px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -330,142 +451,187 @@ const goToCreate = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
 .month-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex: 1;
+  gap: 24px;
+}
+
+.current-date-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.year-label {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.month-label {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: #fff;
+  display: flex;
+  align-items: center;
   justify-content: center;
-}
-
-.month-nav h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.month-nav button {
-  padding: 8px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
   cursor: pointer;
+  color: #333;
   transition: all 0.2s;
 }
 
-.month-nav button:hover {
-  background: rgba(255, 255, 255, 0.9);
+.nav-btn:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
 }
 
 .btn-create {
-  padding: 10px 20px;
-  background-color: #3498db;
+  padding: 12px 24px;
+  background-color: #111;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px; 
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+  transition: all 0.2s;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.plus-icon {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .btn-create:hover {
-  background-color: #2980b9;
+  background-color: #333;
+  transform: translateY(-2px);
 }
 
 .calendar-board {
+  width: 100%;
+}
+
+.week-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  overflow: hidden;
-  table-layout: fixed;
-  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 10px;
 }
 
 .weekday {
-  text-align: center;
-  font-weight: 600;
-  padding: 12px 0;
-  background: rgba(248, 249, 250, 0.7);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  font-size: 0.9rem;
-  color: #555;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.weekday:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+.weekday.sunday { color: #ff6b6b; }
+.weekday.saturday { color: #339af0; }
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #eee; 
+  border-left: 1px solid #eee; 
 }
 
 .day {
-  min-height: 110px;
-  padding: 34px 0 4px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 160px;
+  padding: 0;
+  border-right: 1px solid #eee; 
+  border-bottom: 1px solid #eee;
   position: relative;
-  background-color: transparent;
-  z-index: 1;
+  background-color: #fff;
+  transition: background-color 0.2s;
 }
 
-.day:nth-child(7n) {
-  border-right: none;
+.day:hover {
+  background-color: #fafafa;
+}
+
+.day-top {
+  padding: 12px 12px 6px 12px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .day-number {
-  position: absolute;
-  top: 10px;
-  left: 12px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #444;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.today-badge {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
 }
 
 .blank {
-  background: rgba(250, 250, 250, 0.5);
+  background: #fcfcfc;
 }
 
 .plan-bars {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   width: 100%;
+  padding-bottom: 6px;
 }
 
 .plan-bar {
   background-color: var(--plan-bg);
   color: var(--plan-text);
-  font-size: 0.75rem;
-  height: 22px;
-  line-height: 22px;
+  font-size: 0.85rem;
+  height: 28px;
+  line-height: 28px;
   cursor: pointer;
   white-space: nowrap;
   position: relative;
-  margin-bottom: 2px;
-  opacity: 0.95;
+  opacity: 1;
+  border-radius: 0;
+  margin: 1px 0;
 }
 
 .plan-bar:hover {
   filter: brightness(0.95);
-  opacity: 1;
+  z-index: 5;
 }
 
 .plan-bar.is-start {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   margin-left: 6px;
-  border-left: 3px solid var(--plan-text);
-  z-index: 10;
 }
 
 .plan-bar.is-end {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   margin-right: 6px;
 }
 
@@ -476,13 +642,13 @@ const goToCreate = () => {
   left: 0;
   height: 100%;
   box-sizing: border-box;
-  padding-left: 6px;
-  padding-right: 4px;
+  padding-left: 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 600;
+  font-weight: 700;
   pointer-events: none;
+  z-index: 10;
 }
 
 .plan-title-hidden {
@@ -493,62 +659,141 @@ const goToCreate = () => {
 .bottom-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 24px;
 }
 
 .card {
-  padding: 24px;
-  border-radius: 16px;
+  padding: 32px; 
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
 }
 
 .card-header {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .card h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.1rem;
-  color: #333;
-  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  color: #111;
+  font-weight: 800;
 }
 
 .subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* --- 북마크 스타일 --- */
+.bookmark-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.bookmark-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.bookmark-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(66, 133, 244, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bookmark-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.bookmark-title {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmark-address {
+  margin: 0 0 5px 0;
   font-size: 0.85rem;
   color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmark-category {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  color: #4285f4;
+  background: rgba(66, 133, 244, 0.1);
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.loading-msg {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 /* --- 위시리스트 스타일 --- */
 .wish-input-area {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .wish-input-area input {
   flex: 1;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid #eee;
+  background: #f8f9fa;
+  border-radius: 12px;
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.2s;
+  font-size: 1rem;
 }
 
 .wish-input-area input:focus {
-  border-color: #3498db;
+  border-color: #2563eb;
   background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .btn-add {
-  background: #3498db;
+  background: #2563eb;
   color: white;
   border: none;
-  width: 40px;
-  border-radius: 8px;
+  width: 48px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background: #1d4ed8;
 }
 
 .wish-list {
@@ -557,37 +802,41 @@ const goToCreate = () => {
   margin: 0;
   flex: 1;
   overflow-y: auto;
-  max-height: 200px;
+  max-height: 250px;
 }
 
 .wish-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .wish-item label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
   flex: 1;
 }
 
 .wish-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
   cursor: pointer;
+  accent-color: #2563eb;
 }
 
 .wish-text {
   transition: color 0.2s;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  color: #333;
 }
 
 .checked .wish-text {
   text-decoration: line-through;
-  color: #999;
+  color: #aaa;
 }
 
 .btn-del {
@@ -595,113 +844,65 @@ const goToCreate = () => {
   background: none;
   color: #ff6b6b;
   cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0 5px;
+  font-size: 1.4rem;
+  padding: 0 8px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.btn-del:hover {
+  opacity: 1;
 }
 
 .empty-msg {
   text-align: center;
   color: #888;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-/* --- 추천 여행지 스타일 --- */
-.recommend-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.recommend-item {
-  border-radius: 12px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s;
-  height: 100px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.recommend-item:hover {
-  transform: translateY(-3px);
-}
-
-.place-icon {
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.place-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.place-tag {
-  font-size: 0.7rem;
-  color: #555;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-.place-title {
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.more-link {
-  text-align: right;
-  font-size: 0.85rem;
-  color: #3498db;
-  cursor: pointer;
-  margin-top: auto;
-}
-
-.more-link span:hover {
-  text-decoration: underline;
+  padding: 30px;
+  font-size: 0.95rem;
 }
 
 /* --- 반응형 --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .bottom-section {
     grid-template-columns: 1fr;
   }
 
   .day {
-    min-height: 70px;
-    padding-top: 25px;
+    min-height: 100px;
   }
+  
+  .content-wrapper {
+    padding: 1.5rem;
+  }
+}
 
-  .plan-bar {
-    font-size: 10px;
-    height: 18px;
-    line-height: 18px;
-  }
+/* 모달 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
 
-  .day-number {
-    font-size: 0.8rem;
-    top: 4px;
-    left: 4px;
-  }
+/* 북마크 모드일 때 오버레이 스타일 조정 */
+.modal-overlay.bookmark-overlay {
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0;
+  background: transparent;
+  pointer-events: none;
+}
 
-  .btn-create {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-
-  .recommend-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .month-nav {
-    justify-content: flex-start;
-  }
+/* 북마크 모드일 때 사이드패널만 클릭 가능 */
+.modal-overlay.bookmark-overlay > * {
+  pointer-events: auto;
 }
 </style>

@@ -54,6 +54,25 @@ class PasswordResetConfirmSerializer(serializers.Serializer):
     def validate(self, attrs):
         if attrs['new_password'] != attrs['new_password_confirm']:
             raise serializers.ValidationError({"new_password": "비밀번호가 일치하지 않습니다."})
+        
+        # 토큰으로 사용자 찾기
+        from .models import PasswordResetToken
+        from django.contrib.auth.hashers import check_password
+        
+        try:
+            reset_token = PasswordResetToken.objects.get(token=attrs['token'])
+            if reset_token.is_valid():
+                user = reset_token.user
+                
+                # 새 비밀번호가 현재 비밀번호와 동일한지 확인
+                if check_password(attrs['new_password'], user.password):
+                    raise serializers.ValidationError({
+                        "new_password": "새 비밀번호는 현재 비밀번호와 동일할 수 없습니다. 다른 비밀번호를 입력해주세요."
+                    })
+        except PasswordResetToken.DoesNotExist:
+            # 토큰이 없어도 여기서는 에러를 발생시키지 않음 (나중에 views에서 처리)
+            pass
+        
         return attrs
 
 
@@ -87,10 +106,41 @@ class PasswordChangeSerializer(serializers.Serializer):
         return value
 
     def validate(self, attrs):
+        user = self.context['request'].user
+        
+        # 사용자 확인
+        if not user or not user.is_authenticated:
+            raise serializers.ValidationError({
+                "current_password": "인증된 사용자만 비밀번호를 변경할 수 있습니다."
+            })
+        
         if attrs['new_password'] != attrs['new_password_confirm']:
             raise serializers.ValidationError({"new_password": "새 비밀번호가 일치하지 않습니다."})
+        
+        # 현재 비밀번호와 동일한지 확인
+        from django.contrib.auth.hashers import check_password
+        
+        # 현재 비밀번호와 동일한지 확인 (2가지 방법으로 검증)
+        
+        # 방법 1: 사용자가 입력한 현재 비밀번호와 새 비밀번호 평문 비교
+        # validate_current_password에서 이미 현재 비밀번호가 맞는지 확인했으므로,
+        # current_password와 new_password가 같으면 동일한 비밀번호입니다.
         if attrs['current_password'] == attrs['new_password']:
-            raise serializers.ValidationError({"new_password": "새 비밀번호는 현재 비밀번호와 달라야 합니다."})
+            print(f"[비밀번호 검증] 평문 비교: 현재 비밀번호와 새 비밀번호가 동일함")
+            raise serializers.ValidationError({
+                "new_password": "새 비밀번호는 현재 비밀번호와 동일할 수 없습니다. 다른 비밀번호를 입력해주세요."
+            })
+        
+        # 방법 2: 현재 로그인한 사용자의 비밀번호 해시와 새 비밀번호 비교
+        # user.password는 현재 로그인한 사용자(request.user)의 비밀번호 해시입니다
+        if check_password(attrs['new_password'], user.password):
+            print(f"[비밀번호 검증] 해시 비교: 새 비밀번호가 현재 비밀번호 해시와 일치함")
+            raise serializers.ValidationError({
+                "new_password": "새 비밀번호는 현재 비밀번호와 동일할 수 없습니다. 다른 비밀번호를 입력해주세요."
+            })
+        
+        print(f"[비밀번호 검증] 통과: 새 비밀번호가 현재 비밀번호와 다름")
+        
         return attrs
 
 
