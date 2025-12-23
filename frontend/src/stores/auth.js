@@ -271,6 +271,36 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  const naverLogin = async (code, state) => {
+    try {
+      const response = await authAPI.naverLogin(code, state)
+      token.value = response.data.token
+      localStorage.setItem('token', response.data.token)
+      isAuthenticated.value = true
+      
+      // 프로필 정보 가져오기
+      try {
+        const profile = await getProfile()
+        user.value = profile
+      } catch (error) {
+        // 프로필 가져오기 실패 시 기본 정보만 저장
+        user.value = {
+          username: response.data.username,
+          id: response.data.user_id,
+          email: response.data.email,
+          loginType: response.data.login_type,
+        }
+      }
+      
+      // 자동 로그아웃 타이머 설정
+      setAutoLogoutTimer()
+      
+      return response.data
+    } catch (error) {
+      throw error
+    }
+  }
+
   const deleteAccount = async (password = null) => {
     try {
       const data = password ? { password } : {}
@@ -330,6 +360,7 @@ export const useAuthStore = defineStore('auth', () => {
     updateProfile,
     kakaoLogin,
     googleLogin,
+    naverLogin,
     deleteAccount,
     changePassword,
   }

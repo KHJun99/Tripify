@@ -3,6 +3,7 @@ import { RouterView, RouterLink, useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { computed, onMounted } from 'vue'
 import tripifyLogo from '@/assets/img/logo1.png'
+import ScrollToTop from '@/components/common/ScrollToTop.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -54,6 +55,8 @@ const handleLogout = async () => {
     <main class="main-content">
       <RouterView />
     </main>
+    
+    <ScrollToTop />
   </div>
 </template>
 

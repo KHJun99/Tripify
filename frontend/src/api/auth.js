@@ -29,6 +29,10 @@ export const authAPI = {
     return axios.post('/auth/google/callback/', { code })
   },
 
+  naverLogin(code, state) {
+    return axios.post('/auth/naver/callback/', { code, state })
+  },
+
   deleteAccount(data) {
     return axios.delete('/auth/delete/', { data })
   },

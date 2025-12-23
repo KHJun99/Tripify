@@ -14,9 +14,9 @@ export const tripAPI = {
   },
   
   generatePlan(data) {
-    // AI 일정 생성은 시간이 걸리므로 60초 타임아웃 설정
+    // AI 일정 생성은 시간이 오래 걸릴 수 있으므로 넉넉한 타임아웃 설정
     return axios.post('/travel/plans/generate/', data, {
-      timeout: 60000, // 60초
+      timeout: 120000, // 120초
     })
   },
   

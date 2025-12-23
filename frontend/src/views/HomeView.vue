@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import { getFestivals } from '@/api/festivals'
 import KakaoMapSearch from '@/components/KakaoMapSearch.vue'
+import tripifyLogo from '@/assets/img/logo1.png'
 
 const router = useRouter()
 const searchQuery = ref('')
@@ -321,7 +322,7 @@ onUnmounted(() => {
       <div class="hero-content-wrapper">
         <div class="hero-text-area animate-slide-up">
           <h1 class="logo-title">
-            <span class="trip">Trip</span><span class="ify">ify</span>
+            <img :src="tripifyLogo" alt="Tripify" class="hero-logo" />
           </h1>
           <p class="hero-subtitle">
             한국에서 만나는,<br>
@@ -329,7 +330,12 @@ onUnmounted(() => {
           </p>
           
           <div class="search-box">
-            <span class="search-icon">🔍</span>
+            <span class="search-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
             <input 
               v-model="searchQuery" 
               type="text" 
@@ -372,7 +378,11 @@ onUnmounted(() => {
       <div class="feature-grid">
         <div class="feature-card glass-card clickable" @click="router.push({ name: 'trip-plan' })">
           <div class="icon-circle">
-            <span class="icon">🤖</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                <line x1="8" y1="2" x2="8" y2="18"></line>
+                <line x1="16" y1="6" x2="16" y2="22"></line>
+              </svg>
           </div>
           <div class="card-content">
             <h3>Tripify 맞춤 추천</h3>
@@ -383,7 +393,14 @@ onUnmounted(() => {
         
         <div class="feature-card glass-card clickable" @click="goToFestivals">
           <div class="icon-circle">
-            <span class="icon">🎉</span>
+            <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                <path d="M13 5v2"></path>
+                <path d="M13 17v2"></path>
+                <path d="M13 11v2"></path>
+              </svg>
+            </span>
           </div>
           <div class="card-content">
             <h3>지역 축제 정보</h3>
@@ -394,7 +411,9 @@ onUnmounted(() => {
         
         <div class="feature-card glass-card clickable" @click="handleBookmarkClick">
           <div class="icon-circle">
-            <span class="icon">⭐</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+            </svg>
           </div>
           <div class="card-content">
             <h3>나만의 북마크</h3>
@@ -608,6 +627,15 @@ onUnmounted(() => {
   color: #fff; 
 }
 
+.hero-logo {
+  width: 450px; 
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+  margin-left: -40px; 
+  margin-bottom: -70px; 
+}
+
 .hero-subtitle { 
   font-size: 2rem; 
   margin-bottom: 2.5rem; 
@@ -616,6 +644,7 @@ onUnmounted(() => {
   line-height: 1.3; 
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
 }
+
 
 .search-box { 
   display: flex; 
@@ -636,7 +665,9 @@ onUnmounted(() => {
 .search-icon { 
   margin-right: 15px; 
   font-size: 1.3rem; 
-  color: #4285f4; 
+  color: #2F80ED;
+  align-items: center;
+  margin-top: 2px;
 }
 
 .search-box input { 

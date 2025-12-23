@@ -9,13 +9,13 @@ load_dotenv()
 
 
 class GeminiService:
-    """SSAFY GMS를 통한 Google Gemini AI 서비스"""
+    """SSAFY GMS를 통한 Claude Sonnet 4 AI 서비스"""
 
     def __init__(self):
         self.api_key = os.getenv('GMS_API_KEY', '')
-        # Anthropic Claude 모델 (SSAFY GMS 프록시 경유)
+        # Anthropic Claude Sonnet 4 모델 (SSAFY GMS 프록시 경유)
         self.base_url = 'https://gms.ssafy.io/gmsapi/api.anthropic.com/v1/messages'
-        self.model = 'claude-3-5-haiku-latest'
+        self.model = 'claude-sonnet-4-20250514'
 
     def generate_itinerary(self, budget, people_count, start_date, end_date, departure_location, region, travel_style, accommodation_type):
         """
@@ -224,7 +224,7 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             print('경고: GMS_API_KEY가 설정되지 않았습니다. 샘플 데이터를 반환합니다.')
             return self._get_sample_data(days, region, travel_style, people_count, departure_location)
 
-        # SSAFY GMS API 호출 (Claude 3.5 Haiku)
+        # SSAFY GMS API 호출 (Claude Sonnet 4)
         try:
             url = self.base_url
             headers = {
@@ -261,7 +261,7 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 
                 if text:
 
-                    print('=== Gemini API 원본 응답 ===')
+                    print('=== Claude API 원본 응답 ===')
                     print(f'응답 길이: {len(text)} 글자')
                     print(f'첫 200자: {text[:200]}')
                     print('=' * 50)
@@ -293,7 +293,7 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                                     else:
                                         print(f'✓ Day {i} - meals_info 정상: {list(meals_info.keys())}')
 
-                        # 일정 다양성 검증: 모든 일차가 거의 동일하면 실패로 간주
+                        # 일정 다양성 검증: 모든 일차의 일정이 거의 동일하면 실패로 간주
                         if self._all_days_almost_same(itinerary_data):
                             print('⚠️ 모든 일차의 일정이 거의 동일합니다. 샘플(DB 기반) 데이터를 사용해 대체합니다.')
                             return self._get_sample_data(days, region, travel_style, people_count, departure_location)
@@ -786,29 +786,79 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 
         return len(set(normalized)) == 1
 
+    def _build_region_candidates(self, region: str):
+        """
+        지역 문자열에서 검색에 사용할 후보 키워드 목록 생성
+        예) "부산광역시" -> ["부산광역시", "부산"]
+            "서울특별시 강남구" -> ["서울특별시 강남구", "서울특별시", "서울", "강남구", "강남"]
+        """
+        if not region:
+            return []
+
+        region = region.strip()
+        candidates = set()
+
+        # 1차: 전체 문자열
+        candidates.add(region)
+
+        # 2차: 공백으로 나눈 토큰들
+        parts = [p for p in region.split() if p]
+        if parts:
+            for p in parts:
+                candidates.add(p)
+
+        # 3차: 행정구역 접미사 제거 버전
+        suffixes = ['광역시', '특별시', '시', '군', '구', '도']
+        for text in list(candidates):
+            for suf in suffixes:
+                if text.endswith(suf) and len(text) > len(suf):
+                    candidates.add(text[: -len(suf)])
+
+        # 빈 문자열 제거
+        return [c for c in candidates if c]
+
     def _get_places_by_region(self, region, place_type, limit=10):
-        """지역과 타입으로 장소 검색"""
+        """지역과 타입으로 장소 검색 (여러 후보 키워드로 순차 검색)"""
         try:
-            places = Place.objects.filter(
-                region__icontains=region,
-                place_type=place_type
-            )[:limit]
-            return list(places)
+            candidates = self._build_region_candidates(region)
+            print(f'[Place 검색] region="{region}", candidates={candidates}, type={place_type}')
+
+            for keyword in candidates:
+                qs = Place.objects.filter(
+                    region__icontains=keyword,
+                    place_type=place_type
+                )[:limit]
+                places = list(qs)
+                if places:
+                    print(f'[Place 검색] "{keyword}" 로 {len(places)}개 찾음')
+                    return places
+
+            print(f'[Place 검색] "{region}" 에 대한 장소를 찾지 못했습니다. place_type={place_type}')
+            return []
         except Exception as e:
             print(f'장소 조회 오류: {e}')
             return []
 
     def _get_festivals_by_region(self, region, start_date, end_date):
-        """지역과 기간으로 축제 검색"""
+        """지역과 기간으로 축제 검색 (여러 후보 키워드로 순차 검색)"""
         try:
-            # 여행 시작 월 기준으로 축제 검색
             month = start_date.month
-            festivals = Festival.objects.filter(
-                region__icontains=region,
-                start_month=month,
-                is_active=True
-            )[:5]
-            return list(festivals)
+            candidates = self._build_region_candidates(region)
+            print(f'[Festival 검색] region="{region}", candidates={candidates}, month={month}')
+
+            for keyword in candidates:
+                qs = Festival.objects.filter(
+                    region__icontains=keyword,
+                    start_month=month,
+                    is_active=True
+                )[:5]
+                festivals = list(qs)
+                if festivals:
+                    print(f'[Festival 검색] "{keyword}" 로 {len(festivals)}개 찾음')
+                    return festivals
+
+            print(f'[Festival 검색] "{region}" 에 대한 축제를 찾지 못했습니다. month={month}')
+            return []
         except Exception as e:
             print(f'축제 조회 오류: {e}')
             return []
@@ -996,7 +1046,7 @@ JSON 형식 (정확히 이 구조를 따라주세요):
             print('경고: GMS_API_KEY가 설정되지 않았습니다. 기존 계획을 반환합니다.')
             return self._get_existing_itinerary_data(existing_plan)
         
-        # SSAFY GMS API 호출 (Claude 3.5 Haiku)
+        # SSAFY GMS API 호출 (Claude Sonnet 4)
         try:
             url = self.base_url
             headers = {
@@ -1131,3 +1181,5 @@ JSON 형식 (정확히 이 구조를 따라주세요):
                 'estimated_cost': itinerary.estimated_cost or 0
             })
         return {'days': days}
+
+

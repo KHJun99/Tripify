@@ -2,7 +2,8 @@ import axios from 'axios'
 
 const instance = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
-  timeout: 10000,
+  // AI 일정 생성처럼 시간이 오래 걸리는 요청을 위해 넉넉한 타임아웃 설정
+  timeout: 120000,
 })
 
 // 요청 인터셉터

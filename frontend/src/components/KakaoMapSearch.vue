@@ -773,7 +773,7 @@ onUnmounted(() => {
 
 .bookmark-btn {
   padding: 0.75rem 1.5rem;
-  background: #10b981;
+  background: #6a11cb;
   color: white;
   border: none;
   border-radius: 8px;
@@ -784,7 +784,7 @@ onUnmounted(() => {
 }
 
 .bookmark-btn:hover:not(:disabled) {
-  background: #059669;
+  background: #5a0fb8;
 }
 
 .bookmark-btn:disabled {

@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'trips',
     'places',
     'ai',
-    'external_api',
     'festivals',
 ]
 
@@ -169,6 +168,11 @@ KAKAO_CLIENT_SECRET = os.getenv('KAKAO_CLIENT_SECRET', '')
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID', '')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET', '')
 GOOGLE_REDIRECT_URI = os.getenv('GOOGLE_REDIRECT_URI', 'http://localhost:5173/auth/google/callback')
+
+# Naver OAuth Settings
+NAVER_CLIENT_ID = os.getenv('NAVER_CLIENT_ID', '')
+NAVER_CLIENT_SECRET = os.getenv('NAVER_CLIENT_SECRET', '')
+NAVER_REDIRECT_URI = os.getenv('NAVER_REDIRECT_URI', 'http://localhost:5173/auth/naver/callback')
 
 # Email settings for Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

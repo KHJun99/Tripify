@@ -10,6 +10,7 @@ urlpatterns = [
     path('profile/', views.UserDetailView.as_view(), name='profile'),
     path('kakao/callback/', views.kakao_login, name='kakao_login'),
     path('google/callback/', views.google_login, name='google_login'),
+    path('naver/callback/', views.naver_login, name='naver_login'),
 
     # 이메일 인증
     path('verify-email/', views.verify_email, name='verify_email'),

@@ -542,6 +542,8 @@ const copyAddress = async () => {
 }
 
 const goBack = () => {
+  // sessionStorage에 페이지 정보가 저장되어 있으므로 그냥 이동
+  // FestivalsView의 onMounted에서 자동으로 복원됨
   router.push({ name: 'festivals' })
 }
 

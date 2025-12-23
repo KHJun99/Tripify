@@ -8,6 +8,7 @@ from django.db import IntegrityError
 from .serializers import SignupSerializer, LoginSerializer, UserSerializer, PasswordResetRequestSerializer, PasswordResetConfirmSerializer, UsernameRecoverySerializer, AccountDeletionSerializer, PasswordChangeSerializer, PasswordVerifySerializer
 from .kakao_service import KakaoOAuthService
 from .google_service import GoogleOAuthService
+from .naver_service import NaverOAuthService
 from .models import EmailVerificationToken, PasswordResetToken
 from .email_utils import send_verification_email, send_password_reset_email, send_username_recovery_email
 
@@ -256,6 +257,84 @@ def google_login(request):
     except Exception as e:
         return Response({
             'error': f'구글 로그인 처리 중 오류가 발생했습니다: {str(e)}'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def naver_login(request):
+    """네이버 로그인 콜백 처리 API"""
+    code = request.data.get('code')
+    state = request.data.get('state')
+
+    if not code:
+        return Response({
+            'error': '인가 코드가 필요합니다.'
+        }, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        # 1. 네이버 액세스 토큰 받기
+        access_token = NaverOAuthService.get_access_token(code, state)
+
+        # 2. 네이버 사용자 정보 가져오기
+        naver_user_info = NaverOAuthService.get_user_info(access_token)
+
+        naver_id = naver_user_info['naver_id']
+        email = naver_user_info['email']
+        nickname = naver_user_info.get('nickname') or naver_user_info.get('name', '')
+
+        # 3. 네이버 ID로 기존 사용자 찾기
+        try:
+            user = User.objects.get(naver_id=naver_id)
+        except User.DoesNotExist:
+            # 4. 신규 사용자 생성 (회원가입)
+            # 이메일이 없는 경우 기본값 설정
+            if not email:
+                email = f"naver_{naver_id}@naver.user"
+
+            # username 중복 방지를 위해 naver_id 사용
+            username = f"naver_{naver_id}"
+
+            # 이메일 중복 체크
+            if User.objects.filter(email=email).exists():
+                email = f"naver_{naver_id}@naver.user"
+
+            try:
+                user = User.objects.create_user(
+                    username=username,
+                    email=email,
+                    nickname=nickname if nickname else '',  # 네이버 닉네임 또는 이름 설정
+                    naver_id=naver_id,
+                    login_type='naver',
+                    is_email_verified=True,  # 소셜 로그인은 자동 인증
+                )
+                # 네이버 로그인은 비밀번호가 필요 없으므로 사용 불가능하게 설정
+                user.set_unusable_password()
+                user.save()
+            except IntegrityError:
+                return Response({
+                    'error': '이미 존재하는 사용자입니다.'
+                }, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            # 기존 사용자의 경우 닉네임이 없으면 업데이트
+            if not user.nickname and nickname:
+                user.nickname = nickname
+                user.save()
+
+        # 5. 토큰 생성 및 반환
+        token, created = Token.objects.get_or_create(user=user)
+
+        return Response({
+            'token': token.key,
+            'username': user.username,
+            'user_id': user.id,
+            'email': user.email,
+            'login_type': user.login_type,
+        }, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return Response({
+            'error': f'네이버 로그인 처리 중 오류가 발생했습니다: {str(e)}'
         }, status=status.HTTP_400_BAD_REQUEST)
 
 

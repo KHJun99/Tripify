@@ -193,7 +193,7 @@
                 <div class="notice-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                 </div>
-                <p>소셜 로그인 계정(카카오/구글)은 해당 플랫폼에서 비밀번호를 관리합니다.</p>
+                <p>소셜 로그인 계정(카카오/구글/네이버)은 해당 플랫폼에서 비밀번호를 관리합니다.</p>
               </div>
             </div>
           </section>
@@ -434,6 +434,7 @@ const getLoginTypeLabel = (type) => {
     normal: '일반 회원',
     kakao: 'KAKAO',
     google: 'GOOGLE',
+    naver: 'NAVER',
   }
   return labels[type] || '일반 회원'
 }
@@ -443,6 +444,7 @@ const getLoginTypeClass = (type) => {
     normal: 'badge-normal',
     kakao: 'badge-kakao',
     google: 'badge-google',
+    naver: 'badge-naver',
   }
   return classes[type] || 'badge-normal'
 }
@@ -684,6 +686,7 @@ const handleDeleteAccount = async () => {
 .badge-normal { background: #edf2f7; color: #4a5568; }
 .badge-kakao { background: #fee500; color: #191919; }
 .badge-google { background: #fff; border: 1px solid #e2e8f0; color: #4a5568; }
+.badge-naver { background: #03C75A; color: #fff; }
 
 .profile-meta {
   width: 100%;

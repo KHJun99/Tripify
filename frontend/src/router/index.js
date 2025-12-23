@@ -7,6 +7,7 @@ import MyTripsView from '@/views/MyTripsView.vue'
 import ItineraryView from '@/views/ItineraryView.vue'
 import KakaoCallbackView from '@/views/KakaoCallbackView.vue'
 import GoogleCallbackView from '@/views/GoogleCallbackView.vue'
+import NaverCallbackView from '@/views/NaverCallbackView.vue'
 import VerifyEmailView from '@/views/VerifyEmailView.vue'
 import ResendVerificationView from '@/views/ResendVerificationView.vue'
 import FindUsernameView from '@/views/FindUsernameView.vue'
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/auth/google/callback',
       name: 'google-callback',
       component: GoogleCallbackView,
+    },
+    {
+      path: '/auth/naver/callback',
+      name: 'naver-callback',
+      component: NaverCallbackView,
     },
     {
       path: '/auth/verify-email',

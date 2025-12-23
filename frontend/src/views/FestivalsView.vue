@@ -146,7 +146,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, nextTick, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { getFestivals } from '@/api/festivals'
 
@@ -409,18 +409,98 @@ const goToPage = (page) => {
 }
 
 const goToDetail = (festivalId) => {
-  router.push({ name: 'festival-detail', params: { id: festivalId } })
+  // 현재 페이지 정보를 sessionStorage에 저장
+  sessionStorage.setItem('festivalsPage', currentPage.value.toString())
+  // 필터 정보도 함께 저장
+  if (selectedMonth.value) {
+    sessionStorage.setItem('festivalsMonth', selectedMonth.value.toString())
+  }
+  if (selectedRegion.value) {
+    sessionStorage.setItem('festivalsRegion', selectedRegion.value)
+  }
+  
+  router.push({ 
+    name: 'festival-detail', 
+    params: { id: festivalId }
+  })
 }
 
-onMounted(() => {
-  // URL query parameter에서 월 정보 읽기
+// 페이지 복원 함수
+const restorePage = async () => {
+  // sessionStorage에서 페이지 정보 읽기
+  const savedPage = sessionStorage.getItem('festivalsPage')
+  if (savedPage) {
+    const page = parseInt(savedPage, 10)
+    if (page >= 1 && festivals.value.length > 0) {
+      // 복원할 페이지가 유효한 범위인지 확인
+      const maxPage = Math.ceil(filteredFestivals.value.length / itemsPerPage)
+      if (page <= maxPage) {
+        currentPage.value = page
+        // 페이지 복원 후 스크롤을 맨 위로
+        await nextTick()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        // 유효하지 않은 페이지면 마지막 페이지로
+        currentPage.value = maxPage || 1
+      }
+      // 복원 후 sessionStorage에서 제거 (한 번만 복원)
+      sessionStorage.removeItem('festivalsPage')
+    }
+  }
+  
+  // query parameter도 확인 (하위 호환성)
+  if (route.query.page) {
+    const page = parseInt(route.query.page, 10)
+    if (page >= 1 && festivals.value.length > 0) {
+      const maxPage = Math.ceil(filteredFestivals.value.length / itemsPerPage)
+      if (page <= maxPage) {
+        currentPage.value = page
+        await nextTick()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        currentPage.value = maxPage || 1
+      }
+    }
+  }
+}
+
+// filteredFestivals가 변경될 때 페이지 복원 (데이터 로드 후)
+watch(() => filteredFestivals.value.length, async () => {
+  if (festivals.value.length > 0) {
+    await restorePage()
+  }
+})
+
+onMounted(async () => {
+  // sessionStorage에서 필터 정보 복원
+  const savedMonth = sessionStorage.getItem('festivalsMonth')
+  if (savedMonth) {
+    const month = parseInt(savedMonth, 10)
+    if (month >= 1 && month <= 12) {
+      selectedMonth.value = month
+    }
+    sessionStorage.removeItem('festivalsMonth')
+  }
+  
+  const savedRegion = sessionStorage.getItem('festivalsRegion')
+  if (savedRegion) {
+    selectedRegion.value = savedRegion
+    sessionStorage.removeItem('festivalsRegion')
+  }
+  
+  // URL query parameter에서 월 정보 읽기 (우선순위: query > sessionStorage)
   if (route.query.month) {
     const month = parseInt(route.query.month, 10)
     if (month >= 1 && month <= 12) {
       selectedMonth.value = month
     }
   }
-  fetchFestivals()
+  
+  // 축제 데이터를 먼저 로드
+  await fetchFestivals()
+  
+  // 페이지 정보 복원 (상세 페이지에서 돌아올 때)
+  await restorePage()
 })
 </script>
 

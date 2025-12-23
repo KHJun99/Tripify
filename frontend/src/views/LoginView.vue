@@ -35,6 +35,8 @@ const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY || ''
 const KAKAO_REDIRECT_URI = import.meta.env.VITE_KAKAO_REDIRECT_URI || 'http://localhost:5173/auth/kakao/callback'
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
 const GOOGLE_REDIRECT_URI = import.meta.env.VITE_GOOGLE_REDIRECT_URI || 'http://localhost:5173/auth/google/callback'
+const NAVER_CLIENT_ID = import.meta.env.VITE_NAVER_CLIENT_ID || ''
+const NAVER_REDIRECT_URI = import.meta.env.VITE_NAVER_REDIRECT_URI || 'http://localhost:5173/auth/naver/callback'
 
 // --- 핸들러 함수들 ---
 const handleLogin = async () => {
@@ -96,6 +98,32 @@ const handleGoogleLogin = async () => {
   
   // prompt=select_account 추가하여 계정 선택 화면 표시
   window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${GOOGLE_REDIRECT_URI}&response_type=code&scope=openid email profile&prompt=select_account`
+}
+
+const handleNaverLogin = async () => {
+  if (!NAVER_CLIENT_ID) {
+    alert('네이버 Client ID가 설정되지 않았습니다.')
+    return
+  }
+  
+  // 기존 로그인 상태 확인 및 로그아웃
+  if (authStore.isAuthenticated) {
+    try {
+      await authStore.logout()
+    } catch (error) {
+      console.error('로그아웃 실패:', error)
+      // 로그아웃 실패해도 계속 진행
+    }
+  }
+  
+  // 네이버 로그인은 state 파라미터가 필요 (CSRF 방지)
+  const state = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  sessionStorage.setItem('naver_state', state)
+  
+  // 네이버 로그인 페이지(아이디/비밀번호 입력 화면)를 강제로 표시
+  // auth_type=login: 로그인 화면을 강제로 표시하여 사용자가 계정을 선택할 수 있도록 함
+  // 이렇게 하면 이미 로그인된 계정이 있어도 로그인 화면이 먼저 표시됩니다
+  window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${NAVER_CLIENT_ID}&redirect_uri=${encodeURIComponent(NAVER_REDIRECT_URI)}&state=${state}&auth_type=login`
 }
 </script>
 
@@ -198,6 +226,11 @@ const handleGoogleLogin = async () => {
               <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
               <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
               <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+          </button>
+          <button type="button" class="social-btn naver" @click="handleNaverLogin" title="네이버 로그인">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+              <path fill="#FFFFFF" d="M16.273 12.845 7.376 0H0v24h7.726V11.156L16.624 24H24V0h-7.727v12.845Z"/>
             </svg>
           </button>
         </div>
@@ -676,6 +709,15 @@ const handleGoogleLogin = async () => {
 
 .social-btn.google {
   background-color: #fff;
+}
+
+.social-btn.naver {
+  background-color: #03C75A;
+  border-color: #03C75A;
+}
+
+.social-btn.naver svg {
+  fill: #fff;
 }
 
 /* 하단 회원가입 링크 */
