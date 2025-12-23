@@ -2,6 +2,7 @@
 import { RouterView, RouterLink, useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { computed, onMounted } from 'vue'
+import tripifyLogo from '@/assets/img/logo1.png'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -29,7 +30,9 @@ const handleLogout = async () => {
   <div id="app">
     <nav class="navbar">
       <div class="nav-brand">
-        <RouterLink to="/">Tripify</RouterLink>
+        <RouterLink to="/">
+          <img :src="tripifyLogo" alt="Tripify" class="logo-image" />
+        </RouterLink>
       </div>
       <div class="nav-links">
         <template v-if="isAuthenticated">
@@ -37,7 +40,7 @@ const handleLogout = async () => {
             <span class="greeting-text"><strong>{{ authStore.user.nickname }}</strong>님 오늘도 좋은 여행하세요</span>
           </div>
           <RouterLink to="/trips">내 여행</RouterLink>
-          <RouterLink to="/recommended">추천된 여행지</RouterLink>
+          <RouterLink to="/recommended">추천 여행지</RouterLink>
           <RouterLink to="/settings">마이페이지</RouterLink>
           <button @click="handleLogout" class="btn-link">로그아웃</button>
         </template>
@@ -71,19 +74,27 @@ const handleLogout = async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  height: 73px;
+  padding: 0 2rem;
+  
   background-color: #ffffff;
   color: #333333;
   border-bottom: 1px solid #e1e4e8;
   box-shadow: none;
 }
 
+.logo-image {
+  height: 73px; 
+  width: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
 .nav-brand a {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #6a11cb;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.5px;
+  height: 100%;
 }
 
 .nav-links {
@@ -106,7 +117,7 @@ const handleLogout = async () => {
 }
 
 .greeting-text strong {
-  color: #6a11cb;
+  color: #2F80ED;
   font-weight: 600;
 }
 
@@ -123,12 +134,12 @@ const handleLogout = async () => {
 .nav-links a:hover,
 .btn-link:hover {
   background-color: #f8f9fa;
-  color: #6a11cb;
+  color: #2F80ED;
   transform: translateY(-1px);
 }
 
 .nav-links a.router-link-active {
-  color: #6a11cb;
+  color: #2F80ED;
   font-weight: 600;
 }
 

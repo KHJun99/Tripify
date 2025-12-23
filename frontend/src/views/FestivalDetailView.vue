@@ -634,7 +634,7 @@ onMounted(() => {
 }
 
 .tag.region {
-  color: #3182f6;
+  color: #2F80ED;
   background-color: rgba(49, 130, 246, 0.1);
 }
 
