@@ -25,14 +25,6 @@ export const useTripStore = defineStore('trip', () => {
     loading.value = true
     try {
       const response = await tripAPI.getPlan(id)
-      console.log('=== fetchPlan API Response ===')
-      console.log('Plan ID:', response.data?.id)
-      console.log('Has itineraries:', !!response.data?.itineraries)
-      console.log('Itineraries length:', response.data?.itineraries?.length || 0)
-      if (response.data?.itineraries?.length > 0) {
-        console.log('First itinerary:', response.data.itineraries[0])
-      }
-      console.log('Full response:', response.data)
       currentPlan.value = response.data
       return response.data
     } catch (error) {
@@ -61,10 +53,6 @@ export const useTripStore = defineStore('trip', () => {
     loading.value = true
     try {
       const response = await tripAPI.generatePlan(data)
-      console.log('=== generatePlan API Response ===')
-      console.log('Plan ID:', response.data?.id)
-      console.log('Has itineraries:', !!response.data?.itineraries)
-      console.log('Itineraries length:', response.data?.itineraries?.length || 0)
       plans.value.unshift(response.data)
       return response.data
     } catch (error) {
@@ -126,21 +114,17 @@ export const useTripStore = defineStore('trip', () => {
 
   const unrecommendPlan = async (id) => {
     try {
-      console.log('[Store] 추천 취소 시작 - Plan ID:', id)
       const response = await tripAPI.unrecommendPlan(id)
-      console.log('[Store] 추천 취소 성공:', response.data)
       
       // 현재 계획 업데이트
       if (currentPlan.value && currentPlan.value.id === id) {
         currentPlan.value = response.data
-        console.log('[Store] currentPlan 업데이트 완료')
       }
       
       // 목록 업데이트
       const index = plans.value.findIndex((p) => p.id === id)
       if (index !== -1) {
         plans.value[index] = response.data
-        console.log('[Store] plans 목록 업데이트 완료')
       }
       
       return response.data
@@ -173,21 +157,17 @@ export const useTripStore = defineStore('trip', () => {
   const modifyPlan = async (id, requirements) => {
     loading.value = true
     try {
-      console.log('[Store] 계획 수정 시작 - Plan ID:', id, '요구사항:', requirements)
       const response = await tripAPI.modifyPlan(id, { requirements })
-      console.log('[Store] 계획 수정 성공:', response.data)
       
       // 현재 계획 업데이트
       if (currentPlan.value && currentPlan.value.id === id) {
         currentPlan.value = response.data
-        console.log('[Store] currentPlan 업데이트 완료')
       }
       
       // 목록 업데이트
       const index = plans.value.findIndex((p) => p.id === id)
       if (index !== -1) {
         plans.value[index] = response.data
-        console.log('[Store] plans 목록 업데이트 완료')
       }
       
       return response.data

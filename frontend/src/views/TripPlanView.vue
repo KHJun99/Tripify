@@ -358,13 +358,14 @@
     position: relative;
   }
   
-  input[type="date"]::-webkit-datetime-edit-text {
+  /* 날짜가 선택되지 않았을 때 (invalid) - placeholder 표시 */
+  input[type="date"]:invalid::-webkit-datetime-edit-text {
     color: transparent;
   }
   
-  input[type="date"]::-webkit-datetime-edit-month-field,
-  input[type="date"]::-webkit-datetime-edit-day-field,
-  input[type="date"]::-webkit-datetime-edit-year-field {
+  input[type="date"]:invalid::-webkit-datetime-edit-month-field,
+  input[type="date"]:invalid::-webkit-datetime-edit-day-field,
+  input[type="date"]:invalid::-webkit-datetime-edit-year-field {
     color: transparent;
   }
   
@@ -383,8 +384,15 @@
     pointer-events: none;
   }
   
-  input[type="date"]:valid::before,
-  input[type="date"]:focus::before {
+  /* 날짜가 선택되었을 때 (valid) - 실제 날짜 텍스트 표시 */
+  input[type="date"]:valid::-webkit-datetime-edit-text,
+  input[type="date"]:valid::-webkit-datetime-edit-month-field,
+  input[type="date"]:valid::-webkit-datetime-edit-day-field,
+  input[type="date"]:valid::-webkit-datetime-edit-year-field {
+    color: #111;
+  }
+  
+  input[type="date"]:valid::before {
     display: none;
   }
   
@@ -402,6 +410,10 @@
   /* Firefox */
   input[type="date"]:invalid {
     color: transparent;
+  }
+  
+  input[type="date"]:valid {
+    color: #111;
   }
   
   input[type="date"]:invalid::-moz-placeholder {

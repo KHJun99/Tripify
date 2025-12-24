@@ -108,16 +108,6 @@ const imageUrl = computed(() => {
 const formatPeriod = () => {
   if (!festival.value) return ''
 
-  // 디버깅: 실제 데이터 확인
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Festival detail data:', {
-      title: festival.value.title,
-      event_start_date: festival.value.event_start_date,
-      event_end_date: festival.value.event_end_date,
-      start_month: festival.value.start_month,
-      end_month: festival.value.end_month
-    })
-  }
 
   // event_start_date와 event_end_date가 있고 빈 문자열이 아닌 경우
   const startDate = festival.value.event_start_date
@@ -235,7 +225,6 @@ const loadKakaoMapSDK = () => {
   return new Promise((resolve, reject) => {
     // 이미 로드되었는지 확인
     if (window.kakao && window.kakao.maps) {
-      console.log('✓ 카카오맵 SDK 이미 로드됨')
       kakaoSdkLoaded.value = true
       resolve()
       return
@@ -244,19 +233,11 @@ const loadKakaoMapSDK = () => {
     // 환경변수에서 API 키 가져오기
     const apiKey = import.meta.env.VITE_KAKAO_MAP_KEY
 
-    // 디버깅: 환경변수 값 확인
-    console.log('🔍 환경변수 체크:')
-    console.log('  - VITE_KAKAO_MAP_KEY:', apiKey)
-    console.log('  - 타입:', typeof apiKey)
-    console.log('  - 길이:', apiKey?.length)
-
     if (!apiKey || apiKey === 'your_kakao_javascript_key_here') {
       console.error('✗ 카카오맵 API 키가 설정되지 않았습니다.')
       reject(new Error('카카오맵 API 키를 .env 파일에 설정해주세요.\nVITE_KAKAO_MAP_KEY=your_actual_key'))
       return
     }
-
-    console.log('카카오맵 SDK 로딩 시작...')
 
     // 스크립트 동적 로드
     const script = document.createElement('script')
@@ -264,12 +245,9 @@ const loadKakaoMapSDK = () => {
     script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}&libraries=services,clusterer,drawing&autoload=false`
 
     script.onload = () => {
-      console.log('카카오맵 SDK 스크립트 로드 완료, 초기화 중...')
-
       // SDK 초기화 대기
       if (window.kakao && window.kakao.maps) {
         window.kakao.maps.load(() => {
-          console.log('✓ 카카오맵 SDK 초기화 완료!')
           kakaoSdkLoaded.value = true
           resolve()
         })
@@ -315,9 +293,6 @@ const fetchFestivalDetail = async () => {
 
 // 카카오맵 초기화
 const initKakaoMap = () => {
-  console.log('🗺️ initKakaoMap 호출됨')
-  console.log('📍 festival 좌표:', festival.value?.latitude, festival.value?.longitude)
-
   if (!kakaoSdkLoaded.value || !window.kakao || !window.kakao.maps) {
     console.error('✗ 카카오맵 SDK가 로드되지 않았습니다.')
     return
@@ -329,17 +304,13 @@ const initKakaoMap = () => {
     return
   }
 
-  console.log('✓ 지도 컨테이너 발견')
-
   try {
     const options = {
       center: new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude),
       level: 4
     }
 
-    console.log('지도 생성 중...')
     map.value = new window.kakao.maps.Map(container, options)
-    console.log('✓ 지도 생성 완료!')
 
     // 목적지 마커 생성
     const markerPosition = new window.kakao.maps.LatLng(festival.value.latitude, festival.value.longitude)
@@ -348,8 +319,6 @@ const initKakaoMap = () => {
       position: markerPosition
     })
     endMarker.value.setMap(map.value)
-
-    console.log('✓ 마커 생성 완료!')
   } catch (error) {
     console.error('✗ 지도 생성 중 오류:', error)
     alert('지도를 표시하는 중 오류가 발생했습니다: ' + error.message)
@@ -360,7 +329,6 @@ const initKakaoMap = () => {
 const coordToAddress = (lat, lng) => {
   return new Promise((resolve) => {
     if (!window.kakao || !window.kakao.maps || !window.kakao.maps.services) {
-      console.log('카카오맵 SDK가 로드되지 않았습니다.')
       resolve(null)
       return
     }
@@ -375,10 +343,8 @@ const coordToAddress = (lat, lng) => {
           ? result[0].road_address.address_name 
           : (result[0].address ? result[0].address.address_name : null)
         
-        console.log('좌표 변환 결과:', address)
         resolve(address)
       } else {
-        console.log('좌표 변환 실패:', status)
         resolve(null)
       }
     })
@@ -389,7 +355,6 @@ const coordToAddress = (lat, lng) => {
 const getUserCurrentLocation = () => {
   return new Promise((resolve) => {
     if (!navigator.geolocation) {
-      console.log('Geolocation API를 지원하지 않습니다.')
       resolve(null)
       return
     }
@@ -407,12 +372,10 @@ const getUserCurrentLocation = () => {
           lng: lng,
           address: address || '현재 위치'
         }
-        console.log('현재 위치:', location)
         userLocation.value = location
         resolve(location)
       },
       (error) => {
-        console.log('위치 정보 가져오기 실패:', error.message)
         resolve(null)
       },
       {
@@ -472,10 +435,6 @@ const openKakaoNavi = async () => {
       const endLngNum = parseFloat(endLng)
       
       naviUrl = `https://map.kakao.com/link/from/현재위치,${startLat},${startLng}/to/${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
-      
-      console.log('카카오맵 길찾기 URL (출발지+도착지 자동 입력):', naviUrl)
-      console.log('출발지:', { lat: startLat, lng: startLng, address: startLocation.address })
-      console.log('도착지:', { name: endAddress, lat: endLatNum, lng: endLngNum })
     } catch (error) {
       console.error('URL 생성 오류:', error)
       // 폴백: 도착지만 포함
@@ -483,7 +442,6 @@ const openKakaoNavi = async () => {
       const endLngNum = parseFloat(endLng)
       const endParam = `${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
       naviUrl = `https://map.kakao.com/link/to/${endParam}`
-      console.log('카카오맵 URL (도착지만 자동 입력 - 폴백):', naviUrl)
     }
   } else if (endLat && endLng) {
     // 출발지 정보가 없는 경우 (도착지만)
@@ -492,21 +450,16 @@ const openKakaoNavi = async () => {
       const endLngNum = parseFloat(endLng)
       const endParam = `${encodeURIComponent(endAddress)},${endLatNum},${endLngNum}`
       naviUrl = `https://map.kakao.com/link/to/${endParam}`
-      console.log('카카오맵 URL (도착지만 자동 입력):', naviUrl)
     } catch (error) {
       console.error('URL 생성 오류:', error)
       const endLatNum = parseFloat(endLat)
       const endLngNum = parseFloat(endLng)
       naviUrl = `https://map.kakao.com/link/to/${endLatNum},${endLngNum}`
-      console.log('카카오맵 URL (도착지만 자동 입력 - 좌표만):', naviUrl)
     }
-    console.log('도착지:', { name: endAddress, lat: endLat, lng: endLng })
-    console.log('⚠️ 출발지 정보를 가져올 수 없어 도착지만 자동 입력됩니다.')
   } else {
     // 좌표가 없는 경우 검색 URL 사용
     const searchQuery = encodeURIComponent(endAddress)
     naviUrl = `https://map.kakao.com/?q=${searchQuery}`
-    console.log('카카오맵 검색 URL:', naviUrl)
   }
   
   // 새 창에서 카카오맵 열기

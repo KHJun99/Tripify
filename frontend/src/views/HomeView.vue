@@ -78,7 +78,6 @@ const onCardLeave = () => {
 }
 
 const goToDetail = (id) => {
-  console.log(`여행지 ID ${id} 상세 페이지로 이동`)
   router.push({ name: 'festivals' })
 }
 
@@ -173,10 +172,8 @@ const scroll = (direction) => {
   // 날짜 선택 변경
   selectDate(dateList.value[targetIndex])
   
-  // 해당 달을 가운데로 스크롤
-  setTimeout(() => {
-    scrollToDate(dateList.value[targetIndex])
-  }, 50)
+  // 해당 달을 가운데로 스크롤 (즉시 실행, setTimeout 제거)
+  scrollToDate(dateList.value[targetIndex])
 }
 
 // 특정 날짜로 스크롤 (가운데 정렬)
@@ -198,9 +195,13 @@ const scrollToDate = (targetDate) => {
       const containerWidth = scrollContainer.value.clientWidth
       // 해당 달을 가운데로 위치시키기
       const scrollPos = (targetIndex * itemWidth) - (containerWidth / 2) + (itemWidth / 2)
-      scrollContainer.value.scrollTo({
-        left: Math.max(0, scrollPos),
-        behavior: 'smooth'
+      
+      // requestAnimationFrame을 사용하여 더 부드러운 애니메이션
+      requestAnimationFrame(() => {
+        scrollContainer.value.scrollTo({
+          left: Math.max(0, scrollPos),
+          behavior: 'smooth'
+        })
       })
     }
   }
@@ -923,6 +924,7 @@ onUnmounted(() => {
   color: #94a3b8; 
   font-weight: 600; 
   letter-spacing: -0.02em; 
+  transition: color 0.3s ease; 
 }
 
 .month-text { 
@@ -931,6 +933,7 @@ onUnmounted(() => {
   color: #1f2937; 
   line-height: 1.1; 
   letter-spacing: -0.03em; 
+  transition: all 0.3s ease; 
 }
 
 .divider { 
@@ -982,6 +985,8 @@ onUnmounted(() => {
   padding: 10px 15px; 
   scrollbar-width: none; 
   margin: 0 10px; 
+  scroll-behavior: smooth; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 .date-scroll-area::-webkit-scrollbar { 

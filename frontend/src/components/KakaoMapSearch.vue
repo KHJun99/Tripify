@@ -340,9 +340,7 @@ const bookmarkPlace = async (place) => {
       place_url: place.place_url || ''
     }
 
-    console.log('장소 데이터:', placeData)
     const placeResponse = await placeAPI.createPlaceFromKakao(placeData)
-    console.log('장소 저장 응답:', placeResponse.data)
     const savedPlace = placeResponse.data
 
     if (!savedPlace || !savedPlace.id) {
@@ -350,9 +348,7 @@ const bookmarkPlace = async (place) => {
     }
 
     // 2. 북마크 생성
-    console.log('북마크 생성 시도, place_id:', savedPlace.id)
     await placeAPI.createBookmark(savedPlace.id)
-    console.log('북마크 생성 성공')
 
     success.value = '북마크가 저장되었습니다!'
     setTimeout(() => {
@@ -497,14 +493,12 @@ const displayAllBookmarks = () => {
 
 onMounted(async () => {
   try {
-    console.log('KakaoMapSearch onMounted, allBookmarks:', props.allBookmarks)
     await loadKakaoMap()
     await nextTick()
     initMap()
     
     // 모든 북마크 모드인 경우
     if (props.allBookmarks && props.allBookmarks.length > 0 && map.value) {
-      console.log('모든 북마크 표시 시작:', props.allBookmarks.length)
       displayAllBookmarks()
     } else if (props.bookmark && props.bookmark.place && map.value && window.kakao && window.kakao.maps) {
       // 단일 북마크 모드인 경우 마커 표시

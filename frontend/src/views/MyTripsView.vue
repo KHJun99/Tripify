@@ -119,6 +119,147 @@
     return `calc(100% * ${span} + ${span}px - 12px)`
   }
   
+  // 일정이 겹치는지 확인
+  const doPlansOverlap = (plan1, plan2) => {
+    try {
+      const start1 = new Date(plan1.start_date).setHours(0, 0, 0, 0)
+      const end1 = new Date(plan1.end_date).setHours(0, 0, 0, 0)
+      const start2 = new Date(plan2.start_date).setHours(0, 0, 0, 0)
+      const end2 = new Date(plan2.end_date).setHours(0, 0, 0, 0)
+      
+      return !(end1 < start2 || end2 < start1)
+    } catch (e) {
+      console.error('doPlansOverlap error:', e)
+      return false
+    }
+  }
+  
+  // 모든 일정의 행 번호를 미리 계산 (computed로 캐싱)
+  const planRowMap = computed(() => {
+    if (!sortedPlans.value || sortedPlans.value.length === 0) {
+      return new Map()
+    }
+    
+    const cache = new Map()
+    const processing = new Set() // 현재 처리 중인 일정 추적 (순환 참조 방지)
+    
+    // 1단계: 겹치지 않는 일정들을 먼저 0번째 행에 배치
+    sortedPlans.value.forEach(plan => {
+      if (!plan || !plan.id) return
+      
+      const hasOverlap = sortedPlans.value.some(p => 
+        p && p.id && p.id !== plan.id && doPlansOverlap(p, plan)
+      )
+      if (!hasOverlap) {
+        cache.set(plan.id, 0)
+      }
+    })
+    
+    // 2단계: 겹치는 일정들의 행 번호 계산
+    const calculateRow = (plan) => {
+      if (!plan || !plan.id) return 0
+      
+      // 이미 계산되었으면 반환
+      if (cache.has(plan.id)) {
+        return cache.get(plan.id)
+      }
+      
+      // 순환 참조 방지
+      if (processing.has(plan.id)) {
+        return 0
+      }
+      processing.add(plan.id)
+      
+      try {
+        // 현재 일정과 겹치는 일정들 찾기
+        const overlappingPlans = sortedPlans.value.filter(p => 
+          p && p.id && p.id !== plan.id && doPlansOverlap(p, plan)
+        )
+        
+        // 겹치는 일정이 없으면 맨 위(0번째 행)에 배치
+        if (overlappingPlans.length === 0) {
+          cache.set(plan.id, 0)
+          processing.delete(plan.id)
+          return 0
+        }
+        
+        // 겹치는 일정들의 행 번호를 먼저 계산 (재귀적으로)
+        const usedRows = new Set()
+        overlappingPlans.forEach(p => {
+          const row = calculateRow(p)
+          usedRows.add(row)
+        })
+        
+        // 사용 가능한 가장 낮은 행 번호 찾기
+        // 겹치지 않는 일정은 0번째 행에 배치되므로, 겹치는 일정은 1번째 행부터 배치
+        for (let row = 1; row <= usedRows.size + 2; row++) {
+          if (!usedRows.has(row)) {
+            cache.set(plan.id, row)
+            processing.delete(plan.id)
+            return row
+          }
+        }
+        
+        const row = usedRows.size + 1
+        cache.set(plan.id, row)
+        processing.delete(plan.id)
+        return row
+      } catch (e) {
+        console.error('calculateRow error:', e, plan)
+        processing.delete(plan.id)
+        return 0
+      }
+    }
+    
+    // 모든 일정에 대해 행 번호 계산 (아직 계산되지 않은 것들만)
+    // 시작일 순으로 정렬하여 일관된 계산 보장
+    const plansToProcess = [...sortedPlans.value]
+      .filter(plan => plan && plan.id && !cache.has(plan.id))
+      .sort((a, b) => {
+        const startA = new Date(a.start_date).getTime()
+        const startB = new Date(b.start_date).getTime()
+        return startA - startB
+      })
+    
+    plansToProcess.forEach(plan => {
+      calculateRow(plan)
+    })
+    
+    return cache
+  })
+  
+  // 특정 날짜에 포함되는 일정의 행 번호 반환
+  // 같은 일정은 모든 날짜에 걸쳐 같은 행에 배치
+  // is-inactive인 경우에도 같은 order 값을 유지하여 flex 레이아웃에서 일관성 보장
+  const getPlanRow = (day, plan) => {
+    try {
+      if (!plan || !plan.id) {
+        return 0
+      }
+      
+      // 미리 계산된 행 번호 가져오기
+      const rowMap = planRowMap.value
+      if (!rowMap || !(rowMap instanceof Map)) {
+        return 0
+      }
+      
+      const row = rowMap.get(plan.id)
+      if (row === undefined || row === null) {
+        // 계산되지 않은 경우 기본값 0 반환
+        return 0
+      }
+      
+      // 같은 plan.id는 항상 같은 행 번호 반환
+      // is-inactive인 경우에도 같은 order 값을 유지하여
+      // flex 레이아웃에서 같은 일정이 모든 날짜에 걸쳐 같은 위치에 배치되도록 함
+      // height: 0이지만 flex order는 여전히 작동하므로 레이아웃에 영향을 줌
+      return row
+    } catch (e) {
+      console.error('getPlanRow error:', e, plan)
+      return 0
+    }
+  }
+  
   // --- 위시리스트 기능 ---
   const newWish = ref('')
   const wishlist = ref([])
@@ -226,9 +367,7 @@
   
   // 모든 북마크 보기 모달 열기
   const openAllBookmarksModal = () => {
-    console.log('모든 북마크 보기 버튼 클릭됨', bookmarks.value)
     showAllBookmarksModal.value = true
-    console.log('showAllBookmarksModal:', showAllBookmarksModal.value)
   }
   
   // 북마크 삭제
@@ -306,15 +445,16 @@
   
                 <div class="plan-bars">
                   <div
-                    v-for="plan in sortedPlans"
-                    :key="plan.id"
+                    v-for="plan in sortedPlans.filter(p => isPlanInDate(p, day))"
+                    :key="`${day}-${plan.id}`"
                     class="plan-bar"
-                    :class="[
-                      getPlanClass(day, plan),
-                      { 'is-inactive': !isPlanInDate(plan, day) }
-                    ]"
-                    :style="getPlanStyle(plan.id)"
-                    @click.stop="isPlanInDate(plan, day) && goToTrip(plan.id)"
+                    :class="getPlanClass(day, plan)"
+                    :style="{
+                      ...getPlanStyle(plan.id),
+                      '--plan-order': getPlanRow(day, plan),
+                      order: getPlanRow(day, plan)
+                    }"
+                    @click.stop="goToTrip(plan.id)"
                   >
                     <span
                       v-if="isPlanInDate(plan, day) && getPlanClass(day, plan).includes('is-start')"
@@ -645,7 +785,7 @@
   .plan-bars {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0;
     width: 100%;
     padding-bottom: 6px;
   }
@@ -661,12 +801,26 @@
     position: relative;
     opacity: 1;
     border-radius: 0;
-    margin: 1px 0;
+    margin: 0;
+    flex-shrink: 0;
+    /* order 속성이 항상 적용되도록 보장 */
+    order: var(--plan-order, 0);
   }
   
   .plan-bar.is-inactive {
-    visibility: hidden;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
     pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    /* order는 유지하여 flex 레이아웃에서 같은 일정이 항상 같은 위치에 배치되도록 함 */
+    /* height: 0이지만 flex order는 여전히 작동함 */
   }
   
   .plan-bar:hover {

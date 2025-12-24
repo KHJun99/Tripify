@@ -182,17 +182,6 @@ const regions = [
 
 // 날짜 포맷 함수
 const formatPeriod = (festival) => {
-  // 디버깅: 첫 번째 항목만 출력
-  if (process.env.NODE_ENV === 'development' && festivals.value.indexOf(festival) === 0) {
-    console.log('🔍 첫 번째 축제 날짜 데이터:', {
-      title: festival.title,
-      event_start_date: festival.event_start_date,
-      event_end_date: festival.event_end_date,
-      start_month: festival.start_month,
-      end_month: festival.end_month
-    })
-  }
-
   // event_start_date와 event_end_date가 있고 빈 문자열이 아닌 경우
   const startDate = festival.event_start_date
   const endDate = festival.event_end_date
@@ -363,22 +352,6 @@ const fetchFestivals = async () => {
     loading.value = true
     // 서버에서 모든 데이터를 가져옴 (필터링은 클라이언트에서 수행)
     const data = await getFestivals()
-    
-    // 디버깅: 실제 API 응답 확인
-    console.log('=== API 응답 데이터 ===')
-    console.log('전체 데이터 타입:', Array.isArray(data) ? '배열' : typeof data)
-    console.log('데이터 길이:', Array.isArray(data) ? data.length : 'N/A')
-    
-    if (Array.isArray(data) && data.length > 0) {
-      console.log('첫 번째 축제 데이터:', data[0])
-      console.log('첫 번째 축제 날짜 필드:', {
-        event_start_date: data[0].event_start_date,
-        event_end_date: data[0].event_end_date,
-        start_month: data[0].start_month,
-        end_month: data[0].end_month,
-        title: data[0].title
-      })
-    }
     
     festivals.value = Array.isArray(data) ? data : (data.results || [])
   } catch (error) {

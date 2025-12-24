@@ -625,7 +625,7 @@ const handleDeleteAccount = async () => {
   width: 100px;
   height: 100px;
   background-color: #e0e4ff;
-  color: #5a67d8;
+  color: #2F80ED;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -773,7 +773,7 @@ const handleDeleteAccount = async () => {
 
 .clean-input:focus {
   outline: none;
-  border-color: #5a67d8;
+  border-color: #2F80ED;
   box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.1);
 }
 
@@ -799,7 +799,7 @@ const handleDeleteAccount = async () => {
 }
 
 .btn-primary {
-  background-color: #5a67d8;
+  background-color: #2F80ED;
   color: white;
 }
 .btn-primary:hover:not(:disabled) { background-color: #4c51bf; }

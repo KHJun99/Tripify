@@ -23,9 +23,6 @@ onMounted(async () => {
   }
 
   try {
-    console.log('Verifying email with token:', token)
-    console.log('API URL:', `${API_URL}/auth/verify-email/`)
-
     const response = await axios.get(`${API_URL}/auth/verify-email/`, {
       params: { token },
     })

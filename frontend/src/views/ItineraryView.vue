@@ -184,10 +184,8 @@
     if (!confirm('추천을 취소하시겠습니까?')) return
     
     try {
-      console.log('추천 취소 시작 - Plan ID:', tripStore.currentPlan.id)
       await tripStore.unrecommendPlan(tripStore.currentPlan.id)
       await tripStore.fetchPlan(tripStore.currentPlan.id)
-      console.log('추천 취소 성공')
       alert('추천이 취소되었습니다.')
     } catch (error) {
       console.error('추천 취소 오류 상세:', error)
@@ -267,9 +265,7 @@
     modifyError.value = ''
     
     try {
-      console.log('계획 수정 시작 - Plan ID:', tripStore.currentPlan.id)
       await tripStore.modifyPlan(tripStore.currentPlan.id, requirements.value.trim())
-      console.log('계획 수정 성공')
       showModifyModal.value = false
       requirements.value = ''
       alert('계획이 성공적으로 수정되었습니다!')
