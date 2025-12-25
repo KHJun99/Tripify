@@ -21,28 +21,65 @@ def signup(request):
     """회원가입 API - 이메일 인증 필요"""
     serializer = SignupSerializer(data=request.data)
     if serializer.is_valid():
-        user = serializer.save()
-
-        # 이메일 인증 토큰 생성 및 메일 발송
         try:
-            verification_token = EmailVerificationToken.create_token(user)
-            send_verification_email(user, verification_token)
+            user = serializer.save()
 
+            # 이메일 인증 토큰 생성 및 메일 발송
+            try:
+                verification_token = EmailVerificationToken.create_token(user)
+                send_verification_email(user, verification_token)
+
+                return Response({
+                    'username': user.username,
+                    'email': user.email,
+                    'message': '회원가입이 완료되었습니다. 이메일을 확인하여 인증을 완료해주세요.',
+                }, status=status.HTTP_201_CREATED)
+            except Exception as e:
+                # 이메일 전송 실패 시에도 회원가입은 완료
+                return Response({
+                    'username': user.username,
+                    'email': user.email,
+                    'message': '회원가입이 완료되었습니다. 이메일 전송에 실패했습니다.',
+                    'error': str(e)
+                }, status=status.HTTP_201_CREATED)
+        except IntegrityError as e:
+            # 중복된 사용자명 또는 이메일
+            error_msg = str(e)
+            if 'username' in error_msg.lower() or 'unique constraint' in error_msg.lower():
+                if 'username' in error_msg.lower():
+                    return Response({
+                        'error': '이미 사용 중인 아이디입니다.',
+                        'details': {'username': ['이미 사용 중인 아이디입니다.']}
+                    }, status=status.HTTP_400_BAD_REQUEST)
+                elif 'email' in error_msg.lower():
+                    return Response({
+                        'error': '이미 사용 중인 이메일입니다.',
+                        'details': {'email': ['이미 사용 중인 이메일입니다.']}
+                    }, status=status.HTTP_400_BAD_REQUEST)
             return Response({
-                'username': user.username,
-                'email': user.email,
-                'message': '회원가입이 완료되었습니다. 이메일을 확인하여 인증을 완료해주세요.',
-            }, status=status.HTTP_201_CREATED)
+                'error': '회원가입에 실패했습니다. 입력 정보를 확인해주세요.',
+                'details': {'non_field_errors': [str(e)]}
+            }, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            # 이메일 전송 실패 시에도 회원가입은 완료
+            # 기타 예외
             return Response({
-                'username': user.username,
-                'email': user.email,
-                'message': '회원가입이 완료되었습니다. 이메일 전송에 실패했습니다.',
-                'error': str(e)
-            }, status=status.HTTP_201_CREATED)
+                'error': '회원가입에 실패했습니다.',
+                'details': {'non_field_errors': [str(e)]}
+            }, status=status.HTTP_400_BAD_REQUEST)
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    # 에러 메시지를 더 명확하게 반환
+    error_messages = []
+    for field, messages in serializer.errors.items():
+        if isinstance(messages, list):
+            error_messages.append(f"{field}: {', '.join(messages)}")
+        else:
+            error_messages.append(f"{field}: {messages}")
+    
+    return Response({
+        'error': '회원가입에 실패했습니다.',
+        'details': serializer.errors,
+        'message': ' | '.join(error_messages) if error_messages else '입력 정보를 확인해주세요.'
+    }, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])

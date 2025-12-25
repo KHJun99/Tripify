@@ -49,8 +49,34 @@ const handleSignup = async () => {
       router.push('/login')
     }
   } catch (err) {
-    console.error(err)
-    error.value = err.response?.data?.error || '회원가입에 실패했습니다.'
+    console.error('회원가입 에러:', err)
+    console.error('에러 응답:', err.response?.data)
+    
+    // 백엔드에서 반환한 에러 메시지 처리
+    if (err.response?.data) {
+      const errorData = err.response.data
+      
+      // serializer.errors 형식 (필드별 에러)
+      if (typeof errorData === 'object' && !errorData.error) {
+        // 필드별 에러 메시지 추출
+        const errorMessages = []
+        for (const [field, messages] of Object.entries(errorData)) {
+          if (Array.isArray(messages)) {
+            errorMessages.push(`${field}: ${messages.join(', ')}`)
+          } else {
+            errorMessages.push(`${field}: ${messages}`)
+          }
+        }
+        error.value = errorMessages.length > 0 
+          ? errorMessages.join('\n')
+          : '회원가입에 실패했습니다. 입력 정보를 확인해주세요.'
+      } else {
+        // 단일 에러 메시지
+        error.value = errorData.error || errorData.message || '회원가입에 실패했습니다.'
+      }
+    } else {
+      error.value = '회원가입에 실패했습니다. 네트워크 연결을 확인해주세요.'
+    }
   }
 }
 </script>

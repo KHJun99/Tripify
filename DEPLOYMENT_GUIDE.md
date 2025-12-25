@@ -200,15 +200,41 @@ python manage.py load_festivals    # 축제 데이터 로드
 
 4. **"Environment Variables"** 섹션에서 환경 변수 추가:
    ```bash
+   # 필수: 백엔드 API URL
    VITE_API_URL=https://your-render-app.onrender.com/api
+   
+   # 소셜 로그인 (선택사항이지만 기능 사용 시 필수)
+   VITE_KAKAO_REST_API_KEY=your-kakao-rest-api-key
+   VITE_KAKAO_REDIRECT_URI=https://your-vercel-app.vercel.app/auth/kakao/callback
+   VITE_GOOGLE_CLIENT_ID=your-google-client-id
+   VITE_GOOGLE_REDIRECT_URI=https://your-vercel-app.vercel.app/auth/google/callback
+   VITE_NAVER_CLIENT_ID=your-naver-client-id
+   VITE_NAVER_REDIRECT_URI=https://your-vercel-app.vercel.app/auth/naver/callback
    ```
    - `your-render-app.onrender.com`은 Render에서 배포한 백엔드 URL입니다.
+   - `your-vercel-app.vercel.app`은 Vercel에서 배포한 프론트엔드 URL입니다.
+   - ⚠️ **중요**: 환경 변수 추가 후 **재배포**가 필요합니다.
 
 5. **"Deploy"** 클릭
 
 ### 3. vercel.json 설정 확인
 
-프로젝트 루트에 `vercel.json` 파일이 있어야 합니다. 이 파일은 SPA 라우팅을 위한 리라이트 규칙을 포함합니다.
+**⚠️ 중요**: Vercel 프로젝트의 Root Directory가 `frontend`로 설정되어 있다면, `vercel.json` 파일은 `frontend` 폴더에 있어야 합니다.
+
+`frontend/vercel.json` 파일이 있어야 하며, 이 파일은 SPA 라우팅을 위한 리라이트 규칙을 포함합니다:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+이 파일이 없으면 `/auth/kakao/callback` 같은 라우트에서 404 에러가 발생할 수 있습니다.
 
 ### 4. 커스텀 도메인 설정 (선택사항)
 
@@ -334,6 +360,28 @@ python manage.py load_festivals
 ```
 
 ---
+
+## 문제 해결
+
+### 사이트는 접속되지만 기능이 동작하지 않는 경우
+
+**가장 흔한 원인과 해결 방법:**
+
+1. **Vercel 환경 변수 미설정**
+   - Vercel 대시보드 → Settings → Environment Variables
+   - `VITE_API_URL=https://your-render-app.onrender.com/api` 확인
+   - 설정 후 **재배포 필요**
+
+2. **Render CORS 설정 누락**
+   - Render 대시보드 → Web Service → Environment
+   - `CORS_ALLOWED_ORIGINS=https://your-vercel-app.vercel.app` 확인
+   - 설정 후 **서비스 재시작 필요**
+
+3. **브라우저 개발자 도구 확인**
+   - F12 → Console 탭: 에러 메시지 확인
+   - Network 탭: API 요청 실패 여부 확인
+
+자세한 문제 해결 가이드는 `TROUBLESHOOTING.md` 파일을 참조하세요.
 
 ## 문제 해결
 
