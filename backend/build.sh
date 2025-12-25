@@ -26,13 +26,13 @@ echo "✓ Migrations completed"
 # 4. 장소 데이터 로드 (기존 데이터 삭제 후 재로드)
 echo ""
 echo "[4/5] Loading place data..."
-python manage.py load_places --clear
+python -u manage.py load_places --clear
 echo "✓ Place data loaded"
 
 # 5. 축제 데이터 로드 (기존 데이터 삭제 후 재로드)
 echo ""
 echo "[5/5] Loading festival data..."
-python manage.py load_festivals --clear
+python -u manage.py load_festivals --clear
 echo "✓ Festival data loaded"
 
 echo ""

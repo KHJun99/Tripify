@@ -101,12 +101,16 @@ class Command(BaseCommand):
                     total_skipped += skipped_count
 
                     self.stdout.write(f'    OK 생성: {created_count}개, 스킵: {skipped_count}개')
+                    self.stdout.flush()  # 출력 버퍼 즉시 비우기
 
                 except json.JSONDecodeError as e:
                     self.stdout.write(self.style.ERROR(f'    ERROR JSON 파싱 오류: {e}'))
+                    self.stdout.flush()
                 except Exception as e:
                     self.stdout.write(self.style.ERROR(f'    ERROR 오류: {e}'))
+                    self.stdout.flush()
 
         self.stdout.write('\n' + '='*60)
         self.stdout.write(self.style.SUCCESS(f'완료! 총 {total_created}개 생성, {total_skipped}개 스킵'))
         self.stdout.write('='*60)
+        self.stdout.flush()
