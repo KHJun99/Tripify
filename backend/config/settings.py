@@ -31,7 +31,9 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-#j*uq27832zq+bs)rt=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+# ALLOWED_HOSTS 설정 (프로덕션 환경에서는 환경 변수로 설정)
+allowed_hosts_str = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1')
+ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_str.split(',') if host.strip()]
 
 
 # Application definition
@@ -161,11 +163,16 @@ REST_FRAMEWORK = {
 }
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = os.getenv(
+cors_origins_str = os.getenv(
     'CORS_ALLOWED_ORIGINS',
     'http://localhost:5173,http://127.0.0.1:5173'
-).split(',')
+)
+CORS_ALLOWED_ORIGINS = [origin.strip() for origin in cors_origins_str.split(',') if origin.strip()]
 CORS_ALLOW_CREDENTIALS = True
+
+# 프로덕션 환경에서 추가 CORS 설정
+if not DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = False  # 보안을 위해 False로 설정
 
 # Custom User Model
 AUTH_USER_MODEL = 'accounts.User'
