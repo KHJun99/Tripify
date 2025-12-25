@@ -64,8 +64,8 @@ class Command(BaseCommand):
                     region = address.split()[0] if address else ''
 
                     # 날짜에서 월 추출 (YYYYMMDD 형식)
-                    event_start_date = item.get('eventstartdate', '')
-                    event_end_date = item.get('eventenddate', '')
+                    event_start_date = item.get('eventstartdate', '')[:20] if item.get('eventstartdate') else ''  # max_length=20 제한
+                    event_end_date = item.get('eventenddate', '')[:20] if item.get('eventenddate') else ''  # max_length=20 제한
 
                     start_month = None
                     end_month = None
@@ -83,21 +83,21 @@ class Command(BaseCommand):
                             pass
 
                     # Festival 객체 생성
-                    Festival.objects.create(
-                        title=item.get('title', ''),
-                        category=category,
-                        address=address,
-                        phone=item.get('phone', ''),
-                        latitude=item.get('latitude'),
-                        longitude=item.get('longitude'),
-                        image_url=item.get('image', ''),
-                        event_start_date=event_start_date,
-                        event_end_date=event_end_date,
-                        start_month=start_month,
-                        end_month=end_month,
-                        region=region,
-                        content_id=content_id
-                    )
+                        Festival.objects.create(
+                            title=item.get('title', ''),
+                            category=category,
+                            address=address,
+                            phone=item.get('phone', '')[:100] if item.get('phone') else '',  # max_length=100 제한
+                            latitude=item.get('latitude'),
+                            longitude=item.get('longitude'),
+                            image_url=item.get('image', ''),
+                            event_start_date=event_start_date,
+                            event_end_date=event_end_date,
+                            start_month=start_month,
+                            end_month=end_month,
+                            region=region[:100] if region else '',  # max_length=100 제한
+                            content_id=content_id
+                        )
                     created_count += 1
 
                 total_created += created_count

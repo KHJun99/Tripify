@@ -84,16 +84,16 @@ class Command(BaseCommand):
 
                         # Place 객체 생성
                         Place.objects.create(
-                            title=item.get('title', ''),
+                            title=item.get('title', '')[:255] if item.get('title') else '',  # max_length=255 제한
                             place_type=place_type,
-                            category=category,
-                            address=address,
+                            category=category[:100] if category else '',  # max_length=100 제한
+                            address=address[:500] if address else '',  # max_length=500 제한
                             latitude=item.get('latitude'),
                             longitude=item.get('longitude'),
                             image_url=item.get('image', ''),
-                            tel=item.get('phone', ''),
-                            content_id=content_id,
-                            region=region
+                            tel=item.get('phone', '')[:20] if item.get('phone') else '',  # max_length=20 제한
+                            content_id=content_id[:50] if content_id else '',  # max_length=50 제한
+                            region=region[:100] if region else ''  # max_length=100 제한
                         )
                         created_count += 1
 
