@@ -8,13 +8,16 @@ class FestivalListSerializer(serializers.ModelSerializer):
     event_end_date = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     
     def to_representation(self, instance):
-        """빈 문자열을 null로 변환"""
+        """빈 문자열을 null로 변환 및 이미지 URL HTTP를 HTTPS로 변환"""
         ret = super().to_representation(instance)
         # 빈 문자열을 None으로 변환
         if ret.get('event_start_date') == '':
             ret['event_start_date'] = None
         if ret.get('event_end_date') == '':
             ret['event_end_date'] = None
+        # 이미지 URL HTTP를 HTTPS로 변환 (Mixed Content 경고 방지)
+        if ret.get('image_url') and ret['image_url'].startswith('http://'):
+            ret['image_url'] = ret['image_url'].replace('http://', 'https://', 1)
         return ret
     
     class Meta:
@@ -32,13 +35,16 @@ class FestivalDetailSerializer(serializers.ModelSerializer):
     event_end_date = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     
     def to_representation(self, instance):
-        """빈 문자열을 null로 변환"""
+        """빈 문자열을 null로 변환 및 이미지 URL HTTP를 HTTPS로 변환"""
         ret = super().to_representation(instance)
         # 빈 문자열을 None으로 변환
         if ret.get('event_start_date') == '':
             ret['event_start_date'] = None
         if ret.get('event_end_date') == '':
             ret['event_end_date'] = None
+        # 이미지 URL HTTP를 HTTPS로 변환 (Mixed Content 경고 방지)
+        if ret.get('image_url') and ret['image_url'].startswith('http://'):
+            ret['image_url'] = ret['image_url'].replace('http://', 'https://', 1)
         return ret
     
     class Meta:

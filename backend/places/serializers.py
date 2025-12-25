@@ -4,6 +4,15 @@ import uuid
 
 class PlaceSerializer(serializers.ModelSerializer):
     """장소 Serializer"""
+    
+    def to_representation(self, instance):
+        """이미지 URL HTTP를 HTTPS로 변환 (Mixed Content 경고 방지)"""
+        ret = super().to_representation(instance)
+        # 이미지 URL HTTP를 HTTPS로 변환
+        if ret.get('image_url') and ret['image_url'].startswith('http://'):
+            ret['image_url'] = ret['image_url'].replace('http://', 'https://', 1)
+        return ret
+    
     class Meta:
         model = Place
         fields = ['id', 'title', 'place_type', 'address', 'latitude', 'longitude',
