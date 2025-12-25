@@ -52,6 +52,11 @@ const router = createRouter({
       component: NaverCallbackView,
     },
     {
+      path: '/auth/naver/callbacks',
+      name: 'naver-callback-plural',
+      component: NaverCallbackView,
+    },
+    {
       path: '/auth/verify-email',
       name: 'verify-email',
       component: VerifyEmailView,
@@ -120,7 +125,7 @@ const router = createRouter({
 
 // 네비게이션 가드
 router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   if (to.meta.requiresAuth && !token) {
     next({ name: 'login' })

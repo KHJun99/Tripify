@@ -9,7 +9,7 @@ const instance = axios.create({
 // 요청 인터셉터
 instance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token')
+    const token = sessionStorage.getItem('token')
     if (token) {
       config.headers.Authorization = `Token ${token}`
     }
@@ -30,7 +30,7 @@ instance.interceptors.response.use(
       // 로그인 페이지나 회원가입 페이지에서는 리다이렉트하지 않음
       const currentPath = window.location.pathname
       if (currentPath !== '/login' && currentPath !== '/signup') {
-        localStorage.removeItem('token')
+        sessionStorage.removeItem('token')
         window.location.href = '/login'
       }
     }

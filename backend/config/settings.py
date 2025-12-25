@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,12 +26,12 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#j*uq27832zq+bs)rt=c6ms3q-8wm9k@n7m8q0wahvom-o=n1$'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-#j*uq27832zq+bs)rt=c6ms3q-8wm9k@n7m8q0wahvom-o=n1$')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -63,6 +64,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# WhiteNoise는 프로덕션 환경에서만 사용 (로컬 개발에서는 Django의 기본 staticfiles 사용)
+if not DEBUG:
+    try:
+        import whitenoise
+        MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    except ImportError:
+        pass
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -87,10 +96,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 
@@ -129,6 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -150,10 +161,10 @@ REST_FRAMEWORK = {
 }
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-]
+CORS_ALLOWED_ORIGINS = os.getenv(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:5173,http://127.0.0.1:5173'
+).split(',')
 CORS_ALLOW_CREDENTIALS = True
 
 # Custom User Model
@@ -161,6 +172,7 @@ AUTH_USER_MODEL = 'accounts.User'
 
 # Kakao OAuth Settings
 KAKAO_REST_API_KEY = os.getenv('KAKAO_REST_API_KEY', '')
+# 로컬 개발 환경에서는 포트 번호 포함한 URI 사용
 KAKAO_REDIRECT_URI = os.getenv('KAKAO_REDIRECT_URI', 'http://localhost:5173/auth/kakao/callback')
 KAKAO_CLIENT_SECRET = os.getenv('KAKAO_CLIENT_SECRET', '')
 
@@ -189,3 +201,15 @@ PASSWORD_RESET_TIMEOUT = 3600  # 비밀번호 재설정 토큰 유효 시간 (1�
 
 # Frontend URL for email links
 FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
+
+# WhiteNoise는 프로덕션 환경에서만 사용
+if not DEBUG:
+    try:
+        import whitenoise
+        STORAGES = {
+            "staticfiles": {
+                "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+            },
+        }
+    except ImportError:
+        pass

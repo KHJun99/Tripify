@@ -119,7 +119,7 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                             print(f'Day {day_num} - meals_info 키: {list(meals_info.keys()) if isinstance(meals_info, dict) else "N/A"}')
                             print(f'Day {day_num} - meals_info 내용: {meals_info}')
                         else:
-                            print(f'⚠️ Day {day_num} - meals_info가 비어있습니다!')
+                            print(f'[WARNING] Day {day_num} - meals_info가 비어있습니다!')
                         
                         Itinerary.objects.create(
                             travel_plan=travel_plan,
@@ -135,24 +135,24 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                         )
                         created_count += 1
                     except Exception as e:
-                        print(f'✗ 일정 생성 오류 (day {day_data.get("day_number", "?")}): {e}')
+                        print(f'[ERROR] 일정 생성 오류 (day {day_data.get("day_number", "?")}): {e}')
                         import traceback
                         traceback.print_exc()
             else:
-                print(f'⚠️ 일정 데이터가 없거나 형식이 올바르지 않습니다.')
+                print(f'[WARNING] 일정 데이터가 없거나 형식이 올바르지 않습니다.')
                 print(f'itinerary_data: {itinerary_data}')
 
-            print(f'✓ Itinerary 생성 완료: {created_count}개')
+            print(f'[OK] Itinerary 생성 완료: {created_count}개')
 
             # Refresh to get itineraries
             travel_plan.refresh_from_db()
             itinerary_count = travel_plan.itineraries.count()
-            print(f'✓ TravelPlan의 itineraries 개수: {itinerary_count}')
+            print(f'[OK] TravelPlan의 itineraries 개수: {itinerary_count}')
 
             response_serializer = TravelPlanSerializer(travel_plan)
-            print(f'✓ Serialized data에 itineraries 포함: {"itineraries" in response_serializer.data}')
+            print(f'[OK] Serialized data에 itineraries 포함: {"itineraries" in response_serializer.data}')
             if 'itineraries' in response_serializer.data:
-                print(f'✓ Serialized itineraries 개수: {len(response_serializer.data["itineraries"])}')
+                print(f'[OK] Serialized itineraries 개수: {len(response_serializer.data["itineraries"])}')
 
             return Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
@@ -299,7 +299,7 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                             itinerary.events_info = day_data.get('events_info', itinerary.events_info)
                             itinerary.estimated_cost = day_data.get('estimated_cost', itinerary.estimated_cost)
                             itinerary.save()
-                            print(f'✓ Day {day_number} 일정 업데이트 완료')
+                            print(f'[OK] Day {day_number} 일정 업데이트 완료')
                         else:
                             # 기존 일정이 없으면 새로 생성
                             Itinerary.objects.create(
@@ -314,14 +314,14 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
                                 events_info=day_data.get('events_info', []),
                                 estimated_cost=day_data.get('estimated_cost', None)
                             )
-                            print(f'✓ Day {day_number} 일정 생성 완료')
+                            print(f'[OK] Day {day_number} 일정 생성 완료')
                         updated_count += 1
                     except Exception as e:
-                        print(f'✗ 일정 업데이트 오류 (day {day_number}): {e}')
+                        print(f'[ERROR] 일정 업데이트 오류 (day {day_number}): {e}')
                         import traceback
                         traceback.print_exc()
             
-            print(f'✓ 일정 업데이트 완료: {updated_count}개')
+            print(f'[OK] 일정 업데이트 완료: {updated_count}개')
 
             # AI가 유효한 수정 결과를 주지 못한 경우
             if updated_count == 0:

@@ -24,9 +24,28 @@ class KakaoOAuthService:
 
         try:
             response = requests.post(cls.KAKAO_TOKEN_URL, data=data)
+            
+            # 400 에러인 경우 상세 정보 확인
+            if response.status_code == 400:
+                try:
+                    error_detail = response.json()
+                    error_code = error_detail.get('error', 'unknown_error')
+                    error_desc = error_detail.get('error_description', 'No description')
+                    
+                    raise ValidationError(
+                        f"카카오 토큰 발급 실패: {error_desc} (오류 코드: {error_code})"
+                    )
+                except ValueError:
+                    # JSON 파싱 실패 시 원본 응답 텍스트 사용
+                    raise ValidationError(
+                        f"카카오 토큰 발급 실패: {response.text}"
+                    )
+            
             response.raise_for_status()
             token_data = response.json()
             return token_data['access_token']
+        except ValidationError:
+            raise
         except requests.exceptions.RequestException as e:
             raise ValidationError(f"카카오 토큰 발급 실패: {str(e)}")
 

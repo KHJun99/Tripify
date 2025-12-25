@@ -77,7 +77,9 @@ const handleKakaoLogin = async () => {
   }
   
   // prompt=select_account 추가하여 계정 선택 화면 표시
-  window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code&prompt=select_account`
+  // redirect_uri는 정확히 일치해야 하므로 인코딩하여 전달
+  const encodedRedirectUri = encodeURIComponent(KAKAO_REDIRECT_URI)
+  window.location.href = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${encodedRedirectUri}&response_type=code&prompt=select_account`
 }
 
 const handleGoogleLogin = async () => {

@@ -4,7 +4,7 @@ import { authAPI } from '@/api/auth'
 
 export const useAuthStore = defineStore('auth', () => {
   const user = ref(null)
-  const token = ref(localStorage.getItem('token'))
+  const token = ref(sessionStorage.getItem('token'))
   const isAuthenticated = ref(!!token.value)
   let autoLogoutTimer = null // 자동 로그아웃 타이머
   const remainingTime = ref(null) // 남은 시간 (밀리초)
@@ -12,7 +12,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   // 남은 시간 계산 및 업데이트
   const updateRemainingTime = () => {
-    const loginTime = localStorage.getItem('loginTime')
+    const loginTime = sessionStorage.getItem('loginTime')
     if (loginTime && token.value) {
       const elapsed = Date.now() - parseInt(loginTime)
       const sixHours = 6 * 60 * 60 * 1000 // 6시간
@@ -81,7 +81,7 @@ export const useAuthStore = defineStore('auth', () => {
 
     // 로그인 시간 저장
     const loginTime = Date.now()
-    localStorage.setItem('loginTime', loginTime.toString())
+    sessionStorage.setItem('loginTime', loginTime.toString())
 
     // 시간 업데이트 인터벌 시작
     startTimeUpdateInterval()
@@ -104,13 +104,13 @@ export const useAuthStore = defineStore('auth', () => {
       autoLogoutTimer = null
     }
     stopTimeUpdateInterval()
-    localStorage.removeItem('loginTime')
+    sessionStorage.removeItem('loginTime')
   }
 
   // 페이지 로드 시 로그인 시간 확인 및 타이머 설정
   // logout 함수가 정의된 후에 호출되도록 함수 내부에서 정의
   const checkLoginTime = () => {
-    const loginTime = localStorage.getItem('loginTime')
+    const loginTime = sessionStorage.getItem('loginTime')
     if (loginTime && token.value) {
       const elapsed = Date.now() - parseInt(loginTime)
       const sixHours = 6 * 60 * 60 * 1000 // 6시간
@@ -151,7 +151,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.login(credentials)
       token.value = response.data.token
-      localStorage.setItem('token', response.data.token)
+      sessionStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
       
       // 프로필 정보 가져오기
@@ -187,7 +187,7 @@ export const useAuthStore = defineStore('auth', () => {
       token.value = null
       user.value = null
       isAuthenticated.value = false
-      localStorage.removeItem('token')
+      sessionStorage.removeItem('token')
     }
   }
 
@@ -215,7 +215,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.kakaoLogin(code)
       token.value = response.data.token
-      localStorage.setItem('token', response.data.token)
+      sessionStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
       
       // 프로필 정보 가져오기
@@ -245,7 +245,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.googleLogin(code)
       token.value = response.data.token
-      localStorage.setItem('token', response.data.token)
+      sessionStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
       
       // 프로필 정보 가져오기
@@ -275,7 +275,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await authAPI.naverLogin(code, state)
       token.value = response.data.token
-      localStorage.setItem('token', response.data.token)
+      sessionStorage.setItem('token', response.data.token)
       isAuthenticated.value = true
       
       // 프로필 정보 가져오기
@@ -311,7 +311,7 @@ export const useAuthStore = defineStore('auth', () => {
       token.value = null
       user.value = null
       isAuthenticated.value = false
-      localStorage.removeItem('token')
+      sessionStorage.removeItem('token')
 
       return response.data
     } catch (error) {
@@ -330,7 +330,7 @@ export const useAuthStore = defineStore('auth', () => {
       // 비밀번호 변경 성공 시 새 토큰으로 업데이트
       if (response.data.token) {
         token.value = response.data.token
-        localStorage.setItem('token', response.data.token)
+        sessionStorage.setItem('token', response.data.token)
       }
 
       return response.data

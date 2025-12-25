@@ -31,9 +31,64 @@
     { bg: '#fbe9e7', text: '#bf360c' }, // Deep Orange
   ]
   
+  // 겹치는 일정 그룹을 찾아서 각 그룹에 다른 색상 할당
+  const planColorMap = computed(() => {
+    if (!sortedPlans.value || sortedPlans.value.length === 0) {
+      return new Map()
+    }
+    
+    const colorMap = new Map() // plan.id -> color index
+    // 시작일 순으로 정렬하여 순차적으로 색상 할당
+    const sorted = [...sortedPlans.value]
+      .filter(plan => plan && plan.id)
+      .sort((a, b) => {
+        const startA = new Date(a.start_date).getTime()
+        const startB = new Date(b.start_date).getTime()
+        if (startA !== startB) return startA - startB
+        const endA = new Date(a.end_date).getTime()
+        const endB = new Date(b.end_date).getTime()
+        return endB - endA
+      })
+    
+    // 각 일정에 대해 색상 할당
+    sorted.forEach(plan => {
+      // 현재 일정과 겹치는 일정들 찾기 (이미 색상이 할당된 것들만)
+      const overlappingPlans = sorted.filter(p => 
+        p.id !== plan.id && 
+        colorMap.has(p.id) && 
+        doPlansOverlap(p, plan)
+      )
+      
+      // 겹치는 일정들이 사용 중인 색상들
+      const usedColors = new Set()
+      overlappingPlans.forEach(p => {
+        usedColors.add(colorMap.get(p.id))
+      })
+      
+      // 사용 가능한 가장 낮은 색상 인덱스 찾기
+      let assignedColor = 0
+      while (usedColors.has(assignedColor)) {
+        assignedColor++
+      }
+      colorMap.set(plan.id, assignedColor)
+    })
+    
+    return colorMap
+  })
+  
   const getPlanStyle = (id) => {
-    const numId = typeof id === 'number' ? id : String(id).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
-    const color = colorPalette[numId % colorPalette.length]
+    const colorMap = planColorMap.value
+    let colorIndex = 0
+    
+    if (colorMap && colorMap.has(id)) {
+      colorIndex = colorMap.get(id)
+    } else {
+      // fallback: id 기반 색상
+      const numId = typeof id === 'number' ? id : String(id).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+      colorIndex = numId % colorPalette.length
+    }
+    
+    const color = colorPalette[colorIndex % colorPalette.length]
     return { '--plan-bg': color.bg, '--plan-text': color.text }
   }
   
@@ -135,102 +190,59 @@
   }
   
   // 모든 일정의 행 번호를 미리 계산 (computed로 캐싱)
+  // 같은 일정은 모든 날짜에서 같은 행에 배치되고, 겹치는 일정은 다른 행에 배치됨
   const planRowMap = computed(() => {
     if (!sortedPlans.value || sortedPlans.value.length === 0) {
       return new Map()
     }
     
-    const cache = new Map()
-    const processing = new Set() // 현재 처리 중인 일정 추적 (순환 참조 방지)
+    const rowMap = new Map() // plan.id -> row number
     
-    // 1단계: 겹치지 않는 일정들을 먼저 0번째 행에 배치
-    sortedPlans.value.forEach(plan => {
-      if (!plan || !plan.id) return
-      
-      const hasOverlap = sortedPlans.value.some(p => 
-        p && p.id && p.id !== plan.id && doPlansOverlap(p, plan)
-      )
-      if (!hasOverlap) {
-        cache.set(plan.id, 0)
-      }
-    })
-    
-    // 2단계: 겹치는 일정들의 행 번호 계산
-    const calculateRow = (plan) => {
-      if (!plan || !plan.id) return 0
-      
-      // 이미 계산되었으면 반환
-      if (cache.has(plan.id)) {
-        return cache.get(plan.id)
-      }
-      
-      // 순환 참조 방지
-      if (processing.has(plan.id)) {
-        return 0
-      }
-      processing.add(plan.id)
-      
-      try {
-        // 현재 일정과 겹치는 일정들 찾기
-        const overlappingPlans = sortedPlans.value.filter(p => 
-          p && p.id && p.id !== plan.id && doPlansOverlap(p, plan)
-        )
-        
-        // 겹치는 일정이 없으면 맨 위(0번째 행)에 배치
-        if (overlappingPlans.length === 0) {
-          cache.set(plan.id, 0)
-          processing.delete(plan.id)
-          return 0
-        }
-        
-        // 겹치는 일정들의 행 번호를 먼저 계산 (재귀적으로)
-        const usedRows = new Set()
-        overlappingPlans.forEach(p => {
-          const row = calculateRow(p)
-          usedRows.add(row)
-        })
-        
-        // 사용 가능한 가장 낮은 행 번호 찾기
-        // 겹치지 않는 일정은 0번째 행에 배치되므로, 겹치는 일정은 1번째 행부터 배치
-        for (let row = 1; row <= usedRows.size + 2; row++) {
-          if (!usedRows.has(row)) {
-            cache.set(plan.id, row)
-            processing.delete(plan.id)
-            return row
-          }
-        }
-        
-        const row = usedRows.size + 1
-        cache.set(plan.id, row)
-        processing.delete(plan.id)
-        return row
-      } catch (e) {
-        console.error('calculateRow error:', e, plan)
-        processing.delete(plan.id)
-        return 0
-      }
-    }
-    
-    // 모든 일정에 대해 행 번호 계산 (아직 계산되지 않은 것들만)
-    // 시작일 순으로 정렬하여 일관된 계산 보장
-    const plansToProcess = [...sortedPlans.value]
-      .filter(plan => plan && plan.id && !cache.has(plan.id))
+    // 시작일 순으로 정렬
+    const sorted = [...sortedPlans.value]
+      .filter(plan => plan && plan.id)
       .sort((a, b) => {
         const startA = new Date(a.start_date).getTime()
         const startB = new Date(b.start_date).getTime()
-        return startA - startB
+        if (startA !== startB) return startA - startB
+        // 시작일이 같으면 종료일이 늦은 것부터 (긴 일정 우선)
+        const endA = new Date(a.end_date).getTime()
+        const endB = new Date(b.end_date).getTime()
+        return endB - endA
       })
     
-    plansToProcess.forEach(plan => {
-      calculateRow(plan)
+    // 각 일정에 대해 행 번호 할당
+    sorted.forEach(plan => {
+      // 현재 일정과 겹치는 일정들 찾기 (이미 행 번호가 할당된 것들만)
+      // 일정 전체 기간에 대해 겹치는지 확인
+      const overlappingPlans = sorted.filter(p => 
+        p.id !== plan.id && 
+        rowMap.has(p.id) && 
+        doPlansOverlap(p, plan)
+      )
+      
+      // 겹치는 일정들이 사용 중인 행 번호들
+      const usedRows = new Set()
+      overlappingPlans.forEach(p => {
+        usedRows.add(rowMap.get(p.id))
+      })
+      
+      // 사용 가능한 가장 낮은 행 번호 찾기
+      let assignedRow = 0
+      while (usedRows.has(assignedRow)) {
+        assignedRow++
+      }
+      
+      // 같은 일정은 항상 같은 행 번호를 가짐
+      rowMap.set(plan.id, assignedRow)
     })
     
-    return cache
+    return rowMap
   })
   
   // 특정 날짜에 포함되는 일정의 행 번호 반환
   // 같은 일정은 모든 날짜에 걸쳐 같은 행에 배치
-  // is-inactive인 경우에도 같은 order 값을 유지하여 flex 레이아웃에서 일관성 보장
+  // 같은 plan.id는 항상 같은 행 번호를 반환하여 모든 날짜에서 일관된 위치에 표시됨
   const getPlanRow = (day, plan) => {
     try {
       if (!plan || !plan.id) {
@@ -250,9 +262,7 @@
       }
       
       // 같은 plan.id는 항상 같은 행 번호 반환
-      // is-inactive인 경우에도 같은 order 값을 유지하여
-      // flex 레이아웃에서 같은 일정이 모든 날짜에 걸쳐 같은 위치에 배치되도록 함
-      // height: 0이지만 flex order는 여전히 작동하므로 레이아웃에 영향을 줌
+      // 이렇게 하면 같은 일정이 모든 날짜에서 같은 행에 표시됨
       return row
     } catch (e) {
       console.error('getPlanRow error:', e, plan)
@@ -445,16 +455,18 @@
   
                 <div class="plan-bars">
                   <div
-                    v-for="plan in sortedPlans.filter(p => isPlanInDate(p, day))"
+                    v-for="plan in sortedPlans"
                     :key="`${day}-${plan.id}`"
                     class="plan-bar"
-                    :class="getPlanClass(day, plan)"
+                    :class="[
+                      getPlanClass(day, plan),
+                      { 'is-inactive': !isPlanInDate(plan, day) }
+                    ]"
                     :style="{
                       ...getPlanStyle(plan.id),
-                      '--plan-order': getPlanRow(day, plan),
                       order: getPlanRow(day, plan)
                     }"
-                    @click.stop="goToTrip(plan.id)"
+                    @click.stop="isPlanInDate(plan, day) && goToTrip(plan.id)"
                   >
                     <span
                       v-if="isPlanInDate(plan, day) && getPlanClass(day, plan).includes('is-start')"
