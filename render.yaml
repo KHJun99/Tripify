@@ -3,7 +3,7 @@ services:
     name: tripify-backend
     env: python
     plan: free
-    buildCommand: cd backend && pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py load_places && python manage.py load_festivals
+    buildCommand: cd backend && chmod +x build.sh && ./build.sh
     startCommand: cd backend && gunicorn config.wsgi:application
     envVars:
       - key: PYTHON_VERSION
