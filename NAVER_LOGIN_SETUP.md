@@ -54,15 +54,33 @@ python manage.py migrate
 
 프로덕션 환경에서는 네이버 개발자 센터에서 추가 설정이 필요합니다:
 
+### 방법 1: 로컬과 프로덕션 모두 사용 (권장)
+
 1. **서비스 URL 변경**
-   - 실제 도메인으로 변경 (예: `https://yourdomain.com`)
+   - 프로덕션 URL로 변경 (예: `https://your-app.vercel.app`)
+   - ⚠️ 네이버는 서비스 URL을 하나만 등록할 수 있으므로 프로덕션 URL로 설정
+
+2. **Callback URL 추가**
+   - 기존 로컬 Callback URL 유지: `http://localhost:5173/auth/naver/callback`
+   - 프로덕션 Callback URL 추가: `https://your-app.vercel.app/auth/naver/callback`
+   - 네이버는 여러 Callback URL을 등록할 수 있습니다
+
+3. **환경 변수 설정**
+   - **로컬 개발**: `.env` 파일에 로컬 URL 사용
+   - **프로덕션 (Render)**: 환경 변수에 프로덕션 URL 설정
+
+### 방법 2: 프로덕션만 사용
+
+1. **서비스 URL 변경**
+   - 프로덕션 URL로 변경 (예: `https://your-app.vercel.app`)
 
 2. **Callback URL 변경**
-   - 실제 도메인으로 변경 (예: `https://yourdomain.com/auth/naver/callback`)
+   - 프로덕션 URL로 변경 (예: `https://your-app.vercel.app/auth/naver/callback`)
+   - 로컬 URL은 삭제
 
 3. **환경 변수 업데이트**
-   - Backend `.env`: `NAVER_REDIRECT_URI`를 프로덕션 URL로 변경
-   - Frontend `.env`: `VITE_NAVER_REDIRECT_URI`를 프로덕션 URL로 변경
+   - Backend (Render): `NAVER_REDIRECT_URI`를 프로덕션 URL로 설정
+   - Frontend (Vercel): 필요시 환경 변수 설정
 
 ## 5. 테스트
 

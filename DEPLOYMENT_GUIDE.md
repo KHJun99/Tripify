@@ -56,6 +56,25 @@
 2. Render 대시보드에서 **"New +"** → **"Blueprint"** 선택
 3. GitHub 저장소를 연결하고 `render.yaml` 파일이 있는 저장소를 선택합니다.
 4. **"Apply"** 클릭하여 배포를 시작합니다.
+5. Blueprint가 생성한 서비스들을 확인합니다:
+   - **Web Service** (tripify-backend)
+   - **PostgreSQL Database** (tripify-db)
+6. **Web Service**를 클릭하여 상세 페이지로 이동합니다.
+7. 왼쪽 메뉴에서 **"Environment"** 탭을 클릭합니다.
+8. 아래 [환경 변수 설정](#환경-변수-설정) 섹션의 변수들을 추가합니다.
+
+**⚠️ render.yaml 파일 수정 후 적용 방법:**
+1. 변경사항을 Git에 커밋합니다:
+   ```bash
+   git add render.yaml
+   git commit -m "Update render.yaml: Add data loading commands"
+   ```
+2. GitHub에 push합니다:
+   ```bash
+   git push origin main
+   ```
+3. Render가 자동으로 변경사항을 감지하고 재배포를 시작합니다.
+   - 또는 Render 대시보드에서 **"Manual Deploy"** → **"Deploy latest commit"** 클릭
 
 #### 방법 2: 수동 설정
 
@@ -85,12 +104,21 @@
 
 Render 대시보드의 **"Environment"** 섹션에서 다음 환경 변수를 추가합니다:
 
+**ALLOWED_HOSTS 확인 방법:**
+1. Render 대시보드에서 생성한 Web Service (`tripify-backend`)를 클릭합니다.
+2. 상단에 표시된 **URL**을 확인합니다.
+   - 예: `https://tripify-backend.onrender.com`
+   - 또는 `https://tripify-backend-xxxx.onrender.com` (xxxx는 랜덤 문자열)
+3. 이 URL에서 `https://`를 제외한 도메인 부분만 사용합니다.
+   - 예: `tripify-backend.onrender.com`
+   - 또는 여러 도메인을 사용하는 경우: `tripify-backend.onrender.com,your-custom-domain.com`
+
 ```bash
 # 필수 설정
 PYTHON_VERSION=3.11.0
 DJANGO_SECRET_KEY=your-secret-key-here  # Django 시크릿 키 (랜덤 문자열 생성)
 DEBUG=False
-ALLOWED_HOSTS=your-render-app.onrender.com  # Render에서 제공하는 도메인
+ALLOWED_HOSTS=your-render-app.onrender.com  # 위에서 확인한 도메인 (https:// 제외)
 DATABASE_URL=postgresql://...  # 위에서 생성한 PostgreSQL 내부 URL
 
 # CORS 설정 (프론트엔드 URL)
@@ -125,25 +153,30 @@ FRONTEND_URL=https://your-vercel-app.vercel.app
 - `ALLOWED_HOSTS`와 `CORS_ALLOWED_ORIGINS`는 실제 배포된 URL로 변경해야 합니다.
 - 모든 소셜 로그인 `REDIRECT_URI`는 프론트엔드 URL을 사용합니다.
 
-### 5. 데이터베이스 마이그레이션
+### 5. 데이터베이스 마이그레이션 및 초기 데이터 로드
 
-Render는 `render.yaml`의 `buildCommand`에 마이그레이션이 포함되어 있어 자동으로 실행됩니다. 수동으로 실행하려면:
+**✅ 자동 실행 (무료 플랜 포함):**
 
-1. Render 대시보드에서 **"Shell"** 탭 열기
-2. 다음 명령어 실행:
-   ```bash
-   python manage.py migrate
-   ```
+Render는 `render.yaml`의 `buildCommand`에 다음 명령어들이 포함되어 있어 **배포 시 자동으로 실행**됩니다:
 
-### 6. 초기 데이터 로드 (선택사항)
+```bash
+python manage.py migrate          # 데이터베이스 마이그레이션
+python manage.py load_places       # 관광지 데이터 로드
+python manage.py load_festivals    # 축제 데이터 로드
+```
 
-관광지 및 축제 데이터를 로드하려면:
+따라서 **Shell 기능 없이도** 마이그레이션과 초기 데이터 로드가 자동으로 완료됩니다.
 
-1. Render 대시보드의 **"Shell"** 탭에서:
-   ```bash
-   python manage.py load_places
-   python manage.py load_festivals
-   ```
+**⚠️ 참고:**
+- Shell 기능은 유료 플랜에서만 사용 가능하지만, `buildCommand`를 통해 모든 명령어가 자동 실행됩니다
+- 배포 로그에서 마이그레이션 및 데이터 로드 과정을 확인할 수 있습니다
+- 데이터 로드에 시간이 걸릴 수 있으므로 첫 배포 시 빌드 시간이 길어질 수 있습니다
+
+**수동 실행이 필요한 경우 (Shell 사용 불가 시):**
+
+만약 데이터를 다시 로드하거나 업데이트해야 하는 경우:
+1. `render.yaml`의 `buildCommand`에 `--clear` 옵션 추가 (기존 데이터 삭제 후 재로드)
+2. 또는 코드에서 데이터 로드 로직을 API 엔드포인트로 만들어 관리자 페이지에서 실행
 
 ---
 
@@ -182,6 +215,27 @@ Render는 `render.yaml`의 `buildCommand`에 마이그레이션이 포함되어 
 1. Vercel 대시보드에서 프로젝트 선택
 2. **"Settings"** → **"Domains"** 이동
 3. 원하는 도메인 추가
+4. **"Invalid Configuration" 경고가 나타나는 경우:**
+   - 이는 DNS 설정이 완료되지 않아서 나타나는 정상적인 경고입니다
+   - 배포는 정상적으로 진행되며, Vercel의 기본 도메인(`*.vercel.app`)을 사용할 수 있습니다
+   - 커스텀 도메인을 사용하려면 DNS 설정이 필요합니다 (아래 참조)
+
+#### DNS 설정 방법 (커스텀 도메인 사용 시)
+
+1. Vercel의 **"Domains"** 페이지에서 추가한 도메인을 클릭합니다
+2. Vercel이 제공하는 DNS 레코드를 확인합니다:
+   - **A 레코드** 또는 **CNAME 레코드**
+   - 예: `76.76.21.21` (A 레코드) 또는 `cname.vercel-dns.com` (CNAME 레코드)
+3. 도메인 등록 업체(예: 가비아, 후이즈, GoDaddy 등)의 DNS 관리 페이지로 이동합니다
+4. Vercel에서 제공한 DNS 레코드를 추가합니다:
+   - **A 레코드**: `@` 또는 루트 도메인 → Vercel IP 주소
+   - **CNAME 레코드**: `www` → Vercel CNAME 주소
+5. DNS 전파까지 **몇 분~24시간** 정도 소요될 수 있습니다
+6. DNS 전파가 완료되면 "Invalid Configuration" 경고가 사라지고 "Valid Configuration"으로 변경됩니다
+
+**중요**: 
+- DNS 설정이 완료되기 전까지는 Vercel의 기본 도메인(`tripify-two.vercel.app`)을 사용하세요
+- 배포 및 기능 테스트는 기본 도메인으로도 정상적으로 작동합니다
 
 ---
 
@@ -239,10 +293,20 @@ Render는 `render.yaml`의 `buildCommand`에 마이그레이션이 포함되어 
 ### 네이버 로그인
 
 1. [네이버 개발자 센터](https://developers.naver.com) 접속
-2. 애플리케이션 등록
-   - 서비스 URL: `https://your-app.vercel.app`
-   - Callback URL: `https://your-app.vercel.app/auth/naver/callback`
+2. 기존 애플리케이션 수정 또는 새로 등록:
+   - **서비스 URL**: 프로덕션 URL로 변경 (`https://your-app.vercel.app`)
+     - ⚠️ **중요**: 네이버는 서비스 URL을 하나만 등록할 수 있습니다
+     - 로컬 개발을 계속하려면: 프로덕션 URL로 변경하되, 로컬에서는 환경 변수로 다른 URL 사용 가능
+   - **Callback URL**: 프로덕션 URL 추가 (`https://your-app.vercel.app/auth/naver/callback`)
+     - 네이버는 여러 Callback URL을 등록할 수 있습니다
+     - 로컬 개발용도 유지하려면: `http://localhost:5173/auth/naver/callback`도 함께 등록
 3. Client ID와 Client Secret 확인
+
+**로컬 개발과 프로덕션 모두 사용하는 경우:**
+- 서비스 URL: 프로덕션 URL (`https://your-app.vercel.app`)로 설정
+- Callback URL: 두 개 모두 등록
+  - `http://localhost:5173/auth/naver/callback` (로컬 개발용)
+  - `https://your-app.vercel.app/auth/naver/callback` (프로덕션용)
 
 ---
 
