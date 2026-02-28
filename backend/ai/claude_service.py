@@ -8,7 +8,7 @@ from festivals.models import Festival
 load_dotenv()
 
 
-class GeminiService:
+class ClaudeService:
     """SSAFY GMS를 통한 Claude Haiku 4.5 AI 서비스"""
 
     def __init__(self):

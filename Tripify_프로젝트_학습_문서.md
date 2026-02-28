@@ -121,7 +121,7 @@ backend/
 │   └── urls.py                 # 축제 엔드포인트
 │
 ├── ai/                          # AI 서비스 통합
-│   └── gemini_service.py       # Claude Haiku 4.5 통합 (1300+ 줄)
+│   └── claude_service.py       # Claude Haiku 4.5 통합 (1300+ 줄)
 │                               #   - 여행 일정 생성
 │                               #   - 예산 검증
 │                               #   - 실제 DB 데이터 통합
@@ -349,7 +349,7 @@ frontend/
 ┌──────────────┐    ┌───────────────┐    ┌─────────────────────┐
 │   모델       │    │   AI 서비스   │    │  외부 서비스        │
 │              │    │               │    │                     │
-│ • User       │    │ GeminiService │    │ • Kakao OAuth       │
+│ • User       │    │ ClaudeService │    │ • Kakao OAuth       │
 │ • TravelPlan │◄───┤ (Claude 4.5)  │    │ • Google OAuth      │
 │ • Itinerary  │    │               │    │ • Naver OAuth       │
 │ • Place      │◄───┤ • 일정 생성   │    │ • Gmail SMTP        │
@@ -687,7 +687,7 @@ def generate_itinerary(self, request):
 
     # AI 서비스를 통해 여행 계획 생성
     try:
-        gemini_service = GeminiService()
+        gemini_service = ClaudeService()
         itinerary_data = gemini_service.generate_itinerary(
             budget=data['budget'],
             people_count=data['people_count'],
@@ -749,7 +749,7 @@ def generate_itinerary(self, request):
 
 **핵심 로직:**
 1. **데이터 검증**: `TravelPlanCreateSerializer`로 예산, 날짜, 지역 등 검증
-2. **AI 호출**: `GeminiService.generate_itinerary()` 호출하여 일정 생성
+2. **AI 호출**: `ClaudeService.generate_itinerary()` 호출하여 일정 생성
 3. **TravelPlan 생성**: 여행 계획 메타데이터 저장
 4. **Itinerary 생성**: AI가 생성한 일별 일정을 DB에 저장
 5. **JSONField 활용**: `attractions`, `meals_info` 등을 JSON으로 저장
@@ -780,7 +780,7 @@ def modify_plan(self, request, pk=None):
 
     # AI 서비스를 통해 계획 수정
     try:
-        gemini_service = GeminiService()
+        gemini_service = ClaudeService()
         modified_itinerary_data = gemini_service.modify_itinerary(
             existing_plan=travel_plan,
             requirements=requirements,
@@ -852,12 +852,12 @@ def modify_plan(self, request, pk=None):
 
 ### 6.3 AI 서비스 - 핵심 코드
 
-#### GeminiService 클래스 초기화 및 주요 메서드 (`ai/gemini_service.py`)
+#### ClaudeService 클래스 초기화 및 주요 메서드 (`ai/claude_service.py`)
 
-**1. 초기화 및 설정 (`ai/gemini_service.py:11-18`)**
+**1. 초기화 및 설정 (`ai/claude_service.py:11-18`)**
 
 ```python
-class GeminiService:
+class ClaudeService:
     """SSAFY GMS를 통한 Claude Haiku 4.5 AI 서비스"""
 
     def __init__(self):
@@ -867,7 +867,7 @@ class GeminiService:
         self.model = 'claude-haiku-4-5-20251001'
 ```
 
-**2. 데이터베이스에서 실제 장소 조회 (`ai/gemini_service.py:37-41`)**
+**2. 데이터베이스에서 실제 장소 조회 (`ai/claude_service.py:37-41`)**
 
 ```python
 # 데이터베이스에서 해당 지역의 실제 장소 정보 가져오기
@@ -877,7 +877,7 @@ accommodations = self._get_places_by_region(region, 'accommodation', limit=5)
 festivals = self._get_festivals_by_region(region, start_date, end_date)
 ```
 
-**3. AI 프롬프트 생성 (핵심 부분, `ai/gemini_service.py:69-254`)**
+**3. AI 프롬프트 생성 (핵심 부분, `ai/claude_service.py:69-254`)**
 
 ```python
 prompt = f"""
@@ -948,7 +948,7 @@ JSON 형식 (정확히 이 구조를 따라주세요):
 - **예산 제약**: 110% 이내 강제, 초과 시 재생성
 - **구조화된 응답**: JSON 형식 강제로 파싱 용이
 
-**4. Claude API 호출 (`ai/gemini_service.py:262-406`)**
+**4. Claude API 호출 (`ai/claude_service.py:262-406`)**
 
 ```python
 # SSAFY GMS API 호출 (Claude Sonnet 4)
@@ -1006,7 +1006,7 @@ if 'content' in result and isinstance(result['content'], list):
 3. **예산 검증**: 110% 초과 시 재생성
 4. **재시도 로직**: 최대 5회까지 재생성 시도
 
-**5. 예산 검증 (`ai/gemini_service.py:408-427`)**
+**5. 예산 검증 (`ai/claude_service.py:408-427`)**
 
 ```python
 def _validate_budget(self, itinerary_data, budget, budget_min, budget_max):
@@ -1031,7 +1031,7 @@ def _validate_budget(self, itinerary_data, budget, budget_min, budget_max):
     return True
 ```
 
-**6. 더미 데이터 검증 (`ai/gemini_service.py:824-871`)**
+**6. 더미 데이터 검증 (`ai/claude_service.py:824-871`)**
 
 ```python
 def _contains_dummy_data(self, itinerary_data, region):
@@ -1135,7 +1135,7 @@ class Wishlist(models.Model):
 @permission_classes([IsAuthenticated])
 def generate_itinerary(request):
     # 1. 요청 데이터 검증
-    # 2. GeminiService.generate_itinerary() 호출
+    # 2. ClaudeService.generate_itinerary() 호출
     # 3. AI 응답 파싱
     # 4. TravelPlan 및 Itinerary 레코드 생성
     # 5. ItineraryPlace 관계 설정
@@ -1149,7 +1149,7 @@ def generate_itinerary(request):
 def modify_itinerary(request, plan_id):
     # 1. 기존 일정 조회
     # 2. 사용자 수정 요청 받기
-    # 3. GeminiService.modify_itinerary() 호출
+    # 3. ClaudeService.modify_itinerary() 호출
     # 4. 변경사항 적용
     # 5. 예산 재검증
     # 6. 업데이트된 일정 반환
@@ -1700,7 +1700,7 @@ export default router
 
 ## 8. AI 통합 상세
 
-### 8.1 GeminiService 클래스 (`ai/gemini_service.py`)
+### 8.1 ClaudeService 클래스 (`ai/claude_service.py`)
 
 #### 주요 메서드
 
@@ -2232,7 +2232,7 @@ GET /api/festivals/?region=부산&month=7&category=음악
 4. trips/views.py의 generate_itinerary 함수
    - 요청 데이터 검증
    ↓
-5. GeminiService.generate_itinerary() 호출
+5. ClaudeService.generate_itinerary() 호출
    ├─ 1) DB에서 서울의 관광지 조회
    ├─ 2) DB에서 서울의 음식점 조회
    ├─ 3) DB에서 서울의 호텔 조회

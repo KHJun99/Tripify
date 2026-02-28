@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .models import TravelPlan, Itinerary, ItineraryPlace, Wishlist
 from .serializers import TravelPlanSerializer, TravelPlanCreateSerializer, ItinerarySerializer, WishlistSerializer
-from ai.gemini_service import GeminiService
+from ai.claude_service import ClaudeService
 from datetime import timedelta
 
 
@@ -69,8 +69,8 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
 
         # AI 서비스를 통해 여행 계획 생성
         try:
-            gemini_service = GeminiService()
-            itinerary_data = gemini_service.generate_itinerary(
+            claude_service = ClaudeService()
+            itinerary_data = claude_service.generate_itinerary(
                 budget=data['budget'],
                 people_count=data['people_count'],
                 start_date=data['start_date'],
@@ -262,8 +262,8 @@ class TravelPlanViewSet(viewsets.ModelViewSet):
         
         # AI 서비스를 통해 계획 수정
         try:
-            gemini_service = GeminiService()
-            modified_itinerary_data = gemini_service.modify_itinerary(
+            claude_service = ClaudeService()
+            modified_itinerary_data = claude_service.modify_itinerary(
                 existing_plan=travel_plan,
                 requirements=requirements,
                 budget=travel_plan.budget,
