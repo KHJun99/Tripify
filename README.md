@@ -43,7 +43,6 @@ Tripify/
 │
 ├── API_OAUTH_SETUP.md      # API 및 OAuth (구글, 카카오, 네이버) 설정 안내서
 ├── CONTRIBUTING.md         # 커밋 규칙 및 기여 내역 가이드
-├── TROUBLESHOOTING.md      # 트러블슈팅 및 문제 해결 가이드
 └── Tripify_프로젝트_학습_문서.md # 프로젝트 진행 간의 학습 문서
 ```
 
@@ -52,5 +51,4 @@ Tripify/
 연관된 문서들을 주제별로 정리해 두었습니다. 자세한 내용은 아래 파일을 참고해주세요:
 - [API 및 OAuth 설정 가이드](./API_OAUTH_SETUP.md) - 구글, 카카오, 네이버 소셜 로그인 및 이메일 API 설정 방법.
 - [커밋 및 기여 가이드](./CONTRIBUTING.md) - 커밋 메시지 규칙 및 전체 진행 내역 기록.
-- [트러블슈팅 가이드](./TROUBLESHOOTING.md) - 개발 과정에서 마주친 에러들과 해결 방법 정리.
 - [프로젝트 학습 문서](./Tripify_프로젝트_학습_문서.md) - 프로젝트를 진행하며 학습한 전반적인 지식 기록.
